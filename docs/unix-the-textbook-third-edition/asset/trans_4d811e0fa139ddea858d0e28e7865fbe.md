@@ -1,0 +1,106 @@
+
+
+An example of copying an entire directory in push mode remotely is:
+
+```
+$ rsync -av -e ssh syncdir2 bob@192.168.0.7:/Users/b/unix3e
+Password:
+building file list ... done
+syncdir2/
+syncdir2/Chap16.doc
+syncdir2/backup1.py
+syncdir2/ossystem.py
+sent 280,171 bytes received 96 bytes 16,985.88 bytes/sec
+total size is 279,855 speedup is 1.00
+0
+$
+```
+
+## 23.6.3.3 dump and restore (PC-BSD)
+
+The dump and restore facilities are a simple set of complementary commands that have a small number of options, and are primarily used to back up the system. What differentiates dump and restore from facilities like cpio and tar is that dump writes a table of contents at the beginning of each volume so that you can selectively restore files from the archive. For the creation of a backup, the dump command's basic syntax is as follows:
+
+```
+dump options file blocking-factor density size device filesystem
+```
+
+where 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, c, L, n, r, R, S, and u are various options, file, blocking-factor, density, and size are option arguments that must be supplied in the same order as their respective options given on the command line, and device and filesystem are the command arguments.
+
+The restore command's basic syntax is as follows.
+
+```
+restore options blocking-factor file-number device
+```
+
+for restoration of a backup, where options are various options, blocking-factor and file-number are option arguments that must be supplied in the same order as their respective options given on the command line, and device is the command argument.
+
+An example of how to use dump to create a full backup of /home to a tape drive named /dev/rmt/t0 is
+
+```
+dump 1unbdsf 512 100000 10000 /dev/rmt/t0 /home
+```
+
+An example of how to use restore to restore the files in /home/bob from a tape mounted in /dev/rmt/t0, with a blocking factor of 512, to a subdirectory under the current directory is
+
+```
+restore xvfby 512 /dev/rmt/t0 ./home/bob
+```
+
+## 23.6.3.4 dd
+
+The dd facility is used to copy a single file, part of a file, a partition, or part of a partition and can treat the data stream using, for example, compression or format conversion.
+
+The basic syntax of dd is
+
+```
+dd if=device of=device bs=blocksize
+```
+
+where if is the input file pathname, of is the output file pathname, and bs specifies the block size.
+
+An example of using dd in conjunction with ssh and tar is as follows.
+
+```
+$ ssh bob@192.168.0.13:/home/bob "dd if=backup.tar ibs=512" | tar -xvBf -
+```
+
+This command extracts the remote file backup.tar file at /home/bob in 512 byte blocks and streams it through dd to the system you typed this command on.
+
+## 23.6.3.5 ufsdump and ufsrestore (Solaris)
+
+ufsdump is an incremental file system dump facility for Solaris, similar to the dump command in PC-BSD. Its purpose is to back up all files specified (usually either a whole file system or files within a file system changed after a certain date) to magnetic tape or a disk file. The ufsdump command can only be used on unmounted file systems, or those mounted as read only. Attempting to dump a mounted, read–write file system might result in a system disruption or the inability to restore files from the dump. It is used in conjunction with ufsrestore.
+
+partition of c0t3d0, on a 1/2 inch reel tape unit 1:
+
+```
+# ufsdump 5fuv /dev/rmt/1 /dev/rdsk/c0t3d0s6
+```
+
+Basic Syntax: ufsrestore i | r | R | t | x [abcdfhlmostvyLT] ['archive_file'] ['factor'] ['dumpfile'] ['n'] ['label'] ['time-out'] ['filename']...
+
+where filename specifies the pathname of files (or directories) to be restored to disk.
+
+Ufsrestore is an incremental file system restore facility used in conjunction with the ufsdump facility.
+
+## 23.6.3.6 Script Files for Backup and Recovery
+
+As shown in Chapter 16, user-written script files can be deployed by the system administrator to quickly and efficiently do backup and archiving. Whether they are coded in Python as shown in Chapter 16, or in a shell programming language that embeds any of the preceding command line facilities, they can be used to facilitate and automate the backup, recovery, and archiving of files, directories, or file systems. Additionally, there are several online sources for backup and archiving script files available, and we will not justify the need for planning, coding, or maintaining such script files versus using an online, ready-made program.
+
+The following are two examples of script files, the first one a legacy application of tar, and the next one a modern UNIX program for doing backup and archiving. One is coded as Bourne shell scripts, and one is coded as a Python script. They work equally well on PC-BSD or Solaris, with the minor differences in coding for those two systems duly noted in the code.
+
+### Example 23.6: Simple Bourne Shell Example for Automating Tar Backups
+
+The following Bourne shell script will backup /home/bob to a directory previously created named simple_backup in a compressed format. Use an editor of your choice to create it, and name the script file backup.sh:
+
+```
+#!/bin/sh
+# To backup additional directories, put more pathnames in the following command,
+# separated by spaces, such as /home/bob /home/sarwar /home/blahblah.
+backup_source="/home/bob"
+backup_destination="/home/bob/simple_backup"
+filename="back1.tgz"
+echo "Backing up your UNIX home directory"
+tar cvpzf $backup_destination/$filename $backup_source
+echo "Backup Complete"
+```
+

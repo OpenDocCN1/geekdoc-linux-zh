@@ -1,0 +1,55 @@
+13. To maintain redundancy we should replace the broken disk with another. If you are using a physical disk you can use the zpool replace command (the zpool man page has details). However, in this file-based example we will just remove the disk file from the mirror and recreate it.
+Devices are detached with zpool detach:
+
+```
+root@solaris:~# zpool detach data2 /home/bob/disk1
+```
+
+14. Let’s check the status of the pool:
+
+```
+root@solaris:~# zpool status data2
+pool: data2
+state: ONLINE
+scrub: scrub completed with 0 errors on Thurs Mar 6
+18:00:07 2014
+config:
+        NAME                STATE     READ WRITE CKSUM
+        data2               ONLINE       0     0     0
+          /home/bob/disk2   ONLINE       0     0     0
+errors: No known data errors
+```
+
+15. Let’s remove the disk to simulate a failure and then replace it:
+
+```
+root@solaris:~# rm /home/bob/disk1
+root@solaris:~# mkfile 128m /home/bob/disk1
+```
+
+16. In order to replace it in the mirror, we need to do the following. To attach another device we specify an existing device in the mirror to attach it to with zpool attach:
+
+```
+root@solaris:~# zpool attach data2 /home/bob/disk2 /home/bob/disk1
+```
+
+17. Check the status of the pool:
+
+```
+root@solaris:~# zpool status data2
+pool: data2
+state: ONLINE
+scrub: resilver completed with 0 errors on Thurs Mar 6
+18:08:16 2014
+config:
+        NAME                STATE     READ WRITE CKSUM
+        data2               ONLINE       0     0     0
+          mirror-0          ONLINE       0     0     0
+            /home/bob/disk2 ONLINE       0     0     0
+            /home/bob/disk1 ONLINE       0     0     0
+errors: No known data errors
+```
+
+# 18. Adding to a Mirrored Pool
+
+A very critical systems administration procedure accomplished by ZFS is to add disks to a pool without taking it offline. Let’s double the size of our data2 pool:

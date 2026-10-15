@@ -1,0 +1,50 @@
+
+
+menus，以及其他内容，而窗口管理器，只是一个普通的客户端应用程序，负责显示所有其他客户端窗口。图 22.3 说明了这一点。
+
+### EXERCISE 22.3
+
+如果客户端可以排队事件，你认为服务器排队请求是否有优势？为什么？
+
+### EXERCISE 22.4
+
+根据你对 UNIX 中网络编程的了解，客户端-服务器在网络编程中的含义与在 X Window 系统中的含义是否相同？如果不同，其主要区别是什么？
+
+窗口管理器只是 X Window 系统服务器的另一个客户端这一重要方面在于，你可以使用任何可用的 X Window 系统窗口管理器来满足你的特定需求。你甚至可以使用自己的窗口管理器，如果你有时间和资源来为其编写程序代码的话！值得注意的是，在给定的服务器上一次只能有一个窗口管理器处于活动状态。
+
+## 22.2.3 The Role of a Window Manager in the User Interface, and FVWM for PC-BSD
+
+FVWM，X Window 系统窗口管理器，未默认安装在我们的 PC-BSD 系统上。因此，为了跟上以下各节的内容，你需要使用 AppCafe 来安装它。在 PC-BSD 系统上，如果系统管理员尚未为你的系统完成此操作，你可以使用 AppCafe 的程序自行完成。
+
+一旦你安装了 FVWM 窗口管理器，你可以注销然后重新登录到你的 PC-BSD 系统，出现的初始登录窗口将允许你选择 FVWM 作为窗口管理器。
+
+我们在基础 PC-BSD UNIX 系统下默认安装的桌面管理系统是 KDE4，而我们用来显示非集成环境外观和感觉的窗口管理器是 FVWM 的 release 2.6.5_3 版本。
+
+如前一节所述，X Window 系统的用户界面有两个基本部分：应用程序用户界面，即每个客户端应用程序如何在服务器屏幕显示上以一个或多个窗口呈现自身，以及窗口管理器或管理界面，它控制显示并组织所有客户端窗口。应用程序用户界面是内置于（即与）客户端应用程序中编写的（使用像 C 或 C++ 这样的高级编程语言），并利用对基本 X Window 协议操作库的子程序调用。在本节中，我们集中讨论并讨论窗口管理器提供的一般功能，以控制客户端应用程序窗口的外观和可操作性；特别是，我们检查 FVWM，这是一个随 X Window 系统即装即用的标准窗口管理器。X Window 系统中的所有窗口管理器都高度可定制，既可由系统管理员定制，也可由用户定制。与其他内置于操作系统中且无法真正定制到任何程度的窗口管理器相比。FVWM 的外观和功能可以由你修改，正如我们将在本节的最后几个小节中所示。
+
+### 22.2.3.1 Functions and Appearance of the Window Manager Interface
+
+与 Microsoft Windows 或 OS X 的外观和功能相似，你会认识到 UNIX X Window 系统窗口管理器提供的许多通用功能，如表 22.1 所示。这些功能是 X Window 系统协议提供的可能多于一个通用窗口系统服务的特定实现。
+
+### 22.2.3.2 The Appearance and Operation of FVWM
+
+值得检查并识别典型 X Window 系统窗口显示的组件。图 22.4 显示了使用 FVWM 窗口管理器的全屏显示，并说明了表 22.1 中找到的功能的一些特定实现示例。
+
+关于图 22.4 所示屏幕显示，有几件一般性的事情需要注意。此屏幕显示的背景被称为根窗口，标记为“R”。在屏幕上打开的所有其他窗口都是此父窗口的子窗口。事实上，单个客户端的一个父窗口本身可以生成许多子窗口，它们都是该客户端父窗口的子窗口。这种关系的一个有趣且重要的方面是，当父窗口遮挡或覆盖子窗口时，或者当子窗口不能存在于为父窗口定义的框架之外时。在第一种情况下，只要可能，简单地揭开子窗口即可让你在子窗口中操作。在第二种情况下，由于父窗口上存在太多未被覆盖的子窗口，父窗口可能会变得非常杂乱。图 22.4 未显示被覆盖的窗口，视觉上与所知的平铺显示相似。
+
+当你在图形光标位于根窗口时按住最左边的（第一个）、中间的或最右边的（第三个）鼠标按钮时，你将有机会利用
+
+# TABLE 22.1 Window Manager General Functions
+
+| Item | Function | Description |
+|---|---|---|
+| A | (De)iconify window | Reduce window to a small, representative picture, or enlarge to a full size window |
+| B | Create new window | Launch or run a new client application |
+| C | CUI to operating system | Allows user to open one or more windows and type commands into those windows |
+| D | Desktop management | Graphical file maintenance, speed buttons, special clients like time-of-day clock |
+| E | Destroy window | Close connection between server and client |
+| F | Event focus | Specifies which client is receiving events from devices like mouse, keyboard, etc. |
+| G | Modify window | Resize, move, stack, tile one or more windows |
+| H | Virtual screens | More than one screen area mapped onto the physical screen of the server |
+| I | Pop-up/pull-down menus | Utility menus activated by holding down mouse buttons to run client applications |
+

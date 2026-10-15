@@ -1,0 +1,11 @@
+of lab1.c requires the use of its inode number to index the in-memory inode table to get to the file’s inode. The inode, as previously stated, contains, among other things, the location of lab1.c on the disk.
+
+The inode contains the location of lab1.c on the disk in terms of the numbers of the disk blocks that contain the contents of the file. The details of how exactly a UNIX file’s location is specified in its inode and how it is stored on the disk are beyond the scope of this textbook. These details are available in any book on UNIX internals.
+
+# 4.6 STANDARD FILES AND FILE DESCRIPTORS
+
+When an application needs to perform an I/O operation on a file, it must first open the file and then issue the file operation (read, write, seek, etc.). UNIX automatically opens three files for every command it executes. The command reads input from one of these files and sends its output and error messages to the other two files. These files are called standard files: standard input (stdin) files, standard output (stdout) files, and standard error (stderr) files. By default, these files are attached to the terminal on which the command is executed. That is, the shell makes the command input come from the terminal keyboard, and its output and error messages go to the terminal (or the console window in case of an ssh session or an xterm in a UNIX system running the X Window System, as discussed in detail in Chapter 23). These default files can be changed to other files by using the redirection operators: < for input redirection and > for output and error redirection.
+
+A small integer, called a file descriptor, is associated with every open file in UNIX. The integer values 0, 1, and 2 are the file descriptors for stdin, stdout, and stderr, respectively, and are also known as standard file descriptors. The kernel uses file descriptors to perform file operations (e.g., file read), as illustrated in Figure 4.6. The kernel uses a file descriptor to index the per-process file descriptor table to obtain a pointer to the system-wide file table. The file table, among other things, contains a pointer to the file’s inode in the inode table. Once the inode for the file has been accessed, the required file operation is performed by
+
+![](bbox=[0.07, 0.82, 0.92, 0.92])

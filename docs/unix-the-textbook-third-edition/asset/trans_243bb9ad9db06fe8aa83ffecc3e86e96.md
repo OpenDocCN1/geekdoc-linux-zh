@@ -1,0 +1,45 @@
+
+
+## 第三版致谢
+
+我们于 2013 年秋季开始撰写这第三版，并在 2016 年春季完成。没有许多人的帮助，完成这样大规模的修订是不可能的。首先，作者衷心感谢本书编辑 Randi Cohen 在整个项目中给予的支持、指导、 reassurance、专业精神和理解。她是顶尖的。此外，我们还想对 CRC Press 的 Amber Donley 和 Joette Lynch 以及 Deanta Publishing Services 的 Michelle van Kampen 表示热烈而衷心的感谢，感谢他们在本书制作过程中所表现出的专业细致和极其周到的工作。
+
+我们向以下对本版进行审阅并提供宝贵反馈和大量准确而富有洞见的评论的审阅者表示衷心的感谢。我们特别感谢 Richard Fox 教授，他细致地阅读了手稿并提出了许多有用的建议，大大提升了最终成果。
+
+- Hussein Abdel-Wahab Old Dominion University
+- Gregory B. Newby Compute Canada
+- Richard Fox Northern Kentucky University
+
+## 第二版和第一版致谢
+
+感谢 AWL 的 Marilyn Lloyd 对本书在制作阶段提出的许多优秀建议和出色工作。我们也感谢 Joyce Wells 为本书设计了精美的封面。还要感谢 AWL 的 Katherine Harutunian 提出的许多宝贵建议和支持。整个 Addison Wesley 团队的工作都很出色！特别感谢 Dartmouth Publishing 的 Keith Henry 和 Alisa Andreola 在校对和内页设计方面的出色工作。
+
+我们还感谢以下审阅者审阅了本书的第二版。
+
+- Robert Albright — University of Delaware
+- Hussein Abdel-Wahab — Old Dominion University
+- Dunren Che — Southern Illinois University
+- C. Michael Costanzo — University of California, Santa Barbara
+- Robert M. Cubert — University of Florida
+- James P. Durbano — University of Delaware
+- Nisar Hundewale — Georgia State University
+- Mark Hutchenreuther — California Polytechnic State University
+- Stephen P. Leach — Florida State University
+- Susan Lincke-Salecker — University of Wisconsin Parkside
+- Mike Qualls — Grossmont Community College
+- Daniel Tomasevich — San Francisco State University
+- Paul Tymann — Rochester Institute of Technology
+- Troy Vasiga — University of Waterloo
+
+我们谨此感谢 Ronald E. Bass、Thomas A. Burns、Chuck Lesko、Toshimi Minoura、Selmer Moen、Gregory B. Newby、Dr. Marianne Vakalis 和 Dr. G. Jan Wilms 在审阅本书第一版时提出的富有洞见的评论。
+
+## 个人致谢
+
+Syed Mansoor Sarwar 我感谢我的父母、妻子、孩子和兄弟姐妹给予我的爱、支持和信任。他们一直是我生活中的积极影响，在许多方面帮助了我，始终是我最大的支持者。我永远无法回报他们多年来给予我的恩典。我的母亲是母爱的典范，过去几年一直在与严重疾病作斗争。我祈祷她身体健康、心情平静。我的父亲即使在 94 岁高龄仍是一位热爱阅读的人，是智慧、勇气、关怀、智力、逻辑推理和心理韧性的象征，始终是我追求知识发现、理性思考和服务同类的灵感。没有他和我妻子的持续鼓励和支持，写这本书是不可能的。
+
+我的妻子 Robina 和孩子们 Maham、Ibraheem 和 Hassan 在整个项目期间一直极其耐心和支持。谢谢你们的理解和支持，伙计们！没有你们我不可能做到。在撰写本书第二版时，Hassan 和 Maham 在中学就读，而当时的“小不点” Ibraheem 在学前班。现在，Hassan 是 infinione 的 CEO，infinione.com 是一家他于南加州大学 USC 大三时创立的洛杉矶科技公司。Maham 是获得奖学金的应届毕业生，主修纺织设计，并在全国比赛中获得最佳设计师奖。她的几件设计作品已通过 Beech tree 等知名女性时装品牌进行市场推广。Ibraheem 现在是一位身高 6'2" 的年轻少年，热爱数学和科学，目标是成为顶尖科学家，同时也是职业篮球运动员。
+
+我特别感谢我的姐妹 Rizwana 和 Farhana，以及兄弟 Aqeel、Nadeem、Masood 和 Nabeel 的友谊和关怀。我向他们、我的大嫂 Maimoona、Sadaf 和 Farzana，以及我的小舅子 Hamid 表示衷心的感谢，他们在需要时照顾了我们的父亲和病重的母亲。朋友们，我将永远感激你们为我们的父母承担了我应尽的服务。我希望有一天能以某种形式回报你们。
+
+我感谢教我使用、管理和内部原理以及 UNIX 编程的老师们。他们是爱荷华州立大学的 James Davis、Doug Jacobson 和 Arthur Oldehoeft，以及俄勒冈研究生院和波特兰州立大学的 Jim Binkley。我在职业生涯中最艰难的条件下撰写了这本书。我感谢旁遮普大学信息技术学院 PUCIT 的同事们，
+

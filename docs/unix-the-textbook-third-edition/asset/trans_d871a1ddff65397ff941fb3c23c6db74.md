@@ -1,0 +1,99 @@
+
+
+![](img/02e070097d401d3bf7de4bf1c470b267_553_0.png)
+
+## FIGURE 13.3 Execution of the csh and exec < sample commands under the login shell.
+
+of the data file to see the outputs of all the commands executed prior to this command. When the exec > data command is executed from a shell script, it causes the outputs of all subsequent commands to go to the data file until the exec > /dev/tty command is executed from within the shell script.
+
+The following session illustrates the use of this command from the command line. Note that, after the exec > data command has completed its execution, the outputs of all subsequent commands (date, echo, and more) go to the data file. In order to redirect the output of commands to the screen, the exec > /dev/tty command must be executed, as shown in the following session. Note that our system has an AMD64 CPU and, as expected, is running FreeBSD UNIX.
+
+```
+$ exec > data
+$ date
+$ echo "Hello, world!"
+$ uname -sm
+$ exec > /dev/tty
+$ date
+Thu Jul 31 19:27:46 PKT 2014
+$ more data
+Thu Jul 31 19:27:12 PKT 2014
+Hello, world!
+FreeBSD amd64
+$
+```
+
+Similarly, you can redirect standard output and standard error for a segment of a shell script by using the following command:
+
+```
+exec > outfile 2> errorfile
+```
+
+In this case, output and error messages from the shell script following this line are directed to outfile and errfile, respectively. (Obviously, file descriptor 1 can be used with > to redirect output.) If output needs to be reattached to the terminal, you can do so by using:
+
+exec > /dev/tty
+
+Once this command has executed, all subsequent output goes to the monitor screen. Similarly, you can use the exec 2> /dev/tty command to send errors back to the display screen.
+
+Consider the following shell session. When exec.demo1 is executed, file1 gets the line containing Hello, world!, file3 gets the contents of file2, and file4 gets the line This is great!. The shell script between the commands exec < file2 and exec < /dev/tty takes its input from file2. Therefore, the command cat > file3 is really cat < file2 > file3. The cat > file4 command takes input from the keyboard as it is executed after the exec < /dev/tty command has been executed (which reattaches the stdin of the script to the keyboard). Figure 13.4 illustrates the semantics of the three cat commands in the shell script.
+
+```
+$ more exec.demo1
+cat > file1
+exec < file2
+cat > file3
+exec < /dev/tty
+cat > file4
+$ ./exec.demo1
+Hello, world!
+<Ctrl+D>
+This is great!
+<Ctrl+D>
+$ more file1
+Hello, world!
+$ more file2
+[Contents of file2.]
+$ more file3
+[Contents of file3.]
+$ more file4
+This is great!
+$
+```
+
+Now, we develop a shell script, diff2, which uses the file I/O features of the Bourne shell. It takes two files as command line arguments and compares them line by line. If the files are the same, it displays a message that says so, and the program terminates. If one file is smaller than the other, it displays a message informing you of that and exits. As soon as the program finds the lines at which the two files differ, it displays an error message informing you of the lines from both files that are different and terminates. The following is the script and a few sample runs.
+
+## FIGURE 13.4 Detachment and reattachment of stdin and stdout inside a shell script.
+
+```
+$ cat diff2
+#!/bin/sh
+
+# File Name:  ~/unix3e/BourneShell/diff2
+# Author:     Syed Mansoor Sarwar
+# Written:    August 28, 2004
+# Modified:   August 28, 2004, July 29, 2014
+# Purpose: To see if the two files passed as command line
+#          arguments are same or different
+# Brief Description:
+#          Read a line from each file and compare them. If
+#          the lines are the same, continue. If they are
+#          different, display the two lines and exit. If one
+#          of the files finishes before the other, display a
+#          message and exit. Otherwise, the files are the
+#          same; display an appropriate message and exit
+
+if [ $# != 2 ]
+then
+    echo "Usage: $0 file1 file2"
+    exit 1
+elif [ ! -f "$1" ]
+then
+    echo "$1 is not an ordinary file"
+    exit 1
+elif [ ! -f "$2" ]
+then
+    echo "$2 is not an ordinary file"
+```
+
+![](img/02e070097d401d3bf7de4bf1c470b267_555_0.png)
+

@@ -1,0 +1,24 @@
+# Example 17.4: Cloning a GitHub Repository
+
+Objectives: To clone an existing remote GitHub repository into a new local repository.
+
+Introduction: In order to share the contents of an existing GitHub repository between members of a software development and maintenance team, it is a usual practice to clone, or copy, a complete repository from GitHub into a new local repository. In the previous Example 17.3, we first created a working directory and a new Git repository in it. Then we added a file to this new local repository and used the git push command to move that file up to an existing repository at GitHub. In this example, we will use the git clone command to create an entirely new local Git repository from an existing remote GitHub repository. Then we will add a new file to the local repository and use git push to transfer that file to the GitHub repository. To simplify things for the beginner, there is only one branch on the remote GitHub repository.
+
+Git Commands Referenced: Table 17.4 shows the Git commands, and a brief description of each, that are used in this example. It is arranged in the order presented. Any argument enclosed in < > is a string of text. In order to get a more complete description of all the commands in the table, you can look at the man page for a particular command. For example, man git-clone gives you a complete man page for the git clone command.
+
+Prerequisites: The following are the prerequisites for carrying out this example:
+
++   1. Having completed the previous subsections that familiarize you with Git commands executed on the UNIX command line
++   2. Having an Internet connection and a suitable Web browser installed and operating on your UNIX system
++   3. Having completed Example 17.3 and having your Web browser pointed at the test repository created in that example so you can check on its contents
++   4. Having access to an account on GitHub that has in it the existing repository test created in Example 17.3.
+
+# TABLE 17.4 Git Commands Referenced
+
+| Command | Description |
+|---|---|
+| git clone <remote_designation> | Transfers a complete repository from the remote designated into a local repository, maintaining the branch and file structure |
+| git status | Shows the current state of the repository |
+| git add <object(s)> | Stages the named object(s) to the index |
+| git commit -m "Message" | Commits the contents of the staged files in the index |
+| git push <remote_designation> master | Transfers the working directory to the remote designated on the branch master |

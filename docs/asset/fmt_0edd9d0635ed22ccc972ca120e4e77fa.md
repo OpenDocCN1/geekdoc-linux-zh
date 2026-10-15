@@ -8,7 +8,7 @@ Service ended.
 
 - 要查看 IBM Systems Director 服务的状态，运行示例 5-7 所示命令。
 
-### 示例 5-7 检查 IBM Systems Director 服务的状态
+示例 5-7 检查 IBM Systems Director 服务的状态
 
 ```
 [root@mngmt snmp]# /opt/ibm/director/bin/twgstat
@@ -17,7 +17,7 @@ Inactive
 
 要启动 IBM Systems Director Console，运行示例 5-8 所示命令。
 
-### 示例 5-8 启动 IBM Systems Director Console
+示例 5-8 启动 IBM Systems Director Console
 
 ```
 [root@nmgmt FILES]# /opt/ibm/director/bin/twgcon
@@ -25,19 +25,19 @@ Inactive
 Console started.
 ```
 
-由于控制台是一个基于 GUI 的应用程序，它需要一个 DISPLAY，该显示可以通过本地 X Server 提供，也可以由外部（远程）X Server 提供。您也可以在系统上使用 VNC 服务器，它被视为本地 X Server，您可以使用 VNC 会话远程连接到它。
+由于控制台是一个基于 GUI 的应用程序，它需要一个 `DISPLAY`，该显示可以通过本地 X Server 提供，也可以由外部（远程）X Server 提供。您也可以在系统上使用 VNC 服务器，它被视为本地 X Server，您可以使用 VNC 会话远程连接到它。
 
 ## 在 Linux 上安装
 
 本节涵盖了在 POWER 上安装 IBM Systems Director Server 和 Level-2 Agents。
 
-### 获取安装文件
+## 获取安装文件
 
 在安装 IBM Systems Director Server 或 Agent 组件之前，您需要准备系统，您应该首先安装第 147 页“在 Linux 上实现 IBM Systems Director”中列出的先决条件。您可以从 IBM Systems Director 网站下载 POWER 上的 Linux IBM Systems Director：http://www.ibm.com/systems/management
 
 如果您有 POWER 上的 Linux IBM Systems Director V5.20 CD，请挂载它并启动 IBM Systems Director Server 组件的安装过程。POWER 平台提供了 IBM Systems Director Agent、IBM Systems Director Core Services（以前称为 Level-1 Agent）以及 IBM Systems Director Console 的安装源。提供的信息也适用于 Level-1 Agent，因为其安装过程与 Level-2 Agent 过程不同。
 
-### 安装先决条件
+## 安装先决条件
 
 将先决文件下载到本地目录后，可以按照后续列表所示顺序安装它们。您也可以同时安装它们。要安装软件包，请使用以下命令：
 
@@ -62,7 +62,7 @@ rpm -ivh <package>.rpm
 
 - 要安装 IBM Systems Director Server，运行示例 5-1 所示命令。
 
-#### 示例 5-1 安装 IBM Systems Director Server
+> 示例 5-1 安装 IBM Systems Director Server
 
 ```
 [root@mngmt FILES]# ./dirinstall
@@ -70,7 +70,7 @@ rpm -ivh <package>.rpm
 
 - 要安装 IBM Systems Director Agent Level-2，运行示例 5-2 所示命令。
 
-#### 示例 5-2 安装 IBM Systems Director Agent Level-2
+> 示例 5-2 安装 IBM Systems Director Agent Level-2
 
 ```
 [root@mngmt FILES]# ./dir5.20_agent_linppc.sh
@@ -78,7 +78,7 @@ rpm -ivh <package>.rpm
 
 - 要安装 IBM Systems Director Agent Level 1，运行示例 5-3 所示命令。
 
-#### 示例 5-3 安装 IBM Systems Director Agent Level-1
+> 示例 5-3 安装 IBM Systems Director Agent Level-1
 
 ```
 [root@mngmt FILES]# ./dir5.20_agent_linppc.sh
@@ -86,7 +86,7 @@ rpm -ivh <package>.rpm
 
 要安装 IBM Systems Director Console，请运行示例 5-4 所示命令。
 
-#### 示例 5-4 安装 IBM Systems Director Console
+示例 5-4 安装 IBM Systems Director Console
 
 ```
 [root@mngmt npc]# /dirinstall
@@ -96,7 +96,7 @@ rpm -ivh <package>.rpm
 
 - 要启动 IBM Systems Director 服务，运行示例 5-5 所示命令。
 
-#### 示例 5-5 启动 IBM Systems Director 服务
+示例 5-5 启动 IBM Systems Director 服务
 
 ```
 [root@mngmt FILES]# /opt/ibm/director/bin/twgstart
@@ -107,7 +107,7 @@ Service started.
 
 - 要停止 IBM Systems Director 服务，运行示例 5-6 所示命令。
 
-#### 示例 5-6 停止 IBM Systems Director 服务
+示例 5-6 停止 IBM Systems Director 服务
 
 ```
 [root@mngmt FILES]# /opt/ibm/director/bin/twgstop
@@ -118,7 +118,7 @@ Service ended.
 
 - 要查看 IBM Systems Director 服务的状态，运行示例 5-7 所示命令。
 
-#### 示例 5-7 检查 IBM Systems Director 服务的状态
+示例 5-7 检查 IBM Systems Director 服务的状态
 
 ```
 [root@mngmt snmp]# /opt/ibm/director/bin/twgstat
@@ -127,7 +127,7 @@ Inactive
 
 要启动 IBM Systems Director Console，运行示例 5-8 所示命令。
 
-#### 示例 5-8 启动 IBM Systems Director Console
+示例 5-8 启动 IBM Systems Director Console
 
 ```
 [root@nmgmt FILES]# /opt/ibm/director/bin/twgcon
@@ -135,4 +135,12 @@ Inactive
 Console started.
 ```
 
-由于控制台是一个基于 GUI 的应用程序，它需要一个 DISPLAY，该显示可以通过本地 X Server 提供，也可以由外部（远程）X Server 提供。您也可以在系统上使用 VNC 服务器，它被视为本地 X Server，您可以使用 VNC 会话远程连接到它。
+由于控制台是一个基于 GUI 的应用程序，它需要一个 `DISPLAY`，该显示可以通过本地 X Server 提供，也可以由外部（远程）X Server 提供。您也可以在系统上使用 VNC 服务器，它被视为本地 X Server，您可以使用 VNC 会话远程连接到它。
+
+## 在 Linux 上安装
+
+本节涵盖了在 POWER 上安装 IBM Systems Director Server 和 Level-2 Agents。
+
+## 获取安装文件
+
+在安装 IBM Systems Director Server 或 Agent 组件之前，您需要准备系统，您应该首先安装第 147 页“在 Linux 上实现 IBM Systems Director”中列出的先决条件。您可以从 IBM Systems Director 网站下载 POWER 上的 Linux IBM Systems Director：http://www.ibm.com/systems/management

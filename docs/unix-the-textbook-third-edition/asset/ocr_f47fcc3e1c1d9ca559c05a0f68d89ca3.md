@@ -1,0 +1,15 @@
++   - **BSD socket:** A BSD socket is also a temporary channel that allows two or more processes in a network (or on the Internet) to communicate, although processes on the same computer can also use them. Sockets were originally a part of the BSD UNIX only, but they are now available on almost every UNIX system. Internet software such as Web browsers, File Transfer Protocol (FTP), Secure Shell (SSH), and electronic mailers are implemented by using sockets. AT&T UNIX has a similar mechanism called the Transport Layer Interface (TLI).
+
+We discuss these mechanisms of IPC in detail under "UNIX System Programming" in Chapters 18 through 21.
+
+# 1.7.2.2 File Management
+
+This part of the kernel manages files and directories, also known as folders. It performs all file-related tasks, including file creation and removal, directory creation and removal, setting access privileges on files and directories, and maintaining their attributes, such as file size. A file operation usually requires manipulation of a disk. In a multiuser system, a user must never be allowed to manipulate a disk directly because it contains files belonging to other users, and user access to a disk poses a security threat. Only the kernel must perform all file-related operations, such as file removal. Also, only the kernel must decide where and how much space to allocate to a file.
+
+# 1.7.2.3 Main Memory Management
+
+This part of the kernel allocates and deallocates RAM in an orderly manner so that each process has enough space to execute properly. It also ensures that part or all of the space allocated to a process does not belong to some other process. The space allocated to a process in the memory for its execution is known as its address space. The kernel ensures that no process accesses an area of memory that does not belong to its address space. The kernel maintains areas in the main memory that are free to be allocated to processes. The kernel code that performs this task is called the free space manager. When a program is to be loaded in the main memory, the free space manager allocates adequate space for it and the loader loads the program into this space. The kernel also records where all the processes reside in the memory so that, when a process tries to access main memory space that does not belong to it, the kernel can terminate the process and give a meaningful message to the user. When a process terminates, the kernel deallocates the space allocated to the process and puts it back in the free space pool so that it can be reused.
+
+# 1.7.2.4 Disk Management
+
+The kernel is also responsible for maintaining free and used disk space and for the orderly and fair allocation and deallocation of disk space. It decides where and how much space to allocate to a newly created file. The kernel code that performs this task is known as the disk storage manager. Also, the kernel performs disk scheduling, deciding which request to serve next when multiple requests for file read, write, and so on, arrive for the same disk.

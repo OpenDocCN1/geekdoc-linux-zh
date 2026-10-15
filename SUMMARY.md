@@ -2364,6 +2364,7 @@
 +   [UNIX 系统编程：通信、并发与线程](docs/unix-systems-programming-communication-concurrency-and-threa/README.md)
 +   [UNIX：完全参考](docs/unix-the-complete-reference/README.md)
 +   [UNIX：完全参考，第二版（完全参考系列）](docs/unix-the-complete-reference-second-edition-complete-referenc/README.md)
++   [UNIX 教科书 第三版](docs/unix-the-textbook-third-edition/README.md)
 +   [Unix 第三版：视觉快速启动指南](docs/unix-third-edition-visual-quickstart-guide/README.md)
 +   [UNIX 到 Linux(R) 迁移：全面参考 (Prentice Hall 开源软件开发系列)](docs/unix-to-linuxr-porting-a-comprehensive-reference-prentice-ha/README.md)
 +   [Unix 工具箱 修订版 14.2](docs/unix-toolbox-revision-142/README.md)

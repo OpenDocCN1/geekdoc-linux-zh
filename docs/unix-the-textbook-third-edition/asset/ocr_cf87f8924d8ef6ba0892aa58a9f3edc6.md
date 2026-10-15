@@ -1,0 +1,13 @@
+![](bbox=[0.38, 0.12, 0.62, 0.28])
+
+# FIGURE 23.4 Add User window.
+
+This screen is used to input the following information when adding a new user or system account:
+
++   - Full Name: This field provides a description of the account and can contain spaces. If it is a user account, use the person’s first and last name. If it is a system account, input a description to remind you which application uses the account.
++   - Username: The name the user will use when they log in to the system; it is case sensitive and can not contain any spaces. If you are creating a system account needed by an application, use the name provided by the application’s installation instructions. If the name that you choose already exists as an account, it will be highlighted in red and the utility will prompt you to use another name.
++   - Home Directory: Leave this field empty for a user account as the system will automatically create a ZFS dataset for the user’s home directory under /usr/home/username. We supply more information on the structure and administration of the ZFS file system in Chapter 24. However, if you are creating a system account it is important to override this default by typing in /var/empty or /nonexistent unless the application’s installation instructions specify that the account needs a specific home directory.
++   - Shell: This drop-down menu contains the shells that are available to users when they are at a command prompt. You can either keep the default or select a shell which the user prefers.
++   - Primary Group: If you leave the default button of New Group selected, a group will be created with the same name as the user. This is usually what you want unless you are creating a system account and the installation instructions specify a different group name. The drop-down menu for specifying a group name will only show existing groups, but you can quickly create a group using the Groups tab.
++   - Password: The password is case sensitive and needs to be confirmed.
++   - Encrypt Files: If this box is selected, the user’s home directory will automatically be encrypted with PEFS. When the user logs in, the contents of their home directory are automatically decrypted after they enter their password. When they logout, the contents of their home directory are automatically encrypted and will appear as gibberish to other users who do not know the password. For this reason, it is important

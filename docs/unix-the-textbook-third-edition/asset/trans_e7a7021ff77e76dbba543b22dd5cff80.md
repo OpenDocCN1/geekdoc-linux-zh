@@ -1,0 +1,135 @@
+
+
+em0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0
+mtu 1500 options=9b<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,VLAN_HWCSUM>
+ether 08:00:27:38:ba:74
+inet6 fe80::a00:27ff:fe38:ba74%em0 prefixlen 64 scopeid 0x1
+inet 192.168.0.14 netmask 0xffffffff broadcast 192.168.0.255
+nd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>
+media: Ethernet autoselect (1000baseT <full-duplex>)
+status: active
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+options=600003<RXCSUM,TXCSUM,RXCSUM_IPV6,TXCSUM_IPV6>
+inet6 ::1 prefixlen 128
+inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2
+inet 127.0.0.1 netmask 0xff000000
+nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+[bob@pcbsd] ~% 
+
+这台 PC-BSD 机器的 IP 地址为 192.168.0.14，如命令输出中以粗体显示的那样。
+
+## 25.2 PC-BSD 监狱与 iocage
+
+监狱（jail）是操作系统级虚拟化的一种实现，它有效地将进程树与系统的其余部分隔离开来。它的历史前身是 chroot 命令，该命令允许特权用户将进程的文件系统根目录更改为一个特定隔离的位置，从而使其他进程和用户无法与被“chrooted”的进程交互。以前，在 PC-BSD 中，监狱由 Warden 监狱管理系统管理。
+
+监狱与 Linux 容器非常相似，后者用于 LXC 和 Docker 等管理系统中。PC-BSD 中的监狱与 Linux 中的容器的主要区别在于，Linux 有一些非常特殊的系统调用，允许在多个域中进行命名空间操作和隔离，并建立 cgroups。
+
+在接下来的章节中，我们将介绍 iocage（一个现代化的 PC-BSD 监狱管理程序）的功能。我们还将给出一些如何使用 iocage 处理监狱的示例。最后，我们将通过实际示例来演示 iocage 的安装以及监狱的创建和管理。
+
+### 25.2.1 iocage 简介、概述与使用
+
+iocage 是一个监狱/容器管理器，它利用了 PC-BSD 操作系统所提供的部分最佳特性和技术，尤其是 ZFS。它易于使用，并且具有简单易懂的命令语法，如下所示：
+
+```
+iocage sub-command [-option(s)] [command argument(s)]
+[properties],
+```
+
+其中命令参数通常是 UUID 或 TAG，它们是监狱的唯一标识符或名称。
+
+### 列表：
+
+- iocage activate ZPOOL
+- iocage cap UUID|TAG
+- iocage chroot UUID|TAG [command]
+- iocage clean [-a|-b|-j]
+- iocage clone UUID|TAG [UUID|TAG@snapshot] [property=value]
+- iocage console UUID|TAG
+- iocage create [-e] [base=[RELEASE|NAME]] [pkglist=file] [property=value]
+- iocage deactivate ZPOOL
+- iocage defaults
+- iocage destroy [-f] UUID|TAG
+- iocage df
+- iocage exec [-u username | -U username] UUID|TAG|ALL command [arg ...]
+- iocage export UUID|TAG
+- iocage fetch [release=RELEASE | ftphost=ftp.hostname.org | ftpdir=/dir/ | ftpfiles="base.txz doc.txz lib32.txz src.txz"]
+- iocage get property|all UUID|TAG
+- iocage help
+- iocage import UUID [property=value]
+- iocage init-host IP ZPOOL
+- iocage inuse UUID|TAG
+- iocage limits [UUID|TAG]
+- iocage list [-b|-t|-r]
+- iocage package UUID|TAG
+- iocage promote UUID|TAG
+- iocage rboot
+- iocage reboot UUID|TAG
+- iocage rcshutdown
+- iocage record start|stop UUID|TAG
+- iocage reset UUID|TAG|ALL
+- iocage restart UUID|TAG
+- iocage rollback UUID|TAG@snapshotname
+- iocage runtime UUID|TAG
+- iocage set property=value UUID|TAG
+- iocage show property
+- iocage snaplist UUID|TAG
+- iocage snapremove UUID|TAG@snapshotname|ALL
+- iocage snapshot [-r] UUID|TAG [UUID|TAG@snapshotname]
+- iocage start UUID|TAG
+- iocage stop UUID|TAG|ALL
+- iocage uncap UUID|TAG
+
+```
+iocage update UUID|TAG
+iocage upgrade UUID|TAG [release=RELEASE]
+iocage version | --version
+```
+
+有关更多信息，请阅读 iocage 的手册页。这份详尽的手册页提供了你可以与 iocage 命令一起使用的所有选项、子命令和属性。
+
+### 25.2.2 基本用法
+
+本节详细介绍 iocage 命令的基本用法。
+
+所有命令均以超级用户身份执行。
+
+获取发行版：在“全新”系统（即之前从未运行过 iocage 的系统）上使用 iocage 的第一步是获取发行版。默认情况下，iocage 将尝试从 freebsd.org 服务器获取主机当前的发行版。发行版下载完成后，将应用最新的补丁。
+
+```
+# iocage fetch
+```
+
+如果需要特定发行版，请运行以下命令。在第 25.2.9 节中，我们在 PC-BSD 系统上获取了 Release 10.2。请注意，你可能可以使用更新的 iocage 发行版。
+
+```
+# iocage fetch release=10.2-RELEASE
+```
+
+如果需要特定的下载镜像：
+
+```
+# iocage fetch ftphost=ftp.hostname.org
+```
+
+你还可以指定一个 FTP 目录，从中获取基础文件：
+
+```
+# iocage fetch ftpdir=/dir/
+```
+
+创建监狱：支持三种基本的监狱类型：完整监狱（full）、克隆监狱（clone）和基础监狱（base jail）。除了这三种之外，还有两种（空监狱和模板）。根据需求，可以使用 create 子命令创建这三种类型中的任意一种。默认情况下，iocage 将创建一个基于当前主机发行版的完全独立的监狱，并将 TAG 属性设置为今天的日期。
+
+例如：
+
+```
+# iocage create
+```
+
+这将创建一个完全独立的监狱。
+
+要创建一个轻量级监狱（克隆）：
+
+```
+# iocage create -c
+```
+

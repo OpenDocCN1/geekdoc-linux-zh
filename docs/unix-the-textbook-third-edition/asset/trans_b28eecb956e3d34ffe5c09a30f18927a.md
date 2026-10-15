@@ -1,0 +1,139 @@
+
+
+## 表 22.8 Xlib 事件函数
+
+| Xlib 函数名 | 描述 |
+|---|---|
+| XNextEvent | 将事件队列中的第一个事件复制到指定的 XEvent 结构，然后将其从队列中移除 |
+| XLookupString | 将按键事件转换为 KeySym 和字符串 |
+| XSetForeground | 设置给定 GC 的前景属性 |
+| XDrawString | 在给定的可绘制对象中绘制文本字符 |
+| XSetStandardProperties | 提供一种方式，使简单应用程序可以通过一次调用设置最基本的属性 |
+| XSelectInput | 请求 X 服务器报告与指定事件掩码关联的事件 |
+| XCreateGC | 创建并返回一个 GC；可用于任何与指定可绘制对象具有相同根和深度的目标可绘制对象 |
+| XSetBackground | 设置给定 GC 的背景属性 |
+| XClearWindow | 清除指定窗口中的整个区域 |
+| XMapRaised | 映射窗口及其所有已发出映射请求的子窗口，并将窗口提升到堆栈顶部 |
+| XFreeGC | 销毁指定的 GC 以及所有关联的存储 |
+| XDestroyWindow | 销毁指定的窗口及其所有子窗口，并使 X 服务器为每个窗口生成 DestroyNotify 事件 |
+| XCloseDisplay | 关闭显示结构中所指定显示与 X 服务器的连接，并销毁所有窗口和资源 ID |
+| XClearWindow | 清除指定窗口中的整个区域 |
+
+```
+Window win;
+GC gc;
+/* X routines */
+void init_x();
+void close_x();
+void redraw();
+main () {
+
+/*Initialization*/
+
+    XEvent event; /* declare the XEvent */
+    KeySym key;   /* KeyPress Events */
+    char text[256];   /* char buffer for KeyPress Events */
+    init_x();
+
+/* Start the Event-Request Loop*/
+    while(1) {
+        /* get the next event.
+           We set the mask for events that we want detected
+        */
+        XNextEvent(dis, &event);
+        if (event.type==Expose && event.xexpose.count==0) {
+/* the window was exposed redraw it! */
+    redraw();
+}
+if (event.type==KeyPress&&
+    XLookupString(&event.xkey,text,255,&key,0)==1) {
+/* use the XLookupString routine to convert the event KeyPress data into regular text.
+*/
+    if (text[0]=='q') {
+        close_x();
+    }
+    printf("You pressed the %c key\n",text[0]);
+}
+if (event.type==ButtonPress) {
+/* report where the mouse Button was Pressed */
+    int x=event.xbutton.x;
+    y=event.xbutton.y;
+    strcpy(text,"UNIX Rocks");
+    XSetForeground(dis,gc,rand()%event.xbutton.x%255);
+    XDrawString(dis,win,gc,x,y, text, strlen(text));
+}
+}
+void init_x() {
+/* Set the colors black and white */
+    unsigned long black,white;
+
+    dis=XOpenDisplay((char *)0);
+    screen=DefaultScreen(dis);
+    black=BlackPixel(dis,screen),
+    white=WhitePixel(dis, screen);
+    win=XCreateSimpleWindow(dis,DefaultRootWindow(dis),0,0,
+        300, 300, 5,black, white);
+    XSetStandardProperties(dis,win,"Report","E",None,NULL,0,NULL);
+    XSelectInput(dis, win, ExposureMask|ButtonPressMask|KeyPressMask);
+    gc=XCreateGC(dis, win, 0,0);
+    XSetBackground(dis,gc,white);
+    XSetForeground(dis,gc,black);
+    XClearWindow(dis, win);
+    XMapRaised(dis, win);
+};
+
+void close_x() {
+XCloseDisplay(dis);
+    exit(1);
+};
+
+void redraw() {
+    XClearWindow(dis, win);
+};
+```
+
+### 22.4.3.3.3 Xlib 示例程序 test1.c
+
+目标：在显示屏上创建一个简单的窗口，打印 Hello, World! 并绘制一个黑色的小填充矩形。可以通过按 <Ctrl+C> 关闭。
+
+调用的新函数（表 22.9）：
+
+代码：
+
+```
+/*
+ * Simple Xlib application drawing a box in a window.
+ */
+#include <X11/Xlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void)
+{
+    Display *display;
+    Window window;
+    XEvent event;
+    char *msg = "Hello, World!";
+    int s;
+
+    /*Initialization*/
+
+    /* open connection with the server */
+    display = XOpenDisplay(NULL);
+    if (display == NULL)
+    {
+        fprintf(stderr, "Cannot open display\n");
+        exit(1);
+    }
+    s = DefaultScreen(display);
+
+    /* create window */
+```
+
+## 表 22.9 Xlib 绘图函数
+
+| Xlib 函数名 | 描述 |
+|---|---|
+| XFillRectangle | 填充指定的一个或多个矩形，如同为每个矩形指定了四点 FillPolygon 协议请求一样 |
+

@@ -1,0 +1,127 @@
+
+
+```
+echo " l:  To see the listing of files in your present working directory"
+echo " w:  To see who's logged in"
+echo " q:  To quit this program"
+echo -n "Enter your option and hit <Enter>: "
+read option
+case "$option" in
+    d)  date
+        ;;
+    l)  ls
+        ;;
+    w)  who
+        ;;
+    q)  exit 0
+        ;;
+esac
+exit 0
+$ ./case_demo
+Use one of the following options:
+    d:  To display today's date and present time
+    l:  To see the listing of files in your present working directory
+    w:  To see who's logged in
+    q:  To quit this program
+Enter your option and hit <Enter>: d
+Sat Jul 26 17:28:19 PKT 2014
+$ ./case_demo
+Use one of the following options:
+    d:  To display today's date and present time
+    l:  To see the listing of files in your present working directory
+    w:  To see who's logged in
+    q:  To quit this program
+Enter your option and hit <Enter>: w
+malik            pts/0        Jul 15 08:11
+davis            pts/1        Jul 27 16:11 (39.59.91.120)
+sarwar           pts/2        Jul 27 16:48
+jacob            pts/3        Jul 26 16:03
+$ ./case_demo
+Use one of the following options:
+    d:  To display today's date and present time
+    l:  To see the listing of files in your present working directory
+    w:  To see who's logged in
+    q:  To quit this program
+Enter your option and hit <Enter>: a
+$
+```
+
+从 `w` 选项的输出来看，似乎 davis 是通过远程登录使用系统，最有可能是通过 ssh 会话。注意，当你输入一个有效选项时，会显示预期的输出。然而，当你输入的输入不是有效选项时（前一个会话中的 a），程序不会给你任何反馈。原因是 case 语句将你的输入与所有模式逐一匹配，并在没有匹配时退出。我们需要稍微修改脚本，以便当你输入无效选项时，脚本会告诉你并然后终止。为此我们添加以下代码。
+
+```
+*) echo "Invalid option; try running the program again."
+    exit 1
+    ;;
+```
+
+我们还增强了脚本，使大写和小写输入被视为相同。我们在模式中使用管道符号（|）来指定逻辑或操作。增强后的代码和一些示例运行如下所示。
+
+```
+$ cat case_demo
+echo "Use one of the following options:"
+echo "  d or D:    To display today's date and present time"
+echo "  l or L:    To see the listing of files in your present working directory"
+echo "  w or W:    To see who's logged in"
+echo "  q or Q:    To quit this program"
+echo -n "Enter your option and hit <Enter>: "
+read option
+case "$Option" in
+    d|D)    date
+            ;;
+    l|L)    ls
+            ;;
+    w|W)    who
+            ;;
+    q|Q)    exit 0
+            ;;
+    *)      echo "Invalid option; try running the program again."
+            exit 1
+            ;;
+esac
+exit 0
+$ ./case_demo
+Use one of the following options:
+    d or D:    To display today's date and present time
+    l or L:    To see the listing of files in your present working directory
+    w or W:    To see who's logged in
+```
+
+```
+$ { date; echo -n "Hello, "; echo "world!"; }
+Sat Aug  2 06:35:27 PKT 2014
+Hello, world!
+$ { date; echo -n "Hello, "; echo "world!"; } > groupout
+$ more groupout
+Sat Aug  2 06:35:40 PKT 2014
+Hello, world!
+$ { date; echo; ps; echo; echo "Hello, world!"; }
+Sat Aug  2 06:36:39 PKT 2014
+PID TT  STAT   TIME COMMAND
+31078 1 Is   0:00.21 -csh (csh)
+31113 1 S    0:00.05 /bin/sh
+31371 1 R+   0:00.01 ps
+Hello, world!
+$ (date; pwd)
+Sun Aug  3 12:47:24 PKT 2014
+/home/sarwar
+$ (date; pwd) > groupout
+$ cat groupout
+Sun Aug  3 12:52:42 PKT 2014
+/home/sarwar
+$ (date; echo; ps; echo; echo "Hello, world!")
+Sat Aug  2 06:37:18 PKT 2014
+PID TT  STAT   TIME COMMAND
+31078 1 Is   0:00.21 -csh (csh)
+31113 1 S    0:00.06 /bin/sh
+31421 1 S+   0:00.00 /bin/sh
+31423 1 R+   0:00.02 ps
+Hello, world!
+$
+```
+
+本会话中命令的输出不言自明。请注意，没有创建子 shell 来执行 `{ date; echo; ps; echo; echo "Hello, world!"; }` 中的命令。然而，`(date; echo; ps; echo; echo "Hello, world!")` 中的命令是在子 shell 下执行的，子 shell 的 PID 为 31421。
+
+## SUMMARY
+
+每个 UNIX shell 都有一种编程语言，允许你编写程序来执行现有命令无法完成的任务。这些程序通常被称为 shell 脚本。最简单的形式，shell 脚本由 shell 逐条顺序执行的 shell 命令列表组成。更高级的脚本包含程序控制流语句，用于实现多路分支和脚本中命令块的重复执行。由 Bourne shell 命令、语句和特性组成的 shell 程序称为 Bourne shell 脚本。
+

@@ -1,0 +1,29 @@
+```
+Wow! You are a genius!
+%
+```
+
+The net effect of using the onintr command in the preceding script is to ignore a keyboard interrupt. You can achieve the same effect by using the command with the - option. Thus, the whole interrupt handling code in the onintr_demo program can be replaced by the onintr - command; no code is needed at any label, but then the code does not display any message for you when you press <Ctrl+C>.
+
+To terminate programs that ignore terminal interrupts, you have to use the kill command. You can do so by suspending the process by pressing <Ctrl+Z>, using the ps command to get the process ID (PID) of the process, and terminating it with the kill command.
+
+You can modify the script in the onintr_demo file so that it ignores the keyboard interrupt, clears the display screen, and turns off the echo. Whatever you enter at the keyboard, then, is not displayed. Next, it prompts you for the code word twice. If you do not enter the same code word both times, it reminds you of your bad short-term memory and quits. If you enter the same code word, it clears the display screen and prompts you to guess the code word again. If you do not enter the original code word, the screen is cleared and you are prompted to guess again. The program does not terminate until you have entered the original code word. When you do enter it, the display screen is cleared, a message is displayed at the top left of the screen, and echo is turned on. Because the terminal interrupt is ignored, you cannot terminate the program by pressing <Ctrl+C>. The stty -echo command turns off the echo. Thus, when you type the original code word (or any guesses), it is not displayed on the screen. The clear command clears the display screen and locates the cursor at the top-left corner. The stty echo command turns on the echo. The resulting script is in the canleave file shown in the following session.
+
+```
+% cat canleave
+#!/bin/csh
+# File Name:      ~/unix3e/CShell/canleave
+# Author:         Syed Mansoor Sarwar
+# Written:        August 18, 2004
+# Modified:       May 8, 2004, September 15, 2014
+# Purpose:        To allow a user to leave his/her terminal for a
+#                 short duration of time by locking the terminal
+#                 after taking a code from the user. Terminal is
+#                 unlocked only when the user re-enters the same
+#                 code. Ignores command line arguments. Does not
+#                 terminate with <Ctrl+C>.
+# Brief Description:
+#                 Clear screen and turn off echo (i.e., do not
+#                 display what the user types at the keyboard).
+#                 Take user code, save it, and ask the user
+```

@@ -1,0 +1,106 @@
+
+
+## 图12.6 until语句的语义。
+
+![](img/02e070097d401d3bf7de4bf1c470b267_524_0.png)
+
+```
+read yourguess
+done
+echo "Wow! You are a genius!" exit 0
+
+$ ./until_demo
+
+Guess the code!
+
+Enter your guess is Inspector Gadget
+Good guess but wrong. Try again!
+
+Enter your guess is Peter Sellers
+Good guess but wrong. Try again!
+
+Enter your guess is agent007
+Wow! You are a genius!!
+
+$
+$
+```
+
+break和continue命令可用于中断循环体的顺序执行。break命令将控制权转移到done之后的命令，从而提前终止循环。continue命令将控制权转移到done，这会重新评估条件，从而继续循环。在这两种情况下，循环体中位于这些语句之后的命令都不会被执行。因此，这些语句几乎总是在if或if-else结构中使用。图12.7说明了这些命令的语义。
+
+```
+while condition
+do
+  cmd1
+  ...
+  break
+  ...
+  cmdn
+done
+echo "..."
+...
+```
+
+```
+while condition
+do
+  cmd1
+  ...
+  continue
+  ...
+  cmdn
+done
+echo "..."
+...
+```
+
+本次迭代结束，并且不再有更多迭代
+
+本次迭代结束，继续下一次迭代
+
+## 图12.7 break和continue命令的语义。
+
+在下面的章内练习中，你将使用for、while和until语句编写带循环的shell脚本。
+
+## 练习12.11
+
+编写一个shell脚本，将你网络中的主机名列表作为命令行参数，并显示这些主机是在线还是离线。使用ping命令显示主机状态，并使用for语句处理所有主机名。
+
+## 练习12.12
+
+使用while语句重写练习12.11中的脚本。再使用until语句重写一次。
+
+## 12.6.6 case语句
+
+case语句提供了一种类似于嵌套if语句的多路分支机制。不过，case语句提供的结构可读性更强。只要可行，就应该使用case语句——也就是当你测试单个变量与几个不同模式的匹配时。如果希望测试多个变量，则不应使用case语句。下面是该语句的简要说明。
+
+```
+SYNTAX
+case test-string in
+pattern1)   command-list1
+            ;;
+pattern2)   command-list2
+            ;;
+...
+patternN)   command-listN
+            ;;
+esac
+```
+
+用途：实现类似嵌套if的多路分支
+
+![](img/02e070097d401d3bf7de4bf1c470b267_526_0.png)
+
+## 图12.8 case语句的语义。
+
+case语句将test-string中的值与所有模式的值逐一比较，直到找到匹配项，或者不再有模式可与test-string匹配。如果找到匹配项，则执行相应命令列表中的命令，控制权退出case语句。如果没有找到匹配项，控制权也会退出case。然而，在case语句的典型使用中，通配符模式可以匹配test-string的任何值。这种通配符模式也称为默认情况（default case），它允许执行一组命令来处理test-string的值不匹配任何模式时的异常（即错误）条件。成对的分号（;;）用于界定命令列表。如果没有;;，将会执行下一个模式的命令列表中的第一条命令，导致程序出现意外行为。图12.8描绘了case语句的语义。
+
+case_demo文件中的以下脚本展示了case语句的一个简单但具有代表性的用法。它是一个菜单驱动程序，显示选项菜单并提示你输入一个选项。你的选项被读入一个名为option的变量。然后，case语句将你的选项与四个可用模式（本例中为单个字符）逐一进行匹配，当找到匹配时，执行相应的命令列表（本例中为单个命令）。因此，在提示符下，如果你输入d并按<Enter>，就会执行date命令，控制权退出case。然后，程序在exit 0命令执行后退出。该脚本的几个示例运行位于本会话中的代码之后。
+
+```
+$ cat case_demo
+#!/bin/sh
+echo "Use one of the following options:"
+echo "  d:   To display today's date and present time"
+```
+

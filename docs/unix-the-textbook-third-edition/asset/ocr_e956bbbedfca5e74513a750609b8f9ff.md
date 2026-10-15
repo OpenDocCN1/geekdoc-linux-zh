@@ -1,0 +1,11 @@
+# 11.5.2 Routing of Application Data: The Internet Protocol (IP)
+
+As we mentioned before, the network layer is responsible for routing application data to the destination host. The protocol responsible for this is the Internet Protocol (IP), which transports TCP segments or UDP datagrams containing application data in its own packets called IP datagrams. The routing algorithm is connectionless, which means that IP routing is best-effort routing and does not guarantee delivery of TCP segments and UDP datagrams. Applications that need guaranteed delivery use TCP as their transport-level protocol or have it built into the application itself. There are two versions of IP: the older version is IPv4 and the new version is IPv6 (commonly known as IPng or Internet Protocol: The Next Generation). In this textbook, we primarily discuss IPv4. The discussion on the actual routing algorithms used by IP is beyond our scope here. However, we describe a key component of routing on the Internet—the IP addressing (naming) scheme to uniquely identify a host on the Internet.
+
+The key to routing is the IP assignment of a unique identification to every host on the Internet. IP does so by uniquely identifying the network the host is on and then uniquely identifying the host on that network. The ID, a 32-bit positive integer in IPv4 and a 128-bit positive integer in IPv6, is known as the host’s IP address. Every IP datagram has the sender’s and the receiver’s IP address in it. The sender’s IP address allows the receiver to identify and respond to the sender. Hosts and routers perform routing by examining the destination IP address on an IP datagram.
+
+In IPv4, the IP address is divided into three fields: address class, network ID, and host ID. The address class field identifies the class of the address and dictates the number of bits used in the network ID and host ID fields. This scheme results in five address classes: A, B, C, D, and E, with classes A, B, and C being the most common. Figure 11.4
+
+![](bbox=[0.08, 0.68, 0.95, 0.92])
+
+FIGURE 11.4 IPv4 address classes.

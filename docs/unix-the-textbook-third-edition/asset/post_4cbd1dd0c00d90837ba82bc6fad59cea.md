@@ -1,0 +1,60 @@
+
+Some of the repeated lines are consecutive, like this.
+And, some are not consecutive, like the following.
+Some of the repeated lines are consecutive, like this.
+The above line, therefore, will not be considered a repeated
+line by the uniq command, but this will be considered repeated!
+$ uniq sample
+This is a test file for the uniq command.
+It contains some repeated and some nonrepeated lines.
+Some of the repeated lines are consecutive, like this.
+And, some are not consecutive, like the following.
+Some of the repeated lines are consecutive, like this.
+The above line, therefore, will not be considered a repeated
+line by the uniq command, but this will be considered repeated!
+$ uniq -c sample
+1 This is a test file for the uniq command.
+1 It contains some repeated and some nonrepeated lines.
+3 Some of the repeated lines are consecutive, like this.
+1 And, some are not consecutive, like the following.
+1 Some of the repeated lines are consecutive, like this.
+1 The above line, therefore, will not be considered a
+repeated
+2 line by the uniq command, but this will be considered
+repeated!
+$ uniq -d sample
+Some of the repeated lines are consecutive, like this.
+line by the uniq command, but this will be considered repeated!
+$ uniq -d sample out
+$ cat out
+Some of the repeated lines are consecutive, like this.
+line by the uniq command, but this will be considered repeated!
+$
+
+In the following in-chapter exercises, you will use the diff and uniq commands to appreciate the tasks they perform.
+
+## EXERCISE 6.9
+
+Duplicate the interactive sessions given in Section 6.6 to appreciate how the diff command works.
+
+## EXERCISE 6.10
+
+Give a command to remove all but one occurrence of the consecutive duplicate lines in a file called phones in the ~/personal directory. Assume that you are not in your home directory.
+
+## 6.8 PRINTING FILES AND CONTROLLING PRINT JOBS
+
+We briefly discussed the UNIX commands for printing files in Chapter 2. In this section, we cover file printing fully, including commands related to printing and printer control. These commands include commands for printing files, checking the status of print requests/jobs on a printer, and canceling print jobs. We describe commands that are available in both PC-BSD and Solaris.
+
+### 6.8.1 UNIX Mechanism for Printing Files
+
+The process of printing files is similar to the process of displaying files; in both cases, the contents of one or more files are sent to an output device. In the case of displaying output, the output device is a display screen, whereas in the case of printing output, the output device is a printer. Another key difference results primarily from the fact that every user has an individual display screen but that many users may share a single printer on a typical UNIX (or any time-sharing) system. Thus, when you use the cat or more command to display a file, the contents of the file are immediately sent to the display screen by UNIX. However, when you print a file, its contents are not immediately sent to the printer because the printer might be busy printing some other file (yours or some other user’s). To handle multiple requests, a first-come first-served (FCFS) mechanism places a print request in a queue associated with the printer to which you have sent your print request and processes the request in its turn when the printer is available.
+
+UNIX maintains a queue of print requests, called the print queue, associated with every printer in the system. Each request is called a job. A job is assigned a number, called the job ID. When you use a command to print a file, the system makes a temporary copy of your file, assigns a job ID to your request, and puts the job in the print queue associated with the printer specified in the command line. When the printer finishes its current job, it is given the next job from the front of the print queue. Thus, your job is processed when the printer is available and your job is at the head of the print queue.
+
+A UNIX process called the printer spooler or printer daemon performs the work of maintaining the print queue and directing print jobs to the right printer. This process is called lpd. It starts execution in the background when the system boots up and waits for your print requests. We discuss daemons in Chapter 10, but for now, you can think of a daemon as a process that runs but you are not aware of its presence while it interacts with your terminal.
+
+System V and BSD have different command sets for printing and controlling print jobs. Because many of the contemporary UNIX systems are compatible with both System V and BSD, they contain both sets of commands. Table 6.2 contains a list of the printing-related commands for both systems; all are available in PC-BSD and Solaris. The superuser—the system administrator—normally uses the last two commands, lpc and lptest.
+
+### 6.8.2 Printing Files
+
+As shown in Table 6.2, you can print files by using the lp command on a System V-compatible UNIX system and the lpr command on a BSD-compliant UNIX system. It

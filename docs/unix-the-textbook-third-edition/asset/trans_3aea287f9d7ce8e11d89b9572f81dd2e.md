@@ -1,0 +1,71 @@
+
+
+![](img/02e070097d401d3bf7de4bf1c470b267_345_0.png)
+
+## FIGURE 9.2 Input redirection: (a) file descriptors and standard files for command; (b) semantics of input redirection.
+
+命令语法的语义如 Figure 9.2 所示。请注意，命令的输入来自 input-file。
+
+## SYNTAX
+
+```
+command < input-file
+```
+
+Purpose: Input to command comes from input-file instead of from the keyboard
+
+例如，命令 cat < tempfile 从 tempfile 读取输入（而不是键盘，因为 cat 的标准输入已连接到 tempfile），并将其输出发送到显示屏。因此，tempfile 的内容有效地显示在监视器屏幕上。此命令与 cat tempfile 不同，在后者中 tempfile 作为命令行参数传递给 cat 命令；cat 的标准输入不会改变，仍然是命令运行所在的终端所连接的键盘。
+
+类似地，在命令 grep "John" < Phones 中，grep 命令从当前目录中的 Phones 文件读取其输入，而不是从键盘读取。命令的输出和错误消息都发送到显示屏。同样，此命令与 grep "John" Phones 不同，在后者中 Phones 文件作为参数传递给 grep；grep 的标准输入不会改变，仍然是命令执行的终端所连接的键盘。然而，从用户角度来看，grep 命令在两种情况下的净效果是相同的。类似地，在大多数情况下使用 < 是不需要的，因为命令无论如何都会从文件中读取。
+
+cat 和 grep 命令如果未从命令行传递文件参数，则从标准输入获取输入。tr 命令仅从标准输入获取输入并将其输出发送到标准输出。命令不使用文件作为命令行参数工作。因此，输入重定向通常与 tr 命令一起使用，如 tr -s " "< Bigfile。当执行此命令时，它会用单个空格替换 Bigfile 中的多个空格。
+
+## 9.4 OUTPUT REDIRECTION
+
+输出重定向是通过使用大于号（>）实现的。以下语法用于将显示屏从 command 的标准输出分离并将其连接到 output-file。因此，如果 command 将其输出写入/发送到标准输出，则输出会进入 output-file，而不是命令运行所在的终端所连接的监视器屏幕。错误消息仍会发送到显示屏，如前所述。命令语法的语义如 Figure 9.3 所示。
+
+```
+SYNTAX
+
+command > output-file
+
+Purpose: Send output of command to the file output-file instead of to the monitor screen
+```
+
+考虑 cat > newfile 命令。回想一下，cat 命令将其输出发送到标准输出，默认情况下为显示屏。此命令语法将显示屏从 cat 命令的标准输出分离并将其连接到 newfile。cat 的标准输入仍连接到键盘。当执行此命令时，它会创建一个名为 newfile 的文件，其内容是你从键盘输入的内容，直到你在新行的第一列按下 <Ctrl-D>。如果 newfile 已存在，默认情况下会被覆盖。
+
+类似地，命令 grep "John" Phones > Phone_John 将其输出（包含单词 "John" 的 Phones 文件中的行）发送到名为 Phone_John 的文件，而不是在监视器屏幕上显示。命令的输入来自 Phones 文件。命令在 grep 在 Phones 中遇到文件结束符（eof）字符时终止。
+
+在网络环境中，可以使用以下命令对你当前登录的计算机（客户端计算机）上驻留的文件 datafile 进行排序，
+
+![](img/02e070097d401d3bf7de4bf1c470b267_346_0.png)
+
+![](img/02e070097d401d3bf7de4bf1c470b267_347_0.png)
+
+## FIGURE 9.4 Semantics of the ssh server sort < datafile command run on mymachine.
+
+在名为 server 的计算机上。命令的输出——即排序后的数据——发送到客户端计算机的显示屏。Figure 9.4 说明了此命令的语义。
+
+```
+$ ssh server sort < datafile
+$
+```
+
+此命令是说明如何在网络环境中利用多台计算机并发执行各种任务的一个很好的例子。如果你的计算机（称为客户端）有一个要排序的大文件 datafile，并且你不想在各种计算机上制作该文件的多个副本以防止它们不一致，则此命令很有用。此命令允许你执行该任务。如果服务器具有你被允许使用但不允许在你的机器上复制的专用 UNIX 工具，此类命令也很有用。我们将在第 11 章讨论与网络相关的 UNIX 命令和实用程序。我们使用此示例来说明 UNIX I/O 重定向功能的强大功能，而不是偏离网络环境中的计算。
+
+以下会话显示了本地（客户端）机器上 Students 文件的内容以及在 sarwar 登录下在远程（服务器）机器 198.102.10.20 上执行的 sort 命令的输出。由于 sarwar 的登录受密码保护，系统在运行远程计算机上的 sort 命令并在本地计算机上显示其输出之前提示他输入密码。请注意，我们展示了虚构的 ssh 服务器的 Internet 协议（IP）地址，但会话是在真实的远程机器上执行的。
+
+```
+$ cat Students
+John Doe    ECE   3.54  A
+Pam Meyer   CS    3.61  A
+Jim Davis   CS    2.71  B
+John Doe    ECE   3.54  A
+Jason Kim   ECE   3.97  A
+Amy Nash    ECE   2.38  C
+$ ssh sarwar@198.102.10.20 sort < Students
+Password for sarwar@pcbsd-srv:
+Amy Nash    ECE   2.38  C
+Jason Kim   ECE   3.97  A
+Jim Davis   CS    2.71  B
+```
