@@ -1,0 +1,195 @@
+
+# 索引
+
+- 正则表达式（`RegExp`），在 JavaScript 中，210–213，在 PHP 中，213–216
+- 弹出窗口的，232–233
+- 保护的 PHP 成员，104–105
+- 相对路径，217–218
+- 相对 URL，18
+- 传输层（OSI），11
+- 发布，3
+- PHP 引擎，49，何时使用，234
+- `*`
+- PHP 引擎，49，何时使用，234
+
+## 索引 291
+
+- `session.auto_start` 设置，用于 `session` 命令，120
+- `session_destroy()` 函数，in PHP，120–122
+- `session_id()` 函数，in PHP，120–122
+- session 层，OSI，8
+- `session_name()` 函数，in PHP，120–122
+- `session.name` 设置，用于 `session` 命令，120
+- 会话，通过信息传输，120–122
+- `session.handle_handler` 设置，用于 `session` 命令，120
+- `session.save_path` 设置，用于 `session` 命令，120
+- `session_start()` 函数，in PHP，120–122
+- `session.use_cookies` 设置，用于 `session` 命令，120
+- `setcookie` 命令，in PHP，118–119
+- `SET` 数据类型，in MySQL，144
+- `dateMethod`，in JavaScript，182
+- `setMethods` 方法，in JavaScript，182
+- `setInterval` 函数，in JavaScript，195
+- `setMilliseconds` 方法，in JavaScript，182
+- `setMinutes` 方法，in JavaScript，182
+- `setMonth` 方法，in JavaScript，182
+- `setSeconds` 方法，in JavaScript，182
+- `setTimeout` 函数，in JavaScript，194
+- `set_type` 函数，in PHP，63
+- `setup` 方法，in database，164
+- `setUTCHours` 方法，in JavaScript，183
+- `setYear` 方法，in JavaScript，182
+- 阴影，PHP，248–249
+- 购物车，用于视频游戏商店网站，229–230
+- `shuffle` array 函数，in PHP，76
+- 简单邮件传输协议（SMTP），11
+- `sin` 函数，in PHP，62
+- `size` 属性
+  - in `<HR>` 标签，31
+  - in `<INPUT>` 标签，112
+  - in `<SELECT>` 标签，114–115
+- `sizeof` array 函数，in PHP，75
+- 斜杠（`\`）索引器/搜索器以及，124
+  - 配合 PCRE，214
+  - 在正则表达式中，210, 211
+  - in `<a>` 标签中，228
+- `slice` 方法，in JavaScript，181
+- `SMALLINT` 数据类型，in MySQL，143
+- Sockets，11
+- 软件
+  - 下载工作环境，45–46
+  - HomeSite，134–135
+- `sort` array 函数，in PHP，75
+- PHP 数组的排序，75–76
+- PHP 文件资源管理器以及，98
+- `sort` 方法，客户端和服务器端程序以及，24–25
+- 苏联，国际，5–6
+- 空格
+  - in HTML 代码中，29–30, 43, 95–96
+  - in 字符串中，90–91
+  - 特殊字符，参见 字符
+  - in HTML 中，237–239
+  - in JavaScript 中，173
+  - in 在 MySQL 字符串中，142
+  - 配合 PCRE，214–215
+  - 在正则表达式中，211–212
+  - 搜索与，99–100
+- `split()` 函数
+  - in JavaScript，209–210
+  - in PHP，214
+- `split2()` 函数，in PHP，214
+- 拆分主题，使用 phpBB，229
+- `sprintf` 函数，in PHP，95
+- `SQL` 命令，用于 phpMyAdmin 表，152, 154
+- `SQL` 选项，用于 phpMyAdmin 应用，155, 156
+- `sqrt` 函数，in PHP，62
+- 方括号（`[]`）
+  - in MySQL 记法，141
+  - in PHP 数组索引，69–70
+  - in PHP 多维数组索引，73–74
+- `srand` 函数，in PHP，63
+
+## 索引 292
+
+- `SRC` 属性/参数
+  - in `<FRAME>` 标签中，40, 41
+  - in `<IFRAME>` 标签中，42
+  - in `<IMG>` 标签中，34
+- `secElement` 函数，in HTML，222
+- 标准通用标记语言（SGML），18
+- 相关的语言，20–
+- 标准，JavaScript 和，171
+- 斯坦福研究所（SRI），6
+- 起始帧分隔符（SFD），8
+- `START` 参数，in `<OL>` 标签中，35
+- 链接状态，132
+- `Static` 关键字，in PHP，105–106
+- `Static` 变量，in PHP，65–66
+- `status` 属性，用于 `open` 方法，202
+- `strcasecmp` 函数，in PHP，93
+- `strcmp` 函数，in PHP，93
+- 字符串数据类型
+  - MySQL，144
+  - PHP，63
+- 字符串方法，in JavaScript，209–210
+- string `mysql_result` 函数，164
+- 字符串对象，in JavaScript，178–179
+- 字符串
+  - 特征的，91
+  - 查找与比较，93–94
+  - 格式化，94–95
+  - HTML 代码，如 95–96
+  - in JavaScript 中，173–204, 219
+  - MySQL，142
+  - in PHP 中，90–96, 213–216
+  - 正则表达式以及，210–213, 213–216
+  - in PHP 中的斜杠，91
+- `str_tags` 函数，in PHP，96
+- `strcasecmp` 函数，in PHP，93
+- `strcmp` 函数，in PHP，93
+- `substr` 之间，101
+- `strpos` 函数，in PHP，93–94
+- `str_replace` 方法，in PHP，91
+- `strrev` 方法，in PHP，91
+- `strpos` 函数，in PHP，94
+- `strtok` 函数，in PHP，92–93
+- `strtolower` 方法，in PHP，91
+- `toupper` 方法，in PHP，91
+- 结构页面，用于 phpMyAdmin 表，152–154
+- `Style` 属性，使用 DHTML，219
+- `Style` 表格
+  - in 输出清理，131–132, 133–134
+  - 用于视频游戏商店，232
+- 子域，113
+- 子菜单，用于动态菜单，222–225
+- `submit` 输入类型，用于 `<INPUT>` 标签，113
+- `submit()` 方法，`document` 对象，190
+- `substr` 函数，in PHP，94
+- `substr()` 方法，用于 JavaScript 字符串，178, 209
+- `substr()` 方法，用于 JavaScript 字符串，178, 209
+- `switch` 命令
+  - in JavaScript，176
+  - in PHP，79–80
+- 符号地址
+  - 语法
+    - HTML，28
+    - JavaScript，173–177
+    - MySQL，141–142
+    - 用于 MySQL 查询，160–161
+  - 安装 服务器，47
+- 表
+  - 使用 phpMyAdmin 应用，154
+  - 使用 phpMyAdmin，152–154
+  - in HTML 中，36–39
+  - MySQL，142–143, 149
+  - 用于视频游戏商店，228–238
+- `<TABLE>` 标签，36–37, 39
+- 标签，使用 DHTML，218–219
+- 标签，参见 HTML 标签
+- `TARGET` 属性
+  - in `<a>` 标签中，32–33
+  - 表单，112
+- `<TD>` 标签，37–39
+- 团队协作，数据库项目，157
+- 电报发明，5
+
+## 索引 293
+
+- 电话通信
+  - 计算机，6
+  - 发明，5
+- Telnet 协议，12
+- 模板文件，127, 128
+- 模板
+  - HTML 代码以及，127, 128
+  - PHP 代码以及，127–129, 129–131
+- 模板变量，128
+- 文本区域
+  - in frames 中，199–200
+- `<TEXTAREA>` 标签，113–115
+- `textContent` 属性，使用 DHTML，219–220
+- `TEXT` 数据类型，in MySQL，144
+- 文本编辑器
+  - 使用 HTML，27
+  - JavaScript 和 171
+- 文本格式，30–31
