@@ -1,0 +1,23929 @@
+
+由 Internet Archive 于 2023 年数字化，资金由 Kahle/Austin Foundation 提供
+
+献给我的两位姐妹 Marylou 和 Valerie
+
+# 关于作者
+
+Richard Petersen 拥有图书馆和信息研究硕士学位。他目前在加州大学伯克利分校教授 Unix 和 C/C++ 课程。
+
+# 关于技术审阅者
+
+Ibrahim Haddad 是位于加拿大蒙特利尔的开放系统实验室（爱立信公司研究部）的研究员。他参与第三代无线 IP 网络的系统架构，并代表爱立信担任开放源代码开发实验室技术委员会、运营级 Linux 工作组的成员。他的其他职责包括担任《Linux Journal》和《LinuxWorld》杂志的特约编辑，以及为 O'Reilly Network 和《Linux User & Developer》杂志撰稿。他曾在当地大学、IEEE 和 ACM 会议、开源论坛和国际会议上发表了多场演讲和教程。Ibrahim 参与了 Richard Petersen 所著的由 McGraw-Hill/Osborne 出版的《Red Hat Linux Pocket Administrator》一书。他在黎巴嫩美国大学获得了计算机科学学士和硕士学位。目前是蒙特利尔康考迪亚大学的 Dr. Sc. 候选人。学术奖项包括 2000 年获得的“J. W. McConnell Memorial Graduate Fellowship”和“Concordia University 25th Anniversary Fellowship”。
+
+# 关于技术编辑
+
+Dean Henrichsmeyer 自 1995 年起使用 Linux。他拥有计算机科学学士学位，一直是 Linux 社区的活跃成员，曾在 LinuxWorld Conference and Expo 等 Linux focused 贸易展上发表演讲。他自 1999 年起在 VA Research 工作（现称为 VA Software）。他目前在 OSDN 工作，即开源开发网络，其中包括担任 Linux.com 的网站总监。
+
+- DNS 服务器类型 .......................................... 661
+- `named.conf` ................................................ 662
+- `zone` 语句 ............................................ 663
+- 配置语句 .................................. 664
+- `options` 语句 ......................................... 665
+- `directory` 选项 .......................................... 666
+- `forwarders` 选项 ......................................... 666
+- `notify` 选项 ............................................. 666
+- `named.conf` 示例 ........................................ 666
+- IPv6 `named.conf` 版本 ................................... 667
+- 仅缓存服务器 ....................................... 668
+- 资源记录 .......................................... 669
+- 资源记录类型 ..................................... 669
+- 起始授权：`SOA` ................................... 670
+- 名称服务器：`NS` ........................................... 671
+- 地址记录：`A` 和 `A6` .................................. 671
+- 邮件交换：`MX` ........................................ 672
+- 别名：`CNAME` ............................................ 673
+- 指针记录：`PTR` ....................................... 673
+- 主机信息：`HINFO`、`RP`、`MINFO` 和 `TXT` ............... 674
+- 区域文件 ................................................ 674
+- 因特网区域的区域文件 .............................. 674
+- IPv6 区域文件 ............................................ 678
+- 反向映射文件 ................................ 678
+- 本地主机反向映射 .............................. 681
+- 子域和从服务器 .................................. 682
+- 子域区域 ....................................... 682
+- 子域记录 ..................................... 682
+- 从服务器 ......................................... 683
+- IP 虚拟域 .................................... 684
+- 缓存文件 ............................................ 685
+- 动态更新：DHCP 和日志文件 .................. 686
+- `TSIG` 签名和更新 ............................ 686
+- 手动更新：`nsupdate` ............................... 687
+- DNS 安全：访问控制列表、`TSIG` 和 `DNSSEC` ..... 687
+- 访问控制列表 .................................. 687
+- 密钥 ........................................... 688
+- `DNSSEC` ............................................... 689
+- `TSIG` 密钥 ............................................ 691
+- 分割 DNS：视图 ...................................... 692
+- 内部和外部视图 .............................. 692
+- 配置视图 .................................... 693
+- 分割视图示例 ................................... 693
+
+### 35 DHCP 服务器 ............................................ 695
+- 配置 DHCP 客户端主机 ........................... 696
+- 配置 DHCP 服务器 ............................ 696
+- 动态地址 ..................................... 698
+- 动态 DNS 更新 ................................... 700
+- 子网 ........................................... 702
+- 固定地址 ...................................... 703
+
+### 36 NFS 和 NIS ............................................ 707
+- 网络文件系统：NFS 和 `/etc/exports` .............. 707
+
+### 37 Samba
+- Samba 文档 .................................... 725
+- Samba 应用程序 ...................................... 726
+
+
+
+- 启动 Samba ....................................... 728
+
+- 从 Linux 访问 Samba .............................. 728
+
+- 从 Windows 访问 Samba .............................. 728
+
+- Samba 配置文件和工具 ...................... 728
+
+- 密码 ............................................... 729
+
+- Samba 加密密码：`smbpasswd` .................... 729
+
+- 使用 `redhat-config-samba` 配置 Samba ............ 731
+
+- 使用 `redhat-config-samba` 进行服务器配置 ........... 731
+
+- 使用 `redhat-config-samba` 添加 Samba 用户 ............. 732
+
+- 使用 `redhat-config-samba` 指定 Samba 共享 ........ 732
+
+- Samba `smb.conf` 配置文件 ..................... 732
+
+- SWAT 和 `smb.conf` ....................................... 734
+
+- 激活 SWAT ....................................... 735
+
+- 访问 SWAT ........................................ 736
+
+- SWAT 配置页面 ............................... 736
+
+- 使用 SWAT 创建新共享 .......................... 737
+
+- SWAT 生成的 `smb.conf` 示例 ....................... 738
+
+- 全局部分 ....................................... 739
+
+- 密码 ............................................ 742
+
+- 主目录部分 ....................................... 742
+
+- 打印机部分 ..................................... 742
+
+- 共享 .............................................. 743
+
+- 打印机 ............................................ 744
+
+- 变量替换 ............................... 745
+
+- 测试 Samba 配置 .......................... 746
+
+- 域登录 ........................................... 746
+
+- 使用客户端访问 Samba 服务 .................... 747
+
+- `smbclient` ............................................ 747
+
+- `smbmount` ............................................. 749
+
+- 与 Samba 客户端共享 Windows 目录和打印机 ............ 750
+
+- Samba 客户端 ....................................... 750
+
+- Windows 客户端 ..................................... 752
+
+### 38 管理 TCP/IP 网络
+
+- TCP/IP 协议套件 .................................. 753
+
+- IPv4 和 IPv6 .......................................... 756
+
+- TCP/IP 网络地址 ............................... 756
+
+- IPv4 网络地址 ............................... 757
+
+- 基于类的 IP 地址分配 ............................ 757
+
+- 网络掩码 .............................................. 758
+
+- 无类域间路由（CIDR） .................. 759
+
+- 获取 IP 地址 ................................... 762
+
+- 广播地址 ....................................... 764
+
+- 网关地址 .......................................... 764
+
+- 名称服务器地址 ...................................... 764
+
+- IPv6 地址 ............................................ 765
+
+- IPv6 地址格式 ....................................... 765
+
+- IPv6 接口标识符 ................................ 766
+
+- IPv6 地址类型 ........................................ 766
+
+- TCP/IP 配置文件 .................................. 768
+
+- 识别主机名：`/etc/hosts` ........................... 768
+
+- `/etc/resolv.conf` ........................................... 768
+
+- `/etc/sysconfig/network-scripts` .............................. 769
+
+- `/etc/sysconfig/networking` .................................. 769
+
+- `/etc/services` .............................................. 769
+
+- `/etc/protocols` ............................................. 769
+
+- `/etc/sysconfig/network` ..................................... 769
+
+- 域名系统（DNS） ................................... 769
+
+- `host.conf` ................................................. 771
+
+- `/etc/nsswitch.conf`：名称服务切换 ..................... 772
+
+- 网络接口和路由：`ifconfig` 和 `route` ............ 774
+
+- 网络启动脚本：`/etc/rc.d/init.d/network` ............. 774
+
+- 接口配置脚本： ............................
+
+- `/etc/sysconfig/network-scripts` .............................. 774
+
+- `ifconfig` .................................................... 775
+
+- 路由 ..................................................... 777
+
+- 监控您的网络： .................................... 
+
+- `ping`、`netstat`、`tcpdump` 和 `Ethereal` ....................... 779
+
+- `Ethereal` .................................................. 779
+
+- `tcpdump` ................................................... 781
+
+- `netstat` ................................................... 781
+
+- IP 别名 ................................................. 782
+
+- A 关于 DVD-ROM ......................................... 783
+
+
+
+- 索引 ........................................................ 785
+
+## 致谢
+
+我谨向 McGraw-Hill/Osborne 的所有人员表示感谢，他们使本书得以实现：编辑总监 Tracy Dunkelberger，她对如此复杂的项目持续给予鼓励和分析并进行管理；技术编辑 Dean Henrichsmeyer 和技术审阅者 Ibrahim Haddad，他们的分析和建议非常富有洞察力且有所帮助；收购协调员 Jessica Wilson，她提供了必要的资源和有益的建议；校对编辑 Bob Campbell，他进行了出色的编辑工作并提出了富有洞察力的评论；以及项目编辑 Carolyn Welch，她整合了本书中的众多特色并协调了生成最终版本的复杂任务。
+
+还要感谢 Scott Rogers，他发起了该项目。
+
+特别感谢 Linux 的创造者 Linus Torvalds，以及那些继续将 Linux 开发为开放、专业且有效的操作系统，使任何人都能使用的人们。还要感谢学术界，如果没有他们特殊的奉献精神，Unix 就不会成为今天这样灵活多变的系统。我还要感谢加州大学伯克利分校的教授和学生们，他们在开发理解操作系统技术的新方法和不同方式方面提供了经验和支持。
+
+我还要感谢我的父母 George 和 Cecelia，以及我的兄弟 George、Robert 和 Mark，他们在这样一个艰难的项目中给予了支持和鼓励。还有 Valerie 和 Marylou 以及我的侄女侄子 Aleina、Larisa、Justin、Christopher 和 Dylan，他们给予了支持并提醒了截止日期。
+
+## 引言
+
+Red Hat Linux 发行版已成为主要的 Linux 发行版之一，它将 Unix 工作站的所有功能和灵活性带到了 PC 上，同时还提供了一整套 Internet 应用和一个功能齐全的桌面界面。本书不仅旨在成为 Linux 的完整参考书，还提供了对 Linux 特性的清晰详细解释。无需事先了解 Unix；Linux 是一个任何人都能使用的操作系统。
+
+Red Hat 已将其 Linux 开发分为两条产品线：Red Hat® Enterprise Linux® 和 Fedora™ 项目。Red Hat Enterprise Linux 具有面向服务器和工作站的商业企业产品，控制性发布大约每两年发布一次。Fedora 项目是一个开源计划，其 Fedora Core 版本平均每六个月发布一次，整合了 Linux 操作系统功能以及受支持应用的最新发展。Fedora 版本完全由开源软件组成。开发工作由 Linux 开发者贡献完成，使他们能够推广增强功能、新特性和前沿应用。该项目像其他开源项目一样运作，发布速度与快速的在线开发进程保持一致。与 Red Hat Enterprise Linux 不同，Fedora Core 版本的 Linux 完全免费，但不受 Red Hat, Inc. 支持。您可以从 `fedora.redhat.com` 下载最新版本，包括测试 Beta 版。Fedora 项目版本将取代原有的入门级 Red Hat Linux 发行版。Fedora 项目还将提供 Fedora extras，即增强核心集合的软件，以及 Fedora alternatives，即核心软件应用的流行替代品。
+
+Red Hat Enterprise 产品线专为企业、研究和商业应用而设计。这些产品专注于可靠性、稳定性和性能。它们的发布周期比 Fedora 项目版本受控得多。曾经的低成本消费版 Red Hat Linux 将被替换为面向消费者和小企业的精简版商业 Enterprise 版本。Red Hat 提供三个 Enterprise 版本：一个面向工作站，两个面向服务器。Red Hat Enterprise AS 提供了最高级别的支持，以满足对网络支持各方面包括服务器、数据库和安全性的高强度关键任务需求。Red Hat Enterprise ES 提供类似的软件包，但更针对中型企业需求。Red Hat Enterprise WS 实现了一个工作站，具有可用于 Red Hat Enterprise ES 或 AS 网络的广泛客户端。
+
+本书涵盖了当前的 Fedora Core 版本，同时保持与 Red Hat Enterprise Linux 的兼容性。完整的 Fedora Core 版本提供在 DVD-ROM 上随书附带。本书确定了七大主要 Linux 主题：基础设置、环境、应用程序、安全、服务器、系统管理和网络管理。尽管本书详细介绍了 Fedora 项目中推出的最新 Red Hat 工具、桌面和内核，但也深入涵盖了 Red Hat Enterprise Linux 中提供的网络服务器、管理工作和应用程序。本书可作为 Red Hat Enterprise Linux 和 Fedora 项目的综合参考。
+
+本书的前两部分旨在涵盖您为使系统正常运行而需要执行的操作。在介绍工作环境（包括 `GNOME` 和 `KDE` 桌面）之后，您将学习如何使用 Red Hat 管理工具快速更新系统、管理用户和组以及设置打印机。软件管理几乎是自动化的，只需几次鼠标点击即可在系统上安装软件，包括应用程序。互联网访问可通过易于使用的管理工具为调制解调器、DSL、无线和以太网网络设置，这些工具在每一步都会指导您。许多人现在使用 Linux 来设置家庭或本地企业网络。实现基本网络所涉及的步骤现在可以使用简单的软件工具完成。您甚至可以安装蓝牙设备。所有这些主题将在本书后面更详细地介绍。
+
+`GNOME` 和 K 桌面环境（`KDE`）已成为 Linux 的标准桌面图形用户界面（GUI），以其强大、灵活和易用性著称。这些是完整的桌面环境，比 Windows 或 Mac OS 更灵活。您可以同时安装两者、在另一个环境中运行应用程序，并轻松在两者之间切换。两者都已成为 Linux 的集成组件，拥有各种任务和操作的应用程序和工具。本书并非将 `GNOME` 和 `KDE` 视为独立实体，而是贯穿全书介绍 `GNOME` 和 `KDE` 工具和应用程序。
+
+Linux 也是一个功能齐全的 Unix 操作系统。它具有强大的 Unix 系统的所有标准功能，包括完整的 Unix shell 集合，如 `BASH`、`TCSH` 和 `Z-shell`。熟悉 Unix 界面的用户可以使用这些 shell 中的任何一个，使用相同的 Unix 命令、过滤器和配置功能。
+
+对于互联网，Linux 已成为非常强大的网络应用程序的平台。有了 Linux，您可以通过创建自己的 Web 和 FTP 站点成为互联网的一部分。其他用户可以使用不同的服务同时访问您的 Linux 系统。您还可以使用功能强大的 `GNOME`、`KDE` 和 Unix 客户端收发邮件和新闻。Linux 系统不限于互联网。您可以在任何本地局域网上使用它，为您的网络设置 FTP 或 Web 站点。Red Hat Linux 已配备多种功能齐全的服务器，已安装并可立即使用。
+
+Red Hat Linux 上运行着各种各样的应用程序。大量 `GNOME` 和 `KDE` 应用程序不断通过其各自的网站发布。GNU 通用公共许可软件提供了专业级应用程序，如编程开发工具、编辑器和文字处理器，以及众多专业应用程序，如图形和声音处理应用程序。大量软件可在 `sourceforge.net` 等在线 Linux 站点获得，您可以在那里下载开源应用程序，然后轻松将其安装到您的系统上。
+
+由于本书实际上是一本五合一的书——一本用户界面书、一本安全书、一本服务器书、一本网络书和一本管理书——您如何使用它取决于您如何使用 Red Hat Linux 系统。几乎所有 Linux 操作都可以使用 `GNOME` 或 `KDE` 界面完成。您可以专注于 `GNOME` 和 `KDE` 章节及其相应的工具和应用程序。另一方面，如果您想深入了解 Linux 的 Unix 方面，您可以查看 Shell 章节以及其他章节中相应的基于 shell 的应用程序。如果您只想将 Linux 用于其互联网服务，那么您应集中于互联网客户端和服务器。如果您想将 Linux 用作为许多用户服务的多用户系统或将其集成到本地网络中，您可以使用管理章节中提供的详细系统、文件和网络管理信息。没有任何一项任务是排他的。如果您在企业环境中工作，您可能会同时使用这三个方面。单用户可能会更注重桌面和互联网功能，而管理员可能会更多地使用安全和网络功能。
+
+本书的第一部分旨在帮助您快速开始使用 Red Hat Linux。它提供了 Red Hat Linux 的介绍以及 Linux 资源列表，包括软件存储库、文档站点、新sgroup 以及 Linux 新闻和开发站点。下一章介绍了大多数发行版的简化安装程序，通常在 30 分钟或更短时间内完成。Red Hat 的安装程序提供了出色的注释，详细描述了每一步。在本节中，您还将学习使用 `GNOME` 和 `KDE` 的基本知识，以及在 shell 命令行上工作的基础知识。系统配置任务（如添加打印机和创建新用户帐户）以最简单的方法呈现，而无需在管理章节中描述的、对于基本操作不必要的复杂细节。还讨论了基本网络配置任务，例如设置到互联网服务提供商（ISP）的局域网、DSL 或无线连接。您还将学习如何设置小型本地网络的基础知识。
+
+
+
+# 本书概览
+
+## 第二部分
+
+本书的第二部分涉及 `Red Hat Linux` 环境。在这里，您将了解 Linux 可用的不同用户环境，从 `KDE` 和 `GNOME` 开始。诸如小程序、面板和配置工具等不同功能将详细介绍。使用这两种界面中的任何一种，您都可以使用图标、菜单和窗口运行所有应用程序。随时可以打开一个终端窗口，通过该窗口在命令行上输入标准 Linux 命令。您也可以选择仅使用标准的 Unix 命令行界面来运行任何标准 Unix 命令。接下来，将检查 `BASH` shell 及其各种文件、目录和过滤器命令。
+
+## 第三部分
+
+本书的第三部分详细讨论了您可以在 Linux 系统上使用的许多办公、多媒体和互联网应用程序，从 `OpenOffice` 和 `KOffice` 等办公套件开始。还讨论了可用的不同数据库管理系统以及可以下载它们的网站位置。还提供了多种不同的文本编辑器，包括几个 `GNOME` 和 `KDE` 编辑器，以及 `Vim`（增强版 `VI`）、`gvim`（图形化 `Vi`）和 `GNU Emacs` 编辑器。Linux 自动安装邮件、新闻、`FTP` 和 Web 浏览器应用程序，以及 `FTP` 和 Web 服务器。`KDE` 和 `GNOME` 都附带一套完整的邮件、新闻、`FTP` 客户端和 Web 浏览器。您还可以从桌面轻松安装许多独立的邮件客户端、新闻阅读器和互联网工具。
+
+## 第四部分
+
+第四部分演示了如何使用加密、身份验证和防火墙实施安全预防措施。对通用公共许可证隐私保护（`GPG`）的介绍向您展示了如何实现基于公钥和私钥的加密。`IPsec` 工具让您可以使用 `IPSEC` 协议加密和验证网络传输。
+
+主题涵盖使用 `netfilter`（`iptables`）进行防火墙和加密以保护系统，使用 `Secure Shell`（`SSH`）提供安全远程传输，以及使用 `Kerberos` 提供安全认证。
+
+## 第五部分
+
+第五部分讨论了可在 `Red Hat Linux` 上运行的 Internet 服务器，包括 `FTP`、`Web` 和 `DNS` 服务器。Internet 服务器已成为大多数 Linux 系统的集成组件。标准 `vsftpd` `FTP` 服务器和具有指令格式的 `ProFTPD` 服务器均有介绍，涵盖了诸如访客和虚拟 `FTP` 站点等功能。`Apache` Web 服务器章节涵盖了标准配置指令，如自动索引，以及较新的虚拟主机指令。`Sendmail`、`Postfix`、`IMAP` 和 `POP` 邮件服务器均有介绍。`INN` 新闻服务器、`CUPS` 打印服务器、`Squid` 代理服务器以及 `ht`/`DIG` 搜索服务器也进行了考察。
+
+## 第六部分
+
+第六部分讨论系统管理主题，包括用户、软件、文件系统、设备和内核管理。详细描述了管理任务中使用的配置文件以及如何在其中进行条目。首先，介绍了基本系统管理任务，如选择运行级别、监控系统和安排关机。然后讨论了设置和控制用户和组方面的内容。演示包括可用于这些任务的 `GUI` 工具以及底层的配置文件和命令。借助 `Red Hat Package Manager`（`RPM`）和 `redhat-config-packages` 等软件包管理系统，软件安装已得到简化。然后，介绍了不同的文件系统任务，如挂载文件系统、选择设备名称、配置 `RAID` 设备和 `LVM` 卷，以及使用 `CD` 和 `DVD R/W` 驱动器。设备配置涵盖设备文件、安装打印机以及使用内核模块支持新设备等主题。详细介绍了使用、更新和配置 Linux 内核及其模块的方法，以及安装新内核的程序。
+
+## 第七部分
+
+第七部分涵盖网络管理主题，如配置远程文件系统访问和设置防火墙。详细研究了域名系统（`DNS`）及其 `BIND` 服务器的配置文件和功能，以及虚拟域和 `IP` 别名等功能。借助 Linux，您可以轻松为本地网络设置自己的域名服务器。您还将学习如何实现自己的动态主机配置协议（`DHCP`）服务器以动态分配主机 `IP` 地址。介绍了各种网络文件系统接口和服务，如 Unix 和 `NIS` 网络的 `NFS`。`Samba` 章节展示了如何访问 Windows 文件系统和打印机。然后，讨论了网络管理的不同方面，如网络连接和路由、域名服务、主机名指定、`IP` 虚拟主机和 `IP` 伪装。最后，有一个附录介绍随本书附带的 `DVD-ROM` 上提供的内容。
+
+# 开始使用
+
+## PART
+
+- `CHAPTER 1`
+  `Red Hat Linux` 简介
+- `CHAPTER 2`
+  安装 `Red Hat` 和 `Fedora Core Linux`
+- `CHAPTER 3`
+  界面基础
+- `CHAPTER 4`
+  `Red Hat` 系统配置
+- `CHAPTER 5`
+  `Red Hat` 网络配置
+
+## CHAPTER
+
+### `Red Hat Linux` 简介
+
+`Linux` 是一种快速、稳定且开源的操作系统，适用于 `PC` 计算机和工作站，具有专业级别的 Internet 服务、广泛的开发工具、功能齐全的图形用户界面（`GUIs`）以及从办公套件到多媒体应用程序的海量应用程序。`Linux` 由 `Linus Torvalds` 于 1990 年代初期与其他世界各地的程序员共同开发。作为操作系统，`Linux` 执行与 `Unix`、`Macintosh`、`Windows` 和 `Windows NT` 相同的许多功能。然而，`Linux` 以其强大和灵活性而著称，同时也是免费提供的。大多数 `PC` 操作系统，如 `Windows`，最初是在小型受限个人计算机的限制下开发的，而这些计算机直到最近才变得更加多功能。这样的操作系统不断升级以跟上不断变化的 `PC` 硬件功能。另一方面，`Linux` 是在不同的背景下开发的。`Linux` 是 `Unix` 操作系统的 `PC` 版本，`Unix` 已在大型机和小型机上使用数十年，目前是网络服务器和工作站的首选系统。`Linux` 将 `Unix` 的速度、效率、可扩展性和灵活性带到您的 `PC`，充分利用个人计算机现在可以提供的所有功能。
+
+从技术上讲，`Linux` 由操作系统程序组成，称为内核，即最初由 `Linus Torvalds` 开发的部分。但它一直与大量软件应用程序一起分发，范围从网络服务器和安全程序到办公应用程序和开发工具。`Linux` 作为开源软件运动的一部分而发展，在该运动中，独立程序员联合起来为任何用户提供免费优质软件。`Linux` 已成为开源软件的首选平台，其中很大一部分由自由软件基金会的 `GNU` 项目开发。其中许多应用程序作为标准 `Linux` 发行版的一部分捆绑在一起。目前，成千上万的开源应用程序可供 `Linux` 使用，来自 `Open Source Development Network` 的 `sourceforge.net`、`software` 存储库 `rpmfind.net` 和 `freshmeat.net`、`KDE` 的 `apps.kde.com` 以及 `GNOME` 的 `www.gnome.org` 等网站。
+
+`Linux` 的操作系统功能带来了强大的网络功能，包括对 Internet、`Intranet` 以及 `Windows` 和 `Apple` 网络的支持。作为规范，
+
+`Linux` 发行版包含快速、高效且稳定的 Internet 服务器，例如 Web、`FTP` 和 `DNS` 服务器，以及代理、新闻和邮件服务器。换句话说，`Linux` 拥有你设置、支持和维护一个功能完备网络所需的一切。
+
+`Linux` 配备 `GNOME` 和 `K Desktop`，也提供了具有同等灵活性和强大功能 的 `GUI` 界面。与 `Windows` 和 `Mac` 不同，`Linux` 使你能够选择想要的界面，然后进一步自定义它，添加面板、小程序、虚拟桌面和菜单，所有这些都具有完整的拖放功能和 Internet 感知的工具。
+
+`Linux` 以合适的价格实现这一切。`Linux` 是免费的，包括网络服务器和 `GUI` 桌面。与官方的 `Unix` 操作系统不同，`Linux` 根据自由软件基金会规定的 `GNU` 通用公共许可证自由分发，使任何想要使用它的人都可以使用它。`GNU`（缩写代表“`GNU's Not Unix`”）是一个由自由软件基金会发起并管理的项目，旨在为用户、程序员和开发者提供免费软件。`Linux` 受版权保护，而非公有领域。然而，`GNU` 公共许可证与软件处于公有领域的效果大致相同。`GNU` 通用公共许可证旨在确保 `Linux` 保持免费，同时保持标准化。`Linux` 在技术上是操作系统内核，即核心操作，并且只有一个官方的 `Linux` 内核存在。人们有时会错误地认为 `Linux` 因为免费而 somehow 不如专业的操作系统。事实上，`Linux` 是 `Unix` 的 `PC`、工作站和服务器版本。许多人认为它比 `Windows` 稳定得多、强大得多。这种强大和稳定性使 `Linux` 成为网络服务器的首选操作系统。
+
+
+
+要完全理解 Linux，你需要了解 Unix 操作系统开发的特殊背景。与大多数其他操作系统不同，Unix 是在研究和学术环境中开发的。在大学、研究实验室、数据中心和企业中，Unix 是使用最频繁的系统。它的发展与过去几十年的整个计算机和通信革命并行。计算机专业人士经常在 Unix 上开发新的计算机技术，例如为 Internet 开发的技术。尽管是一个复杂的系统，但 Unix 从一开始就被设计为灵活的。Unix 系统本身可以很容易地修改以创建不同的版本。事实上，许多不同的厂商维护着不同的官方 Unix 版本。IBM、Sun 和 Hewlett-Packard 都销售并维护自己的 Unix 版本。研究项目的独特需求往往要求 Unix 根据其特殊需求进行定制。Unix 设计中固有的这种灵活性丝毫不损害其质量。事实上，这种灵活性证明了 Unix 的坚韧性，使其能够适应几乎任何环境。这就是 Linux 开发的背景。Linux 在这种意义上是 Unix 的另一个版本——一个面向 PC 的版本。计算机专业人士在类似研究的环境中开发 Linux，这反映了 Unix 版本通常的开发方式。Linux 采用公开许可并且免费——这反映了 Unix 在学术机构中深厚的根基，以及它们对公共服务和支持的理念。Linux 是一款顶级操作系统，人人可免费使用。
+
+作为介绍 Linux 的方式，本章讨论 Linux 作为一个操作系统、Linux 和 Unix 的历史、Linux 的整体设计以及 Linux 发行版。本章还讨论了用于文档、软件和新闻组的在线资源，以及提供 Linux 最新新闻和文章的网站。Web 和 FTP 站点列表以表格形式列出，便于参考。在这里你可以找到不同发行版、Linux 出版物、软件仓库和 Linux 开发的站点，以及办公套件和商业数据库的站点。
+
+## Red Hat 和 Fedora Linux
+
+Red Hat Linux 目前是最流行的 Linux 发行版。作为一家公司，Red Hat 提供软件和服务，用于实施和支持专业和商业 Linux 系统。Red Hat 已将其 Linux 开发分为两条线：Red Hat Enterprise Linux 和 Fedora 项目。Red Hat Enterprise Linux 具有面向服务器和工作站的商业企业产品，每两年左右发布一次受控版本。Fedora 项目是一个开源计划，其 Fedora Core 版本平均每六个月发布一次，整合了 Linux 操作系统功能以及受支持应用程序的最新开发成果。Red Hat 根据 GNU 通用公共许可证自由分发其 Fedora 版本的 Linux；公司通过提供专业级支持、咨询服务和培训服务获得收入。Red Hat 认证工程师（RHCE）培训和认证计划旨在为维护和定制专业级 Red Hat 系统提供可靠且能力卓越的管理员和开发人员提供帮助。Red Hat 已与 Oracle、IBM、Dell 和 Sun 等主要公司建立了软件联盟。
+
+目前，Red Hat 提供多种商业产品，称为 Red Hat Enterprise Linux。其中包括用于密集企业级任务的 Red Hat Enterprise Advanced Server；Red Hat Enterprise ES，这是一个专为小型企业和网络设计的 Linux 版本；以及 Red Hat Enterprise Work Station。Red Hat 还为其客户维护 Red Hat Network，可自动更新您系统上的操作系统和软件包。您也可以使用相同的 Red Hat Network 更新工具自动更新 Fedora Linux。专用产品包括 Stronghold 安全 Web 服务器、专为 IBM 和 Itanium 服务器定制的 Linux 版本，以及 GNUPro 开发工具。
+
+Red Hat 还对开源 Linux 应用程序保持坚定的承诺。Red Hat 发明了 RPM 软件包系统，该系统被多个发行版使用，可自动安装和删除软件包。Red Hat 还为 GNOME 桌面提供了大部分软件开发工作，并且是 KDE 的坚定支持者。在 Red Hat 上，GNOME 和 KDE 被配置为外观相同，使用名为 Bluecurve 的标准化界面。
+
+Red Hat 提供了一套广泛的配置工具，旨在管理添加用户、启动服务器、访问远程目录以及配置显示器或打印机等设备等任务。这些工具可在系统设置和服务器设置菜单和窗口中访问，也可通过其名称访问，所有名称均以 `redhat-config` 开头（请参阅第 4 章和第 5 章）。特别值得注意的是新的软件包管理工具，可让您轻松安装或删除软件包，并按可识别的类别排列。
+
+> 注意 尽管 Red Hat 支持 GNOME 和 KDE 两种桌面界面，但 Bluecurve 界面为两个桌面提供相同的外观和感觉，将它们集成到一个视觉相似的界面中，菜单、窗口和面板看起来大致相同，尽管其底层功能不同（请参阅第 6 章和第 7 章）。
+
+Red Hat 的新版本对关键应用程序进行了关键更新，并用新工具取代了旧工具。Red Hat 包含 GNOME 桌面、Apache Web 服务器、GNU 编译器集合（GCC）和 GNU Java 编译器（GJC）。新增了新的配置工具，包括用于管理软件的 `redhat-config-packages` 和用于配置显示硬件的 `redhat-config-xfree86`，并更新了其他工具，例如 `redhat-config-networks`，现在支持无线网络。Red Hat 现在同时安装 Postfix 和 Sendmail 邮件服务器，并允许您在两者之间无缝切换。
+
+安装 Red Hat 已成为一个相当简单的过程，使用图形界面，每个步骤都显示详细的解释和建议。Red Hat 和 Fedora 发行版的安装方式可满足多种不同的用途，作为服务器、工作站和个人桌面。个人桌面选项安装预选软件（例如办公和多媒体应用程序）供家庭和个人使用。它具有精简的 GNOME 桌面界面。工作站选项安装桌面、办公、开发和管理软件。服务器选项安装所有标准服务器，包括邮件和 FTP 服务器，以及默认配置和服务器管理工具。您还可以选择自定义安装，选择自己安装的软件组合。
+
+Red Hat Fedora Linux 发行版可在众多 FTP 站点在线获取。Red Hat Fedora 在 `fedora.redhat.com` 维护自己的 FTP 站点，您可以在此下载 Fedora Linux 的整个当前版本，以及更新和第三方软件。Red Hat 从一开始就设计为可在众多硬件平台上运行。目前，Red Hat 支持 Sparc、Intel 和 Alpha 平台。有关更多信息，请访问 `www.redhat.com`，包括 Red Hat 手册、常见问题解答以及指向其他 Linux 站点的链接等大量文档。
+
+如果您从 Red Hat 购买 Red Hat Linux，您有权获得在线支持服务。尽管 Linux 是免费的，但 Red Hat 作为一家公司专门从事支持服务，为客户提供其在开发解决方案方面的专业知识，以解决可能出现的问题，或使用 Linux 执行电子商务或数据库操作等多种可能的任务。
+
+## Fedora 项目
+
+Fedora 核心版本由一个名为 Fedora 项目的开源项目维护和开发。该版本完全由开源软件组成。开发工作由 Linux 开发人员贡献完成，让他们可以自由推广增强功能和新功能。该项目旨在像其他开源项目一样运作，发布速度与快速的在线开发进程保持一致。Fedora Core 版本的 Linux 完全免费。您可以从 `fedora.redhat.com` 下载最新版本，包括测试版。您可以使用 Red Hat 更新代理（RHN）更新 Fedora，以访问 Redhat Fedora Yum 仓库。更新可由多个 Yum Fedora 仓库中的任何一个支持，您可以在 `/etc/sysconfig/rhn/sources` 配置文件中配置 RHN 以访问这些仓库。Fedora 项目版本将取代最初的标准 Red Hat Linux 版本，该版本由入门级 Red Hat 版本组成。除了 Fedora Core 软件外，Fedora 项目还将提供流行的兼容软件包作为 Fedora Extras 和 Fedora Alternative Collections 的一部分。
+
+## Red Hat Enterprise Linux
+
+Red Hat Enterprise 产品线专为企业、研究和商业应用而设计。这些产品专注于可靠性和稳定性。它们的发布周期比 Fedora 项目版本受控得多。曾经的低成本消费版 Red Hat Linux 将被替换为面向消费者和小型企业的精简版商业企业版。Red Hat 提供三个企业版本——一个用于工作站，两个用于服务器。Red Hat Enterprise AS 提供了最高级别
+
+对所有方面的网络支持，包括服务器、数据库和安全，都提供来自高强度关键任务需求的支持。Red Hat Enterprise ES 提供类似的套件，但针对的是中级业务需求。Red Hat Enterprise WS 实现了一款工作站，具有广泛的客户端，可用于 Red Hat Enterprise ES 或 AS 网络。
+
+## Red Hat 文档
+
+
+
+Red Hat 维护了一个庞大的 Linux 文档库，可免费在线访问（见表 1-1）。从其主页，您可以链接到其支持页面，其中列出了完整的 Red Hat 手册集，均以网页格式提供，便于使用任何 Web 浏览器查看。这些包括参考指南、入门指南和安装指南。还提供了提示、HOW-TO 和常见问题解答文档。特别值得注意的是硬件兼容性列表。该文档列出了所有与 Red Hat Linux 兼容的硬件。对于 PC 用户而言，这包括大多数硬件，仅有少数例外。所有 Red Hat 文档均在 GNU 通用公共许可证下免费提供。在您的系统上安装 Red Hat Linux 之前，您可能希望查看在线安装指南。这是一份冗长而详细的文档，会仔细带您完成每个步骤。如果您的系统设计用于任何特殊任务，请务必查阅定制指南，其中涵盖了各种主题，例如使用 Red Hat kickstart 在网络上进行自动安装；网络服务如 Samba、Apache 和 FTP；系统管理工具；以及软件包的安装和管理。Red Hat 还提供了有关实现 PPP Internet 连接、Samba 文件共享、Apache Web 服务器、防火墙和邮件服务器的文档。
+
+| References | Description |
+|---|---|
+| www.redhat.com | Red Hat 网站 |
+| www.redhat.com/support | Red Hat Linux 的支持页面，包括指向当前在线文档的链接 |
+| fedora.redhat.com | Fedora 项目，Red Hat 当前免费的开源版本 |
+| fedora.redhat.com/docs | Fedora Core 版本的文档和支持教程 |
+| The Official Red Hat Linux Getting Started Guide | 面向首次用户的入门指南 |
+| The Official Red Hat Linux x86 Installation Guide | Red Hat Linux 的详细安装指南 |
+| Red Hat Linux Installation Gotchas | 安装故障排除 |
+| Red Hat Reference Guide | Red Hat 参考手册 |
+| Red Hat Customization Guide | 涵盖常见定制任务和工具的主题，例如服务器配置 |
+| Official Red Hat Linux Security Guide | 关于用户、系统和网络安全各方面的综合指南 |
+| Red Hat Linux System Administration Primer | 管理任务和概念概述 |
+
+## Red Hat Linux Fedora Core
+
+Red Hat Linux Fedora Core 提供了多个新功能，以及对 Red Hat 8 和 9 的改进方面。虽然它不包含新的 2.6 内核，但它使用最新的 2.4 内核，2.4.22。几个新功能包括蓝牙和 ACPI 支持：
+
+- 增强的蓝牙支持包括固件加载器、协议分析器和个人网络支持。
+- 高级配置和电源接口（ACPI）通过 `apid` 守护进程得到支持。
+- CUPS 现在是唯一包含的打印服务器。LPRng 已被完全放弃。
+- 包含对 DVD+R/RW 刻录机的支持，`dvd+rw` 工具
+- 它包含 GCC 编译器的 3.2.3 版本，`gcc32`。
+- Internet 安全协议（IPSEC）工具现已可用。
+- 内核现在支持 Exec shield，这使得内核的某些段不可执行，从而提供更高的安全性。
+- 内核现在可以阻止某些内核模块被加载，确保对内核配置有更集中的控制。
+- 内核还支持笔记本模式，可安排任务以适应笔记本省电功能。
+- 两个较旧的邮件客户端已被放弃，`exmh` 和 `pine`。
+- 由于内核现在已包含声音支持，`sndconfig` 工具已被放弃。
+- 如 Red Hat 9 中所实现，Fedora Core 继续支持 Native POSIX Thread Library（`nptl`）。线程库允许应用程序组织成独立的线程，让处理器更高效地运行它们。通过线程，不同线程中的代码部分可以同时运行。
+- Red Hat 正在继续从 LILO 迁移到 GRUB，并将很快完全放弃 LILO。
+- 由于开发限制，`tripwire` 入侵检测软件已被放弃。
+- Red Hat 继续向 UTF-8 迁移，UTF-8 是通用字符集（UCS）的 Unicode 编码。UTF-8 与标准 ASCII 字符文件兼容，并且提供了一种对所有语言进行编码和实现的标准方法。UTF-8 现在是默认编码。
+- `vsftpd` FTP 服务器是现在唯一包含的 FTP 服务器。旧的华盛顿大学 FTP 服务器已被完全移除（`wu-ftpd`）。
+- 自 Red Hat 8 开始，Fedora Core 继续完善 Bluecurve 界面，为 GNOME 和 KDE 提供无缝的图形化 GUI。
+
+使用 Fedora Core，Red Hat 现在拥有完整的 Red Hat 管理工具系列，所有工具都包含 GNOME 界面（见表 1-2）。
+
+| 管理工具 | 操作 |
+|---|---|
+| `redhat-config-bind` | 一个 Red Hat DNS 配置工具 |
+| `redhat-config-date` | 用于修改系统日期和时间的图形界面 |
+| `redhat-config-httpd` | Apache 配置工具 |
+| `redhat-config-keyboard` | 用于修改键盘的图形界面 |
+| `redhat-config-kickstart` | 用于制作 kickstart 文件的图形界面 |
+| `redhat-config-language` | 用于修改系统语言的图形界面 |
+| `redhat-config-mouse` | 用于配置鼠标的图形界面 |
+| `redhat-config-network` | Red Hat Linux 的网络管理工具 |
+| `redhat-config-nfs` | NFS 服务器配置工具 |
+| `redhat-config-packages` | Linux RPM 软件的包管理器 |
+| `redhat-config-printer` | 打印机配置后端/前端组合 |
+| `redhat-config-printer-gui` | printconf 的 GUI 前端 |
+| `redhat-config-proc` | 操作系统可调参数的配置工具 |
+| `redhat-config-rootpassword` | 用于修改 root 密码的图形界面 |
+| `redhat-config-samba` | Samba 服务器配置工具 |
+| `redhat-config-securitylevel` | 用于修改系统安全级别的图形界面 |
+| `redhat-config-services` | initscript 和 xinetd 配置实用程序 |
+| `redhat-config-soundcard` | 用于检测和配置声卡的图形界面 |
+| `redhat-config-users` | 用于管理用户和组的图形界面 |
+| `redhat-config-xfree86` | 用于配置 XFree86 的图形界面 |
+| `redhat-logviewer` | 用于查看日志文件的图形界面 |
+
+## 操作系统和 Linux
+
+操作系统是一个管理计算机硬件和软件供用户使用的程序。操作系统最初设计用于执行重复的硬件任务，其核心是管理文件、运行程序以及接收用户命令。你通过用户界面与操作系统交互，该界面允许操作系统接收并解释用户发送的指令。你只需向操作系统发送指令即可执行任务，例如读取文件或打印文档。操作系统的用户界面可以简单到在命令行输入命令，也可以复杂到在桌面上选择菜单和图标。
+
+操作系统还管理软件应用程序。为了执行不同的任务，例如编辑文档或进行计算，你需要特定的软件应用程序。编辑器就是一个软件应用程序的例子，它使你能够编辑文档，进行更改并添加新文本。编辑器本身是一个由计算机执行的指令组成的程序。为了使用该程序，它必须首先被加载到计算机内存中，然后执行其指令。操作系统控制所有程序的加载和执行，包括任何软件应用程序。当你想使用编辑器时，只需指示操作系统加载编辑器应用程序并执行它即可。
+
+文件管理、程序管理和用户交互是所有操作系统共有的传统功能。Linux 与所有版本的 Unix 一样，还增加了两个功能。Linux 是一个多用户和多任务系统。由于它是多任务系统，你可以要求系统同时执行多个任务。在执行一项任务的同时，你可以进行另一项工作。例如，你可以在打印另一个文件时编辑一个文件。你不必等到另一个文件打印完成后再编辑它。由于它是多用户系统，多个用户可以同时登录到系统，每个用户通过自己的终端与系统交互。
+
+
+
+作为 Unix 的一个版本，Linux 继承了该系统的灵活性，这种灵活性源于 Unix 的研究起源。Unix 由 Ken Thompson 在 20 世纪 60 年代末至 70 年代初在 AT&T Bell 实验室开发，Unix 系统融合了操作系统设计中的许多新发展。最初，Unix 被设计为研究人员的操作系统。一个主要目标是创建一个能够支持研究人员不断变化需求的系统。为此，Thompson 必须设计一个能够处理许多不同类型任务的系统。灵活性比硬件效率更重要。与 Unix 一样，Linux 具有能够应对用户可能面临的各种任务的优势。用户不受操作系统有限而僵化的交互的限制。相反，操作系统被视为向用户提供一套高效工具。这种以用户为中心的理念意味着你可以根据自己的特定需求配置和编程系统。在 Linux 中，操作系统成为一个操作系统环境。
+
+# Linux 和 Unix 的历史
+
+作为 Unix 的一个版本，Linux 的历史自然始于 Unix。故事始于 20 世纪 60 年代末，当时人们集中努力开发新的操作系统技术。1968 年，来自通用电气、AT&T Bell 实验室和麻省理工学院的研究人员组成的财团开展了一个名为 `MULTICS`（多路复用信息和计算服务）的特殊操作系统研究项目。`MULTICS` 融合了多任务、文件管理和用户交互方面的许多新概念。
+
+## Unix
+
+1969 年，肯·汤普森、丹尼斯·里奇以及 AT&T 贝尔实验室的研究人员开发了 Unix 操作系统，融合了 `MULTICS` 研究项目的许多特性。他们为研究环境的需求量身定制该系统，使其能够在小型计算机上运行。从诞生之初，Unix 就是一个经济高效的多用户和多任务操作系统。
+
+随着越来越多的研究人员开始使用该系统，Unix 在贝尔实验室变得流行起来。1973 年，丹尼斯·里奇与肯·汤普森合作，用 `C` 编程语言重写了 Unix 系统的编程代码。Unix 从一个人的定制设计逐渐发展成为由许多不同厂商分发的标准软件产品，例如 Novell 和 IBM。最初，Unix 被视为研究产品。Unix 的早期版本免费分发给许多知名大学的计算机科学系。在整个 1970 年代，贝尔实验室开始发布 Unix 的官方版本并将其许可给不同的用户。其中一个用户是加利福尼亚大学伯克利分校的计算机科学系：伯克利为系统添加了许多新功能，这些功能后来成为标准。1975 年，伯克利发布了自己的 Unix 版本，以其分发部门命名，即伯克利软件发行版（`BSD`）。这个 `BSD` 版本的 Unix 成为与 AT&T 贝尔实验室版本的主要竞争对手。AT&T 开发了多个 Unix 研究版本，并在 1983 年发布了第一个商业版本，称为 `System 3`。随后推出了 `System V`，它成为受支持的商业软件产品。
+
+与此同时，`BSD` 版本的 Unix 正在通过多个版本不断发展。在 1970 年代后期，`BSD Unix` 成为美国国防部高级研究计划署（DARPA）的一个研究项目的基础。因此，1983 年，伯克利发布了一个功能强大的 Unix 版本，称为 `BSD 4.2` 版。该版本包含复杂的 文件管理以及基于 Internet 网络协议的网络功能——这些协议现在仍用于 Internet。`BSD 4.2` 版被广泛分发并被许多厂商采用，例如 Sun Microsystems。
+
+在 1980 年代中期，出现了两个竞争标准，一个基于 AT&T 版本的 Unix，另一个基于 `BSD` 版本。AT&T 的 Unix 系统实验室开发了 `System V` 第 4 版。其他几家公司，如 IBM 和惠普，建立了开放软件基金会（OSF），以创建他们自己的 Unix 标准版本。当时存在两个商业标准 Unix 版本——OSF 版本和 `System V` 第 4 版。
+
+## Linux
+
+最初专为基于 Intel 的个人计算机设计，Linux 起源于赫尔辛基大学一名计算机科学学生林纳斯·托瓦兹的个人项目。当时，学生们正在使用一个名为 `Minix` 的程序，该程序展示了不同的 Unix 特性。`Minix` 由安德鲁·塔嫩鲍姆教授创建，并通过 Internet 广泛分发给世界各地的学生。林纳斯的意图是为 `Minix` 用户创建一个有效的 Unix PC 版本。它被命名为 Linux，并在 1991 年，林纳斯发布了 `0.11` 版。Linux 通过 Internet 广泛分发，在随后的几年里，其他程序员对其进行了改进和补充，加入了现在标准 Unix 系统中大多数应用程序和功能。所有主要窗口管理器都已移植到 Linux。Linux 拥有所有网络工具，例如 `FTP` 文件传输支持、Web 浏览器以及电子邮件、域名服务和动态主机配置等全套网络服务，以及 `FTP`、Web 和打印服务器。它还拥有完整的程序开发实用工具，例如 `C++` 编译器和调试器。尽管功能齐全，Linux 操作系统仍然保持小巧、稳定和快速。在最简单的格式下，Linux 仅需 `2MB` 内存即可有效运行。
+
+尽管 Linux 在 Internet 的自由开放环境中发展，但它遵循官方 Unix 标准。由于过去几十年 Unix 版本的 proliferate，美国电气和电子工程师学会（IEEE）为美国国家标准学会（ANSI）制定了一个独立的 Unix 标准。这个新的 ANSI 标准 Unix 称为计算机环境可移植操作系统接口（`POSIX`）。该标准定义了类 Unix 系统需要如何运行，指定了诸如系统调用和接口等细节。`POSIX` 定义了一个通用标准，所有 Unix 版本都必须遵守。大多数流行的 Unix 版本现在都符合 `POSIX`。Linux 从一开始就按照 `POSIX` 标准开发。Linux 还遵循 Linux 文件系统层次结构标准（`FHS`），该标准指定了 Linux 文件结构中文件和目录的位置。有关更多详细信息，请参阅 `www.pathname.com/fhs`。
+
+## Linux 概述
+
+与 Unix 一样，Linux 通常可以分为三个主要组件：内核、环境和文件结构。内核是运行程序并管理硬件设备（如磁盘和打印机）的核心程序。环境为用户提供接口。它接收用户的命令并将这些命令发送给内核执行。文件结构组织了文件在存储设备（如磁盘）上的存储方式。文件被组织到目录中。每个目录可能包含任意数量的子目录，每个子目录包含文件。内核、环境和文件结构共同构成了基本的操作系统结构。有了这三者，你可以运行程序、管理文件并与系统交互。
+
+环境在内核和用户之间提供接口。它可以被描述为一个解释器。这种接口解释用户输入的命令并将其发送给内核。Linux 提供了几种环境：桌面、窗口管理器和命令行 shell。Linux 系统上的每个用户都有自己的用户界面。用户可以根据自己的特殊需求定制自己的环境，无论是 shell、窗口管理器还是桌面。从这个意义上说，对于用户而言，操作系统更像是一个可由用户控制的操作环境。
+
+在 Linux 中，文件被组织到目录中，就像在 Windows 中一样。整个 Linux 文件系统是一个庞大的相互连接的目录集合，每个目录都包含文件。一些目录是为系统使用而保留的标准目录。你可以为自己的文件创建自己的目录，也可以轻松地将文件从一个目录移动到另一个目录。你甚至可以移动整个目录，并在系统上与其他用户共享目录和文件。使用 Linux，你还可以对目录和文件设置权限，允许他人访问或仅限制自己访问。每个用户的目录实际上最终都连接到其他用户的目录。目录被组织成一个分层的树形结构，从初始的根目录开始。所有其他目录最终都源自这个第一个根目录。
+
+随着 K 桌面环境（`KDE`）和 GNU 网络对象模型环境（`GNOME`），Linux 现在拥有一个完全集成的 GUI 接口。你可以完全从任一界面执行所有 Linux 操作。`KDE` 和 `GNOME` 完全可用 支持拖放操作的桌面环境，使你能够将图标拖到桌面上并在应用程序面板上设置自己的菜单。两者都依赖于底层的 `X Window System`，这意味着只要它们都安装在你的系统上，一个桌面上的应用程序就可以在另一个桌面上运行。`GNOME` 和 `KDE` 网站对于文档、新闻以及可供下载的软件特别有帮助。两个桌面都可以运行任何 `X Window System` 程序，以及任何基于光标的程序，例如 `Emacs` 和 `Vi`，它们被设计为在 shell 环境中工作。与此同时，专门为这些桌面编写的大量应用程序也随你的发行版一起提供。K Desktop 拥有完整的 Internet 工具集，以及编辑器、图形、多媒体和系统应用程序。`GNOME` 的应用程序稍少一些，但目前正在开发的应用程序非常多。请访问其网站 `www.gnome.org` 和 `www.kde.org` 查找新应用程序。随着新版本的发布，它们包含新的软件。
+
+> NOTE `Ximian` 目前维护着一个名为 `Ximian Desktop` 的增强版 `GNOME`，网址为 `www.ximian.com`。
+
+## Open Source Software
+
+
+
+Linux 是在 Internet 上通过合作的开源方式开发的，因此没有任何公司或机构控制 Linux。为 Linux 开发的软件反映了这一背景。开发通常发生在 Linux 用户决定共同开展一个项目时。软件发布在 Internet 站点上，任何 Linux 用户都可以访问该站点并下载软件。Linux 软件开发始终在 Internet 环境中进行，范围全球化，吸纳了来自世界各地的程序员。启动一个基于 Linux 的软件项目所需要的唯一东西就是一个网站。
+
+大多数 Linux 软件都是作为开源软件开发的。这意味着应用程序的源代码会与应用程序一起自由分发。Internet 上的程序员可以对软件包的开发做出自己的贡献，修改和修正源代码。Linux 是一个开源操作系统。它的源代码包含在所有发行版中，并在 Internet 上自由提供。许多主要的软件开发工作也是开源项目，KDE 和 GNOME 桌面以及它们的大多数应用程序也是如此。Netscape Communicator Web 浏览器包也已成为开源项目，其源代码可自由获取。由 Sun 支持的 OpenOffice 办公套件是基于 StarOffice 办公套件的开源项目，StarOffice 本质上是 Sun 的 OpenOffice 商业版本。许多可在 Linux 上运行的开源应用程序已将其网站设在 SourceForge（`sourceforge.net`），后者是一个专门为支持开源项目而设计的托管站点。你可以在 Linuxcare（`www.linuxcare.com`）和 `www.opensource.org` 找到有关开源运动及其最新发展的更多信息。
+
+开源软件受公共许可证保护。这些许可证防止商业公司通过添加少量自己的修改、对其更改进行版权保护并将其作为自己的产品出售，从而控制开源软件。最受欢迎的公共许可证是自由软件基金会提供的 GNU 通用公共许可证。这就是 Linux 分发的许可证。GNU 通用公共许可证保留版权，以自由许可软件的方式，要求软件及其任何修改始终可自由获取。其他公共许可证也被创建出来，以支持不同类型的开源项目的需求。
+
+GNU宽通用公共许可证（LGPL）允许商业应用程序使用 GNU 许可的软件库。QT 公共许可证（QPL）允许开源开发者使用对 KDE 桌面至关重要的 QT 库。你可以在 `www.opensource.org` 上找到完整列表。
+
+Linux 目前在自由软件基金会提供的 GNU 公共许可证下受版权保护，通常被称为 GNU 软件（参见 `www.gnu.org`）。GNU 软件免费分发，前提是它被自由地分发给他人。GNU 软件已被证明既可靠又有效。许多流行的 Linux 实用程序，如 C 编译器、shell 和编辑器，都是 GNU 软件应用程序。随你的 Linux 发行版安装的有 GNU C++ 和 Lisp 编译器、`Vi` 和 `Emacs` 编辑器、`BASH` 和 `TCSH` shell，以及 `Tex` 和 `Ghostscript` 文档格式化程序。此外，还有许多在 GNU 通用公共许可证（GPL）下许可的开源软件项目。其中许多软件应用程序可在不同的 Internet 站点上获得，这些站点列在表 1-3 中。第 4 章和第 29 章详细描述了从 Internet 站点下载软件应用程序并将其安装到系统上的过程。
+
+根据 GNU 通用公共许可证条款，原作者保留版权，尽管任何人都可以修改软件并重新分发它，前提是包含源代码、公开源代码并免费提供。此外，对出售软件或免费赠送软件没有任何限制。一个分销商可以对软件收费，而另一个分销商可以免费提供。主要的软件公司也在提供其最受欢迎应用程序的 Linux 版本。Sun 的 Java 软件开发工具包（SDK）的 Linux 版本也可通过 `www.blackdown.org` 获得。Oracle 提供其 Oracle 数据库的 Linux 版本。（目前似乎没有微软应用程序的计划。）
+
+## Linux Software
+
+目前有大量 Linux 软件可从在线来源获得。你可以下载桌面、Internet 服务器、办公套件和编程包等应用程序。几个集中式存储库使定位应用程序并查找有关其信息变得容易。特别值得注意的是 `sourceforge.net`、`freshmeat.net`、`rpmfind.net` 和 `apps.kde.com`。
+
+软件包以压缩归档或 RPM 包的形式分发。RPM 包是使用 Red Hat Package Manager 归档的。压缩归档的扩展名通常为 `.tar.gz` 或 `.tar.Z`，而 RPM 包的扩展名为 `.rpm`。对于 Red Hat Fedora Core，你可以使用 Red Hat Update Agent（参见第 4 章）从其 Fedora Yum 仓库更新到最新的 Red Hat RPM 包软件版本。对于 Red Hat Enterprise Linux，你可以使用所述的 Red Hat Network 自动下载系统升级。此外，任何你直接从任何站点下载的 RPM 包都可以使用 GNOME 或 KDE 桌面上的 `redhat-config-packages` 工具轻松安装，只需单击一下即可。你也可以下载源版本并直接在系统上编译它。这已成为一个简单的过程，几乎与安装编译好的 RPM 版本一样简单。
+
+Red Hat 还有大量镜像站点，可从中下载其当前版本的软件包。提供大量软件归档的大多数 Linux Internet 站点都有镜像站点，例如 `www.kernel.org`，它存放新的 Linux 内核。如果连接主 FTP 站点有困难，请尝试其镜像之一。Red Hat 还在 `sources.redhat.com` 托管开源项目。
+
+以下表格列出了不同 Linux 软件站点。Linux 软件的仓库和存档在表 1-3 中列出，同时还列出了几个专业站点，例如商业软件和游戏软件站点。在下载软件包时，务必检查其版本是否打包用于你的特定发行版。例如，`rpmfind.net`、`freshmeat.net` 和 `sourceforge.net` 也是查找 RPM 包的好地方。
+
+**TABLE 1-3 Linux Software Archives, Repositories, and Links**
+
+| URL | Internet Site |
+|---|---|
+| `sourceforge.net` | SourceForge，Linux 应用和软件仓库的开源软件开发站点 |
+| `fedora.redhat.com/updates` | Red Hat Fedora Yum 仓库，用于 Fedora 更新，包含发布版和测试版 |
+| `www.linuxgames.com` | Linux 游戏 |
+| `www.gnome.org` | GNOME 应用 |
+| `apps.kde.org` | KDE 软件仓库 |
+| `freshmeat.net` | 新的 Linux 软件 |
+| `www.linuxlinks.org` | Linux 链接 |
+| `filewatcher.org` | Linux FTP 站点监视器 |
+| `www.tldp.org/links.html` | Linux 链接 |
+| `rpmfind.net` | RPM 包仓库 |
+| `www.gnu.org` | GNU 存档 |
+| `linux.duke.edu/projects/yum` | Yellowdog Updater，Modified (`Yum`) 更新工具，提供用于更新 Red Hat Fedora Core Linux 的 `Yum` 仓库列表 |
+| `www.blackdown.org` | Linux Java 网站 |
+| `apt-rpm.tuxfamily.org` | APT-RPM Red Hat 仓库，用于 APT 启用的 RPM 包（参见第 4 章） |
+| `sources.redhat.com` | 由 Red Hat 主办的开源软件 |
+
+## Linux 办公和数据库软件
+
+现在已有许多专业级别的数据库和办公套件可用于 Linux。其中包括 Oracle 和 IBM 数据库以及 OpenOffice 和 K Office 套件。表 1-4 列出了办公套件和数据库的站点。其中许多站点为 Linux 提供免费的个人版软件，而其他软件则完全免费。你可以直接从这些站点下载并安装到你的 Linux 系统上。
+
+| URL | Database |
+|---|---|
+| `www.oracle.com` | Oracle 数据库 |
+| `www.sybase.com` | Sybase 数据库 |
+| `www.software.ibm.com/data/db2/linux` | IBM DB2 数据库 |
+| `www-3.ibm.com/software/data/informix/` | Informix 数据库 |
+| `www.softwareag.com` | Adabas D 数据库 |
+| `www.mysql.com` | MySQL 数据库 |
+| `www.ispras.ru/~kml/gss` | GNU SQL 数据库 |
+
+## Internet 服务器
+
+Linux 最重要的特性之一，与所有 Unix 系统一样，是其 Internet 客户端和服务器套件。Internet 是在 Unix 系统上设计和开发的，并且
+
+
+
+| www.postgresql.org | PostgreSQL 数据库 |
+| www.fship.com/free.html | FlagShip（xBase 数据库文件的接口） |
+| koffice.kde.org | Katabase（KOffice 桌面数据库） |
+| sourceforge.net/projects/gaby/ | Gaby（GNOME 桌面个人数据库） |
+| Office Software |  |
+| koffice.kde.org | KOffice |
+| `/wwws.sun.com/software/star/staroffice/` | StarOffice |
+| www.openoffice.org | OpenOffice |
+| www.gnome.org/gnome-office | GNOME Office 项目 |
+
+### TABLE 1-4 Database and Office Software
+
+Internet 客户端和服务器，例如 FTP 和 Web 的客户端和服务器，最初是在 BSD 版本的 Unix 上实现的。DARPA NET，即 Internet 的前身，是为了连接全国不同大学的 Unix 系统而建立的。Linux 包含一套完整的 Internet 客户端和服务器，包括邮件、新闻、FTP 和 Web，以及代理客户端和服务器。可用于 Linux 的 Internet 服务器软件站点在表 1-5 中列出。其中大多数已包含在本书随附的 Red Hat DVD-ROM 上；然而，你可以直接从服务器的网站获取新闻、文档和最新版本。
+
+## 开发资源
+
+Linux 一直为编程语言和工具提供强大的支持。所有发行版都包含 GNU C 和 C++ 编译器（`gcc`）以及 `make` 等支持工具。大多数发行版都提供对 KDE 和 GNOME 桌面的完整开发支持，让你能够创建自己的 GNOME 和 KDE 应用。你还可以下载 Linux 版的 Java 软件开发工具包来创建 Java 程序。Perl
+
+| URL | Servers |
+|---|---|
+| www.apache.org | Apache Web 服务器 |
+| www.proftpd.org | ProFTPD FTP 服务器 |
+| www.isc.org | Internet Software Consortium：BIND、INN 和 DHCPD |
+| www.sendmail.org | Sendmail 邮件服务器 |
+| www.squid.org | Squid 代理服务器 |
+| www.samba.org | Samba SMB（Windows 网络）服务器 |
+| www.eudora.com/qpopper | Qpopper POP3 邮件服务器 |
+| www.netfilter.org | IP Tables 防火墙 |
+| www.netfilter.org/ipchains | IP Chains 防火墙 |
+| www.ssh.com | Secure Shell 加密 |
+| web.mit.edu/kerberos/www | Kerberos 网络身份验证协议 |
+| www.openssh.com | Open Secure Shell（SSH 的免费版本） |
+
+## TABLE 1-5 Network Servers and Security
+
+and Tcl/TK versions of Linux are also included with most distributions. You can download current versions from their Web sites. Table 1-6 lists different sites of interest for Linux programming.
+
+| URL | Internet Sites |
+|---|---|
+| www.gnu.org | Linux 编译器和工具（`gcc`） |
+| dev.scriptics.com | Tcl Developer Xchange，Tcl/Tk 产品 |
+| java.sun.com | Sun Java 网站 |
+| www.perl.com | Perl 网站及 Perl 软件 |
+| www.blackdown.org | Sun 的 Java 软件开发工具包 for Linux |
+| developer.gnome.org | GNOME 开发者网站 |
+| www.openprojects.nu | Open Projects Network |
+| developer.kde.org | KDE 开发者库 |
+| www.linuxcare.org | Linux 开源软件支持 |
+
+## TABLE 1-6 Linux Programming
+
+## Online Information Sources
+
+Extensive online resources are available on almost any Linux topic. The tables in this chapter list sites where you can obtain software, display documentation, and read articles on the latest developments. Many Linux Web sites provide news, articles, and information about Linux. Several, such as www.linuxjournal.com and www.linuxgazette.com, are based on popular Linux magazines. Others, such as www.linux.com, www.linuxworld.com, and www.linux.org, operate as Web portals for Linux. Some specialize in a particular area, such as linuxheadquarters.com for guides on Linux software and www.linuxgames.com for the latest games ported for Linux. Currently, many Linux Web sites provide news, information, and articles on Linux developments, as well as documentation, software links, and other resources. These are listed in Table 1-7.
+
+Distribution FTP and Web sites, such as www.redhat.com and ftp.redhat.com, provide extensive Linux documentation and software. The www.gnome.org site holds software and documentation for the GNOME desktop, while apps.kde.com holds software and documentation for the KDE desktop. The tables in this chapter list many of the available
+
+| URL | Internet Site |
+|---|---|
+| www.tldp.org | Linux 文档项目网站 |
+| www.lwn.net | Linux Weekly News |
+| www.linux.com | Linux.com |
+| www.linuxtoday.com | Linux Today |
+| www.linuxplanet.com | LinuxPlanet |
+| www.linuxfocus.org | Linux Focus |
+| www.linuxworld.com | Linux World |
+| www.linuxjournal.com | Linux Journal |
+| www.linuxgazette.com | Linux Gazette |
+| www.linuxmagazine.com | Linux Magazine |
+| www.linux.org | Linux Online |
+| www.li.org | Linux International 网站 |
+| www.linux.org.uk | Linux European 网站 |
+| linuxheadquarters.com | Linux 指南和软件 |
+| slashdot.org | Linux 论坛 |
+| www.opensource.org | 开源信息 |
+
+
+
+**TABLE 1-7 Linux Information and News Sites**
+
+## Documentation
+
+sites. You can find other sites through resource pages that hold links to other Web sites—for example, the Linux Web site on the World Wide Web at `www.tldp.org/links.html`.
+
+Linux documentation has also been developed over the Internet. Much of the documentation currently available for Linux can be downloaded from Internet FTP sites. A special Linux project called the Linux Documentation Project (LDP), headed by Matt Welsh, has developed a complete set of Linux manuals. The documentation is available at the LDP home site at `www.tldp.org`. Linux documents provided by the LDP are listed in Table 1-8, along with their Internet sites.
+
+Most of the standard Linux software and documentation currently available is already included on your Red Hat DVD-ROM. HOW-TO documents are all accessible in HTML format, so you can view them easily with your Web browser. In the future, though, you may need to access Linux Internet sites directly for current information and software.
+
+An extensive number of mirrors are maintained for the Linux Documentation Project. You can link to any of them through a variety of sources, such as the LDP home site, `www.tldp.org`, and `www.linuxjournal.org`. The documentation includes a user's guide, an introduction, and administration guides. These are available in text, PostScript, or Web page format. Table 1-8 lists these guides. You can also find briefer explanations, in what are referred to as HOW-TO documents.
+
+| Sites | Web Sites |
+|---|---|
+| `www.tldp.org` | LDP 网站 |
+
+| Guides | Document Format |
+|---|---|
+| Linux Installation and Getting Started Guide | DVI、PostScript、LaTeX、PDF 和 HTML |
+| Linux User's Guide | DVI、PostScript、HTML、LaTeX 和 PDF |
+| Linux System Administrator's Guide | PostScript、PDF、LaTeX 和 HTML |
+| Linux Network Administrator's Guide | DVI、PostScript、PDF 和 HTML |
+| Linux Programmer's Guide | DVI、PostScript、PDF、LaTeX 和 HTML |
+| The Linux Kernel | HTML、LaTeX、DVI 和 PostScript |
+| Linux Kernel Hacker's Guide | DVI、PostScript 和 HTML |
+| Linux HOWTOs | HTML、PostScript、SGML 和 DVI |
+| Linux FAQs | HTML、PostScript 和 DVI |
+| Linux Man Pages | 手册页格式 |
+
+**TABLE 1-8 Linux Documentation Project**
+
+除了网站之外，还可以使用 Linux Usenet 新闻组。通过您的 Internet 连接，您可以访问 Linux 新闻组，阅读其他 Linux 用户的评论并发布自己的消息。存在多个 Linux 新闻组，每个都以 comp.os.linux 开头。对初学者特别有吸引力的是 comp.os.linux.help，您可以在这里发布问题。表 1-9 列出了一些您可以查看的 Usenet Linux 新闻组，尤其是用于发布问题的新闻组。
+
+| 新闻组 | 标题 |
+|---|---|
+| comp.os.linux.announce | Linux 开发公告 |
+| comp.os.linux.development.apps | 面向开发 Linux 应用程序的程序员 |
+| comp.os.linux.development.system | 面向从事 Linux 操作系统开发的程序员 |
+| comp.os.linux.hardware | Linux 硬件规范 |
+| comp.os.linux.admin | 系统管理问题 |
+| comp.os.linux.misc | 特殊问题与议题 |
+| comp.os.linux.setup | 安装问题 |
+| comp.os.linux.answers | 命令问题解答 |
+| comp.os.linux.help | 特定问题的问答 |
+| comp.os.linux.networking | Linux 网络问题与议题 |
+| linux.dev.group | 许多以 linux.dev 开头的开发新闻组，如 linux.dev.admin 和 linux.dev.doc |
+
+**表 1-9 Usenet 新闻组**
+
+# 章节
+
+## 安装 Red Hat 和 Fedora Core Linux
+
+本章介绍 Red Hat 和 Fedora Core Linux 的安装过程。安装内容包括 Linux 操作系统、大量 Linux 应用程序以及一整套网络服务器。Red Hat 和 Fedora 使用相同的 Anaconda 安装程序，该程序旨在提供帮助且易于使用，同时高效简洁，尽可能多地安装服务和应用程序。详细的帮助面板会解释每个过程的每一步。某些服务（如 Web 服务器支持）通常需要专门且往往复杂的配置操作。Red Hat 和 Fedora 会自动安装并为其中许多服务提供默认配置。
+
+Red Hat 和 Fedora 提供了详细的安装指南，例如《Red Hat Linux x86 官方安装指南》（Fedora 版本即将推出）。该指南可在 Red Hat 网站上获取。指南由网页组成，您可以使用任何浏览器查看。其中包含详细的图示和逐步说明。强烈建议您在安装前查阅本手册。本章介绍安装过程中的所有步骤，但不如 Red Hat 和 Fedora 指南详细。您可以在 Red Hat 网站 `www.redhat.com` 访问文档。单击 Support（支持），然后为您的 Red Hat 版本选择相应链接。
+
+安装 Linux 涉及几个步骤。首先，您需要确定计算机是否满足基本硬件要求。如今，大多数基于 Intel 的 PC 都能满足。Red Hat 支持多种安装 Linux 的方法。您可以从本地源（如 CD-ROM 或硬盘）安装，也可以从网络或 Internet 源安装。对于网络或 Internet 源，Red Hat 支持 NFS、FTP 和 HTTP 安装。使用 FTP，您可以从 FTP 站点安装。使用 HTTP，您可以从网站安装。NFS 使您可以通过本地网络安装。对于本地源，您可以从 CD-ROM 或硬盘安装。随书附带的 DVD-ROM 也可作为启动 CD-ROM 使用。此外，您可以通过从 DVD-ROM、DOS 系统或启动盘启动来开始安装过程，之后这些启动盘可以使用 DVD-ROM 或硬盘安装源。Red Hat 文档详细介绍了这些方法中的每一种。本章介绍使用随书附带的 DVD-ROM 进行安装。
+
+
+
+安装程序一旦开始，您只需逐屏按照说明操作。大多数情况下，您只需进行简单选择或回答是/否。安装程序会经历几个阶段。首先，在硬盘上创建 Linux 分区，然后安装软件包。之后，您可以配置网络连接，然后配置 X Window System 以支持图形用户界面。X Window System 和网络配置都可以在以后独立执行。
+
+系统安装完成后，您就可以启动并登录了。通常，您可以通过图形登录方式登录，选择所需桌面并输入用户名和密码。或者，您可以登录到简单的命令行界面。从命令行，您可以调用 GNOME 或 KDE 等桌面，它们为您提供完整的图形用户界面。
+
+## 硬件、软件和信息要求
+
+安装 Linux 之前，您必须确保计算机满足某些最低硬件要求。您还需要准备好有关显示器、显卡、鼠标和 CD-ROM 驱动器的特定信息。以下各节详细介绍了所有要求。在开始安装之前，请务必仔细阅读。在安装过程中，您需要提供反映计算机配置的响应。
+
+### 硬件要求
+
+以下列出了在基于 Intel 的 PC 上安装 Linux 系统标准安装的最低硬件要求：
+
+- 一台基于 Intel 的 32 位个人计算机。至少需要 Intel 或兼容的 80386、80486 或 Pentium 级微处理器。建议使用 400 MHz Pentium 处理器以支持图形界面，200 MHz 用于文本界面。
+- 一个 CD-ROM 或 DVD-ROM 驱动器（如果您使用随书附带的 DVD-ROM，则需要 DVD-ROM 驱动器）。
+- 如果您的 PC 无法从 CD-ROM 或 DVD-ROM 启动，则需要一个 3.5 英寸软盘驱动器和一个软盘。3.5 英寸 DOS 高密度（HD）软盘驱动器用于创建安装盘（如果从软盘安装）。如果直接从 CD-ROM 安装，则不需要软盘。可以使用 Linux 或 Windows 操作系统创建启动软盘。
+- 通常，文本界面至少需要 64MB 内存，图形界面至少需要 192MB 内存。（Linux 只需 12MB 内存即可运行。）标准安装（包括应用程序）至少需要 2GB 可用硬盘空间（请记住，Linux 在最小安装时可以在少得多的空间上运行，仅需 100MB 空间和 16MB 交换空间）；对于完整安装（所有应用程序），建议使用 3GB 到 6GB 或更多空间。要安装大多数发行版 CD-ROM 上的所有软件包，大约需要 5GB 空间。基本软件包的标准安装通常需要 3GB，外加 64MB 到 512MB 的交换空间，具体取决于您的内存大小。如果您的内存少于 1GB
+硬盘空间不足时，你可以选择执行最小化安装，仅安装 Linux 内核而不安装大多数应用程序。之后你可以使用系统设置窗口中可访问的 `redhat-config-packages` 工具，一次安装一个你想要的应用程序。
+- 硬盘需求取决于你想要的安装类型：
+  - 自定义安装（最小）：520MB
+  - 服务器（最小）：870MB
+  - 个人桌面：1.9GB
+  - 工作站：2.4GB
+  - 自定义安装（全部）：5.3GB
+
+## 硬盘配置
+
+如今，Linux 通常运行在自己的硬盘上，尽管它也可以运行在与包含 Windows 等其他操作系统单独分区的硬盘的另一个分区上。
+
+如果你想在同一块硬盘上安装 Linux 和 Windows，可以使用分区管理软件包，例如 `fdisk`、`fips`、`Parted` 或 `Partition Magic`，来设置你的 Windows 和 Linux 分区。如果你已经在硬盘上安装了 Windows 并配置它占用整个硬盘，你需要调整其分区大小以释放未使用的空间。释放的空间随后可用于 Linux 分区。有关更多详细信息，请参阅 Red Hat Linux x86 安装指南。
+
+## 信息需求
+
+将 Linux 这样强大的操作系统适配到 PC 上的一部分工作，就是尽可能高效地利用手头的计算机硬件。在几乎所有配置中，你的 Linux 安装过程都会自动检测并配置你的硬件组件。然而，有时，特别是对于较旧或非常新的硬件，你的安装程序可能无法正确识别某个组件。如果你有此类组件，例如新型号的显示器或显卡，你应该先查阅其手册并记录某些配置设置。
+
+你还需要确定如何使用硬件资源，例如你想将多少硬盘空间用于 Linux。
+
+## CD-ROM、硬盘和鼠标信息
+
+对于某些较旧的 SCSI CD-ROM 驱动器，你需要制造商的名称和型号。
+
+决定你想将多少硬盘空间（以兆字节为单位）用于你的 Linux 系统。如果你与 Windows 共享，请决定 Windows 需要多少，Linux 需要多少。
+
+决定你想要为交换分区分配多少空间。你的交换分区应与你的 RAM 内存大小大致相同，但也可以使用少至 64MB。对于 RAM 配置较小的系统，交换盘应为 RAM 的两倍大小。随着 2.4 内核的发布，交换分区的大小已得到扩展。你的交换分区被 Linux 用作计算机 RAM 的扩展。
+
+查找你正在使用的鼠标的品牌和型号。Linux 支持串行、USB、PS/2、IMPS/2 和总线鼠标。大多数鼠标都受支持，包括 Microsoft、Logitech 和 Mouse Systems。
+
+知道你所在的时区以及你的硬件时钟设置为哪个时区。这可以是格林威治标准时间（GMT），也称为通用协调时间（UCT），或你的本地时区。
+
+知道你的鼠标使用哪种端口，例如 PS/2、USB 或串行端口。现在大多数系统使用 PS/2 端口。对于串行端口鼠标，你需要知道它连接到哪个端口：COM1、COM2 或无。
+
+## 视频和显示器信息
+
+尽管大多数显示器和显卡在安装过程中会自动配置，你可能仍需要提供制造商的品牌和型号，以防检测错误。查明你的显示器的制造商和型号，例如 Iiyama VisionMaster 或 Hitachi CM828。对你的显卡也做同样的操作——例如 Matrox Millennium G400 或 ATI Radeon（你可以在 `www.xfree86.org` 找到受支持卡的完整列表）。这应列在随计算机提供的手册或注册信息中。对于一些最新的显示器和显卡，以及一些较旧、不常见的型号，你可能需要提供某些硬件规格。尽可能提前准备这些信息是明智的。在安装过程结束时，你会看到视频卡和显示器的列表供你选择。这些列表非常详尽。然而，如果你的卡或显示器不在列表上，你需要提供有关它们的某些硬件信息。如果配置失败，你始终可以在之后使用 X Window System 配置工具 `redhat-config-xfree86` 进行配置。特别重要的是显示器信息，包括垂直和水平刷新率。
+
+### 显卡信息
+
+你还应了解以下显卡信息，尽管芯片组可能并非必需。你的卡将被自动检测，但你应确保选择准确：
+
+- 你的显卡的品牌和型号是什么？
+- 你的显卡使用什么芯片组？
+- 你的显卡上有多少内存？
+
+### 显示器信息
+
+你的显示器的制造商和型号是什么？Linux 支持大量显示器，涵盖几乎所有当前型号。你的显示器将被自动检测并选择。如果检测错误，你可以从列表中找到正确的型号并选择它。然而，如果你的显示器不在此列表上，你可能需要提供以下信息。请确保此信息正确。如果你输入的水平或垂直刷新率过高，可能会严重损坏较旧的显示器。新款显示器只会关闭。你可以选择通用配置文件，也可以为自定义配置文件输入信息。为此，你需要以下信息：
+
+- 水平刷新率，单位为 Hz
+- 垂直刷新率，单位为 Hz
+
+## 网络配置信息
+
+如果您的 ISP 服务或网络使用 DHCP，您很可能不需要提供任何配置信息。大多数本地网络、有线连接和 DSL 连接现在都使用 DHCP 来自动配置主机。网络信息由 DHCP 服务器自动提供。在安装过程中，您将有选择自动配置网络连接（DHCP）或手动输入网络信息。
+
+如果您需要配置网络连接，您也可以将配置推迟到以后，并使用发行版提供的网络配置实用程序来执行网络配置。在安装期间，您需要做的只是提供一个主机名。
+
+如果您决定手动配置网络连接，您将需要以下信息，通常可以从您的网络管理员处获得：
+
+- 您的计算机的名称（称为主机名）。您的计算机将在 Internet 上通过此名称被识别。请勿使用“localhost”，它已被系统保留用于特殊用途。
+- 分配给您的机器的 Internet 协议（IP）地址。Internet 上的每个主机都被分配了一个 IP 地址。
+- 您的网络 IP 地址。此地址通常与 IP 地址相似，但在末尾有一个或多个零。
+- 网络掩码。对于 C 类 IP 地址，这通常是 255.255.255.0。但是，如果您是大型网络的一部分，请咨询您的网络管理员。
+- 您的网络的广播地址（如果有）。通常，您的广播地址与您的 IP 地址相同，只是最后一个数字使用 255。
+- 您的网络的网关 IP 地址。网关将您的网络连接到更大的网络，如 Internet。
+- 您的网络使用的任何名称服务器的 IP 地址。
+- 如果您的网络使用 NIS 服务器，则为 NIS 域和 IP 地址。
+- 如果您的网络连接到 Windows 网络，则为 Samba 服务器。
+
+## 创建启动磁盘
+
+
+
+如果您使用本书附带的 Red Hat DVD-ROM 安装，或使用一套 CD-ROM 光盘安装 Linux，并且如果您的计算机相当新，它很可能具有从 CD-ROM 启动的能力。本书的 DVD-ROM 作为可启动 CD-ROM 运行。在这种情况下，您只需将 CD-ROM 或本书的 DVD-ROM 用作安装磁盘并跳过本节即可。（您可能需要配置 BIOS 以从 CD-ROM 启动。）如果您无法从 CD-ROM 或 DVD-ROM 启动，您将必须按照此处所述创建软盘安装磁盘。
+
+> 注意 如果您从本书附带的 Red Hat DVD-ROM 安装，您需要在计算机上安装 DVD-ROM 驱动器来读取 DVD-ROM 光盘。本书附带的 DVD-ROM 已配置为可启动，功能类似于启动 CD-ROM。如果您的系统支持可启动 CD-ROM，那么它将从此 DVD-ROM 启动，让您可以直接从 DVD-ROM 安装 Red Hat 系统。
+
+在 Windows 上，要使用 `rawritewin` 程序创建软盘安装磁盘，首先将 CD-ROM 插入 CD-ROM 驱动器（如果您从本书附带的 DVD-ROM 光盘安装，则改用 DVD-ROM 驱动器）。更改到您的 CD-ROM 驱动器。更改到 CD-ROM 驱动器后，您需要更改到 `\dosutils` 目录。`rawritewin` 命令位于 `dosutils\rawritewin` 目录中。只需双击它即可启动它。使用 `rawritewin` 创建启动磁盘非常容易。只需从 Windows 运行它并使用其界面选择软盘映像 `bootdisk.img`，并支持磁盘 `pcmiadd.img` 和 `drvnet.img`。对于 CD-ROM 或 DVD-ROM 安装，您想要的映像文件是 `boot.iso` 文件，也位于您的 CD-ROM 上的 `images` 目录 `images/` 中。请确保正确列出了您的软盘驱动器。默认值为 `A:`。然后将一张空白软盘放入软盘驱动器并单击 Write。
+
+对于 `rawrite`，您必须在 MS-DOS 上使用，在 DOS 提示符下，更改到您的 CD-ROM 驱动器，使用该驱动器的字母。例如，如果您的 CD-ROM 驱动器是 E 驱动器，只需键入 `e:` 并按 ENTER。更改到 CD-ROM 驱动器后，您需要更改到 `\images` 目录。在本书附带的 DVD-ROM 上，安装磁盘映像是 `bootdisk.img`，支持网络和笔记本的磁盘为 `drvnet.img` 和 `pcmiadd.img`。`rawrite` 命令必须在 DOS 提示符下运行。输入 `rawrite` 命令的完整路径，包括 CD-ROM 或 DVD-ROM 驱动器号，例如 `e:\dosutils\rawrite`。`rawrite` 命令首先提示您输入要复制的磁盘映像文件的名称。输入安装映像文件的完整名称。然后命令会要求您输入放置软盘的软盘驱动器的字母。在许多系统上，这是 A 驱动器。
+
+```
+E:\> cd images
+E:\> launch\floppy > e:\dosutils\rawrite
+Enter source file name: bootdsk.img
+Enter destination drive (A or B) and press ENTER: a
+```
+
+按 ENTER 确认软盘驱动器中已插入空白软盘。`rawrite` 然后会将映像文件复制到您的软盘，创建您的安装磁盘。完成后，从软盘驱动器中取出磁盘。这是安装程序（稍后描述）所指的安装软盘。如果您需要创建网络支持磁盘，请使用 `drvnet.img`。对于 PCMCIA 支持，请使用 `pcmiadd.img`。
+
+要在 Linux 或 Unix 系统上创建软盘，请使用 `dd` 命令并指定要使用的启动映像文件以及软盘设备名称和软盘大小。您首先需要挂载 CD-ROM，然后更改到其挂载目录。在大多数 Linux 系统上，第一个软盘驱动器位于 `/dev/fd0`，其大小通常为 1440，适用于 1.4 软盘。使用 `if` 选项指定要使用的映像文件，`of` 选项指示软盘设备名称，`bs` 选项指定块大小。
+
+```
+dd if=images/bootdsk.img of=/dev/fd0 bs=1440
+```
+
+如果您的系统包含非常旧的 CD-ROM 驱动器、SCSI 适配器或网卡，您很可能必须创建驱动器磁盘。您的 Red Hat CD-ROM/DVD-ROM 提供了一个名为 `/images/drvnet.img` 的软盘映像，其中包含许多不常见设备的驱动程序，特别是那些不使用 PCI 总线的设备。如果您有这些驱动程序支持的设备，您应该使用 `drvnet.img` 和 `rawrite` 或 `dd` 命令创建驱动器磁盘，就像您为安装软盘所做的那样。在安装期间，设备将被检测到并且您
+
+将提示你输入驱动磁盘。驱动程序仅在安装所需的设备上才需要，例如 CD-ROM、SCSI 适配器和网卡。对于非常新的设备，你可能需要在驱动磁盘上提供自己的驱动程序。
+
+## 安装 Linux
+
+安装 Linux 涉及多个过程，从创建 Linux 分区开始，然后加载 Linux 软件，配置你的 X Window System 界面，安装 Linux 启动加载程序（GRUB 或 LILO）以启动你的系统，并创建新的用户账户。Red Hat 上使用的安装程序是一个基于屏幕的程序，它会逐步引导你完成所有这些过程，作为一个连续的操作。你可以使用鼠标或键盘进行选择。完成一个屏幕后，点击底部的 Next 按钮进入下一屏幕。如果需要返回上一屏幕，点击 Back。你也可以使用 TAB、方向键、空格键和 ENTER 进行选择。安装屏幕会显示一个帮助面板，详细解释每一步。你需要做的很少，只需进行选择和选项设置。一些屏幕会提供一个选项列表供你选择。在少数情况下，会要求你提供一些信息，如果你遵循本章前面的步骤，你应该已经具备这些信息。硬件组件将在你进行过程中自动检测并显示。在安装过程中，你将能够执行诸如配置网络连接、创建用户和设置时间等管理任务。请记住，这些管理任务也可以在安装后执行。你现在准备好开始安装。以下各节中详细说明了该过程每个部分的步骤。这不应超过一个小时。
+
+在安装接近尾声时，你将被要求创建一个启动磁盘。一定要制作一个。启动磁盘将包含有关你的系统的特定配置信息。如果你的启动加载程序出现任何问题，你仍然可以使用启动磁盘启动 Linux。
+
+## 启动安装程序
+
+你可以使用多种方法启动安装。如果你的计算机可以从 CD-ROM 启动，你可以直接从随书附带的 CD-ROM 或 DVD-ROM 启动安装。只需在启动计算机之前将 CD-ROM 放入 CD-ROM 驱动器，或将书中的 DVD-ROM 放入 DVD 驱动器。打开计算机后，安装程序将启动。
+
+> 注意 要从 CD-ROM 或 DVD-ROM 启动，你可能首先需要在计算机的 BIOS 中更改启动顺序设置，以便计算机首先尝试从 CD-ROM 启动。这需要一定的技术能力和对如何设置主板 BIOS 配置的了解。
+
+如果你在硬盘上安装了 DOS 或 Windows 系统，你可以使用 `dosutils` 目录中的 `autoboot.bat` 命令启动安装，如下所示。你必须从 DOS 系统或 Windows DOS 窗口执行此命令。
+
+```
+e:\dosutils\autoboot.bat
+```
+
+如果你认为以上两种选项都不可行，你可以使用安装软盘（参见前面关于创建启动磁盘的部分）。这可能是安装 Linux 最可靠的方法。将 Linux 安装盘插入软盘驱动器并重新启动计算机。
+
+安装程序将启动，并显示介绍屏幕。片刻之后，以下提示将出现在屏幕底部：
+
+```
+boot:
+```
+
+按 ENTER。 （如果需要，你可以在安装手册中所述的方式输入启动参数。）配置信息将填满你的屏幕，安装程序尝试自动检测你的硬件组件。
+
+你的系统随后检测你的硬件，提供可能需要的任何配置规范。例如，如果你有一个 IDE CD-Write 驱动器，它将被自动配置为 SCSI 驱动器，以便 CD 写入软件可以使用它（参见第 31 章）。如果你是从软盘安装，它将检测你的 CD-ROM。如果由于某种原因无法检测到，你的系统会要求你从列表中选择 CD-ROM。如果你仍然有困难，你可能需要在启动提示符下指定 CD-ROM。
+
+```
+Boot: linux hdx=c drom
+```
+
+用以下字母之一替换 x，具体取决于单元所连接的接口，以及它是否配置为主设备或从设备：
+
+- a 第一个 IDE 控制器主设备
+
+- b 第一个 IDE 控制器从设备
+
+- c 第二个 IDE 控制器主设备
+
+- d 第二个 IDE 控制器从设备
+
+> 注意 随着每个屏幕的出现，默认条目将已被选中，通常由安装程序的自动探测功能完成。选中的条目将以高亮显示。如果这些条目正确，你只需点击 Next 即可接受并进入下一屏幕。
+
+## 分区、RAID 和逻辑卷
+
+你最初将被要求设置并指定要在硬盘上使用的 Linux 分区和硬盘配置。Red Hat 如果你只想使用整个单块硬盘作为 Linux 系统，则提供自动分区选项。要手动配置你的硬盘，Red Hat 提供了一个非常详细且图形化的分区工具，称为 Disk Druid。使用 Disk Druid，你可以创建特定分区，或配置 RAID 设备，或设置逻辑卷（参见第 31 章）。
+
+
+
+一旦你配置了硬盘，你的分区将被格式化。如果你正在格式化仍有数据的旧 Linux 分区，将出现一个对话框，列出它们并询问你是否确认要格式化它们（你创建的新 Linux 分区将自动格式化）。如果你已经有一个 Linux 系统，你很可能已经有几个 Linux 分区。其中一些可能仅用于系统软件，例如启动分区和根分区。这些应该被格式化。其他分区可能包含大量的用户文件，例如通常存放用户主目录和他们创建的所有文件的 `/home` 分区。你不应该格式化此类分区。
+
+## 推荐分区
+
+如果你手动创建分区，则必须至少设置两个 Linux 分区：交换分区和根分区。根分区是 Linux 系统和应用程序文件安装的位置。此外，建议你还设置一个启动分区，其中仅包含你的 Linux 内核，以及一个 `/home` 分区，用于存放所有用户文件。将系统文件与根分区和启动分区上的用户文件与主分区上的用户文件分开，可以在系统文件损坏时替换系统文件，而不会影响用户文件。同样，如果只是你的内核损坏，你只需替换启动分区上的内核文件，而根分区上的系统文件保持不变。这种将系统目录分离到不同分区的策略可以进一步扩展，以确保系统更稳健。例如，现在存放 Web 和 FTP 服务器文件的 `/var` 目录可以分配自己的分区，在物理上将服务器与系统的其余部分分开。存放大多数用户应用程序的 `/usr` 目录可以放在自己的分区中，然后由其他系统共享并挂载。这种策略的一个缺点是，你需要提前知道为每个分区想要使用的最大空间。对于系统和内核文件，这很容易确定，但对于磁盘使用量可能大幅变化的目录，如 `/home`、`/var`，甚至 `/usr`，则很难确定。作为为每个目录创建单独物理分区的替代方案，你可以使用逻辑卷（稍后描述）。下面显示了一个基本分区配置：
+
+- 交换分区 无挂载点
+- `/` 根分区用于系统文件（如果未定义其他分区，则包含所有其他文件）
+- `/boot` 存放 Linux 内核的启动分区（大约 200MB）
+- `/home` 用户主目录和文件
+
+除了交换分区外，设置 Linux 分区时必须指定挂载点。挂载点是该分区上的文件连接到系统整体 Linux 文件结构的目录。根分区的挂载点是根目录，用单个斜杠 `/` 表示。启动分区的挂载点是路径 `/boot`。对于用户分区，则为 `/home`。
+
+交换分区的大小应与你的 RAM 内存大小相同，建议最小大小为 64MB。以 512MB RAM 为例，你可以使用 512MB 交换分区。如果你有大量 RAM，可以将交换分区设为相同大小。如果你的磁盘空间有限，则应将交换分区大小至少设为 64MB。
+
+要创建新分区，你需要提供挂载点、大小（以兆字节为单位）、文件系统类型以及要创建分区的硬盘。对于大小，你可以选择“填充剩余磁盘空间”选项，让分区自动扩展到磁盘上剩余可用空间的大小。对于文件系统类型，选择 ext3，即标准 Linux 分区的 Linux 原生类型，以及用于交换分区的 Linux 交换类型。
+
+## RAID 磁盘
+
+你也可以选择创建软件 RAID 磁盘。首先创建分区并将其类型选择为软件 RAID（有关 RAID 的更多详细信息，请参阅第 31 章）。创建分区后，你可以创建 RAID 磁盘。单击 RAID 按钮，然后选择之前创建的要组成 RAID 磁盘的分区，并选择 RAID 磁盘的类型。有关创建 RAID 磁盘的详细信息，请参阅 Red Hat 自定义指南。
+
+## 逻辑卷
+
+Red Hat 还支持逻辑卷管理（LVM），让你可以创建逻辑卷来代替直接使用硬盘分区（请参阅第 30 章）。逻辑卷由逻辑卷管理（LVM）实现。它们提供了一种更灵活、更强大的磁盘存储管理方式，将物理分区组织成逻辑卷，其中内存可以轻松管理。逻辑卷的磁盘存储被视为一个内存池，尽管该卷实际上可能包含分布在不同硬盘上的多个硬盘分区。有一个限制。启动分区不能是逻辑卷。你仍然必须创建一个单独的硬盘分区作为启动分区，其挂载点为 `/boot`，内核将安装在其中。有关创建逻辑卷的详细信息，请参阅 Red Hat 自定义指南。
+
+创建逻辑卷涉及多个步骤。首先创建物理 LVM 分区，然后创建放置这些分区的卷组，然后从卷组中创建逻辑卷，并为其指定挂载点和文件系统类型。要创建物理 LVM 分区，请单击新建并将文件系统类型选择为“物理卷（LVM）”。为你希望在硬盘上创建的每个分区创建一个 LVM 物理分区。创建 LVM 物理分区后，单击 LVM 按钮创建逻辑卷。首先需要将 LVM 物理分区分配给卷组。卷组本质上是逻辑硬盘。你可以将来自不同硬盘的 LVM 物理分区分配给同一个卷组，让卷组跨越不同的硬盘。创建卷组后，你就可以创建逻辑卷了。你可以在每个组中创建多个逻辑卷。逻辑卷的功能类似于分区。你必须为创建的每个逻辑卷指定文件系统类型和挂载点。
+
+## 启动加载器
+
+分区准备好后，你将安装启动加载器。Red Hat 使用统一启动加载器（GRUB）。你使用启动加载器从硬盘启动 Linux。屏幕将默认显示要启动的分区，列出安装有不同操作系统的所有分区，例如 Windows 以及你的 Linux 系统。单击高级选项可以完善你的启动过程，让你选择将启动加载器安装在何处或确定驱动器启动顺序。你有两个选择来安装启动加载器：主引导记录（MBR）或根分区。推荐的位置是 MBR。
+
+## 网络配置
+
+网络配置屏幕在上半部分显示选项卡式窗格，用于计算机上的不同网络设备。屏幕显示网络设备的段，主机名，以及杂项设置。如果您使用 DHCP 自动配置网络连接，如大多数网络所做的那样，您很可能不需要在此屏幕上做任何操作。
+
+网络设备段将列出您的网络连接设备，例如您的以太网设备。对于已通过以太网卡连接到网络的计算机，第一个条目通常标记为 `eth0`。如果您需要手动配置设备，为其输入 IP 地址，您可以单击 Edit 以显示设备的配置面板。在这里您可以选择手动配置设备或使用 DHCP 自动配置它。对于手动配置，您可以输入设备的 IP 地址（通常是您计算机的 IP 地址）和您网络的子网掩码。
+
+在主机名段中，您可以选择手动提供网络信息或使用 DHCP 自动获取。如果您选择手动提供网络信息，您可以输入主机名，并在杂项段中输入您网络的网关和 DNS 服务器的 IP 地址。
+
+完成网络配置后，防火墙配置屏幕随后允许您创建基本的默认网络安全级别。您可以选择使用默认防火墙规则或自定义配置，指定允许的受信任设备和服务，例如 Web 或 FTP 连接。防火墙配置仍实现较新的 IP tables 防火墙规则（参见第 19 章）。
+
+## 系统配置
+
+下一个屏幕让您选择要使用的语言。
+
+在时区配置屏幕上，您可以选择使用地图指定位置来设置时间，或使用协调世界时（UTC）条目。
+
+在下一个屏幕上，您可以为系统上的 root 账户设置 root 密码。这是用于系统管理操作（如安装软件和管理用户）的账户。安装后，类似的屏幕将允许您添加普通用户账户。
+
+## 软件安装
+
+然后您可以选择要在系统上安装的软件包。Red Hat 允许您选择一套预定的集合，适用于个人桌面、工作站或服务器。您可以选择其中一种软件包配置或选择自定义安装。在自定义安装中，您可以选择软件包组，例如 GNOME、KDE、不同的服务器如 Web 或 FTP 服务器、游戏、编辑器以及开发支持，其中包括编译器和调试器。要安装所有软件包，请选择列表末尾的 Everything 条目。
+
+## X Window 系统配置（仅限 Red Hat）
+
+被认为对所描述的类别至关重要。在 Web 服务器类别中，标准段包含 Apache Web 服务器，而额外段包含添加的模块和服务器，如 Squid 和 Tux。
+
+然后安装软件包，显示每个正在安装的软件包以及安装进度。（对于随本书附带的 Red Hat DVD-ROM，DVD-ROM 将一次性连续安装。安装程序检测到所有软件包都位于单个 DVD-ROM 上。与 CD-ROM 相比，没有弹出或插入任务。）如果您使用的是 CD-ROM（从 Red Hat 购买或从互联网下载），您将被提示何时安装下一个 CD-ROM。当前的光盘将自动弹出给您。当安装完成时，后安装过程将完成。然后通常会给您创建启动磁盘的选项。您可以使用此磁盘访问您的 Linux 系统，以防您的硬盘以某种方式无法启动。
+
+对于 Red Hat，X 配置随后完成安装。（Fedora 会在安装前自动检测您的显卡。）这启用了 GNOME 和 KDE 等 GUI 界面。X 配置使用 `redhat-config-xfree86` 实用程序自动检测您的视频卡和显示器。
+
+您首先必须在图形界面屏幕上选择并选择您的视频卡。`redhat-config-xfree86` 最初会探测您的卡并从屏幕上显示的视频卡列表中选择它，同时显示卡上的内存量。检查您的卡是否被选中。如果没有，请在列表中找到您的卡并单击它。您需要知道您的卡的品牌和型号。如果您的视频卡未出现在列表中，您可以尝试仅指定芯片组。查明卡上使用的芯片组并在通用视频卡条目中选择它。该条目将列出几种常用支持的芯片组。如果您的卡或芯片组不存在，您应该跳过 X 配置过程。只需单击跳过 X 配置复选框。您以后可以尝试使用 X 配置实用程序，如 `redhat-config-xfree86`，或直接尝试配置 `/etc/X11/XF86Config` 配置文件。这需要技术专业知识。
+
+如果您知道视频卡上的视频内存量，您可以检查下拉菜单中该量的相应条目。如果选择了错误的数量，您可以选择合适的数量。
+
+
+
+在显示器配置屏幕上，您选择您的显示器。最初，`redhat-config-xfree86` 会自动探测您的显示器并从屏幕上列出的型号中选择一个品牌和型号。检查是否选择了正确的显示器。如果没有，请找到其条目并单击它。显示器条目按公司组织在可展开的树中。例如，如果您有惠普显示器，请单击惠普条目旁边的三角形符号以列出惠普制造的所有显示器。然后单击您的型号。当您选择显示器时，屏幕底部的水平和垂直框将显示您显示器的水平同步范围和垂直同步范围（这些值通常可在随显示器提供的文档中或从显示器供应商或制造商处获得）。
+
+如果您的显示器未出现在列表中，请选择通用（通常为通用多同步）或未探测条目。`redhat-config-xfree86` 然后将在屏幕底部的标记框中提供水平和垂直频率值。检查水平和垂直频率将被输入。如果您输入的值过高，您可能会超频显示器并导致其关闭。除非您确定所选的“相似”显示器不会超出您显示器的性能，否则请勿选择与您的显示器“相似”的显示器。
+
+在“自定义图形配置”屏幕上，您可以通过从其下拉菜单中选择所需规格来指定显卡的分辨率和颜色深度。自动探测的条目将已被选中。您可以根据需要将其更改为其他条目：对于较小的显示器为 1024 × 768，或对于较大的显示器为 1280 × 1024。
+
+您还可以选择使用图形登录而不是命令行登录。图形登录复选框将为您预先选中。如果您选择此选项，启动时 GNOME 桌面管理器（GDM）将启动并显示登录屏幕，您可以在其中输入用户名和密码。选项菜单中的“会话”子菜单可让您选择启动 KDE、GNOME 或窗口管理器。登录后，您的桌面会自动启动。退出桌面后，GDM 登录窗口将重新显示。从选项菜单中选择“关机”即可关闭 Linux。
+
+如果您未选择此选项，您将以命令行界面启动。在登录提示符处输入用户名，在密码提示符处输入密码以登录。使用 `startx` 启动 GNOME 或使用 `switchdesk` 切换到 KDE。`Logout` 命令用于注销。您可以在登录状态下输入 `shutdown` 或 `halt` 命令以关闭 Linux。
+
+完成后，`redhat-config-xfree86` 将生成一个名为 `/etc/X11/XF86Config` 的 X Window System 配置文件。这是 X Window System 启动时使用的文件。
+
+如果您遇到困难，您始终可以单击“跳过 X 配置”复选框以跳过 X Window System 配置，并在安装系统后稍后执行。
+
+## 完成安装
+
+安装完成后，您可以单击“退出”按钮重新启动。请务必先取出安装或启动软盘，或任何 CD-ROM。如果您从 CD 启动，重新启动前 CD 将被弹出。如果您直接从 CD-ROM 启动，您可能希望将 BIOS 中的启动顺序改回原始设置。
+
+## 设置
+
+首次启动 Red Hat 或 Fedora Linux 时，将运行设置代理。此代理将帮助您执行系统的基本配置，让您可以设置日期和时间，配置声卡，以及设置用户帐户。对于 Fedora，您将被要求最初批准该发行版的 GNU 通用公共许可证。
+
+### 日期和时间
+
+日期和时间配置面板将自动探测日期和时间，在日历上显示日期，并在小时、分钟和秒中显示时间。您只需单击按钮即可轻松更改任何条目。您还可以选择使用网络时间协议，该协议将自动从 Internet 上的时间服务器获取时间，确保您的时间始终正确。您可以从列出的服务器中选择，例如 clock.redhat.com。
+
+### 用户帐户
+
+用户帐户面板随后将允许您为管理用途创建普通用户帐户。会显示一个对话框，其中包含用户名、用户的全名、密码和密码确认的条目。输入信息并单击“下一步”后，新用户将被列出。您还可以选择 Kerberos 或 NIS 来配置用户的网络登录过程。这将启动 `authconfig` 并让您配置 NIS 和 LDAP。在“身份验证”面板上，您可以配置 LDAP、Kerberos 和 SMB（samba）。您可以启用并配置对每个的支持，指定网络可能使用的 NIS、LDAP、Kerberos 或 SMB 服务器。
+
+### 声音配置
+
+在“声音”面板上，您的声卡将被自动检测并配置。您可以单击按钮来测试声音。
+
+### Red Hat Network（仅限 Red Hat Linux）
+
+然后运行 Red Hat 更新代理，以将您注册到 Red Hat Network，以便您可以自动更新系统上的已安装软件。目前，对 Red Hat Network 的访问仅限于订阅客户，尽管您可以注册演示帐户，提供有限访问。免费访问不提供。如果您使用的是随本书提供的 DVD-ROM，或如果您从分发站点下载了 Red Hat，您将需要注册 Red Hat Network 基础服务或演示帐户。如果您此时不想注册，可以跳到下一个面板。如果您购买了 Red Hat，您可以在此时激活访问权限。如果您之前已注册，可以使用当前用户名和密码登录。更新代理将检测您系统的硬件配置并生成配置文件以供您注册。
+
+### 安装附加软件
+
+然后您可以选择从 DVD-ROM（或如果您使用的是 CD-ROM）安装特定软件。对于 DVD-ROM，“安装”按钮将为您提供对所有软件包的完全访问权限。此时，您将无法使用 DVD-ROM 安装文档。这必须在安装完成后手动完成。但是，如果您有文档 CD-ROM，现在可以从中安装。
+
+### 登录和注销
+
+设置代理随后结束，您的登录屏幕将被显示。登录提示或登录屏幕将出现，具体取决于您是否选择让 X Window System 自动启动。然后您可以使用为其设置的用户中的任何一个的登录名和密码登录到 Linux 系统。如果您以 root 用户身份登录，您可以执行管理操作，例如安装新软件或创建更多用户。要以 root 用户身份登录，请在登录提示处输入 `root`，并在密码提示处输入 root 用户密码。
+
+在登录屏幕上，左下角显示四个弹出菜单：语言、会话、重新启动和关机。会话菜单让您选择要启动的桌面图形要使用的界面，例如 KDE 或 GNOME。你使用关机菜单来关机，使用重启菜单来重启系统。语言菜单让你选择要使用的语言。
+
+完成后，你可以关机。如果你使用的是命令行界面，使用 `halt` 命令。在 GNOME 中，你可以选择关闭整个系统。如果你从 GNOME 或 KDE 注销并返回登录屏幕，你可以从屏幕底部的会话弹出菜单中选择关机条目。如果系统因任何原因冻结，你可以按住 CTRL 和 ALT 键并按下 DEL（CTRL-ALT-DEL）来安全地重新启动它。不要直接关机。你也可以使用 CTRL-ALT-F3 切换到命令行提示符并登录以检查你的系统，使用 `halt` 命令关机。
+
+正常启动时，如果你选择使用 GRUB 启动加载器，将会显示一个 GRUB 菜单，列出你指定的 Linux 和其他操作系统，例如 Windows。使用方向键移动到 Linux 条目，如果它尚未被高亮显示，然后按 ENTER。
+
+## Boot Disks
+
+如果你想在丢失或损坏安装期间制作的软盘启动盘时有备份，你可以使用 `mkbootdisk` 命令创建更多。在终端窗口或命令行中输入此命令，并指定内核的版本号，如下所示：
+
+```
+mkbootdisk 2.4.18-14
+```
+
+你也可以使用 GNOME 桌面上的 `qmkbootdisk` 工具创建启动盘。此工具还允许你指定不同的内核来启动（参见第 33 章）。当前内核将已被选中。
+
+你可以使用 `mkbootdisk` 创建启动 CD-ROM 而不是启动软盘。使用 `--iso` 选项和 `--device` 选项以及要创建的 ISO 映像文件的名称。然后你使用 CD-ROM 烧录软件从映像文件创建 CD-ROM。以下示例创建了一个名为 `mybootcd.iso` 的 CD-ROM 映像文件，可用作启动 CD-ROM。
+
+```
+mkbootdisk --iso --device mybootcd.iso 2.4.18-14
+```
+
+如果由于某种原因你无法启动或访问你的系统，这可能是由于冲突的配置、库或应用程序造成的。在这种情况下，你可以在救援模式下启动 Linux 系统，然后使用 Vi 等文本编辑器（参见第 11 章）编辑配置文件，删除可疑的库，或使用 RPM（参见第 29 章）重新安装损坏的软件。要进入救援模式，从你的软盘启动盘、CD-ROM 或随书附带的 DVD-ROM 启动。在启动提示符下输入：
+
+```
+linux rescue
+```
+
+你将以命令行模式启动，系统文件挂载在 `/mnt/sysimage` 下。使用 `cd` 命令在目录之间移动（参见第 10 章）。检查 `/mnt/sysimage/etc` 和 `/mnt/sysimage/etc/sysconfig` 中的配置文件。你可以使用 `Vi` 编辑文件。要重新安装文件，使用 `rpm` 命令（参见第 4 章）。完成后输入 `exit` 命令。
+
+> NOTE 如果在运行 Linux 时，你想打开随书附带的 DVD-ROM，你可以将其插入 DVD-ROM 驱动器。如果文件管理器窗口没有自动打开，你可以右键单击桌面并从下拉菜单中的磁盘条目中选择 CD-ROM 以手动打开它。
+
+# CHAPTER
+
+## Interface Basics
+
+
+
+使用 Linux 已成为一个几乎直观的过程，具有易于使用的界面，如图形登录和图形用户界面（GUI）如 `GNOME` 和 `KDE`。即使是标准的 Linux 命令行界面也变得更易于使用，具有可编辑命令、历史列表和基于光标的工具。要开始使用 Linux，你必须知道如何访问你的 Linux 系统，并且一旦进入系统，如何执行命令和运行应用程序。访问可通过默认的图形登录或命令行登录来支持。对于图形登录，会出现一个简单的窗口，其中包含用于选择登录选项的菜单和用于输入用户名和密码的文本框。一旦你访问系统，你就可以使用命令行界面或图形用户界面（GUI）与之交互。使用 `GNOME` 和 `KDE` 等 GUI 界面，你可以使用窗口、菜单和图标与系统交互。Red Hat 已将两者集成以提供一个标准 GUI 界面，称为 `Bluecurve`，使其使用不那么令人困惑。
+
+Linux 以提供对广泛帮助文档的便捷访问而著称。登录到系统时，很容易快速获取有关任何 Linux 命令和实用程序的信息。你可以访问描述每个命令的在线手册，或获取提供不同 Linux 功能更详细解释的帮助。Linux 文档项目提供的完整手册集在你的系统上，可供你浏览或打印。`GNOME` 和 `KDE` 桌面都提供帮助系统，让你轻松访问桌面、系统和应用程序帮助文件。
+
+> Tip `Red Hat Linux Getting Started Guide` 提供了使用 Red Hat Linux 系统的详细教程。查看参考、自定义和安全指南以获取专门任务。
+
+## User Accounts
+
+你从不直接访问 Linux 系统。相反，Linux 设置了一个称为 `shell` 的界面，通过它你可以与之交互。Linux 是一个多用户系统，可以同时支持多个用户 `shell`，同时容纳多个用户，每个用户通过自己的终端或从远程系统连接。
+
+用户通过账户访问系统。Unix 是 Linux 的基础，最初在可同时容纳数百名用户的大型小型机和大型机上使用。通过连接到计算机的众多终端之一，用户可以使用用户名和密码登录 Unix 系统。要获得系统访问权限，你需要为你设置一个用户账户。系统管理员创建账户，为其分配用户名和密码。然后你使用该账户登录并使用系统。
+
+实际上，你可以使用特殊的系统管理工具创建其他新用户账户。这些工具在你以 `root` 用户登录时可用。`root` 用户是一个专用于系统管理任务的特殊用户账户，例如创建用户和安装新软件。基本系统管理操作在第 4 章和第 5 章中简要讨论，但在第 27-33 章中有更详细的讨论。
+
+## 访问你的 Linux 系统
+
+要访问和使用你的 Linux 系统，你必须严格遵循所需的启动和关闭程序。你不能简单地关闭计算机。如果你已安装启动加载程序 `GRUB`，当你打开或重置计算机时，启动加载程序首先决定加载和运行哪个操作系统。`GRUB` 将显示一个可供选择的
+
+当你输入密码时，它不会显示在屏幕上。这是为了防止他人看到你的密码。如果你输入用户名或密码有误，系统会以错误信息“Login incorrect”作出回应，并要求你重新输入用户名，重新开始登录过程。然后你可以重新输入用户名和密码。
+
+一旦你正确输入用户名和密码，你就登录到系统了。你的命令行提示符会显示出来，等待你输入命令。注意命令行提示符是一个美元符号（`$`），而不是井号（`#`）。`$` 是普通用户的提示符，而 `#` 仅用于 `root` 用户。在这个版本的 Linux 中，你的提示符前面加上主机名和你所在的目录。两者都用一组方括号括起来。
+
+```
+[turtle /home/richlp]$
+```
+
+要结束你的会话，请执行 `logout` 或 `exit` 命令。这会将你返回到登录提示符，Linux 等待另一位用户登录。
+
+```
+[turtle /home/richlp]$ logout
+```
+
+## 关闭 Linux
+
+如果你想关闭计算机，必须先关闭 Linux。如果不关闭 Linux，你可能需要在下次启动时要求 Linux 执行冗长的系统检查。你可以通过两种方式关闭系统。首先，登录到一个账户然后输入 `halt` 命令。该命令会注销你并关闭系统。
+
+```
+$ halt
+```
+
+另外，你也可以使用带 `-h` 选项的 `shutdown` 命令。使用 `-r` 选项，它会关闭系统然后重新启动它。在下一个示例中，系统在五分钟后关闭。要立即关闭系统，可以使用 `+0` 或单词 `now`（有关更多详细信息，请参阅第 28 章）。
+
+```
+# shutdown -h now
+```
+
+> Tip 关闭涉及一系列重要操作，例如卸载文件系统和关闭任何服务器。切勿简单地关闭计算机。
+
+你也可以在登录提示符处强制系统重新启动，按住 `CTRL` 和 `ALT` 键然后按下 `DEL` 键（`CTRL-ALT-DEL`）。系统将经过标准的关闭程序然后重新启动计算机。
+
+## 从命令行启动 GUI
+
+登录系统后，你可以选择启动 X Window System GUI，例如 `GNOME` 或 `KDE`，并使用它与你的 Linux 系统交互。在 Linux 中，命令 `startx` 启动 X Window System 以及一个 GUI，然后你就可以使用窗口、菜单和图标与系统交互。`startx` 命令默认启动 GUI 桌面。一旦你关闭 GUI 界面，你将返回到命令行界面，仍然保持登录状态。在 Red Hat 上，你可以在桌面中使用 Desktop Switcher 在 `GNOME` 或 `KDE` 之间切换。Desktop Switcher 可从 Extra System Settings 菜单中的 Desktop Switching Tool 访问，或使用 `switchdesk` 命令。你做出选择然后退出桌面以返回到命令行界面。当你再次启动 GUI 时，所选的桌面将被使用。
+
+## Bluecurve：GNOME 和 KDE 桌面
+
+两种可选的桌面 GUI 界面可以安装在 Red Hat Linux 上：`GNOME` 和 `KDE`。两者各有自己的风格和外观。为了提供更一致的图形界面，Red Hat 为 `GNOME` 和 `KDE` 开发了统一的外观和感觉的默认设置，称为 `Bluecurve`。有了 `Bluecurve`，`GNOME` 和 `KDE` 看起来几乎相同，具有相同的菜单、面板项目和窗口样式。默认情况下，Red Hat 安装 `GNOME`，不过你也可以选择同时安装 `KDE`。`GNOME` 和 `KDE` 应用程序都可以通过 `Bluecurve` `GNOME` 或 `KDE` 菜单访问。Red Hat 在其主菜单中提供了一套标准应用程序，例如 `OpenOffice`，以及在 More 菜单中的其他对应应用程序，例如 `GNOME` 的 `AbiWord` 和 `KDE` 的 `KOffice` 在 More Office Applications 下。`Bluecurve` 本质上是一个主题，你可以使用 `GNOME` 或 `KDE` 配置工具进行更改。本节描述了 `GNOME` 和 `KDE` 桌面的 `Bluecurve` 界面。
+
+需要注意的是，虽然 `GNOME` 和 `KDE` `Bluecurve` 界面看起来相同，但它们实际上是两个非常不同的桌面界面，具有各自用于选择首选项的工具。`GNOME` 和 `KDE` 上的 Preferences 菜单显示了非常不同的桌面配置工具选择。这些内容在第 6 章和第 7 章中讨论。
+
+### GNOME
+
+如图 3-1 所示的 `Bluecurve` `GNOME` 桌面显示，最初在屏幕底部显示一个面板，以及 Red Hat 最初设置的任何文件夹和网页图标。你会看到几个网页图标和一个指向你主目录的文件夹。屏幕底部的面板包含用于启动应用程序的图标，例如 `Mozilla`（Mouse and World 标志）、`Evolution` 邮件实用程序以及几个 `OpenOffice` 应用程序。你可以使用主菜单启动应用程序，通过点击面板左侧的 Red Hat 图标（Red Hat fedora 的图像）来显示该菜单。
+
+当你点击桌面上的主目录文件夹时，会打开一个文件管理器窗口显示你的主目录。你可以显示主目录中的文件并使用上箭头按钮移动到父目录。Back 和 Forward 按钮可在先前显示的目录之间移动。在位置窗口中，你可以输入目录的路径名直接移动到它。在 `GNOME` 上，文件管理器也是 Internet 感知的。你可以使用它来显示网页和访问远程 FTP 目录以及显示或下载其文件。
+
+
+
+要移动窗口，请左键单击并拖动其标题栏或右键单击其其他边框。每个窗口都支持 `Maximize`、`Minimize` 和 `Close` 按钮。双击标题栏会“着色”窗口，将其缩小为仅标题栏。你可以通过再次双击重新显示窗口。桌面支持完整的拖放功能。你可以将文件夹、图标和应用程序拖到桌面或其他打开到其他文件夹的文件管理器窗口。移动操作是默认的拖动操作（你也可以在拖动时按住 `SHIFT` 键）。要复制文件，请按住 `CTRL` 键然后单击并拖动然后释放
+
+### 图 3-1 Bluecurve GNOME 桌面
+
+鼠标按钮。要创建链接，请右键单击该项目并从弹出菜单中选择“创建链接”。然后你可以将链接拖放到任何你想要的位置。
+
+面板还包含用于虚拟桌面的工作区切换器，显示为四个方块。单击某个方块即可切换到该区域。你可以通过主菜单中的“首选项”条目或“开始使用”窗口内的“首选项”窗口中列出的“首选项”项目来配置你的 GNOME 界面，设置诸如背景等功能。单击桌面上的罗盘与地图图像以打开“开始使用”窗口。要配置诸如添加用户、安装打印机和设置网络连接等系统设置，请打开“系统设置”窗口，可从“开始使用”窗口访问，或选择“系统设置”菜单。
+
+要退出 GNOME 桌面，请选择主菜单底部“注销”条目。如果你是从登录窗口进入的，则会注销你的账户并返回到登录窗口。如果你是从命令行启动 GNOME，则会返回到命令行提示符，仍保持登录状态。
+
+## KDE
+
+Bluecurve 的 K 桌面环境（KDE）看起来与图 3-1 所示的 Bluecurve GNOME 非常相似，只是增加了 CD-ROM 和软盘驱动器的图标。
+
+它在屏幕底部显示一个面板，看起来与 GNOME 桌面上显示的面板非常相似。文件管理器外观略有不同，但操作方式与 GNOME 文件管理器基本相同。它也具备网络感知功能，可以作为 Web 浏览器运行。主菜单中还有一个“控制中心”条目，打开 KDE 控制中心，从中你可以配置 KDE 环境的各个方面，例如主题、面板、打印机和键盘等外设（已由 Red Hat 系统工具处理），甚至 KDE 文件管理器的 Web 浏览功能。
+
+## Linux 的窗口管理器
+
+尽管 GNOME 和 KDE 是完全集成的桌面，但它们实际上都是通过窗口管理器与操作系统交互，GNOME 使用 `Metacity`，KDE 使用 KDE 窗口管理器。如果你愿意，可以使用不同的符合 GNOME 或 KDE 的窗口管理器，或者仅使用窗口管理器来替代 KDE 或 GNOME。你可以把窗口看作是命令行的一种替代。窗口中执行的操作会被解释并发送到 Linux 系统以便执行。窗口管理器在底层 X Window System 之上运行，X Window System 实际上提供了基本窗口操作，允许你打开、移动和关闭窗口，以及显示菜单和选择图标。`Enlightenment` 和 `AfterStep` 管理这些操作，各有其方式，提供各自独特的界面。这种设计的优点是不同的窗口管理器可以在同一 Linux 系统上运行。从这个意义上说，Linux 并非绑定到一种图形用户界面（GUI）。在同一 Linux 系统上，一位用户可能正在使用 `Window Maker` 窗口管理器，另一位可能正在使用 `Afterstep` 窗口管理器，还有一位可能正在使用 `Enlightenment` 窗口管理器，同时进行。你可以从 X11 网站 `www.xwinman.org` 了解有关 Linux 可用不同窗口管理器的详细信息。该网站提供评论、屏幕截图和主页链接，以及一个比较表，列出不同窗口管理器可用的功能。
+
+## 命令行界面
+
+使用命令行界面时，你会得到一个简单的提示符，在该提示符下输入命令（参见第 8 章）。即使使用 GUI，有时也需要执行命令行命令。Linux 命令大量使用选项和参数。请注意在命令行上以正确的顺序放置参数和选项。Linux 命令的格式为命令名，后跟选项，然后是参数，如下所示：
+
+```
+$ command-name options arguments
+```
+
+选项是一个以一到两个连字符为前缀的单字母代码，用于修改命令执行的操作类型。选项和参数是否可选取决于命令。例如，`ls` 命令可以接受选项 `-s`。`ls` 命令显示目录中的文件列表，而 `-s` 选项会在列表中添加每个文件的大小（以块为单位）。你按如下方式在命令行中输入命令及其选项：
+
+```
+$ ls -s
+```
+
+参数是命令执行其任务可能需要的数据。在许多情况下，这是一个文件名。参数作为命令行上选项之后的单词输入。例如，要显示文件的内容，您可以使用 `more` 命令，并将文件名称作为其参数。带文件名 `mydata` 的 `more` 命令将按如下方式在命令行中输入：
+
+```
+$ more mydata
+```
+
+命令行实际上是一个可编辑的文本缓冲区。在按下 `ENTER` 之前，您可以对现有文本执行编辑命令。编辑功能提供了一种纠正您在输入命令及其选项时可能出现的错误的方法。`BACKSPACE` 和 `DEL` 键可让您删除刚刚输入的字符。通过这种字符删除功能，您可以 `BACKSPACE` 整个行，如果需要，可以删除您输入的内容。`CTRL-U` 删除整行并使您能够在提示符处重新开始。
+
+> Tip 您可以使用 `UP ARROW` 键重新显示上次执行的命令。然后您可以重新执行该命令，也可以编辑它并执行修改后的命令。当您必须一遍又一遍地重复某些操作时，例如编辑同一个文件，这很有帮助。这在您已执行了输入错误的命令时也很方便。
+
+## Help
+
+大量支持文档已安装在您的系统上，并且也可以从在线来源访问。表 3-1 列出了可在您的 Red Hat Linux 系统上访问的帮助工具和资源。GNOME 和 KDE 桌面都具有使用类似浏览器的界面显示帮助文件的帮助系统。要启动 GNOME 或 KDE 帮助浏览器，请在主菜单中选择 `Help` 条目。然后您可以从相应的桌面用户指南中进行选择，例如 KDE 手册、Linux 手册页和 GNU 信息页。GNOME 帮助浏览器还访问 GNOME 应用程序的文档，例如 `File Roller` 归档工具和 `Evolution` 邮件客户端。GNOME 帮助浏览器和 KDE 帮助中心还集成了浏览器功能，包括您查看的文档的书签和历史记录列表。
+
+GNOME 和 KDE 以及其他应用程序也提供上下文相关帮助。每个 KDE 和 GNOME 应用程序都具有使用其各自的帮助浏览器显示的详细手册。此外，系统管理工具还为每个任务提供详细的解释。
+
+> Note Red Hat 手册的完整集合提供在 DVD-ROM 的 `Documentation` 目录下。
+
+在您的系统上，`/usr/share/doc` 目录包含每个应用程序安装的文档文件。在每个目录中，您通常可以找到该应用程序的 HOW-TO、README 和 INSTALL 文档。
+
+您还可以使用 `man` 命令从命令行界面访问 Linux 命令的在线手册。输入 `man` 加上您想要了解信息的命令。以下示例请求有关 `ls` 命令的信息：
+
+```
+$ man ls
+```
+
+按下 `SPACEBAR` 键可将您推进到下一页。按下 `B` 键可返回上一页。完成后，按下 `Q` 键退出 `man` 实用程序并返回命令行。您可以通过按下斜杠 (`/`) 或问号 (`?`) 来激活搜索。`/` 向前搜索，`?` 向后搜索。当您按下 `/` 时，屏幕底部会打开一行，然后您输入要搜索的词。按 `ENTER` 激活搜索。您可以通过按 `N` 键重复相同的搜索。您无需重新输入模式。
+
+Tip 您也可以使用 GNOME 或 KDE 帮助系统来显示手册页。
+
+当您启动浏览器时，默认网页列出了您自己的系统和 Red Hat 网站上的文档链接。要使用 Red Hat 网站，您首先必须连接到 Internet。您的 CD-ROM 以及 GNOME 和 KDE 帮助中心还包含大量文档，展示如何使用桌面并详细解释 Linux 应用程序。其他文档提供有关不同 Linux 主题的教程。
+
+GNU 应用程序的在线文档，例如 `gcc` 编译器和 `Emacs` 编辑器，也以可从 GNOME 和 KDE 帮助中心访问的信息页形式存在。您也可以通过输入命令 `info` 来访问此文档。这会打开一个特殊屏幕，列出不同的 GNU 应用程序。`info` 界面有自己的一套命令。您可以通过输入 `info info` 了解更多信息。键入 `m` 会在屏幕底部打开一行，您可以在其中输入应用程序的前几个字母。按 `ENTER` 会调出该应用程序的 `info` 文件。
+
+| Resource | Description |
+|---|---|
+| KDE Help Center | KDE 帮助工具，KDE 桌面和应用程序文档、手册页和信息文档的 GUI 界面 |
+| GNOME Help Browser | GNOME 帮助工具，访问 GNOME 桌面和应用程序文档、手册页和信息文档的 GUI 界面 |
+| `/usr/share/doc` | 应用程序文档的位置 |
+| `man` command | Linux 手册页，关于 Linux 命令的详细信息，包括语法和选项 |
+| `info application` | GNU 信息页，关于 GNU 应用程序的文档 |
+| `www.redhat.com` | 在线文档、指南、HOW-TO 和常见问题解答。位于“Support and Documentation”下。 |
+
+
+
+| fedora.redhat.com | Fedora Linux 的在线文档、指南、HOW-TO 和常见问题解答 |
+
+TABLE 3-1 Linux Help Resources
+
+## Red Hat 系统配置
+
+要有效地使用你的 Linux 系统，你必须知道如何配置某些功能和服务。现在，使用友好的系统工具可以执行诸如添加用户和安装软件之类的管理操作。本章讨论了你需要让系统运行起来以及执行基本维护（如添加新用户或打印机）所需的基本系统管理操作。
+
+你很可能需要处理的四个基本系统配置任务是：用户管理、打印机设置、显示配置和软件管理。你可以管理用户，添加新用户、删除其他用户以及更新用户属性。可以为系统设置各种类型的打印机，远程和本地。对于你的显卡和显示器，你可以选择想要的分辨率和颜色深度。你还可以安装新的软件包并更新或删除当前的软件包。在安装期间，你被要求执行所有这些任务。此外，还有其他工具可用于配置键盘、声卡和鼠标等设备，以及执行诸如设置系统日期和时间或选择要使用的语言等任务（参见表 4-1）。你可以使用本章所述的管理工具轻松进行更改或添加。
+
+配置操作可以从 GNOME 或 KDE 等 GUI 界面执行，也可以通过简单的 shell 命令行执行，在该命令行中键入配置命令。你可以手动访问系统配置文件，编辑它们并自行添加条目。例如，域名服务器条目保存在 `/etc/resolv.conf` 文件中。你可以编辑此文件并输入服务器的地址。
+
+> 注意 配置工具只能由 `root` 用户访问。你首先需要使用 `root` 作为用户名登录并提供安装期间指定的 `root` 密码。
+
+## Red Hat 管理工具
+
+在 Red Hat 上，管理由 Red Hat 开发和支持的一组独立的专用管理工具来处理，例如用户管理和显示配置工具。其中许多基于 GUI，并且可以在 GNOME 或 KDE 等任何 X Window System 环境中运行。
+
+要访问基于 GUI 的 Red Hat 工具，你以 `root` 用户身份登录到 GNOME 桌面并打开“开始这里”窗口（参见图 4-1）或选择主菜单。系统管理工具列在“开始这里”窗口的“系统设置”文件夹中，并在主菜单中列出的“系统设置”菜单上。在这里你会找到设置时间和日期、管理用户、配置打印机和更新软件的工具。用户和组允许你创建和修改用户和组。打印允许你安装和重新配置打印机。所有工具都提供非常直观的 GUI 界面，易于使用。在“系统设置”文件夹和菜单中，工具由简单的描述性术语标识，而它们的实际名称通常以术语 `redhat-config` 开头。例如，打印机配置工具列为打印，但其实际名称为 `redhat-config-printer`。你可以通过在终端窗口中输入其名称单独调用任何工具。
+
+### 表 4-1
+
+Red Hat 系统配置工具
+
+| Red Hat 管理工具 | 描述 |
+|---|---|
+| System Settings | 访问管理工具的 Red Hat 窗口和菜单 |
+| `redhat-config-users` | 用户和组配置工具 |
+| `redhat-config-printer` | 打印机配置工具 |
+| `redhat-config-xfree86` | Red Hat 显示配置工具（显卡和显示器） |
+| `redhat-config-packages` | 软件管理 |
+| `redhat-config-rootpassword` | 更改 `root` 用户密码 |
+| `redhat-config-keyboard` | 更改键盘配置 |
+| `redhat-config-date` | 更改系统时间和日期 |
+| `redhat-config-mouse` | 配置你的鼠标 |
+| `redhat-config-language` | 选择要使用的语言 |
+| `redhat-config-soundcard` | 配置你的声卡 |
+
+## 配置用户
+
+目前，在 Red Hat 上添加新用户的最简单和最有效的方法是使用 `redhat-config-users`，也称为 Red Hat 用户管理器。你可以从 GNOME 桌面的“开始这里”窗口的“系统设置”窗口访问它。`redhat-config-users` 窗口将显示用于列出用户和组的面板（参见图 4-2）。按钮栏将列出你可以执行的各种任务，包括创建新用户或组、编辑当前项（属性）或删除选定的用户或组。
+
+要创建新用户，请单击“新建”按钮。这会打开一个窗口，其中包含用户名、密码和登录 shell 的条目，以及创建主目录和为该用户创建新组的选项。一旦你创建了用户，你可以编辑其属性以添加或更改功能。选择用户的条目并单击“属性”。这会显示一个窗口，其中包含
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_82_0.png)
+
+### 图 4-1 Red Hat 管理工具
+
+用于用户数据、账户信息、密码信息和组的标签页面板。在“组”面板上，你可以选择用户所属的组，添加或移除组成员身份。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_82_1.png)
+
+### 图 4-2 Red Hat 用户管理器，`redhat-config-users`
+
+另外，你也可以在终端窗口或命令行中使用 `useradd` 命令添加用户账户，使用 `userdel` 命令删除它们。以下示例将用户 `dylan` 添加到系统中：
+
+```
+$ useradd dylan
+```
+
+在命令行中常执行的一项操作是更改密码。任何用户都可以使用 `passwd` 命令更改自己的密码。命令会提示你输入当前密码。输入当前密码并按 ENTER 后，会提示你输入新密码。输入新密码后，会要求你重新输入一次。这是为了确保你确实输入了 intended 的密码。
+
+```
+$ passwd
+Old password:
+New password:
+Retype new password:
+$
+```
+
+> 提示 你可以使用 `redhat-config-rootpassword` 工具（系统设置中的 Root Password）来更改 `root` 用户的密码。
+
+## 打印机配置
+
+作为 Linux 安装程序的一部分，你已配置了连接到计算机的打印机。若要更改配置或以后添加新打印机，可以使用打印机配置工具 `redhat-config-printer`。该实用程序使你能够为打印机选择合适的驱动程序，以及设置纸张大小和打印分辨率等打印选项。你可以配置直接连接到本地计算机的打印机，或网络上远程系统的打印机（参见第 25 章）。你可以通过在系统设置窗口或菜单中选择 Printing 条目来启动 `redhat-config-printer`。
+
+启动 `redhat-config-printer` 时，会显示一个列出已安装打印机的窗口（见图 4-3）。要添加新打印机，请单击 New。要编辑已安装的打印机，双击其条目，或选择它然后单击 Edit。做出更改后，可以单击 Apply 保存更改并重启打印机守护进程。如果系统上有多个打印机，可以通过选择它然后单击 Default 使其中一个成为默认。Delete 按钮将删除打印机配置。你可以使用 Test 菜单中的 PostScript、A4 或 ASCII 测试页来测试打印机。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_83_0.png)
+
+图 4-3 `redhat-config-printer`
+
+打印机，双击其条目，或选择它然后单击 Edit。做出更改后，可以单击 Apply 保存更改并重启打印机守护进程。如果系统上有多个打印机，可以通过选择它然后单击 Default 使其中一个成为默认。Delete 按钮将删除打印机配置。你可以使用 Test 菜单中的 PostScript、A4 或 ASCII 测试页来测试打印机。
+
+当你选择 New 时，会显示一系列对话框，可在其中输入打印机名称、类型和型号。在“队列名称”对话框中，为打印机提供名称以及任何特定描述。在随后的“队列类型”屏幕上，输入适当的打印机连接信息。从屏幕顶部的下拉菜单中，你可以选择连接类型，第一个选项是本地连接打印机，其他选项是不同类型的远程打印机。对于远程打印机，你需要选择其所连接的网络或系统类型，例如 Novell 用于 Novell 网络，或 Windows 用于连接到 Windows 计算机的打印机。对于本地打印机，你需要选择打印机所连接的设备。设备即打印机所连接的端口。对于前三个并行端口，它们是 `lp0`、`lp1` 和 `lp2`。对于串行端口，它们是 `ttyS0`、`ttyS1`、`ttyS2` 等。对于远程打印机，你需要输入适当的服务器和远程队列信息。
+
+在“打印机型号”屏幕上，选择打印机的制造商和型号，这将决定合适的驱动程序。制造商列在屏幕顶部的下拉菜单中。单击它并选择打印机的制造商（如果未列出，请使用 Generic 并选择打印机类型）。所选制造商的打印机型号列表将自动显示在窗口其余部分。例如，从制造商列表中选择 Canon 后，打印机型号窗口中将列出所有 Canon 打印机。单击你的打印机，然后单击 Forward 按钮。你将被通知打印机配置即将创建。单击 Finish。然后你会在 `redhat-config-printer` 窗口中看到你的打印机。此时你已准备好打印。
+
+
+
+你也可以编辑打印机以更改任何设置。编辑时，会显示五个标签页窗格，分别用于打印机名称、队列类型、队列选项、驱动程序和驱动程序选项。对于队列选择，你可以为打印机设备和`spool`目录指定条目。从下拉菜单中，你还可以指定打印机是本地还是通过连接远程访问。对于驱动程序选项选择，你可以指定打印机功能，例如纸张大小和分辨率。完成后，单击 OK 关闭窗口。从文件菜单中选择 Quit 项目以退出`redhat-config-printer`。
+
+提示 如果你使用`redhat-config-printer`配置打印机，`redhat-config-printer`将使用 CUPS 打印服务器管理所有本地打印机。
+
+你也可以使用`redhat-config-printer`在 Linux、Unix、Microsoft 或 Novell 网络上设置远程打印机。当你添加新打印机时，会显示“队列类型”窗格，其中从弹出菜单中可选择以下选项：Locally-Connected、Networked Unix (LPD)、Networked Windows (SMB)、Networked CUPS (IPP)、Networked Novell (NCP) 或 Network JetDirect。（如果你编辑现有打印机，队列面板会显示下拉菜单，可在其中选择远程条目。）对于远程 Linux 或 Unix 打印机，选择 Networked Unix (LPD)。这会显示一个用于配置远程打印机的对话框，其中包含服务器和队列的条目。对于服务器，输入控制打印机的系统的主机名。对于队列，输入该主机上打印机的设备名称。Networked Novell (NCP) 屏幕将添加用户和密码的条目。Networked Windows (SMB) 屏幕将为不同的连接打印机提供条目。要添加一个，请单击 Specify 按钮以打开一个窗口，在其中可以输入共享名称、主机 IP 地址、工作组、用户和密码。网络 CUPS（IPP）将具有 CUPS 服务器及其目录的条目。
+
+Windows（SMB 共享）打印机是位于 Windows 网络上的打印机。要访问 SMB 共享远程打印机，您需要安装 Samba 并使用`smbd`守护进程启用 Server Message Block 服务。打印机共享必须在 Windows 网络上启用。在打印机配置实用程序中，您需要输入共享的名称、其 IP 地址、打印机的工作组名称以及用户名和密码。共享是主机名和打印机名称的格式为`\\hostname\printername`。服务器是打印机所在的计算机。用户名和密码可以用于打印机资源本身，也可以用于特定用户的访问。然后您可以使用打印客户端`lpr`将文件打印到 Windows 打印机。`lpr`将调用 Samba 客户端`smbclient`将打印作业发送到 Windows 打印机。
+
+> 提示 要写入 CD-R/RW 驱动器，您可以使用`cdrecord`工具或任何几种 CD 烧录应用程序，如 K3b 或 KOnCD。要写入 DVD-R/RW 驱动器，您可以使用`dvdrecord`，这是`cdrecord`的增强版本。对于 DVD-R/+RW 驱动器，您需要使用 dvd+rw 工具，如`growisofs`和`dvd+rw-format`。有关更多详细信息，请参阅第 30 章。
+
+## X Window System 配置：`redhat-config-xfree86`
+
+如果您在 X Window System 配置方面遇到问题，可以使用`redhat-config-xfree86`重新配置它。当您更换显卡时，此工具也有助于更新您的 X Window System。只需再次运行该工具并选择适当的显卡即可。您可以通过在系统设置窗口或菜单中选择 Display 来运行`redhat-config-xfree86`。
+
+`redhat-config-xfree86`工具首先打开一个显示设置窗口（如图 4-4 所示），其中包含用于选择分辨率和颜色深度的弹出菜单。
+
+您的当前设置将已经选定，同时显示监视器和显卡信息。要更改监视器或显卡设置，请单击 Advanced。这将打开一个窗口，其中包含选项卡面板，一个用于 Monitor，另一个用于 Video Card，还有一个用于 Multi-Head（用于支持多显示器的显卡）。Video Card 面板将列出受支持的显卡，其中当前显卡被选中。在这里您也可以手动选择视频内存。Monitor 面板列出受支持的监视器，并提供手动输入水平和垂直频率的框。`redhat-config-xfree86`工具随后会生成一个名为`/etc/X11/XF86Config`的 X Window System 配置文件。这是 X Window System 启动时使用的文件。备份文件将创建在`/etc/X11/XF86Config.backup`中。
+
+## 使用 RHN、Yum 和 APT 更新 Red Hat 和 Fedora Linux
+
+Red Hat Fedora 的新版本每隔几个月发布一次，而 Red Hat Enterprise 大约每年发布一次。在此期间，针对特定软件包的新更新会不断准备。这些更新会发布在软件存储库中，您可以从中下载并安装到系统上。这些包括应用程序、服务器甚至内核的新版本。此类更新可能从单个软件包到整个组件不等——例如，当 GNOME、KDE 或 XFree86 的新版本发布时，会发布所有核心、应用程序和开发包。
+
+使用自动更新工具更新您的 Linux 系统已变得非常简单。对于 Fedora Core，您可以通过访问支持 Yum（Yellowdog Update, Modified）或`apt-rpm`（Advanced Package Tool RPM）更新方法的软件存储库来更新系统。Yum 使用 RPM 头来确定需要更新哪些软件包。您可以在`linux.duke.edu/projects/yum`了解有关 Yum 的更多信息，包括 Yum 存储库列表。APT 是一种更复杂的更新方法，最初在 Debian Linux 中实现。
+
+更新 Fedora 的最简单方法是启动 Red Hat Update Agent（`up2date`），方法是选择系统工具菜单中的 Red Hat Network（RHN）条目。虽然保留给 Red Hat Enterprise Linux 使用，但在 Fedora Core 上，您可以使用 Red Hat Update Agent 访问 Fedora Core Yum 存储库，让您快速更新到最新的软件版本。提供了两个频道，一个用于 Fedora 版本，一个用于更新。您可以添加第三个测试频道以获取最新版本（替换 Rawhide 版本）。将显示可以更新的软件包列表，您可以从中选择要更新的软件包。要访问其他 Yum 存储库，您可以配置`/etc/sysconfig/rhn/sources`文件以使用 Red Hat Update Agent 访问它们。您也可以使用`yum`命令，在`/etc/yum.conf`文件中指定 Yum 存储库。当前的 Fedora Yum 存储库在此列出，其版本号会随着每次发布而更改。
+
+- `fedora.redhat.com/releases/fedora-core-1`
+
+- `fedora.redhat.com/updates/released/fedora-core-1`
+
+- `fedora.redhat.com/updates/testing/fedora-core-1`
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_86_0.png)
+
+图 4-4 `redhat-config-xfree86`显示设置窗口
+
+要更新到新的 Fedora Core 版本，您可以从`fedora.redhat.com/releases/fedora-core`下载 Fedora Core CD-ROM ISO 镜像。ISO 镜像也可以使用 rpmfind 的 BitTorrent 服务下载（参见`rpmfind.net/BitTorrent`）。BitTorrent 提供了一种非常快速的下载 ISO 镜像的方法。
+
+对于 Red Hat Enterprise Linux，您可以通过注册 Red Hat Network 来自动更新系统。Red Hat Network 服务现在仅支持 Red Hat Enterprise Linux，而不支持 Fedora Core Linux（尽管 RHN 工具可以配置为访问 Fedora 仓库）。使用 Red Hat Network 注册客户端，通过 Red Hat Network 注册并配置访问权限是一个非常简单的过程。Red Hat Network 是随您购买企业版套件而包含的订阅服务。一旦您在 Red Hat Network 注册，您就可以使用 Red Hat Update Agent 几乎自动地下载和安装 Red Hat Enterprise 更新。
+
+> Tip 如果您安装了 Ximian Desktop（参见第 6 章），您可以使用 Ximian 的 Red Carpet 更新实用程序来更新您的系统。
+
+## Installing Software Packages
+
+
+
+现在您已经知道如何启动 Linux 并访问 root 用户账户，您可以安装任何其他您想要的软件包。安装软件是由 root 用户执行的系统管理功能。除非您在安装期间选择安装所有软件包，否则在您的系统上安装的只是 Linux 用户可用的众多应用程序和实用程序中的一部分。在 Red Hat 上，您可以使用 `redhat-config-packages` 工具或 `rpm` 命令轻松地从系统中安装或删除软件。或者，您也可以通过下载并编译其源代码来安装软件。使用源代码安装软件的程序已简化为只需几个命令，尽管您在根据特定系统定制应用程序方面具有很大的灵活性。
+
+许多发行版，包括 Red Hat、Mandrake 和 SuSE，都使用 Red Hat Package Manager（RPM）将 Linux 软件组织成可自动安装或删除的软件包。RPM 软件包就像软件应用程序自己的安装程序一样运行。Linux 软件应用程序通常由必须安装在不同目录中的多个文件组成。程序本身很可能放置在名为 `/usr/bin` 的目录中，在线手册文件放在另一个目录中，库文件放在另一个目录中。此外，安装可能需要修改系统上的某些配置文件。RPM 软件包会为您执行所有这些任务。此外，如果您以后决定不想要特定应用程序，您可以卸载软件包以从系统中删除所有文件和配置信息（有关更多详细信息，请参见第 29 章）。
+
+您 CD-ROM 上的软件包尽管很丰富，但仅代表可用于 Linux 的软件包的一小部分。您可以从 `sourceforge.net` 等在线软件站点下载额外的软件。`sourceforge.net` 站点不仅分发软件，而且还是大量开源软件项目的首要开发站点。过去几年，许多 Linux 软件项目已迁移到 `sourceforge.net`。您也可以从 `freshmeat.net` 或 `rpmfind.net` 找到许多最新的 Linux 应用程序。在这里，您可以链接到这些应用程序的原始开发站点并下载最新版本的文档。表 4-2 列出了几个 Linux 软件站点。对于支持 RPM 软件包的 SuSE、Mandrake 和 Red Hat 等发行版，您可以在在线仓库 `rpmfind.net` 上找到软件的 RPM 软件包版本。此处的软件包按发行版、组和名称编入索引。这包括每个发行版的软件包，包括这些发行版的以前版本。
+
+### TABLE 4-2
+
+Linux Software Sites
+
+| Internet Sites | Description |
+|---|---|
+| ftp.redhat.com | Red Hat distribution RPM packages |
+| rpmfind.net | RPM package repository |
+| sourceforge.net | Source Forge open source software repository and development site |
+| freshmeat.net | New Linux software |
+| apps.kde.com | KDE software applications |
+| www.gnome.org | GNOME software applications |
+
+## Installing Packages with redhat-config-packages
+
+`redhat-config-packages` 工具为管理由您的 Red Hat 发行版提供的 Red Hat RPM 软件包提供了一个有效且易于使用的界面，无论您是从 CD-ROM、DVD-ROM、硬盘还是网络安装的。它可在任何窗口管理器上运行，包括 GNOME 和 KDE。您可以使用系统设置窗口中的 Add/Remove Applications 图标访问 `redhat-config-packages`。这将打开一个 Add And Remove Software 窗口，该窗口显示左侧面板栏，其中包含 Install Software 和 Remove Software 图标，以及一个面板，根据所选图标显示要安装或要删除的软件。最初，将显示 Install Software 图标，显示可安装软件包的软件组列表。View 菜单将让您在组视图和单个软件包视图之间切换。如果您知道要安装的单个软件包的名称，可以使用软件包视图。
+
+尚未安装软件包的组在末尾会有 Install 链接（参见图 4-5）。所有软件包均已安装的组将没有 Install 链接。未安装的软件包组将组织为必需和可选软件包。您可以选择可选的软件包，而必需的软件包将始终安装。部分安装的组将组织为已安装和未安装的软件包。然后，您可以通过单击其复选框来选择要添加的未安装软件包。做出所有选择后，单击 Install Packages；`redhat-config-packages` 将准备要安装的软件包列表，并检查依赖软件包。准备好列表后，如果需要，您可以单击 Details 查看将安装哪些 RPM 软件包。单击 Continue 执行安装。系统会提示您插入适当的 CD-ROM 或 DVD-ROM。
+
+您也可以选择列出随发行版提供的未安装的单个 RPM 软件包。然后您可以选择要安装的软件包。从 View 菜单中选择 Package view 以列出当前所有未安装的 RPM 软件包，然后单击要安装的软件包的复选框。要切换回组显示，请从 View 菜单中选择 Group。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_89_0.png)
+
+### FIGURE 4-5 redhat-config-packages
+
+要卸载一个软件包，首先点击 Package 面板左侧显示的工具栏上的 Remove Software 图标。在 Group 视图中，已安装的组会在末尾显示一个 Remove 链接。要从一个组中卸载软件包，点击 Remove 链接。这会显示已安装软件包的列表，每个软件包旁边都有一个已勾选的复选框。取消选择你想要移除的那些，保留你想要保留的那些。完成选择后，点击 Remove Packages 将软件包加入移除队列。点击 Continue 执行移除操作。在 Package 视图中，所有已安装的软件包都会列出，你只需选择想要移除的那些。
+
+你也可以直接安装特定的 RPM 软件包。你可以使用此方法安装已下载的 RPM 软件包或发行版 CD-ROM 上的单个软件包。首先用文件管理器显示它，然后双击 RPM 软件包文件。你也可以右键点击它，在 GNOME 上选择 Open With 然后选择 Install Packages，或在 KDE 上选择 Install Package。这会调用 `redhat-config-packages` 工具，它将安装该软件包。它还会检查依赖软件包并安装它们。对于属于你的 Red Hat 发行版的软件包，它会根据需要提示你插入其他 CD-ROM [随书附带的 DVD-ROM 不会提示，因为它已包含所有软件包]。
+
+## Installing Packages with the rpm Command
+
+如果你无法访问桌面或更喜欢从命令行界面工作，可以使用 `rpm` 命令来管理和安装软件包。这就是执行软件包安装、移除和验证的命令。
+
+每个软件包实际上是一个 RPM 软件包，由软件文件归档和关于如何安装这些文件的相关信息组成。每个归档都作为一个以 `.rpm` 结尾的单个文件存在，表示它是一个可由 Red Hat Package Manager 安装的软件包。
+
+你可以使用 `rpm` 命令安装或卸载软件包。`rpm` 命令使用一组选项来确定要执行的操作。`-i` 选项安装指定的软件包，`-U` 选项更新软件包。使用 `-e` 选项，`rpm` 会卸载软件包。`q` 置于 `i` 之前 (`-qi`) 会查询系统以查看软件包是否已安装并显示有关软件的信息 (`-qpi` 查询未安装的软件包文件)。不带选项的 `rpm` 命令会提供完整的 `rpm` 选项列表。
+
+一组常用的选项如下所示：
+
+| Option | Action |
+| --- | --- |
+| `-U` | Updates package |
+| `-i` | Installs package |
+| `-e` | Removes package |
+| `-qi` | Displays information for an installed package |
+| `-ql` | Displays file list for installed package |
+| `-qpi` | Displays information from an RPM package file (used for uninstalled packages) |
+| `-qpl` | Displays file list from an RPM package file (used for uninstalled packages) |
+| `-K` | Authenticates and performs integrity check on a package |
+
+软件包名称通常相当长，其名称中包含有关版本和发布日期的信息。全部以 `.rpm` 结尾。在下一个示例中，用户使用 `rpm` 命令安装 `freeciv` 软件包。请注意输入了完整的文件名。要列出完整名称，可以使用 `ls` 命令加上前几个字符和一个星号：
+
+
+
+```
+ls freeciv*
+```
+
+你也可以使用 `*` 来匹配名称的剩余部分，如下所示：
+
+```
+ls freeciv-1*.rpm
+```
+
+在大多数情况下，你使用 `-U` 选项安装软件包，即更新。即使软件包尚未安装，`-U` 仍然会安装它。
+
+```
+$ rpm -Uvh freeciv-1.14.0-2.i386.rpm
+```
+
+当 RPM 执行安装时，它首先会检查任何依赖软件包。这些是其他包含应用程序安装时需要使用的程序的软件包。
+
+如果其他依赖包必须先安装，RPM 会取消安装并列出这些包。你可以先安装这些包，然后再重复安装该应用程序。要确定某个包是否已安装，请使用 `rpm` 的 `-qi` 选项。`-q` 代表查询。要获取包已安装的所有文件以及安装到的目录列表，请使用 `-ql` 选项。要查询包文件，请添加 `p` 选项。`-qpi` 选项会显示有关包的信息，而 `-qpl` 则列出其中的文件。以下示例列出了 `freeciv` 包中的所有文件：
+
+```
+$ rpm -qpl freeciv-1.14.0-2.i386.rpm
+```
+
+要从系统中移除软件包，请先使用 `rpm -qi` 确保它确实已安装，然后使用 `-e` 选项将其卸载。与 `-qi` 选项一样，你不必使用已安装文件的全名。你只需要应用程序的名称即可。在下一个示例中，用户从系统中移除了 `freeciv` 游戏：
+
+```
+$ rpm -e freeciv
+```
+
+## 包安全性检查
+
+如果你下载了 RPM 包，你可能想要检查其完整性和认证，确保包未被篡改并且来自有效来源。仅检查包的完整性时，可以使用 `rpm` 命令配合 `-K` 和 `--nogpg` 选项。MD5 摘要值用于衡量包的内容。如果该值不正确，则说明包已被篡改。有关完整性检查和 MD5 摘要的更多细节，请参阅第 16 章。某些包，如 Webmin，仅提供摘要值，只允许进行完整性检查。在下一个示例中，用户检查 `freeciv` 包是否已被篡改。`--nogpg` 选项表示不执行认证，仅进行完整性检查。
+
+```
+$ rpm -K --nogpg freeciv-1.14.0-2.i386.rpm
+```
+
+要对包进行认证，你需要检查其数字签名。包是用加密的数字密钥签名的，这些密钥可以使用包作者提供的公钥解密。该公钥必须先下载并安装到系统上使用的加密工具中。Red Hat 以及大多数 Linux 系统都使用 GNU Privacy Guard（GPG）加密工具。GPG 和认证方法以及公钥在第 16 章中有详细讨论。要使用公钥认证 RPM 包，你首先需要下载公钥并将其安装到 RPM 密钥数据库中。对于所有属于 Red Hat 发行版的 Red Hat RPM 包，你可以使用在安装期间放置在 `/usr/share/rhn/RPM-GPG-KEY` 文件中的 Red Hat 公钥。在你能够检查 Red Hat RPM 包之前，需要手动将密钥导入 RPM 数据库，如下所示。
+
+```
+rpm --import /usr/share/rhn/RPM-GPG-KEY
+```
+
+```
+$ rpm -K freeciv-1.14.0-2.i386.rpm
+```
+
+要查看已导入的所有密钥列表，可以使用 `-qa` 选项并匹配 `gpg-pubkey*` 模式。使用 `rpm` 配合 `-qi` 选项和公钥，你可以显示有关该密钥的详细信息。以下示例显示了 Red Hat 公钥：
+
+```
+$ rpm -qa gpg-pubkey*
+gpg-pubkey-db42a60e-37ea5348
+```
+
+## 安装源码应用程序
+
+许多程序以源码格式提供给 Linux。这些程序存储在压缩归档文件中，你需要先解压缩然后提取。由此得到的源代码随后可以配置、编译并安装到你的系统上。该过程已简化到几乎与安装 RPM 包差不多。以下示例展示了提取、编译和安装软件的通用方法，此处以 KonCD 程序为例，它是一个 CD 刻录和抓轨工具。务必检查随源代码提供的 README 和 INSTALL 文件，以确认创建和安装该软件的适当方法。
+
+> Tip 确保你已将所有开发包安装到系统上。开发包包含关键组件，如编译器、GNOME 和 KDE 头文件和库以及预处理器。没有它们就无法编译源码软件。
+
+首先你需要找到软件——在此例中来自 apps.kde.com——然后将其下载到你的系统。KonCD 下载的文件名为 `koncd-1.0rc2.tar.gz`。然后使用 `tar` 命令配合 `xvzf` 选项解压缩并提取文件，如下所示：
+
+```
+tar xvfz koncd-1.0rc2.tar.gz
+```
+
+这将创建一个以软件名称命名的目录，在此例中为 `koncd-1.0rc2`。使用 `cd` 命令切换到该目录：
+
+```
+cd koncd-1.0rc2
+```
+
+执行 `./configure` 命令。这会为你的特定系统生成编译器配置。
+
+```
+./configure
+```
+
+使用 `make` 命令编译软件：
+
+```
+make
+```
+
+然后使用 `make install` 命令安装程序：
+
+```
+make install
+```
+
+大多数 KDE 和 GNOME 软件也会在适当的菜单中放置程序的条目——例如，KonCD 条目将被放置在 KDE 应用程序菜单中。你可以
+
+然后从菜单项运行 KonCD。你也可以打开一个终端窗口并输入程序的名称。
+
+## 安全配置
+
+安装完 Linux 系统后，你应该采取一些基本的安全措施来保护系统免受外部攻击。与 Internet 相连的系统会面临外部用户试图获得未经授权访问的企图。这通常表现为以下几种形式：
+
+- 试图入侵系统
+
+- 入侵后，更改或替换系统文件为被篡改或损坏的版本
+
+- 试图拦截来自远程用户的通信
+
+- 更改或替换发送给用户或来自用户的消息
+
+- 冒充合法用户
+
+防火墙、入侵防护、加密、数据完整性和身份验证是抵御此类攻击的方式。
+
+- 防火墙可防止任何直接的未经授权的访问尝试。
+
+- 入侵检测会检查系统文件的状态，以查看是否已被入侵者篡改。
+
+- 加密可保护授权远程用户的传输，提供隐私。
+
+- 完整性检查例如修改摘要可保证消息和数据在传输途中未被拦截、更改或替换。
+
+- 身份验证方法例如数字签名可以验证声称发送消息或访问系统的用户是否确实是该人。
+
+## 安全服务
+
+Red Hat 包含多个用于保护系统和网络传输的安全服务（见表 4-3）。使用 GNU Privacy Guard（GPG）你可以加密要发送的电子邮件消息或文件，同时还能用加密的数字签名对其进行签名，以证明消息确实由你发送（见第 16 章）。数字签名还包含加密的修改摘要信息，提供完整性检查，使收件人能够验证收到的消息是否为原始消息，而非被更改或替换过的消息。
+
+网络安全的一个良好基础是设置 Linux 系统作为网络的防火墙，以保护其免受未经授权的访问（见第 19 章）。你可以使用防火墙实现数据包过滤或代理。数据包过滤只是决定防火墙主机接收到的包是否应转发到本地系统或网络的过程。目前使用的防火墙软件包是 Netfilter（`iptables`）。旧版发行版使用名为 `ipchains` 的早期版本。要实现防火墙，你只需提供一系列规则来管理系统上允许何种访问。如果该系统也是私有网络的网关，系统的防火墙功能可以有效地保护网络免受外部攻击。你可以使用 `redhat-config-securitylevel` 为自己的系统提供简单配置，如第 4 章所述。
+
+| Applications | Description |
+
+|---|---|
+
+| GNU Privacy Guard (GPG) | Encryption and digital signatures (Chapter 16) www.gnupg.org |
+
+| Netfilter (iptables) | Firewall packet filtering (Chapter 19) www.netfilter.org |
+
+| Squid | Web proxy server (Chapter 23) www.squid-cache.org |
+
+| Open-SSH | Secure Shell encryption and authentication for remote access (Chapter 18) www.openssh.org |
+
+| Kerberos | User authentication for access to services (Chapter 18) web.mit.edu/kerberos/www/ |
+
+| Pluggable Authorization Modules (PAM) | Authentication management and configuration (Chapter 28) |
+
+| Shadow passwords | Password encryption (Chapter 28) |
+
+| Lightweight Directory Access Protocol (LDAP) | User management and authorization (Chapter 28) www.openldap.org |
+
+
+
+| `authconfig-gtk` | Red Hat tool to enable and configure authentication tools: Kerberos, LDAP, and shadow passwords |
+
+### TABLE 4-3 Security Applications
+
+外部用户也可能通过你可能托管的任何 Internet 服务，例如网站，来尝试获得未经授权的访问。在这种情况下，你可以设置代理来保护你的站点免受攻击。对于 Linux 系统，使用 `Squid` 代理软件设置代理来保护你的 Web 服务器（见第 20 章）。
+
+进一步控制对系统的访问方法是提供使用加密密码的安全用户身份验证、`Lightweight Directory Access Protocol`（`LDAP`）服务以及 `Pluggable Authentication Modules`（`PAM`）（见第 28 章）。`Kerberos` 服务器可以进一步控制某些服务的用户身份验证（见第 18 章）。`Kerberos` 身份验证提供另一层安全保护，其中单个服务可以得到保护，仅允许已获授权访问的用户使用。`LDAP` 和 `Kerberos` 都可通过 `authconfig-gtk` 启用和配置（系统设置菜单或窗口中的身份验证）。
+
+为了保护来自网络外部主机的远程连接，传输可以被加密。对于 Linux 系统，你可以使用 `Secure Shell`（`SSH`）套件程序加密任何传输，防止他人读取（见第 18 章）。`SSH` 程序旨在取代远程工具如 `rsh` 和 `rcp`（见第 15 章），这些工具不执行任何加密。
+
+`IPsec` 协议也提供了网络传输的加密功能，但集成在 IP 数据包结构中（见第 17 章）。使用 `IPsec` 你可以同时加密和验证传输，确保它们未被截获和篡改。使用 `IPsec` 你可以实现虚拟专用网络（VPN），利用加密传输通过像互联网这样的大型网络将一个本地网络连接到另一个本地网络。Red Hat 还提供了一个名为 `CPIE` 的第三方 VPN 解决方案（见第 5 章）。
+
+你可以在 Red Hat 网站（www.redhat.com）以及其他 Linux 网站如 Linux Security（www.linuxsecurity.com）、Linux Weekly News（lwn.net）和 Linux Today（linuxtoday.com）上找到有关安全问题的最新新闻。
+
+> NOTE 许多较旧的安全应用程序也适用于 Linux，例如 `COPS`（Computer Oracle and Password System）用于检查密码安全性，`Tiger` 用于扫描系统中的异常或未受保护的文件；以及 `SATAN`（Security Administration Tool for Analyzing Networks），用于检查系统中的安全漏洞。`Crack` 是一个较新的密码审计工具，可用于检查你的密码安全性在字典攻击下的表现。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_95_0.png)
+
+## Authentication Configuration
+
+为了确认用户身份，你的网络可能提供多种身份验证服务（见第 28 章）。这些服务可以使用 `authconfig-gtk` 在你的系统上启用（见图 4-6）。你可以通过在系统设置菜单中选择 Authentication 来调用 `authconfig-gtk`。`authconfig-gtk` 由两个面板组成，用户信息和身份验证。配置主要包括指定网络上服务的服务器地址。用户信息面板用于像 `NIS`（见第 36 章）和 `LDAP`（见第 28 章）这样的服务，它们维护有关网络上系统和用户的配置信息。身份验证面板列出了用于验证用户的服务。`Shadow` 和 `MD5 Password` 选项通常已选中，并提供密码保护（见第 28 章）。如果你的网络还维护 `LDAP`、`Kerberos`（见第 18 章）和 `SMB` 身份验证服务器（见第 37 章），你可以在此处启用对它们的支持，并指定其服务器和域。
+
+## Unsupported Drivers
+
+大多数网络设备的驱动程序已包含在你的 Red Hat 发行版中。然而，如果你有一个目前不受支持的新设备，你应该检查提供商的网站以获取适当的 Linux 驱动程序。驱动程序采用模块的形式，由 Linux 内核在系统启动时动态加载（见第 32 章和第 38 章）。通常，提供已编译的模块版本供你下载然后安装到系统上。要安装模块，你使用 `modprobe` 命令。安装后，模块将在每次启动系统时由内核自动加载。如果安装出现问题，你始终可以使用带 `-r` 选项的 `modprobe` 命令卸载模块。
+
+许多模块仅以源代码形式提供。在这种情况下，你必须先使用 `tar` 命令解包并编译模块，如前一节所述。检查通常随源代码提供的 `README` 或 `INSTALL` 文件以获取详细说明。如果没有包含，尝试 `./configure` 和 `make` 命令。通常带有 `install` 选项的 `make` 命令会将模块安装到你系统的模块库目录中。`install` 选项也可能运行 `depmod` 命令以更新模块依赖关系，使 `modprobe` 能够加载它。
+
+```
+./configure
+make
+make install
+```
+
+如果使用的是预编译版本，你需要遵循安装模块到模块库中的任何说明。它位于 `/lib/modules/version` 目录中，其中包含多个用于不同类型模块的子目录。这里 `version` 是内核版本号，例如 Red Hat 10 上的 `2.4.20-8`。网络卡的模块保存在 `kernel/drivers/net` 目录中，如 `/lib/modules/2.4.20-8/kernel/drivers/net`。你可以将网络卡的预编译模块复制到该目录。
+
+使用 `modprobe`。如果您直接将预编译的版本复制到模块库中，或者您的源代码版本未运行 `depmod`，则应重新启动系统。重新启动后，`depmod` 工具将自动运行并检查任何模块依赖项。然后您可以使用 `modprobe` 命令和模块名称手动加载模块。您可以添加模块可能需要的任何参数。要了解模块接受哪些参数，可以使用带有 `-p` 选项的 `modinfo` 命令。`-v` 选项（详细）会列出发生时的所有操作。在下一个示例中，`modprobe` 加载 Broadcom 网络设备的 `bcm4400.o` 模块（在名称中不要使用 `.o` 后缀）。
+
+```
+# modprobe -v bcm4400
+```
+
+`modprobe` 命令的选项放在 `/etc/modules.conf` 文件中。在这里，您可以输入配置选项，例如默认目录和别名。别名为模块提供一个简单名称。例如，以下条目使您能够将 `bcm4400.o` 以太网卡模块引用为 `eth0`（`kmod`，即内核模块加载器（参见第 32 章），会自动检测 Broadcom 卡并加载 `bcm4400` 模块）：
+
+```
+alias eth0 bcm4400
+```
+
+加载后，您需要重新启动系统。重新启动后，将检测到新硬件，并会提示您对其进行配置。您可以在此时进行配置，指定任何网络信息，或等待系统启动后再使用 `redhat-config-network`。使用 `redhat-config-network`，您可以为硬件连接创建新设备并提供配置信息，例如是否使用 DHCP 进行自动配置或手动提供网络 IP 和 DNS 地址。
+
+## Bluetooth
+
+Red Hat Linux 现在为串行连接和 `BlueZ` 协议支持的设备提供 Bluetooth 支持。Bluetooth 是一种用于本地连接设备（如键盘、鼠标、打印机，甚至 PDA 和支持 Bluetooth 的手机）的无线连接方法。您可以将其视为专用于外围设备的专用小型局域网，消除了对电线的需求。Bluetooth 设备可以通过串行端口直接连接，也可以通过连接到 USB 端口或插入 PCI 插槽的专用 Bluetooth 卡连接。`BlueZ` 是官方的 Linux Bluetooth 协议，自 Linux 内核 `2.4.6` 版本以来已集成到 Linux 内核中。`BlueZ` 协议最初由 Qualcomm 开发，现在是一个开源项目，位于 bluez.sourceforge.net。它随 Red Hat 一起包含在 `bluez-utils` 和 `bluez-libs` 等软件包中。请查看 BlueZ 网站以获取完整支持的硬件列表，包括适配器、PCMCIA 卡和串行连接器。
+
+`GNOME` 和 `KDE` 都提供 Bluetooth 配置和管理工具。`GNOME` 提供 `GNOME Bluetooth` 子系统，其中包含设备管理器、`Nautilus` 的插件以让 GNOME 文件浏览器访问 Bluetooth 设备，以及文件服务器。对于 `KDE`，`KDE Bluetooth Utilities` 目前正在开发中，为访问 Bluetooth 设备提供类似的工具。要使用 Bluetooth 将手机连接到系统，您可以使用 `GNOME Phone` 管理器或 `KDE` 的 `K6` 工具。Red Hat 还包含 Bluetooth 文件共享小程序用于接收 Bluetooth 文件。
+
+> NOTE `Affix` 前端环境（`AFE`），`BlueZ` 的替代方案，提供了一种易于使用的方法来访问 Bluetooth 设备（affix.sourceforge.net）。
+
+
+
+## Bluetooth 配置
+
+配置信息位于`/etc/bluetooth`目录中，对于笔记本电脑，还有`/etc/pcmcia`目录。使用`hciconfig`命令配置 Bluetooth 设备，使用`hci`工具配置 Bluetooth 连接。使用`hciattach`将串行设备附加到串行端口，例如`/dev/ttyS1`，并使用`rfcomm`配置和附加 RFCOMM 设备。HCI 信息保存在`/etc/bluetooth/hcid.conf`中，RFCOMM 配置信息在`/etc/bluetooth/rfcomm.conf`中。使用`l2ping`，您可以检测 Bluetooth 设备。您可以使用`service`命令和 Bluetooth 服务脚本`/etc/rc.d/init.d/bluetooth`启动和停止 Bluetooth 服务。
+
+```
+service bluetooth start
+```
+
+此脚本将启动 HCI 设备的 Bluetooth 守护进程`hcid`，并运行任何检测和配置工具，包括用于服务发现协议的`sdpd`和`rfcomm`。它还将激活任何串行 Bluetooth 设备，使用`hciattach`检测它们。
+
+BlueZ 包含多个模块和驱动程序，包括用于 HCI（主机控制器接口）设备的核心 Bluetooth 协议、HCI USB、UART、PCMCIA 和虚拟 HCI 驱动程序，以及支持 L2CAP（逻辑链路控制和适配协议）、串行端口仿真（RFCOMM）、以太网仿真（BNEP）、SCO（用于实时语音的同步连接定向链路）和服务发现协议（SDP）的模块，SDP 可自动检测应用程序可用的服务。此外，还支持扩展服务，例如 PAN（个人区域网络）和 LAN（通过 PPP 的 LAN 访问）。
+
+## 个人区域网络：PAN
+
+PAN 允许您使用 Bluetooth 实现支持 IP 协议的个人区域网络，类似于为少量计算机和设备提供的无线局域网。Bluetooth 支持的带宽（1 到 2 兆比特）远小于标准局域网所使用的带宽，但足以从手持设备（如 Palm Pilot）连接和传输数据。多个设备和计算机可以配置为 PAN 用户，通过中央组网络（GN）计算机连接。或者，PAN 用户也可以连接到作为网络接入点运行的网关系统，将 Bluetooth 个人网络连接到大型局域网。PAN 节点运行自己的服务守护进程`pand`。PAN 用户客户端还将加载实现 Bluetooth 网络设备的`bnep.o`模块。然后 PAN 服务器需要指示其`pand`守护进程侦听该设备的地址（或者，您也可以使用 SDP）。在服务器和用户系统上，都将创建一个名为`bnep0`的虚拟网络设备，可以使用本地 IP 协议地址进行配置。在 Red Hat 上，您可以创建`ifcfg-bnep0`文件并使其配置为使用静态或动态（DHCP）寻址（`/etc/sysconfig/network-scripts/`）。请查看 BlueZ 网站上的 HOWTO-PAN 文件以获取更多详细信息（目前，没有 Red Hat Bluetooth 网络工具）。
+
+> 注意 在 Linux 内核中必须先启用蓝牙支持，然后才能使用它。您可以以内核模块的形式添加支持，如第 32 章和第 33 章所述。务必配置内核以包含蓝牙支持以及您可能需要的任何蓝牙协议，如 RFCOMM 和 SCO。通过将支持作为模块启用，您无需重新编译整个内核。
+
+> 注意 目前正在开发中，Gnome 蓝牙子系统为管理和访问您的蓝牙设备提供了一个 gnome 界面（`gnome-bluetooth-admin`）。请检查 `gnome-bluetooth` RPM 软件包。
+
+## Red Hat 网络配置
+
+本章讨论了用于轻松配置 Linux 网络连接的网络配置工具。网络配置取决于您是使用以太网卡连接到局域网（LAN），还是使用 DSL 或 ISDN 调制解调器、无线连接或拨号调制解调器连接。您在安装过程中有机会输入您的 LAN 网络设置。对于修改您的 LAN 设置以及配置其他类型的接口（如 sDSL、无线或 ISDN 连接），您可以使用`redhat-config-network`配置网络连接。要添加新的连接，您可以直接启动 Internet 连接向导。表 5-1 列出了几种不同的网络配置工具。
+
+| 网络配置工具 | 描述 |
+
+|---|---|
+
+| Internet Connection Wizard | Red Hat 向导，用于配置新的网络连接，如以太网、调制解调器、DSL、无线、VPN、令牌环或 ISDN。调用 `redhat-config-network`。 |
+
+| redhat-config-network | Red Hat 用于所有类型连接的网络配置工具。使用 Internet 连接向导添加新连接。 |
+
+| Network Device Control | 激活和停用网络接口。 |
+
+| redhat-config-services | 启动和停止服务器，包括网络服务器。 |
+
+| redhat-config-securitylevel | 设置网络防火墙。 |
+
+| redhat-config-bind | 配置域名服务器。 |
+
+| wvdial | PPP 调制解调器连接，在命令行中输入。 |
+
+| pand | Bluetooth 个人网络。 |
+
+表 5-1 Red Hat 网络配置工具
+
+## 网络信息：动态和静态
+
+如果您在网络上，您可能需要获取某些信息来配置您的接口。现在大多数网络都支持使用动态主机配置协议（DHCP）进行动态配置。在这种情况下，您只需在大多数网络配置工具中检查 DHCP 条目即可。但是，如果您的网络不支持 DHCP，您将不得不提供有关连接的详细信息。此类连接称为静态连接，而 DHCP 连接是动态的。在静态连接中，您需要手动输入连接信息，例如您的 IP 地址和 DNS 服务器，而在动态连接中，此信息会在您连接到网络时由 DHCP 服务器自动提供给您的系统。每个主机上的 DHCP 客户端将从为该网络服务的 DHCP 服务器获取信息。
+
+此外，如果您使用的是 DSL、ISDN 或调制解调器连接，您还必须提供提供商、登录名和密码信息，无论您的系统是动态还是静态。您可能还需要提供专用信息，例如 DSL 或调制解调器压缩方法、拨号号码或要选择的无线频道。
+
+您可以从网络管理员或您的 ISP（互联网服务提供商）获取大部分静态网络信息。您需要以下信息：
+
+- **网络接口的设备名称** 对于 LAN 和无线连接，这通常是以太网卡，名称为 `eth0` 或 `eth1`。对于调制解调器、DSL 或 ISDN 连接，这是一个名为 `ppp0` 的 PPP 设备（ISDN 为 `ppp0`）。虚拟专用网络（VPN）连接也支持名为 `cipcb` 的 Crypto IP Encapsulation 设备。
+
+- **主机名** 您的计算机将通过此名称在 Internet 上被识别。请勿使用 `localhost`；该名称由系统保留用于特殊用途。主机名应为简单的单词，可以包含数字，但不能包含标点符号，如句点和反斜杠。主机名包括主机名及其域。例如，一台机器的主机名可以是 `turtle`，其域为 `mytrek.com`，使其主机名为 `turtle.mytrek.com`。
+
+- **域名** 这是您网络的名称。
+
+- **分配给您的机器的 Internet 协议（IP）地址** 这仅适用于静态 Internet 连接。动态连接使用 DHCP 协议自动为您分配 IP 地址。Internet 上的每个主机都被分配一个 IP 地址。传统上，该地址使用 IPv4 格式，由一组四个用句点分隔的数字组成，唯一标识 Internet 上的单个位置，使来自其他位置的信息能够到达该计算机。网络现在正在转换为新的 IP 协议版本 6，IPv6，它使用具有更复杂编号序列的新格式（请参阅第 38 章）。
+
+- **您的网络 IP 地址** 仅限静态连接。此地址通常与 IP 地址相似，但在末尾有一个或多个零。
+
+- **网络掩码** 仅限静态连接。这通常是大多数网络的 `255.255.255.0`。如果您是大型网络的一部分，请咨询您的网络管理员或 ISP。
+
+- **网络的广播地址（如果可用，可选）** 仅静态连接。通常，您的广播地址与您的IP地址相同，只是在末尾加上数字255。
+
+- **您网络网关计算机的IP地址** 仅静态连接。这是将您的本地网络连接到像互联网这样更大网络的计算机。
+
+- **名称服务器** 仅静态连接。您网络使用的名称服务器的IP地址。这些使使用URL成为可能。
+
+- **NIS域和NIS服务器的IP地址** 如果您的网络使用NIS服务器则需要（可选）。
+
+- **登录和密码信息** DSL、ISDN和调制解调器连接所需。
+
+## 使用 Red Hat 网络工具进行网络配置
+
+
+
+Red Hat 提供了一个易于使用的网络配置和激活工具，您可以使用它来配置和控制任何类型的网络连接，包括以太网卡、调制解调器、DSL和ISDN调制解调器以及无线连接（目前，蓝牙个人网络未配置）。所有连接均通过标准配置面板（如IP地址设置）以及仅用于特定类型连接的专用面板（如调制解调器连接的压缩或无线网卡的无线设置）来支持。新的连接最初使用 Internet 配置向导进行配置，该向导将检测并提示基本配置信息，然后将您置于 `redhat-config-network` 工具中，以便您可以完善配置，根据需要进行添加或更改条目。要控制网络连接的激活，您可以使用网络设备控制工具。有关如何使用 Red Hat 网络工具配置网络连接的更多说明，请查阅 Red Hat Linux 的《官方 Red Hat Linux 自定义指南》。
+
+# redhat-config-network
+
+您可以直接从系统设置菜单或窗口（网络条目）访问 `redhat-config-network` 工具。`redhat-config-network` 工具打开一个网络配置窗口，其中包含四个标签页面板：Devices、Hardware、IPsec、Hosts 和 DNS（参见图 5-1）。这些面板用于配置整个系统的网络设置。Devices 面板列出您所有的网络连接，Hardware 列出系统上的所有网络组件，例如以太网卡和调制解调器。DNS 面板是您输入自己系统的主机名和网络的名称服务器地址的地方。Hosts 面板列出静态主机IP地址及其域名，包括您自己的系统。IPsec 面板用于使用互联网协议创建安全加密和经过身份验证的网络连接。它通常用于创建虚拟专用网络（VPN），在像互联网这样的大型网络上创建主机和本地网络之间的安全连接。
+
+DNS 面板顶部有一个框，标签为 Hostname（参见图 5-2）。在此处输入系统的完全限定域名。还有用于输入系统主、次、三级 DNS 服务器的 IP 地址的框，并且在静态配置中需要。您还可以列出搜索域。搜索域和名称服务器地址都保存在 `/etc/resolv.conf` 文件中。
+
+## FIGURE 5-1 The redhat-config-network Network Configuration window
+
+您使用 Hosts 面板将静态IP地址与特定主机关联。面板有一个单一窗格，带有 New、Edit、Copy 和 Delete 按钮。此面板列出将条目关联
+
+## FIGURE 5-2 The redhat-config-network DNS panel
+
+主机名与静态IP地址。您还可以添加别名（昵称）。Hosts 面板实际上显示 `/etc/hosts` 文件的内容，并将您所做的任何条目保存到该文件中。要添加条目，请单击 New。会打开一个窗口，其中包含主机名、IP地址和昵称的框。完成后，条目将添加到 Hosts 列表中。要编辑条目，请单击 Edit，并打开一个类似的窗口，使您能够更改任何字段。要删除条目，请选择它并单击 Delete。
+
+> Note 如果您在使用静态网络连接的以太网设备时遇到连接问题，请确保 Hosts 面板列出了您主机名和IP地址，而不仅仅是 localhost。如果主机名不在其中，请添加它。
+
+要配置特定连接，请在 Devices 面板中双击其条目，这将打开一个新窗口，您可以在其中修改或添加该连接的设置。在这里，您将输入特定于特定连接的信息，例如以太网连接的网关和子网掩码，或 DSL 连接的用户名和密码。在此处进行条目与使用 `ifconfig` 执行的功能相同。Devices 面板将列出系统上配置的网络设备（参见图 5-2）。条目显示设备名称及其类型。使用 New、Edit、Copy 和 Delete 按钮管理设备条目。例如，当您编辑以太网设备时，您会打开一个标签页面板来配置它，使您能够指定其IP地址、主机名、网关以及它使用的硬件设备（参见图 5-3）。配置面板将根据您编辑的设备而有所不同。例如，调制解调器设备将添加提供商、压缩和调制解调器选项的面板，
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_104_0.png)
+
+whereas a DSL connection will have panels for provider, route (gateway), and hardware device. An Ethernet connection will have only general, route, and hardware device panels.
+
+When you finish and are ready to save your configuration, select the Save entry from the File menu. If you want to abandon the changes you made, you can close without saving. You can run `redhat-config-network` at any time to make changes in your network configuration.
+
+# Profiles
+
+The `redhat-config-network` tool also supports profiles. Profiles are commonly used for portable computers that may be moved from one environment to another. For example, at your office you could have an Office profile that uses an Ethernet card to connect to the office LAN. At home, you could use a Home profile that uses a modem to connect to the Internet. Profiles are integrated into the Configuration process, with a Common profile functioning as the default configuration. The Common profile will be inherited by all other profiles, so make your basic configuration with that profile.
+
+Profiles are accessed from the Profile menu. Select the profile you want, or select New to create a new profile. The name of the currently selected profile will be displayed at the bottom of the Network Configuration screen. The Delete entry in the Profile menu will delete the current profile. By default, the Common profile will be selected. To create a profile, click the New entry and enter the name of the profile. It will be added to the Profile menu. You can also remove or rename a profile. The new profile will inherit the setting of the common profile. Once you have selected a profile, you can then select devices or change DNS or host information. On the Devices panel of `redhat-config-network`, each device entry will have a check box. Selecting this check box selects the device for the current profiles. To select a device for a given profile, first be sure to select the profile you are configuring, and then click the device's check box. For other profiles, the device will be unchecked. Select the Save entry from the File menu when you are finished. The changes you make will be part of that profile, and not of any other.
+
+
+
+## Configuring Replaced or Unsupported Ethernet Cards
+
+If you change your Ethernet card or if your card is not supported and you need to manually load a driver for it, you will have to manually configure the card. For supported cards, `Kudzu` will automatically detect the card when your system starts up and prompt you to configure it. For dynamic connections, simply select `DHCP` to automatically determine your network configuration. For static connections, enter the required network information, such as your IP address and DNS servers.
+
+If the device is not supported or if you elected not to configure it with `Kudzu`, you can use `redhat-network-config` to manually create a new device for the card. For unsupported devices, make sure you have first obtained the required Linux kernel module for it and have installed that module using `modprobe` as described in the preceding chapter. Then, start up `redhat-network-config` and click the `New` button in the Device panel. Select `Ethernet` as the type of device and then select the Ethernet card from the list provided. On the Configure Network Setting panel, click `Automatically Obtain IP Address`, and select the method from the drop-down menu, usually `DHCP`. Also click `Automatically Obtain DNS Information`. For static connections, enter the required information, such as your IP and DNS server addresses. Your new device will now appear in the Devices panel. To activate it, select it and then click `Activate`.
+
+## Network Device Control
+
+With the Network Device Control tool, you can activate or deactivate configured network connections. A pop-up menu will let you select available profiles, automatically activating network connections associated with each profile, and deactivating those that are not. The Network Device Control tool is accessible in the `System Tools` menu. Selecting a device and clicking the `Configure` button will open the `redhat-config-network` tool. You can then select and configure any network device, as well as add new ones.
+
+## The Internet Configuration Wizard
+
+To configure a new network connection, you use the Internet Connection Wizard, accessible from the `System Tools` menu. If you already have `redhat-config-network` open and want to add a new network connection, clicking `New` will also start the Internet Connection Wizard. The wizard initially displays a list of all possible network connections (see Figure 5-4). When you select an entry, panels will prompt you to enter basic information about a connection; this will include phone number, username, and password for modem, DSL, and ISDN connections, whereas Ethernet connections will prompt only for IP addresses. The types of connections and devices currently supported are `Ethernet` (`eth`), `ISDN` (`isdn`), `Modem` (`ppp`), `xDSL` (`ppp`), `Token Ring` (`tr`), `Crypto IP Encapsulation for Virtual Private Networks` (`cipcb`), and wireless connections (`eth`). After completing your entries, the wizard will configure your connection setting and the new connection will be ready for use.
+
+## Modem Configuration
+
+You can also use a modem with telephone lines to connect to a network. For a modem connection, the Internet Configuration Wizard will probe and detect your modem. A window will then display entries for the serial device, baud rate, hardware control, and modem volume, which you can modify. You are then prompted to enter the phone number, provider, username, and password for your ISP account. The `redhat-config-network` tool is then started up, listing your modem device as a `ppp` connection (`ppp` stands for the
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_106_0.png)
+
+*点对点协议 [PPP] 协议，可通过电话线传输 IP 通信)。然后你可以编辑 `ppp` 设备以修改你的设置并输入其他任何设置；例如，你可以输入静态连接的 IP 地址，指定压缩方法，或列出你的 DNS 服务器。*
+
+## DSL 和 ISDN 配置
+
+要配置 DSL，你需要提供 DSL（数字用户线路）和 ISDN 的登录名和密码信息。在其他方面，DSL 和 ISDN 连接的操作方式与局域网（LAN）非常相似，将主机视为网络的集成部分。在 Red Hat 上，你可以使用 Internet 配置向导设置 DSL 或 ISDN 连接。对于 DSL，Internet 配置向导将显示一个对话框，其中包含用于输入你的登录名、你的密码以及 DSL 调制解调器所连接的以太网接口的条目。你还需要输入 ISP 提供的 DNS 服务器的 IP 地址。你可以选择在系统启动时自动建立连接（取决于你选择的网络配置文件）。
+
+
+
+## 无线配置
+
+无线连接的操作方式与标准以太网连接非常相似，只需 IP 地址和 DNS 服务器信息即可连接到 Internet。此外，你还必须指定无线连接信息，例如网络名称和所使用的信道。要添加新的无线连接，你启动 Internet 配置向导（从系统工具菜单）并选择无线连接。如果`redhat-config-network`已打开，你可以单击设备面板上的添加按钮来启动 Internet 配置向导。系统会提示你选择你的无线网卡。
+
+在配置无线连接面板上，你然后配置你的无线连接，选择模式、网络名称、信道、传输和密钥信息。
+
+- **模式** 通常，你可以将其保留为自动。对于简单的网络，不需要漫游的网络，模式通常为 Ad Hoc。托管网络允许在不同的接入点之间漫游。
+- **网络名称 (SSID)** 对于简单网络可以保留为自动。网络名称用于将小区标识为虚拟网络的一部分。
+- **信道** 从 1 开始，选择干扰最少的信道。
+- **传输速率** 通常设置为自动，以自动调整到降级的传输。但你也可以从弹出菜单中设置特定速率，例如 11M 或 1M。
+- **密钥** 这是你的无线网络的加密密钥。它必须在你的网络上的每个小区中相同。
+
+在配置网络设置面板上，你指定你的 IP 地址，无论是使用 DHCP 自动获取还是你自己输入。对于大多数公司无线网络，IP 地址将自动获取。通常，DNS 服务器也是提供的。如果你愿意，你也可以指定主机名。
+
+如果你正在设置本地或家庭网络，你很可能使用你自己从私有 IP 池中选择的静态 IP 地址，从 192.168 开始，例如 192.168.0.1。
+
+小型本地网络的静态子网掩码通常为 255.255.255.0。网关是你在网络上连接到 Internet 或更大网络的计算机的 IP 地址。
+
+你以后可以编辑无线连接，进行更改。无线配置具有与以太网或 DSL 连接相同的常规和硬件设备面板，但它没有路由面板，而是具有无线设置面板，在那里你可以设置你的模式和网络名称以及信道、传输和密钥信息。
+
+你的配置设置将保存在`/etc/sysconfig/network-scripts`目录中的以太网配置文件中。例如，如果你的无线网卡被指定为`eth1`，则其配置信息保存在`ifcfg-eth1`文件中。在这里你会找到标准以太网连接参数，例如 IP 地址和网关，以及无线参数，例如所使用的信道、指定的模式和加密密钥。标准设置可以使用`redhat-config-network`在该设备上进行修改。你也可以直接修改此文件以输入其他参数，如频率（`FREQ`）或灵敏度级别（`SENS`）。你也可以使用`IWCONFIG`选项指定任何`iwconfig`参数。输入`IWCONFIG`后跟选项的赋值和任何值。例如，以下选项设置数据包的分片阈值：
+
+```
+IWCONFIG="*frag 512*"
+```
+
+## 虚拟专用网络
+
+虚拟专用网络让你能够在物理网络连接之上创建自己的私有逻辑网络，例如 Internet。使用加密，你的私有网络传输可免受物理网络的侵害。尽管虚拟专用网络（VPN）没有自己的物理连接，也不是实际的网络，但它发送的安全传输的效果就像网络确实作为一个独立实体存在一样。VPN 使用隧道，在其中安全传输直接通过像 Internet 这样的大型网络上的互连系统发送，而不会被拦截，并在任何一点被翻译。要实现 VPN，每个节点都必须使用相同的加密支持软件。在 Red Hat 上，你可以选择使用更新的 IPsec 工具或较旧的第三方加密 IP 封装（CIPE）工具。要使用 IPsec 设置 VPN，你在`redhat-config-network`中单击 IPsec 面板并创建新的连接。此过程在第 17 章中有详细描述。CIPE 仍可使用 Internet 配置向导进行配置，在那里你可以输入本地和远程主机的 IP 地址。
+
+## 接口配置脚本：`/etc/sysconfig/network-scripts`
+
+由 Internet 配置向导和`redhat-config-network`实现的网络配置保存在位于`/etc/sysconfig/network-scripts`目录中的接口配置脚本中（参见第 38 章）。你可以直接编辑这些脚本，修改特定参数，如前面无线连接所讨论的那样。接口配置文件以当前配置的网络接口的名称命名，例如第一个以太网设备的`ifcfg-eth0`，或第一个 PPP 调制解调器设备的`ifcfg-ppp0`。这些文件定义了 shell 变量，其中包含有关接口的信息，例如是否在启动时启动它们。例如，`ifcfg-eth0`文件保存了`NETWORK`、`BROADCAST`和`IPADDR`的定义，它们被分配设备使用的网络、广播和 IP 地址。你也可以手动编辑这些接口配置文件，进行更改，如前面无线连接所述。以下是使用 DHCP 地址的`ifcfg-eth0`文件示例。
+
+```
+/etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+BOOTPROTO=DHCP
+HWADDR=00:00:EF:AF:00
+ONBOOT=yes
+TYPE=Ethernet
+```
+
+## 命令行 PPP 访问：`wvdial`
+
+如果由于某种原因，你无法在 X Window 系统上设置调制解调器连接，你可能需要改为从命令行界面设置，而不是从桌面。对于拨号 PPP 连接，你可以使用`wvdial`拨号器。`wvdial`是一个智能拨号器，它不仅拨号连接到 ISP 服务，还执行登录操作，提供你的用户名和密码。`wvdial`首先从`/etc/wvdial.conf`文件加载其配置。在这里，你可以放置调制解调器和账户信息，包括调制解调器速度和串行设备，以及 ISP 电话号码、用户名和密码。`wvdial.conf`文件按节组织，以方括号括起来的节标签开头。节包含不同参数的变量并赋予值，例如`username = chris`。默认节包含被其他节继承的默认值，因此你无需重复。表 5-2 列出了`wvdial`变量。
+
+| Variable | Description |
+|---|---|
+| `Inherits` | 显式地从指定的节继承。默认情况下，节从 [Dialer Defaults] 节继承。 |
+| `Modem` | `wvdial` 应用作调制解调器的设备。默认是 `/dev/modem`。 |
+| `Baud` | `wvdial` 与调制解调器通信的速度。默认是 57,600 波特。 |
+| `Init1 ... Init9` | 指定调制解调器要使用的初始化字符串。`wvdial` 最多可使用 9 个。默认 `Init1` 为 `"ATZ"`。 |
+| `Phone` | 你希望 `wvdial` 拨打的电话号码。 |
+| `Area Code` | 指定区号，如有。 |
+| `Dial Prefix` | 指定所需的拨号前缀，例如 70 以禁用呼叫等待或 9 用于外线。 |
+| `Dial Command` | 指定拨号操作。默认是 `"ATDT"`。 |
+| `Login` | 指定你在 ISP 使用的用户名。 |
+| `Login Prompt` | 如果你的 ISP 有不寻常的登录提示，你可以在此处指定。 |
+| `Password` | 指定你在 ISP 使用的密码。 |
+| `Password Prompt` | 如果你的 ISP 有不寻常的密码提示，你可以在此处指定。 |
+| `Force Address` | 指定要使用的静态 IP 地址（适用于向用户提供静态 IP 地址的 ISP）。 |
+| `Remote Name` | 对于 PAP 或 CHAP 认证，你可能需要将其更改为 ISP 的认证名称。默认值是 `*`。 |
+| `Carrier Check` | 将此选项设置为 `No` 可禁用调制解调器的载波检查。用于报告其载波线路始终处于断开状态的调制解调器。 |
+| `Stupid Mode` | 在 `Stupid Mode` 下，`wvdial` 不会尝试解释来自终端服务器的任何提示，并在调制解调器连接后启动 `pppd`。 |
+| `Auto Reconnect` | 如果启用，`wvdial` 会尝试在被对方随机断开连接时自动重新建立连接。此选项默认开启。 |
+
+### 表 5-2 `wvdial` 的变量（续）
+
+你可以使用`wvdialconf`实用程序自动为你创建默认的`wvdial.conf`文件。`wvdialconf`将检测你的调制解调器并为基本功能设置默认值。然后你可以编辑`wvdial.conf`文件并使用你的 ISP 拨号信息修改`Phone`、`Username`和`Password`条目。删除前面的分号（`;`）以取消注释该条目。任何以分号开头的行都将被忽略为注释。
+
+```
+$ wvdialconf
+```
+
+你也可以创建一个命名拨号器，例如以下示例中的`myisp`。如果有多个登录的 ISP，这很有帮助。以下示例显示了`/etc/wvdial.conf`文件：
+
+
+
+```
+/etc/wvdial.conf [Modem0]
+Modem = /dev/ttyS0
+Baud = 57600
+Init1 = ATZ
+SetVolume = 0
+Dial Command = ATDT
+
+[Dialer Defaults]
+Modem = /dev/ttyS0
+Baud = 57600
+Init1 = ATZ
+SetVolume = 0
+Dial Command = ATDT
+
+[Dialer myisp]
+Username = chris
+Password = mypassword
+Modem = /dev/ttyS0
+Phone = 555-5555
+Area Code = 555
+Baud = 57600
+Stupid mode = 0
+```
+
+要启动`wvdial`，输入命令`wvdial`，然后它会从`/etc/wvdial.conf`文件读取连接配置信息。`wvdial`拨号 ISP 并启动 PPP 连接，并在请求时提供你的用户名和密码。
+
+```
+$ wvdial
+```
+
+你可以在`/etc/wvdial.conf`文件中为任意数量的连接设置连接配置。要选择其中一个，将其标签作为参数传递给`wvdial`命令，如下所示：
+
+```
+$ wvdial myisp
+```
+
+## 无线工具
+
+为了避免为每种品牌的无线设备提供不同的配置选项，目前大多数无线设备都支持 Wireless Extensions。这些扩展为配置所有无线设备提供了一种标准格式。借助相同的配置选项集，你可以配置任何支持 Wireless Extensions 的无线设备。Wireless Tools 包是一组用于 Linux 系统上无线设备的网络配置和报告工具。它们目前作为 Linux Wireless Extension 和 Wireless Tools 项目的一部分得到支持和开发，这是一个由 Hewlett-Packard 维护的开源项目。
+
+Wireless Tools 由此处列出的配置和报告工具组成：
+
+| Tool | Description |
+|------|-------------|
+| `iwconfig` | 设置大多数无线设备的基本无线配置选项 |
+| `iwlist` | 显示设备的当前状态信息 |
+| `iwspy` | 设置无线网络中的 IP 地址列表并检查其连接质量 |
+| `iwpriv` | 访问特定设备的特定配置选项 |
+
+无线局域网设备将像以太网卡一样具有以太网名称。适当的模块将自动加载，其别名列在`/etc/modules.conf`文件中（参见第 32 章）。
+
+### iwconfig
+
+`iwconfig`命令的工作方式与`ifconfig`类似，用于配置网络连接。它是 Internet Connection Wizard 和`redhat-config-network`用于配置无线卡的工具。或者，你可以直接在命令行上运行`iwconfig`，指定某些参数。附加参数可让你设置无线特定功能，例如网络名称（`nwid`）、卡使用的频率或信道（`freq`或`channel`）以及传输的比特率（`rate`）。请参阅`iwconfig`手册页以获取完整接受的参数列表。一些常用的参数列在表 5-3 中。
+
+| 参数 | 描述 |
+|---|---|
+| `essid` | 一个网络名称 |
+| `freq` | 连接的频率 |
+| `channel` | 使用的信道 |
+| `nwid` or `domain` | 网络 ID 或域 |
+| `mode` | 为设备使用的操作模式，例如 ad hoc、managed 或 auto。Ad Hoc = 一个没有接入点的单元，Managed = 具有多个接入点并支持漫游的网络，Master = 节点是接入点，Repeater = 节点将数据包转发给其他节点，Secondary = 备份主节点或中继器，Monitor = 仅接收数据包 |
+| `sens` | 灵敏度，可以接收数据的最低信号电平 |
+| `key` or `enc` | 使用的加密密钥 |
+| `frag` | 将数据包切分为更小的片段以提高传输效果 |
+| `bit` or `rate` | 传输比特的速度。auto 选项会自动在嘈杂的信道上回退到更低的速率 |
+| `ap` | 指定特定的接入点 |
+| `power` | 用于唤醒和睡眠操作的电源管理。 |
+
+表 5-3 常用参数
+
+例如，要设置作为第一个以太网设备安装的无线设备使用的信道，你可以使用以下命令，将信道设置为 2：
+
+```
+iwconfig eth0 channel 2
+```
+
+你也可以使用`iwconfig`来显示无线设备的统计信息，就像`ifconfig`一样。输入不带参数的`iwconfig`命令或带设备名称的命令。名称、频率、灵敏度和比特率等信息将被列出。也可以检查`/proc/net/wireless`获取统计信息。
+
+与其直接使用`iwconfig`设置参数，你可以在无线设备的配置文件中指定它们。无线设备配置文件位于`/etc/sysconfig/network-scripts`目录中，并根据设备名称命名，如`ifcfg-eth1`。该文件已包含许多`iwconfig`设置。任何进一步的设置都可以通过将`iwconfig`值分配给`IWCONFIG`参数来设置，如下所示。
+
+```
+IWCONFIG="rate 11M"
+```
+
+### iwpriv
+
+`iwpriv`命令与`iwconfig`协同工作，允许你设置特定于某种无线设备的选项。使用`iwpriv`，你还可以打开漫游或选择要使用的端口。你使用`private-command`参数输入设备特定的选项。以下示例打开漫游：
+
+```
+iwpriv eth0 roam on
+```
+
+### iwspy
+
+你的无线设备可以检查它与正在接收数据的另一台无线设备的连接，报告传输的质量、信号强度和噪声水平。你的设备可以维护一个地址列表，用于可能接收数据的不同设备。你使用`iwspy`工具设置或添加要检查的地址。你可以列出 IP 地址或硬件版本。加号`+`将添加地址，而不是替换整个列表：
+
+```
+iwspy eth0 +192.168.2.5
+```
+
+要显示连接的质量、信号和噪声水平，你只需使用设备名称使用`iwspy`命令：
+
+```
+iwspy eth0
+```
+
+### iwlist
+
+要获取有关无线设备的更详细信息，例如所有可用频率或信道，你可以使用`iwlist`工具。使用设备名称和特定参数，你可以获取有关设备的特定信息，包括频率、接入点、速率、电源功能、重试限制和使用的加密密钥。你可以使用`iwlist`获取有关故障连接的信息。以下示例将列出`eth0`无线设备使用的频率。
+
+```
+iwlist eth0 freq
+```
+
+### linux-wlan
+
+`linux-wlan`项目（www.linux-wlan.org）开发了一套独立的无线驱动程序，专为支持新的 802.11 无线标准的基于 Prism 的无线网卡设计。`linux-wlan`驱动程序目前未包含在 Red Hat 中。你必须下载驱动程序。你可以从 people.redhat.com 下载 RPM 包，其中包括基础包、模块包以及针对不同硬件如 PCMCIA 或 USB 的包。你也可以从 prism2.unixguru.raleigh.nc.us 下载特定内核的 RPM 包。
+
+## 设置防火墙：`redhat-config-securitylevel`
+
+要设置防火墙，请在系统上运行`redhat-config-securitylevel`（系统设置窗口和菜单中的安全级别）。您可以启用或禁用防火墙（参见图 5-5）。`None`选项会禁用防火墙。您可以在直接连接到 Internet 的独立系统上运行防火墙，也可以在将本地网络连接到 Internet 的网关系统上运行（前面各节所述）。对于本地网络，请确保本地主机上没有运行任何类型的防火墙。防火墙应仅在网关上运行。此外，网关将至少有两个网络连接，一个用于本地网络，一个用于 Internet 的 Internet 连接设备。请确保防火墙应用于 Internet 设备，而不是您的本地网络。在`redhat-config-securitylevel`中，您通过将本地网络设备设为受信任设备来实现这一点。
+
+在此使用的网络示例中，防火墙在`eth0`网络设备（第一块以太网卡）上运行，其作为网关。本地网络通过`eth1`网络设备（第二块以太网卡）连接。
+
+如果您要创建强大的防火墙，但仍希望运行诸如 Web 服务器之类的服务，允许用户在 Internet 上执行 FTP 文件传输，或允许诸如 SSH 之类的远程加密连接，则必须在受信任服务窗格中指定它们。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_114_0.png)
+
+## 配置本地局域网
+
+
+
+创建自己的本地网络只需几个简单的步骤。您可以设置一台系统作为您自己的局域网（LAN）的主服务器，提供电子邮件、网站或共享打印机等服务。您甚至可以连接不同类型的系统，例如运行 Windows 或 Mac OS 的系统。您还可以将系统配置为 Internet 网关，通过该网关所有其他系统进行连接。事实上，您可以在网关上使用一个 Internet 连接，让网络上的每个主机都可以使用。一些安全预防措施可使您的系统作为防火墙运行，保护本地主机免受外部攻击。您也可以设置一个非常简单的配置，仅提供 Web 访问。本章将介绍设置此类网络的基本概念。本书后面的章节将详细介绍这些主题。
+
+您的局域网由连接到运行 Linux 的主机的多台主机系统组成。此主主机将被称为网关。设置本地网络的步骤包括以下内容：
+
+- 设置和配置每台系统上的以太网卡（有线或无线）。您的网关应有两个以太网卡（参见第 32 章）。
+- 设置代理服务器以提供直接的 Web 访问（DNS 不是必需的，参见第 23 章）。
+- 在网关上设置 DNS 服务器（参见第 34 章）。
+- 配置 DNS 服务器以允许所有其他本地主机访问 Internet（参见第 19 章）。
+- 设置防火墙保护（参见第 19 章）。
+- 启用电子邮件服务（参见第 24 章）。
+- 设置本地主机通过 DNS 访问 Internet（第 34 章）。
+- 与 Windows 主机共享打印机（参见第 37 章）。
+- 设置本地网站（参见第 22 章）。
+
+在设置连接的同时，您必须在为网络设置的主网关计算机上运行至少一项服务。在 Red Hat 上，您可以使用`redhat-config-services`工具（系统服务器菜单和窗口中的服务）或使用`service`命令来启动和停止服务。要使服务自动启动，您可以使用`redhat-config-services`。对于简单的网络，您应运行 DNS 和网络服务。如果您的网络上有 Windows 系统并且您想与它们共享打印机，则需要 Samba 服务。Network、Squid、Sendmail、Postfix、DNS 和 Samba 程序在配置它们时可能需要重新启动。您必须知道 DNS、Sendmail、Postfix、Squid 和 Samba 服务器程序的名称才能使用`service`工具重新启动它们。它们在此显示。此外，您必须添加防火墙规则以允许本地主机通过防火墙访问 Internet。
+
+| 服务名称 | 服务程序 |
+|---|---|
+| 域名服务（DNS） | `named` |
+| Samba | `smb` |
+
+| 服务名称 | 服务程序 |
+|---|---|
+| 网络连接 | `network` |
+| 防火墙 | `iptables` |
+| Squid | `squid` |
+| Sendmail | `sendmail` |
+| Postfix | `postfix` |
+
+你使用`start`、`stop`和`restart`参数来启动、停止和重启服务。要重启 DNS 服务，你将使用以下命令：
+
+```
+service named restart
+```
+
+## 物理配置
+
+要在系统上不同计算机之间建立物理连接，你需要在每台计算机上安装一个以太网设备。许多计算机已经安装了以太网卡或内置以太网卡。大多数以太网配置使用轻型电缆连接计算机，尽管也有一些是无线连接的。网络上的计算机被称为主机。要将多个主机连接在网络上，你需要为每个主机准备以太网电缆，并使用一个集线器将它们全部连接在一起。要连接一台主机，将电缆的一端连接到其以太网卡，另一端连接到集线器。集线器会有多个插孔，每个网络主机各一个。对于更大的网络，你可以连接多个集线器。
+
+在此描述的配置中，运行 Linux 系统的主机将被用作本地网络的主要服务器和网关。在这里，你将安装各种服务器，例如代理、DNS 和 Web 服务器。该主机还将用于将所有本地主机连接到互联网（或更大的网络）。为了有效地实现这一点，该网关/服务器主机需要一个以太网卡和一个互联网连接设备，例如调制解调器、DSL（数字用户线路）调制解调器或另一个以太网卡。本章中的示例使用第二个以太网连接。
+
+## IP 地址
+
+大多数网络，包括互联网，都使用一套称为 TCP/IP 的网络协议，代表传输控制协议/互联网协议。在 TCP/IP 网络（如互联网）上，每台计算机都被分配一个唯一的地址，称为 IP 地址。IP 地址用于标识和定位连接到网络的特定主机——计算机。它由一个数字组成，通常是四个由点分隔的三位数。IP 地址的示例是 192.168.0.1。
+
+你必须为网络上的每个主机分配一个 IP 地址。根据网络类型，前几个段用于网络地址，后几个段用于主机地址。对于小型本地网络，前三个段是计算机的网络地址，最后一个段是计算机的主机 ID（在这些示例中使用）。例如，在地址 192.168.0.2 中，192.168.0 是网络地址，2 是该网络中计算机的主机 ID。它们共同组成一个 IP 地址，可以从互联网上的任何地方寻址该计算机。
+
+要设置一个本地局域网（LAN），其主机未直接连接到互联网，你将使用一组为此类非互联网网络保留的特殊 IP 号码（也称为私有网络或内联网）。如果实施 IP 伪装，则尤其如此，在这种情况下只有网关机器具有互联网地址，而其他机器使用该地址连接到互联网。对于小型网络（254 台主机或更少），这些是具有特殊网络号 192.168.0 的号码，如这些示例中使用。如果要设置局域网，例如小型企业或家庭网络，你可以自由地将这些号码用于本地机器。对于本地网络，从 192.168.0.1 开始分配 IP 地址。主机段的范围可以从 1 到 254，其中 255 用于广播地址。如果你家网络上有三台主机，你可以给它们分配地址 192.168.0.1、192.168.0.2 和 192.168.0.3。
+
+> 注意 要允许本示例中的本地主机通过使用网关的 IP 地址连接到互联网，你需要实现 IP 伪装。实际上，本地主机通过采用网关的 IP 地址来隐藏自己，对互联网而言看起来像是网关系统。IP 伪装作为第 19 章中描述的 Netfilter 数据包过滤程序的一部分实现。
+
+此类网络的网络地址将是 IP 地址的前三个段，即 192.168.0。网络掩码将覆盖这前三个段，使用数字 255.255.255.0。该掩码用于确定 IP 地址的主机部分和网络部分。广播地址，在本示例中为 192.168.0.255，用于允许管理员同时联系所有主机。然后你将在配置主机时使用这三个 IP 地址。
+
+在这些示例中使用的示例网络中有三台主机，每台主机都有自己的 IP 地址和主机名，如下所示。网络地址、网络掩码和广播地址与前面描述的相同：
+
+```
+192.168.0.1
+192.168.0.2
+192.168.0.3
+```
+
+> 注意 有关 IP 地址和 DNS 服务器设置的详细信息，请参阅第 34 章和第 38 章。
+
+防火墙应仅在网关上运行。此外，网关将有两个网络连接，一个用于本地网络，一个用于互联网的互联网连接设备。请确保防火墙应用于用作互联网设备的设备，而不是你的本地网络。在`redhat-config-securitylevel`中，你通过将本地网络设备设为受信任设备来实现这一点。在此处使用的网络示例中，防火墙在`eth0`网络设备（第一块以太网卡）上运行，该设备用作网关。本地网络通过`eth1`网络设备（第二块以太网卡）连接。
+
+## 分配 IP 地址：静态和动态
+
+你可以静态或动态地分配 IP 地址。静态地址手动输入到每台机器中，而动态地址则由运行在一台机器上的单个 DHCP 服务器自动分配。如果你的网络非常小，例如两台
+
+如果家用网络只有两三台机器，那么使用静态地址可能更有意义。在这种情况下，你需要手动为每台机器分配 IP 地址，通过以 root 用户身份物理登录每台计算机并运行`redhat-config-network`来为该机器分配 IP 地址。在每台机器上运行`redhat-config-network`时，你还要指定网关，即连接到网络的机器。
+
+如果你的网络较大，或者你想要更集中的控制，可以让 DHCP 服务器自动为每台机器分配 IP 地址（参见第 35 章）。你仍然需要登录每个系统并运行`redhat-config-network`，将每台机器配置为使用 DHCP 获取配置信息。务必同时配置防火墙以允许 DHCP 传输。DHCP 服务器通常在网关机器上运行。首先你必须配置服务器以分配地址，以及提供网关的 IP 地址。
+
+目前没有 Red Hat 工具可以配置 DHCP 服务器。你必须手动创建具有适当选项的`/etc/dhcpd.conf` DHCP 配置文件。Red Hat 建议对简单网络使用以下配置。此配置使用从 192.168.1.0 开始的私有网络地址。
+
+
+
+## DHCP 配置
+
+DHCP 配置在第 35 章中有详细讨论。对于简单网络，你只需要几个选项，如下所示。你必须使用带有网络地址及其子网掩码的`subnet`声明来定义一个子网（参见第 38 章）。范围为`192.168.1.1–192.168.1.255`的简单网络由网络地址`192.168.1.0`和子网掩码`255.255.255.0`定义。在声明中，你指定域名和网关的选项，以及要使用的地址范围。`routers`选项指定网关的地址。对于`domain-name`选项，输入你想赋予本地网络的域名。`domain-name-servers`选项包含运行本地网络 DNS 服务器的机器的地址，如果你有的话。`range`选项列出可以分配的 IP 地址范围，在本例中是从`192.168.1.10`到`192.168.1.100`的任意地址，提供 90 个可能的地址。
+
+```
+/etc/dhcpd.conf
+ddns-update-style interim;
+subnet 192.168.1.0 netmask 255.255.255.0 {
+option routers           192.168.1.1;
+option subnet-mask       255.255.255.0;
+option domain-name       "mytrek.com";
+option domain-name-servers 192.168.1.1;
+}
+range  192.168.1.10  192.168.1.100;
+```
+
+配置好 DHCP 后，你可以通过运行`redhat-config-services`并选择 DHCP，然后点击 Start 来启动 DHCP 服务器。你也可以使用`service`命令启动和重启服务器。
+
+```
+service dhcpd restart
+```
+
+对于如下示例中设置的网络，其中网关有两个以太网卡，一个用于 Internet，另一个用于本地网络，你希望本地 DHCP 服务器仅在本地网络上运行，使用本地以太网卡。
+
+要做到这一点，你需要在`dhcpd`服务器启动时将以太网卡指定为命令行选项。在 Red Hat 上，只需编辑`/etc/sysconfig/dhcpd`文件并将以太网卡分配给`DHCPDARGS`参数即可。在以下示例中，`eth0`卡用于本地网络，因此以下内容应输入到`/etc/sysconfig/dhcpd`文件中。
+
+```
+DHCPDARGS=eth0
+```
+
+如果运行 DHCP 服务器的以太网卡也受防火墙保护，你将需要允许其使用的端口上的访问，即端口 67。
+
+## Squid 代理服务器
+
+如果你只想为你的主机提供 Internet Web 访问，可以只在网关主机上运行 Squid 服务器。你不必设置和运行 DNS 服务器。Squid 是一个代理服务器，可以直接处理浏览器与 Internet 站点之间的 Internet 连接。你只需要为每台主机配置网络连接，提供其 IP 地址。这可以通过 DHCP 自动完成。Squid 已包含在基本安装中（参见第 23 章）。
+
+每个 Web 浏览器都必须配置为引用运行 Squid 服务器的机器。在 Mozilla 中，从 Edit 菜单中选择 Preferences，然后在 Advanced 项目中选择 Proxies。在这里你可以输入运行 Squid 服务器的机器的 IP 地址，通常是网关。
+
+你可以通过使用`redhat-config-services`（系统设置/服务器设置窗口中的 Services）并选择`squid`，然后点击 Start 来启动 Squid 服务器。你也可以使用`service`命令手动启动和停止 Squid。
+
+```
+service squid start
+```
+
+`chkconfig`命令可以在系统启动时自动启动 Squid。
+
+```
+chkconfig squid on
+```
+
+> 注意 在你的网络上启用电子邮件服务有几种方法。你可以设置网络使用中央服务器为网络上的所有用户处理电子邮件，或者让每个主机独立处理自己的用户。Internet 邮件设置也因你拥有的是独立系统、具有一个连接的小型网络，还是拥有自己的官方域名地址的大型网络而有所不同（参见第 24 章）。
+
+## 实现 DNS 服务器
+
+现在你的本地网络已物理搭建完成，你的网关/服务器需要运行某些服务以允许你的主机通过网络通信。你首先必须配置并运行域名服务（DNS），这将允许本地网络上的所有主机使用主机名相互识别。这涉及以下几个步骤：
+
+1. 决定为每台本地主机分配的 IP 地址。使用`192.168.0`作为网络地址。
+
+2. 决定本地网络的域名。
+
+3. 为网络上的每台主机确定主机名。
+
+4. 为每台主机配置其 IP 地址和域名地址。
+
+5. 在网关/服务器上，配置一个 DNS 服务器列出每台主机的 IP 地址和主机名。
+
+6. 启动 DNS 服务。
+
+互联网上的所有主机都由其 IP 地址标识。当你向互联网上的主机发送消息时，必须提供其 IP 地址。然而，使用由四个数字组成的 IP 地址序列可能会很困难。它们很难记住，而且在输入时很容易出错。为了使识别互联网上的计算机变得更容易，DNS 被实现。DNS 为每个 IP 地址建立一个完全限定域名地址。完全限定域名由主机名和它所属的网络（域）组成。每当你使用该名称时，它会自动转换为 IP 地址，然后用于标识该互联网主机。完全限定域名比其对应的 IP 地址更容易使用。例如，DNS 服务器会将`www.linux.org`翻译成其 IP 地址`198.182.196.56`。
+
+在图 5-6 中，`rabbit.mytrek.com`的用户想要连接到远程主机`lizard.mytrek.com`。`rabbit.mytrek.com`首先向网络的 DNS 服务器发送请求——在本例中为`turtle.mytrek.com`——查找名称`lizard.mytrek.com`并找到其 IP 地址。然后它将`lizard.mytrek.com`的 IP 地址`192.168.0.3`返回给请求主机`rabbit.mytrek.com`。有了 IP 地址后，`rabbit.mytrek.com`的用户就可以连接到`lizard.mytrek.com`。
+
+然后你可以通过在一台机器上运行 DNS 服务器来为你的网络设置域名服务。该机器成为你网络的 DNS 服务器。你可以为你的机器分配完全限定域名并配置你的 DNS 服务器将
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_120_0.png)
+
+名称翻译为其对应的 IP 地址。例如，如图 5-7 所示，你可以给机器`192.168.0.1`起名为`turtle.mytrek.com`，并给机器`192.168.0.2`起名为`rabbit.mytrek.com`。你还可以通过在机器上为它们设置服务器来实现 FTP、Web 和邮件等互联网服务。你可以然后配置你的 DNS 服务器让用户使用完全限定域名访问这些服务。例如，对于`mytrek.com`网络，Web 服务器可以使用名称`www.mytrek.com`访问。
+
+> 注意 而不是使用域名服务，你也可以让每台机器中的`/etc/hosts`文件包含网络中所有机器的 IP 地址和域名的完整列表。但对于任何更改，你都必须更新每台机器的`/etc/hosts`文件。
+
+## 使用 redhat-config-bind 配置 DNS 服务器
+
+要配置 DNS 服务器，你必须在 DNS 配置文件中输入不同主机的 IP 地址和主机名。你可以使用`redhat-config-bind`配置工具轻松完成此操作（在服务器设置窗口或菜单中选择域名服务）。Bind 是大多数网络上使用的 DNS 软件类型（有关`redhat-config-bind`的详细信息，请参阅 Red Hat Customization Guide）。你需要创建两个区域配置：一个正向主区域和一个反向主区域。主`redhat-config-bind`窗口将显示所有已配置的域及其记录条目。顶部的按钮可让你创建新域、添加新记录、删除任何域或记录，并保存你的配置。单击一个域即可选择该域。属性按钮可让你编辑任何选定的条目。图 5-8 显示了
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_121_0.png)
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_122_0.png)
+
+FIGURE 5-8 redhat-config-bind example
+
+一个名为`mytrek.com`的域的`redhat-config-bind`配置示例，该域有三个主机`turtle`、`rabbit`和`lizard`。存在正向和反向域配置的域条目。
+
+要保存你的`redhat-config-bind`配置，请选择保存按钮以生成 DNS 服务器配置文件。由`redhat-config-bind`生成的文件保存在`/var/named`目录下，位于`chroot/var/named`。
+
+### 主区域
+
+你的正向主区域是你输入主机域名及其 IP 地址的主要 DNS 配置条目的位置。单击新建并选择正向主区域。你最初会被要求输入一个域名。输入你为本地网络决定的域名，例如`mytrek.com`。
+
+
+
+然后会打开一个标记为 `Master Zone` 的窗口，其中包含 DNS 服务器的多个条目（参见图 5-9）。基于你之前输入的域名，已为你预先输入了默认设置。名称框将包含你刚刚指定的域名。文件名是主区域文件的名称，连同扩展名 `.zone`，将是域的名称。电子邮件地址是管理 DNS 服务器的人员的地址，默认设置为 `root` 用户。随意将其更改为其他用户的地址。主名称服务器条目默认为 `@` 符号。`@` 符号仅代表 DNS 服务器的名称。序列号字段的初始值为 1。每当你对配置文件进行更改时，它会自动递增。时间设置按钮打开一个对话框，你可以在其中设置刷新、重试和过期日期。你可以保持原样。这些以及其他设置在第 34 章中有详细说明。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_123_0.png)
+
+### FIGURE 5-9 redhat-config-bind master zone
+
+## Adding Records
+
+你将返回到主 `redhat-config-bind` 窗口，该窗口现在会列出新的域，名称是你为其指定的名称（见图 5-10）。在此，你可以添加和编辑主机和域条目，以及指定运行 DNS 服务器的主机。如果你的网络有邮件服务器，如第 24 章所述，你也应在此添加。通常，同一台主机同时运行 DNS 服务器和邮件服务器。要添加记录，请选择域条目并单击 `Add Record`。这会打开一个包含四个标签页的窗口：`Host`、`Alias`、`Nameserver`、`Mail Exchange`。这些面板涵盖了你在名称服务器配置中需要的基本记录类型。
+
+你现在需要为系统上的不同主机添加主机条目，提供其主机名和 IP 地址。要添加主机条目，请单击 `Add Record`，然后选择 `Host` 面板。这会显示一个用于输入主机名及其 IP 地址的面板。对于主机名，你无需包含域名，它会自动为你添加。你会在输入框旁边看到域名。勾选 `Add to Reverse Table` 复选框，即可将该条目同时添加到反向域文件中。在图 5-10 中，为 `mytrek.com` 域添加了主机 `rabbit`，其 IP 地址为 `192.168.0.2`。
+
+> NOTE 如果你想在网关主机上设置网站，你应该为其添加一个别名，别名使用主机名 `www`。在添加别名时，选择 `Add Record` 窗口中的 `Alias` 面板，输入别名名称，并从列出的主机中选择它将别名的主机。
+
+你还必须创建名称服务器条目以指定运行 DNS 服务器的主机。运行 DNS 服务器的主机被称为名称服务器。单击 `Add Record` 按钮，然后选择 `Nameserver` 面板。你的当前域将默认填入，例如 `mytrek.com`。要为当前域设置名称服务器，你无需在 `Domain Name` 框中输入任何内容。对于子域，你可以添加用于区分的名称。在 `Served by` 框中输入运行 DNS 服务器的主机的主机名。对于本地主机，只需输入第一个名称，如 `turtle` 代表 `turtle.mytrek.com`。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_124_0.png)
+
+### FIGURE 5-10 Adding a host
+
+如果你的网络有自己的集中式邮件服务器，像大型网络可能拥有的那样，你现在可以添加它。小型网络如家庭网络通常不会有这样的服务器。每台主机都作为自己的邮件服务器运行，无需在 DNS 配置中指定。拥有集中式邮件服务的较大网络会使用 DNS 邮件条目来配置邮件投递（有关更多详细信息，请参阅第 24 章）。单击 `Add Record` 按钮并选择 `Mail Exchange` 面板。在 `Name` 框中输入由邮件服务器服务的网络的域名。在 `Priority` 框中指定优先级（默认将填入 1）。然后，从主机列表中选择运行邮件服务器的主机。
+
+## Reverse Master Zone
+
+然后你需要创建一个反向主区域。单击 `New`。在首先出现的 `Zone Type` 窗口中，单击 `Reverse Master Zone` 复选框。此窗口上的输入框将被标记为 `IP Address (first three octets)`。在此输入主机 IP 地址的网络部分。这是你为系统上的主机使用的 IP 地址的前三组数字。例如，`turtle.mytrek.com` 的 IP 地址是 `192.168.0.1`，因此网络部分是 `192.168.0`。网络部分对所有主机都相同。反向主区域窗口将打开，IP 地址和文件名已为你填好。在此你可以设置标准的域参数，如序列号和时间设置。完成后，你将返回到 `redhat-config-bind` 窗口，该窗口现在会显示反向域的条目。你现在需要为网络上的所有主机添加条目。要添加条目，首先确保已选择反向域，然后单击 `Add Record` 以打开一个窗口，在其中输入主机的 IP 地址和主机名。选择 `Address` 面板。在 `IP Address` 框中，只输入主机 IP 地址的主机部分。这将是一个单一数字。例如，对于 IP 地址 `192.168.0.2`，你只需输入 `2`。在 `Full Host Name` 框中，输入主机的完整主机名。对于 `rabbit` 主机，你将输入 `rabbit.mytrek.com`
+
+然后你需要为 DNS 服务器添加一个条目。点击 `Add Record` 然后选择 `name server` 面板。在这里输入域名以及将运行你的 DNS 服务器的主机名称。务必包含一个尾随句点。在此示例中，名称服务器主机是
+
+```
+turtle.mytrek.com.
+```
+
+> NOTE 要手动启动你的 DNS 服务，你可以使用 `redhat-config-services`（Server Settings 菜单上的 Services）。
+
+## PART
+
+## Environments
+
+- CHAPTER 6
+- GNOME
+- CHAPTER 7
+- The K Desktop Environment: KDE
+- CHAPTER 8
+- The Shell
+- CHAPTER 9
+- Shell Configuration
+- CHAPTER 10
+- Managing Linux Files, Directories, and Archives
+
+## CHAPTER
+
+### GNOME
+
+GNU 网络对象模型环境，也称为 `GNOME`，是一种功能强大且易于使用的环境，主要由一个面板、一个桌面以及一套可用于构建程序界面的 GUI 工具组成。`GNOME` 被设计为为开发功能强大的应用程序提供灵活的平台。目前，`GNOME` 由多个发行版支持，并且是 Red Hat 的主要界面。`GNOME` 是免费的，并在 GNU 公共许可证下发布。你可以直接从 `GNOME` 网站 `www.gnome.org` 下载源代码以及文档和其他 `GNOME` 软件。几家公司已联合成立 `GNOME` 基金会，一个致力于协调 `GNOME` 及 `GNOME` 软件应用程序开发的组织。这些公司包括 Sun、IBM 和 Hewlett-Packard 等，以及 Mandrake、Red Hat 和 TurboLinux 等 Linux 发行商，还有 Ximian 等 `GNOME` 开发者。以开发 Apache Web 服务器的 Apache 软件基金会为蓝本，`GNOME` 基金会将为 `GNOME` 开发提供方向以及组织、财务和法律支持。
+
+`GNOME` 桌面的核心组件由一个用于启动程序和桌面功能的面板组成。桌面中通常找到的其他组件，如文件管理器、Web 浏览器和窗口管理器，则由 `GNOME` 兼容的应用程序提供。`GNOME` 提供了 `GNOME` GUI 工具库，开发者可用于创建 `GNOME` 应用程序。使用符合 `GNOME` 标准的按钮、菜单和窗口的程序可以被称为 `GNOME` 兼容。`GNOME` 桌面的官方文件管理器是 `Nautilus`。`GNOME` 桌面不像 KDE 那样拥有自己的窗口管理器。相反，它使用任何 `GNOME` 兼容的窗口管理器。`Metacity` 窗口管理器是随 `GNOME` 发行版捆绑的那个。
+
+对组件模型接口的支持已集成到 `GNOME` 中，允许软件组件无论以何种计算机语言实现或在何种机器上运行都能相互连接。`GNOME` 中用于此类接口的标准是 Common Object Request Broker Architecture（`CORBA`），由 Object Model Group 为 Unix 系统开发。`GNOME` 使用 `CORBA` 的 `ORBit` 实现。有了这样的框架，`GNOME` 应用程序和客户端可以直接相互通信，使你能够在一个应用程序中使用另一个应用程序的组件。随着 `GNOME 2.0`，`GNOME` 正式采用 `GConf` 及其库作为配置 `GNOME` 及其应用程序的基础方法。`GConf` 可以独立配置协调的程序，例如构成 `Nautilus` 文件管理器的程序。
+
+
+
+# GNOME
+
+你可以在其网站 `www.gnome.org` 了解更多关于 GNOME 的信息。该网站不仅提供了当前 GNOME 项目的详细软件地图，并链接到其开发站点，还维护了可供订阅的 GNOME 项目的广泛邮件列表。网站提供在线文档，如 GNOME 用户指南和常见问题解答。如果你想开发 GNOME 程序，请查看 GNOME 开发者网站 `developer.gnome.org`。该网站提供教程、编程指南和开发工具。在这里你可以在线找到完整的 API 参考手册，以及诸如教程和集成开发环境（IDEs）等广泛的支持工具。该网站还包括 `GTK+` 库、GNOME 小部件和 GNOME 桌面的详细在线文档。
+
+> NOTE 目前，GNOME 的新版本发布频繁，有时每隔几个月发布一次。GNOME 版本旨在使用户能够轻松升级其旧版本。对于 Red Hat，你可以使用更新实用程序 Red Hat Network 或从 Red Hat 和 Fedora 下载站点下载软件包并使用 `redhat-config-packages` 安装。软件包也可以从 GNOME FTP 站点 `ftp.gnome.org` 下载。
+
+## GNOME Enhancements
+
+随着 GNOME 1.4，Nautilus 文件管理器正式取代了先前 GNOME 版本中使用的 GNOME 版 GNU Midnight Commander。Nautilus 被设计为可作为桌面外壳运行，可支持众多组件，让你可以在其中运行 Web 浏览器或解压缩文件。Nautilus 最初由 Eazel 开发，现在是 GNOME 桌面的官方文件浏览器。你可以从 GNOME CVS 仓库或 `www.ximian.com` 下载 Nautilus 源代码。你可以从 GNOME 用户指南的一部分的 Nautilus 用户手册 `www.gnome.org` 了解更多关于 Nautilus 的信息。
+
+随着 GNOME 2.0，GNOME 已重写以在新的 `GTK+` 2.0 图形库上运行。GNOME 2.0 现在支持抗锯齿字体以及更高效的 GUI 执行。GNOME 2.0 还包括 `Pango` 用于国际语言支持，以及可访问性工具包（`ATK`），为残疾人士提供更易于交互的功能。
+
+随着 GNOME 2.2，Nautilus 文件管理器获得了更多功能。它现在更易于集成到其他应用程序中，例如用于归档的 File Roller、用于图片的图像查看器以及用于音频和视频的 GNOME 媒体播放器。你现在可以在 Nautilus 窗口中预览声音和视频文件。Nautilus 还可以向 CD 刻录机刻录文件。GNOME 2.2 还具有集成主题管理，并提供了多个默认主题。新的字体支持工具让你更轻松地配置字体，使你能够选择并显示字体在不同组件如应用程序或窗口中的显示效果。
+
+> TIP Ximian 提供了一个改进的 GNOME 版本，称为 Ximian Desktop，并计划提供一套完整的办公应用程序。你可以从其网站 `www.ximian.com` 了解更多关于 Ximian 的信息。Ximian Desktop 是 GNOME 的增强版，与所有 GNOME 软件完全兼容。你首先需要在系统上安装 GNOME，然后可以下载并安装 Ximian Desktop。
+
+## GTK+
+
+`GTK+` 是 GNOME 应用使用的部件集。其外观和感觉最初源自 Motif。该部件集从零开始设计，注重功能强大和灵活性。例如，按钮可以带有标签、图像，或两者任意组合。对象可以在运行时动态查询和修改。它还包含一个主题引擎，使用户能够更改使用这些部件的应用的外观和感觉。与此同时，`GTK+` 部件集保持小巧高效。
+
+`GTK+` 部件集完全在 GNU Lesser General Public License（`LGPL`）下免费发布。`LGPL` 使开发者能够将部件集与专有软件以及自由软件一起使用（`GPL` 将其限制为仅自由软件）。该部件集还具有广泛的编程语言绑定，包括 `C++`、`Perl`、`Python`、`Pascal`、`Objective C`、`Guile` 和 `Ada`。国际化得到完全支持，允许基于 `GTK+` 的应用使用其他字符集，例如亚洲语言中的字符集。拖放功能同时支持 `Xdnd` 和 Motif 协议，允许与支持这些协议的其他部件集（如 `Qt` 和 Motif）进行拖放操作。
+
+## The GNOME Interface
+
+GNOME 界面由面板和桌面组成，如图 6-1 所示。面板出现在屏幕底部的长条上。它包含菜单、程序和小程序。（小程序是设计为在面板内运行的小程序。）面板上有一个带有大红帽的按钮。这是 GNOME 应用菜单，即主菜单。菜单的操作类似于 Windows 中的开始菜单，列出可在桌面上运行的应用条目。你可以水平或垂直显示面板，并使其自动隐藏以显示全屏。
+
+屏幕其余部分为桌面。在这里，你可以放置目录、文件或程序。你可以直接在桌面上创建它们，或从文件管理器窗口拖拽它们。点击并拖拽操作会将文件从一个窗口移动到另一个窗口或桌面。按住 CTRL 键点击并拖拽会复制文件。使用中间鼠标按钮（在双按钮鼠标上同时按下两个按钮）进行点击并拖拽操作，可在桌面上为已安装的程序创建链接。最初，桌面仅包含一个指向你主目录的图标。点击它会打开一个指向该目录的文件管理器窗口。在桌面任何位置右键单击会显示桌面菜单（见表 6-1），你可借此打开新窗口、创建新文件夹，并挂载软盘和 CD-ROM。
+
+> Tip 你可以使用不同的主题来显示 GNOME 桌面，从而改变桌面对象如窗口、按钮和滚动条的外观。GNOME 功能不会以任何方式受到影响。你可以从多种主题中选择。许多主题在 Internet 上 `themes.freshmeat.net` 发布。技术上称为 GTK 主题，它们允许 GTK 部件集改变其外观和感觉。要选择主题，请使用 GNOME 控制中心并在桌面列表中选择主题。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_131_0.png)
+
+FIGURE 6-1 GNOME
+
+## GNOME Components
+
+从用户角度来看，你可以将 GNOME 界面视为具有四个组件：桌面、面板、主菜单和文件管理器。在其标准默认配置中，GNOME 桌面在左上角显示一个指向你主目录的文件夹图标，以及一个用于删除项目的垃圾箱，和一个用于访问应用和设置首选项的“开始这里”图标。某些发行版可能包含其他图标，例如指向 GNOME 网站或 Linux 文档网站的链接。最初，一个文件管理器窗口在桌面上打开，显示你的主目录。在 Red Hat 上，面板有几个默认图标：主菜单（红帽）、Mozilla 网页浏览器（带老鼠的地球）、Evolution 邮件工具（信封），随后是几个 OpenOffice 应用包括文字处理器和电子表格、打印监视器（打印机）、工作区切换器（方块）和一个时钟。
+
+要启动程序，你可以在主菜单中选择其条目，或通过“开始这里”应用窗口中的相应图标访问应用。你也可以点击面板中的应用启动按钮（如果有）、将数据文件拖到其图标上，或在主菜单中选择“运行程序”条目。这会打开一个小窗口，你可以在其中输入程序名称。
+
+## 开始使用窗口
+
+从开始使用窗口，你可以访问你最喜欢的网站和文件（收藏夹）、选择并运行应用程序（应用程序）、自定义你的 GNOME 桌面（首选项），并执行系统和服务器的系统管理任务（系统设置）。双击图标会打开一个列出子窗口或工具图标的窗口。实际上，开始使用窗口模仿了主菜单。你可以从开始使用程序窗口选择并运行应用程序，就像从主菜单的程序菜单中一样。首选项窗口列出了 GNOME 配置工具（小程序），用于设置你的 GNOME 首选项。实际上，它取代了以前版本中使用的 GNOME 控制中心窗口。有关更多详细信息，请参阅 GNOME 配置部分。如果需要配置管理任务，例如设置网络连接或管理服务器，你可以选择系统设置窗口。其中大多数工具只能由 root 用户访问。
+
+## 退出 GNOME
+
+要退出 GNOME，你在主菜单中选择注销条目。然后面板中会出现一个注销按钮。注销时，会显示注销对话框。你有三个选项。第一个选项，注销，退出 GNOME，将你返回到登录窗口（或命令行 shell，如果你使用 `startx` 启动了 GNOME，则仍登录到你的 Linux 账户）。第二个选项，关机，不仅退出 GNOME，还会关闭整个系统。第三个选项，重启条目，会关闭并重新启动系统。注销条目默认被选中。关机和重启仅 root 用户可用。如果普通用户执行它们，会提示他们输入 root 用户密码以关闭系统。你也可以通过单击保存当前设置复选框来选择保留桌面。这会在你注销时重新打开任何未关闭的程序或目录。符合 GNOME 规范的窗口管理器在你退出 GNOME 时也会退出。你必须在退出 GNOME 后单独退出不符合 GNOME 规范的窗口管理器。
+
+## GNOME 帮助
+
+GNOME 帮助系统为显示 GNOME 用户手册、Man 手册页和 info 文档提供了一个类似浏览器的界面。它具有一个工具栏，可让你在已查看文档列表中移动。你甚至可以为特定项目添加书签。Web 页面界面使你能够使用链接连接到不同文档。你可以轻松移动手册或 Man 手册页和 info 文档的列表。你可以将条目放在位置框中以直接访问特定文档。支持用于不同类型文档的特殊 URL 类似协议：`ghelp`，用于 GNOME 帮助；`man`，用于手册页；`info`，用于 info 文档。
+
+
+
+GNOME 帮助浏览器为你的 GNOME 界面的各个方面提供了详细手册。请查阅核心桌面条目以获取所有 GNOME 桌面功能的完整描述。查看小程序条目以了解可在 GNOME 面板中使用的应用程序。其他条目涵盖了众多 GNOME 应用程序，例如 Evolution 邮件客户端和 GNOME 系统监视器。
+
+## GNOME 桌面
+
+GNOME 桌面为你提供了基于 GUI 的操作系统的所有功能（见图 6-1）。你可以将文件、应用程序和目录拖到桌面，然后再拖回符合 GNOME 规范的应用程序。如果桌面停止工作，你可以通过启动 GNOME 文件管理器（`Nautilus`）来重新启动它。桌面实际上是 GNOME 文件管理器中的一个后台进程。但你不必打开文件管理器即可使用桌面。
+
+> 注意 作为桌面的替代方案，你可以将任何程序、文件或目录拖到面板上。
+
+## 拖放
+
+尽管 GNOME 桌面支持拖放操作，但这些操作仅适用于符合 GNOME 规范的应用程序。你可以将任何项目从符合 GNOME 规范的应用程序拖到桌面，反之亦然。任何从文件管理器窗口拖到桌面的项目图标也会出现在桌面上。然而，默认的拖放操作是移动操作。如果你选择文件管理器窗口中的一个文件并将其拖到桌面，你实际上是将文件从其当前目录移动到 GNOME 桌面目录，该目录位于你的主目录中，并保存桌面上的所有项目（注意这是一个点文件）。对于 GNOME，桌面目录是 `.gnome-desktop`。在将目录文件夹拖到桌面的情况下，整个目录及其子目录将被复制到 GNOME 桌面目录。
+
+你也可以通过按住 `CTRL` 键然后从文件管理器窗口点击并拖动文件到桌面来复制文件到桌面。你会看到复制图标右上角的小箭头变为 `+` 符号，表示你正在创建副本而不是链接。
+
+GNOME 的拖放操作适用于 GNOME 工作区切换器提供的虚拟桌面。面板上的 GNOME 工作区切换器在面板中为每个虚拟桌面创建图标，以及在这些桌面上打开的应用程序的任务按钮。
+
+## 应用程序链接
+
+在大多数情况下，你只想在桌面上创建另一种访问文件的方式，而不将其从原始目录移动。你可以通过创建链接来实现。要创建链接，首先点击并拖动文件出窗口，并在移动文件但在松开鼠标按钮之前，按住 `ALT` 键。这将显示一个弹出菜单，其中包含剪切、复制和链接选项。选择链接选项以创建链接。然后会出现一个图标副本，其右下角有一个小箭头表示它是链接。你可以点击此链接来启动程序、打开文件或打开目录，具体取决于你链接的文件类型。
+
+你可以使用该图标直接访问该项目。这通常用于启动常用程序。例如，你可以将 Mozilla 图标点击并拖动到桌面，然后按 `ALT`，以为 Mozilla 创建一个链接图标。双击该图标即可启动 Mozilla。你也可以对文件执行相同操作。在这种情况下，将启动相应的程序。如果该项目是目录，文件管理器将启动并打开到该目录。如果你想在桌面上放置一个不符合 GNOME 规范的应用程序，可以手动在主目录的 GNOME 桌面目录 `.gnome-desktop` 中放置一个链接。
+
+## 桌面驱动器图标
+
+桌面还会显示您已挂载的任何驱动器的图标，例如 CD-ROM 或软盘驱动器，前提是它们可供用户挂载。`Nautilus` 在您将光盘插入 CD-ROM 驱动器时会自动挂载 CD-ROM，并显示 CD-ROM 图标并打开一个 `Nautilus` 窗口显示 CD-ROM 的内容。要弹出 CD-ROM，请右键单击其图标并从弹出菜单中选择 `Eject`。
+
+您可以通过在桌面任意位置右键单击以显示桌面菜单，然后在 `Disks` 菜单中选择 `CD-ROM` 或 `Floppy` 条目，来手动挂载 CD-ROM 或软盘。代表该设备的图标会显示出来，并带有 CD-ROM 或软盘的名称。然后您可以通过双击它或右键单击并选择 `Open` 条目来访问 CD-ROM 驱动器中的磁盘。文件管理器窗口会打开以显示 CD-ROM 磁盘的内容。要卸载并弹出 CD-ROM，请右键单击 CD-ROM 图标并选择 `Eject` 条目。相同的操作也适用于软盘，使用软盘图标即可。请确保在先卸载软盘后再将其取出，选择弹出菜单中的 `Eject` 条目。
+
+## 桌面菜单
+
+您也可以在空桌面任意位置右键单击以显示 GNOME 桌面菜单。这将列出常用任务的条目，例如打开一个新的终端窗口以输入 shell 命令，或创建新文件夹。请记住，新建文件夹条目会在您的桌面上创建一个新目录，具体位于您的 GNOME 桌面目录（`.gnome-desktop`）中，而不是您的主目录。菜单的条目列在表 6-1 中。
+
+| 菜单项 | 描述 |
+|---|---|
+| New Window | 在桌面上启动一个新的 `Nautilus` 文件管理器窗口，显示您的主目录。 |
+| New Launcher | 为应用程序创建新的桌面图标。 |
+| New Terminal | 启动一个新的 GNOME 终端窗口并导航到桌面目录。 |
+| New Folder | 在桌面上创建一个新目录。 |
+| Scripts | 选择要在所选文件上运行的脚本。 |
+| Clean Up by Name | 按名称整理您的桌面图标。 |
+| Cut, Copy, Paste | 剪切、复制或粘贴文件，让您在文件夹之间移动或复制文件。 |
+| Disks | 显示一个子菜单，列出可供选择的软盘和 CD-ROM 设备以进行挂载。已挂载的磁盘将作为 CD-ROM 或软盘图标出现在桌面上，您可以使用它们进行访问或稍后卸载。 |
+| Change Desktop Background | 打开背景首选项对话框，让您为桌面选择新的背景。 |
+
+表 6-1 GNOME 桌面菜单
+
+## 窗口管理器
+
+GNOME 可与任何窗口管理器配合使用。然而，诸如拖放功能和 GNOME 分页器（稍后讨论）等桌面功能，仅在符合 GNOME 标准的窗口管理器上才有效。当前版本的 GNOME 使用 `Metacity` 窗口管理器。它完全符合 GNOME 标准，并设计为与 GNOME 桌面集成而不重复功能。然而，其他窗口管理器如 Enlightenment、IceWM 和 Window Maker 也可以使用。请查阅窗口管理器的文档以确认其是否符合 GNOME 标准。
+
+`Metacity` 采用的窗口操作与其它窗口管理器基本相同。您可以通过单击其任意边或角并拖动来调整窗口大小。您可以通过在标题栏上单击并拖动来移动窗口。您也可以右键单击并拖动任意边框来移动窗口，以及 `ALT` 单击窗口的任意位置。右上角显示最大化、最小化和关闭按钮。最小化会在面板中为窗口创建一个按钮，您可以单击该按钮将其还原。您可以通过右键单击窗口的标题栏来显示窗口菜单，其中包含窗口操作的条目。这些包括工作区条目，可将窗口移动到另一个工作区（虚拟桌面）或所有工作区，这样无论您移动到哪个工作区窗口都会显示。
+
+## GNOME 文件管理器：Nautilus
+
+`Nautilus` 是 GNOME 文件管理器，支持复制、删除和移除项目等标准功能，以及设置权限和显示项目。它还提供诸如缩放功能、用户级别和主题支持等增强功能。您可以放大或缩小文件图标的大小，从初级、中级或专家级别中选择使用级别，并使用不同的主题自定义 `Nautilus` 的外观和感觉。`Nautilus` 还允许您设置文件列表的自定义视图，使您能够为目录图标显示图像，并在文件管理器窗口内运行组件应用程序。
+
+## Nautilus 窗口
+
+`Nautilus` 被设计为桌面外壳，不同组件可用于添加功能。例如，在 `Nautilus` 中，可以执行 Web 浏览器以在 `Nautilus` 文件管理器窗口中提供 Web 浏览功能。图像查看器可以显示图像。GNOME 媒体播放器可以播放声音和视频文件。GNOME File Roller 工具可以归档文件，以及从归档中提取文件。随着 Gstreamer 的实现，多媒体工具如 GNOME 音频记录器现在更容易集成到 `Nautilus` 中。
+
+标准的 `Nautilus` 窗口显示文件管理器命令的菜单栏和工具栏，以及顶部的地址栏（见图 6-2）。窗口其余部分分为两个窗格。左侧窗格是侧边窗格，用于显示当前工作目录的信息。右侧窗格是主面板，显示当前工作目录中的文件和子目录列表。窗口底部的状态栏显示有关所选文件或目录的信息。您可以通过在 `View` 菜单中选择其条目来打开或关闭这些元素中的任何一个。
+
+地址栏旁边有一个用于放大和缩小文件视图的元素。单击 `+` 按钮以放大，单击 `–` 按钮以缩小。缩放元素旁边是一个下拉菜单，用于选择文件的不同视图，例如图标、小图标或详细信息。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_136_0.png)
+
+## FIGURE 6-2 Nautilus file manager
+
+## Nautilus 侧边栏：树状结构、历史记录和笔记
+
+
+
+侧边栏有几种不同的视图，可从弹出菜单中选择，用于显示有关文件和目录的附加信息：信息、树状结构、历史记录和笔记。信息会显示当前目录或所选文件的详细信息。例如，如果你双击一个图像文件，信息窗格将显示图像的详细数据，而窗口窗格则显示完整的图像。树状视图将以树形分层的方式显示系统上的目录和文件，并突出显示你当前选择的那个。你可以使用此树状结构移动到其他目录和文件。树状结构映射了系统上的所有目录，从根目录开始。你可以通过单击其名称前的 `+` 或 `-` 符号来展开或收缩任何目录。通过单击目录名称来选择目录。然后该目录的内容将在主面板中显示。历史记录视图显示你之前访问过的文件或目录，方便你在目录或文件之间来回移动。
+
+笔记视图将显示你输入的关于某个项目或目录的笔记。笔记视图在侧窗格内打开一个可编辑的文本窗口。只需选择笔记视图并输入你的笔记即可。要为某个特定项目（如图像或声音文件）添加笔记，只需双击该项目以显示或运行它，然后选择笔记视图输入你的笔记。你也可以右键单击该项目，显示项目的弹出菜单并选择首选项，从中可以单击笔记面板。添加笔记后，你将在 `Nautilus` 窗口中看到该项目的图标上添加了笔记图像。
+
+## Nautilus 视图
+
+你可以将目录内容以图标或详细列表的形式查看。你可以从位置栏右侧的弹出菜单中选择不同的选项。列表视图提供名称、权限、大小、日期、所有者和组。在列表视图中，主面板顶部为每个字段显示按钮。你可以使用这些按钮按该字段对列表进行排序。例如，要按日期对文件进行排序，请单击日期按钮；要按大小排序，请单击大小。
+
+在图标视图中，你可以对图标进行排序并在不打开它们的情况下预览其内容。要对图标视图中的项目进行排序，请在视图菜单中选择排列项目条目，然后选择一个布局选项。某些类型的文件图标会显示其内容的预览——例如，图像文件的图标会显示图像的缩小版本。文本文件将在其图标中显示其文本的前几个词。放大条目会放大窗口的视图，使图标变大，而缩小则会缩小视图，使其变小。正常大小会将其恢复为标准大小。你也可以使用位置栏上的 `+` 和 `-` 按钮来更改大小。
+
+## Nautilus 菜单
+
+你可以在主面板的任何位置单击以显示一个弹出菜单，其中包含用于管理和排列文件管理器图标的条目（参见表 6-2）。要创建新文件夹，请选择新建文件夹，要打开新的文件管理器窗口，请选择新建窗口。排列项目条目显示一个子菜单，其中包含按名称、大小、类型、日期或甚至徽章对图标进行排序的条目。手动条目让你可以将图标随意移动到主面板上。使用默认背景让你可以更改文件管理器窗口上使用的背景。你也可以剪切、复制和粘贴文件，以便更轻松地在文件夹之间移动或复制它们。
+
+## 导航目录
+
+`Nautilus` 文件管理器运行方式与 Web 浏览器类似。它维护一个先前查看的目录列表，你可以使用工具栏按钮在该列表中前后移动。左箭头按钮将你移动到先前显示的目录，右箭头按钮将你移动到下一个显示的目录。向上箭头按钮将你移动
+
+| 菜单项 | 描述 |
+|---|---|
+| New Window | 在单独的窗口中打开文件或目录。 |
+| New Folder | 在目录中创建新的子目录。 |
+| Scripts | 选择要运行的脚本。 |
+| Arrange Items | 显示子菜单，可按名称、大小、类型、日期或徽章排列文件。 |
+| Cut, Copy, Paste | 剪切、复制或粘贴文件，让你可以在文件夹之间移动或复制文件。 |
+| Zoom In | 图标的特写视图，使其看起来更大。 |
+| Zoom Out | 图标的远景视图，使其看起来更小。 |
+| Normal Size | 将图标视图恢复为标准大小。 |
+| Use Default Background | 设置文件管理器主面板的背景图像。 |
+
+你到父目录，而 Home 按钮会带你到你的主目录。若要使用路径名直接进入某个目录，可以在位置框中输入路径名并按 `ENTER`。
+
+要打开子目录，可以双击其图标或单击图标后从文件菜单中选择打开。如果你想为该目录打开一个单独的 `Nautilus` 窗口，右键单击目录的图标并选择在新窗口中打开。要更改文件夹图标的大小，选择拉伸图标。图标图像上会出现手柄。单击并拖动手柄以更改其大小。要恢复图标，选择编辑菜单中的恢复图标原始大小。
+
+## 管理文件
+
+作为符合 `GNOME` 规范的文件管理器，`Nautilus` 支持用于复制和移动文件的 GUI 拖放操作。要移动文件或目录，可以像在 Windows 或 Mac 界面中一样从一个目录拖放到另一个目录。移动操作是 `GNOME` 中默认的拖放操作。要复制文件，按住 `CTRL` 键的同时正常拖放。如果将文件移动到另一个分区（文件系统）上的目录，它将被复制而不是移动。
+
+> 注意 `Nautilus` 现在通过 `nautilus-cd-burner` 包内置了 CD 刻录支持。只需将文件复制到 CD 刻录盘即可。
+
+你也可以通过右键单击其图标并从出现的弹出菜单中选择所需的操作，对文件执行删除、复制和创建链接操作（参见表 6-3）。例如，要删除一个项目，右键单击它并从弹出菜单中选择移至回收站条目。这会将其放入回收站目录，你之后可以通过从 `Nautilus` 文件菜单中选择清空回收站来删除它。要创建文件的副本，可以从弹出菜单中选择复制，在同一目录中创建副本版本。副本的名称将包含“`(copy)`”一词。要创建链接，右键单击文件并从弹出菜单中选择创建链接。这会创建一个以“`link`”开头的新链接文件。
+
+要重命名文件，你可以右键单击文件的图标并从弹出菜单中选择重命名条目，或单击其图标下方显示的文件名。图标的名称将在黑色背景中高亮显示，并被一个小文本框包围。然后你可以单击名称并删除旧名称，输入新名称。你也可以通过在属性对话框中输入新名称来重命名文件。使用右键单击并从弹出菜单中选择属性来显示属性对话框。在基本选项卡上，你可以更改文件的名称。
+
+文件操作可以对选定的文件和目录组执行。你可以通过多种方式选择一组项目。你可以单击第一个项目，然后按住 `SHIFT` 键的同时单击最后一个项目。你也可以将鼠标拖动到要选择的项目上。要选择分离的项目，按住 `CTRL` 键的同时单击各个图标。如果你想选择目录中的所有项目，选择编辑菜单中的全选条目。然后你可以一次拖动一组项目。这使你能够一次复制、移动甚至删除多个文件。
+
+| 菜单项 | 描述 |
+|---|---|
+| Open | 使用其关联的应用程序打开文件。目录在文件管理器中打开。 |
+| Open In A New Window | 在单独的窗口中打开文件或目录。 |
+| Open With | 选择用于打开此文件的应用程序。会显示可能的应用程序子菜单。 |
+| Scripts | 列出在所选文件上运行的 `Nautilus` 脚本。 |
+| Cut, Copy, Paste Files | 用于剪切、复制和粘贴文件的条目。 |
+| Duplicate | 在同一目录中创建文件的重复副本。 |
+| Make Link | 在同一目录中创建指向该文件的链接。 |
+| Rename | 重命名文件。 |
+| Move To Trash | 将文件移至回收站目录，你之后可以删除它。 |
+| Stretch Icon | 更改所选图标（文件夹）的大小。 |
+| Remove Custom Image | 删除你为图标选择的自定义图像。 |
+| Restore Icon's Original Size | 将你之前放大的所选图标恢复为标准大小。 |
+| Add To Archive | 使用 `File Roller` 归档文件。 |
+| Properties | 显示此文件的属性对话框。有三个面板：统计信息、选项和权限。 |
+
+## 表 6-3 Nautilus 文件弹出菜单
+
+可能的应用程序。如果你的应用程序未列出，可以选择其他应用程序以打开一个对话框，在其中选择你想要用于打开此文件的应用程序。你也可以使用文本查看器在文件管理器窗口内显示文件的原始内容。应用程序也支持拖放操作。你可以将数据文件拖到其关联的应用程序图标（例如桌面上的图标）；应用程序随后将使用该数据文件启动。
+
+## 文件和目录属性
+
+使用属性对话框，你可以查看文件的详细信息并设置选项和权限（参见图 6-3）。属性框有四个面板：基本、徽标、权限和备注。基本面板显示类型、大小、位置和修改日期等详细信息。类型是 MIME 类型，表示与其关联的应用程序类型。文件的图标显示在顶部，旁边有一个显示文件名的文本框。你可以在此文本框中编辑文件名，从而更改该名称。底部有一个标记为选择自定义图标的按钮，将打开一个显示可用图标的对话框。你可以从该窗口中选择想要的图标。删除自定义图标按钮将恢复默认图标图像。徽标面板使你能够设置要为此文件显示的徽标，并显示所有可用的徽标。权限面板显示读取、写入和
+
+## 图 6-3
+
+`Nautilus` 中的文件属性
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_140_0.png)
+
+该文件为用户、组和其他用户设置了执行权限。只要文件属于你，你就可以在此更改任意权限。该面板还会显示文件的所有者及其所属组。组名会展开为一个下拉菜单，列出不同的组，你可以从中选择一个来更改文件的组。“备注”面板会列出你为文件或目录添加的任何备注。它是一个可编辑的文本窗口，因此你可以直接修改或添加备注。
+
+
+
+某些类型的文件会显示额外的面板，提供有关该项的信息。例如，音频文件会有一个“音频”面板，列出音频文件的类型以及歌曲名称或压缩方法等其他信息。图像文件会有一个“图像”面板，列出图像的分辨率和类型。视频文件则会包含一个“视频”面板，显示视频文件的类型以及压缩和分辨率信息。
+
+## Nautilus 偏好设置
+
+你可以在“偏好设置”对话框中设置 Nautilus 文件管理器的偏好选项。要打开此对话框，请选择“编辑”菜单中的“偏好设置”项。“偏好设置”对话框显示一个主面板，其侧边栏包含多个配置条目，包括“外观”、“窗口”、“桌面与回收站”、“图标与列表视图”、“图标标题”、“侧边窗格”和“性能”。你可以使用这些对话框来设置 Nautilus 文件管理器的默认显示属性。例如，“窗口”允许你选择默认显示哪些栏，如侧边栏或工具栏。“外观”让你选择要使用的样式。在“侧边窗格”中，你可以选择显示哪个标签页，如历史或树状图。在“图标与列表视图”中，你可以选择显示和可执行选项，例如显示隐藏文件或用单击或双击激活项目。
+
+## Nautilus 作为 Web 浏览器
+
+Nautilus 也是一个可用的 Web 浏览器。你可以使用“位置”框访问任何 Web 或 FTP 站点。只需在“位置”框中输入网站的 URL，然后按回车键（无需指定 `www` 或 `http://`）。然而，Nautilus 并不是一个功能完备的 Web 浏览器。当你访问一个页面时，它会在侧边栏中显示按钮，以便使用你系统上安装的某个 Web 浏览器（如 Mozilla 和 Lynx）打开该页面。“转到”菜单和侧边栏中的“历史”标签页会维护你之前访问过的网站历史列表。你也可以右键单击“后退”或“前进”按钮来显示此历史列表。要清除历史列表，请在“转到”菜单中选择“清除历史记录”。Nautilus 还支持书签，你可以通过“书签”菜单显示和编辑书签。单击“Web 搜索”图标将打开你指定的首选 Web 搜索引擎页面，如 Yahoo 或 Google。
+
+> 提示 Nautilus 也具备互联网感知能力。你可以使用“位置”框访问 FTP 站点并显示该远程站点上的目录，然后将文件拖放到另一个文件管理器窗口中以下载到你的系统。务必包含 FTP 协议规范：`ftp://`。
+
+## GNOME 面板
+
+面板是 GNOME 界面的中心（参见图 6-4）。通过它，你可以启动应用程序、运行小程序以及访问桌面区域。你可以将 GNOME 面板视为桌面上可使用的一种工具。你可以让桌面上显示多个 GNOME 面板，每个面板中都放置了你自己添加的小程序和菜单。在这方面，GNOME 非常灵活，使你能够以任何想要的方式配置面板。你可以根据自己的需求自定义面板，放置自己选择的小程序和菜单。你可以添加新面板、向面板添加应用程序以及添加各种小程序。
+
+面板配置任务（如添加应用程序、选择小程序、设置菜单和创建新面板）可通过“面板”弹出菜单处理。只需右键单击面板上的任意位置，即可显示一个菜单，其中包含“属性”、“新建面板”、“添加到面板”和“删除此面板”等条目，以及帮助和关于条目。“新建面板”允许你创建其他面板；“添加到面板”允许你向面板添加项目，如应用程序启动器、用于“工作区切换器”等简单任务的小程序，以及主应用程序菜单等菜单。“属性”条目会显示一个对话框，用于配置该面板的功能，如面板的位置及其隐藏能力。
+
+> 注意 你可以通过单击面板上的按钮打开主菜单。在 Red Hat 中，主菜单按钮是一个风格化的红帽图片。它最初位于面板左侧，即屏幕的左下角。只需单击一次主菜单按钮即可。
+
+## 面板属性
+
+要配置单个面板，你可以使用“面板属性”对话框。要显示此对话框，请右键单击特定面板，然后在弹出菜单中选择“属性”条目。对于单个面板，你可以设置边缘面板配置和背景的功能。“面板属性”对话框包含一个带标签页的面板，分别对应这两项。在边缘面板设置中，你可以选择边缘面板的定位和最小化选项，包括“自动隐藏”功能。“隐藏按钮”功能使你能够自行隐藏面板。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_141_0.png)
+
+在“背景”面板中，您可以更改面板使用的背景图像。您可以选择一张图像，使其按比例缩放以适应面板，并选择背景颜色。对于图像，您还可以将图像文件从文件管理器拖放到面板上；该图像随后将成为面板的背景图像。
+
+## 显示面板
+
+您可以通过单击面板两端各自的隐藏按钮随时隐藏面板。隐藏按钮是显示小箭头的细按钮。这是指面板将隐藏的方向。要重新显示面板，请将鼠标移出屏幕的该方向到底部。您可以在面板的属性窗口中启用或禁用隐藏按钮。如果您希望面板在不使用时自动隐藏，请在面板配置窗口中选择自动隐藏选项。将鼠标移至屏幕底部即可重新显示面板。您还可以通过使用鼠标中键（双键鼠标同时按下两个按钮）在面板任一端单击并拖动，将面板移动到屏幕的另一边缘。
+
+## 添加面板
+
+要添加新面板，请在“面板”弹出菜单中选择“新建面板”条目。然后您可以选择面板类型，从菜单、边缘、浮动、滑动或角落面板中选择。默认是边缘面板。边缘面板显示在屏幕其中一条边缘上。您的原始面板就是一个边缘面板。菜单面板是作为跨越桌面顶部的菜单栏实现的面板，其中包含应用程序和操作的菜单。它可以容纳标准面板可以容纳的任何对象。浮动面板是可以放置在桌面任何位置的面板。滑动面板的大小取决于面板中的项目数量，可以放置在桌面的边缘任何位置。角落面板是更小的面板，其大小也取决于其上的项目数量，并放置在桌面边缘的角落。
+
+## 面板对象
+
+面板可以包含几种不同类型的对象。这些包括菜单、启动器、小程序、抽屉和特殊对象。
+
+- **Menus** 面板菜单的示例是主菜单。启动器是用于启动应用程序或执行命令的按钮。
+- **Launchers** Web 浏览器图标是启动器按钮的示例。您可以从主菜单中选择任何应用程序条目，并在面板上为其创建启动器。
+- **Applets** 小程序是设计为在面板内运行的小型应用程序。显示不同桌面的工作区切换器是 GNOME 小程序的示例。
+- **Drawers** 抽屉是面板的扩展，可以打开或关闭。您可以将抽屉视为面板的可收缩部分。您可以向其中添加任何可以添加到常规面板的内容，包括小程序、菜单，甚至其他抽屉。
+- **Special objects** 这些用于执行其他面板对象不支持的特殊任务。例如，注销和锁定按钮是特殊对象。
+
+## 应用程序启动器
+
+向面板添加应用程序很容易。对于主菜单中已有的应用程序，您只需转到其条目并右键单击它。然后选择“将此启动器添加到面板”条目。然后会自动将该应用程序的应用程序启动器添加到面板。假设您经常使用 `gedit` 并希望将其图标添加到面板，而不是每次都通过主菜单。右键单击“附件”菜单中的“文本编辑器”菜单条目，并选择“将此启动器添加到面板”选项。`gedit` 图标现在出现在您的面板中。
+
+要添加主菜单中没有的应用程序图标，首先右键单击面板以显示弹出菜单并选择“添加到面板”条目。从那里，选择“启动器”条目。这将打开“创建启动器”窗口，用于输入应用程序启动器的属性。系统会提示您输入应用程序名称、调用它的命令及其类型。要为启动器选择图标，请单击“图标”按钮。这将打开“图标浏览器”窗口，其中列出了可供选择的图标。
+
+## 添加抽屉
+
+您还可以将应用程序分组在抽屉图标下。单击抽屉图标会显示您可以选择的各种应用程序图标列表。要向面板添加抽屉，请右键单击面板并选择“抽屉”条目。然后您可以将项目从窗口拖到抽屉图标上，使其列在抽屉中。对于特定的菜单条目，您可以右键单击菜单条目并选择“将启动器添加到面板”。一旦进入面板，您可以将图标拖到抽屉中。
+
+如果您想将主菜单上的整个应用程序菜单作为抽屉添加到面板中，请右键单击该菜单中的任何项目，然后从弹出菜单中选择“整个菜单”，然后选择“将此作为抽屉添加到面板”条目。整个菜单将作为抽屉出现在您的面板上，其中包含图标而不是菜单条目。例如，假设您想将“Internet”应用程序菜单放在面板上。右键单击任何条目项目，选择“整个菜单”，并选择“将此作为抽屉添加到面板”。面板上会出现一个标记为“Internet”的抽屉，单击它会显示所有 Internet 应用程序的图标弹出列表。
+
+## 添加菜单
+
+菜单与抽屉不同之处在于抽屉保存应用程序图标而不是菜单条目。您可以将菜单添加到面板，就像添加抽屉一样。要将主菜单中的子菜单添加到面板，请右键单击任何项目并选择“整个菜单”，然后选择“将此作为菜单添加到面板”条目。菜单标题将出现在面板中；您可以单击它以显示菜单条目。
+
+您还可以将目录文件夹添加到面板。将文件夹图标从文件管理器窗口单击并拖到面板上。每当您单击此文件夹按钮时，都会打开一个文件管理器窗口，显示该目录。您已经拥有用于主目录的文件夹按钮。您可以将目录文件夹添加到面板上的任何抽屉。
+
+## 移动和删除对象
+
+要移动面板中的任何对象，甚至是菜单图标，只需用鼠标中键拖动它即可。您也可以右键单击它并选择“移动小程序”以让您移动小程序。您可以将其移动到同一面板上的不同位置或移动到不同的面板。在移动对象时，您可以让它们推开、与之交换或跳过面板上遇到的其他对象。要推开一个对象，请在移动该对象时按住 SHIFT 键。要切换对象，请按住 CTRL 键，要跳过对象，请按住 ALT 键。要从面板中移除对象，请右键单击它以显示其弹出菜单，然后选择“Remove From Panel”条目。
+
+
+
+## Special Panel Objects
+
+特殊面板对象执行其他面板对象不支持的操作。目前，这些包括 `Lock`、`Logout` 和 `Launcher` 按钮，以及被吞没的应用程序和状态停靠栏。`Lock` 按钮显示一个挂锁，将锁定你的桌面，改用屏幕保护程序。要访问桌面，请单击它，然后在密码提示处输入你的用户密码。`Logout` 按钮显示一个带半月的显示器。单击它将显示注销对话框，然后你可以注销。这与从主菜单中选择注销相同。`Launcher` 按钮显示一个启动器图标。它打开创建启动器对话框，允许你输入或选择要运行的应用程序。
+
+状态停靠栏设计用于容纳状态停靠小部件。状态停靠小部件提供应用程序的当前状态信息。支持状态停靠小部件的 KDE 应用程序在 GNOME 下运行时可以使用 GNOME 状态停靠栏。
+
+## GNOME Applets
+
+小程序是面板内执行任务的小程序。要添加小程序，请右键单击面板并从弹出菜单中选择 `Add To Panel`。这会显示其他弹出菜单，列出小程序的类别以及可用的小程序的进一步列表。选择你想要的那个。例如，要将时钟添加到你的面板，请从 `Accessories` 菜单中选择 `Clock`。要移除小程序，请右键单击它并选择 `Remove From Panel` 条目。你也可以在主菜单中选择 `Applets` 菜单并选择要添加到面板的小程序。
+
+GNOME 具有许多有用的小程序，例如 `CPU` 监视器和邮件检查器。一些小程序监视你的系统，例如 `Battery Monitor`，它检查笔记本电脑中的电池，以及 `System Monitor Usage`，它显示指示当前 `CPU` 和内存使用情况的图表。`Volume Control` 小程序显示一个小的滚动条用于调节音量。`CD` 播放器显示一个小的 `CD` 界面用于播放音乐 `CD`。
+
+对于 Internet 任务，有 `Inbox Monitor`、`Modem Lights` 和 `Wireless Link Monitor` 小程序。`Inbox Monitor` 检查收到的邮件。要配置 `Inbox Monitor`，请右键单击它并选择 `Preferences` 条目。你可以设置检查频率，以及指定是否检查本地邮箱或远程 `POP3` 和 `IMAP` 邮箱。`Modem Lights` 功能监视你的调制解调器连接。你可以配置它以通过调制解调器监视到 `ISP` 的 `PPP` 连接。`Wireless Link` 使你能够监视无线传输的质量。
+
+几个有用的实用小程序为你的桌面提供额外功能。`Clock` 小程序可以以 12 小时或 24 小时格式显示时间。右键单击 `Clock` 小程序并选择 `Preferences` 条目以更改其设置。`Disk Mounter` 小程序使你能够通过单击即可挂载驱动器。你可以为你拥有的每个设备创建一个 `Disk Mounter` 小程序，例如软盘驱动器和 `CD-ROM`。要挂载文件系统，你只需单击面板中的相应 `Disk Mounter` 图标即可（有助于快速挂载软盘驱动器）。要指定要挂载的文件系统，请使用 `Disk Mounter Preferences` 对话框。
+
+你的 GNOME 系统提供了几个桌面小程序，你可以使用它们来配置桌面，例如 `Background`、`Screensaver` 和 `Theme Selector`。你使用 `Background` 小程序来选择背景颜色或图像，使用 `Screensaver` 小程序来选择屏幕保护程序图像和等待时间，使用 `Theme Selector` 小程序来选择主题。
+
+`File Types and Programs` 小程序使你能够为系统指定多用途 Internet 邮件扩展（`MIME`）类型条目，将给定的 `MIME` 类型与某些应用程序关联起来。请注意，基本的 `MIME` 类型条目已存在。你可以编辑条目并更改其关联的应用程序。
+
+对于声音配置，`Sound` 小程序让你可以选择在不同 GNOME 应用程序中的事件播放的声音文件。对于你的键盘，你可以使用 `Keyboard` 小程序设置重复灵敏度和单击声音。你可以为右手或左手配置鼠标按钮，并调整鼠标移动。
+
+GNOME 在你的主目录中设置了几个配置文件和目录。`.gnome` 和 `.gnome2` 目录保存不同桌面组件的配置文件，例如 `nautilus` 用于文件管理器，`panel` 用于面板，以及 `gmenu` 用于主菜单；`.gtkrc` 保存 `GTK+` 小部件的配置指令。`.gnome-desktop` 目录保存你放置在桌面上的所有项目。
+
+## GNOME Directories and Files
+
+Red Hat 在系统的 `/usr/bin` 目录中安装 GNOME 二进制文件。GNOME 库位于 `/usr/lib` 目录中。GNOME 还有自己的包含用于编译和开发 GNOME 应用程序的头文件的 include 目录，`/usr/include/libgnome` 和 `/usr/include/libgnomeui`（参见表 6-4）。位于 `/usr/share/gnome` 中的目录包含用于配置 GNOME 环境的文件。
+
+| System GNOME Directories | Contents |
+|---|---|
+| `/usr/bin` | GNOME programs. |
+| `/usr/lib` | GNOME libraries. |
+| `/usr/include/libgnome` | Header files for use in compiling and developing GNOME applications. |
+| `/usr/include/libgnomeui` | Header files for use in compiling and developing GNOME user interface components. |
+| `/usr/share/gnome/apps` | Files used by GNOME applications. |
+| `/usr/share/gnome/help` | Files used by the GNOME Help system. |
+| `/usr/share/doc/gnome*` | Documentation for various GNOME packages, including libraries. |
+| `/etc/X11/gdm/gdmrc` | GNOME configuration file invoked with the GNOME Display Manager (`GDM`). |
+| `/etc/gconf` | GConf configuration files. |
+
+TABLE 6-4   GNOME Configuration Directories
+
+| 用户 GNOME 目录 | 内容 |
+|---|---|
+| `.gnome`, `.gnome2` | 保存用户 GNOME 桌面和 GNOME 应用程序的配置文件。包括面板、背景、`MIME` 类型和会话的配置文件。 |
+| `.gnome-desktop` | 用户将文件、目录和链接放置在桌面上时，这些文件将驻留在该目录中。 |
+| `.gnome2_private` | 用户的私有 GNOME 目录。 |
+| `.gtkrc` | `GTK+` 配置文件。 |
+| `.gconf` | GConf 配置数据库。 |
+| `.gconfd` | GConf `gconfd` 守护进程管理文件。 |
+| `.nautilus` | `Nautilus` 文件管理器的配置文件。 |
+
+## 表 8-4 GNOME 配置目录（续）
+
+## GNOME 用户目录
+
+GNOME 为每个用户在其主目录中设置了多个以 `.gnome` 开头且名称中带有前置句点的隐藏目录。`.gnome` 和 `.gnome2` 保存用于配置用户 GNOME 桌面和应用程序的文件。面板、`MIME` 类型和会话等配置文件位于此处。特定 GNOME 应用程序的配置文件保存在 `apps` 子目录中。`.gnome-desktop` 目录保存用户拖到桌面的任何文件、文件夹或链接。`.gtkrc` 是 `GTK+` 库的用户配置文件，其中包含诸如键绑定、颜色和窗口样式等资源的当前桌面配置指令。
+
+## GConf
+
+从 GNOME 2.0 开始，GNOME 正式实现 `GConf` 以提供底层配置支持。`GConf` 对应于 Windows 系统上使用的注册表。它由一系列用于实现 GNOME 桌面配置数据库的库组成。这种标准化的配置数据库允许 GNOME 应用程序之间进行一致的交互。由多种其他程序构建的 GNOME 应用程序，如 `Nautilus`，可以使用 `GConf` 根据单一标准配置所有这些程序，并将配置维护在单一数据库中。目前 `GConf` 数据库以用户 `.gconf` 目录中的 `XML` 文件形式实现。数据库交互和访问由 GConf 守护进程 `gconfd` 执行。
+
+## 章节
+
+## K 桌面环境：KDE
+
+
+
+# KDE 桌面环境
+
+K 桌面环境（`KDE`）是一个网络透明的桌面，包含标准桌面功能，如窗口管理器和文件管理器，以及涵盖大多数 Linux 任务的广泛应用程序集。`KDE` 是一个面向互联网的系统，包含一套完整的集成网络/互联网应用程序，包括邮件客户端、新闻阅读器和 Web 浏览器。文件管理器兼作 Web 和 FTP 客户端，使您能够直接从桌面访问互联网站点。`KDE` 旨在提供在 `MAC/OS` 和 `Windows` 系统中发现的桌面功能和易用性，同时结合 Unix 操作系统的强大功能和灵活性。
+
+`KDE` 桌面由 `KDE` 项目开发和分发，`KDE` 项目是一个由世界各地数百名程序员组成的大型开放团体。`KDE` 完全是免费的开源软件，根据 `GNU` 公共许可证提供，并可免费获取其源代码。`KDE` 开发由核心团队管理：`KDE` 核心团队。任何人都可以申请，但成员资格基于功绩。
+
+> 注意 `KDE` 应用程序是使用多种支持的 `KDE` 技术开发的。其中包括 `KIO`，它提供跨网络对文件和目录的无缝和模块化访问。对于进程间通信，`KDE` 使用桌面通信协议（`DCOP`）。`KParts` 是 `KDE` 组件对象模型，用于将一个应用程序嵌入到另一个应用程序中，例如将电子表格嵌入到文字处理器中。`XML` GUI 使用 `XML` 生成和放置 GUI 对象，如菜单和工具栏。`KHTML` 是一个 HTML 渲染和绘制引擎。
+
+大量专门为 `KDE` 编写的应用程序可以从桌面轻松访问。其中包括编辑器、照片和绘画图像应用程序、电子表格和办公应用程序。此类应用程序通常在其名称中包含字母 k——例如 `KWord` 或 `KMail`。`KDE` 桌面提供了各种工具。其中包括计算器、控制台窗口、记事本，甚至软件包管理器。在系统管理层面，`KDE` 提供了多个用于配置系统的工具。使用 `KUser`，您可以管理用户账户，添加新账户或删除旧账户。几乎所有 Linux 任务都可以通过 `KDE` 桌面执行。`KDE` 应用程序还具有
+
+## Qt 库
+
+`KDE` 使用的 GUI 工具库是 Trolltech（`www.trolltech.com`）开发并支持的 `Qt` 库。`Qt` 被认为是 Unix/Linux 系统上可用的最佳 GUI 库之一。使用 `Qt` 的优势在于依赖于商业开发和支持的 GUI 库。此外，使用 `Qt` 库大大减少了 `KDE` 的开发时间。Trolltech 以开源软件的形式提供 `Qt` 库，可自由分发。然而存在某些限制：基于 `Qt`（`KDE`）的应用程序必须免费且开源，并且不得对 `Qt` 库进行修改。如果你使用 `Qt` 库开发应用程序并想出售它，那么你必须从 Troll Tech 购买许可证。换句话说，`Qt` 库对于免费和开源应用程序是免费的，但对于商业应用程序则不是。
+
+## KDE 桌面
+
+`KDE` 的目标之一是为用户提供一致的集成桌面，所有应用程序都使用 GUI 界面（见图 7-1）。为此，`KDE` 提供了自己的窗口管理器（`KWM`）、文件管理器（`Konqueror`）、程序管理器和桌面面板（`Kicker`）。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_150_0.png)
+
+图 7-1 `KDE` 桌面
+
+你可以在 `KDE` 中运行任何其他符合 `X Window System` 的应用程序，例如 Mozilla，以及任何 `GNOME` 应用程序。反过来，你也可以在 `GNOME` 中运行任何 `KDE` 应用程序，包括 `Konqueror` 文件管理器。
+
+## KDE 菜单
+
+当你启动 `KDE` 时，`KDE` 面板会显示在屏幕底部。面板上放置有菜单和程序的图标，以及不同桌面屏幕的按钮。对于 `Bluecurve` 界面，`KDE` 面板被设计成看起来与 `GNOME` 面板完全相同。在 `Red Hat` 上，主菜单按钮显示一顶红色的 fedora，就像 `GNOME` 界面一样（通常这是一个齿轮上的 K 图像，顶部有一个小箭头表示它是菜单）。
+
+这是 `KDE` 主菜单的按钮。单击此按钮可显示你运行的应用程序菜单（你也可以通过按 `ALT-F1` 打开主菜单）。从 `KDE` 菜单中，你可以访问不同类型应用程序的众多子菜单。菜单还包括某些关键项目，如注销，用于退出 `KDE`；锁定屏幕，用于锁定你的桌面；控制中心，用于配置你的 `KDE` 桌面；运行命令，用于从命令行运行程序；你的主目录，用于快速浏览你的主目录；以及帮助，启动 `KDE` 帮助工具。
+
+随 `KDE` 安装的标准 `KDE` 应用程序可以通过此菜单访问。在 `Bluecurve` 上，主菜单的大多数条目与 `GNOME` 上的条目相同。条目已为两个界面标准化。你可以找到 Internet、系统设置、图形和办公等类别的条目。在 `Red Hat` 上，这些菜单列出了你可以使用 `GNOME` 和 `KDE` 应用程序。More 菜单中包含子菜单，其中条目可能在 `KDE` 和 `GNOME` 之间有所不同。例如，在 `KDE` 中，办公菜单中的 More Office Applications 子菜单显示 `KOffice` 的条目，如 `KWord` 或 `KSpread`。More Internet Applications 菜单包含众多 `KDE` Internet 应用程序，如 `KMail` 和 `Konqueror` Web 浏览器。大多数 `KDE` 系统工具位于 More System Tools 菜单中，包括 `KDiskFree` 和 `KSystemGuard`。这些 More 菜单不限于 `KDE` 应用程序，有时 `KDE` 应用程序包含在主菜单中。`Red Hat` 只是将更可能使用的应用程序放在主菜单中，而将不太可能使用的应用程序放在 More 菜单中。
+
+> 提示 在 `KDE` 开始这里窗口中，首选项窗口包含的工具与 `GNOME` 首选项窗口不同，仅显示少数专用配置工具。最好使用主菜单的 Preferences 菜单或 `KDE` 控制中心来配置 `KDE`（主菜单上的控制中心）。
+
+## 退出 KDE
+
+要退出 `KDE`，你可以选择主菜单中的注销条目，或在桌面任何位置右键单击并从弹出菜单中选择注销条目。如果你退出时留下任何 `KDE` 或 `X11` 应用程序或窗口打开，它们在再次启动时会自动恢复。如果你只是想锁定桌面，你可以选择主菜单上的锁定屏幕条目，你的屏幕保护程序将出现。要访问锁定的桌面，单击屏幕会出现一个框提示你输入登录密码。输入密码后，你的桌面将重新出现。
+
+> 注意 你可以通过在桌面上右键单击时显示的桌面弹出菜单中选择“启用桌面菜单”来显示桌面操作的菜单。你可以使用“创建新”菜单创建新的快捷方式，称为桌面文件，用于应用程序和设备，以及访问打开的窗口或切换到不同的虚拟桌面。
+
+## KDE 桌面操作
+
+左侧显示一行图标。这些图标包括一个标记为“回收站”的主目录文件夹图标、一个“开始这里”图标，以及软盘和 CD-ROM 图标，还有用于访问配置工具的“开始这里”文件夹。回收站图标的工作方式类似于 `Windows` 中的回收站或 Mac 上的废纸篓。将项目拖放到其中即可暂存以便删除。你可以使用软盘和 CD-ROM 图标来挂载、卸载并显示 CD-ROM 和软盘的内容。
+
+> 提示 你可以在“首选项”菜单上运行“桌面设置向导”，轻松更改你的桌面设置。
+
+屏幕底部显示的 `KDE` 面板最初显示 `KDE` 主菜单、Web 浏览器、办公工具、时钟以及虚拟桌面按钮等的小按钮。桌面支持拖放操作。例如，要打印文档，只需将其拖到打印机图标即可。你可以将任何目录放置在桌面上，只需从文件管理器窗口将其拖到桌面即可。桌面还支持复制和粘贴操作，将你从一个应用程序复制的文本保存在桌面剪贴板中，然后可将其粘贴到另一个应用程序中。你甚至可以从 `Konsole` 窗口复制和粘贴。例如，你可以从网页复制一个 Web 地址，然后将其粘贴到电子邮件消息或文字处理文档中。此功能由位于面板上的 `Klipper` 实用程序提供支持。
+
+你可以通过在桌面上的任意位置右键单击并选择“创建新”，然后从弹出菜单中选择“目录”来在桌面上创建新目录。桌面上出现的所有项目都位于你的主目录中的“桌面”目录中。你可以在其中找到“回收站”目录，以及你放置在桌面上的其他目录。
+
+## 配置你的桌面
+
+要配置你的桌面，请右键单击桌面并选择“配置桌面”条目。这会显示一个窗口，其中包含“外观”、“行为”、“多个桌面”、“路径”、“背景”和“屏幕保护程序”等条目。所有这些功能也可以使用 `KDE` 控制中心中的“外观和主题”面板进行配置。
+
+- 外观让你可以设置文本的字体和颜色。
+- 行为让你可以启用某些功能的显示，例如在屏幕顶部显示桌面菜单，或在桌面上显示图标。你还可以选择桌面上鼠标单击的操作。右键单击当前显示桌面菜单。你还可以指定要在桌面上显示哪些设备。
+- “多个桌面”面板让你可以选择要显示的虚拟桌面数量。
+- 路径让你可以选择你的 `KDE` 用户目录的位置，例如回收站目录或桌面目录，甚至你希望将文档放置的位置。
+- 背景让你可以为每个虚拟桌面选择背景颜色或图像。
+- 屏幕保护程序让你可以选择屏幕保护程序及其定时。已经配置了众多屏幕保护程序。
+
+
+
+对于你的桌面，你还可以选择各种不同的主题。主题会改变你的桌面的外观和感觉，影响 GUI 元素的显示，例如滚动条、按钮和图标。例如，你可以使用 `Mac OS` 主题使你的 `K` 桌面看起来像 `Macintosh`。你可以在 `KDE` 控制中心（外观和主题）中使用主题管理器来选择主题并安装新的主题。已经为你安装了多个主题，包括 `Bluecurve`（当前主题）、`Default`（`KDE` 主题）以及 `Nostalgia`，它看起来有点像其他流行的 GUI。`K` 桌面的更多主题可以从 `themes.freshmeat.net` 网站下载。该网站显示所有窗口管理器的主题。务必选择 `KDE` 条目以获取 `KDE` 主题。
+
+## 桌面文件
+
+在 `KDE 3.0` 桌面上，使用名为桌面文件的特殊文件来管理各种任务，包括设备管理、Internet 连接、程序管理和文档类型。你可以通过右键单击桌面然后选择“创建新”来创建桌面文件。从此菜单中，你选择要创建的桌面文件类型。
+
+“目录”条目让你可以创建指向系统上目录的链接。“硬盘”、“CD-ROM”和“软盘设备”条目各自创建可挂载系统上 CD-ROM、硬盘或软盘的桌面文件。“文本文件”和“HTML 文件”条目用于引用系统上的文本文件和网页。“链接到应用程序”条目用于启动应用程序。“链接到位置（URL）”条目保存可用于访问 Web 或 FTP 站点的 URL 地址。
+
+## URL 桌面文件
+
+要创建 URL 桌面文件，请右键单击桌面并选择“创建新”菜单，然后选择“链接到位置（URL）”条目。会出现一个窗口，其中显示一个框，提示你输入文件的名称和 URL 地址。你以后可以通过右键单击它并选择“属性”来编辑桌面文件。然后会显示一个用于 URL 访问的桌面对话框。此对话框有四个标签页面板：常规、权限、URL 和元信息（参见图 7-2）。在“常规”面板上是你的桌面文件的名称。它将以你输入的名称作为名称。该面板上的“图标”按钮显示将在桌面上为此桌面文件显示的图标。默认是 Web 图标。你可以通过单击“图标”按钮打开一个列出可供选择的图标的窗口来更改它。完成后单击“确定”。桌面文件随后会以该图标出现在你的桌面上。在“URL”面板上，你会看到一个标记为 URL 的框，其中已包含你输入的 URL。你可以更改它。例如，对于在线主题，URL 将为 `http://themes.freshmeat.net`。务必包含协议，例如 `http://` 或 `ftp://`。
+
+![](img/6c226e8ba1efd427decfbf582418d33f_154_0.png)
+
+FIGURE 7-2 The desktop dialog box
+
+## KDE Windows
+
+A `KDE` window has the same functionality you find in other window managers and desktops. You can resize the window by clicking and dragging any of its corners or sides. A click-and-drag operation on a side extends the window in that dimension, whereas a corner extends both height and width at the same time. Notice that the corners are slightly enhanced. The top of the window has a title bar showing the name of the window, the program name in the case of applications, and the current directory name for the file manager windows. The active window has the title bar highlighted. To move the window, click this title bar and drag it where you want. Right-clicking the window title bar displays a drop-down menu with entries for window operations, such as closing or resizing the window. Within the window, menus, icons, and toolbars for the particular application are displayed.
+
+You can configure the appearance and operation of a window by selecting the `Configure Window Behavior` entry from the Window menu (right-click the title bar). Here you can set appearance (Window Decorations), button and key operations (Actions), the focus policy such as a mouse click on the window or just passing the mouse over it (Focus), how the window is displayed when moving it (Moving), and advanced features like moving a window directly to another virtual desktop, Active Desktop Borders. All these features can be configured also using the `KDE` Control Center’s “Appearance & Themes” panel.
+
+Opened windows are also shown as buttons on the `KDE` taskbar located on the panel. The taskbar shows the different programs you are running or windows you have open. This is essentially a docking mechanism that lets you change to a window or application just by clicking its button. When you minimize (iconify) a window, it is reduced to its taskbar button. You can then restore the window by clicking its taskbar button. To the right of the title bar are three small buttons for minimizing, maximizing, or closing the window. You can switch to a window at any time by clicking its taskbar button. From the keyboard, you can use the `ALT-TAB` key combination to display a list of current applications. Holding down the `ALT` key and sequentially pressing `TAB` moves you through the list.
+
+> TIP `KDE` supports numerous different themes, of which one is Red Hat’s `Bluecurve`, each displaying window elements in different ways. The Red Hat `Bluecurve` window theme for `KDE 3.0` is shown in these examples.
+
+
+
+Application windows may display a Help Notes button, shown next to the iconify button and displaying a question mark. Clicking this button changes your cursor to a question mark. You can then move the cursor to an item such as an icon on a toolbar, then click it to display a small help note explaining what the item does. For example, clicking a Forward button in the file manager taskbar will show a note explaining that this button performs a browser forward operation.
+
+## Virtual Desktops: The KDE Desktop Pager
+
+KDE, like most Linux window managers, supports virtual desktops. In effect, this extends the desktop area on which you can work. You could have Mozilla running on one desktop and be using a text editor in another. KDE can support up to 16 virtual desktops, though the default is four. Your virtual desktops can be displayed and accessed using the KDE Desktop Pager located on the panel. The KDE Desktop Pager represents your virtual desktops as miniature screens showing small squares for each desktop. It is made to look exactly like the Bluecurve GNOME Workspace Switcher described in Chapter 6. By default, there are four squares, numbered 1, 2, 3, and 4. You can have up to 16. To move from one desktop to another, click the square for the destination desktop. Clicking 3 displays the third desktop, and clicking 1 moves you back to the first desktop. If you want to move a window to a different desktop, first open the window’s menu by right-clicking the window’s title bar. Then select the To Desktop entry, which lists the available desktops. Choose the one you want. You can also right-click the window’s title bar to display the window’s menu.
+You can also configure KDE so that if you move the mouse over the edge of a desktop screen, it automatically moves to the adjoining desktop. You need to imagine the desktops arranged in a four-square configuration, with two top desktops next to each other and two desktops below them. You enable this feature by enabling the Active Desktop Borders feature in the Desktop | Window Behavior | Advanced panel in the KDE Control Center.
+To change the number of virtual desktops, you use the KDE Control Center’s Desktop entry. Either select the Configure Desktop entry in the Desktop pop-up menu (right-click anywhere on the desktop background) and choose Multiple Desktops, or select Control Center from the main menu and open the Desktop heading, to select the Multiple Desktops entry. The visible bar controls the number of desktops. Slide this to the right to add more and to the left to reduce the number. You can change any of the desktop names by clicking a name and entering a new one. In the Appearance & Theme’s Background entry, you can change the appearance for particular desktops such as color background and wallpaper (deselect Common background first).
+
+## KDE 面板：Kicker
+
+KDE 面板（Kicker）位于屏幕底部，提供对大多数 KDE 功能的访问（见图 7-3）。面板包含菜单、目录窗口、特定程序和虚拟桌面的图标。面板左端有一个主菜单按钮（也称为 K 菜单），在 Red Hat 上是一个红帽图标。
+要向面板添加应用程序，请在面板上的任意位置右键单击并从弹出菜单中选择 Add。Add 菜单显示您可以添加的对象类型，例如小程序、应用程序、扩展和特殊按钮。对于 KDE 应用程序，选择 applications 条目。这会列出所有已安装的 KDE 应用程序。单击应用程序条目即可向面板添加应用程序按钮。您也可以直接从文件管理器窗口或主菜单将应用程序拖放到面板上，并让它们自动放置在面板中。面板仅显示桌面文件。当您将文件拖放到面板时，会自动为其生成桌面文件。
+Kicker 还支持众多小程序和多个扩展。小程序设计为在面板中以图标形式运行。其中包括时钟、分页器和系统监视器。扩展为桌面添加组件。例如，Kasbar 扩展会为打开的每个窗口设置自己的面板并列出图标。您可以通过单击 Kasbar 扩展面板中对应的图标轻松在窗口之间切换。特殊按钮包括用于 KDE 特定操作的按钮，如 KDE 窗口列表、Kterm 终端窗口、KDE 打印管理器和 KDE 首选项。
+要配置面板位置和行为，请右键单击面板并选择 Configure Panel 条目。这会显示一个自定义控制模块窗口，该窗口从 KDE 控制中心收集面板配置条目。有三个配置窗口：Layout、Appearance 和 Taskbar。它们分别对应 KDE 控制中心的 Desktop | Panels、Appearance & Themes | Panels 和 Desktop | Taskbar 条目。
+Layout 工具有三个标签页面板：Arrangement、Hiding 和 Menus。Arrangement 面板使您可以指定要在其上显示面板和任务栏的屏幕边缘。您还可以放大或缩小其大小。Hiding 面板让您可以设置隐藏模式，是启用自动隐藏还是手动隐藏和显示任务栏。Menus 面板让您可以控制菜单的大小以及是否将最近打开的文档显示为菜单项。您还可以选择某些默认条目，如 Preferences 和 Bookmarks，以及直接编辑 K 菜单，添加或删除项目。Appearance 工具让您可以设置按钮颜色和任务栏的背景图像。使用 Taskbar 工具，您可以控制在任务栏上显示的窗口和任务，以及设置按钮操作。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_156_0.png)
+
+**图 7-3** KDE 面板
+
+## KDE 帮助中心
+
+
+
+# KDE 帮助中心
+
+KDE 帮助中心为访问和显示 KDE 帮助文件以及 Linux Man 和 info 文件提供类似浏览器的界面。您可以通过在主菜单（救生圈）中选择其条目，或右键单击桌面并选择 Help 条目来启动帮助中心。帮助窗口分为两个框架。帮助屏幕的左侧框架包含两个标签页面板，一个列出内容，另一个提供词汇表。右侧框架显示当前选定的文档。内容面板上的帮助树让您可以选择要访问的帮助文档类型。在这里您可以选择手册、Man 页面或 info 文档，甚至应用程序手册。帮助中心包含详细的 用户手册、FAQ 和 KDE 网站访问。
+
+导航工具栏使您能够在先前查看的文档之间移动。KDE 帮助文档使用 HTML 格式，并带有可单击的链接以访问其他文档。Back 和 Forward 命令可在先前查看的文档列表中移动。KDE 帮助系统提供了一个有效的搜索工具，用于在帮助文档中搜索模式，包括 Man 和 info 页面。从 Edit 菜单选择 Find 条目以显示一个页面，您可以在其中输入模式。
+
+## 应用程序
+
+您可以通过多种方式在 KDE 中启动应用程序。如果主菜单中有其条目，您可以选中该条目来启动应用程序。一些应用程序也在 KDE 面板上带有按钮，您可以单击这些按钮来启动它们。面板已包含多个常用程序，例如 Kate 文本编辑器和 KMail。您也可以使用文件管理器来定位使用该应用程序的文件或应用程序程序本身。单击其图标即可启动应用程序。或者，您可以打开一个 shell 窗口，在 shell 提示符下输入应用程序名称并按 `ENTER` 来启动应用程序。您也可以按 `ALT-F2` 打开一个小窗口，其中包含一个用于输入单个命令的框。您可以使用 `UP ARROW` 和 `DOWN ARROW` 键显示以前的命令，并使用 `RIGHT ARROW` 和 `LEFT ARROW` 键或 `BACKSPACE` 键编辑其中任何一个。按 `ENTER` 执行命令。
+
+> **注意** 您可以通过简单地单击并拖动其菜单条目到桌面，为 KDE 菜单上已有的任何应用程序在桌面上创建一个桌面文件。选择 `Copy`，即会在桌面上为该应用程序创建桌面文件，并显示其图标。
+
+## 应用程序标准链接
+
+您也可以直接从桌面访问应用程序。要从桌面访问应用程序，请创建桌面文件或可以链接到原始应用程序程序的标准链接文件。使用桌面文件，您可以选择自己的图标并指定 ToolTip 注释。您还可以使用桌面文件启动在自己的终端窗口中运行的基于 shell 的应用程序。另一方面，标准链接是对原始程序文件的简单引用。使用链接会直接启动程序且不带任何参数。要创建标准链接文件，请将主菜单中的应用程序选中并拖到桌面，或在文件系统上定位应用程序，通常在 `/bin`、`/usr/bin` 或 `/usr/sbin` 目录中，然后单击并拖动应用程序图标到桌面。在弹出菜单中，选择 `Link`。链接具有与原始应用程序相同的图标。每当您
+
+然后双击该图标，应用程序将启动。你也可以使用此方法运行自己创建的应用程序程序，将其定位在自己的目录中，并在桌面上为其创建链接。
+
+## 应用程序桌面链接
+
+要为应用程序创建新的桌面文件，在空桌面上任意位置右键单击，从弹出菜单中选择新建，然后选择链接到应用程序。输入程序的名称，一个以该名称命名的桌面文件会出现在桌面上。然后会打开一个属性对话框，其中包含四个面板：常规、权限、执行和应用程序。常规面板显示链接的名称。要为桌面文件选择图标图像，请单击图标。此时会显示选择图标窗口，其中列出可供选择的图标。要指定桌面文件运行的应用程序，请转到执行面板，并在执行框中输入应用程序的程序名称，或单击浏览进行选择。如果这是一个 shell 程序，你可以选择在终端窗口中运行它。要运行诸如 Vi 之类的基于 shell 的程序，请单击在终端中运行复选框并指定任何终端选项。某些 KDE 程序可以最小化为一个小图标，在运行时可在面板中显示。这称为嵌入到面板。 在执行框中输入程序的名称。
+
+在权限面板上，请确保设置执行权限，以便可以运行程序。你可以为自己、你的组或系统上的任何用户设置权限。元信息面板将列出所使用的文件系统类型。在应用程序面板中，你可以指定要与此应用程序关联的文档类型。面板底部显示两个列表。左侧列表是要与此程序关联的 MIME 类型，右侧列表是从中选择的可用 MIME 类型列表。要添加 MIME 类型，请在右侧列表中选择一个条目，然后单击左箭头按钮。使用右箭头按钮可删除 MIME 类型。在面板上，你还可以指定描述和注释。对于描述，输入应用程序名称。这是链接的名称；如果你使用文件管理器来显示它。注释是在将鼠标悬停在图标上时出现的帮助说明。
+
+桌面文件不必位于桌面上。你可以将它们放在任何目录中，并通过文件管理器访问它们。稍后，你可以通过右键单击其图标并从弹出菜单中选择属性来更改桌面文件。这将再次显示此文件的对话框。你可以更改其图标，甚至更改其运行的应用程序。
+
+> 提示 你可以让 KDE 在启动时自动显示选定的目录或启动某些应用程序。为此，请将这些窗口和应用程序的链接放在位于你的 `.kde` 目录中的 `AutoStart` 目录中。
+
+## 从桌面挂载 CD-ROM 和软盘
+
+当 Red Hat 安装 KDE 时，会为你的 CD-ROM 和软盘创建桌面图标。要访问 CD-ROM 磁盘，请将 CD-ROM 盘放入 CD-ROM 驱动器，然后双击 CD-ROM 图标。文件管理器窗口随即打开，显示 CD-ROM 顶层目录的内容。要弹出光盘，请右键单击 CD-ROM 的图标并从弹出菜单中选择弹出（你也可以选择仅卸载 CD-ROM）。要访问软盘，你可以使用软盘图标执行类似操作。将软盘放入磁盘驱动器并双击软盘图标。这将显示一个文件管理器窗口，其中包含软盘的内容。请注意，不要在先卸载之前取出磁盘。要卸载磁盘，请右键单击其图标并从图标的弹出菜单中选择卸载。你还可以对软盘执行一项额外操作。如果放入一张空白磁盘，你可以对其进行格式化。你可以从多种文件系统格式中进行选择，包括 MS-DOS。要格式化标准 Linux 文件系统，请选择 ext3 条目。
+
+你用于 CD-ROM 的桌面文件是一种特殊类型的桌面文件，专为文件系统设备设计。如果添加新的 CD-ROM 或软盘驱动器，你可以为其创建一个新的桌面文件，以便从桌面访问该驱动器。要创建它，首先在桌面上任意位置右键单击，选择新建，然后选择 CD-ROM 设备用于 CD-ROM 驱动器，或选择软盘设备用于软盘驱动器。这将打开一个属性窗口，其中包含常规、权限、设备和元信息选项卡。在常规选项卡中，你可以设置将在桌面上显示的设备图标的名称，以及选择要为已挂载的 CD-ROM 或软盘显示的图标（已提供默认值）。在设备面板上，你通过在文件系统上选择其挂载点（如 `/mnt/cdrom`）来选择实际设备。CD-ROM 桌面文件假定 CD-ROM 设备条目已放置在 `/etc/fstab` 文件中（请参阅第 30 章）。你还可以选择用于指示其未挂载时使用的图标。在权限面板上，你还可以指示已设置以允许访问设备的权限。有关设备和文件系统的讨论，请参阅文件管理章节，第 30 章。桌面文件不会执行必要的系统管理操作以使普通用户能够访问 CD-ROM。通常，只有系统管理员（root 用户）才能挂载或卸载 CD-ROM 和软盘，除非授予用户权限。你还必须确保 `/etc/fstab` 文件中存在 CD-ROM 或软盘驱动器的条目。如果没有，你必须添加一个。请查阅第 30 章以了解所使用的程序。
+
+## KDE 文件管理器和 Internet 客户端：Konqueror
+
+KDE 文件管理器名为 Konqueror，是一种多功能实用程序，可用于管理文件、启动程序、浏览网页以及从远程站点下载文件（见图 7-4）。传统上，“文件管理器”一词用于指管理本地硬盘上的文件。KDE 文件管理器将其功能扩展到这一传统功能之外，因为它具有 Internet 功能，可以无缝地将远程文件系统显示为自己的文件系统，以及使用浏览器功能查看网页。它能够显示多种不同类型的文件，包括图像、PostScript 和文本文件。KOffice 应用程序可以在 Konqueror 窗口中运行。你甚至可以在文件管理器窗口内打开一个单独的窗格来运行终端窗口，在其中可以输入 shell 命令（窗口菜单）。
+
+### Konqueror 窗口
+
+KDE 文件管理器窗口由菜单栏、导航工具栏、位置字段、状态栏和侧边栏组成，侧边栏提供用户资源的不同视图，例如你主目录的文件和目录图标的树视图。当你首次显示文件管理器窗口时，它会显示你主目录的文件和子目录图标。文件和目录会自动刷新。因此，如果你添加或删除目录，就无需手动刷新文件管理器窗口。它会自动更新你的列表，显示添加的文件或删除已删除的文件。目录中列出的文件可以以几种方式查看
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_160_0.png)
+
+FIGURE 7-4 The KDE file manager
+
+以不同的方式查看。您可以将文件和目录显示为图标、小图标或详细列表。详细列表提供权限、所有者、组和大小信息。权限是控制对该文件访问的权限（参见第28章）。配置文件，也称为隐藏文件，通常不会显示。要让文件管理器显示这些文件，请从 View 菜单中选择 Show Hidden Files。Konqueror 还支持拆分视图，让您在同一窗口中查看不同的目录（Windows 菜单）。您可以垂直或水平拆分。
+
+
+
+您可以通过单击文件或先选择它然后在 File 菜单中选择 Open 条目来打开文件。如果您想选择文件或目录，则需要按住 `CTRL` 键同时单击它，或单击一次。双击打开文件。如果文件是程序，则该程序会启动。如果是数据文件，例如文本文件，则会使用该数据文件运行关联的应用程序。例如，如果您双击文本文件，`Kate` 应用程序将开始显示该文件。如果 `Konqueror` 无法确定要使用的应用程序，它会打开一个对话框提示您输入应用程序名称。您可以单击此框上的 Browse 按钮，使用目录树定位您想要的应用程序程序。
+
+文件管理器还可以提取 `tar` 归档文件并安装 `RPM` 包。归档文件是以 `.tar.gz`、`.tar` 或 `.tgz` 结尾的文件。单击归档文件会列出其中的文件。您只需将其拖出窗口即可提取特定文件。单击归档中的文本文件会使用 `Kate` 显示它，而单击图像文件会使用 `KView` 显示它。选择 `RPM` 包会使用 `redhat-config-packages` 实用程序打开它，然后您可以使用它来安装该包。
+
+## Navigation Panel
+
+导航面板是一个侧边栏，列出了用户可以使用 `Konqueror` 访问的不同资源。您可以通过在 Windows 菜单中选择其条目来打开或关闭导航面板。侧边栏使用 `Navigation Panel Configuration` 工具进行配置，该工具可作为导航面板按钮栏上的第一个按钮访问。
+
+| Keys | Description |
+|---|---|
+| `ALT-LEFT ARROW`, `ALT-RIGHT ARROW` | Backward and Forward in History |
+| `ALT-UP ARROW` | One directory up |
+| `ENTER` | Open a file/directory |
+| `ESC` | Open a pop-up menu for the current file |
+| `LEFT/RIGHT/UP/DOWN ARROWS` | Move among the icons |
+| `SPACEBAR` | Select/unselect file |
+| `PAGE UP`, `PAGE DOWN` | Scroll up fast |
+| `CTRL-C` | Copy selected file to clipboard |
+| `CTRL-V` | Paste files from clipboard to current directory |
+| `CTRL-S` | Select files by pattern |
+| `CTRL-L` | Open new location |
+| `CTRL-F` | Find files |
+| `CTRL-W` | Close window |
+
+TABLE 7-2 KDE File Manager Keyboard Shortcuts
+
+如果您知道要再次访问特定目录，可以对其进行书签，就像对网页一样。只需打开目录并在 Bookmarks 菜单中选择 Add Bookmarks 条目。然后该目录的条目将被放置在文件管理器的 Bookmark 菜单中。要再次移动到该目录，请在 Bookmark 菜单中选择其条目。为了帮助您从一个目录导航到另一个目录，您可以使用 Location 字段或目录树。在 Location 字段中，您可以输入目录的路径名，如果您知道的话，然后按 `ENTER`。目录树提供了一个树形列表，列出系统上和您主目录中的所有目录。
+
+## Copy, Move, Delete, Rename, and Link Operations
+
+要对文件或目录执行操作，您首先必须选择它。在 Red Hat 上，要选择文件或目录，您单击文件的图标或列表。要选择多个文件，请继续按住 `CTRL` 键同时单击您想要的文件。您也可以使用键盘方向键在文件图标之间移动，然后使用 `SPACEBAR` 选择您想要的文件。
+
+要复制和移动文件，您可以使用鼠标的标准拖放方法。要复制文件，您可以使用文件管理器找到它。打开另一个文件管理器窗口到要复制文件的目录。然后单击并拖动文件图标到该窗口。会出现一个弹出菜单，其中包含 Move、Copy 或 Link 的选项。选择 Copy。要将文件移动到另一个目录，请遵循相同的程序，但从弹出菜单中选择 Move。要复制或移动目录，请使用与文件相同的程序。目录的所有文件和子目录也会被复制或移动。
+
+要重命名文件，请单击其图标并按 `F2`，或右键单击图标并从弹出菜单中选择重命名。图标下方的名称将变为可编辑的文本框，您可以对其进行更改。
+
+您可以立即删除文件或将其放入回收站文件夹以便稍后删除。要删除文件，请选择它，然后在编辑菜单中选择删除条目。您也可以右键单击图标并选择删除。要将文件放入回收站文件夹，请单击并将其拖到桌面上的回收站图标，或从编辑菜单中选择移至回收站。您稍后可以打开回收站文件夹并删除文件。要删除回收站文件夹中的所有文件，请右键单击回收站图标并从弹出菜单中选择清空回收站。 要恢复回收站中的任何文件，请打开回收站并将其拖出回收站文件夹。
+
+每个文件或目录都有与其关联的属性，其中包括权限、文件名和其目录。要显示给定文件的属性窗口，请右键单击文件的图标并选择属性条目。在常规面板上，您会看到显示的文件名。要更改文件名，请在那里将其替换为新名称。权限在权限面板上设置。在这里，您可以为用户、组或其他访问权限设置文件的读取、写入和执行权限。有关权限的讨论，请参阅第 28 章。组条目使您可以更改文件的组。
+
+> 注意 `KDE` 会自动搜索并读取位于目录中的现有 `.directory` 文件。 `.directory` 文件保存用于确定目录显示方式的 `KDE` 配置信息。您可以在目录中创建此类文件，并在其中放置设置以设置显示功能，例如用于显示目录文件夹的图标。
+
+## Web 和 FTP 访问
+
+`KDE` 文件管理器也兼作 Web 浏览器和 FTP 客户端。它包括一个用于输入本地文件的路径名或互联网或您内部网上的网页 URL 的框。导航工具栏可用于显示之前的网页或之前的目录。主页按钮将始终带您返回到您的主目录。在访问网页时，页面将像在任何 Web 浏览器上一样显示。使用导航工具栏，您可以在该会话中来回移动已显示页面的列表。`KDE` 文件管理器还作为 FTP 客户端运行。当您访问 FTP 站点时，您可以像浏览自己的目录一样浏览远程目录。下载文件的操作与在本地系统上复制文件相同。只需在文件管理器窗口中选择文件的图标或条目，然后将其拖到显示要下载到的本地目录的窗口中。然后，从出现的弹出菜单中选择复制条目。`Konqueror` 还包括 `KSSL`，可为安全连接提供完整的 SSL 支持。`KDE` 版本 3.1 将具有安全连接状态显示。
+
+> 提示 `KDE` 3.1 为 `Konqueror` 提供了 `KGet` 工具，用于管理 FTP 下载，让您可以选择、排队、暂停和安排下载，同时显示当前下载的状态信息。
+
+## KDE 配置：KDE 控制中心
+
+使用 `KDE` 控制中心，您可以配置桌面和系统，改变其显示方式和支持的功能（见图 7-5）。您可以通过在主菜单首选项菜单中选择其条目，直接打开控制中心到所选组件。首选项菜单显示一个列出配置类别的子菜单。选择一个类别，然后选择您想要的组件。例如，要配置屏幕保护程序，请在设置菜单中位于外观和主题菜单中的屏幕保护程序条目。控制中心可以通过从 K 菜单中选择控制中心直接启动。配置组件实际上是模块。在未来的版本中，随着更多应用程序和工具添加到 K 桌面，将包含更多模块。请参阅帮助查看器以获取 K 桌面配置模块的当前列表。
+
+### 图 7-5 KDE 控制中心
+
+控制中心窗口分为两个窗格。左窗格显示您可以配置的所有组件的树视图，右窗格显示所选组件的对话框窗口。在左窗格中，组件按类别排列，其标题可以展开或收缩。Web 浏览标题包含用于配置 `KDE` 文件管理器 Web 浏览器功能的条目。在外观和主题下，您可以设置用于显示和控制桌面的不同功能。例如，背景条目使您可以为每个虚拟桌面选择不同的背景颜色或图像。其他条目使您可以配置诸如屏幕保护程序、所用语言和窗口样式等组件。外设标题包含可让您配置鼠标、键盘和打印机的条目。Internet 和网络标题让您可以指定常见的网络设置，例如您的电子邮件地址。声音和多媒体
+
+`KDE` 控制中心包含用于配置声音和 `kickerrc` 的面板。从控制中心，你还可以访问一组专门的 `KDE` 系统配置工具。目前这些包括登录管理器和字体管理器。
+
+## .kde 和桌面用户目录
+
+你的 `.kde` 目录保存用于维护你的 `KDE` 桌面的文件和目录。Desktop 目录保存 `KDE` 桌面文件，其图标显示在桌面上。配置文件位于 `.kde/share/config` 目录中。在这里你可以找到不同组件的通用配置文件。`kwinrc` 保存窗口管理器的配置命令，`kmailrc` 用于邮件，`kickerrc` 用于你的面板。`kdeglobals` 保存键盘快捷键以及其他全局定义。你可以直接在这些文件中的任何一个中放置配置指令；`.kde/share/mimelnk` 保存用户添加的菜单项的桌面文件。`.kde/share/apps` 目录包含用于配置 `KDE` 应用程序的文件和目录。
+
+## MIME 类型和关联应用程序
+
+
+
+随着你安装新的程序类型，它们可能会使用某种类型的文件。在这种情况下，你需要将该类型注册到 KDE，以便它可以与某个应用程序或一组应用程序关联。例如，GIF 图像的 MIME 类型是 `image/gif`，它与图像查看程序关联。你使用 KDE 控制中心来设置新的 MIME 类型或更改 MIME 类型与应用程序的关联。选择 KDE 组件下的文件关联条目。这将列出已知的 MIME 类型及其关联的文件名扩展名。选择一个条目进行编辑，在那里你可以更改与其关联的应用程序。KDE 将其 MIME 类型信息保存在 KDE 配置目录中的一个名为 `mimelnk` 的单独文件中。
+
+要更改特定文件的关联应用程序，你使用文件管理器找到该应用程序，然后右键单击它并选择编辑文件类型。这会显示一个包含两个面板的窗口：常规和嵌入。在常规菜单中，你可以通过单击添加并输入文件类型的扩展名来添加扩展名，使用 `*` 来匹配前缀。例如，`*.gif` 将匹配任何以 `.gif` 结尾的文件。在应用程序首选项顺序部分，使用添加按钮选择你希望与文件关联的应用程序。你可以为单个文件设置多个应用程序，并按你希望的方式更改它们的首选项顺序。单击应用以保存你的更改。
+
+## KDE 目录和文件
+
+当 KDE 安装在你的系统上时，其系统范围的应用程序、配置和支持文件可能安装在与其它 GUI 和用户应用程序相同的系统目录中。在 Red Hat 上，KDE 安装在标准系统目录中，并有一些变化，例如 `/usr/bin` 用于 KDE 程序文件，`/usr/lib/kde3` 保存 KDE 库，而 `/usr/include/kde` 包含在应用程序开发中使用的 KDE 头文件。由 KDE 应用程序设置的文件和目录。`/usr/share/mimelnk` 保存 MIME 类型定义。`/usr/share/config` 包含特定 KDE 应用程序的配置文件。这些是系统范围的默认值，可以被用户自己的 `.kde/share/config` 目录中的个人配置覆盖。`/usr/share/icons` 保存用于你的 KDE 桌面和 KDE 应用程序以及 Bluecurve 界面的默认图标。如前所述，在用户的主目录中，`.kde` 目录保存用户自己的桌面及其应用程序的 KDE 配置。
+
+每个用户都有一个 `Desktop` 目录，其中保存用户桌面上所有图标和文件夹的 KDE 链接文件（参见表 7-3）。这些包括回收站文件夹以及 CD-ROM 和主目录链接。
+
+表 7-3 KDE 安装目录
+
+| System KDE Directories | Description |
+| --- | --- |
+| `/usr/bin` | KDE programs |
+| `/usr/lib/kde3` | KDE libraries |
+| `/usr/include/kde` | Header files for use in compiling and developing KDE applications |
+| `/usr/share/config` | KDE desktop and application configuration files |
+| `/usr/share/mimelnk` | Desktop files used to build the main menu |
+| `/usr/share/apps` | Files used by KDE applications |
+| `/usr/share/icons` | Icons used in KDE desktop and applications |
+| `/usr/share/doc` | KDE Help system |
+| User KDE Directories |  |
+| `.kde/AutoStart` | Applications automatically started up with KDE |
+| `.kde/share/config` | User KDE desktop and application configuration files for user-specified features |
+| `.kde/share/mimelnk` | Desktop files used to build the user’s menu entries on the KDE main menu |
+| `.kde/share/apps` | Directories and files used by KDE applications |
+| `Desktop` | Desktop files for icons and folders displayed on the user’s KDE desktop |
+| `Desktop/Trash` | Trash folder for files marked for deletion |
+
+## Shell
+
+Shell 是一个命令解释器，它为用户与操作系统之间提供面向行的交互式和非交互式接口。你在命令行上输入命令；它们由 shell 解释，然后作为指令发送给操作系统。你也可以将命令放在脚本文件中，以便像程序一样连续执行。Shell 的这种解释能力提供了许多复杂的功能。例如，shell 具有一组文件扩展字符，可以生成文件名。Shell 可以重定向输入和输出，以及在后台运行操作，从而让你可以执行其他任务。
+
+为 Linux 开发了几种不同类型的 shell：Bourne Again shell（`BASH`）、Public Domain Korn shell（`PDKSH`）、`TCSH` shell 和 Z shell。所有 shell 都可供你使用，尽管 `BASH` shell 是默认的。你只需要一种类型的 shell 来完成工作。Red Hat Linux 包含所有主要 shell，尽管它安装并使用 `BASH` shell 作为默认。 如果你使用 Red Hat Linux 命令行 shell，除非你指定其他 shell，否则你将使用 `BASH` shell。本章讨论 `BASH` shell，它与其他 shell 共享许多相同的功能。
+
+> 注意 你可以在 www.gnu.org/software/bash 上了解更多关于 `BASH` shell 的信息。你的 Linux 系统上使用 `man` 命令配合 `bash` 关键字可获得详细的在线手册。
+
+## 命令行
+
+Linux 命令行界面由一行组成，你可以在其中输入命令及其任何选项和参数。从 GNOME 或 KDE，你可以通过打开终端窗口访问命令行界面。如果你以命令行界面启动 Linux，登录时将看到 `BASH` shell 命令行。
+
+默认情况下，`BASH` shell 具有美元符号（`$`）提示符，但 Linux 还有几种其他类型的 shell，每种 shell 都有自己的提示符。Shell 提示符，例如此处所示的，标记了命令行的开始：
+
+```
+$
+```
+
+你可以在提示符处输入命令以及选项和参数。例如，使用 `-l` 选项，`ls` 命令将显示每个文件的详细信息，列出其大小以及最后修改的日期和时间。在下一个示例中，用户输入 `ls` 命令后跟 `-l` 选项。`-l` 选项前的破折号是必需的。Linux 使用它来区分选项和参数。
+
+```
+$ ls -l
+```
+
+如果你只想要特定文件显示的信息，可以在 `-l` 选项后添加该文件名称作为参数：
+
+```
+$ ls -l mydata
+```
+
+> 提示 有些命令可能很复杂且执行需要一些时间。当你错误地执行了错误的命令时，你可以使用中断键——`CTRL-C` 来中断并停止此类命令。
+
+## 命令行编辑
+
+`BASH` shell 是你的默认 shell，它具有特殊的命令行编辑功能，在你学习 Linux 时可能会有所帮助（参见表 8-1）。你可以在执行之前轻松修改已输入的命令，在命令行上移动到任何位置并插入或删除字符。这对于复杂命令尤其有帮助。你可以使用 `CTRL-F` 或 `RIGHT ARROW` 键向前移动一个字符，或使用 `CTRL-B` 或 `LEFT ARROW` 键向后移动一个字符。`CTRL-D` 或 `DEL` 删除光标所在的字符，`CTRL-H` 或 `BACKSPACE` 删除光标前的字符。要添加文本，你使用箭头键将光标移动到想要插入文本的位置并输入新字符。你甚至可以用 `CTRL-W` 或 `CTRL-U` 键剪切单词，然后使用 `CTRL-Y` 键将其粘贴回去
+
+### 表 8-1
+
+命令行编辑操作
+
+| 键命令 | 操作 |
+|---|---|
+| `CTRL-F`, `RIGHT ARROW` | 向前移动一个字符 |
+| `CTRL-B`, `LEFT ARROW` | 向后移动一个字符 |
+| `CTRL-A` | 移动到行首 |
+| `CTRL-E` | 移动到行尾 |
+| `CTRL-D`, `DEL` | 删除光标所在的字符 |
+| `CTRL-H`, `BACKSPACE` | 删除光标前的字符 |
+| `CTRL-K` | 从光标位置剪切行的剩余部分 |
+| `CTRL-W` | 剪切前一个词 |
+| `CTRL-U` | 剪切下一个词 |
+| `CTRL-C` | 剪切整行 |
+| `CTRL-Y` | 粘贴之前剪切的文本 |
+
+在不同的位置，实际上是移动单词。任何时候，您都可以按 `ENTER` 键执行命令。例如，如果在输入命令时出现拼写错误，无需重新输入整条命令，可以使用编辑操作来修正错误。
+
+
+
+> 提示 `BASH` shell 命令行的编辑功能由 `Readline` 提供。`Readline` 支持大量编辑操作。您甚至可以将某个按键绑定到选定的编辑操作。您可以在 `www.gnu.org/manual/bash` 的 `BASH` shell 参考手册中了解更多关于 `Readline` 的信息。
+
+您可以通过在按 `ENTER` 键之前输入反斜杠来在多行上输入一条命令。反斜杠“转义”了 `ENTER` 键，实际上将同一命令行延续到下一行。在下面的示例中，`cp` 命令分三行输入。前两行以反斜杠结尾，实际上将三行合并为一行命令行。
+
+```
+$ cp -i \
+mydata \
+newdata
+```
+
+# 命令和文件名补全
+
+`BASH` 命令行具有一个内置功能，可执行命令和文件名补全。如果您输入一个不完整的模式作为命令或文件名参数，可以按 `TAB` 键激活命令和文件名补全功能，该功能会补全该模式。如果多个命令或文件具有相同的前缀，shell 只会发出蜂鸣声并显示可能的命令补全列表，然后等待您添加足够的字符以选择唯一的命令或文件名。在下一个示例中，用户使用不完整的文件名发出 `cat` 命令。按下 `TAB` 键后，系统会搜索匹配项，并在找到时填入文件名。然后用户可以按 `ENTER` 键执行命令。
+
+```
+$ cat pre<TAB>
+$ cat preface
+```
+
+# 历史记录
+
+`BASH` shell 会维护一个称为历史记录列表的列表，其中包含您之前输入的命令。您可以通过按 `UP ARROW` 键在命令行上依次显示每条命令。`DOWN ARROW` 键会在列表中向下移动。当这些先前命令显示在命令行上时，您可以修改并执行它们。
+
+> 提示 当您之前执行的命令输入有误时，重新显示先前命令的功能会很有帮助。在这种情况下，您会看到一条错误消息和一个新的空命令行。通过按 `UP ARROW` 键，您可以重新显示先前的命令，对其进行更正，然后再次执行。这样，您就不必重新输入整条命令了。
+
+# 历史事件
+
+在 `BASH` shell 中，历史工具会记录您最近执行的命令。这些命令从 1 开始编号，并且记住的命令数量存在限制——默认是 500。历史工具是一种短期记忆，跟踪您最近执行的命令。要查看最近执行的命令集合，请在命令行输入 `history` 并按 `ENTER` 键。随后会显示一个最近命令的列表，列表前面带有编号。
+
+```
+$ history
+1 cp mydata today
+2 vi mydata
+3 mv mydata reports
+4 cd reports
+5 ls
+```
+
+这些命令中的每一条在技术上都被称为一个事件。事件描述了一个已采取的行动——一条已执行的命令。事件按照其执行顺序编号。最近的事件具有最高的编号。每个事件都可以通过其编号或命令中的起始字符来标识。
+
+历史工具使您能够引用先前的事件，将其放在命令行上并执行它。最简单的方法是使用 `UP ARROW` 和 `DOWN ARROW` 键将历史事件一次一个地放置在命令行上。您无需先用 `history` 显示列表。按一次 `UP ARROW` 键会将最后一个历史事件放置在命令行上。再按一次会将下一个历史事件放置在命令行上。按 `DOWN ARROW` 键会将前一个事件放置在命令行上。
+
+您可以使用某些控制键和元键来执行其他历史操作，例如搜索历史列表。元键是 `ALT` 键，对于没有 `ALT` 键的键盘则是 `ESC` 键。这里使用 `ALT` 键。`ALT-~` 会将您移动到历史列表的开头；`ALT-N` 会搜索历史列表。`CTRL-S` 和 `CTRL-R` 会执行增量搜索，并在您键入搜索字符串时显示匹配的命令。表 8-2 列出了用于引用历史列表的不同命令。
+
+> 提示 如果多个历史事件与您输入的内容匹配，您会听到一声蜂鸣声，然后您可以输入更多字符以帮助唯一标识该事件。
+
+您还可以使用 `!` 历史命令来引用和执行历史事件。`!` 后面跟着一个标识该命令的引用。该引用可以是事件的编号，也可以是事件中的一组起始字符。在下一个示例中，历史列表中的第三条命令先按编号引用，然后按起始字符引用：
+
+```
+$ !3
+mv mydata reports
+$ !mv
+mv mydata reports
+```
+
+您还可以使用相对于列表末尾的偏移量来引用事件。负数会从列表末尾偏移到该事件，从而引用它。在下一个
+
+| 历史命令 | 描述 |
+|---|---|
+| `CTRL-N` 或 `DOWN ARROW` | 向下移动到历史列表中的下一个事件 |
+| `CTRL-P` 或 `UP ARROW` | 向上移动到历史列表中的上一个事件 |
+| `ALT-<` | 移动到历史事件列表的开头 |
+| `ALT->` | 移动到历史事件列表的末尾 |
+| `ALT-N` | 前向搜索，下一个匹配项 |
+| `ALT-P` | 后向搜索，上一个匹配项 |
+| `CTRL-S` | 前向搜索历史，前向增量搜索 |
+| `CTRL-R` | 反向搜索历史，反向增量搜索 |
+| `fc event-reference` | 使用标准编辑器编辑一个事件然后执行它 |
+| `Options` | `-l` 列出最近的历史事件；与 `history` 命令相同 |
+|  | `-e editor event-reference` 调用指定的编辑器来编辑特定事件 |
+| `History Event References` |  |
+| `! event num` | 引用具有事件编号的事件 |
+| `!!` | 引用上一条命令 |
+| `! characters` | 引用以特定字符开头的事件 |
+| `!? pattern?` | 引用事件中包含模式的事件 |
+| `! - event num` | 引用相对于第一个事件的偏移事件 |
+| `! num - num` | 引用一系列事件 |
+
+表 8-2 历史命令和历史事件引用
+
+例如，第四条命令 `cd mydata`，使用负偏移量引用，然后执行。记住你是从列表末尾——本例中为事件 5——向上偏移到列表开头，事件 1。 从事件 5 开始偏移 4 会使你到达事件 2。
+
+```
+$ ! -4
+vi mydata
+```
+
+要引用最后一个事件，你使用后面的 `!`，如 `!!`。 在下一个示例中，命令 `! !` 执行用户上次执行的命令——本例中为 `ls`：
+
+```
+$ !!
+ls
+mydata today reports
+```
+
+## 历史事件编辑
+
+你也可以在执行之前编辑历史列表中的任何事件。 在 `BASH` shell 中，你可以有两种方法做到这一点。 你可以使用命令行编辑器功能来引用并编辑历史列表中的任何事件。 你也可以使用 `history fc` 命令选项来引用一个事件并使用完整的 `Vi` 编辑器编辑它。 每种方法都涉及两种不同的编辑功能。 第一种仅限于命令行编辑器中的命令，该编辑器仅使用 `Emacs` 命令子集编辑单行。 同时，它使你能够轻松地在历史列表中引用事件。 第二种方法调用具有全部功能的标准 `Vi` 编辑器，但仅针对指定的历史事件。
+
+使用命令行编辑器，你不仅可以编辑当前命令，还可以移动到历史列表中的上一个事件以编辑并执行它。 `CTRL-P` 命令会将你向上移动到列表中的前一个事件。 `CTRL-N` 命令会将你向下移动列表。 `ALT-<` 命令会将你移动到列表顶部，而 `ALT->` 命令会将你移动到列表底部。 你甚至可以使用模式搜索给定事件。 斜杠后跟模式会在列表中向后搜索，而问号后跟模式会在列表中向前搜索。 `n` 命令重复搜索。
+
+一旦找到要编辑的事件，你就使用 `Emacs` 命令行编辑命令来编辑该行。 `CTRL-D` 删除一个字符。 `CTRL-F` 或 `RIGHT ARROW` 将你向前移动一个字符，而 `CTRL-B` 或 `LEFT ARROW` 将你向后移动一个字符。 要添加文本，请将光标定位并输入所需字符。
+
+如果你想使用标准编辑器编辑事件，则需要使用 `fc` 命令和特定的事件引用（例如事件编号）来引用该事件。 使用的编辑器是 shell 在 `EDITOR` 变量中指定的编辑器。 这用作 `fc` 命令的默认编辑器。 如果愿意，你可以将 `EDITOR` 变量分配给不同的编辑器，例如 `Emacs` 而不是 `Vi`。 下一个示例将使用标准编辑器编辑第四个事件 `cd reports`，然后执行编辑后的事件：
+
+```
+$ fc 4
+```
+
+你可以通过引用一系列命令来一次选择多个命令进行编辑和执行。 你通过指示第一个命令的标识符然后指示范围中最后一个命令的标识符来选择一系列命令。 标识符可以是命令编号或命令中的起始字符。 在下一个示例中，命令范围 `2-4` 被编辑并执行，首先使用事件编号，然后使用这些事件中的起始字符：
+
+```
+$ fc 2 4
+$ fc vi c
+```
+
+`fc` 使用 `FCEDIT` 特殊变量中指定的默认编辑器。 通常，这是 `Vi` 编辑器。 如果你想改用 `Emacs` 编辑器，则在调用 `fc` 时使用 `-e` 选项和 `term emacs`。 下一个示例将使用 `Emacs` 编辑器编辑第四个事件 `cd reports`，然后执行编辑后的事件：
+
+```
+$ fc -e emacs 4
+```
+
+## 配置历史记录：HISTFILE 和 HISTSAVE
+
+系统保存的事件数量保存在一个名为 `HISTSIZE` 的特殊系统变量中。默认情况下，这通常设置为 500。你可以通过简单地为 `HISTSIZE` 分配一个新值来将其更改为另一个数字。在下一个示例中，用户通过重置 `HISTSIZE` 变量将保存的历史事件数量更改为 10：
+
+
+
+```
+$ HISTSIZE=10
+```
+
+实际的历史事件保存在一个文件中，其名称保存在一个名为 `HISTFILE` 的特殊变量中。默认情况下，该文件是 `.bash_history` 文件。然而，你可以通过将文件名分配给 `HISTFILE` 变量来更改保存历史事件的文件。在下一个示例中，`HISTFILE` 的值被显示。然后为其分配了一个新的文件名 `newhist`。历史事件随后保存在 `newhist` 文件中。
+
+```
+$ echo $HISTFILE
+$ HISTFILE="newhist"
+$ echo $HISTFILE
+newhist
+```
+
+## 文件名展开：*, ?, [ ]
+
+文件名是最常用的命令参数。通常你可能只知道文件名的部分内容，或者你可能想要引用具有相同扩展名或以相同字符开头的多个文件名。`shell` 提供了一组特殊字符来搜索、匹配并生成文件名列表。这些是星号、问号和方括号（`*, ?, [ ]`）。给定一个部分文件名，`shell` 使用这些匹配运算符来搜索文件并展开为找到的文件名列表。`shell` 用展开的匹配文件名列表替换部分文件名参数。然后该文件名列表可以成为 `ls` 等命令的参数，这些命令可以操作多个文件。表 8-3 列出了 `shell` 的文件展开字符。
+
+### Table 8-3 Shell Symbols
+
+| Common Shell Symbols | Execution |
+| --- | --- |
+| ENTER | 执行一条命令行。 |
+| ; | 在同一命令行上分隔命令。 |
+| 'command' | 执行一个命令。 |
+| $(command) | 执行一个命令。 |
+| [] | 在文件名中匹配一类可能的字符。 |
+| \ | 引号后面的字符。用于引用特殊字符。 |
+| | | 将一个命令的标准输出作为另一个命令的输入进行管道传输。 |
+| & | 在后台执行一个命令。 |
+| ! | 历史命令。 |
+| File Expansion Symbols | Execution |
+| * | 在文件名中匹配任意一组字符。 |
+| ? | 在文件名中匹配任意单个字符。 |
+| [] | 在文件名中匹配一类字符。 |
+| Redirection Symbols | Execution |
+| > | 将标准输出重定向到文件或设备，如果文件不存在则创建文件，如果文件存在则覆盖文件。 |
+| >! | 感叹号强制覆盖已存在的文件。这会覆盖 `noclobber` 选项。 |
+| < | 将标准输入从文件或设备重定向到程序。 |
+| >> | 将标准输出重定向到文件或设备，将输出追加到文件末尾。 |
+| Standard Error Redirection Symbols | Execution |
+| 2> | 将标准错误重定向到文件或设备。 |
+| 2>> | 将标准错误重定向并追加到文件或设备。 |
+| 2>&1 | 将标准错误重定向到标准输出。 |
+| >& | 将标准错误重定向到文件或设备。 |
+| |& | 将标准错误作为输入管道传输到另一个命令。 |
+
+## 匹配多个字符
+
+星号 `*` 用于引用以特定字符集开头或结尾的文件。你将星号放在形成要在文件名中搜索的模式的字符集之前或之后。如果星号放在模式之前，则会搜索以该模式结尾的文件名。如果星号放在模式之后，则会搜索以该模式开头的文件名。任何匹配的文件名都会被复制到此操作生成的文件名列表中。在下一个示例中，搜索所有以模式 `"doc"` 开头的文件名并生成列表。然后搜索所有以模式 `"day"` 结尾的文件名并生成列表。最后一个示例显示了 `*` 如何在任意字符组合中使用。
+
+```
+$ ls
+doc1 doc2 document docs mydoc monday tuesday
+```
+
+```
+$ ls doc*
+doc1 doc2 document docs
+$ ls *day
+monday tuesday
+$ ls m*d*
+monday
+$
+```
+
+文件名通常包含一个扩展名，以句点指定并跟随表示文件类型的字符串，例如 C 文件的 `.c`、`C++` 文件的 `.cpp`，甚至 JPEG 图像文件的 `.jpg`。扩展名没有特殊地位，只是构成文件名的字符的一部分。使用星号可以轻松选择具有给定扩展名的文件。在下一个示例中，星号用于仅列出具有 `.c` 扩展名的文件。放在 `.c` 前面的星号构成了 `ls` 的参数。
+
+```
+$ ls *.c
+calc.c main.c
+```
+
+你可以使用 `*` 与 `rm` 命令一起使用，一次性删除多个文件。星号首先选择具有给定扩展名或以给定字符集开头或结尾的文件列表，然后将该文件列表呈现给 `rm` 命令以便删除。在下一个示例中，`rm` 命令删除所有以模式 `"doc"` 开头的文件：
+
+```
+$ rm doc*
+```
+
+> 提示 请谨慎并少量地使用 `*` 文件扩展字符与 `rm` 命令。两者结合可能很危险。`rm` 命令中一个放错位置的 `*` 如果没有 `-i` 选项，很容易删除当前目录中的所有文件。
+
+## 匹配单个字符
+
+问号，`?`，仅匹配文件名中的单个不完整字符。假设你想匹配文件 `doc1` 和 `docA`，但不想匹配 `document`。星号将匹配任意长度的文件名，而问号将匹配限制为仅一个额外字符。下一个示例匹配以单词 `"doc"` 开头后跟单个不同字母的文件：
+
+```
+$ ls
+doc1 docA document
+$ ls doc?
+doc1 docA
+```
+
+## 匹配字符范围
+
+而 `*` 和 `?` 文件扩展字符指定文件名的不完整部分，方括号，`[]`，使你能够指定要搜索的有效字符集。放在方括号内的任何字符都将在文件名中匹配。假设你想列出文件
+
+以“doc”开头，但仅以 I 或 A 结尾。你对以 2 或 B 结尾的文件名，或任何其他字符的文件名不感兴趣。方法如下：
+
+```
+$ ls
+doc1 doc2 doc3 docA docB docD document
+$ ls doc[IA]
+doc1 docA
+```
+
+你也可以将一组字符指定为范围，而不是逐一列出它们。将上、下界之间的字符集用破折号分隔，可选择该范围内的所有字符。范围通常由所使用的字符集决定。在 ASCII 字符集中，范围“a-g”将选择从 a 到 g 的所有小写字母字符，包含两端。在下一个示例中，选择以模式“doc”开头并以 1 到 3 字符结尾的文件。然后，匹配以 B 到 E 字符结尾的文件。
+
+```
+$ ls doc[1-3]
+doc1 doc2 doc3
+$ ls doc[B-E]
+docB docD
+```
+
+你可以将方括号与其他文件扩展字符组合起来形成灵活的匹配运算符。假设你只想列出以 `.c` 或 `.o` 扩展名结尾的文件名，但不包括其他扩展名。你可以使用星号和方括号的组合：`*.{co}`。星号匹配所有文件名，方括号仅匹配扩展名为 `.c` 或 `.o` 的文件名。
+
+```
+$ ls *.{co}
+main.c main.o calc.c
+```
+
+## 匹配 Shell 符号
+
+有时，文件扩展字符实际上是文件名的一部分。在这种情况下，你需要通过在前面加上反斜杠来引用该字符以引用该文件。在下一个示例中，用户需要引用以 `?` 字符结尾的文件 `answers?`。然而，`?` 是一个文件扩展字符，将匹配以“answers”开头且有一个或多个字符的任何文件名。在这种情况下，用户用前面的反斜杠引用 `?` 以引用文件名。
+
+```
+$ ls answers\?
+answers?
+```
+
+## 生成模式
+
+虽然不是文件扩展操作，但 `{}` 通常对于生成可用于创建或修改文件和目录的名称很有用。大括号操作仅生成名称列表。它不匹配现有文件名。模式放在大括号内并用逗号分隔。大括号内的任何模式都将用于生成模式的版本，使用前面的模式或后面的模式，或两者。假设
+
+```
+$ ls -l *.c > programlist
+```
+
+重定向操作会创建新的目标文件。如果文件已存在，它将被标准输出中的数据覆盖。你可以设置 `noclobber` 功能来防止重定向操作覆盖已存在的文件。在这种情况下，对已存在文件执行重定向操作将会失败。你可以通过在重定向运算符后放置一个感叹号来绕过 `noclobber` 功能。你可以将 `noclobber` 命令放在 `shell` 配置文件中，使其成为自动默认操作（参见第 10 章）。下一个示例为 `BASH` shell 设置了 `noclobber` 功能，然后强制覆盖已存在的 `oldletter` 文件：
+
+```
+$ set -o noclobber
+$ cat myletter >! oldletter
+```
+
+尽管重定向运算符和文件名放在命令之后，但重定向操作并不是在命令之后执行。事实上，它是在命令之前执行的。重定向操作在接收到标准输出的任何数据之前就创建文件并设置重定向。如果文件已存在，它将被销毁并替换为同名文件。实际上，生成输出的命令只有在重定向文件创建之后才执行。
+
+
+
+在下一个示例中，`ls` 命令的输出从屏幕设备重定向到一个文件。首先 `ls` 命令列出文件，然后在下一个命令中，`ls` 将其文件列表重定向到 `listf` 文件。然后 `cat` 命令显示保存在 `listf` 中的文件列表。请注意，`listf` 中的文件列表包含 `listf` 文件名本身。`ls` 命令生成的文件名列表包含由重定向操作创建的文件名——在本例中为 `listf`。`listf` 文件首先由重定向操作创建，然后 `ls` 命令将其与其他文件一起列出。`ls` 输出的此文件列表随后被重定向到 `listf` 文件，而不是打印到屏幕上。
+
+```
+$ ls
+mydata intro preface
+$ ls > listf
+$ cat listf
+mydata intro listf preface
+```
+
+> 提示 当你尝试对同一个文件既作为命令的输入文件又作为重定向的目标文件使用时，会发生错误。在这种情况下，由于重定向操作先执行，已存在的输入文件将被销毁并替换为同名文件。当命令执行时，它会发现一个空的输入文件。
+
+你也可以使用 `>>` 重定向运算符将标准输出追加到现有文件。不同于覆盖文件，标准输出中的数据会被添加到文件末尾。在下一个示例中，`myletter` 和 `oldletter` 文件被追加到 `alletters` 文件。`alletters` 文件随后将包含 `myletter` 和 `oldletter` 的内容。
+
+```
+$ cat myletter >> alletters
+$ cat oldletter >> alletters
+```
+
+## 标准输入
+
+许多 Linux 命令可以从标准输入接收数据。标准输入本身从设备或文件接收数据。标准输入的默认设备是键盘。键盘上输入的字符会被放入标准输入，然后被导向 Linux 命令。就像标准输出一样，你也可以重定向标准输入，从文件而不是键盘接收输入。重定向标准输入的运算符是小于号，`<`。在下一个示例中，标准输入被重定向以从 `myletter` 文件接收输入，而不是键盘设备。`myletter` 的内容通过重定向操作读入标准输入。然后 `cat` 命令读取标准输入并显示 `myletter` 的内容。
+
+```
+$ cat < myletter
+hello Christopher
+How are you today
+$
+```
+
+你可以将标准输入和标准输出的重定向操作结合起来。在下一个示例中，`cat` 命令没有文件名参数。没有文件名参数时，`cat` 命令从标准输入接收输入并向标准输出发送输出。然而，标准输入已被重定向以从文件接收数据，而标准输出已被重定向以将数据放入文件。
+
+```
+$ cat < myletter > newletter
+```
+
+## 管道
+
+你可能会遇到需要将数据从一个命令发送到另一个命令的情况。换句话说，你可能想将一个命令的标准输出发送给另一个命令，而不是发送到目标文件。假设你想将你的文件名列表发送到打印机打印。你需要两个命令来完成此操作：`ls` 命令生成文件名列表，`lpr` 命令将列表发送到打印机。实际上，你需要将 `ls` 命令的输出作为 `lpr` 命令的输入。你可以认为数据从一个命令流向另一个命令。在 Linux 中形成这种连接，你使用所谓的管道。管道运算符，`|`，（竖线字符）放在两个命令之间就在它们之间形成连接。一个命令的标准输出成为另一个命令的标准输入。管道操作从管道前的命令接收输出，并将此数据作为输入发送给管道后的命令。如下一个示例所示，你可以用管道连接 `ls` 命令和 `lpr` 命令。`ls` 命令输出的文件名列表被管道传输到 `lpr` 命令。
+
+```
+$ ls | lpr
+```
+
+你可以将管道操作与其他 shell 功能结合使用，例如文件扩展字符，以执行专门的操作。下一个示例仅打印具有 `.c` 扩展名的文件。`ls` 命令与星号和 `".c"` 一起使用以生成具有 `.c` 扩展名的文件名列表。然后此列表被管道传输到 `lpr` 命令。
+
+在前面的示例中，文件名列表被用作输入，但需要注意的是，管道操作的是命令的标准输出，无论其内容是什么。整个文件甚至多个文件的内容都可以从一个命令通过管道传输到另一个命令。在下一个示例中，`cat` 命令读取并输出 `mydata` 文件的内容，然后将其通过管道传输到 `lpr` 命令：
+
+```
+$ cat mydata | lpr
+```
+
+Linux 有许多生成修改后输出的命令。例如，`sort` 命令读取文件的内容并生成一个按字母顺序对每一行排序的版本。`sort` 命令最适合处理项目列表的文件。像 `sort` 这样输出其输入的修改版本 的命令被称为过滤器。过滤器通常与管道一起使用。在下一个示例中，`mylist` 的排序版本被生成并通过管道传输到 `more` 命令以在屏幕上显示。请注意，原文件 `mylist` 并未被更改，也不是本身已排序。只有 `sort` 的标准输出被排序。
+
+```
+$ sort mylist | more
+```
+
+通过标准输入参数 `-` 可以更精确地控制通过管道传输到命令的标准输入。当你将连字符用作命令的参数时，它代表标准输入。
+
+## 重定向和管道标准错误：`>&`，`2>`
+
+当你执行命令时，可能会发生错误。你可能提供了错误数量的参数，或者发生了某种系统错误。当发生错误时，系统会发出错误消息。通常此类错误消息会与标准输出一起显示在屏幕上。然而，Linux 会区分标准输出和错误消息。错误消息被放在另一个标准字节流中，称为标准错误。在下一个示例中，`cat` 命令的参数是一个不存在的文件名 `myintro`。在这种情况下，`cat` 命令只是发出一个错误：
+
+```
+$ cat myintro
+cat : myintro not found
+$
+```
+
+由于错误消息与标准输出位于不同的数据流中，即使你将标准输出重定向到文件，错误消息仍然会显示在屏幕上供你查看。在下一个示例中，`cat` 命令的标准输出被重定向到文件 `mydata`。然而，包含错误消息的标准错误仍然指向屏幕。
+
+```
+$ cat myintro > mydata
+cat : myintro not found
+$
+```
+
+你可以重定向标准错误，就像重定向标准输出一样。这意味着你可以将错误消息保存到文件中以供将来参考。如果需要错误消息记录，这很有帮助。与标准输出一样，标准错误的默认目标是屏幕设备。然而，你可以使用特殊的重定向运算符将标准错误重定向到你选择的任何文件或设备。在这种情况下，错误消息将不会显示在屏幕上。
+
+标准错误的重定向依赖于 shell 重定向的一个特殊功能。你可以在重定向操作中使用数字引用所有标准字节流。数字 `0`、`1` 和 `2` 分别引用标准输入、标准输出和标准错误。默认情况下，输出重定向 `>` 操作于标准输出 `1`。你可以通过在输出重定向运算符前加上数字 `2` 来修改输出重定向，使其操作于标准错误。在下一个示例中，`cat` 命令再次会生成错误。错误消息被重定向到由数字 `2` 表示的标准字节流，即标准错误。
+
+```
+$ cat nodata 2> myerrors
+$ cat myerrors
+cat : nodata not found
+$
+```
+
+你也可以通过使用数字 `2` 和重定向追加运算符 `>>` 将标准错误追加到文件中。在下一个示例中，用户将标准错误追加到 `myerrors` 文件中，该文件随后可作为错误日志使用：
+
+```
+$ cat nodata 2>> myerrors
+```
+
+## 作业：后台、终止和中断
+
+在 Linux 中，你不仅可以控制命令的输入和输出，还可以控制其执行。你可以在执行其他命令的同时在后台运行作业。你也可以在命令执行完成之前取消命令。你甚至可以中断一个命令，从上次中断的地方稍后重新开始。后台操作对于长时间运行的作业特别有用。无需在终端等待命令执行完成，你可以将其置于后台。然后你可以继续执行其他 Linux 命令。例如，你可以在其他文件打印的同时编辑一个文件。后台命令以及取消和中断作业的命令列在表 8-5 中。
+
+### 在后台运行作业
+
+你通过在命令行末尾放置一个与号来在后台执行命令。这样做时，会显示一个用户作业号和一个系统进程号。用户作业号放在方括号中，是用户引用作业的编号。系统进程号是系统识别作业的编号。在下一个示例中，打印文件 `mydata` 的命令被置于后台：
+
+```
+$ lpr mydata &
+[1] 534
+$
+```
+
+你可以将多个命令置于后台。每个都被归类为作业并被赋予名称和作业号。`jobs` 命令列出正在运行的作业
+
+# 表 8-5
+
+## 作业管理操作
+
+| 后台作业 | 执行 |
+
+|---|---|
+
+| `&` | 在后台执行一个命令。 |
+
+| `fg %jobnum` | 将后台中的命令带到前台或恢复被中断的程序。 |
+
+| `bg` | 将前台中的命令放到后台。 |
+
+| `CTRL-Z` | 中断并停止当前正在运行的程序。该程序保持停止状态并在后台等待您恢复它。 |
+
+| `notify %jobnum` | 在作业结束时通知您。 |
+
+| `kill %jobnum`<br>`kill processnum` | 取消并结束在后台运行的作业。 |
+
+| `jobs` | 列出所有后台作业。`jobs` 命令在 Bourne shell 中不可用，除非它正在使用 `jsh` shell。 |
+
+| `ps` | 列出所有当前正在运行的进程，包括后台作业。 |
+
+| `at time date` | 在指定的时间和日期执行命令。时间可以用小时和分钟输入，并以 A.M. 或 P.M. 限定。 |
+
+
+
+background. 列表中的每个条目都由方括号中的作业编号、其是否已停止或正在运行以及作业名称组成。`+` 号表示当前正在处理的作业，`-` 号表示下一个要执行的作业。在下一个示例中，有两个命令已放入后台。然后 `jobs` 命令列出这些作业，显示其中哪个正在被执行。
+
+```
+$ lpr intro &
+[1] 547
+$ cat *.c > myprogs &
+[2] 548
+$ jobs
+[1] + Running lpr intro
+[2] - Running cat *.c > myprogs
+$
+```
+
+## 作业通知
+
+在 Linux 中执行任何命令后，系统会告诉您到目前为止已完成的后台作业（如果有正在运行）。系统不会中断任何操作，例如编辑，来通知您作业已完成。如果您想在某个作业结束时立即得到通知，无论您在系统上做什么，您都可以使用 `notify` 命令指示系统通知您。`notify` 命令以作业号作为其参数。当该作业完成后，系统会中断您正在进行的操作以通知您作业已结束。下一个示例告诉系统在作业 2 完成后通知用户：
+
+```
+$ notify %2
+```
+
+## 将作业带到前台
+
+您可以使用前台命令 `fg` 将作业从后台带出。如果后台只有一个作业，则单独使用 `fg` 命令即可将其带到前台。如果后台有多个作业，则必须使用作业的编号与命令一起使用。您将作业号放在 `fg` 命令之后，以百分号开头。`bg` 命令也会将作业放到后台。此命令通常用于中断的作业。在下一个示例中，第二个作业被带回前台。您可能不会立即再次收到提示，因为第二个命令现在在前台并正在执行。当命令执行完毕后，提示符会出现，您可以执行另一个命令。
+
+```
+$ fg %2
+cat *.c > myprogs
+$
+```
+
+## 停止和挂起作业
+
+如果您想停止后台运行的作业，可以使用 `kill` 命令强制其结束。`kill` 命令的参数可以是用户作业号或系统进程号。用户作业号必须以百分号 `%` 开头。您可以通过 `jobs` 命令找到作业号。在下一个示例中，`jobs` 命令列出后台作业；然后取消作业 2：
+
+```
+$ jobs
+[1]  + Running lpr intro
+[2]  - Running cat *.c > myprogs
+$ kill %2
+```
+
+您也可以使用系统进程号取消作业，您可以通过 `ps` 命令获得。`ps` 命令显示的信息比 `jobs` 命令多得多。下一个示例列出用户正在运行的进程。`PID` 是系统进程号，也称为进程 ID。`TTY` 是终端标识符。`time` 是进程迄今为止所花费的时间。`COMMAND` 是进程的名称。
+
+```
+$ ps
+PID    TTY    TIME    COMMAND
+523    tty24  0:05    sh
+567    tty24  0:01    lpr
+570    tty24  0:00    ps
+```
+
+然后您可以在 `kill` 命令中引用系统进程号。使用进程号且不带任何前导百分号。下一个示例杀死进程 567：
+
+```
+$ kill 567
+```
+
+你可以使用 `CTRL-Z` 键挂起并停止一个作业。这会将作业放到一边，直到重新启动它。作业并未终止；它只是保持挂起状态，直到你想继续。当你准备好后，可以使用 `fg` 或 `bg` 命令在前台或后台继续该作业。`fg` 命令在前台重新启动挂起的作业。`bg` 命令将挂起的作业放到后台。
+
+有时，你可能需要将当前在前台运行的作业放入后台。但是，你不能直接将正在运行的作业移动到后台。你首先需要用 `CTRL-Z` 挂起它，然后用 `bg` 命令将其放入后台。在下一个示例中，当前用于列出并重定向 `.c` 文件的命令首先用 `CTRL-Z` 挂起，然后将该作业放入后台。
+
+```
+$ cat *.c > myprogs
+^Z
+$ bg
+```
+
+## Shell 变量
+
+前面描述的 `Bash`、`Korn` 和 `Z shell` 实际上是不同类型的 shell。根据定义，shell 是一种解释性环境，你可以在其中执行命令。你可以同时运行多个环境，这些环境可以是相同类型的 shell，也可以是不同类型的 shell。这些解释性环境被称为 shell。因此，你可以同时运行多个 `Bash` 类型的 shell。
+
+在每个 shell 中，你可以输入并执行命令。你可以使用 shell 变量进一步增强 shell 的能力。使用 shell 变量，你可以保存数据，以便在给定 shell 中执行不同命令时反复引用。例如，你可以定义一个 shell 变量来保存复杂文件名。与其在不同命令中重新输入文件名，不如用 shell 变量引用它。
+
+你在 shell 中定义变量，这些变量称为 shell 变量。存在许多不同的 shell。某些实用程序（如 `Mail` 实用程序）有自己的 shell 和相应的 shell 变量。你也可以使用所谓的 shell 脚本创建自己的 shell。你有一个用户 shell，一旦登录它就会激活。这通常称为登录 shell。在此登录 shell 中定义了特殊的系统变量。shell 变量还可以用于定义 shell 的环境，如第 9 章所述。
+
+> 注意：只要你的 shell 处于活动状态，shell 变量就存在——也就是说，直到你退出 shell。例如，注销将退出登录 shell。当你再次登录时，你可能需要在登录 shell 中使用的任何变量都必须重新定义。
+
+### 变量的定义与求值：`=`、`$`、`set`、`unset`
+
+当你在 shell 中首次使用变量名时，就定义了一个变量。变量名可以是任意一组字母字符，包括下划线。名称也可以包含数字，但数字不能是名称中的第一个字符。名称不能包含任何其他类型的字符，例如感叹号、与号（`&`）甚至空格。这些符号被 shell 保留供其自身使用。此外，变量名不能包含多个单词。shell 使用命令行上的空格来区分命令的不同组成部分，如选项、参数和命令名称。
+
+使用赋值运算符 `=` 为变量赋值。你输入变量名、赋值运算符，然后输入要赋的值。不要在赋值运算符周围放置任何空格。例如，赋值操作 `poet = Virgil` 将失败。（`C shell` 的赋值操作类型略有不同。）你可以将任意字符集赋给变量。在下一个示例中，变量 `poet` 被赋值为字符串 `Virgil`：
+
+```
+$ poet=Virgil
+```
+
+一旦你为变量赋值，就可以使用变量名来引用该值。你通常会将变量的值用作命令的参数。你可以使用变量名前加 `$` 运算符来引用变量的值。美元符号是一个特殊运算符，它使用变量名来引用变量的值，实际上就是求变量的值。求值会获取变量的值，通常是一组字符。这组字符随后替换命令行上的变量名。只要在变量名前加上 `$`，变量名就会被替换为变量的值。在下一个示例中，shell 变量 `poet` 被求值，其内容 `Virgil` 随后用作 `echo` 命令的参数。`echo` 命令只是在屏幕上回显或打印一组字符。
+
+```
+$ echo $poet
+Virgil
+```
+
+你必须仔细区分变量的求值结果与仅使用其名称（不求解）的区别。如果你省略变量名前的 `$` 运算符，那么你得到的只是变量名本身。在下一个示例中，变量名上没有 `$` 运算符。在这种情况下，`echo` 命令的参数是单词“poet”，因此输出“poet”：
+
+```
+$ echo poet
+poet
+```
+
+变量的内容通常用作命令参数。常见的命令参数是目录路径名。重复输入一个反复使用的目录路径可能会很繁琐。如果你将目录路径名赋给变量，就可以直接使用对该变量求值的结果来替代它。当使用 `$` 运算符对变量求值时，会检索你赋给该变量的目录路径。下一个示例将目录路径名赋给变量，然后在复制命令中使用求值后的变量。对 `ldir`（即 `$ldir`）求值得到路径名 `/home/chris/letters`。复制命令将求值为 `cp myletter /home/chris/letters`。
+
+```
+$ ldir=/home/chris/letters
+$ cp myletter $ldir
+```
+
+你可以使用 `set` 命令获取所有已定义变量的列表。如果你决定不再需要某个变量，可以使用 `unset` 命令将其移除。`unset` 命令会取消定义变量。
+
+## Shell 脚本：用户自定义命令
+
+你可以将 shell 命令放在一个文件中，然后让 shell 读取并执行文件中的命令。从这个意义上说，该文件充当 shell 程序，像程序中的语句一样执行 shell 命令。包含 shell 命令的文件称为 shell 脚本。
+
+你使用标准文本编辑器（如 `Vi` 编辑器）将 shell 命令输入到脚本文件中。使用脚本文件名的 `sh` 或 `.` 命令将读取脚本文件并执行其中的命令。在下一个示例中，名为 `lsc` 的文本文件包含一个 `ls` 命令，仅显示扩展名为 `.c` 的文件：
+
+```
+lsc
+ls *.c
+$ sh lsc
+main.c calc.c
+$ . lsc
+main.c calc.c
+```
+
+## 执行脚本
+
+
+
+你可以通过设置脚本文件的可执行权限来省去 `sh` 和 `.` 命令。当文本编辑器首次创建脚本文件时，它仅具有读和写权限。`chmod` 命令配合 `+x` 选项将赋予脚本文件可执行权限。（权限在第 28 章中有讨论）一旦可执行，在 shell 提示符下输入脚本文件名并按 ENTER 即可执行脚本文件及其中的 shell 命令。实际上，脚本的文件名成为一个新的 shell 命令。这样，你就可以使用 shell 脚本来设计和创建自己的 Linux 命令。你只需设置一次权限。在下一个示例中，`lsc` 文件的所有者可执行权限被设置为开启。然后 `lsc` shell 脚本像任何 Linux 命令一样直接执行。
+
+```
+$ chmod u+x lsc
+$ lsc
+main.c calc.c
+```
+
+你可能需要指定所使用的脚本位于当前工作目录中。你可以通过在脚本名前加上点和斜杠组合 `./` 来实现，如 `./lsc`。点是一个特殊字符，表示当前工作目录的名称。斜杠是目录路径名分隔符，如第 28 章中更详细地解释的那样（你也可以将当前目录添加到你的 `PATH` 变量中，如第 10 章所述）。以下示例将展示你如何执行 `hello` 脚本：
+
+```
+$ ./lsc
+main.c calc.c
+```
+
+## 脚本参数
+
+就像任何 Linux 命令可以接受参数一样，shell 脚本也可以。命令行上的参数按顺序引用，从 1 开始。参数使用 `$` 运算符和其位置的数字来引用。第一个参数使用 `$1` 引用，第二个使用 `$2`，以此类推。在下一个示例中，`lsext` 脚本打印出具有指定扩展名的文件。第一个参数是扩展名。然后使用参数 `c` 执行脚本（当然，可执行权限必须已设置）。
+
+```
+lsext
+ls *.$1
+$ lsext c
+main.c calc.c
+```
+
+在下一个示例中，用于打印带行号的文件的命令被放在一个名为 `lpnum` 的可执行文件中，该文件将文件名作为其参数。带 `-n` 选项的 `cat` 命令首先输出带行号的文件内容。然后此输出通过管道传输到 `lpr` 命令，该命令将其打印出来。打印行号的命令在后台执行。
+
+```
+lpnum
+cat -n $1 | lpr &
+$ lpnum mydata
+```
+
+你可能需要同时引用多个参数。使用的参数数量可能不同。在 `lpnum` 中，你可能希望一次打印三个文件，有时又打印五个文件。带星号的 `$` 运算符，`$*`，引用命令行上的所有参数。使用 `$*` 使你能够创建接受可变数量参数的脚本。在下一个示例中，`lpnum` 使用 `$*` 重写，以便每次使用时可以接受不同数量的参数：
+
+```
+lpnum
+cat -n $* | lpr &
+$ lpnum mydata preface
+```
+
+## 控制结构
+
+你可以使用控制结构来控制 shell 脚本中 Linux 命令的执行。控制结构允许你重复命令并从中选择某些命令。控制结构由两个主要部分组成：测试和命令。如果测试成功，则执行命令。这样，你就可以使用控制结构来决定是否应执行命令。
+
+控制结构有两种不同的类型：循环和条件。循环重复命令，而条件在满足某些条件时执行命令。`BASH` shell 有三种循环控制结构：`while`、`for` 和 `for-in`。有两种条件结构：`if` 和 `case`。控制结构以 Linux 命令的执行作为其测试。所有 Linux 命令在执行完毕后都会返回一个退出状态。如果命令成功，其退出状态为 `0`。如果命令因任何原因失败，其退出状态将为一个正值，引用发生的失败类型。控制结构检查 Linux 命令的退出状态是否为 `0` 或其他值。在 `if` 和 `while` 结构的情况下，如果退出状态为零值，则命令成功，结构继续。
+
+### 测试操作
+
+使用 `test` 命令，你可以比较整数、比较字符串，甚至执行逻辑操作。该命令由关键字 `test` 组成，后跟被比较的值，这些值由一个选项分隔，该选项指定正在进行的比较类型。可以将该选项视为运算符，但它与其他选项一样，使用连字符和字母代码书写。例如，`-eq` 是表示相等比较的选项。然而，有两个字符串操作实际上使用运算符而不是选项。当你比较两个字符串是否相等时，使用等号，`=`。对于不等，使用 `!=`。表 8-6 列出了 `test` 使用的一些常用选项和运算符。`test` 命令的语法如下所示：
+
+```
+test value -option value
+test string = string
+```
+
+TABLE 8-6
+
+BASH Shell
+
+Test Operators
+
+| Integer Comparisons | Function |
+| -gt | Greater-than |
+| -lt | Less than |
+| -ge | Greater-than-or-equal-to |
+| -le | Less-than-or-equal-to |
+| -eq | Equal |
+| -ne | Not equal |
+| String Comparisons |  |
+| -z | Tests for empty string |
+| = | Equal strings |
+| != | Not-equal strings |
+| Logical Operations |  |
+| -a | Logical AND |
+| -o | Logical OR |
+| ! | Logical NOT |
+| File Tests |  |
+| -f | File exists and is a regular file |
+| -s | File is not empty |
+| -r | File is readable |
+| -w | File can be written to, modified |
+| -x | File is executable |
+| -d | Filename is a directory name |
+
+在下一个示例中，用户比较两个整数值以查看它们是否相等。在这种情况下，你需要使用相等选项，`-eq`。检查 `test` 命令的退出状态以了解测试操作的结果。shell 特殊变量 `$?` 保存最近执行的 Linux 命令的退出状态。
+
+```
+$ num=5
+$ test $num -eq 10
+$ echo $?
+1
+```
+
+除了使用关键字 `test` 作为测试命令外，你还可以使用包围的方括号。命令 `test $greeting = "hi"` 可以写成
+
+```
+$ [ $greeting = "hi" ]
+```
+
+同样，测试命令 `test $num -eq 10` 可以写成
+
+```
+$ [ $num -eq 10 ]
+```
+
+方括号本身必须用空白字符包围：空格、TAB 或 ENTER。没有空格，它将无效。
+
+### 条件控制结构
+
+`BASH` shell 拥有一组条件控制结构，允许你选择要执行的 Linux 命令。其中许多与编程语言中发现的条件控制结构相似，但存在一些差异。`if condition` 测试 Linux 命令的成功与否，而不是表达式。此外，`if-then` 命令的结束必须用关键字 `fi` 表示，而 `case` 命令的结束用关键字 `esac` 表示。条件控制结构列在表 8-7 中。
+
+`if` 结构对命令施加条件。该条件是特定 Linux 命令的退出状态。如果命令成功，返回退出状态 `0`，则执行 `if` 结构内的命令。如果退出状态不是 `0`，则命令失败，`if` 结构内的命令不会执行。`if` 命令以关键字 `if` 开始，后跟一个 Linux 命令，其
+
+| Condition Control Structures: if, else, elif, case | Function |
+|---|---|
+| if command then command fi | if executes an action if its test command is true. |
+| if command then command else command fi | if-else executes an action if the exit status of its test command is true; if false, then the else action is executed. |
+| Condition Control Structures: if, else, elif, case | Function |
+|---|---|
+| if command then command elif command then command else command fi | elif allows you to nest if structures, enabling selection among several alternatives; at the first true if structure, its commands are executed and control leaves the entire elif structure. |
+| case string in (pattern) command;; |  |
+
+
+
+`esac` | `case` matches the string value to any of several patterns; if a pattern is matched, its associated commands are executed.
+
+| `command && command` | The logical AND condition returns a true 0 value if both commands return a true 0 value; if one returns a non-zero value, then the AND condition is false and also returns a non-zero value. |
+
+| `command || command` | The logical OR condition returns a true 0 value if one or the other command returns a true 0 value; if both commands return a non-zero value, then the OR condition is false and also returns a non-zero value. |
+
+| `! command` | The logical NOT condition inverts the return value of the command. |
+
+### Loop Control Structures: `while`, `until`, `for`, `for-in`, `select`
+
+| `while command`  
+`do`  
+`command`  
+`done` | `while` executes an action as long as its test command is true. |
+
+| `until command`  
+`do`  
+`command`  
+`done` | `until` executes an action as long as its test command is false. |
+
+| `for variable in list-values`  
+`do`  
+`command`  
+`done` | `for-in` is designed for use with lists of values; the variable operand is consecutively assigned the values in the list. |
+
+| `for variable`  
+`do`  
+`command`  
+`done` | `for` is designed for reference script arguments; the variable operand is consecutively assigned each argument value. |
+
+### 条件控制结构：`If`、`else`、`elif`、`case` | 函数
+
+|---|---|
+
+| `select string in item-list`  
+`do`  
+`command`  
+`done` | `select` 根据 `item-list` 中的项目创建一个菜单；然后执行 `command`；`command` 通常是一个 `case`。 |
+
+TABLE 8-7 BASH Shell Control Structures (continued)
+
+`exit` condition will be evaluated. The keyword `fi` ends the command. The `elsels` script in the next example executes the `ls` command to list files with two different possible options, either by size or with all file information. If the user enters an `s`, files are listed by size; otherwise, all file information is listed.
+
+```
+elsels
+echo Enter s to list file sizes,
+echo otherwise all file information is listed.
+echo -n "Please enter option: "
+read choice
+if [ "$choice" = s ]
+then
+ls -s
+else
+ls -l
+fi
+echo Good-bye
+```
+
+A run of the program follows:
+
+```
+$ elsels
+Enter s to list file sizes,
+otherwise all file information is listed.
+Please enter option: s
+total 2
+1 monday 2 today
+$
+```
+
+## Loop Control Structures
+
+The `while` loop repeats commands. A `while` loop begins with the keyword `while` and is followed by a Linux command. The keyword `do` follows on the next line. The end of the loop is specified by the keyword `done`. The Linux command used in `while` structures is often a test command indicated by enclosing brackets.
+
+The `for-in` structure is designed to reference a list of values sequentially. It takes two operands—a variable and a list of values. The values in the list are assigned one by one to the variable in the `for-in` structure. Like the `while` command, the `for-in` structure is a loop. Each time through the loop, the next value in the list is assigned to the variable. When the end of the list is reached, the loop stops. Like the `while` loop, the body of a `for-in` loop begins with the keyword `do` and ends with the keyword `done`. The `cbackup` script makes a backup of each file and places it in a directory called `sourcebak`. Notice the use of the `*` special character to generate a list of all filenames with a `.c` extension.
+
+```
+cbackup
+for backfile in *.c
+do
+    cp $backfile sourcebak/$backfile
+    echo $backfile
+done
+```
+
+A run of the program follows:
+
+```
+$ cbackup
+aio.c
+lib.c
+main.c
+$
+```
+
+The `for` structure without a specified list of values takes as its list of values the command line arguments. The arguments specified on the command line when the shell file is invoked become a list of values referenced by the `for` command. The variable used in the `for` command is set automatically to each argument value in sequence. The first time through the loop, the variable is set to the value of the first argument. The second time, it is set to the value of the second argument.
+
+## Filters and Regular Expressions
+
+
+
+Filters are commands that read data, perform operations on that data, and then send the results to the standard output. Filters generate different kinds of output, depending on their task. Some filters generate information only about the input, other filters output selected parts of the input, and still other filters output an entire version of the input, but in a modified way. Some filters are limited to one of these, while others have options that specify one or the other. You can think of a filter as operating on a stream of data—receiving data and generating modified output. As data is passed through the filter, it is analyzed, screened, or modified.
+
+The data stream input to a filter consists of a sequence of bytes that can be received from files, devices, or the output of other commands or filters. The filter operates on the data stream, but it does not modify the source of the data. If a filter receives input from a file, the file itself is not modified. Only its data is read and fed into the filter.
+
+The output of a filter is usually sent to the standard output. It can then be redirected to another file or device, or piped as input to another utility or filter. All the features of redirection and pipes apply to filters. Often data is read by one filter and its modified output piped into another filter.
+
+> NOTE Data could easily undergo several modifications as it is passed from one filter to another. However, it is always important to realize the original source of the data is never changed.
+
+许多工具和过滤器使用模式来定位和选择文件中的特定文本。有时，你可能需要以更灵活和强大的方式使用模式，搜索给定模式的几种不同变体。你可以在模式中包含一组特殊字符以启用灵活的搜索。包含此类特殊字符的模式称为正则表达式。正则表达式可用于大多数采用模式搜索的过滤器和实用程序，例如 `sed`、`awk`、`grep` 和 `egrep`。
+
+> Tip 虽然用于正则表达式的许多特殊字符与 shell 文件扩展字符相似，但它们的使用方式不同。Shell 文件扩展字符操作文件名。正则表达式搜索文本。
+
+你可以将过滤器的输出保存到文件中或发送到打印机。为此，你需要使用重定向或管道。要将过滤器的输出保存到文件，你使用重定向操作 `>` 将其重定向到文件。要将输出发送到打印机，你将输出通过管道传递给 `lpr` 实用程序，然后它会打印输出。在下一个命令中，`cat` 命令将其输出通过管道传递给 `lpr` 命令，然后 `lpr` 命令将其打印出来。
+
+```
+$ cat complist | lpr
+```
+
+所有过滤器都接受来自标准输入的输入。事实上，一个过滤器的输出可以作为另一个过滤器的输入通过管道传递。然而，许多过滤器也可以直接从文件接受输入。这样的过滤器可以将文件名作为其参数，并直接从这些文件中读取数据。
+
+## 搜索文件：`grep`
+
+`grep` 和 `egrep` 过滤器搜索文件内容中的模式。然后它们会通知你模式在哪个文件中找到，并在每个文件中打印出出现该模式的行。每行前面是该行所在的文件名。`grep` 只能搜索一个模式，而 `fgrep` 可以同时搜索多个模式。
+
+`grep` 过滤器接受两种类型的参数。第一个参数是要搜索的模式；第二个参数是文件名列表，即要搜索的文件。你在模式之后在命令行上输入文件名。你也可以使用特殊字符，例如星号，来生成文件列表。
+
+```
+$ grep pattern filenames-list
+```
+
+如果你想在模式搜索中包含多个单词，你将这些单词用单引号括起来。这是为了引用模式中单词之间的空格。否则，shell 会将空格解释为命令行上的分隔符或参数，`grep` 会尝试将模式中的单词解释为文件列表的一部分。在下一个示例中，`grep` 搜索模式 `text file`：
+
+```
+$ grep 'text file' preface
+A text file in Unix
+text files, changing or
+```
+
+如果你在文件列表中使用多个文件，`grep` 会在匹配行之前输出文件名。在下一个示例中，两个文件 `preface` 和 `intro` 被搜索模式 `data`。在每次出现之前，文件名都会被输出。
+
+```
+$ grep data preface intro
+preface: data in the file.
+intro: new data
+```
+
+如前所述，你也可以使用 shell 文件扩展字符来生成要搜索的文件列表。在下一个示例中，星号文件扩展字符用于生成目录中所有文件的列表。这是在目录的所有文件中搜索模式的一种简单方法。
+
+```
+$ grep data *
+```
+
+特殊字符通常对于搜索选定的文件集很有用。例如，如果你想在所有 C 程序源代码文件中搜索特定模式，你可以用 `*.c` 指定源代码文件集。假设你的程序中有一个意外的无限循环，你需要找到所有迭代的实例。下一个示例仅搜索具有 `.c` 扩展名的文件以查找模式 `while`，并显示执行迭代的代码行。
+
+```
+$ grep while *.c
+```
+
+## 正则表达式
+
+正则表达式使你能够匹配模式的可能变体，以及位于文本不同位置的模式。你可以搜索文本中具有不同开头或结尾字母的模式，或者你可以匹配行开头或结尾的文本。正则表达式特殊字符是插入符号、美元符号、星号、句点和方括号：`^`, `$`, `*`, `.`, `[]`。插入符号和美元符号匹配行的开头和结尾。星号匹配重复的字符，句点匹配单个字符，方括号匹配字符类。参见表 8-8，了解正则表达式特殊字符的列表。
+
+| Character | Match | Operation |
+| --- | --- | --- |
+| `^` | Start of a line | References the beginning of a line |
+| `$` | End of a line | References the end of a line |
+| `.` | Any character | Matches on any one possible character in a pattern |
+| `*` | Repeated characters | Matches on repeated characters in a pattern |
+| `[]` | Classes | Matches on classes of characters (a set of characters) in the pattern |
+
+TABLE 8-8 Regular Expression Special Characters
+
+> 注意 正则表达式在许多 Linux 过滤器和应用程序中被广泛使用，以执行搜索和匹配操作。`Vi` 和 `Emacs` 编辑器以及 `sed`、`diff`、`grep` 和 `gawk` 过滤器都使用正则表达式。
+
+假设你想使用 `ls` 的长格式输出来仅显示你的目录。一种方法是生成所有目录的长格式列表并将其通过管道传递给 `grep`，然后 `grep` 可以挑选出目录条目。你可以通过使用 `^` 特殊字符来指定行的开头来实现这一点。请记住，在 `ls` 的长格式输出中，第一个字符表示文件类型。`d` 表示目录，`l` 表示符号链接，而 `-` 表示普通文件。使用模式 `^d`，`grep` 将只匹配以 `d` 开头的行。
+
+
+
+```
+$ ls -l | grep '^d'
+drwxr-x--- 2 chris 512 Feb 10 04:30 reports
+drwxr-x--- 2 chris 512 Jan 6, 01:20 letters
+```
+
+# Shell 配置
+
+Linux 系统上通常使用四种主要 shell：Bourne Again shell（BASH）、Public Domain Korn shell（PDKSH）、TCSH shell 和 Z shell。BASH shell 是 Bourne shell 的高级版本，包含了为 Korn shell 和 C shell 开发的大多数高级功能。TCSH 是 C shell 的增强版本，最初为 BSD 版本的 Unix 开发。PDKSH 是 Unix Korn shell 的子集，而 Z shell 是 Korn shell 的增强版本。尽管它们的 Unix 对应版本差异很大，但 Linux shell 共享许多相同的功能。在 Unix 中，Bourne shell 缺少其他 Unix shell 中找到的许多功能。然而在 Linux 中，BASH shell 包含了 Korn shell 和 C shell 以及 TCSH shell 的所有高级功能。四种 shell 都可供你使用，尽管 BASH shell 是默认的。
+
+到目前为止，本书中的所有示例都使用了 BASH shell。你登录到默认 shell，但你可以通过输入其名称来切换到另一个 shell。`tcsh` 调用 TCSH shell，`bash` 调用 BASH shell，`ksh` 调用 PDKSH shell，`zsh` 调用 Z shell。你可以使用 `CTRL-D` 或 `exit` 命令退出 shell。你只需要一种类型的 shell 来完成工作。本章描述了 BASH shell 的常见功能，例如别名，以及如何使用 shell 变量和初始化文件将 shell 配置为满足你的需求。其他 shell 共享许多相同的功能，并使用相似的变量和初始化文件。
+
+## 别名
+
+你使用 `alias` 命令为命令创建另一个名称。`alias` 命令像一个宏一样展开为它所代表的命令。别名并不真正替换命令的名称；它只是为该命令提供另一个名称。别名命令以关键字 `alias` 和命令的新名称开头，后跟等号和别名将引用的命令。
+
+> 注意 `alias` 命令中使用的等号周围不能有空格。
+
+在下一个示例中，`list` 成为 `ls` 命令的另一个名称：
+
+```
+$ alias list=ls
+$ ls
+```
+
+### 别名命令和选项
+
+你也可以使用别名来替代命令及其选项，但你需要用单引号将命令和选项都括起来。任何包含空格的别名命令都必须用单引号括起来。在下一个示例中，别名 `lss` 引用带有 `-s` 选项的 `ls` 命令，别名 `lsa` 引用带有 `-p` 选项的 `ls` 命令。`ls` 带有 `-s` 选项会列出文件及其以块为单位的大小，而 `ls` 带有 `-p` 选项会在目录名后加上斜杠。请注意单引号如何将命令及其选项括起来。
+
+```
+$ alias lss='ls -s'
+$ lss
+mydata 14 today 6 reports 1
+$ alias lsa='ls -p'
+$ lsa
+mydata today reports/
+$
+```
+
+别名有助于简化复杂操作。在下一个示例中，`listlong` 成为 `ls` 命令的另一个名称，带有 `-l` 选项用于长格式列出所有文件信息，以及 `-h` 选项用于以人类可读格式显示文件大小。确保将命令及其参数用单引号括起来，以便它们被视为一个参数而不是被 shell 解析。
+
+```
+$ alias listlong='ls -lh'
+$ listlong
+-rw-r--r-- 1 root root 51K Sep 18 2003 mydata
+-rw-r--r-- 1 root root 16K Sep 27 2003 today
+```
+
+### 别名命令和参数
+
+你经常会使用别名来包含命令名和参数。如果你在常规基础上执行一个带有复杂特殊字符组合的参数的命令，你可能希望为其创建别名。例如，假设你经常只列出你的源代码和目标代码文件——那些以 `.c` 或 `.o` 结尾的文件。你需要为 `ls` 使用一个包含特殊字符组合的参数，如 `*.{co}`。相反，你可以将 `ls` 与 `.{co}` 参数一起别名，给它一个简单的名称。在下一个示例中，用户为命令 `ls *.{co}` 创建了一个别名 `lsc`：
+
+```
+$ alias lsc='ls *.{co}'
+$ lsc
+main.c main.o lib.c lib.o
+```
+
+## 命令别名
+
+你也可以使用命令的名称作为别名。这在你应该只使用特定选项使用命令的情况下会很有帮助。对于 `rm`、`cp` 和 `mv` 命令，`-i` 选项应始终使用以确保不会覆盖现有文件。与其每次使用这些命令时都小心使用 `-i` 选项，命令名称可以被别名为包含该选项。在下一个示例中，`rm`、`mv` 和 `cp` 命令已被别名为包含 `-i` 选项：
+
+```
+$ alias rm='rm -i'
+$ alias mv='mv -i'
+$ alias cp='cp -i'
+```
+
+单独使用 `alias` 命令会提供已定义的所有别名的列表，显示它们所代表的命令。你可以使用 `unalias` 命令删除一个别名。在下一个示例中，用户列出了当前别名，然后删除了 `lsa` 别名：
+
+```
+$ alias
+lsa=ls -F
+list=ls
+rm=rm -i
+$ unalias lsa
+```
+
+## 控制 Shell 操作
+
+BASH shell 有多个功能，可以让你控制不同 shell 操作的工作方式。例如，设置 `noclobber` 功能可以防止重定向覆盖文件。你可以像开关一样打开和关闭这些功能，使用 `set` 命令。`set` 命令接受两个参数：指定开或关的选项和功能名称。要打开一个功能，你使用 `-o` 选项，要关闭它，你使用 `+o` 选项。基本形式如下：
+
+```
+$ set -o feature      turn the feature on
+$ set +o feature      turn the feature off
+```
+
+最常见的三个功能是 `ignoreeof`、`noclobber` 和 `noglob`。表 9-1 列出了这些不同的功能，以及 `set` 命令。设置 `ignoreeof` 启用了一个功能，可防止你使用 `CTRL-D` 从用户 shell 注销。`CTRL-D` 不仅用于从用户 shell 注销，还用于结束直接输入到标准输入的用户输入。`CTRL-D` 常用于 `Mail` 程序或 `cat` 等实用程序。在这种情况下，你很容易输入额外的 `CTRL-D` 并意外注销自己。`ignoreeof` 功能可防止此类意外注销。在下一个示例中，`ignoreeof` 功能使用 `set` 命令和 `-o` 选项打开。用户现在只能通过输入 `logout` 命令注销。
+
+```
+$ set -o ignoreeof
+$ CTRL-D
+Use exit to logout
+$
+```
+
+## 环境变量和子 Shell：`export`
+
+当你登录到你的账户时，Linux 会生成你的用户 shell。在此 shell 中，你可以发出命令并声明变量。你也可以创建和执行 shell 脚本。但是，当你执行 shell 脚本时，系统会生成一个子 shell。然后你有两个 shell，一个是你登录的 shell，另一个是为脚本生成的 shell。在脚本 shell 中，你可以执行另一个 shell 脚本，它将拥有自己的 shell。当脚本执行完毕时，其 shell 终止，你返回到执行它的 shell。从这个意义上说，你可以有许多 shell，每个都嵌套在另一个 shell 内。在一个 shell 中定义的变量是局部的。如果你在一个 shell 脚本中定义一个变量，那么当脚本运行时，变量将在该脚本的 shell 中定义，并且是局部的。没有其他 shell 可以引用该变量。从某种意义上说，变量隐藏在其 shell 内。
+
+你可以在所有类型的 shell 中定义环境变量，包括 BASH shell、Z shell 和 TCSH shell。然而，在 BASH shell 中实现环境变量的策略与 TCSH shell 不同。在 BASH shell 中，环境变量会被导出。也就是说，每个子 shell 中都会为环境变量制作一份副本。例如，如果 `EDITOR` 变量被导出，则会在每个子 shell 中自动为你定义一份副本。另一方面，在 TCSH shell 中，环境变量只定义一次，可以被任何子 shell 直接引用。
+
+在 BASH shell 中，环境变量可以被视为具有额外功能的普通变量。要创建环境变量，你对已定义的变量应用 `export` 命令。`export` 命令指示系统为每个新生成的 shell 定义该变量的副本。每个新 shell 将拥有自己环境变量的副本。此过程称为导出变量。将导出的环境变量视为全局变量是一个错误。新的 shell 永远无法引用其自身之外的变量。相反，会为新 shell 生成变量的副本及其值。
+
+> 注意 你可以将导出的变量视为将其值导出到 shell，而不是导出到自身。对于熟悉编程结构的人来说，导出的变量可以被视为一种“按值调用”的形式。
+
+## 使用 Shell 系统变量配置你的 Shell
+
+
+
+当你登录到你的账户时，系统会为你生成一个 shell。该 shell 被称为你的登录 shell 或用户 shell。当你执行脚本时，你正在生成用户 shell 的子 shell。你可以在用户 shell 中定义变量，你也可以定义可以在生成的任何子 shell 中引用的环境变量。Linux 设置了你可以用来配置用户 shell 的系统 shell 变量。其中许多系统 shell 变量由系统在你登录时定义，但你自己定义了其他变量。有关常用变量的列表，请参阅表 9-1。
+
+一组保留的关键字用于这些系统变量的名称。你不应将这些关键字用作你自己的变量名称。系统变量全部以大写字母指定，便于识别。Shell 功能变量则使用小写字母。例如，关键字 `HOME` 由系统用来定义 `HOME` 变量。`HOME` 是一个特殊的环境变量，保存用户主目录的路径名。另一方面，关键字 `noclobber` 用于打开或关闭 `noclobber` 功能。
+
+## System Variables
+
+登录时由系统自动定义并赋予初始值的许多系统变量，如果你愿意，可以更改。有些系统变量的值不应更改。例如，`HOME` 变量保存你主目录的路径名。诸如 `cd` 之类的命令会引用 `HOME` 系统变量中的路径名以定位你的主目录。本节描述了其中一些更常见的系统变量。其他系统变量由系统定义并赋予初始值，你可以自由更改。要做到这一点，你需要重新定义它们并赋予新值。例如，`PATH` 变量由系统定义并赋予初始值；它包含命令所在目录的路径名。每当你执行一个命令时，shell 就会在这些目录中搜索它。你可以通过重新定义 `PATH` 变量，使其包含新目录的路径名，从而添加一个要搜索的新目录。还有其他特殊变量，系统并未定义。这些通常是可选功能，例如用于设置 Vi 编辑器选项的 `EXINIT` 变量。每次登录时，你都必须定义并为此类变量分配值。一些更常见的系统变量是 `SHELL`、`PATH`、`PS1`、`PS2` 和 `MAIL`。`SHELL` 变量保存你登录所用 shell 程序类型的路径名。`PATH` 变量列出用于搜索 Linux 命令的不同目录。`PS1` 和 `PS2` 变量保存提示符符号。`MAIL` 变量保存你的邮箱文件的路径名。你可以修改它们的任何值来自定义你的 shell。
+
+> **NOTE** 你可以使用 `env` 命令获取当前已定义的系统变量列表。`env` 命令的工作方式类似于 `set` 命令，但它只列出系统变量。
+
+### Using Initialization Files
+
+你可以使用称为初始化文件的特殊 shell 脚本来自动定义系统变量。初始化文件是一个具有特殊名称的 shell 脚本，每当你进入某个 shell 时就会执行。你可以编辑初始化文件，并在其中放置系统变量的定义和赋值。当你进入 shell 时，初始化文件将执行这些定义和赋值，从而有效地用你自己的值初始化系统变量。例如，`BASH` shell 的 `.bash_profile` 文件是一个每次登录时执行的初始化文件。它包含系统变量的定义和赋值。然而，`.bash_profile` 文件基本上只是一个 shell 脚本，你可以用任何文本编辑器（如 Vi 编辑器）编辑它；如果愿意，可以更改分配给系统变量的值。
+
+在 `BASH` shell 中，所有系统变量都设计为环境变量。当你定义或重新定义系统变量时，还需要将其导出以使其成为环境变量。这意味着你对系统变量所做的任何更改都必须伴随 `export` 命令。你会看到在登录初始化文件 `.bash_profile` 的末尾，通常会为其中定义的所有系统变量提供一个 `export` 命令。
+
+### Your Home Directory: HOME
+
+`HOME` 变量包含你的主目录的路径名。你的主目录由系统管理员在创建你的账户时确定。你的主目录的路径名在你登录时会自动读入你的 `HOME` 变量。在下一个示例中，`echo` 命令显示 `HOME` 变量的内容：
+
+```
+$ echo $HOME
+/home/chris
+```
+
+`HOME` 变量经常在你需要指定主目录的绝对路径名时使用。在下一个示例中，使用 `HOME` 表示主目录的路径来指定 `reports` 的绝对路径：
+
+```
+$ ls $HOME/reports
+```
+
+### Command Locations: PATH
+
+`PATH` 变量包含一系列由冒号分隔的目录路径。每次执行命令时，`PATH` 变量中列出的路径就会逐一搜索该命令。例如，`cp` 命令在系统中的目录 `/usr/bin` 中。此目录路径是 `PATH` 变量中列出的目录之一。每次你执行 `cp` 命令时，都会搜索此路径并找到 `cp` 命令。系统定义并为 `PATH` 赋予一组初始路径名。在 Linux 中，初始路径名为 `/usr/bin` 和 `/usr/sbin`。
+
+shell 可以执行任何可执行文件，包括你创建的程序和脚本。因此，`PATH` 变量也可以引用你的工作目录；因此，如果你想在工作目录中执行自己的脚本或程序，shell 就可以找到它。字符串中路径名之间不允许有空格。没有指定路径名的冒号引用你的工作目录。通常，在路径名的末尾放置一个冒号作为空条目来指定你的工作目录。例如，路径名 `/usr/bin:/usr/sbin:` 引用三个目录：`/usr/bin`、`/usr/sbin` 和你的当前工作目录。
+
+```
+$ echo $PATH
+/usr/bin:/usr/sbin:
+```
+
+place. In this example, an evaluation of `HOME` is also used to designate the user’s home directory in the new directory’s pathname. Notice the empty entry between two colons, which specifies the working directory.
+
+```
+$ PATH=$PATH:$HOME/mybin:
+$ export PATH
+$ echo $PATH
+/usr/bin:/usr/sbin::/home/chris/mybin
+```
+
+If you add a directory to `PATH` yourself while you are logged in, the directory would be added only for the duration of your login session. When you log back in, the login initialization file, `.bash_profile`, would again initialize your `PATH` with its original set of directories. The `.bash_profile` file is described in detail a bit later in this chapter. To add a new directory to your `PATH` permanently, you need to edit your `.bash_profile` file and find the assignment for the `PATH` variable. Then, you simply insert the directory, preceded by a colon, into the set of pathnames assigned to `PATH`.
+
+## Specifying the BASH Environment: BASH_ENV
+
+The `BASH_ENV` variable holds the name of the `BASH` shell initialization file to be executed whenever a `BASH` shell is generated. For example, when a `BASH` shell script is executed, the `BASH_ENV` variable is checked and the name of the script that it holds is executed before the shell script. The `BASH_ENV` variable usually holds `$HOME/.bashrc`. This is the `.bashrc` file in the user’s home directory. The `.bashrc` file is discussed later in this chapter. You could specify a different file if you wish, using that instead of the `.bashrc` file for `BASH` shell scripts.
+
+## Configuring the Shell Prompt
+
+
+
+The `PS1` and `PS2` variables contain the primary and secondary prompt symbols, respectively. The primary prompt symbol for the BASH shell is a dollar sign, `$`. You can change the prompt symbol by assigning a new set of characters to the `PS1` variable. In the next example, the shell prompt is changed to the `->` symbol:
+
+```
+$ PS1='->'
+-> export PS1
+->
+```
+
+You can change the prompt to be any set of characters, including a string, as shown in the next example:
+
+```
+$ PS1="Please enter a command: "
+Please enter a command: export PS1
+Please enter a command: ls
+mydata /reports
+Please enter a command:
+```
+
+The `PS2` variable holds the secondary prompt symbol, which is used for commands that take several lines to complete. The default secondary prompt is `>`. The added command lines begin with the secondary prompt instead of the primary prompt. You can change the secondary prompt just as easily as the primary prompt, as shown here:
+
+```
+$ PS2="@"
+```
+
+Like the TCSH shell, the BASH shell provides you with a predefined set of codes you can use to configure your prompt. With them you can make the time, your username, or your directory pathname a part of your prompt. You can even have your prompt display the history event number of the current command you are about to enter. Each code is preceded by a `\` symbol. `\w` represents the current working directory, `\t` the time, and `\u` your username. `\!` will display the next history event number. In the next example, the user adds the current working directory to the prompt:
+
+```
+$ PS1="\w $"
+/home/dylan $
+```
+
+The codes must be included within a quoted string. If no quotes exist, the code characters are not evaluated and are themselves used as the prompt. `PS1=\w` sets the prompt to the characters `\w`, not the working directory. The next example incorporates both the time and the history event number with a new prompt:
+
+```
+$ PS1="\t \! ->"
+```
+
+The following table lists the codes for configuring your prompt:
+
+| Prompt Codes | Description |
+|---|---|
+| `\!` | Current history number |
+| `\$` | Use `$` as prompt for all users except the root user, which has the `#` as its prompt |
+| `\d` | Current date |
+| `\a` | Shell currently active |
+| `\t` | Time of day |
+| `\u` | Username |
+| `\w` | Current working directory |
+
+## Specifying Your News Server
+
+Several shell system variables are used to set values used by network applications, such as Web browsers or newsreaders. `NNTP_SERVER` is used to set the value of a remote news server accessible on your network. If you are using an ISP, the ISP usually provides a news server you can access with your newsreader applications. However, you first have to provide your newsreaders with the Internet address of the news server. This is the role of the `NNTP_SERVER`. News servers on the Internet usually use the NNTP protocol. `NNTP_SERVER` should hold the address of such a news server. For many ISPs, the news server address is a domain name that begins with `nntp`. The following example assigns the news server address `nntp.myservice.com` to the `NNTP_SERVER` system variables. Newsreader applications automatically obtain the news server address from `NNTP_SERVER`. Usually, this assignment is placed in the shell initialization file, `.bash_profile`, so that it is automatically set each time a user logs in.
+
+```
+NNTP_SERVER=nntp.myservice.com
+export NNTP_SERVER
+```
+
+## 配置你的登录 Shell：.bash_profile
+
+`.bash_profile` 文件是 BASH shell 的登录初始化文件，也可命名为 `.profile`（如 SuSE Linux）。它是一个脚本文件，每当用户登录时都会自动执行。该文件包含定义用于管理你的 shell 的系统环境变量的 shell 命令。它们可能是对系统定义变量的重新定义，也可能是用户定义变量的定义。例如，当你登录时，你的用户 shell 需要知道 Linux 命令位于哪些目录。它会引用 `PATH` 变量来查找这些目录的路径名。然而，首先必须为 `PATH` 变量分配这些路径名。在 `.bash_profile` 文件中，赋值操作正好完成此事。由于它位于 `.bash_profile` 文件中，因此在用户登录时该赋值会自动执行。
+
+## 导出变量
+
+系统变量也需要使用 `export` 命令导出，以便使其可供你进入的任何子 shell 访问。你可以通过将它们列为参数，在一个 `export` 命令中导出多个变量。通常，在 `.bash_profile` 文件的末尾有一个 `export` 命令，其中列出了文件中定义的所有变量。如果某个变量未包含在此列表中，你可能无法访问它。注意在下面示例中描述的 `.profile` 文件末尾的 `export` 命令。你也可以将赋值和 `export` 命令合并为一个操作，如下所示的 `NNTP_SERVER`：
+
+```
+export NNTP_SERVER=nntp.myservice.com
+```
+
+
+
+## 变量赋值
+
+当你的账户创建时为你提供的标准 `.bash_profile` 文件的副本在下一个示例中列出。注意 `PATH` 是如何被赋值的，以及 `$HOME` 的值是如何被赋值的。`PATH` 和 `HOME` 都是系统已经定义的系统变量。`PATH` 保存为任何你输入的命令搜索的目录的路径名，而 `HOME` 保存你的主目录的路径名。赋值 `PATH=$PATH:$HOME/bin` 的效果是重新定义 `PATH`，使其包含你主目录内的 `bin` 目录。因此，你的 `bin` 目录也将被搜索任何命令，包括你自己创建的脚本或程序。请注意 `PATH` 然后被导出，以便任何子 shell 都可以访问。如果希望你的主目录也被搜索，你可以使用任何文本编辑器修改 `.bash_profile` 文件中的这一行，将其改为 `PATH=$PATH:$HOME/bin:$HOME`，在末尾添加 `:$HOME`。事实上，你可以更改此条目以添加任意多个你想要搜索的目录。
+
+```
+.bash_profile
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+PATH=$PATH:$HOME/bin
+BASH_ENV=$HOME/.bashrc
+USERNAME=""
+
+export USERNAME BASH_ENV PATH
+```
+
+## 编辑你的 BASH 配置文件脚本
+
+你的 `.bash_profile` 初始化文件是一个文本文件，可以像任何其他文本文件一样由文本编辑器编辑。你可以通过编辑 `.bash_profile` 并使用编辑命令在分配给 `PATH` 变量的目录路径名列表中插入新的目录路径名，从而轻松地将新目录添加到你的 `PATH`。你甚至可以添加新的变量定义。但是，如果这样做，请确保将新变量的名称包含在 `export` 命令的参数列表中。例如，如果你的 `.bash_profile` 文件中没有任何 `EXINIT` 变量的定义，你可以编辑该文件并添加一行为 `EXINIT` 分配值的行。定义 `EXINIT='set nu ai'` 将配置 `Vi` 编辑器以启用行号和缩进。然后你需要将 `EXINIT` 添加到 `export` 命令的参数列表中。当 `.bash_profile` 文件再次执行时，`EXINIT` 变量将被设置为命令 `set nu ai`。当 `Vi` 编辑器被调用时，`EXINIT` 变量中的命令将被执行，自动设置行号和自动缩进选项。
+
+在下面的示例中，用户已修改其 `.bash_profile` 以包含 `EXINIT` 的定义以及 `PATH`、`PS1` 和 `HISTSIZE` 的重新定义。`PATH` 变量的值中添加了 `$HOME`。`$HOME` 是一个求值为用户主目录的变量，末尾的冒号指定当前工作目录，使你能够执行可能位于主目录或工作目录中的命令。`HISTSIZE` 的重新定义将保存的历史事件数量从系统 `.profile` 文件中定义的 1,000 减少到 30。`PS1` 系统变量的重新定义将提示符更改为包含当前工作目录的路径名。你对 `.bash_profile` 文件中系统变量所做的任何更改都会覆盖系统 `.profile` 文件中更早所做的更改。所有这些系统变量随后都通过 `export` 命令导出。
+
+```
+.bash_profile
+# .bash_profile
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+# User-specific environment and startup programs
+PATH=$PATH:$HOME/bin:$HOME:
+BASH_ENV=$HOME/.bashrc
+USERNAME="$USER"
+HISTSIZE=30
+NTP_SERVER=ntp.myserver.com
+EXINIT='set nu ai'
+PS1="\w $"
+export USERNAME BASH_ENV PATH HISTSIZE EXINIT PS1
+```
+
+## 手动重新执行 .bash_profile 脚本
+
+尽管 `.bash_profile` 在每次登录时都会执行，但在你对其进行更改后并不会自动重新执行。 `.bash_profile` 文件是一个初始化文件，仅在你登录时执行。如果你想在不必注销并重新登录的情况下利用你对它的更改，可以使用点号（`.`）命令重新执行 `.bash_profile`。 `.bash_profile` 文件是一个 shell 脚本，像任何 shell 脚本一样，可以使用 `.` 命令执行。
+
+```
+$ . .bash_profile
+```
+
+另外，你可以使用 `source` 命令来执行 `.bash_profile` 初始化文件，或任何初始化文件，例如 `TCSH` shell 中使用的 `.login`，或 `.bashrc`。
+
+```
+$ source .bash_profile
+```
+
+## System Shell Profile Script
+
+你的 Linux 系统也有自己的配置文件，每当任何用户登录时都会执行。该系统初始化文件 simply 称为 `profile`，位于 `/etc` 目录下，`/etc/profile`。该文件包含系统为每个用户提供的系统变量定义。以下是系统 `.profile` 文件的副本。Red Hat 使用 `pathmunge` 函数为 `PATH` 变量生成目录列表。为 `root` 用户生成的路径将看起来像这样，包括系统和用户应用程序目录。普通用户的路径将缺少系统目录，即路径中包含 `sbin` 的目录，并包含其主目录的名称，以及用于 Kerberos 工具的 `/usr/kerberos/bin`。
+
+```
+# echo $PATH
+/usr/local/sbin:/usr/sbin:/bin:/usr/bin:/usr/bin/X11;
+/usr/X11R6/bin:/usr/local/bin:/usr/bin:/root/bin:/root/bin
+```
+
+`HISTFILE` 也被重新定义以包含更大的历史事件数量。这里添加了一个 `NTPSERVER` 变量的条目。通常，新闻服务器地址是需要为所有用户设置的值。此类分配应由系统管理员在系统的 `/etc/profile` 文件中进行，而不是在每个用户自己的 `.bash_profile` 文件中进行。`/etc/profile` 文件还会执行 `/etc/profile.d` 目录中的任何脚本。这种设计允许更模块化的结构。与其通过编辑 `/etc/profile` 文件来添加条目，你只需向 `profile.d` 目录添加一个脚本即可。`BASH` shell 的脚本扩展名为 `.sh`。例如，`profile.d` 目录中的 `kde.sh` 脚本会检查 `KDEDIR` 变量的定义，如果没有生效则创建它。
+
+```
+/etc/profile
+# /etc/profile
+# System wide environment and startup programs, for login setup
+# Functions and aliases go in /etc/bashrc
+pathmunge () {
+    if [ ! echo $PATH | /bin/egrep -q "^($1)($1:)" ]; then
+        if [ "$2" = "after" ] ; then
+            PATH=$PATH:$1
+        else
+            PATH=$1:$PATH
+        fi
+    fi
+}
+
+# Path manipulation
+if [ `id -u` = 0 ]; then
+    pathmunge /sbin
+    pathmunge /usr/sbin
+    pathmunge /usr/local/sbin
+fi
+```
+
+```
+pathmunge /usr/X11R6/bin after
+unset pathmunge
+# No core files by default
+ulimit -S -c 0 > /dev/null 2>&1
+
+USER="`id -un`"
+LOGNAME=$USER
+MAIL="/var/spool/mail/$USER"
+HOSTNAME="`/bin/hostname`"
+HISTSIZE=1000
+NNTPSERVER=nntp.myservice.com
+
+if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ]; then
+    INPUTRC=/etc/inputrc
+fi
+
+export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC
+export NNTPSERVER
+
+for i in /etc/profile.d/*.sh ; do
+    if [ -x $i ]; then
+        . $i
+    fi
+done
+unset i
+```
+
+## Configuring the BASH Shell: .bashrc
+
+
+
+`.bashrc` 文件是每次进入 BASH shell 或生成任何子 shell 时执行的配置文件。如果 BASH shell 是你的登录 shell，`.bashrc` 会在你登录时与 `.bash_login` 文件一起执行。如果你在另一个 shell 中进入 BASH shell，`.bashrc` 文件会自动执行，其中的变量和别名定义将被定义。如果进入不同类型的 shell，则会执行该 shell 的配置文件。例如，如果你使用 `tcsh` 命令进入 TCSH shell，则会执行 `.tcshrc` 配置文件而不是 `.bashrc`。
+
+## The User `.bashrc` BASH Script
+
+`.bashrc` shell 配置文件实际上每次生成 BASH shell 时都会执行，例如当你运行 shell 脚本时。换句话说，每次创建子 shell 时，`.bashrc` 文件都会被执行。这会将你在 `.bashrc` shell 初始化文件中定义的任何本地变量或别名导出。`.bashrc` 文件通常包含别名的定义以及用于打开 shell 功能的任何特性变量。别名和特性变量在 shell 内部本地定义。但 `.bashrc` 文件在每个 shell 中都定义它们。因此，`.bashrc` 文件通常保存诸如 `rm`、`cp` 和 `mv` 命令的别名等定义。下一个示例是一个包含许多标准定义的 `.bashrc` 文件：
+
+```
+.bashrc
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+. /etc/bashrc
+fi
+set -o ignoreeof
+set -o noclobber
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+```
+
+你可以向自己的 `.bashrc` 文件中添加任何命令或自定义定义。如果你修改了 `.bashrc` 并希望在当前登录会话中生效，则需要使用 `.` 或 `source` 命令重新执行该文件。
+
+```
+$ . .bashrc
+```
+
+## System `/etc/.bashrc` BASH Script
+
+Linux 系统通常包含一个对所有用户执行的系统 `.bashrc` 文件。它可能包含所有用户在进入 BASH shell 时所需的一定的全局别名和功能。该文件位于 `/etc` 目录下，`/etc/.bashrc`。用户自己的 `.bashrc` 文件位于主目录中，其中包含执行此系统 `.bashrc` 文件的命令。前面 `.bashrc` 示例中的 `. /etc/bashrc` 命令正是如此。
+
+## The BASH Shell Logout File: `.bash_logout`
+
+`.bash_logout` 文件也是一个配置文件，在用户注销时执行。它旨在执行你在每次注销时希望完成的操作。与其说是变量定义，`.bash_logout` 文件通常包含形成一种关闭程序的 shell 命令——在注销前你始终希望执行的操作。一个常见的注销命令是清除屏幕然后发出告别信息。
+
+与 `.bash_profile` 一样，你可以向 `.bash_logout` 添加自己的 shell 命令。事实上，当你的账户首次创建时，`.bash_logout` 文件并不会自动为你设置。你需要使用 Vi 或 Emacs 编辑器自行创建它。然后你可以添加告别信息或其他操作。在下一个示例中，用户在 `.bash_logout` 文件中有 `clear` 和 `echo` 命令。当用户注销时，`clear` 命令清除屏幕，然后 `echo` 命令显示信息 "Good-bye for now."
+
+```
+.bash_logout
+# ~/ .bash_logout
+clear
+echo "Good-bye for now"
+```
+
+## Initialization and Configuration Files
+
+每种类型的 shell 都有其自己的初始化和配置文件集。Bash shell 配置文件之前已讨论过。TCSH shell 使用 `.login`、`.tcshrc`、`.logout` 文件代替 `.bash_profile`、`.bashrc` 和 `.bash_logout`。Z shell 有多个初始化文件：`.zshenv`、`.zlogin`、`.zprofile`、`.zshrc` 和 `.zlogout`。见表 9-2 的列表。查阅每个 shell 的手册页以了解它们的通常配置方式。当你安装一个 shell 时，这些文件的默认版本会自动放置在用户的 home 目录中。除了 TCSH shell 外，所有 shell 在变量定义和赋值值的语法上都基本相同，TCSH 使用略有不同的语法，其手册页中有描述。
+
+### TABLE 9-2
+
+Shell Configuration Files
+
+| BASH Shell | Function |
+|---|---|
+| `.bash_profile` | Login initialization file |
+| `.bashrc` | BASH shell configuration file |
+| `.bash_logout` | Logout file |
+| `.bash_history` | History file |
+| `/etc/profile` | System login initialization file |
+| `/etc/bashrc` | System BASH shell configuration file |
+| `/etc/profile.d` | Directory for specialized BASH shell configuration files |
+| TC SH Shell | |
+| `.login` | Login initialization file |
+| `.tcshrc` | TC SH shell configuration file |
+| `.logout` | Logout file |
+| Z Shell | |
+| `.zshenv` | Shell login file (first read) |
+| `.zprofile` | Login initialization file |
+| `.zlogin` | Shell login file |
+| `.zshrc` | Z shell configuration file |
+| `.zlogout` | Logout file |
+| PDKSH Shell | |
+| `.profile` | Login initialization file |
+| `.kshrc` | PDKSH shell configuration file |
+
+## Configuration Directories and Files
+
+应用程序经常在用户的主目录中安装配置文件，其中包含特定的配置信息，以使应用程序适应该特定用户的需求。这可能采用以句点开头的单个配置文件形式，也可能是包含多个配置文件的目录。目录名也将以句点开头。例如，Mozilla 在用户的主目录中安装名为 `.mozilla` 的目录，其中包含配置文件。另一方面，Mail 应用程序使用单个名为 `.mailrc` 的文件来保存用户设置的别名和功能设置。大多数单个配置文件以字母 `rc` 结尾。FTP 使用名为 `.netrc` 的文件。大多数新闻阅读器使用名为 `.newsrc` 的文件。配置文件中的条目通常由应用程序设置，尽管你通常可以通过编辑文件直接添加条目。应用程序有一组自己的特殊变量，你可以为其定义和赋值。你可以使用 `ls -a` 命令列出主目录中的配置文件。
+
+## 管理 Linux 文件、目录和归档
+
+在 Linux 中，所有文件都组织在目录中，而这些目录又以分层方式相互连接，形成一个整体文件结构。文件的引用不仅依据其名称，还依据其在文件结构中的位置。你可以创建任意数量的新目录，向文件结构中添加更多目录。Linux 文件命令可以执行复杂的操作，例如移动或复制整个目录及其子目录。你可以使用 `find`、`cp`、`mv` 和 `ln` 等文件操作来定位文件，并将它们从一个目录复制、移动或链接到另一个目录。桌面文件管理器，例如 KDE 和 GNOME 桌面使用的 Konqueror 和 Nautilus，提供了图形用户界面，可通过图标、窗口和菜单执行相同的操作（参见第 6 章和第 7 章）。本章将重点介绍你在 shell 命令行中用来管理文件的命令，如 `cp` 和 `mv`。然而，无论你是使用命令行还是 GUI 文件管理器，底层文件结构都是相同的。
+
+Linux 文件结构如何组织到各种系统及网络管理目录中，将在第 30 章详细讨论。虽然不属于 Linux 文件结构的一部分，但也有一些特殊工具可用于访问 Windows 分区和软盘。这些工具遵循与 Linux 文件命令大致相同的格式。
+
+归档用于备份文件或将它们组合成一个包，然后可作为单个文件通过互联网传输，或上传到 FTP 站点以方便下载。Linux 和 Unix 系统上使用的标准归档工具是 `tar`，它有几个 GUI 前端。你可以选择多种压缩程序，包括 GNU zip（`gzip`）、`Zip`、`bzip` 和 `compress`。
+
+
+
+> 注意：Linux 还允许你挂载和访问其他操作系统（如 Unix 或 Windows）使用的文件系统。Linux 本身支持多种不同的文件系统，如 ext2、ext3 和 ReiserFS。文件系统将在第 30 章讨论。远程文件系统的访问将在第 36 章讨论。
+
+## Linux 文件
+
+你可以使用任何字母、下划线和数字来命名文件。也可以包含句点和逗号。除某些特殊情况外，切勿以句点开头命名文件。其他字符，如斜杠、问号或星号，被系统保留用作特殊字符，不应成为文件名的一部分。文件名最长可达 256 个字符。文件名也可以包含空格，但从命令行引用文件名时，你需要确保将它们用引号括起来。
+
+在 GNOME 和 KDE 之类的桌面上，你不需要引号。
+
+你可以将扩展名作为文件名的一部分。句点用于区分文件名本身和扩展名。扩展名有助于对文件进行分类。你可能熟悉一些约定俗成的标准扩展名。例如，C 源代码文件的扩展名总是 `.c`。包含编译后的目标代码的文件具有 `.o` 扩展名。当然，你也可以自定义自己的文件扩展名。以下示例是有效的 Linux 文件名。请记住，要在命令行上引用最后一个名称，你必须用引号将它括起来：“`New book review`”：
+
+- `preface`
+- `chapter2`
+- `9700info`
+- `New_Revisions`
+- `calc.c`
+- `intro.bk1`
+- `intro.bk`
+- `New book review`
+
+特殊的初始化文件也用于保存 shell 配置命令。这些是隐藏文件，或称点文件，以句点开头。命令和应用程序使用的点文件有预定义名称，例如用于保存 Mozilla 数据和配置文件的 `.mozilla` 目录。请注意，当你使用 `ls` 显示文件名时，点文件不会显示。要显示点文件，你需要使用带 `-a` 选项的 `ls`。点文件在有关 shell 配置的第 9 章中有更详细的讨论。
+
+如图 10-1 所示，`ls -l` 命令显示文件的详细信息。首先显示权限，然后是链接数、文件所有者、用户所属组的名称、以字节为单位的文件大小、文件最后修改的日期和时间，以及文件名。权限将在本书后面的章节中详细讨论。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_215_0.png)
+
+| 文件类型 | 链接数 | 所有者名称 | 组名称 | 文件大小（字节） | 最后修改日期和时间 | 文件名 |
+|----------|---------------|------------|------------|----------------------|-----------------------------|----------|
+| -rw-r--r-- | 1 | chris | weather | 207 | Feb 20 11:55 | mydata |
+
+```
+$ ls -l mydata
+```
+
+```
+-rw-r--r-- 1 chris weather 207 Feb 20 11:55 mydata
+```
+
+本章。组名表示被允许访问文件对象的组。在图 10-1 中，`mydata` 的文件类型是普通文件。只有一个链接，表明该文件没有其他名称也没有其他链接。所有者的名字是 chris，与登录名相同，组名是 weather。其他人可能也属于 weather 组。文件的大小为 207 字节，最后修改时间为 2 月 20 日，上午 11:55。文件名为 `mydata`。
+
+如果你想显示目录中所有文件的详细信息，只需不带参数使用 `ls -l` 命令即可。
+
+```
+$ ls -l
+-rw-r--r-- 1 chris weather 207 Feb 20 11:55 mydata
+-rw-r--r-- 1 chris weather 568 Feb 14 10:30 today
+-rw-r--r-- 1 chris weather 308 Feb 17 12:40 monday
+```
+
+Linux 中的所有文件都有一种物理格式——字节流。字节流只是一串字节。这使得 Linux 能够将文件概念应用于系统中的每个数据组件。目录被归类为文件，设备也是如此。将一切都视为文件可以让 Linux 更轻松地组织和交换数据。文件中的数据可以直接发送到屏幕等设备，因为设备使用与普通文件相同的字节流文件格式与系统进行交互。
+
+这种相同的文件格式用于实现其他操作系统组件。设备（如屏幕或键盘）的接口被指定为文件。其他组件，如目录本身就是字节流文件，但它们具有特殊的内部组织。目录文件包含有关目录的信息，以特殊的目录格式组织。因为这些不同组件都被视为文件，所以可以说它们构成了不同的文件类型。字符设备是一种文件类型。目录是另一种文件类型。这些文件类型的数量可能会根据你特定的 Linux 实现而有所不同。然而，存在五种常见的文件类型：普通文件、目录文件、先入先出管道、字符设备文件和块设备文件。虽然你很少会引用文件的类型，但在搜索目录或设备时它会很有用。本章后面，你将看到如何在使用 `find` 命令进行搜索时使用文件类型作为搜索条件，以专门搜索目录或设备名称。
+
+尽管所有普通文件都有字节流格式，但它们可能以不同的方式使用。最显著的区别在于二进制文件和文本文件之间的区别。编译后的程序就是二进制文件的例子。然而，即使是文本文件也可以根据其不同的用途进行分类。你可以拥有包含 C 编程源代码或 shell 命令的文件，甚至是空文件。该文件可能是一个可执行程序或一个目录文件。Linux 的 `file` 命令可以帮助你确定文件用于什么。它检查文件的开头几行并尝试为其确定一个分类。`file` 命令会在这些开头几行中查找特殊关键字或特殊数字，但它并不总是准确的。在下一个示例中，`file` 命令检查两个文件的内容并为它们确定分类：
+
+```
+$ file monday reports
+monday: text
+reports: directory
+```
+
+如果你需要逐字节检查整个文件，可以使用 `od`（八进制转储）命令。`od` 命令执行文件的转储。默认情况下，它以八进制表示形式打印每个字节。然而，你也可以指定字符、十进制或十六进制表示。`od` 命令在你需要检测文件中的任何特殊字符或想要显示二进制文件时很有帮助。
+
+## 文件结构
+
+Linux 将文件组织成一个层级连接的目录集。每个目录可能包含文件或其他目录。在这方面，目录执行两个重要的功能。目录保存文件，就像文件抽屉中的文件一样，目录连接其他目录，就像树中的一个分支连接到其他分支一样。就文件而言，目录似乎像文件抽屉一样运行，每个抽屉保存几个文件。要访问文件，你打开一个文件抽屉。与文件抽屉不同的是，目录不仅可以包含文件，还可以包含其他目录。这样，目录就可以连接到另一个目录。
+
+由于与树的相似性，这种结构通常被称为树结构。然而，这种结构更准确地可以被认为是一棵倒置的灌木而不是一棵树，因为它没有树干。树是倒置表示的，根在顶部。从根部向下延伸的是分支。每个分支只从一个分支长出，但它可以有许多下层分支。在这方面，可以说它具有父/子结构。同样，每个目录本身是另一个目录的子目录。每个目录可能包含许多子目录，但本身只有一个父目录。
+
+Linux 文件结构从根目录 `/` 开始分支到几个目录。在根目录中，几个系统目录包含 Linux 系统的特性和程序文件。根目录还包含一个名为 `home` 的目录，其中包含系统中所有用户的家目录。每个用户的家目录反过来包含用户为自己用途创建的目录。其中每一个也可能包含目录。这样的嵌套目录将从用户的家目录分支出来，如图 10-2 所示。
+
+> 注意 用户的家目录可以是任何目录，通常是带有用户登录名的目录。该目录位于你的 Linux 系统中名为 `/home` 的目录中。例如，一个名为 `dylan` 的用户将有一个名为 `dylan` 的家目录，位于系统的 `/home` 目录中。用户的家目录是系统上名为 `/home` 的目录的子目录。
+
+### FIGURE 10-2
+
+从根目录开始的 Linux 文件结构
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_217_0.png)
+
+## 主目录
+
+当你登录系统时，你将被放置在你的主目录中。系统赋予该目录的名称与你的登录名相同。你在首次登录时创建的任何文件都组织在你的主目录中。然而，在你的主目录内，你可以创建更多目录。你可以切换到这些目录并在其中存储文件。对系统上的其他用户来说也是如此。每个用户都有自己的主目录，由相应的登录名标识。用户反过来可以创建自己的目录。
+
+你可以通过其名称或将其设为默认目录来访问一个目录。每个目录在创建时都会被赋予一个名称。你可以在文件操作中使用此名称来访问该目录中的文件。你也可以将该目录设为你的默认目录。如果你在一个文件操作中不使用任何目录名称，则会访问默认目录。默认目录被称为工作目录。从这个意义上说，工作目录是你当前正在工作的目录。
+
+当你登录时，工作目录是你的主目录，通常与你的登录名相同。你可以使用 `cd` 命令更改工作目录，以指定另一个目录作为工作目录。随着工作目录的更改，你可以从一个目录移动到另一个目录。另一种思考目录的方式是将其视为一条走廊。在这样的走廊里，有写着名字的门。有些门通向房间；另一些门通向其他走廊。打开到房间的门就像目录中的文件。通向其他走廊的门就像其他目录。从一条走廊移动到下一条走廊就像更改工作目录。穿过几条走廊就像穿过几个目录。
+
+## 路径名
+
+
+
+你在创建目录或文件时赋予它的名称并不是它的全名。目录的全名是其路径名。目录之间层次嵌套的关系形成了路径，这些路径可用于明确地标识和引用任何目录或文件。在图 10-3 中，从根目录 `/`，经过主目录到 `robert` 目录存在一条路径。另一条路径从根目录经过主目录和 `chris` 目录到 `reports` 目录。虽然每个路径的部分最初可能共享，但在某个点上它们会不同。`robert` 目录和 `reports` 目录都共享 `root` 和 `home` 两个目录。然后它们不同。在 `home` 目录中，`robert` 以 `robert` 结束，但 `chris` 目录随后通向 `reports`。这样，可以说文件结构中的每个目录都有其唯一的路径。系统用来标识目录的实际名称始终以根目录开头，并由该目录上方嵌套的所有目录组成。
+
+在 Linux 中，你通过用正斜杠分隔路径中的每个目录来书写路径名。路径中第一个目录前面的斜杠代表根。`robert` 目录的路径名为 `/home/robert`。`reports` 目录的路径名为 `/home/chris/reports`。路径名也适用于文件。当你在目录内创建一个文件时，你会给文件一个名称。然而，系统用来标识该文件的实际名称是文件名与从根到文件所在目录的目录路径的组合。在图 10-3 中，`weather` 文件的路径由根、`home` 和 `chris` 目录以及文件名 `weather` 组成。`weather` 的路径名为 `/home/chris/weather`（根目录由第一个斜杠表示）。
+
+路径名可以是绝对的或相对的。绝对路径名是从根目录开始的文件或目录的完整路径名。相对路径名从你的工作目录开始：它是相对于你的工作目录的文件路径。工作目录是你当前正在操作的目录。采用图 10-3 中描述的目录结构，如果 `chris` 是你的工作目录，则文件 `monday` 的相对路径名为 `reports/monday`。`monday` 的绝对路径名为 `/home/chris/reports/monday`。
+
+从根到你的主目录的绝对路径名可能特别复杂，有时甚至可能因系统管理员而改变。为了便于引用，你可以使用一个特殊字符，波浪号 `~`，它代表你主目录的绝对路径名。在下一个示例中，从 `thankyou` 目录，用户通过在 `weather` 前放置波浪号和斜杠来引用主目录中的 `weather` 文件。
+
+```
+$ pwd
+/home/chris/letters/thankyou
+$ cat ~/weather
+raining and warm
+$
+```
+
+你必须指定从主目录开始的其余路径。在下一个示例中，用户引用 `reports` 目录中的 `monday` 文件。波浪号代表用户的主目录路径 `/home/chris`，然后指定到 `monday` 文件的其余路径。
+
+```
+$ cat ~/reports/monday
+```
+
+## 系统目录
+
+开始 Linux 文件结构的根目录包含几个系统目录。系统目录包含用于运行和维护系统的文件和程序。其中许多包含用于执行 Linux 特定功能的程序的子目录。例如，目录 `/usr/bin` 包含用户执行的各种 Linux 命令，如 `cp` 和 `mv`。目录 `/bin` 存放与不同系统设备（如打印机或终端）的接口。表 10-1 列出了基本系统目录。
+
+| 目录 | 功能 |
+|---|---|
+| `/` | 开始文件系统结构，称为根目录 |
+| `/home` | 包含用户的主目录 |
+| `/bin` | 存放所有标准命令和实用程序 |
+| `/usr` | 存放系统使用的文件和命令；该目录分解为多个子目录 |
+| `/usr/bin` | 存放面向用户的命令和实用程序 |
+| `/usr/sbin` | 存放系统管理命令 |
+| `/usr/lib` | 存放编程语言的库 |
+| `/usr/share/doc` | 存放 Linux 文档 |
+| `/usr/share/man` | 存放在线手册 Man 文件 |
+| `/var/spool` | 存放排队文件，如打印作业和网络传输生成的那些文件 |
+| `/sbin` | 存放用于启动系统的系统管理命令 |
+| `/var` | 存放变化的文件，如邮箱文件 |
+| `/dev` | 存放终端和打印机等设备的接口文件 |
+| `/etc` | 存放系统配置文件和任何其他系统文件 |
+
+表 10-1 Linux 中的标准系统目录
+
+> 注 Linux 文件结构中系统目录和其他有用目录（如用于内核的目录）的整体组织在第 33 章中有详细讨论。
+
+## 列出、显示和打印文件：`ls`、`cat`、`more`、`less` 和 `lpr`
+
+操作系统的首要功能之一是管理文件。你可能需要在文件上执行某些基本输出操作，例如在屏幕上显示它们或打印它们。Linux 系统提供了一组执行基本文件管理操作的命令，例如列出、显示和打印文件，以及复制、重命名和删除文件。这些命令通常由单词的缩写形式组成。例如，`ls` 命令是 "list" 的缩写形式，用于列出目录中的文件。`lpr` 命令是 "line print" 的缩写形式，用于打印文件。`cat`、`less` 和 `more` 命令在屏幕上显示文件的内容。表 10-2 列出了这些命令及其不同选项。当你登录到 Linux 系统时，你可能想要列出主目录中的文件。`ls` 命令会输出你的文件和目录名称列表，对此很有用。`ls` 命令有许多可能的选项，可根据特定特征显示文件名。
+
+| 命令或选项 | 执行 |
+|---|---|
+| `ls` | 该命令列出文件和目录名称。 |
+| `cat filenames` | 该过滤器可用于显示文件。它可以接受文件名作为参数。它将这些文件的内容直接输出到标准输出，默认情况下定向到屏幕。 |
+| `more filenames` | 该实用程序逐屏显示文件。按空格键继续到下一屏，按 q 退出。 |
+| `less filenames` | 该实用程序也逐屏显示文件。按空格键继续到下一屏，按 q 退出。 |
+| `lpr filenames` | 将文件发送到行式打印机进行打印；可使用文件列表作为参数。使用 `-P` 选项指定打印机。 |
+| `lpq` | 列出打印作业的打印队列。 |
+| `lprm` | 从打印队列中移除打印作业。 |
+
+# 表 10-2 列出、显示和打印文件
+
+### 显示文件：`cat`、`less` 和 `more`
+
+你可能还需要查看文件的内容。`cat` 和 `more` 命令在屏幕上显示文件的内容。`cat` 代表 concatenate。
+
+```
+$ cat mydata
+computers
+```
+
+`cat` 命令将文件的全部文本一次性输出到屏幕。这在文件较大时会出现问题，因为其文本会迅速从屏幕上闪过。`more` 和 `less` 命令旨在克服这一限制，通过一次显示一屏文本。你可以随意向前或向后移动文本。你通过输入命令名后跟要查看的文件名来调用 `more` 或 `less` 命令（`less` 是一个更强大且可配置的显示实用程序）。
+
+```
+$ less mydata
+```
+
+当 `more` 或 `less` 调用文件时，会显示第一屏文本。要继续到下一屏，你按 F 键或空格键。要在文本中后退，你按 B 键。你可以随时按 Q 键退出。
+
+### 打印文件：`lpr`、`lpq` 和 `lprm`
+
+使用 `lpr` 和 `lprm` 等打印机命令，你可以执行打印操作，例如打印文件或取消打印作业（参见表 10-2）。当你需要打印文件时，使用 `lpr` 命令将文件发送到连接到系统的打印机。参见第 25 章了解有关打印的更多信息。在下一个示例中，用户打印 `mydata` 文件：
+
+```
+$ lpr mydata
+```
+
+如果你想一次打印多个文件，可以在 `lpr` 命令之后在命令行中指定多个文件。在下一个示例中，用户同时打印出 `mydata` 和 `preface` 文件：
+
+```
+$ lpr mydata preface
+```
+
+打印作业会被放入队列，并在后台逐一打印。你可以在文件打印的同时继续进行其他工作。你可以使用 `lpq` 命令随时查看特定打印作业的位置。`lpq` 会给出打印作业的所有者（发送作业的用户的登录名）、打印作业 ID、字节大小以及当前存放它的临时文件。
+
+如果你需要取消不需要的打印作业，可以使用 `lprm` 命令进行取消。`lprm` 的参数可以是打印作业的 ID 号，也可以是所有者的名称。`lprm` 然后会将打印作业从打印队列中移除。对于此任务，`lpq` 很有帮助，因为它提供了你需要与 `lprm` 一起使用的打印作业的 ID 号和所有者。
+
+## 管理目录：`mkdir`、`rmdir`、`ls`、`cd` 和 `pwd`
+
+你可以使用 `mkdir`、`rmdir` 和 `cd` 命令创建和删除自己的目录，以及更改工作目录。这些命令都可以将目录的路径名作为参数。`pwd` 命令显示工作目录的绝对路径名。此外，由单个点、双点和波浪号表示的特殊字符可分别用于引用工作目录、工作目录的父目录和主目录。综合起来，这些命令使你能够管理你的目录。你可以创建嵌套目录，从一个目录移动到另一个目录，并使用路径名引用你的任何目录。常用的管理目录的命令列在表 10-3 中。
+
+| Command | Execution |
+|---|---|
+| `mkdir directory` | 创建一个目录。 |
+| `rmdir directory` | 删除一个目录。 |
+| `ls -F` | 列出目录名，并在其前面加上斜杠。 |
+| `ls -R` | 列出工作目录以及所有子目录。 |
+
+
+
+| `cd directory name` | 更改为指定的目录，使其成为工作目录。不带目录名的 `cd` 会更改回主目录：`$ cd reports` |
+
+| `pwd` | 显示工作目录的路径名。 |
+
+| Command | Execution |
+
+|---|---|
+
+| `directory name / filename` | 路径名中使用斜杠分隔每个目录名。对于文件的路径名，斜杠将前面的目录名与文件名分隔开。 |
+
+| `..` | 引用父目录。你可以将其用作参数或作为路径名的一部分：`$ cd ..` `$ mv ../larisa oldletters` |
+
+| `.` | 引用工作目录。你可以将其用作参数或作为路径名的一部分：`$ ls .` |
+
+| `~/pathname` | 波浪号是一个特殊字符，表示主目录的路径名。当你需要为文件或目录使用绝对路径名时，它很有用：`$ cp monday ~/today` |
+
+## 创建和删除目录
+
+你使用 `mkdir` 和 `rmdir` 命令创建和删除目录。在这两种情况下，你也可以使用目录的路径名。在下一个示例中，用户创建了 `reports` 目录。然后用户使用路径名创建 `letters` 目录：
+
+```
+$ mkdir reports
+$ mkdir /home/chris/letters
+```
+
+你可以使用 `rmdir` 命令后跟目录名来删除目录。在下一个示例中，用户使用 `rmdir` 命令删除 `reports` 目录：
+
+```
+$ rmdir reports
+```
+
+要删除一个目录及其所有子目录，你可以使用带 `-r` 选项的 `rm` 命令。这是一个非常强大的命令，很容易被用来删除所有你的文件。你将被提示确认每个文件。要简单地在不提示的情况下删除所有文件和子目录，请添加 `-f` 选项。以下示例删除 `reports` 目录及其所有子目录：
+
+```
+rm -rf reports
+```
+
+## 显示目录内容
+
+你已经看到如何使用 `ls` 命令列出工作目录中的文件和目录。然而，要区分文件和目录名，你需要使用带 `-F` 选项的 `ls` 命令。然后在列表中每个目录名后面都会加上一个斜杠。
+
+```
+$ ls -F
+weather reports letters
+```
+
+```text
+$ ls -F
+weather reports/ letters/
+```
+
+`ls` 命令还接受目录名或目录路径名作为参数。这使你能够在不先切换到该目录的情况下列出任何目录中的文件。在下一个示例中，`ls` 命令以目录名 `reports` 作为参数。然后再次执行 `ls` 命令，这次使用的是 `reports` 的绝对路径名。
+
+```text
+$ ls reports
+monday tuesday
+$ ls /home/chris/reports
+monday tuesday
+$
+```
+
+## 在目录间移动
+
+`cd` 命令以要切换到的目录名作为参数。目录名可以是工作目录中的子目录名，也可以是系统上任何目录的完整路径名。如果你想切换回主目录，只需单独输入 `cd` 命令，而不带文件名参数即可。
+
+```text
+$ cd props
+$ pwd
+/home/dylan/props
+```
+
+## 引用父目录
+
+每个目录都有一个父目录（当然根目录除外）。例如，在前面的列表中，`thankyou` 的父目录是 `letters` 目录。当创建目录时，会创建两个条目：一个用点 `.` 表示，另一个用双点 `..` 表示。点表示目录的路径名，双点表示其父目录的路径名。双点作为命令的参数使用时，引用父目录。单点引用目录本身。
+
+你可以使用单点来引用工作目录，而不用使用其路径名。例如，要将文件复制到工作目录并保留相同名称，可以用点代替工作目录的路径名。在这种意义上，点是工作目录的另一个名称。在下一个示例中，用户将 `weather` 文件从 `chris` 目录复制到 `reports` 目录。`reports` 目录是工作目录，可以用单点表示。
+
+```text
+$ cd reports
+$ cp /home/chris/weather .
+```
+
+`..` 符号常用于引用父目录中的文件。在下一个示例中，`cat` 命令显示父目录中的 `weather` 文件。文件的路径名为 `..` 符号，后跟斜杠和文件名。
+
+```text
+$ cat ../weather
+raining and warm
+```
+
+TIP：你可以使用带 `..` 符号的 `cd` 命令，从较低的目录逐步返回目录树的连续父目录。
+
+## 文件和目录操作：`find`、`cp`、`mv`、`rm` 和 `ln`
+
+随着创建的文件越来越多，你可能想要备份它们、更改名称、删除其中一些文件，甚至为它们添加别名。Linux 为你提供了几个文件命令，使你能够搜索文件、复制文件、重命名文件或删除文件（请参阅本章后面的表 10-5）。如果文件数量很多，你还可以搜索它们以定位特定文件。这些命令是完整单词的缩写形式，仅由两个字符组成。`cp` 命令代表 “copy” 并复制文件，`mv` 代表 “move” 并重命名或移动文件，`rm` 代表 “remove” 并删除文件，`ln` 代表 “link” 并为文件添加另一个名称，常用作原始文件的快捷方式。两个字符规则的一个例外是 `find` 命令，它执行文件名搜索以查找文件。
+
+## 搜索目录：`find`
+
+一旦你在许多不同的目录中有大量文件，你可能需要搜索它们以定位特定文件或特定类型的文件。`find` 命令使你能够执行此类搜索。`find` 命令以目录名作为参数，后跟多个可能的选项，这些选项指定搜索类型和搜索标准。`find` 然后在所列目录及其子目录中搜索符合这些标准的的文件。`find` 命令可以根据名称、类型、所有者和甚至最后更新时间来搜索文件。
+
+```text
+$ find directory-list -option criteria
+```
+
+`-name` 选项以模式作为标准，并指示 `find` 搜索与该模式匹配的文件名。要按名称搜索文件，你使用 `find` 命令，后跟目录名、`-name` 选项和文件名。
+
+```text
+$ find directory-list -name filename
+```
+
+`find` 命令还有仅执行操作的选项，例如输出搜索结果。如果你希望 `find` 显示它找到的文件名，只需在命令行上连同其他选项一起包含 `-print` 选项即可。`-print` 选项指示 `find` 将找到的所有文件名称输出到标准输出（你也可以使用 `-ls` 选项以长格式列出文件）。在下一个示例中，用户搜索 `reports` 目录中所有名为 `monday` 的文件。一旦找到，该文件连同其相对路径名一起被打印。
+
+```text
+$ find reports -name monday -print
+reports/monday
+```
+
+`find` 命令使用目录列表中指定的目录名打印文件名。如果你指定绝对路径名，找到的文件的绝对路径名将被输出。如果你指定相对路径名，则只输出相对路径名。在
+
+preceding example, the user specified a relative pathname, `reports`, in the directory list. Located filenames were output beginning with this relative pathname. In the next example, the user specifies an absolute pathname in the directory list. Located filenames are then output using this absolute pathname.
+
+```
+$ find /home/chris -name monday -print
+/home/chris/reports/monday
+```
+
+## Searching the Working Directory
+
+If you want to search your working directory, you can use the dot in the directory pathname to represent your working directory. The double dots would represent the parent directory. The next example searches all files and subdirectories in the working directory, using the dot to represent the working directory. If you are located in your home directory, this is a convenient way to search through all your own directories. Notice the located filenames are output beginning with a dot.
+
+```
+$ find . -name weather -print
+./weather
+```
+
+
+
+You can use shell wildcard characters as part of the pattern criteria for searching files. The special character must be quoted, however, to avoid evaluation by the shell. In the next example, all files with the `.c` extension in the `programs` directory are searched for:
+
+```
+$ find programs -name '*.c' -print
+```
+
+## Locating Directories
+
+You can also use the `find` command to locate other directories. In Linux, a directory is officially classified as a special type of file. Although all files have a byte-stream format, some files, such as directories, are used in special ways. In this sense, a file can be said to have a file type. The `find` command has an option called `-type` that searches for a file of a given type. The `-type` option takes a one-character modifier that represents the file type. The modifier that represents a directory is a `d`. In the next example, both the directory name and the directory file type are used to search for the directory called `thankyou`:
+
+```
+$ find /home/chris -name thankyou -type d -print
+/home/chris/letters/thankyou
+$
+```
+
+File types are not so much different types of files as they are the file format applied to other components of the operating system, such as devices. In this sense, a device is treated as a type of file, and you can use `find` to search for devices and directories, as well as ordinary files. Table 10-4 lists the different types available for the `find` command's `-type` option.
+
+## Copying Files
+
+To make a copy of a file, you simply give `cp` two filenames as its arguments (see Table 10-5). The first filename is the name of the file to be copied—the one that already exists. This is often referred to as the source file. The second filename is the name you want for the copy.
+
+| Command or Option | Execution |
+|---|---|
+| `find` | Searches directories for files according to search criteria. This command has several options that specify the type of criteria and actions to be taken. |
+| `-name pattern` | Searches for files with the pattern in the name. |
+| `-group name` | Searches for files belonging to this group name. |
+| `-size numc` | Searches for files with the size num blocks. If c is added after num, the size in bytes (characters) is searched for. |
+| `-mtime num` | Searches for files last modified num days ago. |
+| `-newer pattern` | Searches for files modified after the one matched by pattern. |
+| `-print` | Outputs the result of the search to the standard output. The result is usually a list of filenames, including their full pathnames. |
+| `-type filetype` | Searches for files with the specified file type. File type can be b for block device, c for character device, d for directory, f for file, or l for symbolic link. |
+
+### TABLE 10-4 The find Command
+
+This will be a new file containing a copy of all the data in the source file. This second argument is often referred to as the destination file. The syntax for the `cp` command follows:
+
+```
+$ cp source-file destination-file
+```
+
+In the next example, the user copies a file called `proposal` to a new file called `oldprop`:
+
+```
+$ cp proposal oldprop
+```
+
+You could unintentionally destroy another file with the `cp` command. The `cp` command generates a copy by first creating a file and then copying data into it. If another file has the same name as the destination file, that file is destroyed and a new file with that name is created. By default, Red Hat configures your system to check for an existing copy by the same name (`cp` aliases with the `-i` option, see Chapter 9). To copy a file from your working directory to another directory, you only need to use that directory name as the second argument in the `cp` command. In the next example, the `proposal` file is overwritten by the `newprop` file. The `proposal` file already exists.
+
+```
+$ cp newprop proposal
+```
+
+
+
+You can use any of the wildcard characters to generate a list of filenames to use with `cp` or `mv`. For example, suppose you need to copy all your C source code files to a given directory. Instead of listing each one individually on the command line, you could use an `*` character with the `.c` extension to match on and generate a list of C source code files (all files with a `.c` extension)。在下一个示例中，用户将当前目录中的所有源代码文件复制到 `sourcebks` 目录：
+
+```
+$ cp *.c sourcebks
+```
+
+如果你想将给定目录中的所有文件复制到另一个目录，可以使用 `*` 来匹配并生成 `cp` 命令中所有这些文件列表。在下一个示例中，用户将 `props` 目录中的所有文件复制到 `oldprop` 目录。注意 `*` 特殊字符前使用了 `props` 路径名。在此上下文中，`props` 是一个路径名，将在 `*` 生成的列表中的每个文件前附加。
+
+```
+$ cp props/* oldprop
+```
+
+你当然也可以使用其他特殊字符，例如 `.`、`?` 或 `[]`。在下一个示例中，用户将源代码和目标代码文件（`.c` 和 `.o`）复制到 `projbk` 目录：
+
+```
+$ cp *.[co] projbk
+```
+
+复制文件时，你可能希望为副本指定与原文件不同的名称。为此，将新文件名放在目录名之后，以斜杠分隔。
+
+```
+$ cp filename directory-name/new-filename
+```
+
+## 移动文件
+
+你可以使用 `mv` 命令重命名文件或将文件从一个目录移动到另一个目录。使用 `mv` 重命名文件时，只需将新文件名用作第二个参数。第一个参数是你正在重命名的文件的当前名称。如果你想在移动文件时重命名它，可以在目录名之后指定文件的新名称。在下一个示例中，`proposal` 文件被重命名为 `version1`：
+
+```
+$ mv proposal version1
+```
+
+与 `cp` 类似，`mv` 也很容易意外擦除文件。重命名文件时，你可能会不小心选择一个已被其他文件使用的文件名。在这种情况下，该其他文件将被擦除。`mv` 命令还具有 `-i` 选项，它会先检查是否已存在该名称的文件。
+
+## NOTE
+
+要将文件复制到 CD-R/RW 或 DVD-R/RW 光盘，可以使用任意数量的 CD/DVD 烧录工具。其中许多是 `cdrecord` 和 `dvdrecord` 实用程序的接口，以及 `mkisofs` 和 `cdda2wav`。在 KDE 上，你可以使用 `K3b`、`CD-RW` 和 `KreateCD`，在 GNOME 上，你可以使用 `GNOME Toaster`、`GNOME CD Master` 和 `CD-rec`。使用 `cdrecord` 和 `dvdrecord`，你可以直接将文件复制到 CD-R/RW。`mkisofs` 用于创建 CD 映像，`cdda2wav` 用于从音乐 CD 录制音轨。对于 DVD+RW/+R 驱动器，你使用 `dvd+rw` 工具，如 `growisofs` 和 `dvd+rw-format`（参见第 30 章）。
+
+## 复制和移动目录
+
+你也可以一次复制或移动整个目录。`cp` 和 `mv` 都可以将目录名作为第一个参数，从而能够将子目录从一个目录复制或移动到另一个目录（参见表 10-5）。第一个参数是要移动或复制的目录的名称，而第二个参数是要将其放置其中的目录的名称。用于文件的相同路径名结构也适用于移动或复制目录。
+
+你也可以同样轻松地从一个目录复制子目录到另一个目录。要复制目录，`cp` 命令要求你使用 `-r` 选项。`-r` 选项代表“递归”。它指示 `cp` 命令复制一个目录，以及它可能包含的任何子目录。换句话说，从该目录开始的整个目录子树将被复制。在下一个示例中，`thankyou` 目录被复制到 `oldletters` 目录。现在存在两个 `thankyou` 子目录，一个在 `letters` 中，一个在 `oldletters` 中。
+
+```
+$ cp -r letters/thankyou oldletters
+$ ls -F letters
+/thankyou
+$ ls -F oldletters
+/thankyou
+```
+
+## 删除文件和目录：rm 命令
+
+在使用 Linux 时，你会发现你使用的文件数量迅速增加。在 Linux 中生成文件很容易。诸如编辑器之类的应用程序，以及 `cp` 等命令，都很容易创建文件。最终，其中许多文件可能会过时且无用。你可以用 `rm` 命令删除它们。`rm` 命令可以接受任意数量的参数，使你能够列出多个文件名并同时删除它们。在下一个示例中，用户删除了文件 `oldprop`：
+
+```
+$ rm oldprop
+```
+
+使用 `rm` 命令时要小心，因为它是不可逆的。一旦文件被删除，就无法恢复（没有撤销）。使用 `-i` 选项，你会被分别提示每个文件并询问是否删除它。如果你输入 `y`，该文件将被删除。如果你输入其他任何内容，该文件将不会被删除。在下一个示例中，`rm` 命令被指示删除文件 `proposal` 和 `oldprop`。然后 `rm` 命令会为每个文件请求确认。用户决定删除 `oldprop`，但不删除 `proposal`。
+
+```
+$ rm -i proposal oldprop
+Remove proposal? n
+Remove oldprop? y
+$
+```
+
+| 命令 | 执行 |
+|---|---|
+| `cp filename filename` | 复制一个文件。`cp` 需要两个参数：原始文件和新副本的名称。你可以使用路径名将文件复制到不同目录：`$ cp today reports/monday` |
+| `cp -r dirname dirname` | 将子目录从一个目录复制到另一个目录。被复制的目录包含其所有子目录：`$ cp -r letters/thankyou oldletters` |
+| `mv filename filename` | 移动（重命名）一个文件。`mv` 需要两个参数：第一个是要移动的文件。第二个参数可以是新的文件名或目录的路径名。如果它是目录的名称，则文件会被 literally 移动到该目录，改变文件的路径名：`$ mv today /home/chris/reports` |
+| `mv dirname dirname` | 移动目录。在这种情况下，第一个和最后一个参数都是目录：`$ mv letters/thankyou oldletters` |
+| `ln filename filename` | 为文件创建额外的名称，称为链接。可以在一个目录中创建一个链接，引用另一个目录中的文件：`$ ln today reports/monday` |
+| `rm filenames` | 删除（擦除）一个文件。可以接受任意数量的文件名作为参数。 literally 删除对文件的链接。如果一个文件有多个链接，你需要删除所有链接才能擦除文件：`$ rm today weather weekend` |
+
+表 10-5 文件操作
+
+## 链接：ln 命令
+
+你可以使用 `ln` 命令为文件提供多个名称。你可能希望使用不同的文件名引用一个文件，以便从不同目录访问它。额外的名称通常称为链接。Linux 支持两种不同类型的链接，硬链接和符号链接。硬链接 literally 是同一文件的另一个名称，而符号链接则像引用另一个文件的快捷方式。符号链接更加灵活，可以在许多不同的文件系统上工作，而硬链接仅限于本地文件系统。此外，硬链接会引入安全问题，因为它允许从可能具有公共访问权限的链接直接访问你可能想要保护的原始文件。链接通常以符号链接的形式实现。
+
+### 符号链接
+
+要设置符号链接，你使用 `ln` 命令并带上 `-s` 选项和两个参数：原始文件的名称和新的附加文件名。`ls` 操作会列出两个文件名，但只会存在一个物理文件。
+
+```
+$ ln -s original-file-name added-file-name
+```
+
+在下一个示例中，`today` 文件被赋予了额外的名称 `weather`。它只是 `today` 文件的另一个名称。
+
+```
+$ ls
+today
+$ ln -s today weather
+$ ls
+today weather
+```
+
+你可以通过多次对同一文件使用 `ln` 命令来为同一文件提供多个名称。在下一个示例中，文件 `today` 被赋予了 `weather` 和 `weekend` 两个名称：
+
+```
+$ ln -s today weather
+$ ln -s today weekend
+$ ls
+today weather weekend
+```
+
+
+
+如果你列出符号链接及其文件的完整信息，你会发现显示的信息是不同的。在下一个示例中，用户使用带 `-l` 选项的 `ls` 命令列出 `lunch` 和 `/home/george/veglist` 的完整信息。行中的第一个字符指定文件类型。符号链接有自己的文件类型，用 `l` 表示。`lunch` 的文件类型是 `l`，表示它是一个符号链接，而不是普通文件。术语“`group`”后面的数字是文件的大小。请注意大小不同。`lunch` 文件的大小只有 4 字节。这是因为 `lunch` 只是一个符号链接——一个保存另一个文件路径名的文件——而路径名只占用几个字节。它不是对 `veglist` 文件的直接硬链接。
+
+```
+$ ls lunch /home/george/veglist
+lrw-rw-r-- 1 chris group 4 Feb 14 10:30 lunch
+-rw-rw-r-- 1 george group 793 Feb 14 10:30 veglist
+```
+
+要擦除一个文件，你只需要删除其原始名称（以及对其的任何硬链接）。如果留下任何符号链接，它们将无法访问该文件。在这种情况下，符号链接将保存一个不再存在的文件的路径名。
+
+### 硬链接
+
+你可以通过多次对同一文件使用 `ln` 命令来为同一文件提供多个名称。要设置硬链接，你使用不带 `-s` 选项的 `ln` 命令和两个参数：原始文件的名称和新的附加文件名。`ls` 操作会列出两个文件名，但只会存在一个物理文件。
+
+```
+$ ln original-file-name added-file-name
+```
+
+在下一个示例中，`monday` 文件被赋予了额外的名称 `storm`。它只是 `monday` 文件的另一个名称。
+
+```
+$ ls
+today
+$ ln monday storm
+$ ls
+monday storm
+```
+
+要删除一个带有硬链接的文件，你需要移除它的所有硬链接。文件名实际上被视为指向该文件的链接——因此 `rm` 命令的作用是移除指向文件的链接。如果你有多个指向该文件的链接，并且只移除了其中一个，其他链接仍然存在，你可以通过这些链接引用该文件。即使你移除了原始链接——即文件的原始名称——也是如此。任何新增的链接同样有效。在下一个示例中，`today` 文件通过 `rm` 命令被移除。然而，指向同一文件的一个链接仍然存在，名为 `weather`。该文件随后可以以 `weather` 作为名称来引用。
+
+```
+$ ln today weather
+$ rm today
+$ cat weather
+The storm broke today
+and the sun came out.
+$
+```
+
+> 注意 Linux 中的每个文件和目录都包含一组权限，这些权限决定了谁可以访问它们以及如何访问。你可以设置这些权限，通过以下三种方式之一限制访问：你可以将访问权限限制为仅限你自己，你可以允许预定义组中的用户访问，或者你可以允许系统上的任何人访问。你还可以控制特定文件或目录的访问方式。文件和目录可以具有读、写和执行权限。当文件被创建时，它会自动为所有者授予读和写权限，使你能够显示和修改该文件。你可以将这些权限更改为你想要的任何组合。更多细节请参阅第 28 章。
+
+## `mtools` 工具：msdos
+
+你的 Linux 系统提供了一套名为 `mtools` 的工具，使你能够轻松访问为 MS-DOS 格式化的软盘和硬盘（参见表 10-6）。
+
+## 将文件复制到 DOS 软盘
+
+`mcopy` 命令使你能够将文件复制到软盘驱动器中的 MS-DOS 软盘或硬盘上的 Windows 分区，或从中复制文件。不需要特殊操作，例如挂载。使用 `mtools`，你无需挂载 MS-DOS 分区即可访问它。对于 MS-DOS 软盘，将磁盘放入软盘驱动器，然后就可以使用 `mtool` 命令访问这些文件。例如，要将文件从 MS-DOS 软盘复制到你的 Linux 系统，请使用 `mcopy` 命令。你可以用 `a:` 指定 MS-DOS 磁盘，表示 A 驱动器。与普通的 DOS 路径名不同，`mtool` 命令使用的路径名使用正斜杠而不是反斜杠。A 驱动器上的 `docs` 目录将用路径名 `a:/docs` 引用，而不是 `a:\docs`。与 MS-DOS 默认将第二个参数设为当前目录不同，你总是需要为 `mcopy` 提供第二个参数。下一个示例将文件 `mydata` 复制到 MS-DOS 磁盘，然后将 `preface` 文件从该磁盘复制到当前的 Linux 目录。
+
+```
+$ mcopy mydata a:
+$ mcopy a:/preface .
+```
+
+> 注意 目前，`mtools` 无法访问 Windows XP、NT 和 2000 的 NTFS 分区。
+
+## `mtools` 命令
+
+你可以使用 `mdir` 命令列出 MS-DOS 磁盘上的文件，也可以使用 `mcd` 命令切换其目录。下一个示例列出软盘驱动器中 MS-DOS 磁盘上的文件，然后切换到该驱动器上的 `docs` 目录：
+
+```
+$ mdir a:
+$ mcd a:/docs
+```
+
+大多数标准 MS-DOS 命令都可以作为 `mtool` 操作使用。你可以使用 `mmd` 创建 MS-DOS 目录，使用 `mdel` 删除 MS-DOS 文件。表 10-6 中提供了 `mtool` 命令列表。例如，要显示第二个软盘驱动器中 MS-DOS 磁盘上 B 驱动器的文件，请使用 `mtype` 并在文件名前加上 `b:/`。
+
+```
+$ mtype b:/readme
+```
+
+| 命令 | 执行功能 |
+| --- | --- |
+| `mcopy 文件名 文件名` | 将文件在 MS-DOS 磁盘和你的 Linux 系统之间进行复制。以下命令将文件从 MS-DOS 软盘复制到你的 Linux 系统：<br>`mcopy a:/文件名 目录或文件名`<br><br>以下命令将文件从 Linux 复制到软盘驱动器中的 MS-DOS 软盘：<br>`mcopy 文件名 a:/文件名` |
+| `mcd 目录名` | 在你的 MS-DOS 文件系统上切换目录。 |
+| `mdir` | 列出软盘驱动器中 MS-DOS 磁盘上的文件。 |
+| `mattrib` | 更改 MS-DOS 文件的属性。 |
+| `mdel 文件名` | 删除一个 MS-DOS 文件。 |
+| `mformat` | 向软盘添加 MS-DOS 文件系统。 |
+| `mlabel` | 创建卷标。 |
+| `mmd 目录名` | 创建一个 MS-DOS 目录。 |
+| `mrd 目录名` | 删除一个 MS-DOS 目录。 |
+| `mread 文件名 文件名` | 将 MS-DOS 文件低级读取（复制）到 Unix。 |
+| `mren 文件名 文件名` | 重命名一个 MS-DOS 文件。 |
+| `mtype 文件名` | 显示 MS-DOS 文件的内容。 |
+| `mwrite 文件名 文件名` | 将 Unix 文件低级写入（复制）到 MS-DOS。 |
+
+## 配置 `mtools`：`/etc/mtools.conf`
+
+`mtools` 对 MS-DOS 或 Windows 95、98 或 ME 分区的访问由 `/etc/mtools.conf` 文件配置。此文件列出了多个不同的默认 MS-DOS 或 Windows 分区和磁盘驱动器。每个驱动器或分区都用特定的设备名称标识。软盘驱动器的条目已预先输入，使用设备名称 `/dev/fd0` 和 `/dev/fd1` 分别表示第一个和第二个软盘驱动器。`/etc/mtools.conf` 文件中的条目形式为驱动器标签，后跟 `file` 和等号，然后是您希望与此标签关联的驱动器或分区的设备名称。设备名称用引号括起来。例如，假设第一个硬盘分区是 MS-DOS 分区且设备名称为 `/dev/hda1`，则以下条目将此分区标识为 MS-DOS 系统上的 C 驱动器：
+
+```text
+drive c: file="/dev/hda1"
+```
+
+您必须拥有分区的正确设备名称。这些设备名称列在 `/etc/fstab` 文件中，也可以在 root 用户桌面上的 Linuxconf 本地驱动器访问面板中查看。如果您有 SCSI 硬盘，则硬盘分区形式为 `sd`，后跟硬盘的字符和其中的分区号。例如，`sda1` 指的是 SCSI 硬盘上的第一个分区。IDE 硬盘形式为 `hd`，也后跟字符和分区号——`hda1` 指的是 IDE 硬盘上的第一个分区。
+
+在大多数发行版中，默认的 `/etc/mtools.conf` 文件已为您安装（请参阅以下 `/etc/mtools.conf` 示例）。该文件对 C 驱动器有注释条目：一个用于 SCSI 硬盘分区，一个用于 IDE 分区。两者均以前置的 `#` 注释掉。如果您有 IDE 硬盘（大多数用户都是），则需要从 IDE 硬盘分区条目中删除前置的 `#` 符号，并保留 SCSI 分区条目前面的 `#` 符号。此外，如果您的 IDE 硬盘上的 MS-DOS 分区不是第一个分区，则必须更改设备名称。例如，如果 MS-DOS 分区是第二个分区，则设备名称将为 `/dev/hda2`。如果您有多个 MS-DOS 分区，可以为每个分区添加条目，并为每个分区分配不同的标签。以下示例将 `d:` 标签分配给 IDE 驱动器上的第四个硬盘分区：
+
+```text
+drive d: file="/dev/hda4"
+```
+
+### `/etc/mtools.conf`
+
+
+
+```text
+# Linux floppy drives
+drive a: file="/dev/fd0" exclusive mformat_only
+drive b: file="/dev/fd1" exclusive mformat_only
+# First SCSI hard disk partition
+#drive c: file="/dev/sda1"
+# First IDE hard disk partition
+drive c: file="/dev/hda1"
+drive d: file="/dev/hda5"
+# dosemu floppy image
+drive m: file="/var/lib/dosemu/diskimage"
+# dosemu hdimage
+drive n: file="/var/lib/dosemu/diskimage" offset=8832
+# Atari ramdisk image
+drive o: file="/tmp/atari_rd" offset=136
+mtools_lower_case=1
+```
+
+## 复制文件到 DOS 分区
+
+一旦 DOS 硬盘分区被引用，您就可以使用其驱动器号在它们之间以及与 Linux 分区之间复制文件。以下命令将文件 `mypage.html` 复制到 `c:` 分区的 `webstuff` 目录中并重命名为 `mypage.htm`。请注意使用正斜杠而不是反斜杠。
+
+```text
+$ mcopy mypage.html c:/webstuff/mypage.htm
+```
+
+由于 DOS 和 Linux 处理文本文件换行符的方式不同，因此在将 DOS 文本文件复制到 Linux 分区时应始终使用 `-t` 选项。以下命令将 `c:/project` 目录中的 `mydoc.txt` 文件复制到 `/newdocs` 目录：
+
+```text
+$ mcopy -t c:/project/mydoc.txt /newdocs
+```
+
+## 归档和压缩文件
+
+归档用于备份文件或将它们组合成一个包，然后可以通过 Internet 传输为一个文件或发布在 FTP 站点上以便轻松下载。Linux 和 Unix 系统上使用的标准归档实用程序是 `tar`，其中存在多个 GUI 前端。您可以从中选择的压缩程序包括 GNU zip（`gzip`）、`Zip`、`bzip` 和 `compress`。
+
+### 使用 File Roller 归档和压缩文件
+
+Red Hat 提供了 File Roller 工具（可从 Accessories 菜单访问），它作为归档和压缩文件的 GUI 前端运行，让您可以使用 GUI 界面执行 `zip`、`gzip`、`tar` 和 `bzip2` 操作（见图 10-4）。您可以检查归档内容、提取所需文件并创建新的压缩归档。当您创建归档时，您可以通过指定其文件名扩展名来确定其压缩方法，例如 `gzip` 使用 `.gz` 或 `bzip2` 使用 `.bz2`。您可以从 File type 菜单中选择不同的扩展名，或自行输入扩展名。要同时归档和压缩文件，您可以选择组合扩展名，如 `.tar.bz2`，它既使用 `tar` 归档又使用 `bzip2` 压缩。
+
+![图 10-4：File Roller 归档和压缩工具](img/6c226e8ba1efd427dec3bf582418d33f_235_0.png)
+
+点击 Add 按钮将文件添加到你的归档中。要从归档中提取文件，请打开归档以显示归档文件列表。然后你可以点击 Extract 按钮来提取特定文件或整个归档。其他可用的 GUI 工具有 guiTAR、LnxZip、Ark、KArchive 和 Xtar。
+
+### Archive Files and Devices: `tar`
+
+`tar` 实用程序为文件和目录创建归档。使用 `tar`，你可以归档特定文件，在归档中更新它们，并按需向该归档添加新文件。你甚至可以归档整个目录及其所有文件和子目录，所有内容都可以从归档中恢复。`tar` 实用程序最初设计用于在磁带上创建归档。术语 `tar` 代表 tape archive。你可以在任何设备上创建归档，例如软盘，或创建归档文件来保存归档。`tar` 实用程序非常适合备份你的文件或将多个文件合并为单个文件以通过网络传输。File Roller 是 `tar` 的 GUI 接口。
+
+> NOTE 作为 `tar` 的替代方案，你可以使用 `pax`。`pax` 设计用于处理不同类型的 Unix 归档格式，如 `cpio`、`bcpio` 和 `tar`。你可以提取、列出和创建归档。如果你在处理由使用不同归档格式的 Unix 系统创建的归档，`pax` 会很有帮助。
+
+#### Displaying Archive Contents
+
+GNOME 中的两个文件管理器和 K Desktop 都有能力自动显示 `tar` 归档文件的内容。内容显示得就像它们是目录中的文件一样。你可以以图标或详细信息列出文件，按名称、类型或其他字段排序。你甚至可以显示文件的内容。点击文本文件会用文本编辑器打开它，图像会用图像查看器显示。如果文件管理器无法确定用于显示文件的程序，它会提示你选择一个应用程序。两个文件管理器都可以对驻留在远程文件系统上的归档执行相同的操作，例如 FTP 站点上的 `tar` 归档。你可以获取其内容的列表，甚至读取其 `readme` 文件。Nautilus 文件管理器（GNOME）也可以提取归档。右键单击 Archive 图标并选择 Extract。
+
+#### Creating Archives
+
+在 Linux 上，`tar` 通常用于在设备或文件上创建归档。你可以使用 `f` 选项加上设备或文件的名称，将 `tar` 指向归档文件到特定设备或文件。使用 `f` 选项的 `tar` 命令语法在下一个示例中显示。设备或文件名通常称为归档名称。当为 `tar` 归档创建文件时，文件名通常赋予 `.tar` 扩展名。这只是一个约定，并不是必需的。你可以列出任意多个文件名。如果指定了目录名，其所有子目录都包含在归档中。
+
+```
+$ tar options f archive-name.tar directory-and-file-names
+```
+
+要创建归档，请使用 `c` 选项。结合 `f` 选项，`c` 会在文件或设备上创建归档。你在此选项前输入该选项，并且紧挨着 `f` 选项。注意 `tar` 选项前没有前导破折号。表 10-7 列出了你可以用 `tar` 使用的不同选项。在下一个示例中，目录 `mydir` 及其所有子目录都保存在文件 `myarch.tar` 中。在此示例中，`mydir` 目录包含两个文件 `mymeeting` 和 `party`，以及一个名为 `reports` 的目录，其中有三个文件：`weather`、`monday` 和 `friday`。
+
+```
+$ tar cvf myarch.tar mydir
+mydir/
+mydir/reports/
+mydir/reports/weather
+mydir/reports/monday
+mydir/reports/friday
+mydir/mymeeting
+mydir/party
+```
+
+| Commands | Execution |
+|---|---|
+| `tar options files` | Backs up files to tape, device, or archive file. |
+| `tar options f archive_name filelist` | Backs up files to a specific file or device specified as `archive_name`. `filelist`; can be filenames or directories. |
+| Options | |
+| `c` | Creates a new archive. |
+| `t` | Lists the names of files in an archive. |
+| `r` | Appends files to an archive. |
+| `u` | Updates an archive with new and changed files; adds only those files modified since they were archived or files not already present in the archive. |
+| `--delete` | Removes a file from the archive. |
+| `w` | Waits for a confirmation from the user before archiving each file; enables you to update an archive selectively. |
+| `x` | Extracts files from an archive. |
+| `m` | When extracting a file from an archive, no new timestamp is assigned. |
+| `M` | Creates a multiple-volume archive that may be stored on several floppy disks. |
+
+
+
+| `f archive-name` | Saves the tape archive to the file `archive name`, instead of to the default tape device. When given an `archive name`, the `f` option saves the `tar` archive in a file of that name. |
+| `f device-name` | Saves a `tar` archive to a device such as a floppy disk or tape. `/dev/fd0` is the device name for your floppy disk; the default device is held in `/etc/default/tar-file`. |
+| `v` | Displays each filename as it is archived. |
+| `z` | Compresses or decompresses archived files using `gzip`. |
+| `j` | Compresses or decompresses archived files using `bzip2`. |
+
+## 提取归档文件
+
+用户稍后可以使用 `x` 选项从磁带中提取目录。`xvf` 选项从归档文件或设备中提取文件。`tar` 提取操作会生成所有子目录。在下一个示例中，`xvf` 选项指示 `tar` 从 `tar` 文件 `myarch.tar` 中提取所有文件和子目录：
+
+```
+$ tar xvf myarch.tar
+mydir/
+mydir/reports/
+mydir/reports/weather
+mydir/reports/monday
+mydir/reports/friday
+mydir/meeting
+mydir/party
+```
+
+你使用 `r` 选项向已创建的归档中添加文件。`r` 选项将文件追加到归档中。在下一个示例中，用户将 `letters` 目录中的文件追加到 `myarch.tar` 归档中。这里，目录 `mydocs` 及其文件被添加到 `myarch.tar` 归档中：
+
+```
+$ tar rvf myarch.tar mydocs
+mydocs/
+mydocs/doc1
+```
+
+## 更新归档
+
+如果更改了之前归档的目录中的任何文件，你可以使用 `u` 选项指示 `tar` 用任何已修改的文件更新归档。`tar` 命令比较每个归档文件的最后更新时间与用户目录中的时间，并将自上次归档以来被更改的任何文件复制到归档中。这些目录中创建的任何新文件也会被添加到归档中。在下一个示例中，用户使用 `mydir` 目录中最近修改或新创建的任何文件更新 `myarch.tar` 文件。在这种情况下，`gifts` 文件被添加到 `mydir` 目录。
+
+```
+tar uvf myarch.tar mydir
+mydir/
+mydir/gifts
+```
+
+如果需要查看归档中存储了哪些文件，可以使用 `t` 选项运行 `tar` 命令。下一个示例列出存储在 `myarch.tar` 归档中的所有文件：
+
+```
+tar tvf myarch.tar
+drwxr-xr-x root/root 0 2000-10-24 21:38:18 mydir/
+drwxr-xr-x root/root 0 2000-10-24 21:38:51 mydir/reports/
+-rw-r--r-- root/root 22 2000-10-24 21:38:40 mydir/reports/weather
+-rw-r--r-- root/root 22 2000-10-24 21:38:45 mydir/reports/monday
+-rw-r--r-- root/root 22 2000-10-24 21:38:51 mydir/reports/friday
+-rw-r--r-- root/root 22 2000-10-24 21:38:11 mydir/meeting
+-rw-r--r-- root/root 22 2000-10-24 21:36:42 mydir/party
+drwxr-xr-x root/root 0 2000-10-24 21:48:45 mydocs/
+-rw-r--r-- root/root 22 2000-10-24 21:48:45 mydocs/doc1
+drwxr-xr-x root/root 0 2000-10-24 21:54:03 mydir/
+-rw-r--r-- root/root 22 2000-10-24 21:54:03 mydir/gifts
+```
+
+## 归档到软盘
+
+要将文件备份到特定设备，请将设备指定为归档。对于软盘，你可以指定软盘驱动器。确保使用空白软盘。此操作会擦除其上之前放置的任何数据。在下一个示例中，用户在 `/dev/fd0` 设备上的软盘上创建归档，并将 `mydir` 目录中的所有文件复制到其中：
+
+```
+$ tar cf /dev/fd0 mydir
+```
+
+要提取设备上磁盘上的备份文件，请使用 `xf` 选项：
+
+```
+$ tar xf /dev/fd0
+```
+
+如果你要归档的文件占用的空间超过软盘等设备可用的空间，你可以创建使用多个卷标的 `tar` 归档。`M` 选项指示 `tar` 在当前存储组件填满时提示你输入新的存储组件。当使用 `M` 选项归档到软盘驱动器时，`tar` 会在软盘填满时提示你放入新的软盘。然后你可以将 `tar` 归档保存在多个软盘上。
+
+```
+$ tar cMF /dev/fd0 mydir
+```
+
+要解包多磁盘归档，请将第一个磁盘放入软盘驱动器，然后使用 `x` 和 `M` 选项发出以下 `tar` 命令。然后在需要时提示你放入其他软盘。
+
+```
+$ tar xMF /dev/fd0
+```
+
+## 压缩归档
+
+`tar` 操作不对归档文件执行压缩。如果要压缩归档文件，可以指示 `tar` 调用 `gzip` 实用程序来压缩它们。使用小写 `z` 选项，`tar` 首先使用 `gzip` 压缩文件，然后再归档。相同的 `z` 选项在提取文件时调用 `gzip` 进行解压缩。
+
+```
+$ tar czf myarch.tar.gz mydir
+```
+
+要使用 `bzip` 而不是 `gzip` 在归档前压缩文件，你使用 `j` 选项。相同的 `j` 选项在提取文件时调用 `bzip` 进行解压缩。
+
+```
+$ tar cjf myarch.tar.bz2 mydir
+```
+
+请记住，压缩归档中单个文件与压缩整个归档之间存在区别。通常，归档是为了将多个文件作为一个 `tar` 文件一起传输。为了缩短传输时间，归档应尽可能小。你可以使用压缩实用程序 `gzip` 对归档 `tar` 文件进行压缩，减少其大小，然后发送压缩版本。接收者可以对其进行解压缩，还原 `tar` 文件。使用 `gzip` 对 `tar` 文件进行压缩通常会得到扩展名为 `.tar.gz` 的文件。扩展名 `.gz` 会添加到被 `gzip` 压缩的文件中。下一个示例使用相同名称并添加 `.gz` 扩展名创建 `myarch.tar` 的压缩版本：
+
+## 归档到磁带
+
+如果您已指定默认设备，例如磁带，并且想要在上面创建归档，您可以简单地使用 `tar` 而不带 `f` 选项和设备或文件名。这对于备份文件非常有帮助。默认设备的名称保存在名为 `/etc/default/tar` 的文件中。以下是使用默认磁带设备时 `tar` 命令的语法示例。如果指定了目录名，则其所有子目录都包含在归档中。
+
+```
+$ tar option directory-and-file-names
+```
+
+在下一个示例中，目录 `mydir` 及其所有子目录都保存到默认磁带设备上的磁带中：
+
+```
+$ tar c mydir
+```
+
+在此示例中，`mydir` 目录及其所有文件和子目录从默认磁带设备中提取并放置在用户的当前工作目录中：
+
+```
+$ tar x mydir
+```
+
+> 注意 还有其他归档程序可以使用，例如 `cpio` 和 `shar`。但是，`tar` 是用于归档应用程序软件时最常用的。
+
+## 文件压缩：`gzip`、`bzip2` 和 `zip`
+
+存在多种减少文件大小的原因。最常见的两个原因是节省空间，或如果您通过网络传输文件，则节省传输时间。您可以通过创建文件的压缩副本来有效地减小文件大小。每次需要文件时，您都可以对其进行解压缩。压缩通常与归档结合使用，以便您可以一次性压缩整个目录及其文件。解压缩会生成归档文件的副本，然后可以将其提取，从而生成这些文件和目录的副本。文件卷管理器提供了一个 GUI 界面来执行这些任务。
+
+## 使用 `gzip` 压缩
+
+Linux 和 Unix 系统上可用的压缩实用程序有多种。Linux 系统的大多数软件使用 GNU `gzip` 和 `gunzip` 实用程序。`gzip` 实用程序压缩文件，而 `gunzip` 解压缩它们。要压缩文件，请输入命令 `gzip` 和文件名。这会用压缩版本替换该文件，并带有 `.gz` 扩展名。
+
+```
+$ gzip mydata
+$ ls
+mydata.gz
+```
+
+
+
+要解压缩 gzip 文件，请使用带 `-d` 选项的 `gzip` 或 `gunzip` 命令。这些命令解压缩带有 `.gz` 扩展名的压缩文件，并用具有相同根名称但不带 `.gz` 扩展名的解压缩版本替换它。使用 `gunzip` 时，甚至无需输入 `.gz` 扩展名。`gunzip` 和 `gzip -d` 会假定它。表 10-8 列出了不同的 `gzip` 选项。
+
+```
+$ gunzip mydata.gz
+$ ls
+mydata
+```
+
+> 提示 在桌面上，您可以通过文件管理器定位归档并双击它来提取归档的内容。这将启动文件卷管理器应用程序，它将打开归档并列出其内容。然后您可以选择提取归档。文件卷管理器将使用适当的工具在需要时解压缩归档（`bzip2`、`zip` 或 `gzip`），然后提取归档（`tar`）（参见第 4 章）。
+
+| 选项 | 执行 |
+|---|---|
+| `-c` | 将文件的压缩版本发送到标准输出；每个列出的文件都会单独压缩：`gzip -c mydata prefect > myfiles.gz` |
+| `-d` | 解压缩压缩文件；或者，您可以使用 `gunzip`：`gzip -d myfiles.gz` `gunzip myfiles.gz` |
+| `-h` | 显示帮助列表。 |
+| `-l file-list` | 显示每个列出文件的压缩和未压缩大小：`gzip -l myfiles.gz` |
+| `-r directory-name` | 递归搜索指定的目录并压缩其中的所有文件；搜索从当前工作目录开始。使用 `gunzip` 时，指定目录的压缩文件将被解压缩。 |
+| `-v file-list` | 对于每个压缩或解压缩的文件，显示其名称及其大小减少的百分比。 |
+| `-num` | 确定压缩的速度和大小；范围为 `-1` 到 `-9`。数字越低，速度越快但压缩率越低，导致文件较大但压缩和解压缩速度快。`-1` 提供最快的压缩，但文件最大；`-9` 会生成非常小的文件，但压缩和解压缩所需时间更长。默认值为 `-6`。 |
+
+您还可以压缩归档的 `tar` 文件。这将生成扩展名为 `.tar.gz` 的文件。压缩的归档文件常用于在网络上传输非常大的文件。
+
+```
+$ gzip myarch.tar
+$ ls
+myarch.tar.gz
+```
+
+您可以使用调用 `gzip` 的 `tar z` 选项单独压缩 `tar` 文件成员。使用 `z` 选项时，`tar` 会在将文件放入归档之前调用 `gzip` 对其进行压缩。然而，使用 `z` 选项压缩成员的归档无法更新，也不能向其添加内容。所有成员必须同时压缩并同时添加。
+
+### 压缩与解压缩
+
+您还可以使用 `compress` 和 `uncompress` 命令创建压缩文件。它们生成扩展名为 `.Z` 的文件，并使用与 `gzip` 不同的压缩格式。`compress` 和 `uncompress` 命令使用并不广泛，但您偶尔可能会遇到 `.Z` 文件。您可以使用 `uncompress` 命令解压缩 `.Z` 文件。`gzip` 实用程序是标准的 GNU 压缩实用程序，应使用它来代替 `compress`。
+
+### 使用 bzip2 进行压缩
+
+另一个流行的压缩实用程序是 `bzip2`。它使用 Burrows-Wheeler 块排序文本压缩算法和 Huffman 编码压缩文件。其命令行选项在设计上与 `gzip` 类似，但并不完全相同。有关完整列表，请参阅 `bzip2` 手册页。您可以使用 `bzip2` 命令压缩文件，并使用 `bunzip2` 解压缩。`bzip2` 命令创建扩展名为 `.bz2` 的文件。您可以使用 `bZcat` 将压缩数据输出到标准输出。`bzip2` 命令按块压缩文件，并允许您指定块的大小（较大的块可提供更高的压缩率）。与 `gzip` 一样，您可以使用 `bzip2` 压缩 `tar` 归档文件。以下示例将 `mydata` 文件压缩为扩展名为 `.bz2` 的 `bzip` 压缩文件：
+
+```
+$ bzip2 mydata
+$ ls
+mydata.bz2
+```
+
+要解压缩，请在 `bzip` 文件上使用 `bunzip2` 命令。
+
+```
+$ bunzip2 mydata.bz2
+```
+
+### 使用 Zip
+
+`Zip` 是一种压缩和归档实用程序，模仿 `PKZIP` 设计，`PKZIP` 最初用于 DOS 系统。`Zip` 是一种跨平台实用程序，可用于 Windows、Mac、MS-DOS、OS/2、Unix 和 Linux 系统。`Zip` 命令可以处理由 `PKZIP` 和 `PKZIP` 程序创建的归档，也可以使用 `Zip` 归档。您可以使用 `zip` 命令压缩文件，这将创建扩展名为 `.zip` 的 `Zip` 文件。如果未列出文件，`zip` 会将压缩数据输出到标准输出。您还可以使用 `-` 参数让 `zip` 从标准输入读取。要压缩目录，请包含 `-r` 选项。第一个示例归档并压缩一个文件：
+
+```
+$ zip mydata
+$ ls
+mydata.zip
+```
+
+下一个示例归档并压缩 `reports` 目录：
+
+```
+$ zip -r reports
+```
+
+支持全套归档操作。使用 `-f` 选项，您可以使用较新版本更新 `zip` 归档中的特定文件。`-u` 选项替换或添加文件，`-d` 选项从 `zip` 归档中删除文件。还有用于加密文件、DOS 到 Unix 行尾转换以及包含隐藏文件的选项。
+
+要解压缩并提取 `Zip` 文件，请使用 `unzip` 命令。
+
+```
+$ unzip mydata.zip
+```
+
+## 应用程序
+
+### 部分
+
+- **第11章**
+  办公和数据库应用程序
+- **第12章**
+  图形工具和多媒体
+- **第13章**
+  邮件和新闻客户端
+- **第14章**
+  Web、FTP 和 Java 客户端
+- **第15章**
+  网络工具
+
+### 章节
+
+## 办公和数据库应用程序
+
+现在有各种各样的办公套件可用于 Linux（参见表 11-1）。其中包括专业级文字处理器、演示管理器、绘图工具和电子表格。本章介绍可免费获得的版本。Sun 已利用 StarOffice 代码发起了一个开源办公套件的开发。这些应用程序被称为 `OpenOffice`，提供与 GNOME 集成的办公应用程序。`OpenOffice` 目前是 Red Hat 支持的主要办公应用程序。`KOffice` 是一个完全免费的办公套件，专为 KDE 设计。GNOME Office 套件将 GNOME 应用程序集成为一个可免费获得的生产力套件。Ximian 正在开发一个专业级办公套件，同时支持 KDE 和 GNOME。您也可以购买商业办公套件，例如 Sun 的 `StarOffice 6`。
+
+此外，还有各种各样的数据库管理系统可用于 Linux。其中包括功能强大、商业级别的数据库管理系统，如 `Oracle`、`IBM` 的 `DB2` 和 `Sybase`。大多数可用于 Linux 的数据库管理系统都设计用于支持大型关系数据库。Red Hat 包括 `MySQL` 和
+
+`PostgreSQL` 数据库在其发行版中。对于小型个人数据库，您可以使用为 KDE 和 GNOME 开发的桌面数据库管理系统。此外，还有一些软件可用于使用 Xbase 数据库编程语言访问的数据库。这些是使用最初为 PC 上的 `dBase` 开发的格式的较小数据库。本章后面表 11-6 中列出了可在 Linux 下运行的各种数据库管理系统。
+
+Red Hat Linux 还提供了几种文本编辑器，从用于简单笔记的简单文本编辑器到具有拼写检查器、缓冲区或模式匹配等更复杂功能的编辑器。所有这些都生成字符文本文件，可用于编辑任何 Linux 文本文件。文本编辑器通常用于系统管理任务，以更改或在 Linux 配置文件中添加条目，这些文件位于 `/etc` 目录中，或位于用户主目录中的用户初始化或应用程序点文件中。您可以使用任何文本编辑器处理任何编程语言的源代码文件或 shell 程序脚本。
+
+### 访问 Microsoft Office
+
+新 Linux 用户的主要关注点之一是他们将如何访问其 Microsoft Office 文件，特别是 Word 文件。Linux 操作系统及其许多应用程序旨在提供对 MS Office 文件的无缝访问。用户可以直接挂载并访问任何 DOS 或 Windows 分区及其文件。主要的 Linux 办公套件，包括 `WordPerfect`、`KOffice`、`OpenOffice` 和 `StarOffice`，都可以读取和管理任何 Microsoft Office 文件。此外，这些办公套件的功能和对办公任务的支持正迅速接近 Microsoft Office 的水平。
+
+## 表11-1
+
+Linux 办公套件
+
+| 网站 | 描述 |
+|---|---|
+| www.openoffice.org | `OpenOffice` 开源办公套件，基于 `StarOffice` |
+| www.koffice.org | `KOffice` 套件，适用于 KDE |
+| www.gnome.org/gnome-office | GNOME Office，适用于 GNOME |
+| www.ximian.com | Ximian 桌面和办公应用程序 |
+| www.sun.com/staroffice | `StarOffice` 套件 |
+| www.codeweavers.com | `CrossOver Office`（支持 MS Office） |
+
+
+
+如果您想在 Linux 上使用任何 Windows 应用程序，两个重要的替代方案是 VMware 虚拟平台技术和 CodeWeavers 的 CrossOver Office，两者均为商业软件包。使用 VMware，您可以在 Linux 下运行 Windows，从而在 Linux 系统上运行许多 Windows 应用程序。有关更多信息，请查看 VMware 网站 `www.vmware.com`。CrossOver Office 也可让您安装和运行大多数 Microsoft Office 应用程序。CrossOver Office 由 CodeWeavers 开发，该公司还支持 Windows Web 浏览器插件。您可以在 `www.codeweavers.com` 了解有关 CrossOver Office 的更多信息。
+
+## OpenOffice
+
+OpenOffice 是一个完全集成的办公应用程序套件，作为开源项目开发并免费分发给所有人。它被包含为 Red Hat 的主要办公套件，可从 Office 菜单以及“开始使用”应用程序窗口的 Office 窗口访问。它包括文字处理、电子表格、演示和绘图应用程序（见表 11-2）。OpenOffice 存在 Linux、Windows 和 Mac OS 版本。您可以从 OpenOffice 网站 `www.openoffice.org` 获取在线手册和常见问题解答等信息以及当前版本。
+
+> NOTE OpenOffice 的开发作为名为 `openoffice.org` 的开源项目进行。核心代码基于原始的 StarOffice。`openoffice.org` 项目中开发的代码随后将被纳入 StarOffice 的未来版本。
+
+## TABLE 11-2
+
+GNOME Open Office
+
+| Application | Description |
+|---|---|
+| OpenCalc | OpenOffice spreadsheet |
+| OpenDraw | OpenOffice drawing application |
+| OpenWriter | OpenOffice word processor |
+| OpenMath | OpenOffice mathematical formula composer |
+| OpenImpress | OpenOffice presentation manager |
+
+OpenOffice 是一个集成的应用程序套件。您可以直接打开文字处理、电子表格或演示应用程序。此外，在大多数 OpenOffice 应用程序中，您可以从文件菜单中选择 New 并选择不同的应用程序（如果需要）。OpenWriter 文字处理器支持标准文字处理功能，例如剪切和粘贴、拼写检查器和文本格式，以及段落样式（见图 11-1）。您可以在文档中嵌入对象，例如使用 OpenDraw 创建图形，然后将其拖放到 OpenWriter 文档中。
+
+OpenCalc 是一款专业级的电子表格。使用 OpenMath，您可以创建公式，然后将其嵌入到文本文档中。使用演示管理器（OpenImpress），您可以创建用于演示的图像，例如圆形、矩形和连接元素（如箭头），以及基于矢量的插图。OpenImpress 支持高级功能，例如对象变形、对象分组和定义渐变。OpenDraw 是一款功能强大的绘图工具，包含 3D 建模工具。您可以创建简单或复杂的图像，包括沿曲线对齐的动画文本。OpenOffice 还包括一个打印机设置工具，您可以使用它选择打印机、字体、纸张尺寸和页面格式。
+
+> NOTE StarOffice 是由 Sun Microsystems 开发和支持的完全集成且兼容 Microsoft Office 的办公应用程序套件，`www.sun.com/staroffice`。Sun 将 StarOffice 作为商业产品提供，尽管教育用途免费。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_248_0.png)
+
+## FIGURE 11-1 OpenOffice's OpenWriter word processor
+
+## KOffice
+
+KOffice 是一个面向 KDE（K 桌面环境）的集成办公套件，包含多个办公应用程序，包括字处理程序、电子表格和图形应用程序。在 Red Hat 上，只能从 KDE 桌面的“更多办公应用程序”菜单访问 KOffice。所有应用程序都是基于 KOM 组件模型编写的，该模型允许任何一个应用程序中的组件被另一个应用程序使用。这意味着你可以将 KSpread 的电子表格或 Kontour 的绘图嵌入到 KWord 文档中。你可以从 KOffice 网站 `www.koffice.org` 获取有关 KOffice 的更多信息。
+
+## KOffice 应用程序
+
+目前，KOffice 包括 KSpread、KPresenter、Kontour、Karbon14、KWord、KFormula、KChart、Kugar、Krita、Kivio 和 Kontact（参见表 11-3）。KSpread 是电子表格程序，KPresenter 是演示文稿应用程序，Kontour 是矢量绘图程序，Karbon14 是矢量图形程序，KWord 是类似 Publisher 的字处理程序，KFormula 是公式编辑器，KChart 生成图表和示意图。Kugar 是报表生成器，Krita 是位图图像编辑器，Kivio 创建流程图，Kontact 是集成联系人应用程序，包括 Kmail、Korganizer、Kaddressbook 和 Knotes。
+
+KSpread 是电子表格应用程序，它包含大多数电子表格中的基本操作，其公式与 Excel 中使用的公式类似。你还可以使用 KChart、Krita、Kontour 或 KFormula 嵌入图表、图片或公式。
+
+使用 KChart，您可以创建各种类型的图表，如条形图、饼图和折线图，以及创建示意图。要生成图表，您可以使用 KSpread 中的数据来输入您的数据。使用 KPresenter，您可以创建由文本和图形组成的演示文稿，这些文本和图形可使用不同的字体、方向以及颜色等属性进行建模。您可以添加诸如对话气泡、箭头和剪贴画等元素，也可以嵌入任何 KOffice 组件。
+
+Kontour 是一个基于矢量的图形程序，很像 Adobe Illustrator、OpenDraw 和 Corel Draw。它支持标准的图形操作，如旋转、缩放和对齐对象。
+
+表 11-3
+
+KOffice 应用程序
+
+| 应用程序 | 描述 |
+|---|---|
+| KSpread | 电子表格 |
+| KPresenter | 演示文稿程序 |
+| Kontour | 矢量绘图程序 |
+| Karbon14 | 矢量图形程序 |
+| KWord | 字处理程序（桌面出版） |
+| KFormula | 数学公式编辑器 |
+| KChart | 绘制图表和示意图的工具 |
+| Kugar | 报表生成器 |
+| Krita | 绘画和图像处理程序 |
+| Kivio | 流程图生成器和编辑器（类似 Vivio） |
+| Kontact | 联系人应用程序，包括邮件、地址簿和组织工具 |
+
+KWord 最好被描述为桌面出版程序，具有许多在 Microsoft Publisher 和 FrameMaker 等出版应用程序中常见的功能。虽然它也是一个功能齐全的字处理程序，但 KWord 不像 Word 或 WordPerfect 那样基于页面。相反，文本被设置在框架中，这些框架像对象一样放置在页面上。框架就像绘图程序中的对象一样，可以移动、调整大小，甚至重新定向。您可以将框架组织成一个框架集，使文本从一个框架流向另一个框架。格式可以应用于框架集，同时更改属于它的所有框架的特征。首次创建文档时，为您设置的默认框架与页面大小相同。这给您带来基于页面的字处理程序的效果，使您能够像使用标准字处理程序一样工作。当然，如果需要，您可以更改框架的大小并添加新框架。
+
+KFormula 是用于生成数学公式的公式编辑器。Kivio 是类似于 Visio 的流程图应用程序。Kivio 具有使用可脚本化对象生成流程图的能力。给定一个网络，Kivio 可以为其生成流程图。使用 Java 头文件，它可以生成 Java 对象的流程图。Krita（以前称为 KImageShop）是一个图像编辑器，很像 Photoshop。
+
+## KParts
+
+嵌入式组件支持实时更新。例如，如果您使用 KChart 利用 KSpread 电子表格中的数据在 KWord 文档中生成图表，然后更改电子表格中选定的数据，KChart 会自动更新 KWord 文档中的图表。实际上，您正在创建一种复合文档——一种由多个应用程序组成的文档。此功能由称为 KParts 的 KDE 组件模型实现。KParts 提供分布式对象之间的通信。在这方面，您可以将应用程序视为同时充当服务器，向其他应用程序提供其专门化的服务。字处理程序专门提供段落格式或拼写检查等服务，可以将这些服务提供给所有 KOffice 应用程序。这样，其他应用程序就不需要编写自己的文本格式化功能。
+
+
+
+KParts 是使用 DCOP（桌面通信协议）实现的。这是一种用于进程间通信（IPC）的非常简单、小巧且快速的 IPC/RPC 机制，并基于 X Window 系统的 ICE（客户间交换）协议。KDE 应用程序现在使用 DCOP 库来管理彼此之间的通信。DCOP 使 KOffice 应用程序的开发更加容易和稳定。
+
+使用 KOffice，您可以创建一种文档，而不是为不同应用程序创建单独的文档。不同的应用程序成为该文档的视图，将各自的组件添加到其中。KWord 设置出版和字处理组件，Kontour 添加绘图组件，而 KSpread 添加电子表格组件。您可以使用适当的应用程序来查看单个文档中的不同组件。这意味着您可以为文档的不同组件同时打开单独的窗口。
+
+## GNOME Office 和 Ximian
+
+GNOME 的办公应用程序是独立开发的，例如 Gnumeric 电子表格。大多数可从各个“更多”菜单访问，例如用于 AbiWord 和 Gnumeric 的“更多办公应用程序”，或用于 Galeon 的“更多互联网应用程序”。不过，图表渲染工具 DIA 包含在主“办公”菜单中。GNOME Office 集成了各种
+
+将诸如 Gnumeric 和 AbiWord 之类的独立办公应用程序整合为一个生产力套件。Sun Microsystems 还将 OpenOffice 集成到 GNOME 中，使所有 OpenOffice 应用程序都成为 GNOME Office 的一部分。您可以在 www.gnome.org/gnome-office 上了解更多关于 GNOME Office 的信息。在这里，您可以链接到当前版本的下载页面并查看屏幕截图。当前列表显示在表 11-4 中。所有应用程序都实现了 CORBA 模型以嵌入组件，确保在整个 GNOME 界面中具有拖放功能。所有应用程序都基于一组 GNOME 技术，包括 Bonobo、Gnome-Print 和 XML。Bonobo 是 GNOME 用于支持复合文档和可重用软件组件的架构。Gnome-Print 是 GNOME 打印架构，旨在支持图形应用程序并能轻松与任何打印资源协同工作。XML 被用作原生文件格式，以支持 GNOME 应用程序之间数据的轻松交换。
+
+目前，GNOME Office 包括 AbiWord、Gnumeric、GIMP、Dia、Eye of GNOME、Evolution 和 GNOME-DB。AbiWord 是一个文字处理器，Gnumeric 是一个电子表格，GIMP 是 GNOME 图像编辑应用程序，Dia 是一个图表制作工具，Eye of GNOME 是一个图像查看器，Evolution 是一个集成的电子邮件和个人信息管理器，而 GNOME-DB 提供数据库连接（参见表 11-4）。
+
+### 表 11-4
+
+GNOME Office
+
+| 应用程序 | 描述 |
+|---|---|
+| AbiWord | 跨平台文字处理器 |
+| Balsa | 电子邮件客户端 |
+| Gfax | 发送和接收传真 |
+| Galeon | 网页浏览器 |
+| Gnumeric | 电子表格 |
+| GnuCash | 个人财务管理器 |
+| Dia | 图表和流程图编辑器 |
+| Evolution | 电子邮件和日历 |
+| Eye of GNOME | 图像查看器 |
+| GIMP | GNU 图像处理程序 |
+| GNOME-DB | 数据库连接 |
+| Gnumeric | 电子表格 |
+| Evolution | 集成电子邮件、日历和个人组织器 |
+| Gnumeric | 电子表格 |
+| Guppi | 绘图和制图程序 |
+| Sketch | 矢量绘图软件包 |
+| Toudoux | 项目管理器 |
+| OpenOffice | OpenOffice 办公套件 |
+
+Gnumeric 是 GNOME 电子表格，是一款专业级程序，旨在取代商业电子表格。与 GNOME 一样，Gnumeric 在 GNU 公共许可证下免费提供。Gnumeric 包含在 GNOME 发行版中，您会在任何支持 GNOME 的发行版上安装 GNOME 时找到它。其开发目前由 Ximian 管理。您可以从 www.ximian.com 或 www.gnome.org/projects/gnumeric 下载当前版本。Gnumeric 支持标准 GUI 电子表格功能，包括自动填充和单元格格式，并提供大量格式。它支持拖放操作，使您可以选择然后移动或复制单元格到另一个位置。Gnumeric 还支持插件，使其功能易于扩展和定制。
+
+AbiWord 是一个开源文字处理器，支持无限撤销操作和 Word 97 导入功能。它是 AbiSource 项目（www.abisource.com）开发的一套桌面生产力应用程序的一部分。
+
+GIMP 是 GNU 图像处理程序，支持照片修复、图像合成和图像创作等操作（参见第 12 章的图形部分）。您可以从 www.gimp.org 获得更多信息。
+
+Dia 是一个绘图程序，旨在创建图表。您可以选择创建不同类型的图表，例如数据库、电路对象、流程图和网络图。您可以轻松创建元素以及带有不同端点类型的线条和弧线，例如箭头或菱形。数据可以以 XML 格式保存，使其易于传输到其他应用程序。
+
+Eye of GNOME（EOG）是一个图像查看器，也可以作为图像编目程序使用。它旨在快速运行并提供高质量的图像显示。
+
+GNOME-DB 是一套库和应用程序，允许轻松访问不同的数据库系统。它提供了一个 API，数据库可以插入其中。这些后端连接基于 CORBA。通过此 API，GNOME 应用程序可以访问数据库。您可以在 www.gnome.org/gnome-db 上了解更多关于 GNOME-DB 的信息。
+
+Ximian 是一个 GNOME 项目，旨在为 GNOME 提供专业级桌面，其中将包括全套办公应用程序。您可以在 www.ximian.com 上了解更多关于 Ximian 的信息。Ximian 目前提供一个增强版的 GNOME 桌面，称为 Ximian Desktop。它还支持 Gnumeric 电子表格的开发。其第一个办公应用程序是一个联系人、日历和邮件客户端应用程序，称为 Evolution（参见第 13 章）。Evolution 已成为 Red Hat Linux 的标准邮件客户端。它无需 Ximian GNOME 即可运行。他们的下一个项目是一个文字处理器。
+
+## 文档查看器（PostScript、PDF 和 DVI）
+
+尽管在主菜单和“开始这里”窗口中都位于图形标题下，但 PostScript、PDF 和 DVI 查看器更常与办公应用程序一起使用（参见表 11-5）。Linux 具有一个名为 Ghostview 的工具，可以显示任何 PostScript 文件。多个应用程序可以同时查看 Adobe PDF 和 PostScript 文件。PostScript（.ps）和 PDF（.pdf）文件可以使用 GNOME Ghostview（GV）或 KGhostView 显示。另一个应用程序 xpdf 仅显示 PDF 文件。或者，您可以从 Adobe 下载适用于 Linux 的 Acrobat Reader 来显示 PDF 和 PostScript 文件。所有这些查看器也具有打印 PDF 和 PostScript 文档的能力。
+
+| 查看器 | 描述 |
+|--------|-------------|
+| Gnome Ghostview (GV) | 用于显示 PostScript 和 PDF 文件的 Gnome 界面 |
+| KGhostView | 用于显示 PostScript 和 PDF 文件的 KDE 界面 |
+| xpdf | 仅用于显示 PDF 文件的 X Window System 工具 |
+| KDVI | 用于显示 TeX DVI 文件的 KDE 工具（KViewShell 的插件） |
+| Acrobat Reader | Adobe PDF 和 PostScript 显示应用程序 |
+
+Linux 还提供了一款专业级的排版工具，名为 TeX，常用于排版复杂的数学公式。TeX 生成的 DVI 文档随后可由 DVI 查看器查看，Linux 上有多个此类查看器。由 TeX 文档应用程序生成的 DVI 文件可由 KDVI 查看。KDVI 是 KViewShell 工具的插件，该工具可显示和打印任何具有插件的文档类型。您可以在图形菜单中将 KDVI 作为 DVI 查看器访问。
+
+这些应用程序可在图形子菜单下获得。xpdf 的名称为 PDF 查看器，GV 使用的名称为 Postscript 查看器，KGhostView 命名为 PS/PDF 查看器（更多图形应用程序），KDVI 称为 DVI 查看器。
+
+## 数据库管理系统
+
+
+
+# 数据库软件概述
+
+数据库软件通常可分为三类：SQL、Xbase 和数据库数据库。基于 SQL 的数据库是专业级的关联数据库，其文件由中央数据库服务器管理。使用数据库的应用程序不直接访问文件。相反，它们向数据库服务器发送请求，然后由服务器执行实际访问。SQL 是这些工业级数据库上使用的查询语言。Red Hat Linux 包含 MySQL 和 PostgreSQL 数据库。两者都是可免费用于 Linux 的开源项目。表 11-6 列出了当前可用于 Linux 的 DBMS。
+
+Xbase 语言是 dBase 数据库语言的增强版本，用于访问最初为 PC 上的 dBase 开发的数据库文件格式。与 Xbase 一起，数据库管理系统可以直接访问数据库文件。Xbase 主要用于较小的个人数据库，数据库文件通常位于用户自己的系统上。
+
+## SQL 数据库（RDBMSs）
+
+SQL 数据库是关系数据库管理系统（RDMSS），专为广泛的数据库管理任务而设计。许多主要的 SQL 数据库现在都有 Linux 版本，包括 Oracle、Informix、Sybase 和 IBM（当然不包括 Microsoft）。这些是最顶级的商业和专业数据库管理系统。Linux 已证明其能够支持复杂且要求苛刻的数据库管理任务。此外，还有许多可免费用于 Linux 的 SQL 数据库，提供几乎相同的功能。大多数商业数据库还提供免费的个人版本，例如 Oracle、Adabas D 和 MySQL。
+
+### 表 11-6 Linux 的数据库管理系统
+
+| 系统 | 站点 |
+|---|---|
+| PostgreSQL | PostgreSQL 数据库：www.postgresql.org |
+| MySQL | MySQL 数据库：www.mysql.com |
+| Oracle | Oracle 数据库：www.oracle.com |
+| Sybase | Sybase 数据库：www.sybase.com |
+| DB2 | IBM 数据库：www.software.ibm.com/data/db2/linux |
+| Informix | Informix 数据库：www.informix.com/linux |
+| Adabas D | Adabas D 数据库：www.softwareag.com/adabasd |
+| GNU SQL | GNU SQL 数据库：www.ispras.ru/~kml/gss |
+| Flagship | Xbase 数据库文件的接口：www.fship.com/free.html |
+
+## PostgreSQL
+
+PostgreSQL，随 Red Hat 提供，是基于 POSTGRES 数据库管理系统，但使用 SQL 作为其查询语言。POSTGRES 是加州大学伯克利分校开发的下一代研究原型。PostgreSQL 的 Linux 版本包含在大多数发行版中，包括 Red Hat、Debian 和 Mandrake 发行版。您可以在 www.postgresql.org 的 PostgreSQL 网站上获取更多信息。PostgreSQL 是一个开源项目，在 GPL 许可证下开发。
+
+> 注意 Red Hat 现在提供一个名为 Red Hat Database 的 Linux 版本，其中包含 PostgreSQL，针对数据库操作进行了优化。
+
+PostgreSQL 通常用于为需求繁重的互联网服务器提供数据库支持，例如 Web 服务器。通过几个简单的命令，您可以创建关系数据库表。使用 `createuser` 命令创建 PostgreSQL 用户，然后您可以用该用户登录服务器。然后您可以使用 `createdb` 命令创建数据库，并使用 `create table` 指令构建关系表。使用 `insert` 命令，您可以添加记录，然后使用 `select` 命令查看它们。对服务器的远程用户访问由位于 PostgreSQL 目录中的 `pg_hba.conf` 文件中的条目控制，通常为 `/var/lib/pgsql`。
+
+## MySQL
+
+MySQL，随 Red Hat 提供，是一款真正的多用户、多线程 SQL 数据库服务器，由 MySQL AB 支持。MySQL 是一款开源产品，可根据 GPL 许可证免费使用。您可以在其网站 www.mysql.com 上获取最新信息。该网站包含详细的文档，包括手册和常见问题解答。
+
+MySQL 采用客户端/服务器模型构建，服务器守护进程 `mysqld` 响应客户端程序的请求。MySQL 设计用于速度、可靠性和易用性。它旨在成为大型数据库的快速数据库管理系统，同时在密集使用下保持可靠。MySQL 维护用于全局的 `/etc/my.cnf` 配置文件
+
+应用于客户端和服务器的设置，以及仅用于服务器设置的 `/var/lib/mysql/my.cnf` 文件。`/etc/my.cnf` 文件提供诸如数据目录（`/var/lib/mysql`）和日志文件位置以及服务器基本目录（`/var/lib`）等信息。示例配置文件可在 `/usr/share/doc` 中的 `mysql` 和 `mysql-server` 目录中找到。
+
+要管理你的 MySQL 数据库，你使用 `mysql` 命令进入 MySQL 监视器。在这里你可以输入命令来创建数据库和数据库表、添加或删除条目以及显示数据。MySQL 服务器 `mysqld` 可以通过 `service` 命令或 `services` 工具进行管理。
+
+## Oracle
+
+Oracle 为 Linux 提供其 Oracle9i 数据库管理系统的完整功能版本，以及 Oracle 应用服务器。你可以从 Oracle 网站 www.oracle.com 下载试用版本。Oracle 是一款专为大型数据库设计的专业数据库，专门用于 Internet 电子商务任务。Oracle 应用服务器为 Web 上的实时和商务应用提供支持。由于 Linux 是 Unix 的完整功能版本，因此 Oracle 在其上特别有效。Oracle 最初设计用于在 Unix 上运行，而 Linux 是比其他 PC 操作系统更好的平台。
+
+Oracle 为其 Linux 版本提供广泛的文档，你可以从其网站的 Support 页面链接到的 Documentation 页面下载。该文档包括安装指南、管理员参考、发行说明以及通用文档。你可以在 Oracle Database HOW-TO 中找到有关在 Linux 上安装和配置 Oracle 的具体信息。
+
+## Informix
+
+Informix（现由 IBM 控制）在 Linux 上提供名为 Informix Internet Foundation 2000 的基于 Internet 的集成应用平台。其中包括 Informix Dynamic Server，即其数据库服务器。Informix Dynamic Server 具有动态可扩展架构，能够有效地使用任何硬件配置。Informix 仅提供商业产品。没有免费版本，尽管公司目前为 Linux 产品提供特别促销。你可以在 www-4.ibm.com/software/data/informix 了解更多关于 Informix 的信息。
+
+Informix 强烈支持其 Informix 产品线在 Linux 上的开发。它通过其 Informix Developer Network（www7b.boulder.ibm.com/dmdd/zones/informix）为开发者提供支持。
+
+## Sybase
+
+对于 Linux，Sybase 提供 Sybase Adaptive Server Enterprise 服务器（见 www.sybase.com）。你目前可以从网站下载 Adaptive Server Enterprise 服务器。Sybase Enterprise 数据库具有数据集成功能，可协调网络上的所有信息资源。SQL Anywhere 是一款专为小型数据库设计的数据系统，尽管其复杂程度与大型数据库相同。
+
+## DB2
+
+IBM 提供其 DB2 Universal Database 软件的 Linux 版本。你可以从 IBM DB2 的 Linux 网页 www.software.ibm.com/data/db2/linux/ 免费下载。DB2 Universal Database for Linux 包括 Internet 功能以及对 Java 和 Perl 的支持。借助 Web Control Center，管理员可以从 Web 浏览器维护数据库。DB2 具有可扩展性，易于扩展数据库，支持二进制大对象，并具有基于成本的优化以实现快速访问。DB2 仍然非常像一个大型机数据库，尽管 IBM 目前正在改进其 Unix/Linux 版本。
+
+## Adabas D
+
+Adabas D 是一种中级关系数据库，其功能和规模都不如 Oracle，适用于小型个人数据库网络。它仍然提供所有关系数据库所具有的灵活性和功能。Adabas D 为 Linux 提供免费的个人版本。你也可以查看 Adabas D 网站 www.softwareag.com/adabasd。Software AG 还为 Linux 系统提供更高级的商业版本，称为 Adabas 7。
+
+## GNU SQL
+
+
+
+GNU SQL 是由俄罗斯科学院系统编程研究所的一个小组开发并由 GNU 组织支持的 GNU 关系数据库。它是一个可移植的多用户数据库管理系统，具有客户端/服务器结构，支持 SQL。服务器处理请求并执行基本的管理操作，例如卸载不经常使用的数据库部分。客户端可以驻留在局域网的任何计算机上。GNU SQL 使用基于 SQL-89 标准的 SQL 方言，设计用于在类 Unix 环境中使用。你可以从 GNU FTP 站点 `ftp.gnu.org` 下载数据库软件。欲了解更多信息，请联系 GNU SQL 网站 `www.ispras.ru/~kml/gss`。
+
+## Xbase 数据库
+
+使用 Xbase 访问的数据库规模较小，专为小型网络或个人使用而设计。许多最初是 PC 数据库程序，例如 dBaseIII、Clipper、FoxPro 和 Quicksilver。目前，只有 Flagship 提供访问 Xbase 数据库文件的接口。
+
+Flagship 是一种编译器，可用于创建查询 Xbase 数据库文件的接口。接口支持菜单和对话框，并具有执行特定数据库查询的函数调用。Flagship 可以编译 dBaseIII+ 及更高版本的代码。它与 dBase 和 Clipper 兼容，可以访问大多数 Xbase 文件格式，例如 `.dbf`、`.dbt`、`.fmt` 和 `.frm`。Flagship 的关键特性之一是其接口可以附加到 Web 页面，使用户能够更新数据库。Flagship 是商业软件，尽管你可以从其网站 `www.fship.com/free.html` 下载免费的个人版本。
+
+## 编辑器
+
+传统上，大多数 Linux 发行版，包括 Red Hat，都安装了基于光标的编辑器 Vim 和 Emacs。Vim 是在 Unix 系统上使用的 Vi 文本编辑器的增强版本。这些编辑器使用简单的基于光标的操作来提供全屏格式。你可以从 shell 命令行启动这些编辑器，而无需任何 X Window System 支持。在此模式下，它们的基于光标的操作不具备窗口式编辑器通常具有的易用性。没有菜单、滚动条或鼠标点击功能。然而，K Desktop 和 GNOME 确实支持功能强大的 GUI 文本编辑器，具有所有这些功能。这些编辑器更像是在 Macintosh 和 Windows 系统上找到的编辑器。它们具有完整的鼠标支持、滚动条和菜单。你可能会发现它们比 Vi 和 Emacs 编辑器更容易使用。这些编辑器从各自的桌面运行，需要你先安装 KDE 或 GNOME，不过编辑器可以在任一桌面上运行。Vi 和 Emacs 拥有多年来完善的强大编辑功能。尤其是 Emacs，可扩展为用于开发新应用程序的完整开发环境。Emacs 的新版本，例如 GNU Emacs 和 XEmacs，提供 X Window System 支持，具有鼠标、菜单和窗口操作。它们可以在任何窗口管理器或桌面上运行。此外，Vim 编辑器的 `gvim` 版本也提供基本窗口操作。Red Hat 还包含一个非常易于使用的基于 GUI 的文本编辑器，称为 Nedit。你可以在 GNOME 和 KDE 桌面上访问它。表 11-7 列出了 Linux 的几个基于 GUI 的编辑器。
+
+> 注 Red Hat Linux 包含三个功能齐全的文字处理器，OpenWriter、KWord 和 AbiWord。你可以在 `www.abiword.com` 上了解更多关于 AbiWord 的信息。
+
+## GNOME 编辑器：gedit
+
+`gedit` 编辑器是 GNOME 桌面的基本文本编辑器。它提供完整的鼠标支持，实现标准 GUI 操作，例如剪切和粘贴以移动文本，以及单击并拖动以选择文本。它支持标准文本编辑操作，例如查找和替换。你可以使用 `gedit` 创建和修改你的文本文件，包括配置文件。`gedit` 还提供更高级的功能，例如打印预览和可配置的撤销/重做操作级别，并且可以从管道读取数据。它具有提供额外功能的插件菜单，并包含拼写检查、加密、电子邮件和基于文本的网页显示的插件。
+
+## 表 11-7 桌面编辑器
+
+| The K Desktop | Description |
+|---|---|
+| KEdit | 文本编辑器 |
+| Kate | 文本和程序编辑器 |
+| KJots | 笔记本编辑器 |
+| KWord | 桌面出版，KOffice 的一部分 |
+| GNOME |  |
+| gedit | 文本编辑器 |
+| AbiWord | 文字处理器 |
+| Nedit | 基于 GUI 的文本编辑器 |
+| X Window System |  |
+| GNU Emacs | 具有 X Window System 支持的 Emacs 编辑器 |
+| XEmacs | Emacs 编辑器的 X Window System 版本 |
+| gvim | 具有 X Window System 支持的 Vim 版本 |
+| OpenWriter | 可编辑文本文件的 OpenOffice 文字处理器 |
+
+## K 桌面编辑器：Kate、KEdit 和 KJots
+
+所有 K 桌面编辑器都提供完整的鼠标支持，实现标准 GUI 操作，例如剪切和粘贴以移动文本，以及单击并拖动以选择文本。Kate 是一个高级编辑器，具有拼写检查、字体选择和突出显示等功能。大多数命令都可以通过菜单选择。Kate 窗口顶部显示一个用于常用操作的图标工具栏。侧边栏显示文件选择器和文件列表的面板。通过文件选择器，你可以浏览文件系统，选择要处理的文件。Kate 还支持文档的多视图，让你以自己的窗口垂直或水平显示段落。你还可以同时打开多个文档，使用文件列表在它们之间切换。
+
+Kate 设计为用于编辑软件编程/开发相关源代码文件的程序编辑器。虽然 Kate 没有 Emacs 或 Vi 的所有功能，但可以处理大多数主要任务。Kate 可以为不同的编程语言格式化语法，例如 C、Perl、Java 和 XML。此外，Kate 具有访问和编辑 FTP 或网站上的文件的功能。
+
+KEdit 是一个较旧的简单文本编辑器，适用于编辑配置文件等简单文本文件。KEdit 窗口顶部的按钮工具栏使你只需单击鼠标即可轻松执行常见的编辑命令。使用 KEdit，你还可以通过网络发送正在编辑的文件。K 菜单中 KEdit 的条目仅列为文本编辑器。你可以通过在终端窗口中输入 `kedit` 命令启动 KEdit。KOffice 办公套件还包含一个名为 KWord 的文字处理器，这是一个功能强大的文字处理器，你也可以将其用作简单编辑器。
+
+编辑器 KJots 设计用于让你在笔记本中记下笔记。它将你写的笔记组织到笔记本中，称为 books。你可以从 Books 菜单中选择要查看或添加的笔记本。要启动 KJots，请在实用程序菜单中选择其条目，或在终端窗口中输入 `kjots` 命令。
+
+## Emacs 编辑器
+
+Emacs 最好被描述为一个工作环境，具有编辑器、邮件程序、新闻阅读器和 Lisp 解释器。编辑器专为程序开发而定制，使你能够根据使用的编程语言格式化源代码。目前有许多 Emacs 版本可用于 Unix 和 Linux 系统。通常随 Linux 发行版一起包含的版本是 GNU Emacs 或 XEmacs。GNU Emacs 的当前版本为 20.x；它具有 X Window System 功能，使其能够使用菜单、滚动条和基于鼠标的编辑操作等 GUI 功能。参见第 13 章，了解 GNU Emacs 邮件程序及其新闻阅读器的讨论。检查你的发行版的更新 FTP 站点以获取新版本，并在它们发布时检查 GNU 网站 `www.gnu.org` 和 Emacs 网站 `www.emacs.org`。你可以在其网站 `www.xemacs.org` 上了解更多关于 XEmacs 的信息。
+
+Emacs 大部分功能和灵活性来自其操作缓冲区的能力。Emacs 可以被描述为一个面向缓冲区的编辑器。每当你在任何编辑器中编辑文件时，文件都会被复制到工作缓冲区中，编辑操作在工作缓冲区上进行。Emacs 可以同时管理多个工作缓冲区，使你能够同时编辑多个文件。你可以编辑保存已删除或复制文本的缓冲区。你甚至可以创建缓冲区你自己的，填入文本，然后稍后保存到文件。Emacs 将缓冲区的概念扩展到涵盖任何任务。当你撰写邮件时，你会打开一个邮件缓冲区；当你阅读新闻时，你会打开一个新闻缓冲区。从一个任务切换到另一个任务，只需切换到另一个缓冲区即可。
+
+Emacs 编辑器的工作方式与标准的文字处理器非常相似。键盘上的键代表输入字符。命令通过特殊键实现，例如控制键（CTRL）和交替键（ALT）。与 Vi 或 Ed 不同，没有特殊的输入模式。你输入文本，如果需要执行编辑命令，例如移动光标或保存文本，你使用 CTRL 键。这种组织方式使 Emacs 编辑器易于使用。然而，Emacs 绝非简单——它是一个功能强大且灵活的编辑器，拥有数百条命令。Emacs 还具有特殊功能，例如多窗口。你可以同时显示两个文本窗口。你也可以同时打开并处理多个文件，并在屏幕上为每个文件显示其自己的窗口。你通过命令 `emacs` 调用 Emacs 编辑器。你可以输入要编辑的文件名，如果文件不存在，则会创建它。在下一个示例中，用户准备使用 Emacs 编辑文件 `mydata`：
+
+```
+$ emacs mydata
+```
+
+
+
+# GNU Emacs
+
+GNU Emacs 编辑器现在支持 X Window System 图形用户界面。要启用 X 支持，请在 X Window System 环境中启动 Emacs，例如 KDE、GNOME 或 FVWM 桌面。基本 GUI 编辑操作均受支持：使用点击并拖动鼠标操作选择文本；剪切、复制和粘贴；以及用于在文本中移动的滚动条。模式行和回显区显示在窗口底部，你可以在此处输入键盘命令。滚动条位于左侧。要向下移动滚动条，请用鼠标左键单击它。要向上移动滚动条，请用鼠标右键单击它。
+
+> 注意 XEmacs 是具有图形用户界面和 Internet 应用的完整 Emacs 编辑器。Internet 应用，你可以从主 XEmacs 按钮栏轻松访问，包括 Web 浏览器、邮件实用程序和新闻阅读器。
+
+# The Vi Editor: Vim and `gvim`
+
+随大多数 Linux 发行版一起提供的 Vim 编辑器是 Vi 编辑器的增强版本。它包含 Vi 编辑器的所有命令和功能。Vi 代表 visual，仍然是 Linux 中使用最广泛的编辑器之一。像 Vim 和 Emacs 这样的基于键盘的编辑器使用键盘执行两种不同的操作：指定编辑命令和接收字符输入。用于编辑命令时，某些键执行删除操作，一些执行更改，其他则执行光标移动。用于字符输入时，键代表可以输入到正在编辑的文件中的字符。通常，这两种不同的功能分配给键盘上的不同键。字母键保留用于字符输入，而功能键和控制键指定编辑命令，例如删除文本或移动光标。此类编辑器可以依赖于存在包含功能键和控制键的扩展键盘。然而，Unix 中的编辑器设计时假设使用最小键盘，只包含字母数字字符和一些控制字符，以及 `ESC` 和 `ENTER` 键。Vi 编辑器不是将命令和输入功能分配给不同的键，而是为键盘提供了三种独立的操作模式：命令模式和输入模式，以及行编辑模式。在命令模式下，键盘上的所有键都成为编辑命令；在输入模式下，键盘上的键成为输入字符。某些编辑命令，例如 `a` 或 `i`，会进入输入模式。输入 `i` 时，你离开命令模式并进入输入模式。每个键现在代表要输入到文本中的字符。按下 `ESC` 会自动返回到命令模式，键再次成为编辑器命令。在编辑文本时，你不断地在命令模式和输入模式之间切换。使用 Vim，你可以使用 `CTRL-O` 命令快速跳转到命令模式并输入命令，然后自动返回到输入模式。表 11-8 列出了一些非常基本的 Vi 命令，帮助你入门。
+
+## 基本 Vi 命令
+
+| Key | Cursor Movement |
+| --- | --- |
+| `h` | Moves the cursor left one character. |
+| `l` | Moves the cursor right one character. |
+| `k` | Moves the cursor up one line. |
+| `j` | Moves the cursor down one line. |
+| `CTRL-F` | Moves forward by a screen of text; the next screen of text is displayed. |
+| `CTRL-B` | Moves backward by a screen of text; the previous screen of text is displayed. |
+| Input | (All input commands place the user in input; the user leaves input with `ESC`.) |
+| `a` | Enters input after the cursor. |
+| `i` | Enters input before the cursor. |
+| `o` | Enters input below the line the cursor is on; inserts a new empty line below the one the cursor is currently on. |
+| Text Selection (Vim) | Cursor Movement |
+| `v` | Visual mode; move the cursor to expand selected text by character. Once selected, press key to execute action: `c` change, `d` delete, `y` copy, `s` line editing command, `J` join lines, `U` uppercase, `u` lowercase. |
+| `V` | Visual mode; move cursor to expand selected text by line. |
+| Delete | Effect |
+| `x` | Deletes the character the cursor is on. |
+| `dd` | Deletes the line the cursor is on. |
+| Change | *（除了替换命令 `x` 之外，所有 change 命令都会在删除文本后将用户置于输入模式。）* |
+| `cw` | 删除光标所在处的单词并将用户置入输入模式。 |
+| `x` | 替换光标所在处的字符。按下 `x` 后，用户输入替换字符。更改无需进入输入模式完成；用户仍停留在 Vi 命令模式。 |
+| `R` | 首先进入输入模式，然后逐字符覆盖。屏幕上显示为覆盖模式，但实际上处于输入模式。 |
+| Move | 通过先删除文本，将光标移动到期望的插入位置，然后按下 `p` 命令来移动文本。（删除文本时，会自动保存在一个特殊缓冲区中。） |
+| `p` | 在光标所在字符或行之后插入已删除或复制的文本。 |
+| `P` | 在光标所在字符或行之前插入已删除或复制的文本。 |
+| `dw p` | 删除一个单词，然后将其移动到你用光标指示的位置（按下 `p` 将单词插入到光标所在单词之后）。 |
+| `yy or Y p` | 复制光标所在的行。 |
+| Search | 这两个搜索命令会在屏幕底部打开一行，并允许用户输入要搜索的模式；输入模式后按 `ENTER`。 |
+| `/pattern` | 在文本中向前搜索一个模式。 |
+| `?pattern` | 在文本中向后搜索一个模式。 |
+| `n` | 重复之前的搜索，无论是向前还是向后。 |
+| Line Editing Commands | Effect |
+| `w` | 保存文件。 |
+| `q` | 退出编辑器；`q!` 不保存退出。 |
+
+## 行编辑模式
+
+尽管 Vi 命令模式处理了大多数编辑操作，但它无法执行某些操作，例如文件保存和全局替换。对于此类操作，你需要执行行编辑命令。你使用 Vi 冒号命令进入行编辑模式。冒号是一个特殊命令，使你能够执行一行编辑操作。当你输入冒号时，屏幕底部会打开一行，光标置于行首。你现在处于行编辑模式。在此模式下，你在一行上输入编辑命令，按下 `ENTER`，命令即被执行。进入此模式通常只是暂时的。按下 `ENTER` 后，你会自动返回到 Vi 命令模式，光标返回到屏幕上的先前位置。
+
+## 文件操作
+
+尽管你可以用 Vi 编辑器创建、保存、关闭和退出文件，但每个操作的命令并不都相似。保存和退出文件涉及使用特殊的行编辑命令，而关闭文件是 Vi 编辑命令。文件的创建通常在调用 Vi 编辑器的同一 shell 命令行上指定。要编辑文件，在 shell 命令行上输入 `vi` 或 `vim` 以及文件名。如果不存在该名称的文件，系统会创建它。实际上，给出一个尚不存在的文件名会指示 Vi 编辑器创建该文件。以下命令调用 Vi 编辑器，操作文件 `booklist`。如果 `booklist` 尚不存在，Vi 编辑器会创建它。
+
+```
+$ vim booklist
+```
+
+执行 `vim` 命令后，你进入 Vi 的命令模式。每个键都成为 Vi 编辑命令，屏幕成为文本文件的窗口。文本按屏幕显示。显示第一屏文本，光标定位在左上角。对于新创建的文件，没有文本可显示。此事实以屏幕左侧一列波浪线表示。波浪线代表屏幕中不属于文件的一部分。
+
+记住，当你首次进入 Vi 编辑器时，你处于命令模式。要输入文本，你需要进入输入模式。在命令模式下，`a` 是追加文本的编辑命令。按下此键会将你置于输入模式。现在键盘像打字机一样工作，你可以向文件输入文本。如果你按下 `ENTER`，你只是开始新的一行文本。使用 Vim，你可以使用方向键在输入的文本中从一个部分移动到另一个部分并处理文本的不同部分。输入文本后，你可以通过按下 `ESC` 离开输入模式并返回到命令模式。编辑会话完成后，你通过输入两个大写 `Z`，即 `ZZ` 退出 Vi。按住 `SHIFT` 键并按两次 `Z`。此序列首先保存文件然后退出 Vi 编辑器，将你返回到 Linux shell。要在编辑时保存文件，你使用行编辑命令 `w`，它将文件写入磁盘；`w` 等同于其他文字处理器中的 `Save` 命令。你首先输入冒号以访问行编辑模式，然后输入 `w` 并按下 `ENTER`。
+
+
+
+你可以使用`:q`命令退出编辑会话。与`ZZ`命令不同，`:q`命令在退出前不执行任何保存操作。在这方面，它有一个主要限制。如果自上次保存操作以来文件已被修改，`:q`命令将失败，你将无法离开编辑器。但是，你可以通过在`:q`命令后加上 `!` 限定符来覆盖此限制。命令`:q!`将在不保存本次会话自上次保存以来所做的任何修改的情况下退出 Vi 编辑器（组合`:wq`与`ZZ`相同）。
+
+要获取在线帮助，输入`:help`命令。这是一个行编辑命令。输入冒号，在屏幕底部打开的行上输入单词 `help`，然后按下 ENTER。你也可以在单词 `help` 后添加特定命令的名称。F1 键也会调出在线帮助。
+
+作为在命令行界面中使用 Vim 的替代方案，你可以使用`gvim`，它为基本文件、编辑和窗口操作提供基于 X Window System 的菜单。要使用`gvim`，在 X Window System 终端提示符下输入`gvim`命令或从窗口管理器菜单中选择它。标准 Vi 界面会显示，但带有几个 menu buttons displayed across the top. All the standard Vi commands work just as they are described previously. However, you can use your mouse to select items on these menus. You can open and close a file, or open several files using split windows or different windows. The editing menu enables you to cut, copy, and paste text as well as undo or redo operations. In the editing mode, you can select text with your mouse with a click-and-drag operation, or use the Editing menu to cut or copy and then paste the selected text. Text entry, however, is still performed using the `a`, `i`, or `o` commands to enter the input mode.
+
+# Graphics Tools and Multimedia
+
+You can also use a wide range of graphics tools, ranging from simple image viewers like KView to sophisticated image manipulation programs like GIMP. You also have newer graphics tools for GNOME and KDE desktops, as well as the older X Window System, from which to choose. Graphics tools available for use under Linux are listed in Table 12-2. There is also strong support for multimedia tasks from video and DVD to sound and music editing (see Table 12-3). Thousands of multimedia and graphic projects, as well as standard projects, are under development or currently available from www.sourceforge.net and freshmeat.net. Be sure to check the SourceForge site for any kind of application you may need. Current multimedia sites are listed in Table 12-1.
+
+| Projects and Sites | Description |
+|---|---|
+| SourceForge | This site holds a massive amount of multimedia software for Linux, much under development: sourceforge.net |
+| KDE multimedia applications | KDE supports an extensive set of multimedia software applications: apps.kde.com |
+| GNOME multimedia applications | Many multimedia applications have been developed for GNOME: www.gnome.org |
+
+**TABLE 12-1 Linux Multimedia Sites**
+
+| Projects and Sites | Description |
+|---|---|
+| Sound & MIDI Software for Linux | Lists a wide range of multimedia and sound software: linux-sound.org |
+| Advanced Linux Sound Architecture (ALSA) | Advanced Linux Sound Architecture project (ALSA) is developed on Linux under the GPL: www.alsa-project.org |
+| Open Sound System | Open Sound System, with a wide range of supporting multimedia applications: www.opensound.com |
+
+## Graphics Tools
+
+GNOME, KDE, and the X Window System support an impressive number of graphics tools, including image viewers, window grabbers, image editors, and paint tools. On the KDE and GNOME desktops, these tools can be found under either a Graphics submenu or the Utilities menu.
+
+### KDE Graphics Tools
+
+The KView program is a simple image viewer for GIF and JPEG image files. The KSnapshot program is a simple screen grabber for KDE, which currently supports only a few image formats. The KFourier program is an image-processing tool that uses the Fourier transform to apply several filters to an image at once. The KUiickShow program is an easy-to-use, comfortable image browser and viewer supporting slide shows and numerous image formats, based on imlib. The KPaint program is a simple paint program with brushes, shapes, and color effects, and supports numerous image formats. Krita is the KOffice professional image paint and editing application, with a wide range of features including creating Web images and modifying photographs (formerly known as Krayon and KImageShop).
+
+### GNOME Graphics Tools
+
+
+
+Image Shaker is a digital image-processing tool that includes an extensive set of graphic filters, such as alpha blending and median. It uses a stream-like approach that allows batch processing.
+
+Electric Eyes is a simple image viewer. Right-click its window to display a pop-up menu with options. You can load images and also move back and forth through previously viewed ones. You can even make an image your background.
+
+gThumb is a thumbnail image viewer that lets you browse images using thumbnails, display them, and organize them into catalogs for easy reference. See sourceforge.net for more information.
+
+GQview is a simple image viewer supporting features such as click file viewing, thumbnail preview, zoom, drag and drop, and external editor support, as well as slideshow and full-screen options. Multiple files can be selected for moving, copying, deleting, renaming, or dragging. See sourceforge.net for more information.
+
+GIMP 是 GNU 图像处理程序，是一款功能强大的图像应用程序，类似于 Adobe Photoshop。你可以使用 GIMP 进行照片修复、图像合成和图像创作等任务。它支持图层、通道、混合和渐变等功能。GIMP 特别使用了 GTK+ 小部件集。你可以在其网站 www.gimp.org 上了解更多关于 GIMP 的信息并下载最新版本。GIMP 根据 GNU 公共许可证自由分发。
+
+gPhoto 项目提供用于访问数码相机的软件（www.gphoto.org）。为核心库`libgphoto2`提供了多个前端界面，`libgphoto2`由可访问众多数码相机的驱动程序和工具组成。gTKam 是一款 GNOME 数码相机工具，可从连接到系统的数码相机加载、选择和编辑照片。它作为`libgphoto2`库的 GNOME 接口运行。使用`gtkam`，你可以生成缩略图以便选择和整理照片。你还可以处理照片，更改其方向。`gPhoto2`是`libgphoto2`库的命令行界面，执行的操作与`gtkam`类似。
+
+## X Window System Graphic Programs
+
+`Xpaint` 程序是一款绘画程序，类似于 MacPaint。你可以加载绘画图片或照片，然后创建形状、添加文字和添加颜色。你可以使用各种尺寸和颜色的画笔工具。`Xfig` 程序是一款绘图程序，而 `Xmorph` 使你能够变形图像，改变其形状。ImageMagick 让你可以将图像从一种格式转换为另一种格式，例如将 TIFF 图像转换为 JPEG 图像。`xv` 程序是一款屏幕捕获和图像编辑程序。
+
+### FIGURE 12-2: Graphics Tools for Linux
+
+| Tools | Description |
+|---|---|
+| KDE | |
+| KView | Simple image viewer for GIF and JPEG image files |
+| KSnapshot | Screen grabber |
+| KFourier | Image processing tool that uses the Fourier transform |
+| KuickShow | Image browser and viewer |
+| KPaint | Paint program |
+| Krita | Image editor |
+| GNOME | |
+| gThumb | Image browser, viewer, and cataloger |
+| GQview | Image viewer |
+| Image Shaker | Digital image processing |
+| GIMP | GNU Image Manipulation Program |
+| Electric Eyes | Image viewer |
+| `gtkam` | GNOME Digital camera application, front end to `libgphoto2` library |
+
+### FIGURE 12-2: Graphics Tools for Linux (continued)
+
+| Tools | Description |
+|---|---|
+| X Window System | |
+| `xv` | Screen grabber and image converter |
+| `Xpaint` | Paint program |
+| `Xfig` | Drawing program |
+| `Xmorph` | Tool that morphs images |
+| `Xfractals` | Fractal image generator |
+| ImageMagick | Image format conversion and editing tool |
+
+## Multimedia
+
+许多应用程序可用于视频和音频，包括声音编辑器、MP3 播放器和视频播放器（见表 12-3）。Linux 声音应用程序包括混音器、数字音频工具、CD 音频写入器、MP3 播放器和网络音频支持。在 www.sourceforge.net 上目前正在开发数以千计的项目。如果你正在寻找特定类型的应用程序，很可能在那里能找到。当前项目包括功能齐全的视频播放器、数字视频录像机和数字音频混音器。许多专门为 GNOME 或 KDE 用户界面设计的应用程序可以在其各自的软件站点（www.gnome.org 和 apps.kde.com）找到。
+
+### Sound Applications
+
+Linux 上的声音设备由构成声音系统的驱动程序支持。使用当前的 Red Hat 内核，声音支持由高级 Linux 声音架构（ALSA）系统实现。ALSA 取代了先前版本中使用的 Open Sound System 的免费版本，以及原始内置声音驱动程序（见第 32 章）。你可以在 www.alsa-project.org 了解更多关于 ALSA 的信息。
+
+> NOTE Linux 已成为许多专业级多媒体任务的首选平台，例如使用 Maya 和 Softimage 等 demanding 软件为电影特效生成计算机生成图像（CGI）和动画。Linux 图形库包括 OpenGL、MESA 和 SGI 的库。
+
+许多声音应用程序目前可用于 GNOME，包括声音编辑器、MP3 播放器和音频播放器。你可以使用 GNOME CD 播放器播放音乐 CD，并使用 GNOME 声音记录器录制声音源。查看 www.gnome.org 上的软件地图以获取当前版本。KDE 也提供多种应用程序，包括媒体播放器（Kaiman）、混音器（KMix）、媒体播放器（Kabooodle）和 CD 播放器（Kscd）。查看 apps.kde.com 以获取最新添加。还有几个基于 X Window System 的
+
+multimedia applications are installed with most distributions. These include XMMS and Xplaycd, CD music players, and Xanim, an animation and video player. Currently, a software repository for sound samples, open source applications, and articles is available at www.opensound.org.
+
+
+
+Red Hat features the XMMS multimedia player, the GNOME CD Player, the GNOME Sound Recorder, and the GNOME Volume Control in the Sound and Video menu. The Extra Sound and Video menus list several KDE applications, including KMidi, Kaboodle, and Noatun.
+
+The Open Sound System (OSS) site provides an extensive listing of available multimedia software at www.opensound.com/ossapps.html. Here you can find digital audio players, mixers, MP3 and MPEG players, and even speech tools. The Sound & Midi Software for Linux site currently at linux-sound.org holds links to Web and FTP sites for many sound applications. You can also download a copy of RealPlayer, the Internet streaming media player, from www.real.com. Be sure to choose RealPlayer for Unix, and as your OS, select Linux 2.x (libc i386) RPM.
+
+## CD Burners
+
+Several CD Writer programs that can be used for CD music and MP3 writing (burners and rippers) are available from apps.kde.com. These include KreateCD, CD-Rchive, and KonCD. For GNOME, you can use cd-rec and GNOME Toaster. All use mkisofs, cdrecord, and cdda2wav CD writing programs, which are installed as part of the Red Hat distribution. Make sure that any CD-R, CD-RW, or CD-ROM drives that are IDE drives are installed as SCSI drives (see Chapter 30).
+
+### TABLE 12-3
+
+Multimedia Applications
+
+| Application | Description |
+|---|---|
+| GTV | GNOME MPEG video player |
+| Xine | Multimedia player for video, DVD, and audio |
+| GNOME-tv | TV tuner |
+| aKtion | KDE video player |
+| Kscd | Music CD player |
+| Kaboodle | A media player |
+| GNOME CD Player | CD Player |
+| GNOME Sound Recorder | Sound recorder |
+| XMMS | CD Player |
+| Xplaycd | Music CD player |
+| Noatun | KDE multimedia player |
+| Xanim | Animation and video player |
+| RealPlayer | RealMedia and RealAudio streaming media (www.real.com) |
+| Application | Description |
+|---|---|
+| KReateCD | KDE CD writing interface for cdrecord, mkisofs, and cdda2wav |
+| KonCD | KDE CD burner and ripper |
+| GNOME Toaster | GNOME CD burner |
+
+## Video Applications
+
+Several projects are under way to provide TV, video, DVD, and DTV support for Linux (see Table 12-4). The site linux-tv.org provides detailed links to DVD, digital video broadcasting (DVB), and multicasting. The site also provides downloads of many Linux video applications. Access to current DVD and media players is provided at dvd.sourceforge.net. Here you will find links for players like Movietime, Mplayer, VideoLan, Oggie, and Xine. The VideoLan project (www.videolan.org) offers network streaming support for most media formats, including mpg4 and mpeg2. It includes a multimedia player, VLC, that can work on any kind of system. Xine is a multipurpose video player for Linux/Unix systems that can play video, DVD, and audio disks. See xinehq.de for more information. For DVD transcoding and Divx support, check the DVD::rip project.
+
+DVD development efforts were initially supported by the Linux Video and DVD Project (LiViD). The development of an open source DVD player has been hampered by the concerns and restrictions of the MPAA and their control over the DVD decoding software (an officially licensed player is under development). Information about efforts to develop Linux DVD software can be had at www.opendvd.org. None of the open source software hosted at SourceForge performs CSS decryption of commercial DVDs.
+
+For KDE, several video applications are available or currently under development, including video players (aKtion and Noatun). Check apps.kde.com for downloads. Currently available or under development for GNOME are TV tuners (Gnomevision and Gnome-tv), a video player (Gnome-Video), and a video editor (trinity). Check www.gnome.org.
+
+### TABLE 12-4
+
+Video and DVD Projects and Sites
+
+| Projects | Sites |
+|---|---|
+| linux-tv.org | Links to video, TV, and DVD sites: linux-tv.org |
+| Xine | Xine video player: xinehq.de |
+| DVD players | dvd.sourceforge.net |
+
+
+
+| VideoLan | Network multimedia streaming: www.videolan.org |
+| DVD::rip | DVD transcoding and Divx software: www.exit1.org/dvdrip/ |
+
+## 邮件和新闻客户端
+
+您的 Linux 系统支持各种电子邮件和新闻客户端。邮件客户端使您能够与系统上的其他用户或可从您的网络访问的用户发送和接收消息。新闻客户端让您阅读发布在新闻组中的文章和消息，新闻组对所有用户开放。本章回顾随 Red Hat Linux 安装的邮件和新闻客户端。
+
+## 邮件客户端
+
+您可以以多种方式发送和接收电子邮件，具体取决于您使用的邮件客户端类型。虽然所有电子邮件实用程序都执行接收和发送消息的相同基本任务，但它们的界面往往不同。一些邮件客户端运行在桌面上，例如 KDE 或 GNOME。其他客户端可在任何 X Window System 管理器上运行。一些流行的邮件客户端设计为使用基于屏幕的界面，只能从命令行启动。其他传统的邮件客户端仅为命令行界面开发，要求您在单行命令行上输入命令。这里描述的大多数邮件客户端都包含在标准 Linux 发行版中，并以标准 RPM 包形式提供，便于安装。对于基于 Web 的互联网邮件服务，如 Hotmail、Lycos 和 Yahoo，您使用 Web 浏览器而不是邮件客户端来访问这些服务提供的邮件帐户。表 13-1 列出了几种流行的 Linux 邮件客户端。
+
+邮件通过邮件传输代理在目的地之间传输。`Sendmail` 和 `Smail` 从互联网上的目的地或网络上的其他站点发送和接收邮件（参见第 24 章）。要通过互联网发送邮件，它们使用简单邮件传输协议（`SMTP`）。大多数 Linux 发行版，包括 Red Hat，都会自动为您安装并本地配置 `Sendmail`。在启动系统并配置网络连接后，您就可以通过互联网发送和接收消息。
+
+您可以为电子邮件签名添加相同的标准签名信息，例如您的姓名、互联网地址或地址、或告别短语。让签名信息自动添加到您的消息中很有帮助。为此，您需要在主目录中创建一个签名文件并在其中输入您的签名信息。签名文件是一个标准文本文件，您可以使用任何文本编辑器进行编辑。像 `KMail` 这样的邮件客户端允许您指定一个文件作为签名文件。其他客户端，如 `Mail`，则期望签名文件名为 `.signature`。
+
+| 邮件客户端 | 描述 |
+|---|---|
+| KContact (KMail, KAddressbook, KOrganizer) | 包含 K 桌面邮件客户端 KMail；集成的邮件、地址簿和调度程序 |
+| Evolution | Red Hat 的主要邮件客户端 |
+| Balsa, Mahogany, etc. | GNOME 邮件客户端（参见表 13-2） |
+| Mozilla Mail | 基于 Web 浏览器的邮件客户端 |
+| Netscape | 基于 Web 浏览器的邮件客户端 |
+| GNUEmacs and XEmacs | Emacs 邮件客户端 |
+| Mutt | 基于屏幕的邮件客户端 |
+| Sylpheed | Gtk 邮件和新闻客户端 |
+| Mail | 原始基于 Unix 的命令行邮件客户端 |
+| nmh | New Message Handler 命令行邮件客户端 |
+
+表 13-1 Linux 邮件客户端
+
+### MIME
+
+`MIME`（该术语代表多用途互联网邮件扩展）用于使邮件客户端能够发送和接收多媒体文件以及使用不同字符集的文件，例如不同语言的字符集。多媒体文件可以是图像、声音剪辑，甚至是视频。支持 `MIME` 的邮件客户端可以自动将二进制文件作为消息的附件发送。`MIME` 兼容的邮件客户端维护一个名为 `mailcap` 的文件，该文件将不同类型的 MIME 消息映射到可在您的系统上查看或显示它们的应用程序。例如，图像文件将被映射到可以显示图像的应用程序。您的邮件客户端随后可以运行该程序来显示图像消息。声音文件将被映射到可以在扬声器上播放声音文件的应用程序。大多数邮件客户端内置了 MIME 功能并使用自己的 `mailcap` 文件版本。其他客户端，如 `Elm`，使用名为 `metamail` 的程序来添加 MIME 支持。`MIME` 不仅用于邮件客户端。
+
+如第 6 章和第 7 章所述，`KDE` 和 `GNOME` 文件管理器都使用 `MIME` 将文件映射到特定应用程序，以便您可以直接从文件启动应用程序。
+
+应用程序通过 `mailcap` 和 `mime.types` 文件与二进制文件关联。`mime.types` 文件定义不同的 MIME 类型，将 MIME 类型与特定应用程序关联。`mailcap` 文件随后将每个 MIME 类型与指定的应用程序关联。您的系统维护自己的 MIME 类型文件，通常为 `/etc/mime.types`。
+
+MIME 类型文件中的条目将应用程序的 MIME 类型和可能的子类型与用于在给定应用程序上运行的文件的可能文件扩展名集合关联起来。MIME 类型通常由子类型进一步限定，子类型与主类型之间用斜杠分隔。例如，MIME 类型 `image` 可以有多个子类型，如 `jpeg`、`gif` 或 `tiff`。以下是定义 JPEG 文件 MIME 类型的示例 MIME 类型条目。MIME 类型为 `image/jpeg`，可能的文件扩展名列表为 "jpeg jpg jpe"：
+
+```
+image/jpeg jpeg jpg jpe
+```
+
+指定的应用程序将取决于您特定系统上可用的应用程序。MIME 类型与应用程序之间用分号分隔。在许多情况下，指定的是基于 X Window System 的程序。注释以 `#` 表示。MIME 子类型中使用的 `*` 会引用所有子类型。条目 `image/*` 将用于可以运行所有类型图像文件的应用程序。格式代码 `%s` 用于引用将在此应用程序上运行的附件文件。以下是示例 `mailcap` 条目。第一个条目将所有图像文件与 `xv` 图像查看器关联起来。接下来的两个条目将视频和视频 MPEG 文件与 `xanim` 应用程序关联起来。
+
+```
+image/*; xv %s
+video/*; xanim %s
+video/mpeg; xanim %s
+```
+
+您还可以在 GNOME 和 KDE 桌面上创建和编辑 MIME 类型。对于 GNOME，请使用 GNOME 控制中心的 MIME 类型小程序。该小程序将列出为系统定义 MIME 类型及其关联的文件名扩展名。编辑条目以更改与该 MIME 类型、该类型文件关联的应用程序和图标。在 KDE 中，请使用 KDE 控制中心的 KDE 组件下的文件关联条目。这将列出 MIME 类型及其关联的文件名扩展名。选择条目进行编辑并更改与其关联的应用程序。KDE 将其 MIME 类型信息保存在 KDE 配置目录中一个名为 `mimelink` 的单独文件中。
+
+尽管您可以创建自己的 MIME 类型，但已经在使用一套标准类型。类型 `text`、`image`、`audio`、`video`、`application`、`multipart` 和 `message` 及其子类型已为您的系统定义。您会发现常用的文件扩展名，例如 TIFF 和 JPEG 图像文件的 `.tif` 和 `.jpg`，已经与 MIME 类型和应用程序关联。虽然您可以轻松更改关联的应用程序，但最好保留已安装的 MIME 类型。当前官方 MIME 类型列在 `IANA` 网站（`www.iana.org`）上，名称为媒体类型，作为其分配服务的一部分提供。您可以直接在其网站上访问媒体类型文件。
+
+### Evolution
+
+`Evolution` 是 Red Hat 的主要邮件客户端。它默认随 `OpenOffice` 一起安装。虽然专为 `GNOME` 设计，但在 `KDE` 上也能同样良好运行。`Evolution` 是一个集成的邮件客户端、日历和地址簿，目前由 `Ximian` 开发。`Evolution` 邮件程序是一个功能强大的工具，支持众多协议（`SMTP`、`POP` 和 `IMAP`）、多个邮件帐户和加密。使用 `Evolution`，您可以在不同的服务器上创建多个邮件帐户，包括使用不同协议（如 `POP` 或 `IMAP`）的服务器。您还可以解密 `PGP` 或 `GPG` 加密的消息。
+
+## GNOME 邮件客户端：Evolution、Balsa 及其他
+
+
+
+目前正在开发多个基于 GNOME 的邮件客户端，其中许多您现在就可以使用（见表 13-2）。其中包括 Evolution、Balsa、Mahogany、Althea、MMC、SMAN、Pygmy、Spruce 和 Sylpheed（Balsa、Evolution 和 Sylpheed 随 Red Hat 提供）。请查看 GNOME 网站以获取更多即将推出的邮件客户端。许多客户端基于目前正在开发的 GNOME 邮件客户端库（`camel`），该库提供标准邮件操作支持。Balsa 是一个功能丰富的 GNOME 邮件客户端，尽管它可以在任何窗口管理器下运行，包括 KDE，只要系统上安装了 GNOME 即可。Evolution 是来自 Ximian 的集成邮件客户端、日历和联系人管理器。Mahogany 邮件客户端是一个 GNOME 邮件客户端，同时也有其他平台的版本。Althea 是一个稳定的 IMAP 邮件客户端。SMAN 简单邮件客户端用于访问 POP3 服务器。Pygmy 是一个用 Python 编程语言编写的简单 GNOME 邮件客户端，支持附件和 MIME 消息。Sylpheed 是一个邮件和新闻客户端，其界面与 Windows 邮件客户端相似。Spruce 是一个支持多个帐户的 GNOME 电子邮件客户端。还有多种支持工具可用，如邮件检查器和通知器，包括 RePopApp 和 Flink 邮件检查器，以及 Sonicmail 和 gpostman 邮件通知器。
+
+| Application | Description |
+|---|---|
+| Balsa | E-mail client for GNOME that supports POP3, IMAP, local folders, and multithreading |
+| Evolution | Ximian integrated mail client, calendar, and contact manager |
+| Sylpheed | Mail and news client similar to Windows clients |
+| Althea | Stable IMAP mail client |
+| SQmail | A folder-based e-mail system (using mysql) |
+| SMAN | Simple mail user agent that accesses POP3 servers |
+| RePopApp | GNOME mail checker with support for multiple accounts |
+| Mahogany | Cross-platform e-mail application |
+| Flink | GNOME mail checker with IMAP, POP3, and mbox support |
+| Pygmy | GNOME mail client written in the Python programming language |
+| Spruce | E-mail client with support for multiple accounts |
+| gpostman | Basic GNOME mail notifier |
+| MMC | GNOME mail client |
+| Sonicmail | GNOME POP3 mail notifier applet |
+
+TABLE 13-2 GNOME Mail Clients
+
+Balsa 为撰写、发送和接收邮件消息提供了功能齐全的 GUI 界面。Balsa 窗口显示三个窗格，分别用于文件夹、邮件头和消息。左侧窗格显示你的邮件文件夹。你最初有三个文件夹：收件箱文件夹用于收到的邮件，发件箱文件夹用于已撰写但尚未发送的邮件，以及垃圾箱文件夹用于已删除的消息。你也可以创建自己的邮件文件夹来存储特定消息。要将消息放入你创建的文件夹中，请单击并拖动该消息的邮件头到该文件夹。
+
+## K 桌面邮件客户端：KMail
+
+K 桌面邮件客户端 KMail 为撰写、发送和接收邮件消息提供了功能齐全的 GUI 界面。KMail 现在是 KContact 软件包的一部分，该软件包还包括地址簿（KAddressBook）、组织者和日程安排器（KOrganizer）以及便笺编写器（KNotes）。要启动 KMail，你需要启动 KContact 应用程序。KMail 窗口显示三个窗格，分别用于文件夹、邮件头和消息。左上窗格显示你的邮件文件夹。你有一个收件箱文件夹用于收到的邮件，一个发件箱文件夹用于已撰写但尚未发送的邮件，以及一个已发送邮件文件夹用于之前已发送的消息。你可以创建自己的邮件文件夹并将选定的消息保存在其中，如果你愿意的话。右上窗格显示当前所选邮件文件夹的邮件头。要显示一条消息，请单击其邮件头。消息随后会显示在邮件头列表下方的较大窗格中。你还可以发送和接收附件，包括二进制文件。收到的图片和电影会使用适当的 K 桌面实用程序显示。如果你右键单击消息，会弹出一个菜单，显示你可以对其执行的操作选项。你可以将其移动或复制到另一个文件夹，也可以直接删除它。你还可以撰写回复或转发该消息。
+
+要将 KMail 设置为与你的邮件账户一起使用，你必须输入账户信息。在设置菜单中选择配置条目。设置窗口上有多个面板，你可以通过单击左侧列中的图标来显示它们。对于账户，你选择网络面板。你可能在 ISP 或 LAN 维护的邮件服务器上拥有多个邮件账户。会显示一个配置窗口，你可以在其中输入登录名、密码和主机信息。为了安全访问，KMail 现在支持 SSL，前提是已安装 OpenSSL。消息现在可以由用户加密和解码。它还支持 IMAP，除 POP 和 SMTP 协议外。
+
+## X 邮件客户端：Mozilla 和 Emacs
+
+尽管许多较新的邮件客户端是为 GNOME 或 K 桌面设计的，但仍有一些邮件客户端是为 X Window System 开发的，可在任何窗口管理器或桌面下运行。它们不需要 GNOME 或 K 桌面。Mozilla 邮件和 Emacs 是其中两个更受欢迎的邮件客户端。Emacs 邮件客户端集成在 Emacs 环境中，而 Emacs 编辑器是该环境的主要应用程序。它们是功能齐全的邮件客户端。
+
+Mozilla 是基于 Netscape 5.0 的 Netscape 的开源版本。它已取代 Netscape 成为 Red Hat 发行版上的主要 Web 浏览器。要使用 Mozilla 邮件客户端，你只需在 Mozilla Web 浏览器的任务菜单中选择它，或从 GNOME 程序菜单的 Internet 菜单中选择它。当你首次启动 Mozilla 时，会提示你输入新的账户信息。你可以稍后通过在编辑菜单中选择邮件/新闻账户设置条目来添加和编辑账户。这会打开一个对话框，其中有一个用于添加新账户的按钮，如果你愿意的话。
+
+> **NOTE** Netscape Communicator 包含一个名为 Messenger 的邮件客户端。账户信息，例如你的邮件服务器、用户名和密码，必须在从编辑菜单可访问的偏好设置窗口中的邮件面板中输入。Red Hat 不再在其发行版中包含 Netscape，尽管如果你愿意，你可以下载并安装它。
+
+GNU Emacs 版本包含邮件客户端以及其他组件，例如新闻阅读器和编辑器。GNU Emacs 包含在 Red Hat 发行版中。有关更多信息，请查看 Emacs 网站 www.gnu.org/software/emacs 。当你启动 GNU Emacs 时，菜单按钮会显示在屏幕顶部。如果你以 X Window System 环境运行 Emacs，你拥有完整的 GUI 功能，可以使用鼠标选择菜单。要访问 Emacs 邮件客户端，请从工具菜单中选择邮件条目。要撰写和发送消息，只需在工具菜单中选择发送邮件项。这会打开一个屏幕，提示输入收件人和主题邮件头条目。然后你在它们下方输入消息，使用任何 Emacs 编辑功能。GNU Emacs 是一个工作环境，你可以在其中执行各种任务，每个任务都有自己的缓冲区。当你阅读邮件时，会打开一个缓冲区来保存邮件头列表，而当你阅读一条消息时，另一个缓冲区将保存其内容。当你撰写消息时，又一个缓冲区保存你编写的文本。你为邮件、新闻或编辑笔记或文件而打开的缓冲区列在缓冲区菜单中。你可以使用此菜单在它们之间切换。
+
+XEmacs 是另一个版本的 Emacs，设计为仅使用 GUI 界面运行。Internet 应用程序，你可以轻松地从主 XEmacs 按钮栏访问，包括 Web 浏览器、邮件实用程序和新闻阅读器。撰写消息时，你可以充分使用 Emacs 编辑器及其所有功能，包括拼写检查器和搜索/替换。
+
+## 命令行邮件客户端
+
+
+
+一些邮件客户端使用简单的命令行界面。它们可以在没有任何其他支持的情况下运行，例如 `X Window System`、桌面或光标支持。它们简单易用，但包含广泛的功能和选项。其中三种更广泛使用的此类邮件客户端是 `Mail` 和新消息处理程序（`nmh`）。`Mail` 是为 Unix 系统开发的 `mailx` 邮件客户端。它被认为是一种默认邮件客户端，可以在所有 Unix 和 Linux 系统上找到。`nmh` 是一组邮件访问工具，设计为可轻松集成到你的 shell 中。`Mutt` 是一个基于光标的客户端，可以从命令行运行。
+
+> **NOTE** 你也可以从命令行使用 Emacs 邮件客户端，如上一节所述。
+
+## Mutt
+
+你可以在命令行上调用几个功能强大的邮件客户端，它们提供全屏、基于光标的界面。菜单会显示在屏幕上，其中包含你可以使用
+
+你的键盘。基本光标移动通过方向键支持。`Pine` 和 `Mutt` 是提供基于屏幕界面的邮件客户端。虽然是基于屏幕的，这些邮件客户端功能非常强大。`Pine` 过去很流行，但在 Red Hat 10 中已被移除。
+
+`Mutt` 包含了 `Pine` 的许多功能。它具有易于使用的基于屏幕的界面。与 `Pine` 一样，`Mutt` 拥有广泛的功能，例如 MIME 支持。你可以在 `www.mutt.org` 的 `Mutt` 网页上找到有关 `Mutt` 的更多信息。在这里你可以下载 `Mutt` 的最新版本并访问在线手册和帮助资源。在大多数发行版中，`Mutt` 手册位于 `/usr/doc` 目录下的 `Mutt` 中。`Mutt` 的新闻组是 `comp.mail.mutt`，你可以在此发布查询并讨论最新的 `Mutt` 发展。
+
+## Mail
+
+现在所知的 `mail` 实用程序最初是为 BSD Unix 创建的，名为 `mail`。后来 Unix System V 的版本采用了 BSD `mail` 实用程序并将其重命名为 `mailx`。现在，它简单地被称为 `Mail`。`Mail` 在 Unix 和 Linux 系统上充当事实上的默认邮件客户端。所有系统都有名为 `Mail` 的邮件客户端，而可能没有其他邮件客户端。
+
+要使用 `Mail` 发送消息，输入 `mail` 以及你要发送消息的人的地址。按 ENTER 后会提示输入主题。输入消息的主题并再次按 ENTER。此时，你进入输入模式。输入的任何内容都被视为消息的内容。按 ENTER 会在文本中添加新行。当你完成输入消息后，在单独的一行上按 `CTRL-D` 以结束消息。然后会提示你输入要发送此消息的抄送用户（`Cc`）。如果你不想发送抄送，只需按 ENTER。你将在按 `CTRL-D` 后看到 `EOT`（传输结束）显示
+
+你可以通过在 `mail` 命令后在命令行上列出这些用户的地址作为参数，一次性向多个用户发送消息。在下一个示例中，用户将同一条消息发送给 `chris` 和 `aleina`。
+
+```
+$ mail chris aleina
+```
+
+要接收邮件，只需输入 `mail` 命令并按 ENTER。这会调用一个 `Mail` shell，其具有自己的提示符和邮件命令。消息头列表将被显示。头信息按字段排列，从消息状态和消息编号开始。消息的状态由单个大写字母表示，通常为 `N` 表示新邮件或 `U` 表示未读。消息编号用于方便引用你的消息，位于状态字段之后。下一个字段是发件人的地址，其后是接收消息的日期和时间，然后是消息的行数和字符数。最后一个字段包含发件人给出的主题。在头信息之后，`Mail` shell 显示其提示符，即一个 `&`。在 `Mail` 提示符下，你输入操作消息的命令。以下是 `Mail` 头信息和提示符的示例：
+
+```
+$ mail
+Mail version 8.1 6/6/93. Type ? for help.
+"/var/spool/mail/larisa": 3 messages 2 unread
+ 1 chris@turtle.mytrek. Thu Jun 7 14:17 22/554 "trip"
+>U 2 aleina@turtle.mytrek. Thu Jun 7 14:18 22/525 "party"
+ U 3 dylan@turtle.mytrek. Thu Jun 7 14:18 22/528 "newsletter"
+& q
+```
+
+`Mail` 通过消息列表或当前消息标记（`>`）引用消息。大括号符号（`>`）放在被视为当前消息的消息之前。当前消息在未包含消息编号的 `Mail` 命令中默认为引用。你也可以使用由多个消息编号组成的消息列表来引用消息。给定前面的示例中的消息，你可以用 `1-3` 引用全部三条消息。
+
+你使用 `R` 和 `r` 命令回复收到的消息。输入消息编号的 `R` 命令会生成发送消息的头信息，然后将你置于输入模式以输入消息。`q` 命令退出 `Mail`。退出时，你已读的消息会被保存在主目录中的一个名为 `mbox` 的文件中。除了将消息保存在 `mbox` 文件中，你还可以使用 `s` 命令将消息显式保存到你选择的任意文件。`Mail` 有自己的初始化文件，名为 `.mailrc`，每次调用 `Mail` 发送或接收消息时都会执行。在其中，你可以定义 `Mail` 选项并创建 `Mail` 别名。你可以设置添加不同功能的选项，例如更改提示符或保存你发送的消息的副本。要定义别名，输入关键字 `alias`，后跟你选择的别名，然后是它所代表的地址列表。在下一个示例中，别名 `myclass` 在 `.mailrc` 文件中定义。
+
+```
+.mailrc
+alias myclass chris dylan aleina justin larisa
+```
+
+在下一个示例中，文件 `homework` 的内容被发送给由 `myclass` 别名表示的所有用户。
+
+```
+$ mail myclass < homework
+```
+
+## 新的消息处理实用程序：nmh
+
+通常称为 `nmh` 的 Message Handler 邮件客户端采用了与大多数其他邮件客户端不同的邮件管理方法。`nmh` 由一组命令组成，你在用户 shell 中执行这些命令，就像执行任何其他 Unix 命令一样。不存在像 `Mail` 那样的专用邮件 shell。一个 `nmh` 命令发送消息，另一个显示你的传入消息，还有一个保存消息。一组环境变量为你执行的 `nmh` 命令提供上下文，例如跟踪当前消息或邮件文件夹。
+
+> 提示 如果不想从命令行界面工作，你可以使用 `exmh`，它为访问 `nmh` 消息提供 X 界面，以及 `MH-E`，它是 MH 的 Emacs 前端。
+
+要使用 `nmh` 发送消息，你首先需要使用 `comp` 命令撰写消息，然后使用 `send` 命令发送消息。要撰写消息，只需在命令行单独输入 `comp` 并按 ENTER。使用 `nmh`，你会被置于 `nmh` 默认编辑器（通常是 Vi 编辑器）的输入模式。屏幕顶部的字段显示地址、抄送和主题的提示。在虚线下方，你输入消息。你可以使用方向键在各个字段之间移动。输入完消息内容后，像平常一样保存并退出编辑器（Vi 为 `ESC-SHIFT-ZZ`）。在 `What now?` 提示符下，你可以发送消息，编辑它，
+
+save it to a file, display it again, or quit without sending the message. The `send` command sends the message. Pressing ENTER at the `What now?` prompt displays a list of commands you can enter. In the next example, the user composes a message for another user whose address is `robert`.
+
+```
+$ comp
+To: robert
+cc:
+Subject: Birthday
+----------------
+Your present is in the mail
+really.
+
+What now? send
+$
+```
+
+To read your mail with `nmh`, you first need to store newly received mail into a designated `nmh` mailbox file with the `inc` command. The `inc` command displays a list of headers for each mail message in your incoming mailbox. An `nmh` message header consists only of the message number, the month and year, the address of the sender, and the beginning of the message text.
+
+```
+$ inc
+1+ 06/07 Christopher Peter trip<<Are you ready for the trip? chris >>
+2 06/07 Aleina Petersen party<<its on for tomorrow night. Aleina >>
+3 06/07 Dylan Petersen newsletter<<Did you write your article yet? Dyla
+$
+```
+
+
+
+If you want to redisplay the headers, you need to use another nmh command called `scan`.
+
+```
+$ scan
+1+ 06/07 Christopher Peter trip<<Are you ready chris >>
+2 06/07 Aleina Petersen party<<its on for Aleina >>
+3 06/07 Dylan Petersen newsletter<<Did you Dylan >>
+$
+```
+
+You use the `show`, `next`, and `prev` commands to display a message. The `show` command displays the current message, the `next` command displays the message after the current one, and the `prev` command displays the message before the current one. To print a message, you first output it with `show`, and then pipe the output to a printer. You save a message to a text file in much the same way. First you output the message using the `show` command, and then you redirect that output to a file.
+
+```
+$ show | lpr
+$ show > myfile
+```
+
+## Notifications of Received Mail
+
+As your mail messages are received, they are automatically placed in your mailbox file, but you are not automatically notified when you receive a message. To find out if you have any messages waiting, you can use a mail client to retrieve messages or you can use a mail monitor tool to tell you if you have any mail waiting. There are also a number of mail monitors available for use on GNOME. Several operate as applets on the GNOME panel. On the Red Hat GNOME desktop, there are two mail monitors you can choose from: the Mail Check and Clock and Mail Notify monitors. Both are applets that run inside a GNOME panel. The Mail Check applet will display a mail envelope when mail arrives, and the Clock and Mail Notify applet displays a small envelope and the number of messages received below the time. Other applets like Sonicmail will notify you of any POP3 mail arrivals. PyBiff performs much the same kind of mail monitoring as Korn. gbox_applet will monitor mailboxes, assigning priorities to each. GMailWatch is a mail monitor applet that will display a summary of incoming mail.
+
+The KDE Desktop has a mail monitor utility called Korn that works in much the same way. Korn shows an empty inbox tray when there is no mail and a tray with slanted letters in it when mail arrives. If old mail is still in your mailbox, letters are displayed in a neat square. You can set these icons as any image you want. You can specify the mail client to use and the polling interval for checking for new mail. If you have several mail accounts, you can set up a Korn profile for each one. Different icons can appear for each account telling you when mail arrives in one of them.
+
+For command line interfaces, you can use the `biff` utility. The `biff` utility notifies you immediately when a message is received. This is helpful when you are expecting a message and want to know as soon as it arrives. `biff` automatically displays the header and beginning lines of messages as they are received. To turn on `biff`, you enter `biff y` on the command line. To turn it off, you enter `biff n`. To find out if `biff` is turned on, enter `biff` alone.
+
+You can temporarily block `biff` by using the `mesg n` command to prevent any message displays on your screen. `mesg n` not only stops any Write and Talk messages, it also stops `biff` and Notify messages. Later, you can unblock `biff` with a `mesg y` command. A `mesg n` command comes in handy if you don't want to be disturbed while working on some project.
+
+## Accessing Mail on Remote POP Mail Servers
+
+
+
+# 远程邮件客户端与邮件账户
+
+Most newer mail clients are equipped to access mail accounts on remote servers. For such mail clients, you can specify a separate mail account with its own mailbox. For example, if you are using an ISP, most likely you will use that ISP's mail server to receive mail. You will have set up a mail account with a username and password for accessing your mail. Your e-mail address is usually your username and the ISP's domain name. For example, a username of `larisa` for an ISP domain named `mynet.com` would have the address `larisa@mynet.com`. The username would be `larisa`. The address of the actual mail server could be something like `mail.mynet.com`. The user `larisa` would log into the `mail.mynet.com` server using the username `larisa` and password to access mail sent to the address `larisa@mynet.com`. Newer mail clients, such as `KMail`, `Balsa`, and `Mozilla`, enable you to set up a mailbox for such an account and access your ISP's mail server to check for and download received mail. You must specify what protocol a mail server uses. This is usually either the Post Office Protocol (`POP`) or the IMAP protocol (`IMAP`). This procedure is used for any remote mail server. Using a mail server address, you can access your account with your username and password.
+
+## 合并远程邮件到本地收件箱
+
+Should you have several remote email accounts, instead of creating separate mailboxes for each in a mail client, you can arrange to have mail from those accounts sent directly to the inbox maintained by your Linux system for your Linux account. All your mail, whether
+
+来自你 Linux 系统上其他用户或远程邮件账户的邮件，将出现在你的本地收件箱中。如果你在使用的邮件客户端（如 `Elm` 或 `Mail`）无法访问你的 ISP 邮件服务器上的邮件，这种功能就很有帮助。你可以用 `Fetchmail` 实现此功能。`Fetchmail` 会检查远程邮件服务器上的邮件并将其下载到你的本地收件箱中，在那里它们会显示为新收到的邮件（你需要连接到互联网或远程邮件服务器的网络）。
+
+## 使用 Fetchmail
+
+要使用 `Fetchmail`，你需要知道远程邮件服务器的 Internet 地址和邮件协议。大多数远程邮件服务器使用 `POP3` 协议，但其他服务器也可能使用 `IMAP`、`ESMTP` 或 `POP2` 协议。在命令行中输入 `fetchmail`，后跟邮件服务器地址和所需的任何选项。邮件协议通过 `-p` 选项指定，邮件服务器类型通常为 `POP3`。如果你的电子邮件用户名与你的 Linux 登录名不同，你可以使用 `-u` 选项和电子邮件名称。一旦执行 `fetchmail` 命令，系统会提示你输入密码。以下是 `POP3` 邮件服务器的 `fetchmail` 命令语法：
+
+```
+fetchmail -p POP3 -u username mail-server
+```
+
+要使用 `Fetchmail`，先连接到你的 ISP，然后在命令行中输入带有选项和 POP 服务器名称的 `fetchmail` 命令。你会看到提示邮件是否存在的信息，如果有，会显示正在下载多少封邮件。然后你可以使用邮件客户端从收件箱中读取邮件。你可以让 `Fetchmail` 以守护进程模式运行，使其自动检查邮件。你必须包含一个选项来指定检查邮件的时间间隔（以秒为单位）。
+
+```
+fetchmail -d 1200
+```
+
+你可以在主目录中的 `.fetchmailrc` 文件中指定诸如服务器类型、用户名和密码等选项。你也可以为你可能拥有的其他邮件服务器和账户添加条目。不要直接在 `.fetchmailrc` 文件中输入选项，你也可以使用 `fetchmailconf` 程序。`fetchmailconf` 提供了一个 GUI 界面，用于选择 `Fetchmail` 选项并输入邮件账户信息。`fetchmailconf` 仅在 X 下运行，并且需要安装 `python` 和 `Tk`。它会显示用于添加新闻服务器、配置邮件服务器以及配置特定邮件服务器上的用户账户的窗口。专家版会显示相同类型的窗口，但选项更多。
+
+配置完成后，你可以不带任何参数输入 `fetchmail`；它将从你的 `.fetchmailrc` 文件中读取条目。你也可以直接在 `.fetchmailrc` 文件中添加条目。`.fetchmailrc` 文件中针对特定邮件账户的条目由多个字段及其值组成：`poll`、`protocol`、`username` 和 `password`。`Poll` 用于指定邮件服务器名称，`protocol` 用于指定所使用的协议类型。请注意，你也可以指定密码，这样每次 `Fetchmail` 访问邮件服务器时就无需输入密码。
+
+# Usenet 新闻
+
+## 概述
+
+`Usenet` 是一个开放的邮件系统，用户可以在上面发布包含新闻、讨论和观点的消息。它像一个邮箱，任何你 Linux 系统上的用户都可以读取或发送消息到该邮箱。用户的消息被合并到 `Usenet` 文件中，这些文件会被分发给任何注册接收它们的系统。接收 `Usenet` 文件的每个系统被称为站点。某些站点为 `Usenet` 执行组织和分发操作，从其他站点接收消息并将其整理成 `Usenet` 文件，然后广播给许多其他站点。此类站点称为骨干站点，它们像出版商一样运作，接收文章并将其整理到不同的组中。
+
+## 访问 Usenet
+
+要访问 `Usenet` 新闻，你需要访问一个新闻服务器。新闻服务器接收每日的 `Usenet` 新闻源并使其可供其他系统访问。你的网络可能有一台作为新闻服务器运行的系统。如果你使用的是 Internet 服务提供商（ISP），你的 ISP 很可能为你维护了一个新闻服务器以供使用。要阅读 `Usenet` 文章，你需要使用新闻阅读器——一个连接到新闻服务器并访问文章的客户端程序。在 Internet 和 TCP/IP 网络中，新闻服务器使用网络新闻传输协议（`NNTP`）与新闻阅读器通信，通常被称为 `NNTP` 新闻服务器。你也可以在你的 Linux 系统上创建自己的新闻服务器，以运行本地 `Usenet` 新闻服务或下载和维护完整的 `Usenet` 文章集。几种名为新闻传输代理的 Linux 程序可用于创建此类服务器。本章重点介绍 Linux 平台上可用的各种新闻阅读器。`NNTP` 服务器的配置管理与架构在第 26 章中介绍。
+
+## Usenet 的组织方式
+
+`Usenet` 文件最初设计为像期刊一样运行。文件中的消息被称为文章。用户可以撰写文章，发布到 `Usenet`，然后立即分发到世界各地的其他系统。然后有人可以在 `Usenet` 上阅读该文章，而无需等待期刊出版。`Usenet` 文件本身按期刊出版物组织。因为期刊旨在针对特定群体，所以 `Usenet` 文件按称为新闻组的组组织。当用户发布文章时，它会被分配到特定的新闻组。如果其他用户想阅读该文章，他或她会查看该新闻组中的文章。你可以将每个新闻组视为不断更新的杂志。例如，要阅读有关 Linux 操作系统的文章，你需要访问关于 Linux 的 `Usenet` 新闻组。`Usenet` 文件还用作公告板，人们可以在上面进行辩论。同样，此类文件被分类到新闻组中，但其文章更像对话而不是期刊文章。你也可以创建自己的文章，然后将其添加到新闻组供他人阅读。将文章添加到新闻组称为发布文章。
+
+> NOTE `Google` 网站维护着对 `Usenet` 新闻组的在线访问。它还具有让你搜索大量新闻组档案的功能。你可以轻松找到可能位于不同新闻组中的相似主题的文章。雅虎等其他网站也维护着自己的群组，其运作方式与 `Usenet` 新闻组非常相似，但监督更严格。
+
+
+
+# Linux 新闻组
+
+Linux 有关于各种主题的新闻组。有些用于讨论，其他则是关于最新发展的信息来源。在某些新闻组中，你可以就特定问题寻求帮助。以下是一些流行的 Linux 新闻组的选集：
+
+| 新闻组 | 主题 |
+|---|---|
+| `comp.os.linux.announce` | Linux 发展的公告 |
+| `comp.os.linux.admin` | 系统管理问题 |
+| `comp.os.linux.misc` | 特殊问题和议题 |
+
+| 新闻组 | 主题 |
+|---|---|
+| `comp.os.linux.setup` | 安装问题 |
+| `comp.os.linux.help` | 特定问题的问答 |
+| `linux.help` | 获取 Linux 问题帮助 |
+
+你使用新闻阅读器（如 `KNode`、`Pan`、`Mozilla`、`trn` 或 `tin`）阅读 Usenet 文章，这使你能够先选择特定的新闻组，然后阅读其中的文章。新闻阅读器像用户界面一样运行，使你能够浏览并选择可用的文章进行阅读、保存或打印。大多数新闻阅读器都采用了一种称为线程的复杂检索功能，它将同一讨论或主题的文章汇总在一起。
+
+新闻阅读器设计为使用某些类型的界面运行。例如，`KNode` 是一个 KDE 新闻阅读器，具有 KDE 界面，专为 KDE 桌面设计。`Pan` 具有 GNOME 界面，设计用于在 GNOME 桌面上运行。`Pine` 是一个基于光标的新闻阅读器，意味着它提供全屏界面，你可以使用简单的基于屏幕的光标通过箭头键移动来操作。它不支持鼠标或任何其他 GUI 功能。`trn` 使用简单的命令行界面，带有限定的光标支持。你输入的大多数命令都要按 ENTER 执行。表 13-3 中列出了几种流行的新闻阅读器。
+
+> 注意 目前正在为 GNOME 和 KDE 开发众多新闻阅读器。你可以在 K 桌面网站的软件列表上 `apps.kde.com` 检查 KDE 新闻阅读器。对于 GNOME 新闻阅读器，请在 GNOME 网站 `www.gnome.org` 的软件地图上检查 Internet 工具。`Mozilla` 新闻阅读器集成在 Mozilla Web 浏览器中，可从 `www.mozilla.org` 获取。
+
+大多数新闻阅读器可以读取通过 `NNTP` 提供的远程新闻服务器上的 Usenet 新闻。许多此类远程新闻服务器可通过 Internet 使用。桌面新闻阅读器，如 `KNode` 和 `Pan`，需要在其自己的配置设置中指定远程新闻服务器的 Internet 地址。然而，几种基于 shell 的新闻阅读器，如 `trn` 和 `tin`，则从 `NNTP SERVER` shell
+
+## 表 13-3 Linux 新闻阅读器
+
+| 新闻阅读器 | 描述 |
+|---|---|
+| `Pan` | GNOME 桌面新闻阅读器 |
+| `KNode` | KDE 桌面新闻阅读器 |
+| `Mozilla` | 具有新闻阅读器功能的 Web 工具（X-based） |
+| `Sylpheed` | GNOME 类似 Windows 的新闻阅读器 |
+| `Slim` | 新闻阅读器（基于光标） |
+| `Emacs` | Emacs 编辑器、邮件客户端和新闻阅读器（基于光标） |
+| `trn` | 新闻阅读器（命令行界面） |
+| `tin` | 新闻阅读器（命令行界面） |
+
+变量获取新闻服务器的 Internet 地址。在你可以使用此类新闻阅读器连接到远程新闻服务器之前，你首先必须将新闻服务器的 Internet 地址分配给 `NNTP SERVER` shell 变量，然后导出该变量。你可以将 `NNTP SERVER` 的分配和导出放在登录初始化文件中，例如 `.bash_profile`，以便在每次登录时自动执行。管理员可以将此条目放在 `/etc/profile` 文件中，以便系统上所有用户都可以使用新闻服务器。
+
+```
+$ NNTP SERVER=news.domain.com
+$ export NNTP SERVER
+```
+
+## 新闻传输代理
+
+Usenet 新闻通过 Internet 以每日新闻源的形式提供，包含数千个新闻组的文章和帖子。此新闻源发送到可以随后通过新闻阅读器为其他系统提供新闻访问的站点。这些站点作为新闻服务器运行；用于访问它们的新闻阅读器是其客户端。新闻服务器软件称为新闻传输代理，它为新闻阅读器提供新闻，使你能够阅读新闻组并发布文章。对于 Linux，三个流行的新闻传输代理是 `INN`、`Leafnode` 和 `Cnews`。`Cnews` 和 `Leafnode` 都很小且简单，适用于小型网络。`INN` 功能更强大、更复杂，专为大型系统设计（有关更多详细信息，请参阅 `www.isc.org`）。
+
+Usenet 上的每日新闻源通常很大，会占用新闻服务器的大量时间和内存资源。因此，你可能不想设置自己的 Linux 系统来接收此类新闻源。如果你在一个 Linux 系统网络中运行，可以指定其中一个作为新闻服务器，并在其上安装新闻传输代理以接收和管理 Usenet 新闻源。你网络上的其他系统上的用户然后可以使用自己的新闻阅读器访问该新闻服务器。
+
+如果你的网络已经有新闻服务器，你根本不需要安装新闻传输代理。你只需使用你的新闻阅读器远程访问该服务器（参见前一节中的 `NNTP SERVER`）。在 ISP 的情况下，此类提供商通常运行自己的新闻服务器，你也可以使用自己的新闻阅读器（如 `KNode` 和 `Pan`）远程访问它们。请记住，新闻阅读器必须花费时间下载所选新闻组的文章，以及所有新闻组的更新信息。
+
+你也可以使用新闻传输代理为系统或本地网络上的用户运行本地新闻版本。为此，安装 `INN`、`Leafnode`、`slrn pull` 或 `Cnews` 并配置它们仅管理本地新闻组。你的系统上的用户然后可以发布文章并阅读本地新闻。
+
+## 邮件列表
+
+作为新闻组的替代方案，你可以订阅邮件列表。邮件列表上的用户会自动收到发送到列表的消息和文章。邮件列表的工作方式类似于邮件别名，将消息广播给列表上的所有用户。邮件列表旨在为小型专业人群服务。不是发布供任何人查看的文章，只有订阅者才能收到它们。Linux 有大量邮件列表以及其他主题可供使用。例如，在 `www.gnome.org` 网站上，你可以订阅任何几个关于 GNOME 主题的邮件列表，例如 `gnome-themes-list@gnome.org`，它涉及 GNOME 桌面主题。你也可以在 `lists.kde.org` 上对 KDE 主题执行相同的操作。
+
+在 `www.liszt.com`，你可以搜索各种主题的邮件列表。按照惯例，要订阅一个列表，你需要向邮件列表地址发送请求，并在其用户名中添加 `–request` 后缀。例如，要订阅 `gnome-themes-list@gnome.org`，你需要向 `gnome-themes-list-request@gnome.org` 发送请求。在 `www.linux.org`，你可以链接到支持 Linux 邮件列表的网站，例如 Red Hat 邮件列表页面和 Linux 邮件列表网站。邮件列表涵盖的主题包括 Linux 内核、管理、安全以及各种发行版。例如，`linux-admin` 涉及管理主题，`linux-apps` 讨论软件应用。`vger.kernel.org` 为 Linux 内核开发者提供邮件列表服务。
+
+> 注意 你可以使用 `Mailman` 和 `Majordomo` 程序来自动管理你的邮件列表。`Mailman` 是 GNU 邮件列表管理器，包含在 Red Hat 中。你可以在 `www.greatcircle.com/majordomo` 了解更多关于 `Majordomo` 的信息，在 `sourceforge.net` 了解更多关于 `Mailman` 的信息。
+
+## 新闻阅读器
+
+Red Hat Linux 上可以使用多种新闻阅读器，其中包括一些专门的工具。与邮件客户端类似，有基于 GNOME、KDE、Web 界面和命令行界面的新闻阅读器。它们都可以在任何桌面上运行，不过命令行界面的新闻阅读器需要使用终端窗口来操作。GNOME 新闻阅读器包括 `Pan` 和 `Sylpheed`，KDE 提供 `KNode`，`Mozilla` 支持新闻阅读功能，而 `Pine` 和 `slrn` 使用命令行界面。此外，还有像 `inews` 这样的专门工具可用于发布新闻文章。如果你只想下载并解码附加在文章中的二进制文件，可以使用 `Glitter` 来检测、下载、合并和解码以多个编码新闻文章形式发布的二进制应用程序。请查看 GNOME 和 KDE 软件网站 `www.gnome.org` 和 `apps.kde.org`，获取最新的 GNOME 和 KDE 新闻阅读器应用程序。
+
+`Pan` 是一个功能强大的新闻阅读器，它可以让你对文章进行排序、解码二进制文件，并为选择文章设置规则。`Pan` 具有窗格和笔记本两种显示方式。初始状态下，新闻组、文章标题和文章内容显示在三个窗格中。你可以切换到笔记本显示方式，每个窗格会显示为一个覆盖整个窗口的选项卡面板。在新闻组窗格中，有一个下拉菜单可以让你选择显示所有新闻组还是仅显示已订阅的新闻组。你还可以搜索特定的新闻组。对于文章标题，有一个图标栏可以让你显示已读或未读文章，以及保存和搜索文章。选中的文章显示在标题下方的窗格中。
+
+
+
+# 新闻阅读器
+
+## KNode
+
+KNode 是目前随 Red Hat 7.2 的 KDE 2.0 一起分发的标准新闻阅读器。KNode 新闻阅读器包括标准功能，如跟进、保存和打印文章、文章和新闻组搜索以及线程显示。它还支持更强大的功能，如二进制编码和解码、显示附加的图像文件以及文章的单独窗口显示。此外，它支持多个账户，以及颜色、字体、窗口显示和文章搜索过滤器等功能的定制配置。你可以在 `knode.sourceforge.net` 了解更多关于 KNode 的信息。其他 KDE 新闻阅读器如 `km` 和 `kng` 也可使用。你可以从 `apps.kde.com` 下载它们。
+
+## Mozilla 新闻阅读器
+
+Mozilla 新闻阅读器是 Mozilla Web 浏览器的一部分。你可以通过从“编辑”菜单中选择“邮件/新闻账户设置”来设置和配置新闻账户。这会显示一个侧边栏，其中包含你已经设置好的任何新闻服务器。要创建新的新闻账户，请单击“新建账户”按钮。这会打开一系列对话框，你可以在其中输入诸如新闻服务器地址和电子邮件地址等信息。初始屏幕会询问你是要设置新闻组账户还是邮件账户。创建新闻账户后，你可以单击它以显示窗格，在其中设置其他选项，例如一次显示的文章数量。
+
+## slrn 新闻阅读器
+
+slrn 新闻阅读器是基于屏幕的，其界面类似于 Pine。命令显示在屏幕顶部，可以使用列出的按键执行。新闻组列表、文章列表和文章内容有不同的屏幕类型，每种屏幕都有自己的一组命令。初始屏幕列出你订阅的新闻组，并提供发布、列出和订阅新闻组的命令。
+
+> 注意 当你第一次启动 `slrn` 时，必须在主目录中创建一个 `.newsrc` 文件。使用以下命令：`slrn -f .newsrc -create`。此外，你必须设置 `NNTPSERVER` 变量，并确保它已导出（参见第 8 章）。
+
+`slrn` 新闻阅读器具有一个名为 `slrnpull` 的新实用程序，你可以使用它自动下载指定新闻组中的文章。这允许你离线查看选定的新闻组。`slrnpull` 被设计为 Leafnode 的简单单用户版本。`slrnpull` 将访问新闻服务器并下载其指定的新闻组，当用户选择查看这些新闻组时，它们可以通过 `slrn` 使用。
+
+新闻组文章会下载到 `SLRNPULL_ROOT` 目录。在 Red Hat 上，这是 `/var/spool/slrnpull`。要下载的选定新闻组会输入到位于 `SLRNPULL_ROOT` 目录中的 `slrnpull.conf` 配置文件中。在此文件中，你可以指定为每个组下载多少篇文章以及它们何时过期。要将 `slrn` 与 `slrnpull` 一起使用，你需要进一步配置 `.slrnrc` 文件，以引用保存新闻组文件的 `slrnpull` 目录。
+
+> 注意 另外两个流行的基于命令行的新闻阅读器是 `trn` 和 `tin`。虽然并非随所有发行版一起分发，但你可以从 `www.trn.org` 下载相应版本。
+
+> 注意 GNU 版本的 Emacs 还包含一个新闻阅读器以及其他组件，例如邮件程序和编辑器。请访问 Emacs 网站 `www.emacs.org` 了解更多信息。
+
+当你启动 GNU Emacs 时，屏幕顶部会显示菜单按钮。如果你在 X Window 系统环境中运行 Emacs，则拥有完整的 GUI 功能，可以使用鼠标选择菜单。请确保在 `.bash_profile` 文件中将 `NNTPSERVER` 变量设置为你的新闻服务器地址，并且该变量已导出。
+
+# Web、FTP 和 Java 客户端
+
+大多数 Linux 发行版都会提供功能强大的 Web 和 FTP 客户端来访问互联网。许多客户端在首次启动 Linux 系统时即已自动安装并可直接使用。Linux 还包含完整的 Java 开发支持，可让你运行和构建 Java 小程序。本章将介绍 Linux 上一些更受欢迎的 Web、Java 和 FTP 客户端。
+
+Web 和 FTP 客户端连接到运行服务器的站点，使用网页和 FTP 文件为用户提供服务。站点通过其互联网地址访问。本地网络使用相同的寻址格式。虽然在第 38 章中有更详细的讨论，但此处提供一个简要回顾。互联网使用一套称为 TCP/IP 的网络协议，即传输控制协议/互联网协议。在 TCP/IP 网络中，消息被拆分为称为数据报的小组件，然后通过各种相互连接的路由传输并交付到目标计算机。接收后，数据报会被重新组装成原始消息。数据报也称为数据包。以小组件形式发送消息被证明比作为一个庞大的传输发送更可靠、更快。如果其中一个组件丢失或损坏，只需重新发送该组件，而如果大型传输的任何部分损坏或丢失，则必须重新发送整个消息。
+
+在 TCP/IP 网络上，每台计算机都被分配一个唯一的地址，称为 IP 地址。IP 地址用于标识和定位特定主机——连接到网络的计算机。为了使在互联网上识别计算机变得更容易，实施了域名系统 DNS。DNS 为每个 IP 地址建立一个域名地址。域名地址是一系列用句点分隔的名称。每当你使用域名地址时，它会自动转换为 IP 地址，然后用于标识该互联网主机。域名地址比其对应的 IP 地址更容易使用。
+
+域名地址需要向互联网域名注册机构注册，例如美国互联网号码注册管理机构 ARIN，以便互联网上的每台计算机都有一个唯一名称（有关更多信息，请参阅 `www.iana.org`）。创建名称遵循指定的命名约定。域名地址由主机名、你赋予计算机的名称；域名、标识你的网络的名称；以及扩展名组成，扩展名标识你所在的网络类型。以下是域名地址的语法：
+
+```
+host-name.domain-name.extension
+```
+
+在以下示例中，域名地址引用了一台名为 metalab 的计算机，该计算机位于名为 unc 的网络上。它属于教育机构，如扩展名 edu 所示。
+
+```
+metalab.unc.edu
+```
+
+使用 `whois` 命令，你可以获取有关不同网络和连接到互联网的主机的域名服务器信息。输入 `whois` 和主机或网络的域名地址，`whois` 会显示有关主机的信息，例如街道地址和电话号码，以及联系人。
+
+```
+$ whois domain-address
+```
+
+## Web 客户端
+
+万维网 World Wide Web（WWW 或 Web）是分布在互联网上许多不同站点上的不同类型信息的超文本数据库。超文本数据库由相互链接的项目组成，这些项目又可能链接到其他项目，依此类推。检索到一个项目后，你可以使用该项目检索任何相关项目。例如，你可以检索一篇关于亚马逊雨林的文章，然后使用它检索雨林的地图或图片。在这方面，超文本数据库就像一张相互连接的数据网，你可以从一个数据项追踪到另一个数据项。信息以称为网页的页面显示。在网页上，某些关键字或图形会被高亮显示，形成指向其他网页或项目（如图片、文章或文件）的链接。
+
+要访问 Web，你需要使用 Web 浏览器。你可以从许多不同的 Web 浏览器中选择。在你的 Linux 系统上，你可以从多个 Web 浏览器中选择，包括 Mozilla 和 Lynx。Mozilla 是一个基于 X Window System 的浏览器，提供完整的图片、声音和视频显示功能。大多数发行版还包含 Lynx 浏览器，这是一个行模式浏览器，仅显示文本行。K 桌面将 Web 浏览器功能集成到其文件管理器中，使目录窗口能够作为 Web 浏览器运行。GNOME 浏览器，如 Express 和 Mnemonic，也被设计为易于增强。
+
+Web 浏览器和 FTP 客户端通常用于进行安全交易，例如登录远程站点、订购商品或传输文件。此类操作目前由安全套接字层 SSL 提供的加密方法保护。有关 SSL 及其对应物 SSH 安全 Shell 的更多信息，请参阅第 18 章和第 22 章。如果你使用浏览器进行安全交易，它应启用 SSL。大多数浏览器如 Mozilla 和 Links 都包含 SSL 支持。对于 FTP 操作，你可以使用 `ftp` 的 SSH 版本 `sftp`，或 Kerberos 5 版本（请参阅第 22 章）。Linux 发行版将 SSL 作为标准安装的一部分包含在内。
+
+## URL 地址
+
+互联网资源是通过统一资源定位符 URL 访问的。URL 由三个元素组成：传输协议、主机名和路径名。传输协议和主机名用冒号和两个斜杠分隔：`//`。路径名始终以单个斜杠开头：
+
+## 表 14-2
+
+Web 文件类型
+
+| 文件类型 | 描述 |
+|---|---|
+| `.html` | 使用 HTML，即超文本标记语言 格式化的网页文档 |
+| Graphics Files |  |
+| `.gif` | Graphics, using GIF compression |
+| `.jpeg` | Graphics, using JPEG compression |
+| Sound Files |  |
+| `.au` | Sun (Unix) sound file |
+| `.wav` | Microsoft Windows sound file |
+| `.aiff` | Macintosh sound file |
+| Video Files |  |
+| `.QT` | QuickTime video file, multiplatform |
+| `.mpeg` | Video file |
+| `.avi` | Microsoft Windows video file |
+
+## Web 浏览器
+
+
+
+大多数 Web 浏览器设计用于访问多种不同的信息。Web 浏览器可以访问远程 Web 站点上的网页或您自己的系统上的文件。一些浏览器还可以访问远程新闻服务器或 FTP 站点。站点的信息类型由关键字指定，Web 站点为 `http`，新闻服务器为 `nntp`，FTP 站点为 `ftp`，本地系统文件为 `file`。如前所述，Linux 上有多个流行的浏览器。这里描述了三个独特的浏览器：Mozilla、Konqueror 和 Lynx。Mozilla 是一个基于 X Window System 的 Web 浏览器，能够显示图形、视频和声音，同时还能作为新闻阅读器和邮件客户端运行。Konqueror 是 K Desktop 文件管理器。KDE 已将完整的 Web 浏览功能集成到 Konqueror 文件管理器中，让您可以使用同一应用程序无缝访问 Web 和文件系统。Lynx 和 Links 是基于命令行且无图形功能的浏览器，但在其他方面都是功能齐全的 Web 浏览器。
+
+要搜索 FTP 站点上的文件，您可以使用 Web 站点提供的搜索引擎，例如 Yahoo!、Excite、Google、AltaVista 或 Lycos。这些通常同时搜索网页和 FTP 文件。要在 Internet 上找到您想要的特定网页，您可以使用这些搜索引擎中的任何一个，或从任意数量的 Web 门户进行搜索。Web 搜索已成为大多数 Web 站点的标准服务。对 Web 站点内文档进行的搜索可能会使用由索引程序如 `ht://Dig` 建立和维护的本地搜索索引。使用 `ht://Dig` 的站点使用标准的网页搜索界面。
+
+## Mozilla
+
+超文本数据库设计用于访问任何类型的数据，无论是文本、图形、声音还是视频。您是否能够实际访问此类数据在很大程度上取决于您使用的浏览器类型。Mozilla 是一个基于 Netscape 核心源代码 mozilla 的浏览器。1998 年，Netscape 在 Netscape 公共许可证 NPL 下将此源代码免费提供。Mozilla 项目，位于 www.mozilla.org，基于 mozilla 源代码开发了一个商业级浏览器。Mozilla 采用与 Linux、KDE 和 GNOME 类似的开源模式进行开发。开发人员可以通过 Internet 向 Mozilla 网站提交修改和补充。Mozilla 的发布被称为里程碑。Mozilla 目前在对 mozilla 代码的修改下以 NPL 许可证发布，在新添加内容下以 MPL 许可证 Mozilla 公共许可证 发布。在当前版本中，Red Hat 将使用 Mozilla 作为其主要浏览器，取代 Netscape。
+
+Mozilla 是一个从桌面运行的 X Window System 应用程序。Red Hat 在桌面的 Internet 菜单中有 Mozilla 条目。Mozilla 在屏幕顶部显示一个用于输入 URL 地址的区域和一系列用于各种网页操作的按钮。下拉菜单提供对 Mozilla 功能的访问。要访问 Web 站点，您在 URL 区域输入其地址并按 ENTER。浏览器顶部的图标栏包含用于从一个页面移动到另一个页面并执行其他操作的按钮（见图 14-1）。
+
+Mozilla 将您想要保留的网页 URL 称为书签，标记您想要直接访问的页面。书签菜单使您能够添加您喜欢的网页。然后您可以查看书签并选择一个进行查看。您还可以编辑书签列表，添加新书签或删除旧书签。历史记录是您之前访问过的 URL 列表。如果您想返回未保存为书签的网页，您可以在历史记录列表中找到它。此外，您还可以使用 Mozilla 接收和发送邮件，以及访问 Usenet 新闻组。Mozilla 还支持高级功能，如 cookie、表单、图像和密码管理。您可以选择禁止来自站点的 cookie，
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_290_0.png)
+
+图 14-1 Mozilla Web 浏览器
+
+自动填写表单、不显示网站图片，并为所选网站设置登录信息，如用户名和密码。
+
+Mozilla 中的首选项菜单使您能够为浏览器设置多种不同的首选项。您可以设置邮件和新闻、网络和安全以及通用首选项。在通用首选项中，您可以确定您的主页以及工具栏的显示方式。在邮件/新闻账户设置中，您可以输入在互联网上使用的邮件和新闻服务器。Mozilla 可以设置为访问您订阅的任意数量使用 NNTP 传输协议的新闻服务器。如果需要，您可以从一个新闻服务器切换到另一个新闻服务器。
+
+如果您所在的网络通过防火墙连接到互联网，则必须使用代理屏幕输入您网络防火墙网关计算机的地址。防火墙是作为您网络通往互联网的受控网关运行的计算机。存在几种类型的防火墙。其中一种最严格的类型使用称为代理的程序，它们接收来自用户的互联网请求，然后代表用户发出这些请求。没有直接连接到互联网。从选项菜单中选择网络，然后选择代理屏幕。在此处，输入您网络防火墙网关计算机的 IP 地址。
+
+> 注意 Privoxy Web 代理会过滤 Web 内容以保护用户隐私，拦截不需要的广告或阻止侵入性 cookie。Privoxy 将执行其操作文件中列出的规则，例如位于 `/etc/privoxy` 目录中的 `action default`。您可以使用服务工具或 `service` 命令启动 Privoxy。要让浏览器使用 Privoxy，请将其配置为使用运行 Privoxy 的主机作为代理。
+
+## K 桌面文件管理器：Konqueror
+
+如果您使用的是 K 桌面，您可以使用文件管理器窗口作为 Web 浏览器。K 桌面的文件管理器已自动配置为充当 Web 浏览器。它可以显示网页，包括图形和链接。K 桌面的文件管理器支持标准的网页操作，例如在已访问页面之间向前和向后移动。单击链接会访问并显示引用的网页。在这方面，Web 与 K 桌面无缝集成。
+
+## GNOME Web 浏览器：Nautilus 和 Epiphany
+
+新的 GNOME 文件管理器 Nautilus 是一个功能性 Web 浏览器，就像 Konqueror 一样。在 Nautilus 位置框中，您可以输入 Web 地址，Nautilus 将访问并显示该网页。文件管理器向前和向后按钮以及书签可帮助您浏览先前查看的页面。但是，它并不是一个完全功能的 Web 浏览器。Nautilus 将在其侧边栏中为系统上安装的专用 Web 浏览器显示图标。单击其中一个即可改用该 Web 浏览器而不是 Nautilus。
+
+还有其他几个基于 GNOME 的 Web 浏览器可用。Epiphany、Barque 和 Atlantis 支持标准的 Web 操作。Epiphany 是一款专为快速和简单界面而设计的 GNOME Web 浏览器。您可以在 epiphany.mozdev.org 了解有关 Epiphany 的更多信息。Epiphany 随 Red Hat 一起提供。对于 GNOME，您还可以下载许多支持工具，例如用于显示新闻网站头条的 GNOME News 小程序以及用于控制基于 Web 的下载的 GNOME 下载管理器。
+
+> 注意 Epiphany 已在 Fedora Linux 中取代 Galeon，但您可以从 galeon.sourceforge.net 下载 Galeon 的当前版本。
+
+## Lynx 和 Links：行模式浏览器
+
+Lynx 是一种行模式浏览器，您可以在没有 X Window 系统的情况下使用。网页仅以文本形式显示。文本页面可以包含指向其他互联网资源的链接，但不显示任何图形、视频或声音。除了显示限制外，Lynx 是一个功能齐全的 Web 浏览器。您可以使用 Lynx 下载文件或建立 `telnet` 连接。Web 上的所有信息仍然供您访问。由于它不需要图形浏览器所需的太多开销，Lynx 可以运行得更快，快速显示网页文本。要启动 Lynx 浏览器，您在命令行输入 `lynx` 并按 ENTER。
+
+随大多数发行版一起提供的另一个有用的基于文本的浏览器是 Links。Links 是一款功能强大的基于屏幕的浏览器，包含诸如框架、表单和表格支持等功能。它还支持 SSL 安全加密。
+
+## 创建您自己的网站
+
+要创建您自己的网站，您需要访问 Web 服务器。Red Hat 会在其 Linux 系统上自动安装 Apache Web 服务器。您也可以租用远程服务器上的网页空间——许多 ISP 提供此服务，其中一些是免费的。在 Red Hat 系统上，Apache Web 服务器为您的网站页面设置的目录是 `/var/http/html`。其他服务器为您提供主页目录。将您创建的网页放在该目录中。您在此处放置您的主页。您可以创建其他子目录及其自己的网页，这些网页可以链接到它们。网页并不难创建。页面之间的链接可让用户浏览您的网站。您甚至可以创建指向其他网站的网页或资源的链接。关于网页创建和管理，有许多优秀的文本可供参考。
+
+
+
+网页是使用 HTML，即超文本标记语言，或更新的扩展版本 XML，即扩展标记语言 创建的。它们是标准通用标记语言 SGML 的子集。创建 HTML 或 XML 文档只是在文本文件中插入 HTML 或 XML 标签。在这方面，创建网页就像使用基于标签的文字处理器一样简单。您使用 HTML 标签来格式化文本以显示为网页。XML 标签可以包含有关特定连接的更详细信息，例如对象数据或事务特征。网页本身是一个文本文件，您可以使用任何文本编辑器创建，例如 `vi`。如果您熟悉 Unix 系统上的基于标签的文字处理，您会发现它在概念上与 `nroff` 相似。一些 HTML 标签表示标题、列表和段落，以及指向参考网络资源的链接。
+
+您可以不手动输入 HTML 或 XML 代码，而是使用网页编辑器。网页编辑器提供图形界面来构建网页。特殊的网页创建程序可以轻松帮助您创建复杂的网页，而无需明确输入任何 HTML 标签。请记住，无论您使用什么工具创建网页，网页本身都将是 HTML 文档。
+
+> 注意 K 桌面和 GNOME 的许多标准编辑器都包含网页构建功能。许多编辑器使您能够插入链接或格式化标题。例如，`KEdit` 程序支持基本的基于文本的网页组件。您可以添加标题、链接或线条，但不能添加图形。
+
+## Java for Linux: Blackdown
+
+要开发 Java 应用程序、使用 Java 工具以及运行许多 Java 产品，您必须在系统上安装 Java 2 软件开发工具包（SDK）和 Java 2 运行时环境（JRE）。两者合在一起构成了 Java 2 平台标准版（J2SE）。Sun 目前支持并分发这些产品的 Linux 版本。您可以从 Sun 的 `java.sun.com/j2se` 下载它们并安装到您的系统上。您甚至可以为 Red Hat 选择 RPM 包版本以便轻松安装。J2SE 的当前版本被称为 Java 版本 1.4。较早的 1.2 版本无法在 Red Hat 7.0 上运行，尽管 1.3 版本可在 7.1 及更高版本上运行。
+
+尽管 Sun 支持 Java 的 Linux 版本，但更全面、更有效的 Java Linux移植可以从 Blackdown 项目 `www.blackdown.org` 获得。Blackdown 项目已移植了 J2SE，包括 SDK 和 JRE 的 1.4 版本。他们还移植了以前的 Java 版本，包括 1.1、1.2 和 1.3。更多信息和文档也可在该 Blackdown 网站上获得。SDK 和 JRE 1.4 通常以压缩归档的形式提供，`.tar.bz2`。您使用 `bunzip2` 命令解压缩文件，并使用 `tar xvf` 命令提取它。提取应在 `/usr/local` 文件中进行。按照 `INSTALL` 文件中的说明安装软件。
+
+目前有大量额外的基于 Java 的产品和工具可用于 Linux。工具包括 Java 3D、Java 媒体框架（JMF）和 Java 高级成像（JAI），均为 Blackdown 项目（见表 14-3）。其中许多产品可直接按 Sun 提供的形式运行。这些包括 HotJava Web 浏览器和 Java Web 服务器。您可以直接从 Sun Java 网站 `java.sun.com` 下载其中几个。
+
+### TABLE 14-3 Blackdown Java Packages and Java Web Applications (continued)
+
+| Application | Description |
+| --- | --- |
+| Java 2 Software Development Kit (SDK) 1.4 | 一个 Java 开发环境，包含编译器、解释器、调试器等。Java 2 平台的一部分。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java 2 Runtime Environment 1.4 (J2RE) | 用于运行 Java 小程序的 Java 运行时环境。Java 2 平台的一部分。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java 2 Platform SE (J2SE) for Linux 1.4 | Java 2 平台标准版，其中包括 Java 2 SDK 和 RE。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java 3D for Linux | Sun 的 3D 应用程序编程接口，用于 3D Java 程序。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java Media Framework (JMF) for Linux | 使音频和视频能够添加到 Java 中。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java Advanced Imaging (JAI) for Linux | Java 高级成像 API。从 `www.blackdown.org` 下载 Linux 移植版。 |
+| Java 1.1 Development Kit (JDK) and Java 1.1 Runtime Environment (JRE) | 较旧的 Java 1.1 开发环境，包含编译器、解释器、调试器等。通过 `www.blackdown.org` 下载适用于您发行版的更新的 Linux 移植版。 |
+| HotJava browser | Sun 的符合 HTML 3.2 和 JDK 1.1 的 Web 浏览器。从 `java.sun.com` 下载 Linux 版本。 |
+| Java Web Server | 一个用 Java 实现的 Web 服务器。可在 Java 网站 `java.sun.com` 上获得。 |
+| GNU Java Compiler | GNU 公共许可的 Java 编译器（GJC）用于编译 Java 程序，`gcc.gnu.org/java`。 |
+
+> NOTE 请参阅 `java.sun.com/products` 获取 Java 应用程序的详细列表。
+
+## The Java 2 Software Development Kit: SDK
+
+Java 软件开发工具包（SDK）提供了创建和调试您自己的 Java 小程序的工具，并为 Java 应用程序（如 HotJava 浏览器）提供支持。该工具包包含带有源代码的演示小程序。您可以从 Sun 网站 `java.sun.com` 获得有关 SDK 的详细文档。目前有三个主要版本的 SDK 可用——1.2、1.3、1.4.x——对应于 Java 2 运行时环境（J2RE）的 1.2、1.3 和 1.4 版本。Java SDK 增加了安全性、GUI 支持（使用 JFC，也称为 Swing）以及运行 Java 增强功能（如 Java 3D 和 Java Sound）的能力。
+
+SDK 包括 JDK 中常见的标准功能，用于国际化、签名小程序、JAR 文件格式、AWT（窗口工具包）增强、JavaBeans 组件模型、网络增强、大数数学包、数据库连接（JDBC）、对象序列化以及内部类。Java 应用程序包括 Java 编译器（`javac`）、Java 调试器（`jdb`）和小程序查看器（`appletviewer`）。此外，SDK 还提供 Java 命名和目录接口（JNDI）、集成 Swing、Java 2D、网络和安全增强以及 CORBA。使用 SDK，您可以运行 Blackdown 移植的 Java 3D、Java 高级成像、Java 媒体框架和 Java Sound。这些功能的详细描述可在 SDK 文档中找到。
+
+您创建 Java 小程序的方式与使用标准编程语言创建程序的方式类似。您首先使用文本编辑器创建源代码，并将其保存在扩展名为 `.java` 的文件中。然后您可以使用 `javac` 编译器编译源代码文件，生成 Java 小程序。有许多集成开发环境（IDE）应用程序可用于编写 Java 小程序和应用程序。虽然大多数是商业产品，但其中一些提供免费的共享软件版本。IDE 提供用于构建 Java 小程序的 GUI 界面。您可以通过 Blackdown 网页链接并下载多个 IDE 应用程序。
+
+## FTP 客户端
+
+互联网是一个由遍布全球的计算机组成的网络，你可以通过互联网地址和一组互联网工具访问它。互联网上的许多计算机被配置为服务器，向任何请求信息的人提供信息。这些信息包含在你可以访问和复制的文件中。每个服务器（通常称为站点）都有自己可通过其定位的互联网地址。Linux 提供了一组互联网工具，你可以用来访问互联网上的站点，然后定位并下载其中的信息。这些工具被称为客户端。客户端应用程序（如 FTP 客户端或 Web 客户端）可以与远程系统上运行的相应服务器应用程序通信。FTP 客户端可以与另一个系统上的 FTP 服务器程序通信。服务器允许客户端访问其系统上的某些指定资源，并允许 FTP 客户端传输某些文件。表 14-4 显示了几种流行的 FTP 客户端。
+
+
+
+访问互联网站点的主要工具是 `FTP` 客户端和 `Web` 浏览器。使用 `FTP` 客户端，你可以连接到相应的 `FTP` 站点并从中下载文件。`FTP` 客户端通常用于从充当软件存储库的 `FTP` 站点下载软件。大多数 Linux 软件应用程序都可以从这些站点下载到你的 Linux 系统。像 `ftp.redhat.com` 这样的发行站点就是这样的 `FTP` 站点之一，它拥有大量打包的 Linux 应用程序，你可以使用 `FTP` 客户端下载并轻松安装到系统上。在过去几年中，`Web` 浏览器已成为访问互联网信息的主要工具。你在互联网上执行的大多数任务都可以通过 `Web` 浏览器轻松完成。你只需要使用 `FTP` 客户端从特定 `FTP` 站点下载或上传文件。
+
+其他互联网工具也可供你使用，例如 `telnet` 和 `IRC` 客户端。`telnet` 协议使你能够直接登录到另一个系统上的账户。`IRC` 客户端建立聊天室，你可以通过它们与互联网上的其他用户交流。`telnet` 和 `IRC` 客户端将在第 15 章讨论。
+
+## 网络文件传输：FTP
+
+你可以使用文件传输协议（`FTP`）客户端将极大的文件直接从一处传输到另一处。`FTP` 可以处理文本和二进制文件。它是 `TCP/IP` 协议之一，运行在使用 `TCP/IP` 协议（如 Internet）连接的网络上的系统上。`FTP` 会远程登录到网络上与你相连的另一系统上的另一个账户。一旦登录到那个系统，你就可以向它传输文件或从它传输文件。要登录，你需要知道远程系统上账户的登录名和密码。例如，如果你在互联网上有两个不同站点的账户，你可以使用 `FTP` 将文件从一个站点传输到另一个站点。然而，互联网上的许多站点允许使用 `FTP` 进行公共访问。这些站点是任何人都可以访问和下载的大文件的存储库。这些站点通常被称为 `FTP` 站点，在许多情况下，它们的互联网地址以单词 `ftp` 开头，例如 `ftp.gnome.org` 或 `ftp.redhat.com`。其他站点以其他名称开头，例如 `metalab.unc.edu`。这些公共站点允许任何用户进行匿名 `FTP` 登录。对于登录名，你使用单词 `anonymous`，对于密码，你使用你的互联网地址。然后你可以将文件从该站点传输到自己的系统。
+
+你可以使用众多 `FTP` 客户端程序中的任何一个来执行 `FTP` 操作。对于 Linux 系统，你可以从几个 `FTP` 客户端中进行选择。许多现在使用诸如 `GNOME` 之类的 `GUI` 界面操作。有些（如 `Mozilla`）功能有限，而另一些（如 `NcFTP`）则包含大量增强功能。原始的 `FTP` 客户端同样有效，但不像其他客户端那样易于使用。它使用简单的命令行界面操作，并且不需要其他客户端所需的 `GUI` 或光标支持。
+
+互联网上有大量向公众开放的站点。它们包含任何人都可以使用文件传输程序（如 `NcFTP`）获取的文件。然而，除非你已经知道文件的位置，否则很难找到它。要在 `FTP` 站点上搜索文件，你可以使用由网站提供的搜索引擎，如 `Yahoo!`、`Excite`、`AltaVista`、`Google` 或 `Lycos`。对于 Linux 软件，你可以查看 `freshmeat.net`、`sourceforge.net`、`rpmfind.net`、`apps.kde.com` 和 `www.gnome.org` 等站点。这些站点通常会同时搜索网页和 `FTP` 文件。
+
+> 注：诸如 `Ganesha` 和 `Karchie` 之类的 Linux 工具会在 `FTP` 站点上搜索所需的软件。
+
+### Linux FTP 客户端
+
+| FTP 客户端 | 描述 |
+|---|---|
+| `Konqueror` | K 桌面文件管理器 |
+| `Nautilus` | `GNOME` 文件管理器 |
+| `gFTP` | `GNOME FTP` 客户端 |
+| `NcFTP` | 基于屏幕的 `FTP` 客户端 |
+| `ftp` | 命令行 `FTP` 客户端 |
+
+## 基于 Web 浏览器的 FTP：Mozilla
+
+你可以使用任何 `Web` 浏览器访问 `FTP` 站点并从中下载文件。`Web` 浏览器对于查看 `FTP` 站点中列出了哪些文件非常有效。当你使用 `Web` 浏览器访问 `FTP` 站点时，目录中的所有文件列表都会以网页形式列出。你可以通过单击子目录的条目移动到该子目录。使用 `Mozilla`，你可以轻松浏览 `FTP` 站点以下载文件。要使用 `Mozilla` 下载文件，请按住 `SHIFT` 键，然后双击该文件。这将开始传输操作。这会打开一个框，用于选择本地目录和文件名。默认名称与远程系统上的名称相同。你可以使用下载管理器管理下载，它可以让你取消正在进行的下载操作或删除已请求的其他下载。管理器将显示当前下载的剩余时间、速度和已传输的量。浏览器对于定位单个文件很有用，但不适用于下载大量文件，而系统更新通常需要下载大量文件。
+
+## K 桌面文件管理器：Konqueror
+
+在 K 桌面上，桌面文件管理器（`Konqueror`）具有内置的 `FTP` 功能。`FTP` 操作已无缝集成到标准桌面文件操作中。从 `FTP` 站点下载文件就像通过将文件从一个目录窗口拖到另一个目录窗口来复制文件一样简单，只是其中一个目录恰好位于远程 `FTP` 站点上。在 K 桌面上，你可以使用文件管理器窗口访问远程 `FTP` 站点。
+
+远程目录中的文件列出方式与本地文件相同。要从 `FTP` 站点下载文件，你打开一个窗口访问该站点，在窗口的地址栏中输入 `FTP` 站点的 `URL`。打开你想要的目录，然后再打开一个窗口用于本地目录，将远程文件复制到该目录。在显示 `FTP` 文件的窗口中，选择你想要下载的文件。然后只需单击并拖动这些文件到本地目录的窗口中。会出现一个弹出菜单，提供复制、链接或移动的选项。选择复制。所选文件随后会被下载。随后会打开另一个窗口，显示下载进度并依次显示每个文件的名称，以及一个指示迄今下载百分比的进度条。
+
+## GNOME 桌面 FTP：Nautilus
+
+最简单的方法是使用 `GNOME` 文件管理器 `Midnight Commander` 的内置 `FTP` 功能。你也可以使用提供更多功能的多个基于 `GNOME` 的 `FTP` 客户端，包括 `gFTP`。更多信息请查看 `GNOME` 网站 `www.gnome.org`。`gFTP` 已包含在当前 `GNOME` 版本中。
+
+在 `GNOME` 中，桌面文件管理器——`Nautilus`——具有与 `KDE` 文件管理器类似的内置 `FTP` 功能。`FTP` 操作已无缝集成到标准桌面文件操作中。从 `FTP` 站点下载文件就像从一个目录窗口拖动文件到另一个目录窗口一样简单，其中一个目录恰好位于远程 `FTP` 站点上。使用 `GNOME` 文件管理器访问远程 `FTP` 站点，列出远程目录中的文件，就像本地文件一样。只需输入以前缀 `ftp://` 后的 `FTP URL` 并按 `ENTER`。远程 `FTP` 站点的顶层目录将被显示。只需使用文件管理器在远程 `FTP` 站点的目录树中逐步深入，直到找到你想要的文件。然后打开另一个窗口用于本地目录，将远程文件复制到该目录。在显示 `FTP` 文件的窗口中，选择你想要下载的文件。然后 `CTRL`-单击并拖动这些文件到本地目录的窗口中。`CTRL`-单击执行复制操作，而不是移动操作。随着文件被下载，会出现一个对话框窗口显示进度。
+
+## gFTP
+
+`gFTP` 程序是一个更简单的 `GNOME FTP` 客户端，旨在让你进行标准的 `FTP` 文件传输。它的界面与 Windows 上使用的 `WS_FTP` 相似。`gFTP` 窗口由多个窗格组成。左上窗格列出你本地目录中的文件，右上窗格列出你的远程目录。子目录在其名称前有文件夹图标。父目录可以通过每个列表顶部的双点条目 `..` 以及上箭头来引用。双击目录条目即可访问它。所有目录的路径名都显示在每个窗格上方的框中。你可以为不同目录输入新的路径名以切换到该目录，如果你愿意的话。
+
+窗格之间的两个按钮用于传输文件。左箭头按钮 `<-` 用于下载远程目录中选定的文件，右箭头按钮 `->` 用于上传本地目录中的文件。要下载文件，在右侧窗格中单击它，然后单击左箭头按钮 `<-`。文件下载后，其名称会出现在左窗格，即你的本地目录中。窗口顶部的菜单可用于管理你的传输。连接管理器使你能够输入特定站点的登录信息。你可以指定是否执行匿名登录或提供用户名和密码。单击连接按钮以连接到该站点。站点下拉菜单使你能够选择你想要的站点。
+
+## NcFTP
+
+`NcFTP` 程序具有基于屏幕的界面，可以从任何 shell 命令行运行。它不使用桌面界面。`FTP` 操作是通过在提示符下输入的命令执行的。选项和书签可以通过基于光标的菜单进行选择。要启动 `NcFTP`，你在命令行中输入 `ncftp` 命令。如果你正在使用 `KDE`、`GNOME` 或 `FVWM` 等窗口管理器，打开一个 shell 终端窗口并在提示符下输入该命令。`NcFTP` 主屏幕由屏幕底部的输入行和其上方的状态行组成。屏幕其余部分用于显示来自远程系统的命令和响应。例如，当你下载文件时，状态行中会显示指定要下载的文件的消息。`NcFTP` 允许你为不同功能设置首选项，例如匿名登录、进度条或下载目录。输入 `pref` 命令以打开首选项屏幕。从那里，你可以选择并修改列出的首选项。
+
+
+
+要连接到 FTP 站点，你在输入行中输入 `open` 命令，后跟站点的地址。地址可以是 IP 地址或域名，例如 `ftp.gnome.org`。如果你没有提供地址，将显示你已保存的书签站点列表，你可以从中选择一个。默认情况下，NcFTP 尝试匿名登录，使用 `anonymous` 作为用户名和你的电子邮件地址作为密码。当你成功连接时，状态栏左侧显示远程站点的名称，右侧显示远程目录名称。
+
+```
+open ftp.gnome.org
+```
+
+如果你想登录到远程站点上的特定账户，请使用 `open` 命令的 `-u` 选项提示你输入用户名和密码。`open` 命令会记住你为特定站点上次执行的登录类型并重复它。如果你想从用户登录改回匿名登录，你使用 `open` 命令的 `-a` 选项。对于繁忙的站点，你可能无法在第一次尝试时连接，必须重复 `open` 过程。NcFTP 具有重拨功能，可通过 `-r` 选项开启。`-d` 选项设置下一次尝试的延迟，`-g` 选项设置最大连接尝试次数。使用 `lookup` 命令，你可以获取 FTP 站点的 IP 和域名地址。`lookup` 命令以 IP 或域名地址作为参数，然后显示两者。这对于查找站点的 IP 地址很有用。使用 `-v` 选项，可以检索更多信息，例如别名。NcFTP `open` 选项显示在表 14-5 中。
+
+### TABLE 14-5
+
+NcFTP 打开选项
+
+| Option | Description |
+|---|---|
+| `-a` | Connect anonymously |
+| `-u` | Connect with username and password prompts |
+| `-p num` | Use specified port number when connecting |
+| `-r` | Redial until connected |
+| `-d num` | Set delay (num) in number of seconds for redial option |
+| `-g num` | Specify the maximum number of redials |
+
+连接后，您可在输入行输入命令执行 FTP 操作，例如显示文件列表、更改目录或下载文件。使用 `ls` 命令可列出当前远程目录的内容。使用 `cd` 命令切换到另一个远程目录。`dir` 命令显示文件的详细列表。使用 `page` 命令可逐屏查看远程文件的内容。要下载文件，使用 `get` 命令；要上传文件，使用 `put` 命令。下载过程中，状态栏上方的进度条会显示文件已下载的进度。`get` 命令具有若干功能，将在下一节中详细介绍。完成后，可使用 `close` 命令断开与站点的连接。然后您可以使用 `open` 连接到另一个站点，或使用 `quit` 命令退出 NcFTP 程序。`help` 命令列出所有 NcFTP 命令。您可以在 `help` 命令后加上命令名称以显示该命令的特定信息。
+
+NcFTP 程序支持若干在本地系统上操作的命令。这些命令通常是标准 FTP 命令名称前加 `l`。`lcd` 更改您的本地工作目录，`ll s` 列出本地目录的内容，`lpage` 逐屏显示本地文件的内容，`lpwd` 显示本地目录的完整路径名。对于您需要执行的任何其他本地命令或脚本，使用 shell 转义命令 `!`。只需在 shell 命令或脚本前加上 `!` 即可。NcFTP 程序还提供用于管理远程站点上的文件和目录的命令，前提是您拥有相应权限。您可以使用 `mkdir` 创建远程目录，使用 `rmdir` 删除目录。使用 `rm` 命令删除远程文件。使用 `rename` 命令可更改其名称。NcFTP 命令列在表 14-6 中。
+
+| Command | Description |
+|---|---|
+| `help [command]` | 列出 NcFTP 命令的名称 |
+| `cd [directory]` | 更改远程主机上的工作目录 |
+| `create [filename]` | 在远程主机上创建空文件，使您可以使用文件名作为消息 |
+| `debug` | 打开或关闭调试 |
+| `version` | 显示版本信息 |
+| `dir` | 显示详细的目录列表 |
+| `echo` | 显示字符串，对宏很有用 |
+| `get` | 从远程主机下载文件到您的工作目录 |
+| `lcd [directory]` | 更改本地工作目录 |
+| `ll s` | 列出本地工作目录中的文件 |
+| `lookup host` | 查找远程主机的条目 |
+| `lpage filename` | 逐页显示本地文件的内容 |
+| `lpwd` | 显示本地当前工作目录 |
+| `mkdir directory name` | 在远程主机上创建目录 |
+| `mode mode` | 指定传输模式（b 为块模式，s 为流模式） |
+| `open [option] hostname` | 连接到远程主机。如果未指定主机名，则书签编辑器会显示可供选择的站点列表： |
+|  | - a 强制匿名登录 |
+|  | - u 强制用户登录 |
+|  | - r 自动重拨 |
+|  | - d 指定重拨前的时间延迟；与 -r 一起使用 |
+|  | - g 指定最大重拨次数；与 -r 一起使用 |
+| `page filename` | 显示远程文件的内容 |
+| `pdir` | 与 dir 相同，但输出到分页器，使您能够逐页显示远程文件列表。用于命令行界面 |
+| `pls` | 与 ls 相同，但输出到分页器。用于命令行界面 |
+| `redir` | 重新显示上一次的目录列表 |
+| `predir` | 重新显示上一次的目录列表，并在命令行界面中输出到分页器 |
+| `put filename` | 将文件上传到远程主机 |
+| `pwd` | 显示远程当前工作目录 |
+| `rename orig-name new-name` | 更改远程文件名称 |
+| `quit` | 退出 NcFTP |
+| `quote` | 向远程服务器发送 FTP 协议命令 |
+| `rhelp [command]` | 向远程主机发送帮助请求 |
+| `rm filenames` | 删除远程文件 |
+| `rmdir directories` | 删除远程目录 |
+| `site command` | 执行站点特定命令 |
+| `type type` | 更改传输类型（ASCII、二进制、图像） |
+| `! command` | 转义到 shell 并执行以下 shell 命令或脚本 |
+
+NcFTP 程序还具有冒号模式操作，允许您发出单个 `ncftp` 命令来下载文件。输入 `ncftp` 命令，后跟文件的 URL 你想要的。你可以在 shell 命令行上输入命令，或将其放在脚本中。例如，以下命令下载 Red Hat FTP 站点上的 readme 文件：
+
+```
+$ ncftp ftp.redhat.com/pub/README
+```
+
+在冒号模式下，`-c` 选项将文件发送到标准输出，`-m` 选项将其管道传输到你的分页器：
+
+```
+$ ncftp -c ftp.redhat.com/pub/README > ~/redhatinfo/readme
+$ ncftp -m ftp.redhat.com/pub/README
+```
+
+## NcFTP 下载功能
+
+NcFTP 的 `get` 命令与原始 FTP 客户端的 `get` 命令有显著不同。原始 FTP 客户端使用两个命令 `get` 和 `mget` 来执行下载操作，而 NcFTP 仅使用 `get` 命令。然而，NcFTP 的 `get` 命令将 `mget` 和 `get` 的功能结合到 `get` 命令中，并增加了一些新功能。表 14-7 列出了各种 `get` 命令选项。默认情况下，NcFTP `get` 命令对文件名执行通配符匹配。如果你只输入部分文件名，`get` 命令会尝试下载所有以该名称开头的文件。你可以使用 `-G` 选项关闭通配符匹配，在这种情况下，你必须输入所需文件的完整名称。以下示例下载所有以 "Xfree86" 开头的文件名，与在原始 FTP 中使用 `mget Xfree86*` 类似：
+
+```
+get Xfree86
+```
+
+`get` 命令会检查你是否已拥有正在尝试下载的文件。如果有，它会跳过下载。`get` 命令还会检查你已有的文件是否为更新版本，如果是，也会跳过下载。这对于轻松维护升级文件非常有帮助。你只需访问远程站点上的更新目录，然后使用 `get` 命令配合 `*` 将文件下载到你用于保存升级文件的目录中。只有更新版本或新添加的升级文件会被下载，而不是整个集合。如果你想下载一个文件，即使你已经拥有它，
+
+### TABLE 14-7
+
+NcFTP get Options
+
+| Command | Description |
+|---|---|
+| `-G` | 打开或关闭文件名的通配符匹配 |
+| `-R directory` | 下载目录及其所有子目录（递归） |
+| `-f filenames` | 强制下载所有指定的文件，即使它们比本地文件旧或相同 |
+| `-C` | 强制从中断处恢复下载 |
+| `-z remote-file local-file` | 将远程文件重命名为你的本地系统上的名称 |
+| `-n num` | 下载不超过指定天数的文件 |
+
+
+
+你可以使用 `-f` 选项强制下载。例如，要手动下载 Red Hat 的升级文件，你可以连接到 Red Hat FTP 站点中的 Red Hat 升级目录，然后发出以下 `get` 命令：
+
+```
+get *
+```
+
+> Tip 如果你在下载过程中被中断，你可以从中断处重新开始下载。此功能已内置于 NcFTP 中。（在其他 FTP 程序中，它可以通过 `reget` 命令调用。）NcFTP 会检查你是否已开始下载文件，然后从你离开的地方继续。
+
+某些功能要求你在 `get` 命令之后在命令行上输入一个选项。例如，添加 `-r` 命令指定递归功能，使你能够下载并创建子目录及其文件。此命令在下载包含多个子目录的升级目录时特别有帮助，例如 Red Hat 的。以下示例下载 `i386` 目录及其所有子目录：
+
+```
+get -R i386
+```
+
+如果你想在本地系统上为文件指定不同的名称，请使用 `-z` 选项。在远程文件名之后输入你想要的本地文件名。以下示例下载 `readme` 文件并将其重命名为 `calinfo`。如果你没有使用 `-z` 选项，两个名称都将被视为要下载的文件，而不是仅第一个。
+
+```
+get -z readme calinfo
+```
+
+要仅获取最近的文件，你可以使用 `-n` 选项，其参数为天数。早于指定天数的文件不会被检索。以下示例下载最近 30 天内发布的文件：
+
+```
+get -n 30 *
+```
+
+## 书签和宏
+
+当你断开（关闭）与站点的连接时，NcFTP 会自动保存有关它的信息。这包括站点地址、你所在的目录以及登录信息。这些信息被放在你 `.ncftp` 目录中的一个名为 `bookmarks` 的文件中。站点信息会分配一个书签名称，你可以用它轻松再次访问该站点。书签名称通常是站点地址中的键名。你可以使用此名称连接到站点。例如，`ftp.redhat.com` 可能是 `redhat`。你可以用以下命令连接到它：
+
+```
+open redhat
+```
+
+你可以使用书签编辑器编辑书签条目。输入命令 `bookmarks` 以调出编辑器。你访问过的远程系统列在屏幕右侧。书签命令列在左侧。你可以更改书签名称或编辑登录信息，例如用户名或密码、远程目录或传输模式。
+
+NcFTP 程序支持用于简单操作的宏。你通过在 `.ncftp` 目录中的 `macros` 文件中输入宏定义来创建宏。起初不会存在此类文件，因此你需要使用任何文本编辑器创建一个。`macros` 文件是一个简单的文本文件，可以用任何文本编辑器编辑。宏定义的语法如下：
+
+```
+macro macro-name
+ftp-commands
+end
+```
+
+宏执行 NcFTP 命令。记住，`!` 是一个 NcFTP 命令，它使你能够执行任何 Linux 命令或脚本。带有一个前置 `!`，你可以定义一个执行任何 shell 命令或你编写的任何脚本的 NcFTP 宏。一个简单的宏示例如下：
+
+```
+macro ascii
+type ascii
+end
+```
+
+宏支持类似于 shell 程序使用的参数。在宏名后输入的参数可以在宏中使用 `$` 符号和参数列表中的参数编号来引用。`$1` 引用第一个参数，`$2` 引用第二个，以此类推。`$*` 是一个特殊参数，引用所有参数，而 `$@` 引用所有参数，并将每个参数用双引号括起来。
+
+```
+macro cdls
+cd $1
+ls
+end
+```
+
+NcFTP 程序还支持有限数量的事件宏。这些是在检测到特定事件时执行的宏，例如程序启动或关闭时。例如，名称为 `.start.ncftp` 的宏定义的命令会在每次启动 NcFTP 时执行，`.quit.ncftp` 在退出时执行其命令。站点特定宏也在访问或断开与某些站点时执行。这些宏以 `open` 或 `close` 事件开头，后跟站点的书签。例如，名称为 `.open.redhat` 的宏定义的命令会在每次连接到 Red Hat 站点时执行。名称为 `.open.any` 的宏会在每次连接到任何站点时执行其命令，而名称为 `.close.any` 的宏会在每次从站点断开连接时执行。
+
+## ftp
+
+名称 `ftp` 指定了在 Unix 和 Linux 系统上使用的原始 FTP 客户端。`ftp` 使用命令行界面，并且有一套广泛的命令和选项可用于管理你的 FTP 传输。你通过在 shell 提示符下输入命令 `ftp` 来启动 `ftp` 客户端。如果你有一个要连接的特定站点，可以在 `ftp` 关键字后在命令行中包含该站点的名称。否则，你需要使用 `ftp` 命令 `open` 连接到远程系统。然后会提示你输入远程系统名称，提示符为 "(to)"。输入远程系统名称后，`ftp` 会连接到该系统，然后提示你输入登录名。登录名提示由单词 "Name" 和括号中的系统名称和你的本地登录名组成。有时远程系统的登录名与你自己的系统的登录名相同。如果名称相同，在提示时按 ENTER。如果不同，输入远程系统的登录名。输入登录名后，会提示你输入密码。在下一个示例中，用户连接到远程系统 `garnet` 并登录到 `robert` 账户：
+
+```
+$ ftp
+ftp> open
+(to) garnet
+Connected to garnet.berkeley.edu.
+220 garnet.berkeley.edu FTP server ready.
+Name (garnet.berkeley.edu:root): robert
+Password:
+user robert logged in
+ftp>
+```
+
+登录后，你可以在远程系统或本地系统上执行 Linux 命令。你在 `ftp` 中通过在命令前加上感叹号来在本地系统上执行命令。没有感叹号的任何 Linux 命令都在远程系统上执行。对此规则存在一个例外。虽然你可以用 `cd` 命令在远程系统上更改目录，但要更改本地系统的目录，你需要使用一个特殊的 `ftp` 命令，称为 `lcd`（local cd）。在下一个示例中，第一个命令列出远程系统中的文件，而第二个命令列出本地系统中的文件：
+
+```
+ftp> ls
+ftp> !ls
+```
+
+`ftp` 程序提供了用于管理远程站点上的文件和目录的基本命令集，前提是你有权限这样做（参见表 14-8）。你可以使用
+
+| 命令 | 效果 |
+|---|---|
+| `ftp` | 调用 `ftp` 程序 |
+| `open site-address` | 打开到另一系统的连接 |
+| `close` | 关闭到系统的连接 |
+| `quit` or `bye` | 结束 `ftp` 会话 |
+| `ls` | 列出目录的内容 |
+| `dir` | 以长格式列出目录的内容 |
+| `get filename` | 将文件从远程系统发送到本地系统 |
+| `put filename` | 将文件从本地系统发送到远程系统 |
+| `mget regular-expression` | 使你能够一次从远程系统下载多个文件。你可以使用特殊字符指定文件；会提示你依次传输每个文件 |
+| 命令 | 效果 |
+|---|---|
+| `mput` 正则表达式 | 使您能够一次向远程系统发送多个文件。您可以使用特殊字符指定文件；每个要传输的文件都会提示您 |
+| `runique` | 切换使用唯一文件名存储文件。如果本地系统上已存在具有相同文件名的文件，则会生成新的文件名 |
+| `reget filename` | 从中断处恢复传输文件 |
+| `binary` | 以二进制模式传输文件 |
+| `ascii` | 以 ASCII 模式传输文件 |
+| `cd directory` | 在远程系统上更改目录 |
+| `lcd directory` | 在本地系统上更改目录 |
+| `help` or `?` | 列出 `ftp` 命令 |
+| `mkdir directory` | 在远程系统上创建目录 |
+| `rmdir` | 删除远程目录 |
+| `delete filename` | 删除远程系统上的文件 |
+| `mdelete file-list` | 一次删除多个远程文件 |
+| `rename` | 重命名远程系统上的文件 |
+| `hash` | 在下载过程中显示进度哈希符号 |
+| `status` | 显示 `ftp` 当前状态 |
+
+**表 14-8 ftp 客户端命令（续）**
+
+使用 `mkdir` 创建远程目录，并使用 `rmdir` 删除目录。使用 `delete` 命令擦除远程文件。使用 `rename` 命令可以更改文件名称。使用 `close` 命令关闭与系统的连接。然后如果需要可以打开另一个连接。要结束 `ftp` 会话，请使用 `quit` 或 `bye` 命令。
+
+```
+ftp> close
+ftp> bye
+Good-bye
+$
+```
+
+要向远程系统传输文件并从远程系统传输文件，请使用 `get` 和 `put` 命令。`get` 命令从远程系统接收文件到本地系统，`put` 命令将文件从本地系统发送到远程系统。从某种意义上说，您的本地系统从远程获取文件并向远程放置文件。在下一个示例中，文件 `weather` 使用 `put` 命令从本地系统发送到远程系统：
+
+```
+ftp> put weather
+PORT command successful.
+ASCII data connection
+ASCII Transfer complete.
+ftp>
+```
+
+
+
+如果下载中断，您可以使用`reget`恢复下载。这对于极大的文件很有帮助。下载将从中断处恢复，因此无需再次下载整个文件。此外，请确保以二进制模式下载二进制文件。对于大多数 FTP 站点，二进制模式是默认模式，但某些站点可能将 ASCII（文本）作为默认模式。命令`ascii`设置字符模式，命令`binary`设置二进制模式。大多数在 Internet 站点上提供的软件包都是归档和压缩文件，即二进制文件。在下一个示例中，传输模式设置为二进制，并使用`get`命令将归档软件包`mydata.tar.gz`从远程系统发送到本地系统：
+
+```
+ftp> binary
+ftp> get mydata.tar.gz
+PORT command successful.
+Binary data connection
+Binary Transfer complete.
+ftp>
+```
+
+您可能经常想要发送多个文件，并使用通配符指定其名称。但是`put`和`get`命令仅对单个文件操作，不适用于特殊字符。要一次传输多个文件，您必须使用另外两个命令`mput`和`mget`。使用`mput`或`mget`时，会提示您输入文件列表。然后您可以输入文件列表或使用特殊字符的文件列表规范。例如，`*.c` 指定所有具有`.c`扩展名的文件，`*` 指定当前目录中的所有文件。在`mget`的情况下，文件一次一个地从远程系统发送到本地系统。每次都会提示您正在发送的文件名。您可以输入`y`发送文件或输入`n`取消传输。然后会提示您下一个文件。`mput`命令以相同的方式工作，但它将文件从本地系统发送到远程系统。在下一个示例中，所有具有`.c`扩展名的文件都使用`mget`发送到本地系统：
+
+```
+ftp> mget
+(remote-files) *.c
+mget calc.c? y
+PORT command successful
+ASCII data connection
+ASCII transfer complete
+mget main.c? y
+PORT command successful
+ASCII data connection
+ASCII transfer complete
+ftp>
+```
+
+如果计划下载大量文件，例如系统更新时，对每个文件都回答提示可能会很繁琐。在这种情况下，可以使用`prompt`命令关闭提示，该命令可在交互模式之间切换。`mget`操作随后会一个接一个地下载所有匹配的文件。
+
+```
+ftp> prompt
+Interactive mode off.
+ftp> mget
+(remote-files) * .c
+PORT command successful
+ASCII data connection
+ASCII transfer complete
+PORT command successful
+ASCII data connection
+ASCII transfer complete
+ftp>
+```
+
+> 注意 要访问公共 FTP 站点，必须进行匿名登录。登录名不是用户名，而是输入关键字`anonymous`（或`ftp`）。然后，对于密码，输入你的 Internet 地址。一旦显示`ftp`提示符，你就可以准备好传输文件了。你可能需要先切换到适当的目录，或将传输模式设置为二进制。
+
+## 自动登录和宏：`.netrc`
+
+`ftp`客户端具有自动登录功能并支持宏。两者都输入在用户的`ftp`配置文件`.netrc`中。每次连接到站点时，都会检查`.netrc`文件中的连接信息，例如登录名和密码。这样，你就不必每次连接到站点时都输入登录名和密码。此功能对于匿名登录尤其有用。无需你输入用户名`anonymous`和你的电子邮件地址作为密码，它们可以从`.netrc`文件中自动读取。你甚至可以使匿名登录信息成为默认值，这样，除非另有指定，否则在尝试连接到任何 FTP 站点时都会尝试匿名登录。如果你有必须登录的站点，可以在`.netrc`文件中指定它们，并在连接时自动使用该站点的用户名和密码登录，或提示输入。
+
+`.netrc`文件中的条目具有以下语法。站点条目以术语`machine`开始，后跟网络或 Internet 地址，然后是登录和密码信息。
+
+```
+machine system-address login remote-login-name password password
+```
+
+下面的示例显示了登录`turtle.trek.com`系统上`dylan`账户的条目：
+
+```
+machine golf.mygames.com login dylan password legogolf
+```
+
+对于你将匿名登录的站点，你输入`anonymous`作为登录名，你的电子邮件地址作为密码。
+
+```
+machine ftp.redhat.com login anonymous password dylan@turtle.trek.com
+```
+
+在大多数情况下，你使用`ftp`访问匿名 FTP 站点。与为每个站点制作条目相比，你可以为匿名 FTP 登录制作默认条目。当你连接到站点时，`ftp`会在`.netrc`文件中查找该站点的`machine`条目。如果不存在，`ftp`会查找默认条目并使用它。默认条目以单词`default`开始，没有网络地址。要使匿名登录成为默认值，输入`anonymous`和你的电子邮件地址作为登录名和密码。
+
+```
+default login anonymous password dylan@turtle.trek.com
+```
+
+下面显示了一个包含机器定义和默认条目的示例`.netrc`文件。
+
+```
+.netrc
+machine golf.mygames.com login dylan password legogolf
+default login anonymous password dylan@turtle.trek.com
+```
+
+你也可以在`.netrc`文件中定义宏。有了宏，你只需使用宏名即可一次执行多个`ftp`操作。宏在连接期间保持有效。当你关闭连接时，宏将被取消定义。虽然宏可以在你的`ftp`命令行上定义，但在`.netrc`条目中定义它们更有意义。这样，你就不必再次重新定义它们。它们会自动从`.netrc`文件中读取并为你定义。你可以将宏定义放在`.netrc`文件中的特定`machine`条目中或默认条目中。`machine`条目中定义的宏仅在你连接到该站点时才定义。默认条目中的宏在你连接到任何站点时都会定义。
+
+宏定义的语法如下。它以关键字`macdef`开始，后跟你想要赋予它的宏名，并以空行结束。`ftp`宏可以接受参数，在宏中用`$n`引用，其中`$1`引用第一个参数，`$2`引用第二个参数，以此类推。如果你需要在宏中使用`$`字符，必须使用反斜杠进行转义，`\$`。
+
+```
+macdef macro-name
+ftp commands
+empty-line
+```
+
+下面定义的`redupd`宏会切换到一个目录，然后在其中下载当前版本的 Red Hat 更新。它还会切换到本地目录，在该目录中放置更新文件。`prompt`命令关闭每个文件的下载提示。`mget`命令随后下载文件。该宏假定你已连接到 Red Hat FTP 站点。
+
+```
+macdef redupd
+cd pub/redhat/current
+lcd /root/redupdate
+prompt
+mget *
+```
+
+一个包含特定条目和默认条目的宏定义的示例`.netrc`文件如下。每个宏定义后都放置一个空行。你可以为一台机器或默认条目定义多个宏。在下一个`machine`条目之前跟随`machine`条目的宏定义将自动为该机器连接定义。
+
+```
+machine updates.redhat.com login anonymous password dylan@turtle.trek.com
+# define a macro for downloading updated from the Red Hat site
+defmac redupd
+cd pub/redhat/current
+lcd /root/redupdate
+prompt
+mget *
+
+default login anonymous password dylan@turtle.trek.com
+defmac lls
+!ls
+```
+
+## `lftp`
+
+`lftp`程序是一个增强型 FTP 客户端，具有诸如下载镜像站点以及同时在后台运行多个 FTP 操作等高级功能。它使用与`ftp`客户端相似的命令集。你使用`get`和`mget`命令下载文件，并使用`-o`选项指定它们本地位置。使用`lcd`和`cd`更改本地和远程目录。
+
+要管理后台命令，你可以使用与 shell 相同的许多命令。放在命令末尾的`&`将其放入后台。使用`CTRL-Z`将已在运行的作业放入后台。命令可以用括号分组并一起放入后台。使用`jobs`命令列出你的后台作业，并使用`wait`或`fg`命令将作业从后台移动到前台。当你退出`lftp`时，程序将继续运行任何后台作业。实际上，`lftp`本身成为一个后台作业。
+
+
+
+当你连接到一个站点时，你可以使用`queue`命令排队命令，设置要执行的 FTP 操作列表。有了此功能，你可以向站点排队多个下载操作。可以重新排序队列并删除条目（如果需要）。你还可以连接到多个站点并为每个站点设置队列。`mirror`命令让你维护镜像站点的本地版本。你可以下载整个站点或仅更新较新的文件，以及删除不再存在于镜像上的文件。
+
+你可以用`.lftprc`文件中的选项来自定义`lftp`。系统范围的设置放在`/etc/lftp.conf`文件中。在这里，你可以设置诸如使用的提示符和匿名密码等功能。`.lftp`目录保存命令历史、日志、书签和启动命令的支持文件。`lftp`还支持`.netrc`文件，检查其中的登录信息。
+
+# CHAPTER 网络工具
+
+你可以使用各种网络工具执行诸如获取有关网络上其他系统的信息、访问其他系统以及直接与其他用户通信等任务。可以使用`ping`、`finger`、`traceroute`和`host`等实用程序获取网络信息。Talk、ICQ 和 IRC 客户端使你能够直接与网络上的其他用户通信。`telnet`对你可能在网络上连接的另一系统上的帐户执行远程登录。一些工具具有相应的 K Desktop 或 GNOME 版本。此外，你的网络可能使用网络远程访问命令。这些对于较小的网络很有用，使你能够直接访问远程系统以复制文件或执行命令。
+
+## 网络信息：`ping`、`finger`、`traceroute`和`host`
+
+你可以使用`ping`、`finger`、`traceroute`和`host`命令查找有关网络上系统和用户的状态信息。`ping`用于检查远程系统是否处于运行状态。你使用`finger`查找有关网络上其他用户的信息，查看他们是否已登录或是否收到邮件。`host`显示网络上系统地址信息，为你提供系统的 IP 和域名地址。`traceroute`可用于跟踪你的消息在到达你之前经过的计算机网络和系统的序列。表 15-1 列出了各种网络信息工具。
+
+虽然未随 Red Hat 一起提供，但对于 GNOME 桌面，GNOME Workstation Command Center 实用程序提供了用于输入`ping`、`traceroute`和`host`命令等功能的 GNOME 接口。在 K Desktop 上，你可以使用 KDE 网络实用程序发出`ping`、`finger`、`traceroute`和`host`命令。
+
+## `ping`
+
+`ping`命令检测系统是否处于运行状态。`ping`以你想要检查的系统名称作为参数。如果要检查的系统已关闭，`ping`会发出超时消息，指示无法建立连接。下一个示例检查 www.redhat.com 是否已启动并连接到网络：
+
+```
+$ ping www.redhat.com
+PING www.portal.redhat.com (206.132.41.231): 56 data bytes
+64 bytes from 206.132.41.231: icmp_seq=0 ttl=248 time=24.0 ms
+64 bytes from 206.132.41.231: icmp_seq=1 ttl=248 time=124.5 ms
+64 bytes from 206.132.41.231: icmp_seq=2 ttl=248 time=77.9 ms
+64 bytes from 206.132.41.231: icmp_seq=3 ttl=248 time=220.1 ms
+64 bytes from 206.132.41.231: icmp_seq=4 ttl=248 time=14.9 ms
+
+--- www.portal.redhat.com ping statistics ---
+6 packets transmitted, 5 packets received, 16% packet loss
+round-trip min/avg/max = 14.9/92.2/220.1 ms
+```
+
+你也可以使用`ping`并使用 IP 地址而不是域名。使用 IP 地址时，`ping`可以直接尝试检测远程系统，而无需通过域名服务器将域名翻译成 IP 地址。这对于网络的域名服务器可能暂时宕机，而你想检查网络上某个特定远程主机是否已连接的情况非常有帮助。在下一个示例中，用户使用其 IP 地址检查 Red Hat 网站：
+
+```
+$ ping 206.132.41.231
+PING 206.132.41.231 (206.132.41.231): 56 data bytes
+64 bytes from 206.132.41.231: icmp_seq=0 ttl=248 time=16.6 ms
+64 bytes from 206.132.41.231: icmp_seq=1 ttl=248 time=65.1 ms
+64 bytes from 206.132.41.231: icmp_seq=2 ttl=248 time=70.1 ms
+64 bytes from 206.132.41.231: icmp_seq=3 ttl=248 time=336.6 ms
+64 bytes from 206.132.41.231: icmp_seq=4 ttl=248 time=53.6 ms
+64 bytes from 206.132.41.231: icmp_seq=5 ttl=248 time=42.1 ms
+
+--- 206.132.41.231 ping statistics ---
+6 packets transmitted, 6 packets received, 0% packet loss
+round-trip min/avg/max = 16.6/97.3/336.6 ms
+```
+
+> 注意`ping`操作也可能失败，如果网络的防火墙拒绝了`ping`访问。有关更多详细信息，请参阅第 19 章。
+
+## `finger`和`who`
+
+你可以使用`finger`命令获取有关网络上其他用户的信息，并使用`who`命令查看当前系统上有哪些用户在线。`who`和`w`命令列出当前连接的所有用户，以及他们何时、多久以及从何处登录。`w`命令提供更详细的信息。它有几个选项可指定详细程度。`who`旨在在本地系统或网络上运行。`finger`可以在大型网络上运行，包括互联网，尽管大多数系统出于安全原因会阻止它。
+
+> 注意 Etherial 是一个协议分析器，可以捕获网络数据包并显示有关它们的详细信息。你可以检测网络上传输了什么类型的信息以及其来源和目的地。Etherial 主要用于网络和服务器管理。Etherial 在第 38 章中有详细讨论。
+
+## `host`
+
+使用`host`命令，你可以查找连接到你的网络的远程系统的网络地址信息。此信息通常由系统的 IP 地址、域名地址、域名昵称和邮件服务器组成。此信息是从你的网络的域名服务器获取的。对于互联网，这包括你可以通过互联网连接的所有系统。
+
+`host`命令是确定远程站点的 IP 地址或 URL 的有效方法。如果你只有站点的 IP 地址，你可以使用`host`查找其域名。对于网络管理，IP 地址对于在你的`/etc/host`文件中创建自己的域名条目非常有帮助。这样，你就不必依赖远程域名服务器（DNS）来定位站点。
+
+```
+$ host www.gnome.org
+www.gnome.org is a nickname for gnome.labs.redhat.com
+gnome.labs.redhat.com has address 199.183.24.235
+gnome.labs.redhat.com mail is handled (pri=10) by mail.redhat.com
+```
+
+```
+$ host 199.183.24.235
+235.24.183.199.IN-ADDR.ARPA domain name pointer
+gnome.labs.redhat.com
+```
+
+Gwhois 程序是一个基于 GNOME 的客户端，用于显示从 NIC 网络服务获取的主机信息。Gwhois 提供了一个 X Window System 接口，其中包含可供选择的 NIC 服务器列表。gHostLookup 是一个简单的 GNOME 应用程序，当你提供主机名时，它会返回机器的 IP 地址。
+
+## `traceroute`
+
+互联网连接是通过各种路由建立的，途经一系列互连的网关主机。从一个系统到另一个系统的路径可能采用不同的路由，其中一些可能比其他路由更快。对于缓慢的连接，你可以使用`traceroute`检查连接到主机的路由，监控速度以及路由经过的中间网关连接数量。`traceroute`命令以你想要检查路由的系统的主机名或 IP 地址作为参数。可用选项可指定参数，如服务类型（`-t`）或源主机（`-s`）。`traceroute`命令将返回路由经过的主机列表，以及发送到每个网关的三个探测的时间。大于五秒的时间将以星号`*`显示。
+
+```
+traceroute rabbit.mytrek.com
+```
+
+你也可以使用`mtr`或`xmtr`工具同时执行`ping`和跟踪（系统工具菜单上的 Traceroute）。Red Hat 还包括 Xtraceroute（更多系统工具菜单）。
+
+
+
+| 网络信息工具 | 描述 |
+| --- | --- |
+| `ping` | 检测系统是否已连接到网络。 |
+| `finger` | 获取网络上用户的信息。 |
+| `who` | 检查当前有哪些用户在线。 |
+| `host` | 获取远程主机的网络地址信息。 |
+| `traceroute` | 跟踪你的消息经过的计算机网络和主机的序列。 |
+| `ethereal` | 协议分析器，用于检查网络流量。 |
+| `mtr` and `xmtr` | My traceroute 同时结合了 `ping` 和 `traceroute` 操作（系统工具菜单中的 Traceroute）。 |
+| GNOME Workstation Command Center | 具有 `ping`、`traceroute` 和 `host` 操作的 GNOME 界面。 |
+| `gHostLookup` | GNOME 实用程序，用于查找主机名的 IP 地址。 |
+| `Gwhois` | 获取有关网络、主机和用户的信息。 |
+
+## 网络通话和消息客户端：ICQ、IRC、AIM 和 Talk
+
+你有时可能想直接与网络上的其他用户进行通信。你可以通过 `Talk`、ICQ、即时通讯和 IRC 实用程序来实现，前提是另一用户也在同一时间登录到已连接的系统（参见表 15-2）。`Talk` 实用程序像电话一样运行，使你能够与另一用户进行直接的双向对话。`Talk` 适用于同一系统上的用户或通过本地网络连接的用户。ICQ（I Seek You）是一种 Internet 工具，可在其他用户在线时通知你并使你能够与他们通信。ICQ 的工作方式与即时通讯程序非常相似。通过 Internet Relay Chat 实用程序（IRC），你可以连接到远程服务器，在那里其他用户也已连接并与他们交谈。
+
+| 客户端 | 描述 |
+| --- | --- |
+| `Kicq`, `Kxicq2` | KDE ICQ 客户端 |
+| `GnomeICU` | GNOME ICQ 客户端 |
+| `X-Chat` | Internet Relay Chat（IRC）客户端 |
+| `Kit` | KDE AOL Instant Messenger（AIM）客户端 |
+| `Kaim` | KDE AIM 客户端 |
+| `Gabber` | Jabber 客户端 |
+| `Gaim` | GNOME AIM 客户端 |
+| `GNU Talk` | `Talk` 客户端和服务器 |
+
+即时通讯（IM）客户端的工作方式大致相同，允许同一 IM 系统上的用户在 Internet 上的任何地方进行通信。目前主要的 IM 系统是 AOL、Microsoft Network（MSN）、Yahoo、ICQ 和 Jabber。与其他不同的是，Jabber 是一种开源即时通讯服务（www.jabber.org）。
+
+### ICQ
+
+ICQ 协议使你能够像即时通讯实用程序一样直接与在线的其他用户通信。使用 ICQ 客户端，你可以向用户发送消息、与他们聊天或发送文件。你可以设置一个联系人列表，其中包含你可能想在他们在线时联系的用户。当他们连接时，你会实时收到通知，如果你愿意就可以与他们通信。支持多种通信模式。这些包括聊天、消息、电子邮件、文件传输和游戏。要使用 ICQ，你需要向 ICQ 服务器注册，该服务器会为你提供一个 ICQ 号码，也称为通用 Internet 号码（UIN）。你可以在 www.icq.com 了解更多关于 ICQ 协议的信息。
+
+有多个基于 GNOME 的 ICQ 客户端可供你使用。请查看 GNOME 软件地图 www.gnome.org 以获取新版本和最新更新。`GnomeICU` 是一款 ICQ 客户端，可以与任何平台上的其他 ICQ 用户通信，无论是 Linux、Windows 还是 Macintosh。`GnomeICU` 的功能包括单个用户的消息历史记录、聊天、消息和声音事件。`Kicq` 和 `Kxicq2` 是正在开发中的 K Desktop ICQ 客户端。它们将支持即时消息、客户端列表和其他 ICQ 功能。
+
+### Internet Relay Chat
+
+Internet Relay Chat（IRC）的工作方式像聊天室，你可以进入频道并与已在其中的其他用户交谈。首先，你选择要连接的 IRC 服务器。针对不同地区和主题提供了各种服务器。连接到服务器后，你可以从频道列表中选择要进入的频道。界面与聊天室的工作方式非常相似。当你连接到服务器时，你可以选择一个昵称，以便被识别。有多个 Internet Relay Chat 客户端可用于 Linux 系统。大多数在 X Window System、KDE 或 GNOME 平台上运行。`Irssi` 和 `X-Chat` 是 GNOME IRC 客户端，尽管也有其他平台的版本。两者都支持多个并发服务器连接、多个窗口、用于绕过中间服务器的 Direct Client Communication（DCC）以及 Perl 脚本。`X-Chat` 具有插件接口，可用于添加新功能（有关更多详细信息，请参阅 xchat.linuxpower.org）。`Irssi` 具有易于使用的界面，并支持 GNOME 面板。`Kvirc` 是一款 K Desktop IRC 客户端。`Kvirc` 具有别名和事件编辑器、DCC 和脚本功能。
+
+### Instant Messenger
+
+AOL Instant Messenger（AIM）是 AOL 为任何注册用户以及已是 AOL 成员的人提供的免费服务。通过 AIM，你可以即时向成员发送消息、与他们玩游戏并接收股票提醒。你甚至可以共享图像、声音和照片。AOL 已为 Windows 和 Macintosh 提供了客户端。名为 AIM Express 的新版本旨在在任何 Web 浏览器上运行，并且可在 JDK 1.1 或更高版本的系统上运行。你可以在 www.aol.com/aim 了解更多关于 AIM 的信息。
+
+也可以将好友加入你的好友列表，以及设置权限和编辑你的用户信息。如果好友也已登录，你可以点击他的条目并打开即时通讯窗口来发送和接收消息。你可以在 kitclient.sourceforge.net 了解更多关于 `Kit` 的信息。其他可用的 AIM 客户端还有 `Kaim` 和 `Gaim`。
+
+多个 GNOME 即时通讯客户端被设计为可与所有即时通讯系统配合使用，包括 AIM、Yahoo、MSN 和 ICQ。`Gaim` 具有插件，可让你连接到 ICQ、Yahoo、MSN、IRC、Jabber 和 Zephyr。`Gabber` 是一个 Jabber 客户端，是一个开源即时通讯系统，允许与所有其他系统通信，包括 AIM、Yahoo、MSN 和 ICQ。`Everybuddy` 被设计为面向所有主要服务的通用即时通讯服务。
+
+> NOTE `Talk` 是原始的 Unix `talk` 实用程序，旨在通过命令行界面在你和另一用户之间建立交互式双向通信。其工作原理与即时通讯类似。出于安全考虑，你应仅在本地安全系统上使用 `talk`。K Desktop 版本的 `Talk` 称为 `KTalk`，将用户屏幕显示为 K Desktop 窗口中的窗格。`GNU Talk` 是 `Talk` 的 GNOME 版本，支持多客户端、文件传输、加密、共享应用程序、自动应答和呼叫转接。
+
+## Telnet
+
+你使用 `telnet` 命令远程登录到网络上的另一系统。该系统可以位于你的局域网中，也可以通过 Internet 连接访问。Telnet 的操作方式就如同你从远程终端登录到另一系统。你将被要求输入登录名，在某些情况下还需要密码。实际上，你是在登录到另一系统上的另一个账户。事实上，如果你在另一系统上有账户，你就可以使用 Telnet 登录到它。
+
+原始版本的 Telnet 以非常不安全著称。对于通过网络或 Internet 的安全连接，你应使用 SSH 或 Kerberos 版本的 Telnet（参见第 18 章）。它们的操作方式与原始版本相同，但使用身份验证和加密来保护 Telnet 连接。即便如此，也不建议使用 Telnet 登录到你的 root 账户。
+
+你通过关键字 `telnet` 调用 Telnet 实用程序。如果你知道要连接的站点名称，可以在 Linux 命令行中输入 `telnet` 和站点名称作为替代，你也可以使用 K Desktop `KTelnet` 实用程序。它提供了连接和登录远程系统的 GUI 界面。
+
+```
+$ telnet garnet.berkeley.edu
+Connected to garnet
+login:
+```
+
+Telnet 程序还具有命令模式，其中包含一系列可用于配置连接的命令。你可以通过使用关键字 `telnet` 调用 Telnet，或在会话期间按下 `CTRL-]` 来进入 telnet 命令模式。Telnet `help` 命令列出了你可使用的所有 Telnet 命令。完整列表可在手册页上找到（`man telnet`）。在下一个示例中，用户首先调用 Telnet 实用程序。随后显示提示符，表示进入命令模式，`telnet>`。Telnet 命令 `open` 然后连接到另一系统。
+
+```
+$ telnet
+telnet> open garnet.berkeley.edu
+Connected to garnet.berkeley.edu
+login:
+```
+
+
+
+连接后，你按照该系统的登录流程进行操作。如果你登录的是常规系统，必须提供登录名和密码。登录后，你会获得操作系统的提示符；在 Linux 或 Unix 的情况下，这将是 `$` 或 `%`。然后你直接连接到该系统上的一个账户，可以发出任何你想要的命令。工作完成后，你注销。这会中断连接并将你返回到你自己的系统上的 Telnet 提示符。然后你可以使用 `quit` 命令退出 Telnet。
+
+```
+telnet> quit
+```
+
+当使用 Telnet 连接到提供公共访问的站点时，你无需提供登录名或密码。访问通常由一系列菜单控制，限制你在该系统上可以执行的操作。如果你要登录到另一系统上的特定账户，可以使用 `-l` 选项指定该账户的登录名。
+
+## RSH、Kerberos 和 SSH 远程访问命令
+
+远程访问命令是为较小的网络，例如内联网而设计的。它们使你能够远程登录到另一系统上的另一个账户，并从一个系统复制文件到另一个系统。你还可以获取有关另一系统的信息，例如当前谁已登录（参见表 15-3）。许多远程命令都有用于 Internet 的可比网络通信实用程序。例如，`rlogin` 远程登录到系统，与 `telnet` 类似。`rcp` 命令远程复制文件，其功能与 `ftp` 基本相同。
+
+使用 `rcp`、`rlogin` 和 `rsh`（RSH 包）等远程操作存在安全风险。此类命令允许轻松以未加密方式远程访问 Linux 系统。这些命令应仅在本地安全网络中使用。对于此类 Internet 操作，你应使用 Kerberos 和 Secure Shell（SSH）提供的这些命令的安全版本，例如 `ssh`、`slogin` 或 `scp`（参见第 18 章）。SSH 命令是加密的，提供更高级别的安全性。Kerberos 为 `Telnet`、`rlogin`、`rcp`、`rsh` 和 `ftp` 提供了版本，提供身份验证和加密。Kerberos 版本使用与原始版本相同的命令和选项运行，使用对用户透明。如果你在系统上安装 Kerberos，Red Hat 会配置用户 `PATH` 变量以访问位于 `/usr/kerberos/bin` 而不是 `/usr/bin` 的远程命令的 Kerberos 版本。
+
+你可以使用多个命令获取有关网络上不同系统的信息。你可以查明谁已登录，获取有关另一系统上用户的详细信息，或查明系统是否正在运行。例如，`rwho` 命令的功能与 `who` 命令相同。它显示网络中每个系统当前登录的所有用户
+
+```
+$ rwho
+violet robert:tty1 Sept 10 10:34
+garnet chris:tty2 Sept 10 09:22
+```
+
+The `ruptime` command displays information about each system on your network. The information shows how each system has been performing. `ruptime` shows whether a system is up or down, how long it has been up or down, the number of users on the system, and the average load on the system for the last five, ten, and fifteen minutes.
+
+```
+$ ruptime
+violet up 11+04:10, 8 users, load 1.20 1.10 1.00
+garnet up 11+04:10, 20 users, load 1.50 1.40 1.30
+```
+
+## Remote Access Permission: `.rhosts` and `.k5login`
+
+You use a `.rhosts` and `.k5login` (Kerberos) files to control access to your account by users using remote commands. Users create these files on their own accounts using a standard editor. They must be located in the user's home directory. In the next example, the user displays the contents of a `.rhosts` file:
+
+```
+$ cat .rhosts
+garnet chris
+violet robert
+```
+
+The `.rhosts` file is a simple way to allow other people access to your account without giving out your password. To deny access to a user, simply delete the system's name and the user's login name from your `.rhosts` file. If a user's login name and system are in an `.rhosts` file, that user can directly access that account without knowing the password (in place of using `.rhosts`, you could use a password). The `.rhosts` or `.k5login` files are required for other remote commands, such as remotely copying files or remotely executing Linux commands. The `.k5login` file will contain Kerberos names for users, including user names and realms. Such user will undergo Kerberos authentication to gain access.
+
+The type of access `.rhosts` and `.k5login` provide enables you to use remote commands to access accounts directly that you might have on other systems. You do not have to log into them first. In effect, you can treat your accounts on other systems as extensions of the one you are currently logged into. Using the `rcp` command, you can copy any files from one directory to another no matter what account they are on. With the `rsh` command, you can execute any Linux command you want on any of your other accounts.
+
+## `rlogin`, `slogin`, `rcp`, `rsh`, and `ssh`
+
+You may have accounts on different systems in your network, or you may be permitted to access someone else's account on another system. You could access an account on another system by first logging into your own and then remotely logging in across your network to the account on the other system. You can perform such a remote login using the `rlogin` command, which takes as its argument a system name. The command connects you to the other system and begins login procedures. Bear in mind that if you are using an SSH-enabled network connection, you would use `slogin` instead of `rlogin`. The `slogin` command or Kerberos `rlogin` will provide secure encrypted login access.
+
+
+
+The same is true for pipes. The first command (shown next) prints the list of files on the local system’s printer. The standard output is piped to your own line printer. In the second command, the list of files is printed on the remote system’s printer. The pipe is quoted and evaluated by the remote system, piping the standard output to the printer on the remote system.
+
+```
+$ ssh violet ls /home/robert | lpr
+$ ssh violet ls /home/robert '|' lpr
+```
+
+> Note The Kerberos version of the remote commands also let you specify Kerberos realms and credentials.
+
+| Remote Command | Effect |
+|---|---|
+| `rwho` | Displays all users logged into systems in your network. |
+| `ruptime` | Displays information about each system on your network. |
+| `rlogin system-name` | Allows you to log in remotely to an account on another system. |
+| `-l` | Allows you to specify the login name of the account. |
+| `alogin system-name` | Secure login to an account on another system. |
+| `rcp sys:name:file1 sys:name:file2` | Allows you to copy a file from an account on one system to an account on another system. With the `-p` option, preserves the modification times and modes of source files. |
+| `scp sys:name:file1 sys:name:file2` | Secure copy of a file from an account on one system to an account on another system. |
+| `rsh sys-name Linux-command` | Allows you to remotely execute a command on another system. `-l` allows you to specify the login name. `-n` redirects input from the null special device, `/dev/null`. |
+| `ssh sys-name Linux-command` | Secure remote execution of a command on another system. |
+
+## TABLE 15-3 Remote Access Commands
+
+## 安全
+
+## PART
+
+- CHAPTER 16
+- 加密、完整性检查和签名。GNU Privacy Guard
+- CHAPTER 17
+- Internet Protocol Security: IPsec
+- CHAPTER 18
+- Secure Shell and Kerberos
+- CHAPTER 19
+- Network Firewalls: Netfilter
+
+## 加密、完整性检查和签名：GNU Privacy Guard
+
+你可以使用加密、完整性检查和数字签名来保护通过网络传输的数据。例如，GNU Privacy Guard 加密软件包让你可以加密你要发送的电子邮件或文件，同时也可以用加密的数字签名对其进行签名，以证明该消息确实由你发送。数字签名还包含加密的修改摘要信息，提供完整性检查，使接收者能够验证收到的消息是原始消息，而不是被更改或替换过的。
+
+### 公钥加密、完整性检查和数字签名
+
+加密数据是确保通过网络传输的数据安全的唯一可靠方法。用密钥加密数据，接收者随后可以对其进行解密。为了充分保护通过网络传输的数据，你不仅应对其进行加密，还应检查其是否未被修改，并确认其确实由声称的作者创建。加密的消息仍可能被截获并修改，然后重新加密。诸如修改摘要之类的完整性检查可确保数据未被篡改。虽然加密和完整性检查可以保护数据，但它们并不能对其进行身份验证。你还需要知道声称发送消息的人确实是发送者，而不是冒名顶替者。为了对消息进行身份验证，作者可以使用数字签名对其进行签名。此签名也可以被加密，使接收者能够验证其真实性。数字签名可确保你收到的消息是真实的。
+
+### 公钥加密
+
+加密使用密钥以这样的方式加密数据，即相应的密钥可以对其进行解密。过去，旧的加密形式使用相同的密钥来加密和解密消息。然而，这涉及向接收者提供密钥，从而使任何获得密钥的人都可以解密数据。公钥加密使用两个密钥来加密和解密消息，即私钥和公钥。私钥你始终保留并用于解密收到的消息。公钥你向你要发送消息的人公开。他们随后使用你的公钥来加密他们想要发送给你的任何消息。私钥用于解密消息，公钥用于加密它们。每个用户都有一组私钥和公钥。反过来，如果你想向另一用户发送消息，你将首先获取该用户的公钥并使用它来加密你要发送给该用户的消息。然后用户用自己的私钥解密消息。换句话说，你的公钥由其他人用来加密他们发送给你的消息，而你使用其他用户的公钥来加密你发送给他们的消息。你的 Linux 系统上的每个用户都可以拥有自己的公钥和私钥。他们将使用 `gpg` 程序生成它们并将其私钥保存在自己的目录中。
+
+### 数字签名
+
+数字签名用于同时对消息进行身份验证并提供完整性检查。身份验证保证消息未被修改——它是你发送的原始消息——完整性检查验证其是否未被更改。虽然数字签名通常与加密消息结合使用以提供更高级别的安全性，但也可以将其用于可以明文发送的消息。例如，你会想知道 Red Hat 版本的升级公告是否确实由 Red Hat 发送，而不是由试图制造混乱的人发送。这样的消息仍然需要经过身份验证，检查其是否确实由发送者发送，或者如果由原始发送者发送，是否在传输过程中以某种方式被更改。这种验证可防止冒充发送者的人篡改或替换消息。
+
+### 完整性检查
+
+对消息进行数字签名涉及使用 `MD5` 修改摘要算法等加密算法从消息内容生成校验和值。这是唯一准确表示消息大小和内容的数值。对消息进行任何更改都会生成不同的值。此值提供了一种检查数据完整性的方法。然后用你的私钥对 `MD5` 值本身进行加密。当用户收到你的消息时，他们会用你的公钥解密你的数字签名。然后用户生成收到的消息的 `MD5` 值并将其与你发送的 `MD5` 值进行比较。如果它们相同，则消息经过身份验证——它是你发送的原始消息，而不是冒充你发送的虚假消息。用户可以使用 `GnuPG` 来解密和检查数字签名。
+
+### 结合加密和签名
+
+通常，数字签名与加密结合使用以提供更安全的传输级别。消息将使用接收者的公钥进行加密，数字签名将使用你的私钥进行加密。用户将用自己的私钥解密消息，然后用你的公钥解密签名。然后他们将签名与用户从消息生成的签名进行比较以对其进行身份验证。当 `GnuPG` 解码消息时，它也会自动解码并检查数字签名。图 16-1 显示了加密和数字签名消息的过程。
+
+## GNU隐私卫士
+
+为了保护您通过电子邮件发送的消息，大多数 Linux 发行版提供了 GNU隐私卫士（`GnuPG`）加密和身份验证功能。`GnuPG` 是 GNU 开源软件，其工作原理与良好隐私（`PGP`）加密非常相似。使用 `GnuPG`，您既可以加密消息，也可以对其进行数字签名——从而保护消息并验证其来自您。目前，Evolution 和 KMail 都支持 `GnuPG` 加密和身份验证。在 Evolution 中，您可以从“安全”菜单选择 PGP 加密和签名来使用 `GnuPG`（在 Red Hat Linux 中，PGP 选项即使用 `GnuPG`）。在 KMail 中，您可以在“选项”窗口的“安全”面板中选择要使用的加密方式。
+
+
+
+GNU隐私卫士（GPG）操作通过 `gpg` 命令执行，该命令使用命令和选项来执行任务。表16-1中列出了常用的命令和选项。某些命令和选项具有只使用一个连字符的短格式。通常使用两个连字符。第一次使用 `gpg` 时，系统会在您的主目录中创建一个 `.gnupg` 目录，其中包含一个名为 `options` 的文件。`.gnupg/options` 文件包含 GPG 操作的注释默认选项（在下一个版本 1.2 中改为 `.gnupg/gpg.conf`）。您可以编辑此文件，取消注释或更改任何希望为 GPG 实现的默认选项。您可以使用不同的选项文件，并在调用 `gpg` 时使用 `--options` 参数来指定它。有用的选项包括密钥服务器条目。
+
+**图16-1 公钥加密和数字签名**
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_324_0.png)
+
+`.gnupg` 目录还保存加密文件，例如用于存放私钥的 `secring.gpg`（私钥环）、用于存放公钥的 `pubring.gpg`（公钥环），以及 `trustdb.gpg`（受信任密钥的数据库）。
+
+**表16-1 GPG命令和选项（续）**
+
+| GPG 命令 | 描述 |
+| --- | --- |
+| `-s`, `--sign` | 对文档进行签名，创建签名。可与 `--encrypt` 结合使用。 |
+| `--clearsign` | 创建明文签名。 |
+| `-b`, `--detach-sign` | 创建分离签名。 |
+| `-e`, `--encrypt` | 加密数据。可与 `--sign` 结合使用。 |
+| `--decrypt [file]` | 解密文件（如果未指定文件，则解密 stdin），并将其写入 stdout（或通过 `--output` 指定的文件）。如果解密后的文件已签名，则验证该签名。 |
+| `--verify [sigfile] [signed-files]` | 验证已签名文件。签名可以包含在文件中，也可以是单独的分离签名文件。 |
+| `--list-keys [names]` | 列出密钥环中的所有密钥或指定密钥。 |
+| `--list-public-keys [names]` | 列出公钥环中的所有密钥或指定密钥。 |
+| `--list-secret-keys [names]` | 列出您的私有（秘密）密钥。 |
+| `--list-sigs [names]` | 列出您的密钥及其所有签名。 |
+| `--check-sigs [names]` | 列出密钥及其签名，并验证这些签名。 |
+| `--fingerprint [names]` | 列出指定密钥的指纹。 |
+| `--gen-key` | 生成一组新的私钥和公钥。 |
+| `--edit-key name` | 编辑您的密钥。使用命令执行大多数密钥操作，例如用 `sign` 对密钥签名，或用 `passwd` 更改您的口令。 |
+| `--sign-key name` | 使用您的私钥对公钥签名。等同于 `--edit-key` 中的 `sign`。 |
+| `--delete-key name` | 从公钥环中移除公钥。 |
+| `--delete-secret-key name` | 从私钥环和公钥环中移除私钥和公钥。 |
+| `--gen-revoke` | 为您的密钥生成撤销证书。 |
+| `--export [names]` | 从您的密钥环中导出指定密钥。不带参数时，导出所有密钥。 |
+| `--send-keys [names]` | 导出指定密钥并将其发送到密钥服务器。必须使用 `--keyserver` 选项来指定该密钥服务器的名称。 |
+| `--import [files]` | 将文件中的密钥导入到您的公钥环中。 |
+| GPG 选项 | 描述 |
+| --- | --- |
+| `-a`, `--armor` | 创建 ASCII 装甲输出，即加密数据的 ASCII 版本。 |
+| `-o`, `--output file` | 将输出写入指定文件。 |
+| `--default-key name` | 指定用于签名的默认私钥。 |
+| `--keyserver site` | 用于查找不在您密钥环上的公钥的密钥服务器。也可以指定要将您的公钥发送到的站点。`host -l pgp.net \| grep www.keys` 将列出密钥服务器。 |
+| `-r`, `--recipient names` | 使用指定用户的公钥为该用户加密数据。 |
+| `--default-recipient names` | 指定用于加密数据的默认收件人。 |
+
+### GnuPG 设置：`gpg`
+
+在使用 GnuPG 之前，您必须生成私钥和公钥。在命令行（终端窗口）中，输入带 `--gen-key` 命令的 `gpg` 命令。随后 `gpg` 程序会提示您选择不同的选项来创建私钥和公钥。您可以查看 `gpg` 手册页以了解如何使用 `gpg` 程序。
+
+```
+gpg --gen-key
+```
+
+### 创建您的密钥
+
+首先，系统会要求您选择要创建的密钥类型。通常，您只需选择默认条目，按 ENTER 键即可。然后选择密钥大小，通常为默认的 1024。接着指定密钥的有效期——通常设置为无过期。系统还会要求您输入用户 ID、注释和电子邮件地址。按回车键，系统将依次提示您输入各项。这些元素中的任何一个都可以用作密钥名称，它们共同标识该密钥。在执行某些 GPG 任务（如签名密钥或创建撤销证书）时，您需要使用密钥名称。例如，以下元素为用户 Richard Petersen 创建了一个密钥，其注释为“author”（作者），电子邮件地址为 `richlp@turtle.mytrek.com`：
+
+```
+Richard Petersen (author) <richlp@turtle.mytrek.com>
+```
+
+你可以使用密钥身份的任何唯一部分来引用该密钥。例如，字符串“Richard”会引用前面的密钥，前提是没有其他密钥包含字符串“Richard”。“richlp”也会引用该密钥，“author”同样如此。当某个字符串匹配多个密钥时，所有匹配的密钥都会被引用。
+
+## 保护你的密钥
+
+`gpg` 程序随后会要求你输入一个密码短语，用于保护你的私钥。务必使用真正的短语，包括空格，而不仅仅是一个密码。`gpg` 然后生成你的公钥和私钥并将它们放在 `.gnupg` 目录中。私钥保存在 `.gnupg` 目录下的名为 `secring.gpg` 的文件中。公钥被放在 `pubring.gpg` 文件中，你可以在其中添加其他用户的公钥。你可以用 `--list-keys` 命令列出这些密钥。
+
+如果日后需要更改你的密钥，你可以创建一个撤销证书来通知他人该公钥不再有效。例如，如果你忘记了密码或被他人发现，你可以使用撤销证书告诉他人你的公钥不应再使用。在下一个示例中，用户为密钥 `richlp` 创建了一个撤销证书并将其放在文件 `myrevoke.asc` 中
+
+```
+gpg --output myrevoke.asc --gen-revoke richlp
+```
+
+## 使你的公钥可用
+
+要让其他用户解密你的消息，你必须让他们可以使用你的公钥。他们反过来也必须发送他们的公钥给你，以便你解密从他们收到的任何消息。实际上，在用户之间启用加密通信涉及他们所有人交换公钥。然后接收公钥的每个用户都必须验证并签名这些公钥。然后公钥就可以被信任以安全地解密消息。
+
+如果你只向少数用户发送消息，可以手动通过电子邮件发送你的公钥。对于一般公开使用，你可以将公钥发布到密钥服务器，任何人都可以从那里下载并使用它来解密从你收到的任何消息。OpenPGP 公钥服务器位于 `www.keyserver.net`，该地址列在你的 `.gnupg/options` 文件中。你可以使用 `-keyserver` 选项和 `--send-key` 命令直接发送到密钥服务器。`--send-key` 命令以你的电子邮件地址作为参数。你只需发送到一个密钥服务器，因为它会自动将你的密钥与其他密钥服务器共享。
+
+```
+gpg --keyserver search.keyserver.net --send-key chris@turtle.mytrek.com
+```
+
+如果你想直接将密钥发送给另一位用户，你应该生成密钥的装甲文本版本，然后可以通过电子邮件发送。你可以使用 `--armor` 和 `--export` 选项来完成此操作，并使用 `--output` 选项指定放置密钥的文件。`--armor` 选项会生成加密文件的 ASCII 文本版本，以便可以直接通过电子邮件发送，而不是作为二进制附件。按惯例，保存加密文件的 ASCII 编码版本的扩展名通常为 `.asc`。二进制加密文件通常使用 `.gpg` 扩展名。然后你可以将该文件通过电子邮件发送给想要发送加密消息的用户。
+
+```
+# gpg --armor --export richlp@turtle.mytrek.com --output richlp.asc
+# mail -s 'mypubkey' george@rabbit.mytrek.com < richlp.asc
+```
+
+许多公司和机构在其网站上发布其公钥文件，可以下载并用于验证加密的软件下载或官方公告。
+
+
+
+> NOTE GPG 的某些命令和选项同时具有长形式和短形式。例如，`--armor` 命令可以写成 `-a`，`--output` 写成 `-o`，`--sign` 写成 `-s`，`--encrypt` 写成 `-e`。大多数其他选项，如 `--export`，则没有短形式。
+
+## 获取公钥
+
+要解码其他用户的消息，你需要拥有他们的公钥。他们可以发送给你，也可以从密钥服务器下载。将包含公钥的消息或网页保存到文件中。然后你需要导入、验证并签名该密钥。使用收到的文件将公钥导入到你的 `pubring` 文件中。在以下示例中，用户导入了 George 的公钥，他已将其作为文件 `georgekey.asc` 收到。
+
+```
+gpg --import georgekey.asc
+```
+
+所有 Linux 发行版站点都有自己的公钥可供下载。例如，你应该下载 Red Hat 公钥，可以从 Red Hat 网站的安全资源页面访问（`www.redhat.com`）。点击 Public Encryption Key 链接。从那里，你可以访问仅显示公钥的页面。你可以将此页面保存为文件并使用该文件将 Red Hat 公钥导入到你的密钥环中。（你的 Red Hat 发行版还将 Red Hat 公钥放在 `/usr/share/doc/rpm4-1` 目录中，同时提供 GPG 和 PGP 加密的版本，文件名为 `RPM-GPG-KEY` 和 `RPM-PGP-KEY`。）在以下示例中，用户将仅显示 Red Hat 公钥的页面保存为 `myredhat.asc`，然后导入该文件：
+
+```
+gpg --import myredhat.asc
+```
+
+> NOTE 你可以使用 `--delete-key` 和 `--delete-secret-key` 命令删除任何密钥，包括你自己的私钥。
+
+## 验证密钥
+
+为了手动检查公钥文件在传输过程中是否未被修改，你可以检查其指纹。这是从密钥内容生成的哈希值，很像修改摘要。使用 `--fingerprint` 选项，你可以从已安装的密钥生成哈希值，然后联系发送者询问哈希值应该是什么。如果它们不相同，你就知道密钥在传输过程中被篡改了。
+
+```
+gpg --fingerprint george@rabbit
+```
+
+你不必检查指纹才能让 `gpg` 运行。这只是你可以自行执行的一个建议性预防措施。关键在于你需要确信你收到的密钥是有效的。通常，你可以接受来自公共服务器或已知站点的大多数密钥作为有效密钥，尽管检查它们发布的指纹很容易。一旦确认密钥的有效性，你就可以用你的私钥为其签名。签名密钥会通知 `gpg` 你正式接受该密钥。
+
+要签名密钥，你可以使用 `gpg` 命令，并带上 `--sign-key` 命令和密钥名称。
+
+```
+gpg --sign-key george@rabbit
+```
+
+或者，你可以使用 `--edit-key` 命令编辑密钥，启动一个交互式会话，在其中你可以输入 `sign` 命令来签名密钥，并输入 `save` 来保存更改。签名密钥涉及访问你的私钥，因此系统会提示你输入密码短语。完成后，使用 `quit` 命令退出交互式会话。
+
+通常，你会希望发布一个由一个或多个用户签名过的公钥版本。你也可以对其他用户做同样的事情。签名公钥提供了一种为密钥有效性作担保的方式。它表明已经有人检查过这个密钥。许多不同的用户可以签名同一个公钥。对于你从另一个用户那里收到并已验证的密钥，你可以签名并将签名版本返回给该用户。一旦你签名了该密钥，就可以生成一个包含已签名公钥版本的文件。然后你可以将此文件发送给该用户。这个过程构建了一个“信任网”（Web-of-Trust），其中许多用户为公钥的有效性作担保。
+
+```
+gpg -a --export george@rabbit --output georgesig.asc
+```
+
+该用户随后将导入已签名的密钥并将其导出到密钥服务器。
+
+> 提示：如果你想从头开始，你可以直接删除你的 `.gnupg` 目录，不过这是一个极端的措施，因为你会丢失你收集的所有密钥。
+
+## 使用 GnuPG
+
+GnuPG 加密目前由 KMail 和 exmh 邮件客户端支持。你也可以使用 GNU Privacy Assistant（GPA），一个 GUI 前端，来管理 GPG 任务。你也可以使用 `gpg` 命令手动编码和解码消息，包括数字签名（如果你愿意）。在执行 GPG 任务时，你需要使用密钥名称来引用你拥有的密钥。请记住，你只需要一个唯一的标识性子串就能选择你想要的密钥。GPG 会在你指定的任何命令中对作为密钥名称的字符串执行模式搜索。如果该字符串匹配多个密钥，则所有匹配的密钥都将被选中。在下面的示例中，`"Sendmail"` 字符串在身份上匹配了两个密钥。
+
+```
+# gpg --list-keys "Sendmail"
+pub 1024R/CC374F2D 2000-12-14
+      Sendmail Signing Key/2001 <sendmail@Sendmail.ORG>
+pub 1024R/E35C5635 1999-12-13
+      Sendmail Signing Key/2000 <sendmail@Sendmail.ORG>
+```
+
+## 加密消息
+
+`gpg` 命令提供了几个用于管理安全消息的选项。`e` 选项加密消息，`a` 选项生成 ASCII 装甲文本版本，`s` 选项添加数字签名。你需要指定收件人的公钥，并且你应该已经将该公钥导入到你的 `pubring` 文件中。正是这个密钥用于加密消息。然后收件人将能够使用他们的私钥解码消息。使用 `--recipient` 或 `-r` 选项指定收件人密钥的名称。你可以使用用户公钥名称中的任何唯一子串。电子邮件地址通常就足够了。你使用 `d` 选项来解码收到的消息。在下面的示例中，用户加密（`e`）并签名（`s`）一个以 ASCII 装甲文本格式（`a`）生成的文件。`-r` 选项表示消息的收件人（其公钥用于加密消息）。
+
+```
+gpg -e -s -a -o myfile.asc -r george@rabbit.mytrek.com myfile
+# mail george@rabbit.mytrek.com < myfile.asc
+```
+
+如果你想将文件作为二进制附件发送或传输，可以省略 ASCII 装甲选项。如果没有 `--armor` 或 `-a` 选项，`gpg` 会生成一个编码的二进制文件，而不是编码的文本文件。二进制文件只能作为附件通过电子邮件传输。如前所述，ASCII 装甲版本通常具有 `.asc` 扩展名，而二进制版本使用 `.gpg`。
+
+## 解密消息
+
+当其他用户收到文件时，他们可以将其保存为类似 `myfile.asc` 的文件，然后使用 `-d` 选项解码该文件。`-o` 选项将指定一个文件来保存解码后的版本。GPG 将自动确定它是二进制文件还是 ASCII 装甲版本。
+
+```
+gpg -d -o myfile.txt myfile.asc
+```
+
+要检查文件的数字签名，你可以使用带有 `--verify` 选项的 `gpg` 命令。这假定发送者已经签署了该文件。
+
+```
+gpg --verify myfile.asc
+```
+
+## 解密数字签名
+
+你需要拥有签名者的公钥来解码和检查数字签名。如果没有，你会收到一条消息，提示未找到公钥。在这种情况下，你首先需要获得签名者的公钥。你可以访问你认为可能拥有该公钥的密钥服务器，或者直接从网站或签名者那里请求公钥。然后按照前面所述导入该密钥。
+
+## 签名消息
+
+```
+gpg -o mydoc.gpg --sign mydoc
+```
+
+如果相反，你只是想生成一个单独的签名文件，则使用 `--detach-sig` 命令。这样做的好处是不必生成原始文件的完整副本。该文件保持不变。签名文件通常具有像 `.sig` 这样的扩展名。在下面的示例中，用户为 `mydoc2` 文件创建了一个名为 `mydoc2.sig` 的签名文件。
+
+```
+gpg -o mydoc2.sig --detach-sig mydoc2
+```
+
+要使用分离签名验证文件，接收用户需同时指定签名文件和原始文件。
+
+```
+gpg --verify mydoc2.sig mydoc2
+```
+
+你也可以生成一个 clear sign 签名以用于文本文件。Clear sign 签名是签名的文本版本，可以附加到文本文件。文本文件可以由任何文本编辑器进一步编辑。使用 `--clearsign` 选项创建 clear sign 签名。以下示例创建了一个名为 `mynotice.txt` 的文本文件的 clear signed 版本
+
+```
+gpg -o mynotice.txt --clearsign mynotice.txt
+```
+
+> 注意 在 `www.gnupg.org` 上有许多可用的 GnuPG GUI 前端和过滤器。GPA（GNU Privacy Assistant）提供了一个基于 GNOME 的前端，可轻松加密和解密文件。你可以选择要编码的文件，选择收件人（要使用的公钥），并在需要时添加数字签名。你也可以使用 GPA 解码收到的编码文件。你可以管理你的公钥集合，以及密钥环文件中的密钥。
+
+
+
+> 提示 隐写术是一种将数据隐藏在其他类型的对象中（如图像）的加密形式。你可以使用 JPEG Hide and Seek 软件（JPHS）在 JPEG 图像中编码和检索数据（`jphide` 和 `jpseek`）。有关更多详细信息，请参阅 `linux01.gwdg.de/~alatham/stego.html`。
+
+## 检查软件包数字签名
+
+数字签名的一个非常有效的用途是验证软件包未被篡改。软件包在传输过程中可能被拦截，其某些系统级文件被更改或替换。来自你的发行版以及知名 GNU 和 Linux 项目的软件包都是经过数字签名的。签名提供了用于检查软件包完整性的修改摘要信息。数字签名可以包含在软件包文件内，也可以作为单独文件发布。你使用带有 `--verify` 选项的 `gpg` 命令来检查文件的数字签名。
+
+> 提示 Red Hat 会在 RPM 文档目录中安装 Red Hat 公钥，文件名为 `RPM-GPG-KEY`，`/usr/share/doc/rpm-4.1`。Red Hat 使用此密钥在安装期间检查 RPM 软件包。
+
+## 导入公钥
+
+首先，你需要确保拥有签名者的公钥。数字签名是用软件分发者的私钥加密的。该分发者即为签名者。一旦你拥有该签名者的公钥，你就可以检查从他们那里收到的任何数据。在软件分发者的情况下，一旦你拥有他们的公钥，你就可以检查他们分发的任何软件。要获取公钥，你可以检查密钥服务器，或更可能的是检查他们的网站。如前所述，你可以从 Red Hat 网站的安全资源页面下载 Red Hat 公钥，或使用 RPM 文档目录中安装的版本。一旦你获取了公钥，你就可以使用 `--import` 选项将其添加到你的密钥环中，指定你给下载的密钥文件起的名字（在本例中为 `myredhat.asc`）：
+
+```
+# gpg --import redhat.asc
+gpg: key CBA29BF9: public key imported
+gpg: Total number processed: 1
+gpg: imported: 1 (RSA: 1)
+```
+
+要改为从密钥服务器下载，则使用 `--keyserver` 选项和密钥服务器名称。
+
+要从 RPM 目录导入 Red Hat 公钥，你需要指定 `RPM-GPG-KEY` 文件。这是 Red Hat 发行版在你的 CD-ROM 上提供的密钥。虽然在安装期间使用，但该密钥必须导入以便在安装后再次验证软件包。
+
+```
+rpm --import /usr/share/doc/rpm-4.1/RPM-GPG-KEY
+```
+
+## 验证公钥
+
+你可以使用 `--fingerprint` 选项来检查密钥的有效性，如果你愿意的话。如果你确信密钥有效，则可以使用 `--sign-key` 命令对其进行签名。在下面的示例中，用户使用密钥名称中的字符串“Red Hat”来引用该密钥。用户还被要求输入其密码短语以允许使用其私钥签署 Red Hat 公钥。
+
+```
+# gpg --sign-key "Red Hat"
+pub 1024R/CBA29BF9 created: 1996-02-20 expires: never trust: -/q
+(1) . Red Hat Software, Inc. <redhat@redhat.com>
+pub 1024R/CBA29BF9 created: 1996-02-20 expires: never trust: -/q
+Fingerprint: 6D 9C BA DF D9 60 52 06 23 46 75 4E 73 4C FB 50
+Red Hat Software, Inc. <redhat@redhat.com>
+
+Are you really sure that you want to sign this key
+with your key: "Richard Petersen (author) <richlp@turtle.mytrek.com>"
+Really sign? yes
+You need a passphrase to unlock the secret key for:
+user: "Richard Petersen (author) <richlp@turtle.mytrek.com>"
+1024-bit DSA key, ID 73F0A73C, created 2001-09-26
+Enter passphrase:
+#
+```
+
+## 检查 RPM 软件包
+
+一旦你拥有了公钥，你就可以使用 `rpm` 命令和 `-K` 选项来检查 Red Hat 的任何 RPM 软件包。以下示例检查 `xcdroast` 和 `balsa` 软件包的有效性：
+
+```
+# rpm -K xcdroast-0.98alpha9-1.i386.rpm
+xcdroast-0.98alpha9-1.i386.rpm: md5 OK
+# rpm -K balsa-1.1.7-1.i386.rpm
+balsa-1.1.7-1.i386.rpm: md5 OK
+```
+
+许多以压缩归档形式存在的软件包，`.tar.gz` 或 `tar.bz2`，会提供以 `.asc` 或 `.sig` 扩展名结尾的单独文件中的签名。要检查这些，你可以使用 `gpg` 命令和 `--verify` 选项。例如，最新的 `sendmail` 软件包以压缩归档 `.tar.gz` 的形式分发。它的数字签名以单独的 `.sig` 文件提供。首先你需要从 Sendmail 网站下载并安装 `sendmail` 软件的公钥。
+
+```
+# gpg --import sendmail.asc
+```
+
+然后你应该签署刚刚导入的 Sendmail 公钥。在此示例中，电子邮件地址被用作密钥名称。
+
+```
+gpg --sign-key sendmail@Sendmail.ORG
+```
+
+你也可以检查密钥的指纹以增加验证。
+
+然后你将下载压缩归档和数字签名文件。使用 `gunzip` 将 `.gz` 文件解压缩为 `.tar` 文件。然后，使用 `gpg` 命令和 `--verify` 选项，使用 `.sig` 文件中的数字签名来检查软件压缩归档的真实性和完整性。
+
+```
+# gpg --verify sendmail.8.12.0.tar.sig sendmail.8.12.0.tar
+gpg: Signature made Fri 07 Sep 2001 07:21:30 PM PDT using RSA key ID
+CC374F2D
+gpg: Good signature from "Sendmail Signing Key/2001 <sendmail@Sendmail.ORG>"
+```
+
+你也可以只指定签名文件，`gpg` 将自动搜索并选择同名但不带 `.sig` 或 `.asc` 扩展名的文件。
+
+```
+# gpg --verify sendmail.8.12.0.tar.sig
+```
+
+将来，当你从 Sendmail 网站下载使用此密钥的任何软件时，你只需执行 `--verify` 操作即可。请记住，不同的软件包可能使用不同的密钥。你必须确保已导入并签署了你要检查的软件的相应密钥。
+
+## 入侵检测：Tripwire
+
+当有人入侵系统时，他们通常会尝试通过对系统管理文件（如密码文件）进行自己的更改来获得控制。他们可以创建自己的用户和密码信息，以便随时访问，或简单地更改 `root` 用户密码。他们也可以用自己的版本替换整个程序，例如登录程序。检测此类操作的一种方法是使用 `Tripwire` 或 `AIDE` 等完整性检查工具来检测系统管理文件的任何更改。`AIDE`（高级入侵检测环境）是 `Tripwire` 的替代品。它提供易于配置和详细的报告。两者均不包含在 Red Hat 中。
+
+完整性检查工具首先为每个要检查的文件或程序创建唯一标识符的数据库。这些可以包括权限和文件大小等特征，但更重要的是，由文件内容生成的加密算法产生的校验和数字。例如，在 `Tripwire` 中，默认标识符是像 MD5 修改摘要算法和 Snefru（Xerox 安全哈希算法）这样的算法创建的校验和数字。提供文件唯一标识的加密值称为签名。实际上，签名提供了文件内容的准确快照。然后定期通过再次生成其标识符并将其与数据库中的标识符进行匹配来检查文件和程序。`Tripwire` 将生成当前文件和程序的签名，并将其与为其数据库先前生成的数值进行匹配。任何差异都被记为文件更改，`Tripwire` 然后通知你这些更改。
+
+注意 你也可以检查日志文件是否存在任何可疑活动。有关系统日志的讨论，请参阅第 27 章。特别是 `/var/log/messages` 对于检查用户登录、FTP 连接和超级用户登录等关键事件很有帮助。
+
+## 互联网安全协议：IPsec
+
+互联网安全协议（IPsec）将网络安全传输功能直接集成到互联网协议（IP）中。IPsec 已集成到新的 IPv6 协议（互联网协议第 6 版）中，也可与较旧的 IPv4 协议配合使用（见第 38 章）。IPsec 提供了加密数据以及验证数据发送目标主机或网络的方法。该过程可以手动处理，也可以使用 IPsec 的 `racoon` 密钥交换工具自动处理。借助 IPsec，内核可以自动检测并解密传入的传输数据，同时加密传出的数据。你还可以使用 IPsec 实现虚拟专用网络，对通过互联网从一个本地网络发送到另一个本地网络的数据进行加密。尽管 IPsec 是一种相对较新的安全方法，但它集成到互联网协议中，最终将使其得到广泛接受。
+
+
+
+目前已有多个项目致力于IPsec工具的开发与实现。最初的IPsec工具由KAME项目提供，网址为www.kame.net。当前版本可从sourceforge.net/projects/ipsec-tools获取。RPM包可从rpmfind.net获取。其他IPsec工具项目包括Free Secure/Wide Area Network项目（FreeS/WAN），网址为www.freeswan.org，该项目提供IPsec工具的Linux实现；以及VPN Consortium（VPNC），网址为www.vpnc.org，支持Windows和Macintosh版本。FreeS/WAN既提供Red Hat RPM包，也提供其工具的源代码。
+
+> **注意：** 目前，Fedora Core不包含对IPsec工具的支持，但后续版本会支持。`redhat-config-network`工具包含IPsec支持的面板，但您需要安装IPsec工具才能激活此支持。
+
+### IPsec协议
+
+IPsec由多个协议组成，用于提供认证（AH）、加密（ESP）以及加密密钥的安全交换（IKE）。认证头协议（AH）确认数据包由发送者发送，而非他人。IPsec还包含完整性检查，用于检测传输过程中是否有任何篡改。数据包使用封装安全载荷（ESP）进行加密。加密和解密使用发送方与接收方共享的密钥执行。这些密钥本身通过互联网密钥交换协议传输，该协议提供安全交换。ESP加密可能会降低某些压缩传输方法的性能，例如用于拨号互联网连接的PPP。为适应这些压缩方法，IPsec提供了IP载荷压缩协议（IPComp），数据包在发送前可先进行压缩。
+
+AH、ESP和IPComp协议已集成到Linux内核中。IKE协议作为独立的守护进程实现。它只提供共享密钥的方式，也可以用其他共享方法替代。
+
+### IPsec模式
+
+您可以将IPsec功能用于普通传输或数据包隧道。在普通传输模式下，数据包被加密后发送到下一个目的地。普通传输模式用于实现直接的主机到主机加密，每台主机都自行处理IPsec加密过程。数据包隧道用于加密网关之间的传输，让网关处理进出整个网络的流量的IPsec加密过程，而不必为每台主机配置IPsec加密。利用数据包隧道，数据包会封装上针对特定目的地的新报头，从而能够实现虚拟专用网络（VPN）。数据包被定向到VPN网关，网关对本地网络数据包进行加密并发送出去。
+
+> **注意：** 您可以选择为特定主机或通过特定端口的数据包进行加密。
+
+### IPsec安全数据库
+
+您选择加密的数据包由IPsec安全策略数据库（SPD）指定。加密方法由IPsec安全关联数据库（SAD）确定。SAD将加密方法和密钥与特定连接或某种连接相关联。需要加密的连接在安全策略数据库中指定。
+
+### IPsec工具
+
+系统提供了几种IPsec工具，您可以使用它们管理IPsec连接（见表17-1）。`libipsec`工具用于构建密钥库。使用`setkey`可以管理策略和关联数据库。`racoon`工具用于配置密钥交换过程，以在连接之间实现安全的解密密钥交换。要查看SPD数据库中当前的安全策略，可以使用`setkey -DP`。对于SAD中的安全关联，可以使用`setkey -D`。
+
+> **注意：** 要在内核中启用IPsec，请务必在“加密选项”中启用PF_KEY、AH和ESP选项。
+
+| 工具 | 描述 |
+| --- | --- |
+| libipsec | 构建 PFKey |
+| setkey | 管理策略 (SPD) 和关联 (SAD) 数据库 |
+| racoon | 使用 IPsec 密钥交换 (IKE) 配置和实现安全密钥交换 |
+| setkey-SP | 检查 SAD 数据库中的安全关联 |
+| setkey-DP | 检查 SDP 数据库中的安全策略 |
+
+表 17-1 IPsec 工具
+
+## IPsec 和 IP 表
+
+IPTables 过滤会阻止许多 IPsec 数据包。要使 IPTables 允许 IPsec 数据包通过，请使用以下 IPTables 命令。AH 协议的编号为 51，ESP 协议为 50。要允许 IPsec 数据包，应设置如下策略规则。
+
+```
+iptables -A INPUT -p 50 -j ACCEPT
+iptables -A OUTPUT -p 51 -j ACCEPT
+```
+
+## 使用 redhat-config-network 配置 IPsec
+
+`redhat-config-network`工具现在提供了实现 IPsec 连接的支持。在`redhat-config-network`工具中，选择 IPsec 面板（见图 17-1）并单击 New 以启动 IPsec 设置向导来创建 IPsec 连接。首先要求你为连接输入一个昵称并指定是否希望自动启动。然后你选择连接类型。这可以是主机到主机的直接连接或两个网络之间的连接。网络连接实现虚拟专用网络 (VPN) 并以隧道模式运行 IPsec。（主机和 VPN 连接均在以下各节中详细描述。）然后你选择要使用的加密类型。这可以是手动的或使用 IKE，让`racoon`自动管理加密和身份验证过程。
+
+然后你将配置本地和远程连接，首先从本地设置开始。对于主机到主机连接，你只需输入远程主机的 IP 地址。对于 VPN，你需要输入本地和远程网络的相应地址。对于本地网络，你需要输入本地网络的 IP 地址、本地网络的网关计算机以及本地网络的网络掩码。对于远程 VPN 连接，你需要远程 IP 地址、远程网络的地址、其网络掩码和其网关地址。最后，你将输入身份验证密钥。单击 Generate 按钮来创建一个。
+
+最终屏幕将显示你的条目。单击 Apply 以保存它们。你的连接将出现在 IPsec 面板中，显示其类型、目标和昵称。要建立连接，请选择 IPsec 连接并单击 Activate。这将运行`/etc/sysconfig/network-scripts`目录，该目录将执行`setkey`和`racoon`等 IPsec 工具以建立你的连接。配置数据将保存在`/etc/sysconfig/networking/devices`目录中，使用 IPsec 连接的名称。例如，myipsec IPsec 连接的配置信息保存在`ifcfg-myipsec`文件中。每个连接对应的密钥保存在 keys 文件中，包括`keys-myipsec`。以下是 VPN 的示例配置。IKE 方法为预共享密钥 (PSK)。目标（远程）网关为 10.0.0.1，源（本地）网关为 192.168.0.1。目标（远程）网络地址为 10.0.0.0/24，源（本地）地址为 192.168.0.0/24。目标主机为 10.0.0.2。
+
+```
+ONBOOT=no
+IKE_METHOD=PSK
+DSTGW=10.0.0.1
+SRCGW=192.168.0.1
+DSTNET=10.0.0.0/24
+SRCNET=192.168.0.0/24
+DST=10.0.0.2
+TYPE=IPSEC
+```
+
+## 使用 setkey 配置连接
+
+要配置你的 IPsec 连接，可以使用`setkey`工具。该工具包含用于管理 IPsec 策略和安全数据库中规则的多个指令。你使用`add`指令向安全数据库 (SAD) 添加安全关联，并使用`spadd`指令向策略数据库 (SPD) 添加策略。`ah`术语表示该指令应用于身份验证头 (AH)，而`esp`表示由加密安全有效载荷 (ESP) 实现的加密。要实现`setkey`操作，最好使用调用`setkey`并带`-f`选项的脚本，并列出`setkey`指令。以下示例创建了一个简单的脚本，以为特定连接添加身份验证和加密指令，以及为其创建安全策略：
+
+```
+#!/sbin/setkey -f
+add 192.168.0.2 192.168.0.5 ah 15700 -A hmac-md5 "secret key";
+```
+
+```
+add 192.168.0.2 192.168.0.5 esp 15701 -E 3des-cbc "secret key ";
+spdadd 192.168.0.2 192.168.0.5 any -P out ipsec
+esp/transport//require
+ah/transport//require;
+```
+
+## 安全关联：SA
+
+你使用安全关联来指示你希望对身份验证头 AH 和加密有效载荷 ESP 进行加密。特定连接，例如两个主机之间的连接，可以使用指定的加密方法和指定的密钥对其身份验证头进行加密。对加密有效载荷，即传输的主要内容，也可以这样做。密钥可以通过手动确定或使用密钥交换自动确定。以下示例指定对于 192.168.0.2 和 192.168.0.5 之间的连接，将使用 hmac-md5 身份验证方法和一个密钥 对身份验证头 ah 使用，这里用占位符 secret key 表示。
+
+```
+add 192.168.0.2 192.168.0.5 ah 15700 -A hmac-md5 "secret key";
+```
+
+加密有效载荷的安全关联使用 3des-cbc 加密方法和不同的密钥。
+
+```
+add 192.168.0.2 192.168.0.5 esp 15701 -E 3des-cbc "secret key";
+```
+
+
+
+每个指令都用安全参数索引 `SPI` 标识，在本例中为 `15700` 和 `15701`。事实上，具有不同 `SPI` 的相同指令被视为不同的指令。请记住，安全关联仅指定可能的加密过程。它们不会实现它们。为此，你需要设置安全策略。
+
+## 安全策略：SP
+
+安全策略将为连接实现 `IPsec` 安全程序。你可以指定主机或端口连接。一旦为连接设置了策略，内核将使用 `SAD` 数据库确定要应用哪些安全关联。安全策略通过 `spdadd` 指令添加。可以要求加密、身份验证或两者兼有。
+
+以下示例将加密并对主机 `192.168.0.2` 和 `192.168.0.5` 之间的传输进行身份验证。这些主机之间的任何传出传输都将被加密和身份验证。
+
+```
+spdadd 192.168.0.2 192.168.0.5 any -P out ipsec esp/transport//require ah/transport//require;
+```
+
+在 `spdadd` 指令中，你需要指定连接，例如两个主机或两个网络之间的连接。对于两个主机，你将使用它们的 `IP` 地址，在本例中为 `192.168.0.2` 和 `192.168.0.5`。然后你指定数据包的类型和其方向，在本例中为任何传出数据包，`any -P out`。然后你可以为 `ESP` 或 `AH` 协议指定 `ipsec` 指令，或两者兼有。对于每个条目，你指定模式 `transport` 或 `tunnel`，涉及的主机 这在隧道模式下可能不同，以及加密的策略，通常为 `require`。以下示例显示 `ESP` 协议将对 `192.168.0.2` 和 `192.168.0.5` 之间的连接使用传输模式，并且它将被要求。
+
+```
+esp/transport/192.168.0.2-192.168.0.5/require
+```
+
+如果你想省略主机信息，可以在与前一个示例相同的情况下省略。
+
+```
+esp/transport//require
+```
+
+## 接收主机
+
+为了使主机接收加密的 `IPsec` 传输，它必须在其自己的 `SAD` 数据库中有相应的安全关联指令，告诉它如何对接收到的指令进行身份验证和解密。安全关联指令将镜像发送方指令，使用相同的加密方法、密钥和安全索引。相应的策略则不是必需的。
+
+```
+#!/sbin/setkey -f
+add 192.168.0.2 192.168.0.5 ah 15700 -A hmac-md5 "secret key";
+add 192.168.0.2 192.168.0.5 esp 15701 -E 3des-cbc "secret key";
+```
+
+接收主机可能希望设置策略来筛选安全连接上的传入数据包，丢弃未加密的数据包。以下策略将仅接受来自 `192.168.0.2` 的加密和经过身份验证的传入 `IPsec` 传输。
+
+```
+spdadd 192.168.0.2 192.168.0.5 any -P in ipsec esp/transport//require ah/transport//require;
+```
+
+## 双向传输
+
+前面的示例设置了两个主机之间的安全连接，仅单向，从 `192.168.0.2` 到 `192.168.0.5`，而不是反向，从 `192.168.0.5` 到 `192.168.0.2`。要实现两个主机之间的双向安全传输，两者都需要配置为发送方和接收方，并具有匹配的相应安全关联。以下脚本基于两个主机之间简单双向 `IPsec` 连接的常见示例。它们在主机 `192.168.0.2` 和 `192.168.0.5` 之间设置了安全的双向 `IPsec` 连接。还包括相应的传入策略，但不是必需的。首先是主机 `192.168.0.2` 的配置：
+
+```
+#!/sbin/setkey -f
+add 192.168.0.2 192.168.0.5 ah 15700 -A hmac-md5 "secret key";
+add 192.168.0.5 192.168.0.2 ah 24500 -A hmac-md5 "secret key";
+
+add 192.168.0.2 192.168.0.5 esp 15701 -E 3des-cbc "secret key";
+add 192.168.0.5 192.168.0.2 esp 24501 -E 3des-cbc "secret key";
+
+spdadd 192.168.0.2 192.168.0.5 any -P out ipsec esp/transport//require ah/transport//require;
+spdadd 192.168.0.5 192.168.0.2 any -P in ipsec esp/transport//require ah/transport//require;
+```
+
+```
+#!/sbin/setkey -f
+
+add 192.168.0.5 192.168.0.2 ah 15700 -A hmac-md5 "secret key";
+
+add 192.168.0.2 192.168.0.5 ah 24500 -A hmac-md5 "secret key";
+
+add 192.168.0.5 192.168.0.2 esp 15701 -E 3des-cbc "secret key";
+
+add 192.168.0.2 192.168.0.5 esp 24501 -E 3des-cbc "secret key";
+
+spdadd 192.168.0.5 192.168.0.2 any -P out ipsec esp/transport//require ah/transport//require
+
+spdadd 192.168.0.2 192.168.0.5 any -P in ipsec esp/transport//require ah/transport//require
+```
+
+## 使用 racoon 配置 IPsec：IKE
+
+`IPsec` 密钥可以手动密钥、共享密钥或证书的形式实现。手动密钥需要显式交换，容易产生安全问题。共享密钥和证书均通过 `IPsec` 密钥交换协议管理，该协议会自动交换密钥，并进行随机更改以避免被探测。
+
+使用 `IKE` 的优点之一是，如果未提供任何安全关联，它将自动生成所需的安全关联。这意味着，使用 `IKE` 配置安全连接时，只需要指定安全策略，而无需指定安全关联。
+
+`racoon` 工具是 `IPsec IKE` 协议的密钥交换守护进程。对于共享密钥，`racoon` 使用预共享的私密密钥对主机进行动态认证。对于证书方法，主机通过证书文件进行认证。`racoon` 配置文件位于 `/etc/racoon/racoon.conf`。你可以在此设置常规参数。对于大多数连接，可以使用默认的 `racoon.conf` 文件。
+
+`racoon` 配置由包含可能连接参数的配置节组成。下面的示例展示了一个非常简单的配置，该配置使用一个简单的共享密钥。位置由 `path pre_shared_key` 选项指定，本例中为 `/etc/racoon/psk.txt`。证书密钥是一种使用公钥和私钥的更安全方法，将在后面讨论。
+
+```
+path pre_shared_key "/etc/racoon/psk.txt";
+
+remote anonymous
+{
+    exchange_mode aggressive,main;
+    doi ipsec_doi;
+    situation identity_only;
+
+    my_identifier address;
+
+    lifetime time 2 min;  # sec,min,hour
+    initial_contact on;
+    proposal_check obey;  # obey, strict or claim
+
+    proposal {
+        encryption_algorithm 3des;
+        hash_algorithm sha1;
+        authentication_method pre_shared_key;
+        dh_group 2 ;
+    }
+}
+sainfo anonymous
+{
+    pfs_group 1;
+    lifetime time 2 min;
+    encryption_algorithm 3des, blowfish, des, cast128, rijndael ;
+    authentication_algorithm hmac_sha1, hmac_md5;
+    compression_algorithm deflate ;
+}
+```
+
+此配置定义了默认（匿名）连接的配置节。`remote anonymous` 配置节定义了连接远程系统的参数，`sainfo anonymous` 部分则提供了安全关联指令的信息，例如要使用的加密和认证方法。
+
+## 证书
+
+要使用证书代替共享密钥，首先必须使用 `OpenSSL` 创建证书，然后指示 `racoon` 使用这些证书。请指定证书的路径。
+
+```
+path certificate "/usr/local/etc/racoon/certs";
+```
+
+
+
+现在你可以配置 `racoon` 使用由证书生成的公钥和私钥。在 `/etc/racoon/racoon.conf` 文件的相应配置节中，`certificate type` 指令指定本系统的公钥和私钥。`peers_certfile` 指令指定远程系统公钥的位置。`authentication_method` 指令现在设置为 `rsasig`，即 RSA 公钥/私钥。请确保每个系统都有其对应的公钥和私钥。
+
+```
+certificate_type x509 "192.168.0.2.public" "192.168.0.2.private";
+peers_certfile "192.168.0.5.public";
+authentication_method rsasig;
+```
+
+## 使用 racoon 配置连接
+
+使用 `racoon` 时，只需要为连接配置指定安全策略，如下所示是发送方的配置。接收方将有相应的策略：
+
+```
+spdadd 192.168.0.5 192.168.0.2 any -P out ipsec
+    esp/transport//require;
+    ah/transport//require;
+spdadd 192.168.0.2 192.168.0.5 any -P in ipsec
+    esp/transport//require;
+    ah/transport//require;
+```
+
+## IPsec 隧道模式：虚拟专用网络
+
+无需直接加密两台主机，你可以使用 IPsec 仅加密主机所属网络之间的网关，前提是这些网络内部的通信
+
+`networks` 可以被信任。这将显著减少加密配置的设置，让一个网络中的主机通过其网关之间的中间安全 IPSec 连接到达另一个网络的主机。对于网关之间的连接，通过中间路由器的传输可以被隧道化。这被称为 IPSec 的隧道模式，用于实现虚拟专用网络（VPN）。网关之间的加密传输有效地实现了 VPN，在从一个本地网到另一个本地网的更大网络范围内保护传输。
+
+要将主机通过网关隧道传输到网络，你需要使用 `-m tunnel` 选项。IPSec 连接将在两个网关之间建立。以下示例是网关 `10.0.0.1` 上的安全关联，用于加密从网关 `10.0.0.1` 到网关 `10.0.23.5` 的传输。此处使用的示例是网关到网关的连接，使用手动密钥在两个主机之间设置直接连接。
+
+```
+add 10.0.0.1 10.0.23.5 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+```
+
+`10.0.0.1` 上的安全策略随后使用各自的网关实现从一个网络到另一个网络的通信的加密。两个网络分别是 `192.168.0.0` 和 `192.168.1.0`。来自 `192.168.0.0` 网络主机的传输由其网关 `10.0.0.1` 加密，然后发送到 `192.168.1.0` 网络的网关 `10.0.23.5`，后者再对其进行解密。
+
+```
+spdadd 192.168.0.0/24 192.168.1.0/24 any -P out ipsec esp/tunnel/10.0.0.1-10.0.23.5/require;
+```
+
+请注意，网关 IP 地址在 `spdadd` 指令的 `ipsec` 指令中指定。指定的模式是隧道模式，而不是传输模式。
+
+```
+ipsec esp/tunnel/10.0.0.1-10.0.23.5/require
+```
+
+接收网关 `10.0.23.5` 将具有相应的安全关联和策略，如下所示。策略设置为入站传输。在两个网关配置中，除了指定隧道选项并在安全策略中使用网络地址外，安全关联和策略与用于主机到主机连接的相同。
+
+```
+add 10.0.0.1 10.0.23.5 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+```
+
+```
+spdadd 192.168.0.0/24 192.168.1.0/24 any -P out ipsec esp/tunnel/10.0.0.1-10.0.23.5/require;
+```
+
+```
+spdadd 192.168.1.0/16 192.168.0.0/24 any -P in ipsec esp/tunnel/10.0.23.5-10.0.0.1/require;
+```
+
+如果你使用 `racoon` 来配置网关连接，你只需在每个网关上设置安全策略，让 `racoon` 服务器生成所需的安全关联即可。
+
+## 用于虚拟专用网络的 Crypto IP 封装
+
+Red Hat 目前仍支持使用 Crypto IP 封装（CIPE），作为实现虚拟专用网络的 IPsec 替代方案。你使用 Internet 配置向导创建 CIPE VPN 连接，选择 CIPE 条目。然后配置隧道屏幕将显示用于配置连接的条目。对于初始连接，将选择第一个 CIPE 设备 `cipcb0`。然后你可以选择你的隧道通过设备，例如以太网连接之类的网络设备。如果你选择服务器模式，则任何设备都可用于 CIPE 连接。对于端口，`7777` 是默认值，尽管你也可以选择特定端口。然后你可以选择虚拟本地和远程地址并生成一个密钥。
+
+本质上，CIPE 在两台计算机之间建立点对点加密连接。两者都需要运行 CIPE。其中一台将作为服务器运行，通常是第一个配置的，另一台作为客户端。服务器将生成用于加密的密钥，该密钥将传输给客户端。客户端在连接时将提供远程对等地址和端口。服务器将远程对等地址条目指定为服务器模式，让地址和对等端口在客户端连接时自动确定。两台系统使用的端口通常为 `7777`。传输以加密的 UCP 数据包发送。确保你已打开防火墙以允许在指定的 VPN 端口 `7777` 上的传输。
+
+每台计算机将拥有自己的本地 IP 地址以供识别。这些可以是为本地地址保留的任何私有 IP 地址，通常从 `192.168` 开始，例如 `192.168.10.1` 和 `192.168.10.2`（参见第 38 章）。如果你已在本地网络上使用这些地址运行，请确保你没有使用已在使用的重复地址。出于这个原因，你可以将其指定为单独的子网，如本示例中所示，使用 `10` 作为子网，而不是 `0`，`192.168.10.1`。你想要用于 VPN 的私有 IP 地址应输入到远程和本地虚拟地址条目中，本地用于你的计算机，远程用于另一台计算机。
+
+在条目下方的窗口中，列出了客户端计算机的相应条目。这些通常是你的条目的反向。实际的配置信息将放在 `/etc/sysconfig/network-scripts` 目录中，位于 CIPE 连接的设备文件中，如 `ifcfg-cipcb0`。远程计算机的实际远程 IP 地址和端口将列在 `PEER` 条目中，其 VPN 地址列在 `PTRADDR` 条目中。远程计算机将拥有自己的 `ifcfg-cipcb0` 文件，其中列出你的计算机的实际 IP 地址在其 `PEER` 条目中，以及你的 VPN 地址在其 `PTRADDR` 条目中。
+
+## CHAPTER
+
+## 安全 Shell 和 Kerberos
+
+为了保护来自网络外部主机的远程连接，传输可以被加密。对于 Linux 系统，你可以使用 Secure Shell（SSH）套件程序来加密和验证传输，防止他人读取或修改，以及确认发送者的身份。SSH 程序旨在取代远程工具如 `rsh` 和 `rcp`（参见第 15 章），这些工具不执行任何加密，并且存在安全风险，例如以明文传输密码。用户身份验证可以通过 Kerberos 服务器对某些服务进行控制。Kerberos 身份验证提供另一层安全保护，其中可以保护各个服务，仅允许已获授权访问的用户使用该服务。
+
+## 安全 Shell：OpenSSH
+
+尽管防火墙可以保护网络免受外部入侵的尝试，但从外部来源对网络进行合法通信的安全问题仍然存在。一个特别的问题是希望远程连接到你的网络的用户。此类连接可能会被监控，并且用户登录你的网络时使用的密码和用户 ID 等信息可能会被复制并稍后用于入侵。一个解决方案是使用 SSH 进行远程登录和其他类型的远程连接，例如 FTP 传输。SSH 对远程用户与网络上的系统之间的任何通信进行加密。
+
+目前有两种不同的 SSH 实现，实际上使用两种不同且不兼容的协议。第一个版本的 SSH，称为 `SSH1`，使用原始的 SSH 协议。2.0 版，称为 `SSH2`，使用完全重写的 SSH 协议。加密以不同方式执行，加密数据包的不同部分。`SSH1` 使用服务器和主机密钥来验证系统，而 `SSH2` 仅使用主机密钥。此外，某些功能，例如 `sftp`，仅由 `SSH2` 支持。
+
+> NOTE SSH Communications Security 提供了一个商业版本的 SSH，其网站为 www.ssh.com。SSH Communications Security 为非商业用途免费提供 SSH，并通过 Datafellows 出售 SSH 用于商业用途。
+
+SSH 协议已成为互联网工程任务组（IETF）的官方标准。免费和开源版本由 OpenSSH 项目开发和维护，目前由 OpenBSD 项目支持。OpenSSH 是随大多数 Linux 发行版提供的版本，包括 Red Hat、Mandrake、Caldera、SUSE 和 Debian。你可以在 www.openssh.org 了解更多关于 OpenSSH 的信息，在那里你可以下载最新版本，尽管你的发行版会提供当前的 RPM 版本。
+
+
+
+## SSH 加密和身份验证
+
+SSH 通过验证用户身份并加密其传输来保护连接。身份验证过程使用公钥加密处理（参见第 16 章）。一旦通过身份验证，传输就会由 SSH 服务器和客户端为特定会话商定的密码进行加密。SSH 支持多种密码。身份验证适用于主机和用户。SSH 首先验证特定主机，确认它是可以安全通信的有效 SSH 主机。然后验证用户，确认用户就是他们声称的人。
+
+SSH 使用强大的加密方法，其从美国的出口可能受到限制。目前，SSH 可以处理以下类型的攻击：
+
+- IP 欺骗，即远程主机发送伪装成来自另一个受信任主机的包
+- IP 源路由，即主机可以伪装 IP 数据包来自另一个受信任主机
+- DNS 欺骗，即攻击者伪造名称服务器记录
+- 中间主机截获明文密码和其他数据
+- 受中间主机控制的人员对数据的操纵
+- 基于监听 X 身份验证数据和对 X11 服务器的伪造连接的攻击
+
+## 加密
+
+SSH 身份验证中使用的公钥加密使用两个密钥：公钥和私钥。公钥用于加密数据，而私钥用于解密。每个主机或用户都有自己的公钥和私钥。公钥分发给其他主机，然后它们可以使用它来加密只有主机私钥才能解密的身份验证数据。例如，当一台主机向另一系统上的用户发送数据时，主机使用之前从该用户接收到的公钥加密身份验证数据。数据只能由用户对应的私钥解密。公钥可以安全地在主机之间公开发送，从而可以安全地安装在不同的主机上。你可以将该过程视为在客户端和服务器之间进行。当客户端向服务器发送数据时，它首先使用服务器的公钥加密数据。然后服务器可以使用自己的私钥解密数据。
+
+建议使用由密码短语控制的公钥-私钥对对 SSH 传输进行身份验证。与 PGP 不同，SSH 仅在身份验证过程中使用公钥加密。一旦通过身份验证，参与者就会就用于加密传输的通用密码达成一致。身份验证将验证参与者的身份。每个打算使用 SSH 访问远程账户的用户首先需要创建公钥和私钥以及用于身份验证过程的密码短语。然后用户发送他们的public key to the remote account they want to access and installs the public key on that account. When the user attempts to access the remote account, that account can then use the user’s public key to authenticate that the user is who they claim to be. The process assumes that the remote account has set up its own SSH private and public key. For the user to access the remote account, they will have to know the remote account’s SSH passphrase. SSH is often used in situations where a user has two or more accounts located on different systems and wants to be able to securely access them from each other. In that case, the user already has access to each account and can install SSH on each, giving each its own private and public keys along with their passphrases.
+
+## Authentication
+
+The mechanics of authentication in SSH version 1 and version 2 differ slightly. However, the procedure on the part of users is the same. Essentially, a user creates both public and private keys. For this, you use the `ssh-keygen` command. The user’s public key then has to be distributed to those users that the original user wants access to. Often this is an account a user has on another host. A passphrase further protects access. The original user will need to know the other user’s passphrase to access it.
+
+SSH Version 1 uses RSA authentication. When a remote user tries to log in to an account, that account is checked to see if it has the remote user’s public key. That public key is then used to encrypt a challenge (usually a random number) that can be decrypted only by the remote user’s private key. When the remote user receives the encrypted challenge, that user decrypts the challenge with its private key. SSH Version 2 can use either RSA or DSA authentication. The remote user will first encrypt a session identifier using its private key, signing it. The encrypted session identifier is then decrypted by the account using the remote user’s public key. The session identifier has been previously set up by SSH for that session.
+
+SSH authentication is first carried out with the host, and then with users. Each host has its own host keys, public and private keys used for authentication. Once the host is authenticated, the user is queried. Each user has their own public and private keys. Users on an SSH server who want to receive connections from remote users will have to keep a list of those remote user’s public keys. Similarly, an SSH host will maintain a list of public keys for other SSH hosts.
+
+## SSH Tools
+
+SSH is implemented on Linux systems with OpenSSH. The full set of OpenSSH packages includes the general OpenSSH package (`openssh`), the OpenSSH server (`openssh-server`), and the OpenSSH clients (`openssh-clients`). These packages also require OpenSSL (`openssl`), which installs the cryptographic libraries that SSH uses. You can easily update them from distribution FTP.
+
+
+
+The SSH tools are listed in Table 18-1. They include several client programs like `scp` and `ssh`, as well as the `ssh` server. The `ssh` server (`sshd`) provides secure connections to anyone from the outside using the `ssh` client to connect. Several configuration utilities are also included, such as `ssh-add`, which adds valid hosts to the authentication agent, and `ssh-keygen`, which generates the keys used for encryption.
+
+On Red Hat, you can start, restart, and stop the `sshd` server with the `service` command or `redhat-config-services` (Services on Server Settings window and menu):
+
+```
+service sshd restart
+```
+
+For version 2, names of the actual tools have a 2 suffix. Version 1 tools have a 1 as their suffix. During installation, however, links are set for each tool to use only the name with the suffix. For example, if you have installed version 2, there is a link called `scp` to the `scp2` application. You can then use the link to invoke the tool. Using `scp` starts `scp2`. Table 18-1 specifies only the link names, as these are the same for each version. Remember, though, some applications, such as `sftp`, are available only with version 2.
+
+## SSH Setup
+
+Using SSH involves creating your own public and private keys and then distributing your public key to other users you want to access. These can be different users or simply user accounts of your own that you have on remote systems. Often people remotely log in from a local client into an account on a remote server, perhaps from a home computer to a company computer. Your home computer would be your client account, and the account on your company computer would be your server account. On your client account, you would need to generate your public and private keys. Then you would have to place a copy of your
+
+| Application | Description |
+|---|---|
+| `ssh` | SSH client. |
+| `sshd` | SSH server (daemon). |
+| `sftp` | SSH FTP client, Secure File Transfer Program. Version 2 only. Use `?` to list `sftp` commands (SFTP protocol). |
+| `sftp-server` | SSH FTP server. Version 2 only (SFTP protocol). |
+| `scp` | SSH copy command client. |
+| `ssh-keygen` | Utility for generating keys. `-h` for help. |
+| `ssh-keyscan` | Tool to automatically gather public host keys to generate `ssh_known_hosts` files. |
+| `ssh-add` | Adds RSA and DSA identities to the authentication agent. |
+| `ssh-agent` | SSH authentication agent that holds private keys for public key authentication (RSA, DSA). |
+| `ssh-askpass` | X Window System utility for querying passwords, invoked by `ssh-add` (openssh-askpass). |
+| `ssh-askpass-gnome` | GNOME utility for querying passwords, invoked by `ssh-add`. |
+| `ssh-signer` | Signs host-based authentication packets. Version 2 only. Must be suid root (performed by installation). |
+| `slogin` | Remote login (version 1). |
+
+服务器账户中的公钥。你可以通过简单地通过电子邮件发送密钥文件或从软盘复制文件来完成此操作。一旦你的服务器上的账户拥有了你的客户端用户的公钥副本，你就可以从客户端账户访问服务器账户。你还将被提示输入服务器账户的密码短语。你必须知道它才能访问该账户。图 18-1 说明了允许用户 `george` 访问账户 `cecelia` 的 SSH 设置。
+
+要允许你使用 SSH 访问其他账户，需要以下步骤：
+
+- 在你的账户上创建公钥和私钥以及密码短语。你需要使用此密码短语从另一个账户访问你的账户。
+- 将你的公钥分发到你想要访问的其他账户中，将其放置在 `.ssh/authorized_keys` 文件中。
+- 其他账户也必须设置公钥和私钥以及密码短语。
+- 你还需要知道其他账户的密码短语才能访问它。
+
+### 使用 ssh-keygen 创建 SSH 密钥
+
+你使用 `ssh-keygen` 命令创建公钥和私钥。你需要指定要使用的加密类型。你可以使用 DSA 或 RSA 加密。使用 `-t` 选项并以小写形式指定加密名称（`dsa` 或 `rsa`）。在以下示例中，用户使用 RSA 加密创建了一个密钥：
+
+```
+ssh-keygen -t rsa
+```
+
+`ssh-keygen` 命令会提示你输入密码短语，它将用作保护你的私钥的密码。密码短语应由多个单词组成。你还将被提示输入密钥的文件名。如果未输入，SSH 将使用其默认值。公钥将获得 `.pub` 扩展名。`ssh-keygen` 命令会生成公钥并将其放置在 `.ssh/id_dsa.pub` 或 `.ssh/id_rsa.pub` 文件中，具体取决于你指定的密钥类型；它将私钥放置在相应的 `.ssh/id_dsa` 或 `.ssh/id_rsa` 文件中。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_350_0.png)
+
+图 18-1 SSH 设置和访问
+
+> 注意 `.ssh/identity` 文件名在 SSH 版本 1 中使用；在较旧的发行版版本上可能默认安装。SSH 版本 2 使用不同的文件名，`.ssh/id_dsa` 或 `.ssh/id_rsa`，具体取决于使用 RSA 或 DSA 身份验证。
+
+如果需要更改你的密码短语，你可以使用 `ssh-keygen` 命令和 `-p` 选项。每个用户都将在自己的主目录中拥有自己的 SSH 配置目录，称为 `.ssh`。公钥和私钥以及 SSH 配置文件都放在这里。如果你从源代码构建，`make install` 操作将自动运行 `ssh-keygen`。表 18-2 列出了 SSH 配置文件。
+
+## 授权密钥
+
+
+
+公钥用于验证用户及其主机。你在远程系统上使用公钥允许该用户访问。公钥放置在远程用户账户的`.ssh/authorized_keys`文件中。请记住，公钥保存在`.ssh/id_dsa.pub`文件中。如果用户想从本地账户远程登录到远程系统上的账户，他们首先需要将自己的公钥放置在远程系统上要访问的账户的`.ssh/authorized_keys`文件中。如果用户`larisa`在`turtle.mytrek.com`上想要访问`rabbit.mytrek.com`上的`aleina`账户，`larisa`的公钥`/home/larisa/.ssh/id_dsa.pub`首先必须放置在`aleina`的`authorized_keys`文件`/home/aleina/.ssh/authorized_keys`中。`larisa`可以发送密钥或让其复制过去。一个简单的`cat`操作可以将密钥追加到授权密钥文件中。在下一个示例中，用户将`larisa.pub`文件中的`aleina`的公钥添加到授权密钥文件。`larisa.pub`文件是用户之前收到的`/home/larisa/.ssh/id_dsa.pub`文件的副本。
+
+```
+cat larisa.pub >> .ssh/authorized_keys
+```
+
+## 加载密钥
+
+如果你定期连接到各种远程主机，你可以使用`ssh-agent`命令将私钥放置在内存中，以便快速访问以解密接收到的传输。`ssh-agent`命令`intended`用于在登录会话开始时使用。对于`GNOME`，你可以使用`openssh-askpass-gnome`实用程序，通过`ssh-add`调用，它允许你在登录`GNOME`时输入密码。`GNOME`将在你使用`SSH`客户端时自动提供该密码。
+
+尽管`ssh-agent`命令使你能够在内存中使用私钥，但你还必须使用`ssh-add`命令将私钥显式加载到内存中。没有参数的`ssh-add`会从你的`.ssh/id_dsa`或`.ssh/id_rsa`文件加载你的私钥。你将被提示输入此私钥的密码短语。要从内存中删除密钥，请使用带`-d`选项的`ssh-add`。如果你有多个私钥，可以将它们全部加载到内存中。带`-l`选项的`ssh-add`会列出当前已加载的密钥。
+
+## SSH 客户端
+
+`SSH`最初设计用于替代远程访问操作，例如`rlogin`、`rcp`和`Telnet`（参见第 15 章），这些操作不执行任何加密并引入安全风险，例如以明文传输密码。你也可以使用`SSH`对`X`服务器会话以及`FTP`传输进行编码（`sftp`）。`ssh-clients`软件包包含相应的`SSH`客户端
+
+| File | Description |
+|---|---|
+| `$HOME/.ssh/known_hosts` | 记录用户已登录的所有主机的主机密钥（不在`/etc/ssh/ssh_known_hosts`中的）。 |
+| `$HOME/.ssh/random_seed` | 用于为随机数生成器播种。 |
+| `$HOME/.ssh/id_rsa` | 包含用户的`RSA`身份验证密钥。 |
+| `$HOME/.ssh/id_dsa` | 包含用户的`DSA`身份验证密钥。 |
+| `$HOME/.ssh/id_rsa.pub` | 包含用于身份验证的`RSA`公钥。此文件的内容应添加到所有希望使用`RSA`身份验证登录的机器上的`$HOME/.ssh/authorized_keys`中。 |
+| `$HOME/.ssh/id_dsa.pub` | 包含用于身份验证的`DSA`公钥。此文件的内容应添加到所有希望使用`DSA`身份验证登录的机器上的`$HOME/.ssh/authorized_keys`中。 |
+| `$HOME/.ssh/config` | 每个用户的配置文件。 |
+| `$HOME/.ssh/authorized_keys` | 列出可用于作为此用户登录的`RSA`或`DSA`密钥。 |
+| `/etc/ssh/ssh_known_hosts` | 系统范围的已知主机密钥列表。 |
+| `/etc/ssh/ssh_config` | 系统范围的配置文件。此文件为用户配置文件中未指定的值提供默认值。 |
+| `/etc/ssh/sshd_config` | `SSH`服务器配置文件。 |
+| `/etc/ssh/sshrc` | 系统默认值。当用户登录时，`ssh`在启动用户`shell`（或命令）之前执行此文件中的命令。 |
+| `$HOME/.ssh/rc` | 当用户登录时，`ssh`在启动用户`shell`（或命令）之前执行此文件中的命令。 |
+
+### 表 18-2 SSH 配置文件
+
+用`slogin`或`ssh`替换这些应用程序。你可以从远程主机登录以执行命令和运行应用程序，就像使用`rlogin`和`rsh`一样。使用`scp`，你可以在远程主机和网络主机之间复制文件，就像使用`rcp`一样。使用`sftp`，你可以传输通过加密保护的`FTP`文件。
+
+## ssh
+
+使用`ssh`，你可以从本地客户端远程登录到作为`SSH`服务器运行的网络上的远程系统。这里的本地客户端指的是网络外部的系统，例如你的家庭电脑，而远程指的是你连接到的网络上的主机系统。实际上，你从本地系统连接到远程网络主机。它旨在取代执行远程登录的`rlogin`和执行远程命令的`rsh`。使用`ssh`，你可以从本地站点登录到网络上的远程主机，然后发送要在该主机上执行的命令。`ssh`还能够支持`X Window System`连接。如果你在`X Window System`环境（如`GNOME`或`KDE`）中建立`ssh`连接，此功能会自动启用。为你设置了本地`X`服务器与远程`X`服务器之间的连接。远程主机设置一个虚拟`X`服务器，并将任何`X Window System`数据通过它发送到你的本地系统，由你的本地`X`服务器处理。
+
+`ssh`登录操作的功能与`rlogin`命令非常相似。你输入`ssh`命令，后跟远程主机的地址，再加上`-l`选项和你要登录的远程账户的登录名（用户名）。以下示例登录到`rabbit.mytrek.com`主机上的`aleina`用户账户：
+
+```
+ssh rabbit.mytrek.com -l aleina
+```
+
+你也可以使用用户名以地址格式使用`ssh`，如
+
+```
+ssh aleina@rabbit.mytrek.com
+```
+
+下面的列表显示了用户`george`如何访问`turtle.mytrek.com`上的`cecelia`账户：
+
+```
+[george@turtle george]$ ssh turtle.mytrek.com -l cecelia
+[cecelia@turtle.mytrek.com's password:
+Last login: Fri Sep 19 15:13:05 2003 from turtle.mytrek.com
+[cecelia@turtle cecelia]$
+```
+
+有多种选项可供你配置连接。大多数选项在配置文件中都有对应的配置选项。例如，使用`-c`选项，你可以指定要使用的加密方法，例如`idea`、`des`、`blowfish`或`arcfour`。使用`-i`选项，你可以选择要使用的特定私钥。`-C`选项可让你在指定级别压缩传输（请参阅`ssh`手册页以获取完整选项列表）。
+
+## scp
+
+你使用`scp`在网络上的主机之间复制文件。`scp`设计用于取代`rcp`，实际上使用`ssh`传输数据并采用相同的身份验证和加密方法。如果身份验证需要，`scp`会请求密码或密码短语。`scp`的操作方式与`rcp`非常相似。远程主机上的目录和文件使用用户名和主机地址在文件名或目录前指定。用户名指定`scp`访问的远程用户账户，主机是该账户所在的远程系统。你用`@`将用户与主机地址分隔开，用冒号将主机地址与文件或目录名分隔开。以下示例复制文件`party`
+
+从用户的当前目录到位于`rabbit.mytrek.com`主机上的用户`aleina`的`birthday`目录：
+
+```
+scp party aleina@rabbit.mytrek.com:/birthday/party
+```
+
+特别值得关注的是`-r`（递归）选项，它允许你复制整个目录。完整的选项列表请参见`scp`手册页。在下一个示例中，用户将整个`reports`目录复制到用户`justin`的`projects`目录：
+
+```
+scp -r reports justin@rabbit.mytrek.com:/projects
+```
+
+在下一个示例中，用户`george`从用户`cecelia`的主目录复制`mydoc1`文件：
+
+```
+[george@turtle george]$ scp cecelia@turtle.mytrek.com:mydoc1
+cecelia@turtle.mytrek.com's password:
+mydoc1      0% |                    |   0 --:--:--
+ETA
+mydoc1    100% |********************************|  17 00:00
+[george@turtle george]$
+```
+
+
+
+在 Windows 系统上，你也可以使用`scp`客户端，如`winscp`，它可以与支持`scp`的 Linux 系统交互。
+
+## `sftp` 与 `sftp-server`
+
+使用`sftp`，你可以传输经过加密保护的 `FTP` 文件。`sftp` 使用与`ftp`相同的命令（参见第 21 章）。这个客户端仅适用于`ssh`版本 2，其操作方式与`ftp`非常相似，并包含许多相同的命令。使用`sftp`而不是`ftp`来调用`sftp`客户端。
+
+```
+sftp ftp.redhat.com
+```
+
+要使用`sftp`客户端连接到 `FTP` 服务器，该服务器需要运行`sftp-server`应用程序。`ssh`服务器会调用`sftp-server`为使用`sftp`客户端的用户提供加密的 `FTP` 传输。`sftp`服务器和客户端使用 `SSH` 文件传输协议（`SFTP`）来安全地执行 `FTP` 操作。
+
+## 端口转发（隧道）
+
+如果出于某种原因，你只能通过不安全的中间主机连接到安全主机，`ssh`提供了一个称为端口转发（`port forwarding`）的功能。通过端口转发，你可以保护连接中不安全的段。这只需指定不安全主机连接到安全主机的端口即可。这将通过中间的不安全主机在本地主机和远程主机之间建立直接连接。加密数据会直接通过。这个过程被称为隧道（`tunneling`），即在相连的服务器之间创建一条加密数据的安全隧道。
+
+连接通过安全通道进行转发，并从本地机器建立到远程端口的连接。在以下示例中，本地系统上的端口 22 连接到`rabbit.mytrek.com`远程系统上的端口 23：
+
+```
+ssh -R 22:rabbit.mytrek.com:23
+```
+
+要将本地系统上的端口转发到远程系统上的端口，请使用`ssh -L`选项，后跟一个包含本地端口、远程主机地址和要转发的远程端口的参数，每个参数用冒号分隔。系统会分配一个套接字来监听本地端的端口。每当有连接建立到此端口时，连接会通过安全通道转发，并在远程机器上建立到远程端口的连接。在以下示例中，本地系统上的端口 22 连接到`rabbit.mytrek.com`远程系统上的端口 23：
+
+```
+ssh -L 22:rabbit.mytrek.com:23
+```
+
+你可以在你的`.ssh/config`文件中使用`LocalForward`和`RemoteForward`选项，为特定主机设置端口转发，或为你连接的所有主机指定默认设置。
+
+## `SSH` 配置
+
+每个用户的 `SSH` 配置文件位于其`.ssh/config`文件中。`/etc/ssh/sys_config`文件用于设置站点范围的默认值。在配置文件中，你可以设置各种选项，如`ssh_config`手册文档中所列。配置文件旨在为你可能连接的不同远程主机指定选项。它被组织成多个段，每个段以关键字`HOST`开始，后跟主机的 IP 地址。接下来的行保存你为该主机设置的选项。一个段在下一个`HOST`条目处结束。特别值得关注的是`User`和`Cipher`选项。使用`User`选项指定远程系统上允许访问的用户名。使用`Cipher`选项，你可以为特定主机选择要使用的加密方法。加密方法包括`idea`、`des`（标准）、`triple-des`（`3des`）、`blowfish`（128 位）、`arcfour`（`RSA` 的 `RC4`）和`twofish`。以下示例允许来自`turtle.mytrek.com`的`larisa`访问，并使用 `Blowfish` 加密进行传输：
+
+```
+Host turtle.mytrek.com
+  User larisa
+  Compression no
+  Cipher blowfish
+```
+
+要指定适用于你所连接的任何主机的全局选项，请创建一个以星号作为其主机的`HOST`条目，即`HOST *`。该条目必须放在配置文件的末尾，因为一个选项只在第一次设置时才会被更改。该选项的任何后续条目都会被忽略。由于主机同时匹配其自身条目和全局条目，因此其特定条目应放在全局条目之前。星号（`*`）和问号（`?`）都是通配符匹配运算符，使你可以指定具有相同后缀或前缀的一组主机。
+
+```
+Host *
+  FallBackToRsh yes
+  KeepAlive no
+  Cipher idea
+```
+
+## `Kerberos`
+
+用户认证可以通过本章讨论的`Kerberos`服务器对某些服务进行进一步控制。`Kerberos`认证提供了另一层安全保护，其中各个服务可以得到保护，仅允许已获授权的用户使用该服务。`Kerberos`服务器均已启用并通过`authconfig-gtk`配置（系统设置菜单或窗口中的身份验证）。
+
+`Kerberos`是一种网络认证协议，为客户端与服务器之间的连接提供加密认证。作为一种认证协议，`Kerberos`要求客户端在使用加密方法证明其身份后才能访问服务器。认证后，客户端和服务器可以使用加密进行所有通信。防火墙仅能防御外部攻击，而`Kerberos`设计用于同时防御来自网络内部的攻击。网络中已有的用户可能会尝试入侵本地服务器。`Kerberos`将保护措施放在服务器本身周围，而不是整个网络或计算机。麻省理工学院在`web.mit.edu/kerberos`提供了一个免费版本，采用 `MIT` 公共许可证，其与 `GNU` 公共许可证类似。名称 `Kerberos` 来自希腊神话，是冥王哈迪斯的三头看门犬。请务必查看`web.mit.edu/kerberos`网站以获取最新升级和详细文档，包括常见问题解答、手册和教程。
+
+> Tip `Kerberos V5`包包含其自己的网络工具版本，如`Telnet`、`RCP`、`FTP`和`RSH`。这些工具可通过远程用户提供安全认证访问。工具的操作方式与第 15 章中描述的原始工具相同。该包还包含`Kerberos`版本的`su`管理登录命令`ksu`。
+
+### `Kerberos` 服务器
+
+`Kerberos`的关键在于`Kerberos`服务器，所有对任何服务器服务的请求都通过该服务器进行。`Kerberos`服务器随后对客户端进行认证，识别客户端并验证客户端使用特定服务器的权利。服务器维护一个授权用户数据库。`Kerberos`然后向客户端发放一个加密票证，客户端可使用该票证访问服务器。例如，如果用户需要检查邮件，则向`Kerberos`服务器发送对邮件服务器的使用请求，`Kerberos`服务器随后对用户进行认证并发放票证，然后使用该票证访问邮件服务器。如果没有`Kerberos`发放的票证，任何人都无法访问任何服务器。最初，此过程要求用户对每个想要访问的服务器进行单独的认证过程。然而，用户现在只需进行一次初始认证，该认证对所有服务器均有效。
+
+> Tip 在 Red Hat 上，您可以使用`Kerberos`票证管理器（Extras Accessories 菜单）来管理`Kerberos`票证，并使用`authconfig-gtk`工具（系统设置窗口或菜单中的身份验证）来指定和启用`Kerberos`域。
+
+此过程实际上涉及使用两个服务器，即认证服务器（`AS`）和票证授予服务器（`TGS`）。它们共同构成了所谓的密钥分发中心（`KDC`）。实际上，它们分发用于解锁服务访问的密钥。认证服务器首先验证用户的身份。`AS`发放一张称为票证授予票证（`TGT`）的票证，允许用户访问票证授予服务器。`TGS`然后向用户发放另一张票证以实际访问服务。这样，用户在认证过程中不会以任何方式直接访问服务器。该过程比描述的要复杂一些。随票证一起发送的`authenticator`使用诸如当前时间、校验和和可选加密密钥等信息，并使用会话密钥解密。该`authenticator`由服务用于验证您的身份。
+
+> NOTE 您可以使用`klist`命令查看当前票证列表。
+
+### Authentication Process
+
+认证服务器使用其用户数据库中的信息验证用户。每个用户需要在认证服务器的数据库中注册。数据库将包括用户密码和其他用户信息。要访问认证服务器，用户提供用户名和密码。密码用于生成用户密钥，用于加密`AS`与用户之间的通信。用户将拥有自己的用户密钥副本以解密通信。认证过程如图 18-2 所示。
+
+使用 `Kerberos` 访问服务涉及以下步骤：
+
+- 1. 用户必须由认证服务器验证并获得访问票证授予服务器的票证访问密钥。您可以通过发出`kinit`命令来执行此操作，该命令会要求您输入`Kerberos`用户名，然后将其发送到认证服务器（`Kerberos`用户名通常与您的用户名相同）。
+
+    ```
+    kinit
+    ```
+
+- 2. `AS`生成一个票证授予票证以访问票证授予服务器。此票证将包含一个会话密钥，用于让您访问`TGS`。`TGT`将使用您的用户密钥（密码）加密后发回给您。
+
+FIGURE 18-2
+
+Kerberos
+
+authentication
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_357_0.png)
+
+3. `kinit`程序随后会提示你输入`Kerberos`密码，然后用它来解密`TGT`。你可以使用`kpasswd`命令来管理你的`Kerberos`密码。
+
+
+
+### 4. 使用客户端程序访问邮件服务器
+现在你可以使用客户端程序，例如邮件客户端程序来访问邮件服务器。当你这样做时，`TGT` 将被用来访问 `TGS`，然后 `TGS` 会生成一个用于访问邮件服务器的票据。`TGS` 会为仅与邮件服务器一起使用生成一个新的会话密钥。这将在发送给你用于访问邮件服务器的票据中提供。实际上，有一个用于访问 `TGS` 的 `TGT` 会话密钥，以及一个用于访问邮件服务器的邮件会话密钥。邮件服务器的票据是用 `TGS` 会话密钥加密后发送给你的。
+
+### 5. 使用邮件票据访问邮件服务器
+客户端随后使用从 `TGS` 接收到的邮件票据来访问邮件服务器。
+
+### 6. 使用其他服务
+如果你想使用 `FTP` 等其他服务，当你的 `FTP` 客户端向 `TGS` 发送获取票据的请求时，`TGS` 将自动从身份验证服务器获得授权并签发带有 `FTP` 会话密钥的 `FTP` 票据。这种支持在有限的时间内仍然有效，通常为数小时，之后你又必须使用 `kinit` 重新进行身份验证过程并访问 `TGS`。你可以使用 `kdestroy` 命令手动销毁任何你拥有的票据。
+
+> NOTE 使用 Kerberos V5（版本 5）时，提供了一个 Kerberos 登录实用程序，用户在正常登录时会自动获得票据授予票据。这避免了使用 `kinit` 手动获取 `TGT` 的需要。
+
+## Kerberized Services
+
+设置特定服务以使用 Kerberos（称为 Kerberizing）可能是一个复杂的过程。Kerberized 服务需要检查用户的身份和凭据，检查服务票据，如果没有，则获取一个。设置好后，使用 Kerberized 服务对用户来说几乎是透明的。票据会自动签发，身份验证在用户无需额外操作的情况下进行。
+
+## Configuring Kerberos Servers
+
+安装和配置 Kerberos 服务器也是一个复杂的过程。请仔细检查安装当前版本的文档。以下是一些关键区域。在 Kerberos 配置文件 `krb5.conf` 中，你可以设置诸如使用的加密方法和数据库名称等功能。安装 Kerberos 时，请务必仔细遵循提供管理访问权限的说明。`/etc/services` 文件应包含所有 Kerberized 服务的列表。这些服务例如 `kftp` 或 `klogin`，提供 Kerberos FTP 和登录服务。要运行 Kerberos，你使用 `service` 命令启动 Kerberos 服务器以及 `krb5kdc`、`kadmind` 和 `krb524` 脚本。
+
+> TIP 请查阅 Red Hat Linux 参考手册，了解在系统上设置 Kerberos 服务器和客户端的更详细说明。
+
+请查阅 Red Hat Linux 参考指南，了解如何在 Red Hat 上安装和配置 Kerberos 的详细说明。你需要为你的网络配置服务器，以及为每个主机配置客户端。要配置你的服务器，首先通过手动将 `/etc/krb5.conf` 和 `/var/kerberos/krb5kdc/kdc.conf` 文件中的小写 `example.com` 和大写 `EXAMPLE.COM` 条目替换为你自己的域名来指定你的 Kerberos 域和域。保持每个条目的大小写相同。域以大写形式指定，而简单的主机和域名则为小写。然后使用 `kdb5_util` 命令和 `create` 选项创建一个数据库。你将被提示输入主密钥。
+
+```
+kdb5_util create -s
+```
+
+对服务器的完全管理访问权限由 `var/kerberos/krb5kdc/kadm5.acl` 文件中的用户条目控制。用你的 Kerberos 域（通常是大写形式的域名）替换 `EXAMPLE.COM` 文本。然后你需要添加一个本地主体，即服务器运行所在主机的具有完全管理访问权限的本地用户。启动 `kadmin.local` 工具并使用 `addprinc` 命令添加本地主体。然后你可以启动你的 `krb5kdc`、`kadmind` 和 `krb524` 服务器。
+
+在每个客户端主机上，使用 `kadmin` 工具和 `addprincipal` 命令为该主机添加一个主体。还为网络上的每个主机添加一个带有 `host/` 限定符的主机主体，例如 `host/rabbit.mytrek.com`。你可以使用 `-randkey` 选项指定随机密钥。然后使用 `ktadd` 命令保存主机密钥的本地副本，将其保存在其 `/etc/krb5.keytab` 文件中。每个主机也需要在其系统上具有相同的 `/etc/krb5.conf` 配置文件，指定 Kerberos 服务器和 `kdc` 主机。
+
+> Note 当你使用身份验证工具配置 Kerberos 时，你将能够输入域、`kdc` 服务器和 Kerberos 服务器。默认条目将使用域名 "`example.com`" 显示。请务必以大写形式指定域。`/etc/krb5.conf` 的 `realms` 段中将为你的域创建一个新条目，列出你所做的 `kdc` 和服务器条目。
+
+## 网络防火墙：Netfilter
+
+目前大多数连接到互联网的系统都面临着外部用户试图未授权访问的风险。外部用户可能通过建立非法连接、截取远程合法用户的通信，或伪装成合法用户等方式直接尝试访问。防火墙、加密和认证程序是抵御此类攻击的常用手段。防火墙可防止任何直接的未授权访问尝试，加密可保护授权远程用户的通信，认证则验证请求访问的用户是否具有相应权限。当前 Linux 内核通过 Netfilter（`iptables`）包过滤软件包来支持防火墙（旧版本内核使用之前的 `ipchains`）。要实现防火墙，只需提供一系列规则，规定系统允许何种访问。如果该系统同时是私有网络的门户（网关），其防火墙功能还能有效保护整个网络免受外部攻击。
+
+> 注意 你可以使用 `redhat-config-securitylevel` 工具（系统设置菜单或窗口中的“安全级别”）来设置基本的 Netfilter 防火墙保护。该工具会生成一组基本的 `iptables` 规则来保护你的系统和网络（参见第 5 章）。
+
+为了保护远程通信，可以对传输数据直接进行加密。对于 Linux 系统，可以使用安全外壳（`SSH`）程序套件来加密所有传输内容，防止被他人读取（参见第 18 章）。Kerberos 认证提供了另一层安全保护，可对单个服务进行保护，只允许获得访问许可的用户使用该服务（参见第 18 章）。外部用户也可能试图通过你所托管的互联网服务（如网站）进行未授权访问。在这种情况下，你可以设置代理来保护站点免受攻击。对于 Linux 系统，可使用 `Squid` 代理软件设置代理来保护你的 Web 服务器（参见第 23 章）。表 19-1 列出了 Linux 上常用的几种网络安全应用程序。
+
+## 表 19-1
+
+网络安全应用程序
+
+| 网站 | 安全应用程序 |
+|---|---|
+| www.netfilter.org | Netfilter 项目、`iptables` 和 NAT |
+| www.netfilter.org/ipchains | IP-Chains 防火墙 |
+| www.openssh.org | Secure Shell 加密 |
+| www.squid-cache.org | Squid Web 代理服务器 |
+| web.mit.edu/Kerberos | Kerberos 网络认证 |
+
+## 防火墙：iptables 和 NAT
+
+建立一个良好的网络安全基础，可以将 Linux 系统配置为网络的防火墙，从而防止未授权访问。你可以使用防火墙实现数据包过滤或代理。数据包过滤就是决定防火墙主机收到的数据包是否应被转发到内部网络的过程。数据包过滤软件会检查数据包的源地址和目的地址，如果允许，则转发该数据包。即使你的系统不属于某个网络，而是直接连接到互联网，你仍然可以使用防火墙功能来控制对系统的访问。当然，这也会大大提高安全性。
+
+通过代理，你可以控制对特定服务（如 Web 或 FTP 服务器）的访问。你需要为要控制的每个服务分别设置一个代理。Web 服务器有其自己的 Web 代理，FTP 服务器则有 FTP 代理。代理还可用于缓存常用数据（如网页），这样用户不必频繁访问源站点。Linux 系统上常用的代理软件是 `Squid`，将在第 23 章讨论。
+
+防火墙执行的另一项任务是网络地址转换（NAT）。网络地址转换将数据包重定向到适当的目的地。它可以执行诸如将数据包重定向到特定主机、将数据包转发到其他网络，以及更改数据包的源主机以实现 IP 伪装等任务。
+
+> 注意 `ipchains` 软件包是 `iptables` 的前身，用于运行 2.2 内核的 Linux 系统。它至今仍被许多 Linux 系统使用。`ipchains` 是 Linux 旧版本上所用 `ipfwadm` 的后续版本，其 Linux 网站目前为 www.netfilter.org/ipchains。
+
+
+
+Netfilter 软件包为 Linux 2.4 及更高版本的内核实现了数据包过滤和 NAT 任务。Netfilter 软件由 Netfilter 项目开发，你可以访问 www.netfilter.org 了解更多信息。用于执行数据包过滤和 NAT 任务的命令是`iptables`，该软件通常简称为`iptables`。然而，Netfilter 使用不同的表和命令来分别实现数据包过滤和 NAT 任务。一个表保存其应用程序的一组命令。这种方法简化了数据包过滤任务，让`iptables`执行数据包过滤检查时无需额外处理地址转换开销。NAT 操作也无需与数据包过滤检查混杂在一起。你可以在数据包过滤和 NAT 任务中都使用`iptables`命令，但对于 NAT，需要添加`-t nat`选项。
+
+`iptables`软件可以直接构建到 2.4 内核中或作为内核模块加载，`iptable_filter.o`。与其前身`ipchains`不同，Netfilter 被设计为模块化和可扩展。功能可以通过模块的形式添加，例如状态模块，它增加了连接跟踪。
+
+> 注意 `iptables`软件包包含适用于`ipwadm`和`ipchains`的向后兼容模块。事实上，`iptables`与`ipchains`非常相似。你仍然可以通过加载 Netfilter 软件提供的`ipchains.o`或`ipwadm.o`模块来使用`ipchains`和更早的`ipwadm`命令。这些提供了完全的向后兼容性。
+
+## Packet Filtering
+
+Netfilter 本质上是一个数据包管理框架，可以检查数据包是否属于特定网络协议，并通知正在监听它们的内核部分。构建在 Netfilter 框架之上的是由 IP 表实现的包选择系统。通过 IP 表，可以设置不同的规则表，根据不同的标准选择数据包。Netfilter 目前支持三个表：`filter`、`nat`和`mangle`。数据包过滤使用包含丢弃或接受数据包规则的过滤表来实现。网络地址转换操作例如 IP 伪装使用包含 IP 伪装规则的 NAT 表来实现。`mangle`表用于专门的数据包更改。可以在数据包发送出去之前、接收时或转发时对其进行更改。这种结构是可扩展的，因为新模块可以定义自己的表和自己的规则。它也大大提高了效率。数据包不是检查一个大的表，而是只访问它们需要的规则表。
+
+IP 表规则使用`iptables`命令进行管理。对于此命令，你需要指定要管理的表。默认是`filter`表，无需指定。你可以随时使用`-L`和`-n`选项列出已添加的规则，如下所示。`-n`选项表示仅对 IP 地址和端口使用数字输出，避免对主机名进行 DNS 查找。你也可以只使用`-L`选项来查看端口标签和主机名：
+
+```
+iptables -L -n
+```
+
+> 注意 在`iptables`命令中，链名必须以大写形式输入，如链名`INPUT`、`OUTPUT`和`FORWARD`。
+
+## Chains
+
+规则组合成不同的链。内核使用链来管理接收和发送的数据包。链只是一份规则清单。这些规则指定对包含特定头部的数据包采取什么操作。规则以 if-then-else 结构运行。如果数据包与第一条规则不匹配，则检查下一条规则，以此类推。如果数据包与任何规则都不匹配，内核会咨询链策略。通常，在这一点上数据包会被拒绝。如果数据包与某条规则匹配，它将被传递给其目标，该目标决定对数据包做什么。标准目标列在表 19-2 中。如果数据包与任何规则都不匹配，它将被传递给链的默认目标。
+
+### TABLE 19-2
+
+iptables Targets
+
+| Target | Function |
+| --- | --- |
+| `ACCEPT` | 允许数据包通过防火墙。 |
+| `DROP` | 拒绝数据包访问。 |
+| `REJECT` | 拒绝访问并通知发送者。 |
+| `QUEUE` | 将数据包发送到用户空间。 |
+| `RETURN` | 跳转到链的末尾并让默认目标处理它。 |
+
+## Targets
+
+目标本身也可以是另一条规则链，甚至是用户定义的规则链。数据包可能经过多个链后最终到达目标。在用户定义链的情况下，默认目标始终是调用它的链中的下一条规则。这设置了在编程语言中发现的类似过程或函数调用的控制流。当一条规则的目标是用户定义的链时，激活时该用户定义链将被执行。如果没有规则匹配，执行将返回到源链中的下一条规则。
+
+> Tip 可以通过 Netfilter 站点提供的内核补丁添加专用目标和选项。例如，`SAME`补丁为所有连接返回相同的地址。Netfilter make 文件的`patch-o-matic`选项将修补你的内核源代码，添加对新目标和选项的支持。然后你可以按照第 33 章所述重建并安装你的内核。
+
+## Firewall Chains
+
+内核使用三个防火墙链：`INPUT`、`OUTPUT`和`FORWARD`。当数据包通过接口接收时，`INPUT`链用于确定对其做什么。内核然后使用其路由信息来决定将其发送到何处。如果内核将数据包发送到另一台主机，则会检查`FORWARD`链。在数据包实际发送之前，还会检查`OUTPUT`链。此外，还实现了两个 NAT 表链`POSTROUTING`和`PREROUTING`来处理伪装和数据包地址修改。内置的 Netfilter 链列在表 19-3 中。
+
+### TABLE 19-3
+
+Netfilter Built-in Chains
+
+| Chain | Descriptions |
+| --- | --- |
+| `INPUT` | 入站数据包的规则 |
+| `OUTPUT` | 出站数据包的规则 |
+| `FORWARD` | 转发数据包的规则 |
+| `PREROUTING` | 重定向或修改入站数据包的规则，仅限 NAT 表 |
+| `POSTROUTING` | 重定向或修改出站数据包的规则，仅限 NAT 表 |
+
+## 添加和更改规则
+
+你使用`iptables`命令添加和修改链规则。`iptables`命令由关键字`iptables`组成，后跟表示要执行的命令的参数。例如，`iptables -A`是添加新规则的命令，而`iptables -D`是删除规则的命令。`iptables`命令列在表 19-4 中。以下命令仅列出为系统当前定义的链及其规则。输出显示由`iptables`命令创建的默认值。
+
+```
+iptables -L -n
+Chain input (policy ACCEPT):
+Chain forward (policy ACCEPT):
+Chain output (policy ACCEPT):
+```
+
+要向链添加新规则，请使用`-A`。使用`-D`删除它，并使用`-R`替换它。在命令之后，列出规则适用的链，例如`INPUT`、`OUTPUT`或`FORWARD`链，或用户定义的链。接下来，你列出不同的选项来指定要执行的操作（大多数与`ipchains`使用的相同，只有少数例外）。`-s`选项指定附加到数据包的源地址，`-d`指定目标地址，而`-j`选项指定规则的目标。`ACCEPT`目标将允许数据包通过。`-i`选项现在表示输入设备，只能与`INPUT`和`FORWARD`链一起使用。`-o`选项表示输出设备，只能用于`OUTPUT`和`FORWARD`链。表 19-5 列出了几个基本选项。
+
+| Option | Function |
+|---|---|
+| `-A chain` | Appends a rule to a chain. |
+| `-D chain [ rulenum ]` | Deletes matching rules from a chain. Deletes rule rulenum (1 = first) from chain. |
+| `-I chain [rulenum]` | Inserts in chain as rulenum (default 1 = first). |
+| `-R chain rulenum` | Replaces rule rulenum (1 = first) in chain. |
+| `-L [chain]` | Lists the rules in chain or all chains. |
+| `-E [chain]` | Renames a chain. |
+| `-F [chain]` | Deletes (flushes) all rules in chain or all chains. |
+| `-R chain` | Replaces a rule; rules are numbered from 1. |
+| `-Z [chain]` | Zero counters in chain or all chains. |
+| `-N chain` | Creates a new user-defined chain. |
+| `-X chain` | Deletes a user-defined chain. |
+| `-P chain target` | Changes policy on chain to target. |
+
+## iptables 选项
+
+
+
+`iptables` 包设计为可扩展的，并且有许多带有选择标准的选项可以与 `iptables` 一起使用。例如，TCP 扩展包括 `--syn` 选项，用于检查 `SYN` 数据包。ICMP 扩展提供 `--icmp-type` 选项，用于指定 ICMP 数据包，例如 `ping` 操作中使用的数据包。`limit` 扩展包括 `--limit` 选项，可用于限制指定时间段内匹配数据包的最大数量，例如一秒。
+
+| Option | Function |
+|---|---|
+| `-p [1] proto` | Specifies a protocol, such as TCP, UDP, ICMP, or ALL. |
+| `-s [1] address[/mask] [1] [port[:port]]` | Source address to match. With the port argument, you can specify the port. |
+| `--sport [1] [port[:port]]` | Source port specification. You can specify a range of ports using the colon, `port:port`. |
+| `-d [1] address[/mask] [1] [port[:port]]` | Destination address to match. With the port argument, you can specify the port. |
+| `--dport [1] [port[:port]]` | Destination port specification. |
+| `--icmp-type [1] typename` | Specifies ICMP type. |
+| `-i [1] name[*]` | Specifies an input network interface using its name (for example, `eth0`). The `+` symbol functions as a wildcard. The `+` attached to the end of the name matches all interfaces with that prefix (`eth+` matches all Ethernet interfaces). Can be used only with the `INPUT` chain. |
+| `-j target [port]` | Specifies the target for a rule (specify `[port]` for `REDIRECT` target). |
+| `--to-source < ipaddr> [ -< ipaddr> ] [: port- port]` | Used with the `SNAT` target, rewrites packets with new source IP address. |
+| `--to-destination - ipaddr> [ -< ipaddr> ] [: port- port]` | Used with the `DNAT` target, rewrites packets with new destination IP address. |
+| `-n` | Numeric output of addresses and ports, used with `-L`. |
+| `-o [1] name[*]` | Specifies an output network interface using its name (for example, `eth0`). Can be used only with `FORWARD` and `OUTPUT` chains. |
+| `-t table` | Specifies a table to use, as in `-t nat` for the `NAT` table. |
+| `-v` | Verbose mode, shows rule details, used with `-L`. |
+| `-x` | Expands numbers (displays exact values), used with `-L`. |
+| `[1] -f` | Matches second through last fragments of a fragmented packet. |
+
+| 选项 | 功能 |
+|---|---|
+| `-V` | 打印软件包版本。 |
+| `!` | 否定一个选项或地址。 |
+| `-m` | 指定要使用的模块，例如 `state`。 |
+| `--state` | 指定 `state` 模块的选项，如 `NEW`、`INVALID`、`RELATED` 和 `ESTABLISHED`。用于检测数据包的状态。`NEW` 引用 `SYN` 数据包（新连接）。 |
+| `--syn` | `SYN` 数据包，新连接。 |
+| `--tcp-flags` | TCP 标志：`SYN`、`ACK`、`FIN`、`RST`、`URG`、`PS`，以及 `ALL` 表示所有标志。 |
+| `--limit` | `limit` 模块的选项（`-m limit`）。用于控制匹配速率，每秒匹配给定次数。 |
+| `--limit-burst` | `limit` 模块的选项（`-m limit`）。指定限制生效前的最大突发量。用于控制拒绝服务攻击。 |
+
+表 19-5 iptables 选项（续）
+
+在下面的示例中，用户向 `INPUT` 链添加一条规则，以接受所有源自地址 192.168.0.55 的数据包。任何接收到的（`INPUT`）源地址（`-s`）匹配 192.168.0.55 的数据包都会被接受并放行（`-j ACCEPT`）。
+
+```
+iptables -A INPUT -s 192.168.0.55 -j ACCEPT
+```
+
+## 接受和拒绝数据包：`DROP` 和 `ACCEPT`
+
+有两个内置目标，`DROP` 和 `ACCEPT`。其他目标可以是用户定义的链或附加的扩展，例如 `REJECT`。还有两个特殊目标用于管理链，`RETURN` 和 `QUEUE`。`RETURN` 表示链的结束并返回到其起始的链。`QUEUE` 用于将数据包发送到用户空间。
+
+```
+iptables -A INPUT -s www.myjunk.com -j DROP
+```
+
+你可以用 `!` 符号将一条规则转换为其逆向。例如，要接受所有传入数据包，除了来自特定地址的数据包，在 `-s` 选项和该地址前放置一个 `!` 符号。下面的示例将接受除 IP 地址 192.168.0.45 之外的所有数据包：
+
+```
+iptables -A INPUT -j ACCEPT ! -s 192.168.0.45
+```
+
+你可以使用域名或 IP 号码指定单个地址。对于地址范围，你可以使用其网络的 IP 号码和网络 IP 掩码。IP 掩码可以是 IP 号码，也可以简单地是构成掩码的位数。
+
+例如，网络 192.168.0 中的所有地址可以用 192.168.0.0/255.255.255.0 表示，也可以用 192.168.0.0/24 表示。要指定任何地址，你可以使用 0.0.0.0/0.0.0.0 或简单地使用 0/0。默认情况下，如果不存在 `-s` 或 `-d` 指定，规则引用任何地址。下面的示例接受来自 192.168.0.0 网络中任何主机（源）并发送到任何地方（目的）的传入消息（`-d` 选项被省略或可写为 `-d 0/0`）：
+
+```
+iptables -A INPUT -s 192.168.0.0/24 -j ACCEPT
+```
+
+`iptables` 规则通常应用于特定的网络接口，例如用于连接到 Internet 的以太网接口。对于连接到 Internet 的单台系统，你将有两个接口，一个是你的 Internet 连接，另一个是用于系统内部用户之间连接的本地主机接口（`lo`）。Internet 的网络接口使用接口的设备名称引用。例如，设备名为 `/dev/eth0` 的以太网卡将以名称 `eth0` 引用。使用 PPP 协议的调制解调器，设备名为 `/dev/ppp0`，则名称为 `ppp0`。在 `iptables` 规则中，你使用 `-i` 选项表示输入设备；它只能与 `INPUT` 和 `FORWARD` 链一起使用。`-o` 选项表示输出设备，只能用于 `OUTPUT` 和 `FORWARD` 链。然后规则可以应用于在特定网络设备上到达和离开的数据包。在下面的示例中，第一条规则引用以太网设备 `eth0`，第二条引用本地主机：
+
+```
+iptables -A INPUT -j DROP -i eth0 -s 192.168.0.45
+iptables -A INPUT -j ACCEPT -i lo
+```
+
+## 用户定义链
+
+使用 `iptables`，`FORWARD` 和 `INPUT` 链是分别评估的。一个不会流入另一个。这意味着如果你想完全阻止某些地址通过你的系统，你需要为它们添加一条 `FORWARD` 规则和一条 `INPUT` 规则。
+
+```
+iptables -A INPUT -j DROP -i eth0 -s 192.168.0.45
+iptables -A FORWARD -j DROP -i eth0 -s 192.168.0.45
+```
+
+
+
+减少重复的 `INPUT` 和 `FORWARD` 规则的常用方法是创建一个用户链，让 `INPUT` 和 `FORWARD` 链都引用它。你使用 `-N` 选项定义用户链。下一个示例显示了此安排的基本格式。创建一个名为 `incoming` 的新链（可以是任意名称）。你为 `FORWARD` 和 `INPUT` 链定义规则，现在为 `incoming` 链定义。`INPUT` 和 `FORWARD` 链然后使用 `incoming` 链作为目标，直接跳转到它并使用其规则处理收到的任何数据包。
+
+```
+iptables -N incoming
+
+iptables -A incoming -j DROP -i eth0 -s 192.168.0.45
+iptables -A incoming -j ACCEPT -i lo
+
+iptables -A FORWARD -j incoming
+iptables -A INPUT -j incoming
+```
+
+## ICMP 数据包
+
+防火墙经常会阻止某些 Internet 控制消息协议（ICMP）消息。特别是 ICMP 重定向消息，可能接管你的路由任务。然而，你需要启用一些 ICMP 消息，例如 ping、traceroute 所需的消息，特别是目的不可达操作。在大多数情况下，你始终需要确保目的不可达数据包被允许；否则，域名查询可能会挂起。表 19-6 列出了一些常见的 ICMP 数据包类型。你可以使用 `--icmp-type` 选项启用一种 ICMP 类型的数据包，其参数为表示该消息的数字或名称。以下示例启用了 echo-reply、echo-request 和 destination-unreachable 消息的使用，其编号分别为 0、8 和 3。
+
+```
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-reply -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-request -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type destination-unreachable -d 10.0.0.1
+```
+
+它们的规则列表将如下所示：
+
+```
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 0
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 8
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 3
+```
+
+Ping 操作需要进一步控制以避免 ping-of-death 安全威胁。你可以通过几种方式做到这一点。其中一种方法是拒绝任何 ping 分片。Ping 数据包通常非常小。你可以通过拒绝任何 ICMP 分片数据包来阻止 ping-of-death 攻击。使用 `-f` 选项表示分片。
+
+```
+iptables -A INPUT -p icmp -j DROP -f
+```
+
+另一种方法是限制对 ping 数据包的匹配次数。你使用 limit 模块来控制 ICMP ping 操作上的匹配次数。使用 `-m limit` 来使用 limit 模块，并使用 `--limit` 指定允许的匹配次数。`1/s` 将允许每秒一次匹配。
+
+```
+iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 1/s -j ACCEPT
+```
+
+| Number | Name | Required By |
+|---|---|---|
+| 0 | echo-reply | ping |
+| 3 | destination-unreachable | Any TCP/UDP traffic |
+| 5 | redirect | Routing if not running routing daemon |
+| 8 | echo-request | ping |
+| 11 | time-exceeded | traceroute |
+
+表 19-6 常见 ICMP 数据包
+
+## 控制端口访问
+
+如果你的系统托管 Internet 服务，例如 Web 或 FTP 服务器，你可以使用 `iptables` 来控制对其的访问。你可以通过使用源端口 `--sport` 或目标端口 `--dport` 选项与服务使用的端口来指定特定服务。`iptables` 允许你使用诸如 `www` 表示 Web 服务器端口之类的名称。服务名称及其使用的端口列在 `/etc/services` 文件中，该文件将端口映射到特定服务。对于域名服务器，端口将是 `domain`。你也可以使用端口号，如果你愿意的话，在数字前加上冒号。以下示例接受所有发送到位于 `192.168.0.43` 的 Web 服务器的消息：
+
+```
+iptables -A INPUT -d 192.168.0.43 --dport www -j ACCEPT
+```
+
+你也可以使用端口引用来保护某些服务并拒绝其他服务。这种方法通常用于设计对 Internet 更开放的防火墙，让用户更自由地使用 Internet 连接。你知道可能有害的某些服务，例如 Telnet 和 NTP，可以有选择地被拒绝。例如，要拒绝防火墙上的任何 Telnet 操作，你可以丢弃所有进入 Telnet 端口 23 的数据包。要保护 NFS 操作，你可以拒绝对 portmapper 使用的端口 111 的访问。你可以使用端口号或端口名称。
+
+```
+# deny outside access to portmapper port on firewall.
+ iptables -A arriving -j DROP -p tcp -i eth0 --dport 111
+ # deny outside access to telnet port on firewall.
+ iptables -A arriving -j DROP -p tcp -i eth0 --dport telnet
+```
+
+规则列表将如下所示：
+
+```
+DROP    tcp --  0.0.0.0/0      0.0.0.0/0       tcp dpt:111
+DROP    tcp --  0.0.0.0/0      0.0.0.0/0       tcp dpt:23
+```
+
+一个与端口相关的安全问题是访问 XFree86 端口范围从 6000 到 6009 的 X 服务器。在相对开放的防火墙上，这些端口可用于通过 X 服务器非法访问你的系统。端口范围可以用冒号指定，如 `6000:6009`。你也可以使用 `x11` 表示第一个端口，`x11:6009`。X 服务器上的会话可以通过使用 SSH 来保护，SSH 通常在端口 6010 上访问 X 服务器。
+
+```
+iptables -A arriving -j DROP -p tcp -i eth0 --dport 6000:6009
+```
+
+此处显示了检查的常见端口及其标签：
+
+| Service | Port Number | Port Label |
+|---|---|---|
+| Auth | 113 | auth |
+| Finger | 79 | finger |
+| FTP | 21 | ftp |
+| NTP | 123 | ntp |
+| Portmapper | 111 | sunrpc |
+| 服务 | 端口号 | 端口标签 |
+|---|---|---|
+| Telnet | 23 | telnet |
+| Web server | 80 | www |
+| XFree86 | 6000:6009 | x11:6009 |
+
+## Packet States: Connection Tracking
+
+连接跟踪的状态扩展
+
+其中更有用的扩展之一是状态扩展，它可以轻松检测数据包的跟踪信息。连接跟踪维护有关连接的信息，例如其源、目标和端口。它为确定哪些数据包属于已建立或相关的连接提供了一种有效的方法。要使用连接跟踪，首先使用 `-m state` 指定状态模块。然后你可以使用 `--state` 选项。在这里你可以指定以下任何状态：
+
+| 状态 | 描述 |
+|---|---|
+| NEW | 创建新连接的数据包 |
+| ESTABLISHED | 属于现有连接的数据包 |
+| RELATED | 与现有连接相关但不属于其一部分的数据包，例如 ICMP 错误或建立 FTP 数据连接的数据包 |
+| INVALID | 由于某种原因无法识别的数据包 |
+| RELATED+REPLY | 与已建立连接相关但不直接属于其一部分的数据包 |
+
+
+
+如果你正在设计一个防火墙，其目的是保护你的本地网络免受来自外部网络的任何渗透尝试，你可能希望限制传入的数据包。简单地拒绝所有数据包的访问是不可行的，因为连接到外部服务器的用户——例如在互联网上——必须从它们那里接收信息。你可以改为拒绝用于发起连接的特定类型的数据包的访问。其思想是攻击者必须从外部发起连接。这些类型数据包的头部其 SYN 位被设置，而 FIN 和 ACK 位为空。状态模块的 NEW 状态匹配任何此类 SYN 数据包。通过为此类数据包指定 DROP 目标，你拒绝任何试图与你的系统建立连接的数据包的访问。任何试图从外部连接到你的系统的用户都无法做到这一点。已在本地系统上发起与外部主机连接的用户仍可以与它们通信。以下示例将丢弃尝试在 `eth0` 接口上创建新连接的任何数据包，尽管它们将在任何其他接口上被接受：
+
+```
+iptables -A INPUT -m state --state NEW -i eth0 -j DROP
+```
+
+你可以在 `eth0` 设备上使用 `!` 运算符结合 `ACCEPT` 目标来组合一条规则，该规则将接受除 `eth0` 设备上的数据包之外的任何新数据包。如果 `eth0` 设备是唯一连接到互联网的设备，这仍然有效地阻止了外部访问。同时，其他设备如你的 `localhost` 的输入操作可以自由地建立新连接。
+
+这种条件 `INPUT` 规则用于在有例外情况下允许整体访问。它通常假设稍后会有诸如链策略之类的规则来丢弃剩余的数据包。
+
+```
+iptables -A INPUT -m state --state NEW ! -i eth0 -j ACCEPT
+```
+
+下一个示例将接受 `eth0` 接口上属于已建立连接或与此类连接相关联的任何数据包：
+
+```
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
+
+# Network Address Translation (NAT)
+
+## 网络地址转换
+
+网络地址转换是系统在数据包通过系统时更改数据包的目的地或源的过程。数据包在到达最终目的地之前会经过网络上的多个链接系统。通常，它们只会将数据包转发出去。但是，如果其中一个系统对数据包执行 NAT，它可以更改源或目的地。发送到特定目的地的数据包可能会更改其目的地址。为了使这项工作正常进行，系统还需要记住此类更改，以便对任何回复数据包的源和目的地进行更改回被回复数据包的原始地址。
+
+NAT 通常用于为可能仅通过一个 IP 地址连接到互联网的系统提供访问。这种情况出现在诸如 IP 伪装、支持多台服务器和透明代理等网络功能中。通过 IP 伪装，NAT 操作会更改通过防火墙/网关移动的数据包的目的地或源，该网关将互联网连接到本地网络上的计算机。网关有一个单一的 IP 地址，其他本地计算机可以通过 NAT 操作使用它。如果你有多台服务器但只有一个 IP 地址，你可以使用 NAT 操作将数据包发送到备用服务器。你也可以使用 NAT 操作使你的 IP 地址引用特定的服务器应用程序，例如 Web 服务器。
+
+## Adding NAT Rules
+
+### 添加 NAT 规则
+
+用于 NAT 操作的数据包选择规则添加到由 `iptables` 命令管理的 NAT 表中。要向 NAT 表添加规则，你必须使用 `-t` 选项指定 NAT 表。因此，要向 NAT 表添加规则，你必须使用 `-t nat` 选项指定 NAT 表，如下所示：
+
+```
+iptables -t nat
+```
+
+使用 `-L` 选项，你可以列出已添加到 NAT 表的规则：
+
+```
+iptables -t nat -L -n
+```
+
+添加 `-n` 选项将以数字形式列出 IP 地址和端口。这将加快列表速度，因为 `iptables` 不会尝试执行 DNS 查找来确定 IP 地址的主机名。
+
+### Nat 目标与链
+
+此外，还有两种类型的 NAT 操作：源 NAT，指定为 `SNAT` 目标，以及目标 NAT，指定为 `DNAT` 目标。`SNAT` 目标用于更改源地址的规则，而 `DNAT` 目标用于更改目标地址的规则。
+
+内核用于 NAT 操作的 NAT 表中有三条链。这些是 `PREROUTING`、`POSTROUTING` 和 `OUTPUT`。`PREROUTING` 用于目标 NAT（`DNAT`）规则。这些是到达的数据包。`POSTROUTING` 用于源 NAT（`SNAT`）规则。这些是离开的数据包。`OUTPUT` 用于本地生成数据包的目标 NAT 规则。
+
+与数据包过滤一样，您可以指定源（`-s`）和目标（`-d`）地址，以及输入（`-i`）和输出（`-o`）设备。`-j` 选项将指定 `MASQUERADE` 等目标。您可以通过向 `POSTROUTING` 链添加 `MASQUERADE` 规则来实现 IP 伪装：
+
+```
+# iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+
+要更改离开系统的包的源地址，您将使用带有 `SNAT` 目标的 `POSTROUTING` 规则。对于 `SNAT` 目标，您使用 `--to-source` 选项指定源地址：
+
+```
+# iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to-source 192.168.0.4
+```
+
+要更改到达系统的包的目标地址，您将使用带有 `DNAT` 目标和 `--to-destination` 选项的 `PREROUTING` 规则：
+
+```
+# iptables -t nat -A PREROUTING -i eth0 \
+-j DNAT --to-destination 192.168.0.3
+```
+
+指定端口可让您更改特定端口到达的数据包的目标。实际上，这使您可以实现端口转发。在下一个示例中，每个到达端口 80（Web 服务端口）的数据包都被重定向到 `10.0.0.3`，在本例中它将是运行 Web 服务器的系统。
+
+```
+# iptables -t nat -A PREROUTING -i eth0 -dport 80 \
+-j DNAT --to-destination 10.0.0.3
+```
+
+使用 `TOS` 和 `MARK` 目标，您可以修改数据包以控制其路由或优先级。`TOS` 目标设置数据包的服务类型，可以使用正常服务、最小化成本、最大化吞吐量等标准来设置优先级。
+
+仅对 NAT 表有效的目标如下所示：
+
+| `SNAT` | 修改源地址，使用 `--to-source` 选项指定新的源地址。 |
+
+| `DNAT` | 修改目标地址，使用 `--to-destination` 选项指定新的目标地址。 |
+
+| `REDIRECT` | 重定向数据包。 |
+
+| `MASQUERADE` | IP 伪装。 |
+
+| `MIRROR` | 反转源和目标并发送回发送者。 |
+
+| `MARK` | 修改 Mark 字段以控制消息路由。 |
+
+## Nat 重定向：透明代理
+
+NAT 表可用于实现任何类型的包重定向，该过程对用户是透明的。重定向通常用于实现透明代理。数据包的重定向是通过 `REDIRECT` 目标完成的。使用透明代理时，接收到的数据包可以自动重定向到代理服务器。例如，到达 Web 服务端口 80 的数据包可以重定向到 Squid 代理服务端口，通常为 3128。这涉及使用 `PREROUTING` 链上的 `REDIRECT` 目标重定向数据包的命令：
+
+```
+# iptables -t nat -A PREROUTING -i eth1 --dport 80 -j REDIRECT --to-port 3128
+```
+
+## 数据包修改：Mangle 表
+
+数据包修改表用于实际修改数据包信息。专门应用于此表的规则通常旨在控制数据包的平凡行为，如路由、连接大小和优先级。实际修改数据包而不是简单地重定向或停止它的规则只能在 `mangle` 表中使用。例如，`TOS` 目标可直接在 `mangle` 表中使用以更改服务类型字段以修改数据包的优先级。`TCPMSS` 目标可以设置为控制连接的大小。`ECN` 目标可让您绕过 ECN 黑洞，`DSCP` 目标可让您更改 DSCP 位。`ROUTE` 扩展等多个扩展将更改数据包，在本例中重写其目标，而不是简单地重定向它。
+
+`mangle` 表由 `-t mangle` 选项指示。使用以下命令查看 `mangle` 表中列出了哪些链：
+
+```
+iptables -t mangle -L
+```
+
+以下是几个 `mangle` 表目标。
+
+| `TOS` | 修改服务类型字段以管理数据包的优先级。 |
+
+| `TCPMSS` | 修改连接允许的数据包大小，从而实现更大的传输。 |
+
+| `ECN` | 删除 ECN 黑洞信息。 |
+
+| `DSCP` | 更改 DSCP 位。 |
+
+| `ROUTE` | 扩展 TARGET 以修改数据包中的目标信息。 |
+
+> 注意 `iptables` 包设计为可扩展，允许轻松添加自定义目标。这涉及对内核应用补丁并重新构建它。有关更多详细信息，请参阅 www.netfilter.org，同时列出扩展目标。
+
+## IP 表脚本
+
+
+
+虽然你可以从 shell 命令行输入 `iptables` 规则，但在你关闭系统时，这些命令将会丢失。在 Red Hat 上，你可以使用内置的 `iptables` 服务脚本来保存和读取 `iptables` 规则。或者，你也可以自行管理该过程，将规则保存到你自己选择的文件中。在任何情况下，你很可能需要将 `iptables` 规则放在一个脚本中，然后可以直接执行该脚本。这样你就可以编辑和管理一组复杂的规则，添加注释并维护其顺序。
+
+> 注意 在 Red Hat 二进制文件中，内核中的 IPTables 支持默认启用。如果你重新编译内核以打开数据包过滤支持，请检查 2.4 内核中的网络选项，以及 2.6 内核中设备驱动程序下的网络支持/网络选项。
+
+## Red Hat iptables 支持
+
+Red Hat 将 `iptables` 支持作为其系统配置的一部分提供。当你安装 `iptables` 的 RPM 包时，会安装一个 `iptables` 服务脚本，该脚本将使用 `/etc/sysconfig/iptables` 文件读取和保存 `iptables` 命令。如果你已将 `iptables` 设置为在系统启动时自动启动，则会检查此文件是否存在且不为空。如果是这样，`iptables` 将自动读取其中保存的 `iptables` 命令。这有助于将 `iptables` 更顺畅地集成到系统设置过程中。
+
+`/etc/sysconfig/iptables` 脚本由 `redhat-config-securitylevel` 自动生成，该脚本在安装过程中运行。当你首次启动系统时，`/etc/sysconfig/iptables` 文件将包含你在运行 `redhat-config-securitylevel` 时所选配置的 `iptables` 规则。如果你再次运行 `redhat-config-securitylevel` 并更改配置，`/etc/sysconfig/iptables` 文件将被新的 `iptables` 规则覆盖。你可以通过系统设置菜单或窗口中的安全级别条目访问 `redhat-config-securitylevel`。
+
+你可以通过简单地删除 `/etc/sysconfig/iptables` 文件来绕过此自动 `iptables` 设置。 （运行 `redhat-config-securitylevel` 并选择无防火墙也会产生相同效果。）请先备份该文件，以防其中包含重要命令。可以直接编辑 `/etc/sysconfig/iptables` 文件并输入 `iptables` 命令，但不建议这样做。相反，你应该将此文件视为保存你 `iptables` 命令的最终安装。
+
+你应该将 Red Hat 提供的 `iptables` 服务脚本视为多功能管理工具，而不是服务启动脚本。使用 `service` 命令调用此脚本可能会令人困惑。`iptables` 脚本仅管理 `iptables` 规则，刷新、添加或报告它们。它不会启动和停止 `iptables` 服务。如果 Netfilter 未运行，你需要指定在系统启动时启动它。为此，你可以使用 `redhat-config-service`（服务器设置窗口中的服务），然后从服务列表中选择 `iptables`。
+
+`command line`, added by your own script, or added by the start option from `/etc/sysconfig/iptables`. The following command will list your current rules:
+
+```
+service iptables status
+```
+
+也许最有效的思考 `iptables` 服务脚本的方式是将其视为 `iptables` 开发工具。在创建复杂的防火墙规则（超出 `redhat-config-securitylevel` 生成的简单集合）时，你应首先创建一个脚本并将规则放在其中，如 `iptables` 脚本示例后面所述。使脚本可执行。你在调试防火墙时需要做的任何更改，都应在此脚本中进行。在运行它之前，先使用 `stop` 选项运行 `iptables` 服务脚本以清除任何先前的规则：
+
+```
+service iptables stop
+```
+
+然后运行你的脚本，如下所示的 `myfilters` 脚本：
+
+```
+./myfilters
+```
+
+要查看命令是如何被 `iptables` 解析的，请使用 `status` 选项使用服务脚本：
+
+```
+service iptables status
+```
+
+对于任何更改，请编辑你的 `iptables` 脚本。然后再次运行服务脚本以清除旧规则。再次运行 `iptables` 脚本，并使用服务脚本的 `status` 选项查看它们是如何实现的：
+
+```
+service iptables stop
+./myfilters
+service iptables status
+```
+
+一旦你确信 `iptables` 规则工作正常，你可以将规则保存到 `/etc/sysconfig/iptables` 文件。使用 `iptables` 服务脚本的 `save` 选项。现在你的规则将在系统启动时自动读取。你可以将保存操作视为将 `iptables` 规则安装到你的系统上，使其成为每次启动系统时系统设置的一部分。
+
+```
+service iptables save
+```
+
+要进行更改，请修改你的 `iptables` 脚本，使用 `stop` 运行服务脚本以清除旧规则，运行 `iptables` 脚本，然后使用服务脚本的 `save` 选项生成新的 `/etc/sysconfig/iptables` 文件。
+
+除了使用服务脚本之外，你还可以使用 `iptables-save` 脚本保存规则。推荐使用的文件是 `/etc/iptables.rules`。服务脚本实际上使用 `-c` 选项的 `iptables-save` 将规则保存到 `/etc/sysconfig/iptables` 文件。`iptables-save` 的 `-c` 选项在输出中包含计数器（`iptables` 服务脚本设计为连同命令一起解析计数器信息）。`iptables-save` 命令将规则输出到标准输出。要将它们保存到文件中，你必须使用重定向运算符 `>` 将输出重定向到文件，如下所示：
+
+```
+iptables-save -c > /etc/sysconfig/iptables
+```
+
+你也可以将规则保存到你选择的任意文件中，例如 `/etc/iptables.rules`。`/etc/rc.d/init.d/iptables` 服务脚本定义了 `IPTABLES_CONFIG` 变量，该变量保存 `iptables` 配置文件的名称，`/etc/sysconfig/iptables`。
+
+```
+iptables-save > /etc/iptables.rules
+```
+
+然后，要恢复规则，使用 `iptables-restore` 脚本来从保存的文件中读取 `iptables` 命令：
+
+```
+iptables-restore < /etc/iptables.rules
+```
+
+## 一个 iptables 脚本示例
+
+你现在已有足够的信息来创建一个简单的 `iptables` 脚本，为连接到 Internet 的单台系统提供基本保护。下面的脚本 `myfilter` 提供了 IP 表过滤流程，用于保护本地网络和网站免受外部攻击。它为私有网络配置了一个简单的防火墙（请查阅 `iptables` HOWTO 获取更复杂的示例）。如果你有一个本地网络，可以将此脚本适配到该网络。在此配置中，所有从外部发起的远程访问都被阻止，但网络中的用户与外部系统建立的连接允许双向通信。在此示例中，防火墙系统充当私有网络的网关，其网络地址为 `192.168.0.0`（见图 19-1）。出于本示例的目的，Internet 地址为 `10.0.0.1`。该系统有两个以太网设备：一个用于私有网络（`eth1`），一个用于 Internet（`eth0`）。网关防火墙系统还支持地址为 `10.0.0.2` 的 Web 服务器。示例中过长而无法在一行内容纳的条目会延续到第二行，并用反斜杠引用换行符。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_376_0.png)
+
+图 19-2 说明了基本规则如何适用于网络的不同部分。
+
+
+
+``` 
+myfilter
+# Firewall Gateway system IP address is 10.0.0.1 using Ethernet device eth0
+# Private network address is 192.168.0.0 using Ethernet device eth1
+# Web site address is 10.0.0.2
+# turn off IP forwarding
+echo 0 > /proc/sys/net/ipv4/ip_forward
+# Flush chain rules
+iptables -F INPUT
+iptables -F OUTPUT
+iptables -F FORWARD
+# set default (policy) rules
+iptables -P INPUT DROP
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+# IP spoofing, deny any packets on the internal network
+that have an external source address.
+iptables -A INPUT -j LOG -i eth1 ! -s 192.168.0.0/24
+iptables -A INPUT -j DROP -i eth1 ! -s 192.168.0.0/24
+iptables -A FORWARD -j DROP -i eth1 ! -s 192.168.0.0/24
+# IP spoofing, deny any outside packets (any not on eth0 or eth1)
+that have the source address of the internal network
+iptables -A INPUT -j DROP ! -i eth1 -s 192.168.0.0/24
+iptables -A FORWARD -j DROP ! -i eth1 -s 192.168.0.0/24
+# IP spoofing, deny any outside packets with localhost address
+# (packets not on the lo interface (any on eth0 or eth1)
+that have the source address of localhost
+iptables -A INPUT -j DROP -i ! lo -s 127.0.0.0/255.0.0.0
+iptables -A FORWARD -j DROP -i ! lo -s 127.0.0.0/255.0.0.0
+# allow all incoming messages for users on your firewall system
+iptables -A INPUT -j ACCEPT -i lo
+# allow communication to the Web server (address 10.0.0.2), port www
+iptables -A INPUT -j ACCEPT -p tcp -i eth0 --dport www -s 10.0.0.2
+# Allow established connections from Web servers to internal network
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED
+-i eth0 -p tcp --sport www -d 10.0.0.2 -d 192.168.0.0/24 -j ACCEPT
+# Prevent new connections from Web servers to internal network
+iptables -A OUTPUT -m state --state NEW -o eth0 -p tcp --sport
+www -d 192.168.0.0/24 -j DROP
+# allow established and related outside communication to your system
+# allow outside communication to the firewall, except for ICMP packets
+iptables -A INPUT -m state --state ESTABLISHED,RELATED
+-i eth0 -p ! icmp -j ACCEPT
+# prevent outside initiated connections
+iptables -A INPUT -m state --state NEW -i eth0 -j DROP
+iptables -A FORWARD -m state --state NEW -i eth0 -j DROP
+# allow all local communication to and from the firewall on eth1
+from the local network
+iptables -A INPUT -j ACCEPT -p all -i eth1 -s 192.168.0.0/24
+# Set up masquerading to allow internal machines access to outside network
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+# Accept ICMP Ping (0 and 8) and Destination unreachable (3) messages
+# Others will be rejected by INPUT and OUTPUT DROP policy
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-reply -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-request -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type destination-unreachable -d
+# Turn on IP Forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_378_0.png)
+
+## FIGURE 19-2 Firewall rules applied to a local network example
+
+最初，在脚本中你会使用 flush 选项 (`-F`) 清空当前的 `iptables`，然后为非用户定义的规则设置策略（默认目标）。在设置链规则时，IP 转发也应关闭：
+
+```
+echo 0 > /proc/sys/net/ipv4/ip_forward
+```
+
+## Drop Policy
+
+首先，为 `INPUT` 和 `FORWARD` 内置 IP 链设置 `DROP` 策略。这意味着如果数据包不符合任何允许其通过的规则中的条件，它将被丢弃。然后拒绝所有 IP 欺骗攻击以及任何从外部发起连接的尝试（SYN 数据包）。外部连接尝试也会被记录下来。这是一个非常基础的配置，可以通过添加 `iptables` 规则轻松根据自己的需求进行完善。
+
+```
+iptables -P INPUT DROP
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+```
+
+## IP Spoofing
+
+保护私有网络免受 IP 欺骗的一种方法是检查专门用于私有网络的以太网设备上的任何外部地址。在此示例中，任何在设备 `eth1`（专用于私有网络）上且源地址不是私有网络的包（即 `-s 192.168.0.0`）将被拒绝。还要检查是否有任何来自外部的数据包将私有网络指定为其源地址。在此示例中，任何源地址为私有网络但在私有网络以外的任何以太网设备（`eth1`）上的数据包将被拒绝。相同的策略也可以应用于本地主机。
+
+
+
+```
+# IP spoofing, deny any packets on the internal network
+# that has an external source address.
+iptables -A INPUT -j LOG -i eth1 \! -s 192.168.0.0/24
+iptables -A INPUT -j DROP -i eth1 \! -s 192.168.0.0/24
+iptables -A FORWARD -j DROP -i eth1 \! -s 192.168.0.0/24
+# IP spoofing, deny any outside packets (any not on eth1)
+# that have the source address of the internal network
+iptables -A INPUT -j DROP \! -i eth1 -s 192.168.0.0/24
+iptables -A FORWARD -j DROP \! -i eth1 -s 192.168.0.0/24
+# IP spoofing, deny any outside packets with localhost address
+# (packets not on the lo interface (any on eth0 or eth1))
+# that have the source address of localhost
+iptables -A INPUT -j DROP -i ! lo -s 127.0.0.0/255.0.0.0
+iptables -A FORWARD -j DROP -i ! lo -s 127.0.0.0/255.0.0.0
+```
+
+然后，你将设置规则以允许系统内部（`localhost`）发送和接收的所有数据包通过：
+
+```
+iptables -A INPUT -j ACCEPT -i lo
+```
+
+## Server Access
+
+对于 Web 服务器，你希望允许外部用户访问，但阻止任何试图从 Web 服务器向私有网络发起连接的访问。在下一个示例中，所有发送到 Web 服务器的消息都被接受，但 Web 服务器无法与私有网络发起联系。这可以防止任何人通过对外部开放的 Web 服务器侵入本地网络。已建立的连接是允许的，允许私有网络使用 Web 服务器。
+
+```
+# allow communication to the Web server (address 10.0.0.2), port www
+iptables -A INPUT -j ACCEPT -p tcp -i eth0 --dport www -s 10.0.0.2
+# Allow established connections from Web servers to internal network
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -i eth0 \
+-p tcp --sport www -s 10.0.0.2 -d 192.168.0.0/24 -j ACCEPT
+# Prevent new connections from Web servers to internal network
+iptables -A OUTPUT -m state --state NEW -o eth0 -p tcp \
+--sport www -d 192.168.0.1/24 -j DROP
+```
+
+## Firewall Outside Access
+
+要允许防火墙访问外部网络，你允许所有数据包的输入，除了 ICMP 数据包。这些稍后处理。防火墙由防火墙设备 `eth0` 指定。首先，允许已建立和相关的连接继续：
+
+```
+# allow outside communication to the firewall,
+# except for ICMP packets
+iptables -A INPUT -m state --state ESTABLISHED,RELATED \
+-i eth0 -p ! icmp -j ACCEPT
+```
+
+## 阻止外部发起的连接（Blocking Outside Initiated Access）
+
+为了防止外部人员发起对系统的任何访问，创建一个规则以使用 `state` 选项中的 `NEW` 阻止来自外部的 SYN 数据包访问。丢弃 `eth0` 连接上的任何新连接（假设只有 `eth0` 连接到互联网或外部网络）。
+
+```
+iptables -A INPUT -m state --state NEW -i eth0 -j DROP
+iptables -A FORWARD -m state --state NEW -i eth0 -j DROP
+```
+
+## 本地网络访问
+
+要允许内部网络与防火墙进行交互，你允许在内部以太网连接 `eth1` 上的所有数据包输入。有效的内部网络地址被指定为输入源：
+
+```
+iptables -A INPUT -j ACCEPT -p all -i eth1 -s 192.168.0.0/24
+```
+
+## 伪装本地网络
+
+为了实现伪装，使私有网络上的系统可以使用网关的 Internet 地址连接到 Internet 主机，你创建一个 `NAT` 表 (`-t nat`) `POSTROUTING` 规则，使用 `MASQUERADE` 目标：
+
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+
+## 控制 ICMP 数据包
+
+此外，为了允许 `ping` 和目标可达 ICMP 数据包，你输入以防火墙为目的地的 `INPUT` 规则。为了启用 `ping` 操作，你同时使用 `echo-reply` 和 `echo-request` ICMP 类型，对于目标不可达，你使用 `destination-unreachable` 类型：
+
+```
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type \
+echo-reply -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type \
+echo-request -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type \
+destination-unreachable -d 10.0.0.1
+```
+
+最后，IP 转发再次打开：
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+## 列出规则
+
+列出这些 `iptables` 选项会显示每个选项的不同规则，如下所示：
+
+
+
+```
+# iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination
+LOG        all  --  !192.168.0.0/24      anywhere                   LOG level warning
+DROP       all  --  !192.168.0.0/24      anywhere
+DROP       all  --  192.168.0.0/24       anywhere
+DROP       all  --  127.0.0.0/8          anywhere
+ACCEPT     all  --  anywhere             anywhere
+ACCEPT     tcp  --  10.0.0.2              anywhere                   tcp dpt:http
+ACCEPT     tcp  --  10.0.0.2              192.168.0.0/24            state RELATED,ESTABLISHED
+                                                                     tcp spt:http
+ACCEPT     icmp --  anywhere             anywhere                   state RELATED,ESTABLISHED
+DROP       all  --  anywhere             anywhere                   state NEW
+ACCEPT  all  --  192.168.0.0/24  anywhere
+ACCEPT  icmp --  anywhere  10.0.0.1  icmp echo-reply
+ACCEPT  icmp --  anywhere  10.0.0.1  icmp echo-request
+ACCEPT  icmp --  anywhere  10.0.0.1  icmp destination-unreachable
+Chain FORWARD (policy ACCEPT)
+target  prot opt source      destination
+DROP    all  --  !192.168.0.0/24  anywhere
+DROP    all  --  192.168.0.0/24  anywhere
+DROP    all  --  127.0.0.0/8  anywhere
+DROP    all  --  anywhere  anywhere  state NEW
+
+Chain OUTPUT (policy ACCEPT)
+target  prot opt source      destination
+DROP    tcp  --  anywhere  192.168.0.0/24  state NEW tcp spt:http
+
+# iptables -t nat -L
+Chain PREROUTING (policy ACCEPT)
+target  prot opt source      destination
+Chain POSTROUTING (policy ACCEPT)
+target  prot opt source      destination
+MASQUERADE  all  --  anywhere  anywhere
+Chain OUTPUT (policy ACCEPT)
+target  prot opt source      destination
+```
+
+## 用户自定义规则
+
+对于更复杂的规则，你可能希望创建自己的链以减少重复。常见的方法是为 `INPUT` 和 `FORWARD` 链同时定义一个用户链，这样你就不必为每个链重复 `DROP` 操作。相反，你将只有一个用户链，`FORWARD` 和 `INPUT` 链都将为 `DROP` 操作馈入该链。请记住，`FORWARD` 和 `INPUT` 操作除了它们共享的规则外，还可能有单独的规则。在下一个示例中，创建了一个名为 `arriving` 的用户定义链。该链在脚本顶部使用 `-N` 选项定义：
+
+```
+iptables -N arriving
+```
+
+用户链必须在用作其他规则的目标之前定义。因此，你必须先定义并添加该链的所有规则，然后再将其用作目标。`arriving` 链首先被定义并添加其规则。然后，在文件末尾，它被用作 `INPUT` 和 `FORWARD` 链的目标。`INPUT` 链列出用于接受数据包的规则，而 `FORWARD` 链具有 `ACCEPT` 策略，默认情况下将接受它们。
+
+```
+iptables -N arriving
+iptables -F arriving
+# IP 欺骗，拒绝内部网络上具有外部源地址的任何数据包。
+iptables -A arriving -j LOG -i eth1 ! -s 192.168.0.0/24
+iptables -A arriving -j DROP -i eth1 ! -s 192.168.0.0/24
+iptables -A arriving -j DROP ! -i eth1 -s 192.168.0.0/24
+................
+# 脚本末尾的条目
+iptables -A INPUT -j arriving
+iptables -A FORWARD -j arriving
+```
+
+对应的规则列表如下所示：
+
+```
+Chain INPUT (policy DROP)
+ target  prot opt source      destination
+ arriving all  --  0.0.0.0/0      0.0.0.0/0
+Chain FORWARD (policy ACCEPT)
+ target  prot opt source      destination
+ arriving all  --  0.0.0.0/0      0.0.0.0/0
+Chain arriving (2 references)
+ target  prot opt source      destination
+ LOG     all  --  192.168.0.0/24 0.0.0.0/0      LOG flags 0 level 4
+ DROP    all  --  192.168.0.0/24 0.0.0.0/0
+ DROP    all  --  192.168.0.0/24 0.0.0.0/0
+```
+
+对于链可能不同的规则，你仍需要输入单独的规则。在 `myfilter` 脚本中，`FORWARD` 链的策略为 `ACCEPT`，允许所有转发到本地网络的数据包通过防火墙。如果 `FORWARD` 链的策略为 `DROP`，像 `INPUT` 链一样，那么你可能需要在 `FORWARD` 链下定义单独的规则以允许数据包通过。在此示例中，`FORWARD` 和 `INPUT` 链对 `eth1` 设备上接受数据包的规则不同。`INPUT` 规则更为严格。要使本地网络能够通过防火墙接收转发的数据包，你可以使用单独的 `FORWARD` 规则在该设备上启用转发，如下所示：
+
+```
+iptables -A FORWARD -j ACCEPT -p all -i eth1
+```
+
+`INPUT` 链将仅接受来自本地网络的数据包。
+
+```
+iptables -A INPUT -j ACCEPT -p all -i eth1 -s 192.168.0.0/24
+```
+
+## IP Masquerading
+
+在 Linux 系统上，你可以设置一个网络，其中只有一个 Internet 连接，你网络上的多个系统可以使用。这样，使用一个 IP 地址，多个不同的系统可以连接到 Internet。这种方法称为 IP Masquerading，即一个系统冒充另一个系统，使用该系统的 IP 地址。在这种网络中，一个系统使用自己的 IP 地址连接到 Internet，而其他系统则通过局域网 LAN 连接到该系统。当本地系统想要访问网络时，它冒充 Internet 连接的系统，借用其 IP 地址。
+
+IP Masquerading 在 Linux 上使用 `iptables` 防火墙工具实现。实际上，你设置一个防火墙，然后将其配置为执行 IP Masquerading。目前，IP Masquerading 支持所有常见的网络服务——`iptables` 防火墙也支持——例如 Web 浏览、`Telnet` 和 `ping`。其他服务，如 IRC、FTP 和 Real Audio，需要使用某些模块。你希望本地系统访问的任何服务都必须在防火墙系统上，因为请求和响应实际上是由该系统上的服务处理的。
+
+
+
+你可以在 IP Masquerade Resource 网站 `ipmasq.webhop.net` 上找到有关 IP Masquerading 的更多信息。特别是，Linux IP Masquerade mini-HOWTO 提供了在你的系统上设置 IP Masquerading 的详细分步指南。在你可以使用它之前，IP Masquerading 必须得到内核的支持。如果你的内核不支持它，你可能需要重新编译内核，包括 IP Masquerade 支持，或使用可加载模块来添加它。有关更多信息，请参阅 IP Masquerade mini-HOWTO。
+
+使用 Linux 系统实现的 IP Masquerading，具有 Internet 地址的机器也是使用防火墙 Internet 地址连接到 Internet 的机器 LAN 的防火墙和网关。还实现 IP Masquerading 的防火墙有时被称为 `MASQ.gates`。使用 IP Masquerading，Internet 连接的系统（防火墙）监听来自其 LAN 上主机的 Internet 请求。当它收到一个请求时，它用防火墙的 Internet IP 地址替换请求本地主机的 IP 地址，然后将请求发送到 Internet，好像请求是它自己的。来自 Internet 的回复随后发送到防火墙系统。防火墙收到的回复是使用其 Internet 地址发送给防火墙的。防火墙然后确定回复所响应的本地系统。它然后剥离其 IP 地址并将响应发送到 LAN 上的本地主机。从本地机器的角度来看，连接是透明的。它们似乎直接连接到 Internet。
+
+## Masquerading Local Networks
+
+IP Masquerading 通常用于允许私有网络上的机器访问 Internet。这些可能是家庭网络或小型 LAN 中的机器，例如小型企业。这样的网络可能只有一个具有 Internet 访问权限的机器，因此只有一个 Internet 地址。本地私有网络将具有从私有网络分配中选择的 IP 地址（10、172.16. 或 192.168.）。理想情况下，防火墙有两个以太网卡：一个用于 LAN 接口（例如 `eth1`），一个用于 Internet 接口，例如 `eth0`（对于拨号 ISP，这将是调制解调器的 `ppp0`）。用于 Internet 连接的卡（`eth0`）将被分配 Internet IP 地址。本地网络的以太网接口（本例中为 `eth1`）是防火墙以太网接口。你的私有 LAN 将具有类似 `192.168.0` 的网络地址。其以太网防火墙接口（`eth1`）将被分配 IP 地址 `192.168.0.1`。实际上，防火墙接口使防火墙作为本地网络的网关运行。然后防火墙被配置为伪装来自私有网络的任何数据包。你的 LAN 需要有自己的域名服务器，标识你网络上的机器，包括你的防火墙。每台本地机器都需要将防火墙指定为其网关。尽量不要使用 IP 别名将防火墙和 Internet IP 地址分配给同一个物理接口。为它们使用单独的接口，例如两块以太网卡，或一块以太网卡和一个调制解调器（`ppp0`）。
+
+## Masquerading NAT Rule
+
+在 Netfilter 中，IP Masquerading 是一个 NAT 操作，不再像 `ipchains` 那样与数据包过滤集成。IP Masquerading 命令放在 NAT 表上，并与数据包过滤命令分开处理。使用 `iptables` 在 NAT 表上放置一个 Masquerade 规则。首先使用 `-t nat` 选项引用 NAT 表。然后使用 `-o` 选项指定输出设备并使用 `-j` 选项与 `MASQUERADE` 命令将规则添加到 `POSTROUTING` 链：
+
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+
+### IP 转发
+
+然后手动打开 IP 转发，如下所示，使用 `sysctl`（第 33 章），或使用 `redhat-config` 工具（可在系统工具下的 Extras 菜单中访问的内核调优工具），并在网络下的 IP 条目中 IP 面板中检查 IP 转发。这将设置 `/etc/sysctl.conf` 文件中的 `net.ipv4.ip_forward` 变量（如果愿意，您也可以手动更改此文件）。默认情况下 IP 转发处于关闭状态。
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+### 伪装选定主机
+
+与其将所有本地主机伪装成防火墙/网关主机的单个 IP 地址，您可以使用 NAT 表重写少数选定主机的地址。这种方法通常应用于您希望多个本地主机作为 Internet 服务器出现的设置中。使用 `DNAT` 和 `SNAT` 目标，您可以将数据包定向到特定的本地主机。您将在 `PREROUTING` 和 `POSTROUTING` 链上使用规则来定向输入和输出数据包。
+
+例如，前一个示例中描述的 Web 服务器本可以配置为本地主机，`DNAT` 目标可以将原本接收到 `10.0.0.2` 的任何数据包重定向到该主机。假设 Web 服务器设置在 `192.168.0.5` 上。它可以在 Internet 上显示为具有地址 `10.0.0.2`。发送到 `10.0.0.2` 的数据包将被重写并由 NAT 表定向到 `192.168.0.5`。您将使用 `PREROUTING` 链和 `-d` 选项来处理传入数据包，并使用 `POSTROUTING` 和 `-s` 选项处理传出数据包。
+
+```
+iptables -t nat -A PREROUTING -d 10.0.0.2 \
+    --to-destination 192.168.0.5 -j DNAT
+iptables -t nat -A POSTROUTING -s 192.168.0.5 \
+    --to-source 10.0.0.2 -j SNAT
+```
+
+> 提示：请记住，使用 `iptables` 时，伪装不再与 `FORWARD` 链结合，如 `ipchains` 所做的那样。因此，如果您为 `FORWARD` 链指定 `DROP` 策略，您还必须专门为正在被伪装的网络启用 `FORWARD` 操作。您需要同时具有 `POSTROUTING` 规则和 `FORWARD` 规则。
+
+## Part: Red Hat 服务器
+
+- CHAPTER 20: Server Management
+- CHAPTER 21: FTP Servers
+- CHAPTER 22: Web Servers: Apache
+- CHAPTER 23: Proxy Servers: Squid
+- CHAPTER 24: Mail Servers: SMTP, POP, and IMAP
+- CHAPTER 25: Print Servers
+- CHAPTER 26: News and Search Servers
+
+## 服务器管理
+
+单个 Linux 系统可以提供多种不同的服务，例如邮件、Web 或 FTP 服务器。每个服务都作为一个持续运行的守护进程，寻找远程用户对其特定服务的请求。您可以通过启动或关闭其守护进程来打开或关闭服务。启动或关闭服务的流程由服务脚本处理，本章将详细介绍。
+
+### 系统启动文件：`/etc/rc.d` 和 `/etc/sysconfig`
+
+每次启动系统时，它都会从位于 `/etc/rc.d` 目录中的系统初始化文件读取一系列启动命令。这些初始化文件根据不同的任务组织。有些位于 `/etc/rc.d` 目录本身，而其他则位于名为 `init.d` 的子目录中。您不应更改这些文件中的任何一个。系统初始化文件的组织方式因 Linux 发行版而异。这里描述的是 Red Hat 的组织方式。您在 `/etc/rc.d` 中找到的一些文件列在表 20-1 中。
+
+### `/etc/rc.d/rc.sysinit`
+
+`/etc/rc.d/rc.sysinit` 文件包含用于初始化系统的命令，包括挂载和卸载文件系统。用于专门功能或设备的内核模块可以在 `rc.modules` 文件中加载。`/etc/rc.d/rc.local` 文件是执行的最后一个初始化文件。您可以在此处放置自己的命令。当您关闭系统时，系统会调用 `halt` 文件，其中包含关机命令。然后调用 `init.d` 中的文件以关闭守护进程，并卸载文件系统。在当前版本的 Red Hat 中，`halt` 位于 `init.d` 目录中。
+
+### `/etc/rc.d/init.d`
+
+`/etc/rc.d/init.d` 目录主要用于存放启动和关闭不同专用守护进程的脚本，例如网络和打印机守护进程以及字体和 Web 服务器的守护进程。这些文件具有双重功能，在系统启动时启动守护进程，在系统关闭时关闭守护进程。
+
+## 表 20-1
+
+系统启动文件
+
+| 文件 | 描述 |
+|---|---|
+| `/etc/sysconfig` | 保存系统配置文件和目录的目录。 |
+| `/etc/rc.d` | 保存系统启动和关闭文件的目录。 |
+| `/etc/rc.d/rc.sysinit` | 系统的初始化文件。 |
+| `/etc/rc.d/rc.local` | 用于你自己的命令的初始化文件；你可以自由编辑此文件以添加自己的启动命令；这是最后一个执行的启动文件。 |
+| `/etc/rc.d/rc.modules` | 加载内核模块（Red Hat Linux 默认情况下未实现）。 |
+
+
+
+## /etc/rc.d 目录说明
+
+| `/etc/rc.d/init.d` | 保存用于启动网络连接的网络脚本的目录。 |
+
+| `/etc/rc.d/rcnum.d` | 对应不同运行级别的目录，其中 `num` 为运行级别。这些目录保存了 `/etc/rc.d/init.d` 目录中脚本的链接。 |
+
+| `/etc/rc.d/init.d/halt` | 每次关闭系统时执行的操作，例如卸载文件系统；在其他发行版中被称为 `rc.halt`。 |
+
+| `/etc/rc.d/init.d/cups` | 启动和关闭 `cups` 打印机守护进程。 |
+
+| `/etc/rc.d/init.d/xinetd` | 启动或关闭 `xinetd` 守护进程的操作。 |
+
+| `/etc/rc.d/init.d/network` | 启动或关闭网络连接的操作。 |
+
+| `/etc/rc.d/init.d/httpd` | 启动或关闭 Web 服务器守护进程 `httpd` 的操作。 |
+
+`init.d` 目录的设计目标是让编写用于启动和关闭专用应用程序的脚本变得容易。它们使用 `functions` 文件中定义的函数。其中许多文件已经自动为你配置好。你通常不需要修改它们。如果确实要修改，请务必先了解这些文件的工作原理。
+
+当系统启动时，多个程序会自动启动并持续运行以提供服务，例如网站或打印服务器。根据你希望系统提供的服务类型，你可以在自动启动的服务列表中添加或删除项目。例如，Web 服务器会在系统启动时自动运行。如果你不托管网站，就不需要 Web 服务器。你可以阻止该服务启动，从而移除系统无需执行的额外任务，释放资源并可能减少潜在的安全漏洞。其中一些服务器和守护进程执行必要的任务。`sendmail` 服务器使你能够跨网络发送消息，`cupsd` 服务器则执行打印操作。
+
+要配置服务在启动时自动启动，你可以使用桌面上的 `redhat-config-services` 工具或在命令行运行的 `chkconfig` 工具。`redhat-config-services` 显示可用服务列表，让你选择要启动或阻止启动的服务。`chkconfig` 命令使用 `on` 和 `off` 选项来选择和取消选择开机启动的服务（参见本章后面的 `chkconfig` 部分）。
+
+```
+chkconfig httpd on
+```
+
+要随时手动启动和停止服务，可以使用 `redhat-config-services` 或 `service` 命令。使用 `service` 命令时，你可以列出服务并附带 `stop` 参数来停止它，`start` 参数来启动它，`restart` 参数来重启它。
+
+```
+service httpd start
+```
+
+> 提示 当系统启动时，它会使用 `/etc/rc.d/` 目录中特殊运行级别目录下的链接来运行 `/etc/rc.d/init.d` 目录中的启动脚本。运行级别目录以运行级别的数字命名，例如 `/etc/rc.d/rc3.d` 对应运行级别 3，`/etc/rc.d/rc5.d` 对应运行级别 5。要阻止服务启动，请从该运行级别目录中删除其链接，或者将链接名称的第一个字母从 `S` 改为 `K`。
+
+## SysV Init：init.d 脚本
+
+你可以使用位于 `/etc/rc.d/init.d` 目录中的专用启动脚本管理服务器守护进程的启动和关闭。这些脚本的名称通常与服务器程序的名称相同。例如，对于 `/usr/sbin/httpd` Web 服务器程序，对应的脚本是 `/etc/rc.d/init.d/httpd`。该脚本负责启动和停止 Web 服务器。这种使用 init.d 启动脚本来启动服务器的方法称为 SysV Init，它源于 Unix System V 中使用的方法。
+
+> 提示 如果你更改了服务器的配置，则在优化配置时可能需要多次启动和停止它。一些服务器提供了专门的管理工具，使你可以轻松完成此任务。`apachectl` 工具使你可以轻松启动和停止 Apache Web 服务器。它在功能上等同于使用 `/etc/rc.d/init.d/httpd` 脚本来启动和停止服务器。对于域名服务器，`ndc` 工具使你可以启动和停止 `named` 服务器。但是，不建议混合使用 init.d 脚本和管理工具。
+
+`/etc/rc.d/init.d` 目录中的启动脚本可以在您启动系统时自动执行。但是在访问这些脚本时要小心。这些脚本启动了基本程序，例如您的网络接口和打印机守护进程。这些 init 脚本通过为每个可能的运行级别设置的链接目录访问。`/etc/rc.d` 目录包含一组子目录，其名称格式为 `rcN.d`，其中 `N` 是指运行级别的数字。`rc` 脚本检测系统启动时的运行级别，然后仅执行该运行级别子目录中指定的启动脚本。当您启动系统时，`rc` 脚本会执行 `rc3.d` 目录中指定的启动脚本，如果您执行的是命令行登录，则执行 `rc5.d` 目录，如果您使用的是图形登录。`rc3.d` 和 `rc5.d` 目录包含指向 `/etc/rc.d/init.d` 目录中某些启动脚本的符号链接。因此，`/etc/rc.d/init.d` 目录中的 `httpd` 脚本实际上是通过 `rc3.d` 或 `rc5.d` 目录中的符号链接调用的。`rc3.d` 目录中 `/etc/rc.d/httpd` 脚本的符号链接是 `S85httpd`。链接前的 `S` 代表 “startup”；因此，链接使用 `start` 选项调用相应的 init.d 脚本。数字表示启动脚本运行的顺序；数字越小越先运行。`S85httpd` 以 `start` 选项调用 `/etc/rc.d/init.d/httpd`。如果您将链接名称改为以 `K` 开头，则脚本将使用 `stop` 选项调用，停止它。此类链接用于运行级别 0 和 6 目录 `rc6.d` 和 `rc0.d`。运行级别 0 停止系统，运行级别 6 重启它。您可以使用 `runlevel` 命令来了解您当前运行的运行级别是什么（有关运行级别的更多详细信息，请参阅第 27 章）。运行级别列表显示在表 20-2 中。
+
+| 运行级别 | rc.d 目录 | 描述 |
+
+|---|---|---|
+
+| 0 | `rc0.d` | 停止系统 |
+
+| 1 | `rc1.d` | 单用户模式（无网络连接，功能有限） |
+
+| 2 | `rc2.d` | 多用户模式，无 NFS 支持（功能有限） |
+
+| 3 | `rc3.d` | 多用户模式（完全运行模式） |
+
+| 4 | `rc4.d` | 用户自定义，在 Red Hat 上默认与运行级别 3 相同，多用户模式 |
+
+| 5 | `rc5.d` | 带图形登录的多用户模式（完全运行模式并添加图形登录） |
+
+| 6 | `rc6.d` | 重启系统 |
+
+## 启动服务器：独立和 xinetd
+
+服务器是一个守护进程，与您的其他程序并发运行，不断寻找对其服务的请求，无论是来自系统上其他用户，还是来自通过网络连接到系统的远程用户。当服务器从用户收到请求时，它会启动一个会话以提供其服务。例如，如果用户想要从您的系统下载文件，他们可以使用自己的 FTP 客户端连接到您的 FTP 服务器并启动一个会话。在会话中，他们可以访问并从您的系统下载文件。用户要访问其服务，您的服务器必须正在运行。例如，如果您在系统上设置了包含 HTML 文件的网站，则必须在用户能够访问您的网站并显示这些文件之前运行 `httpd` Web 服务器程序。
+
+### 直接启动服务
+
+您可以通过多种方式启动服务器。一种方法是从命令行手动执行，输入服务器程序的名称及其参数。当您按下 ENTER 时，服务器启动，尽管您的命令行提示符会重新出现。服务器在您执行其他任务时并发运行。要查看服务器是否正在运行，您可以使用 `service` 命令并带 `status` 选项。
+
+```
+# service httpd status
+```
+
+或者，您可以使用 `ps` 命令并带 `-aux` 选项列出当前运行的所有进程。您应该会看到您启动的服务器程序的进程。要细化列表，您可以添加 `grep` 操作并使用要查找的服务器名称的模式。第二条命令列出了 Web 服务器的进程。
+
+```
+# ps -aux
+# ps -aux | grep 'httpd'
+```
+
+### 使用启动脚本启动和停止服务
+
+在 Red Hat Linux 系统上，您使用特殊的启动脚本手动启动和停止服务器。这些脚本位于 `/etc/rc.d/init.d` 目录中，其名称与服务器程序相同。例如，`/etc/rc.d/init.d/httpd` 脚本带 `start` 选项启动 Web 服务器。使用该脚本带 `stop` 选项停止它。您无需使用脚本的完整路径名，可以使用 `service` 命令和脚本名称。以下命令是等效的：
+
+```
+/etc/rc.d/init.d/httpd stop
+service httpd stop
+```
+
+### 自动启动服务
+
+每次启动系统时，您可以让系统自动为您启动服务器，而不是手动执行所有服务器程序。您可以以两种方式执行此操作，具体取决于您希望如何使用服务器。您可以让服务器持续运行从你启动系统到关闭系统期间，或你也可以让服务器仅在收到用户对其服务的请求时才启动。如果服务器被频繁使用，你可能希望它始终运行。如果使用很少，你可能希望服务器仅在收到请求时才启动。例如，如果你托管一个网站，你的 Web 服务器会不断地从互联网上的远程用户那里接收请求。然而，对于 FTP 站点，你可能很少收到请求，在这种情况下，你可能希望 FTP 服务器仅在收到请求时才启动。当然，某些 FTP 站点会收到频繁的请求，这就需要持续运行的 FTP 服务器。
+
+
+
+# 独立服务器
+
+自动启动并持续运行的服务器被称为独立服务器。Red Hat 使用 SysV Init 过程在系统启动时自动启动服务器。此过程使用位于`/etc/rc.d/init.d`目录中的服务器专用启动脚本。大多数 Linux 系统默认配置 Web 服务器在启动时自动启动并持续运行。其脚本名为`httpd`，位于`/etc/rc.d/init.d`目录中。
+
+# xinetd 服务器
+
+要使服务器仅在收到对其服务的请求时才启动，你需要使用`xinetd`守护进程进行配置。如果你添加、更改或删除`/etc/xinetd`文件中的服务器条目，你将需要重启`xinetd`守护进程才能使这些更改生效。在 Red Hat 上，你可以使用带有`restart`参数的`/etc/rc.d/init.d/xinetd`脚本来重启`xinetd`守护进程，如下所示：
+
+```
+# service xinetd restart
+```
+
+你也可以使用`xinetd`脚本来启动和停止`xinetd`守护进程。停止操作会有效地关闭`xinetd`守护进程管理的全部服务器（那些列在`/etc/xinetd.conf`文件或`xinetd.d`目录中的服务器）。
+
+```
+# service xinetd stop
+# service xinetd start
+```
+
+你也可以通过直接停止其进程来直接重启`xinetd`。为此，你使用`killall`命令并带上`-HUP`信号和名称`xinetd`。
+
+```
+# killall -HUP xinetd
+```
+
+> TIP Red Hat 7.0 之前的版本使用`inetd`守护进程（该术语代表 Internet Services Daemon）而不是`xinetd`。`xinetd`旨在成为`inetd`的增强替代品。如果你从`inetd`升级，可以使用`inetdconvert`命令将`inetd`条目转换为`xinetd`配置。
+
+# 服务管理工具：`chkconfig` 和 `redhat-config-services`
+
+在 Red Hat 上，`redhat-config-services`和`chkconfig`命令提供了简单的界面，你可以使用它们来选择想要启动的服务器以及希望它们如何运行。
+
+你使用这些工具来控制任何你想要启动的守护进程，包括系统服务，如`cron`、打印服务器、Samba 和 NFS 的远程文件服务器、Kerberos 的认证服务器，当然还有 FTP 或 HTTP 的互联网服务器。此类守护进程被称为服务，你应该将这些工具视为管理这些服务。任何这些服务都可以设置为在不同运行级别启动或停止。
+
+这些工具管理由`/etc/rc.d/init.d`目录中的脚本启动的服务。如果你添加新服务，`chkconfig`和`redhat-config-services`都可以管理它。如以下部分所述，服务在特定运行级别使用各种运行级别目录中的启动链接启动。这些链接连接到`init.d`目录中的启动脚本。运行级别目录在`/etc/rc.d`目录中编号为 0 到 6，例如运行级别 3 的`/etc/rc.d/rc3.d`和运行级别 5 的`/etc/rc.d/rc5.d`。从运行级别中移除服务只会更改其在相应运行级别`rc.d`目录中的链接。它不会触及`init.d`目录中的启动脚本。
+
+## `redhat-config-services`
+
+使用 Red Hat 的`redhat-config-services`实用程序，你可以简单地从常用服务的列表中选择在系统启动时想要运行的服务。你可以从位于 System Settings 下的 Server Settings 窗口或菜单中的 Services 图标访问`redhat-config-services`。`redhat-config-services`让你启动、停止和重启服务器，很像`service`命令（参见图 20-1）。`redhat-config-services`提供了一个 GNOME GUI 界面以便易于使用。它显示已安装服务器的列表，已选定在启动时启动的服务器的复选框被勾选。你可以通过选择特定服务并从 Action 菜单中选择 Start Service、Stop Service 或 Restart Service 来启动、停止或重启该服务。
+
+FIGURE 20-1
+
+`redhat-config-services`
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_394_0.png)
+
+你也可以为服务设置启动运行级别，就像使用`chkconfig`一样，不过你只能使用 3、4 和 5 级。已勾选的条目列表取决于你在“编辑运行级别”菜单中选择的运行级别。实际上，你是在选择在给定运行级别下启动哪些服务。默认是运行级别 5，即图形界面启动级别。你可能希望在运行级别 3，即命令行启动级别下启动或停止不同的服务集。在这种情况下，你可以从“编辑运行级别”菜单中选择运行级别 3，以显示运行级别 3 的服务，其复选框已被选中。
+
+## `chkconfig`
+
+你可以使用`chkconfig`命令指定要启动的服务以及要启动它的级别。与其他服务管理工具不同，`chkconfig`对独立服务和`xinetd`服务都同样适用。虽然独立服务可以在任何运行级别下运行，但你也可以为`xinetd`运行的运行级别打开或关闭`xinetd`服务。表 20-3 列出了不同的`chkconfig`选项。
+
+### 使用 `chkconfig` 列出服务
+
+要查看服务列表，请使用`--list`选项。以下是`chkconfig`管理的部分服务示例。服务在每个运行级别的开启或关闭状态显示如下：`xinetd`服务及其状态也显示如下：
+
+```
+chkconfig --list
+dhcpd 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+httpd 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+named 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+lpd 0:off 1:off 2:on 3:on 4:on 5:on 6:off
+nfs 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+crond 0:off 1:off 2:on 3:on 4:on 5:on 6:off
+xinetd 0:off 1:off 2:off 3:on 4:on 5:on 6:off
+xinetd based services:
+  time: off
+  finger: off
+  pop3s: off
+  swat: on
+```
+
+### 使用 `chkconfig` 启动和停止服务
+
+你使用`on`选项使服务在指定的运行级别启动，使用`off`选项禁用它。你可以使用`--level`选项指定要影响的运行级别。如果未指定级别，`chkconfig`将使用服务`init.d`启动脚本中的任何`chkconfig`默认信息。Red Hat 已为其服务预先填入`chkconfig`默认信息（如果缺少此信息，`chkconfig`将使用运行级别 3、4 和 5）。以下示例使 Web 服务器（`httpd`）在运行级别 5 启动：
+
+```
+chkconfig --level 5 httpd on
+```
+
+`off`选项将服务配置为在系统进入指定运行级别时关闭。下一个示例在进入运行级别 3 时关闭 Web 服务器。如果服务未运行，则保持关闭状态：
+
+```
+chkconfig --level 3 httpd off
+```
+
+### TABLE 20-3 `chkconfig` 选项
+
+| 选项 | 描述 |
+|---|---|
+| `--level runlevel` | 指定要打开、关闭或重置服务的运行级别。 |
+| `--list service` | 列出不同运行级别下服务的启动信息。`xinetd`服务仅为开启或关闭。无参数时，列出所有服务，包括`xinetd`服务。 |
+| `--add service` | 添加服务，在默认指定的运行级别（或如果未指定则所有运行级别）中创建链接。 |
+| `--del service` | 删除服务在所有运行级别目录中的所有链接（启动和关闭）。 |
+| `service on` | 打开服务，在指定的或默认运行级别目录中创建启动链接。 |
+| `service off` | 关闭服务，在指定的或默认目录中创建关闭链接。 |
+| `service reset` | 重置服务启动信息，根据服务`init.d`启动脚本中的`chkconfig`条目创建默认链接。 |
+
+`reset`选项将服务恢复为其在服务`init.d`启动脚本中指定的`chkconfig`默认选项：
+
+```
+chkconfig httpd reset
+```
+
+要仅查看服务的启动信息，你只需使用`--list`选项并加上服务名称：
+
+```
+chkconfig --list httpd
+httpd 0:off 1:off 2:off 3:on 4:off 5:on 6:off
+```
+
+### 使用 `chkconfig` 启用和禁用 `xinetd` 服务
+
+
+
+与 `redhat-config-services` 不同，`chkconfig` 还可以启用或禁用 `xinetd` 服务。只需输入 `xinetd` 服务并使用 `on` 或 `off` 选项即可。服务将被启动或关闭，并且其在 `/etc/xinetd.d` 目录中的 `xinetd` 配置脚本中的 `disable` 行会相应地编辑。例如，要启动 Samba 配置服务器 `swat`，该服务器运行于 `xinetd`，只需输入：
+
+```
+chkconfig swat on
+chkconfig --list swat
+          swat           on
+```
+
+`xinetd` 的 `swat` 配置文件 `/etc/xinetd.d/swat` 中的 `disable` 行将被编辑为 `no`，如下所示：
+
+```
+disable=no
+```
+
+如果要关闭 `swat` 服务器，可以使用 `off` 选项。这会将 `/etc/xinetd.d/swat` 中的 `disable` 行改为 `"disable=yes"`。
+
+```
+chkconfig swat off
+```
+
+同样的操作也适用于其他 `xinetd` 服务，例如 POP3 服务器和 finger。
+
+## 使用 chkconfig 移除和添加服务
+
+如果要将某个服务完全从所有运行级别的启动和关闭过程中移除，可以使用 `--del` 选项。这会删除所有运行级别目录中的启动和关闭链接。
+
+```
+chkconfig --del httpd
+```
+
+你也可以使用 `--add` 选项将服务添加到 `chkconfig` 管理中。`chkconfig` 会在适当的启动目录 `/etc/rc.d/rcn.d` 中为新服务创建启动链接。如果你之前已删除某个服务的全部链接，可以使用 `add` 选项将其恢复。
+
+```
+chkconfig --add httpd
+```
+
+## 为 chkconfig 配置 xinetd 服务
+
+默认的运行级别信息应放置在要由 `chkconfig` 管理的启动脚本中。Red Hat 已在其发行版随附安装的服务的启动脚本中放置了此信息。你可以编辑这些脚本来更改默认信息。如需更改，可编辑这些脚本。此信息以 `#` 符号开头的行输入，后跟 `chkconfig` 关键字和冒号。然后列出服务应启动的默认运行级别，以及启动和停止优先级。以下条目列出了运行级别 3 和 5，启动优先级为 85，停止为 15。有关更多信息，请参阅“服务脚本标签”部分：
+
+```
+# chkconfig: 35 85 15
+```
+
+因此当用户在未指定级别选项的情况下打开 `httpd` 服务时，`chkconfig` 将在运行级别 3 和 5 启动 `httpd`。
+
+```
+chkconfig httpd on
+```
+
+## chkconfig 的工作原理
+
+`chkconfig` 工具通过在 `/etc/rc.d` 目录中适当的运行级别目录创建启动和关闭链接来工作。例如，当 `chkconfig` 在运行级别 5 添加 `httpd` 服务时，它会在 `/etc/rc.d/rc5.d` 目录中创建指向 `/etc/rc.d/init.d` 目录中启动脚本 `httpd` 的链接。当它从运行级别 3 关闭 Web 服务时，它会在 `/etc/rc3.d` 目录中创建关闭链接，指向 `/etc/rc.d/init.d` 目录中的脚本 `httpd`，以确保 Web 服务不会启动。在以下示例中，用户在运行级别 3 打开 Web 服务（`httpd`），在 `rc5.d` 中创建启动链接 `S85httpd`，然后在运行级别 3 关闭 Web 服务，在 `rc3.d` 中创建关闭链接 `K15httpd`。
+
+```
+chkconfig -level 5 httpd on
+ls /etc/rc.d/rc5.d/httpd
+/etc/rc.d/rc5.d/S85httpd
+chkconfig -level 3 httpd off
+ls /etc/rc.d/rc3.d/httpd
+/etc/rc.d/rc3.d/K15httpd
+```
+
+## 服务脚本：/etc/init.d
+
+大多数使用 RPM Red Hat 包的服务器软件会自动安装启动脚本，并在适当的 `rcN.d` 目录中创建所需的链接，其中 `N` 为运行级别编号。启动脚本也可以用于你在系统启动时想要运行的任何程序。要使此类程序自动启动，首先在 `/etc/rc.d/init.d` 目录中为其创建启动脚本，然后在 `/etc/rc.d/rc3.d` 和 `/etc/rc.d/rc5.d` 目录中创建指向该脚本的符号链接。关闭链接（`K`）也应放置在用于运行级别 6（重启）的 `rc6.d` 目录中。
+
+## 服务脚本函数
+
+Red Hat 系统上 `httpd` 使用的简化版启动脚本在后面的部分中显示。你可以在 `/etc/rc.d/init.d/httpd` 示例下的 `case` 语句中看到不同的选项：`start`、`stop`、`status`、`restart` 和 `reload`。如果未提供选项（`*`），脚本会显示语法。`httpd` 脚本首先执行一个脚本来定义这些启动脚本中使用的函数。`daemon` 函数与 `httpd` 实际执行 `/usr/sbin/httpd` 服务器程序。
+
+```
+echo -n "Starting httpd: "
+daemon httpd
+echo
+touch /var/lock/subsys/httpd
+```
+
+`killproc` 函数关闭守护进程。然后删除锁文件和进程 ID 文件（`httpd.pid`）：
+
+```
+killproc httpd
+echo
+rm -f /var/lock/subsys/httpd
+rm -f /var/run/httpd.pid
+```
+
+`daemon`、`killproc` 和 `status` 函数是位于 `functions` 脚本中的 shell 脚本，也位于 `inet.d` 目录中。`functions` 脚本在每个启动脚本开始时执行以激活这些函数。这些函数的列表在表 20-4 中提供。
+
+```
+./etc/rc.d/init.d/functions
+```
+
+| Init Script Function | 描述 |
+|---|---|
+| `daemon [+/-nicelevel] program [arguments] [&]` | 启动守护进程，如果它尚未运行。 |
+| `killproc program [signal]` | 向程序发送信号；默认发送 SIGTERM，如果进程未停止，则发送 SIGKILL。它还会删除任何 PID 文件，如果可以的话。 |
+| `pidofproc program` | 由另一个函数使用，用于确定程序的 PID。 |
+| `status program` | 显示状态信息。 |
+
+### TABLE 20-4 Init Script Functions
+
+## Service Script Tags
+
+启动脚本的开头包含用于配置服务器的标签。这些标签以初始 `#` 符号开头，用于向系统提供有关服务的运行时信息。这些标签列在表 20-5 中，并附有启动函数。你输入一个标签，前面带 `#` 符号，标签名称后跟冒号，然后是标签
+
+| Init Script Tags | 描述 |
+|---|---|
+| `# chkconfig: startlevel list startpriority endpriority` | 必需。指定此服务的默认启动级别以及启动和结束优先级。 |
+| `# description [ln]: description of service` | 必需。服务的描述，使用 `\` 字符续行。对任何新增行使用初始 `#`。使用 `ln` 选项，可以指定描述所写的语言。 |
+| `# autoreload: true` | 可选。如果存在此行，守护进程会检查其配置文件，并在它们更改时自动重新加载。 |
+| `# processname: program` | 可选，允许多个条目。脚本中启动的程序或守护进程的名称。 |
+| `# config: configuration-file` | 可选，允许多个条目。指定服务器使用的配置文件。 |
+| `# pidfile: pid-file` | 可选，允许多个条目。指定 PID 文件。 |
+| `# probe: true` | 可选，用于代替 `autoreload`、`processname`、`config` 和 `pidfile` 条目，以自动探测并启动服务。 |
+
+### TABLE 20-5 System V Init Script Tags
+
+`arguments`. 例如，`processname` 标签指定正在执行的程序的名称，在此示例中为 `httpd`：
+
+```
+# processname: httpd
+```
+
+如果你的脚本启动多个守护进程，则应为每个守护进程提供一个 `processname` 条目。例如，Samba 服务同时启动 `smbd` 和 `nmbd` 守护进程。
+
+```
+# processname: nmbd
+```
+
+标签部分的结尾由一个空行表示。在此行之后，以 `#` 开头的任何行都将被视为注释。`chkconfig` 行列出了服务应启动的默认运行级别，以及启动和停止优先级。以下条目列出运行级别 3、4 和 5，启动优先级为 85，停止为 15：
+
+```
+# chkconfig: 345 85 15
+```
+
+对于 `description`，你输入服务的简短说明，使用 `\` 符号在换行前使用多行。
+
+
+
+```text
+# description: Apache Web server
+```
+
+使用 `config` 标签，你指定服务器可能使用的配置文件。对于 Apache Web 服务器，可能有三个配置文件：
+
+```text
+# config: /etc/httpd/conf/access.conf
+# config: /etc/httpd/conf/httpd.conf
+# config: /etc/httpd/conf/srm.conf
+```
+
+`pidfile` 条目指示保存服务器进程 ID 的文件。
+
+## Service Script Example
+
+作为示例，这里展示了 Web 服务器启动脚本 `/etc.rc.d/init.d/httpd` 的简化版本。大多数脚本要复杂得多，特别是当确定服务器启动时可能需要的任何参数或变量时。此脚本与 Web 服务器守护进程 `httpd` 的名称相同：
+
+```sh
+#!/bin/sh
+#
+# Startup script for the Apache Web Server
+#
+# chkconfig: 35 85 15
+# description: Apache is a World Wide Web server. \
+# It is used to serve HTML files and CGI.
+# processname: httpd
+# pidfile: /var/run/httpd.pid
+# config: /etc/httpd/conf/access.conf
+# config: /etc/httpd/conf/httpd.conf
+# config: /etc/httpd/conf/srm.conf
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# 查看我们是如何被调用的。
+
+case "$1" in
+
+start)
+ echo -n "Starting httpd: "
+ daemon httpd
+ echo
+ touch /var/lock/subsys/httpd
+ ;;
+
+stop)
+ killproc httpd
+ echo
+ rm -f /var/lock/subsys/httpd
+ rm -f /var/run/httpd.pid
+ ;;
+
+status)
+ status httpd
+ ;;
+
+restart)
+ $0 stop
+ $0 start
+ ;;
+
+reload)
+ echo -n "Reloading httpd: "
+ killproc httpd -HUP
+ echo
+ ;;
+
+*)
+ echo "Usage: $0 {start|stop|restart}"
+ exit 1
+esac
+
+exit 0
+```
+
+## 安装服务脚本
+
+用于 Internet 服务器的 RPM 打包版本包含该服务器的启动脚本。安装 RPM 包会将脚本安装到 `/etc/rc.d/init.d` 目录，并在运行级目录中创建相应的链接，例如 `/etc/rc.d/rc3.d`。如果您决定改用其源代码文件创建服务器，则可以手动安装启动脚本。如果不存在启动脚本，您首先复制 `httpd` 脚本——并重命名它——然后编辑副本，将其中所有对 `httpd` 的引用替换为服务器守护程序的名称。然后将脚本的副本放在 `/etc/rc.d/init.d` 目录中，并在 `/etc/rc.d/rc3.d` 目录中为其创建一个符号链接。或者您也可以使用 `redhat-config-services` 在 `/etc/rc.d/rc3.d` 目录中创建链接。选择 `File | Refresh Services`。现在启动系统时，新服务器会自动启动，同时运行并等待请求。
+
+## 扩展 Internet 服务守护进程 (`xinetd`)
+
+如果您的系统平均只有少数请求用于特定服务，您就不需要该服务的服务器一直运行。您仅在远程用户访问其服务时才需要它。扩展 Internet 服务守护进程 (`xinetd`) 管理 Internet 服务器，仅在系统收到对其服务的请求时才调用它们。`xinetd` 不断检查远程用户对特定 Internet 服务的任何请求；当它收到请求时，就会启动适当的服务器守护进程。
+
+`xinetd` 程序旨在作为 `inetd` 的替代品，提供安全增强、日志支持，甚至用户通知。例如，使用 `xinetd`，您可以在用户无法访问服务时向他们发送横幅通知，告知原因。`xinetd` 的安全功能可用于防止拒绝服务攻击，限制远程主机的同时连接或限制传入连接的速率。
+
+`xinetd` 还集成了 TCP，提供 TCP 安全而无需调用 `tcpd` 守护进程。此外，您不必在 `/etc/services` 文件中列出服务。`xinetd` 可以设置为启动任何类型的专用服务器。Red Hat Linux 7.0 及更高版本使用 `xinetd`。
+
+## 启动和停止 `xinetd` 服务
+
+您可以使用 `/etc/rc.d/init.d` 目录中的启动脚本启动、停止和重启 `xinetd`，如下所示：
+
+```text
+# service xinetd stop
+# service xinetd start
+# service xinetd restart
+```
+
+在 Red Hat 上，您还可以使用 `chkconfig` 打开和关闭特定的 `xinetd` 服务，如前所述。使用 `on` 和 `off` 选项启用或禁用服务。`chkconfig` 将编辑服务的 `disable` 选项，将其值更改为 `off` 时为 `yes`，`on` 时为 `no`。例如，要启用 `swat` 服务器，您可以输入：
+
+```text
+chkconfig swat on
+```
+
+## `xinetd` 配置：`xinetd.conf`
+
+`xinetd.conf` 文件是 `xinetd` 的配置文件。其中的条目定义了在请求时要激活的不同服务器以及任何选项和安全预防措施。条目由为不同功能定义的一组属性组成，例如服务器程序的名称、使用的协议和安全限制。每个用于 Internet 服务（例如服务器）的块都以关键字 `service` 和您想要用来标识服务的名称为前缀。一对大括号括起属性块。每个属性条目以属性名称开头，后跟赋值运算符，例如 `=`，然后是分配的值或值。由关键字 `default` 指定的特殊块包含服务的默认属性。语法如下所示：
+
+```text
+service <service_name>
+{
+<attribute> <assign_op> <value> <value> ...
+...
+}
+```
+
+## `xinetd` 属性
+
+大多数属性采用单个值，您使用标准赋值运算符 `=`。一些属性可以采用值列表。您可以使用 `=` 运算符为其分配值，但您还可以使用 `+=` 和 `-=` 运算符在这些列表中添加或删除项目。使用 `+=` 添加值，使用 `-=` 删除值。你经常使用 `+=` 和 `-=` 运算符向可能在默认块中已分配初始值的属性添加值。
+
+属性列于表 20-6 中。某些属性是服务所必需的。这些包括 `socket_type` 和 `wait`。对于标准 Internet 服务，你还需要提供 `user`（服务的用户 ID）、`server`（服务器程序的名称）和 `protocol`（服务器使用的协议）。使用 `server_args`，你还可以列出希望传递给服务器程序的任何参数（这不包括像 `tcpd` 那样的服务器名称）。如果未定义 `protocol`，则使用该服务的默认协议。
+
+```text
+service tftp
+{
+    socket_type = stream
+    wait = no
+    user = root
+    protocol = ftp
+    server = /usr/sbin/in.tftpd
+    server_args = -l -a
+    disable = yes
+}
+```
+
+## 表 20-6
+
+`xinetd` 属性
+
+| `id` | 标识服务。默认情况下，服务 ID 与服务名称相同。 |
+|---|---|
+| `type` | 服务类型：`RPC`、`INTERNAL`（由 `xinetd` 提供）或 `UNLISTED`（未在标准系统文件中列出）。 |
+| `flags` | 可能的标志包括 `REUSE`、`INTERCEPT`、`NORETRY`、`IDONLY`、`NAMEINARGS`（允许使用 `tcpd`）、`NODELAY` 和 `DISABLE`（禁用服务）。更多详细信息请参阅 `xinetd.conf` 手册页。 |
+| `disable` | 指定 `yes` 以禁用服务。 |
+| `socket_type` | 对于基于流的服务指定 `stream`，对于基于数据报的服务指定 `dgram`，对于需要直接访问 IP 的服务指定 `raw`，对于可靠的顺序数据报传输指定 `seqpacket`。 |
+| `protocol` | 指定服务的协议。该协议必须存在于 `/etc/protocols` 中。如果未定义此属性，则使用服务采用的默认协议。 |
+| `wait` | 指定服务是单线程还是多线程（`yes` 或 `no`）。如果为 `yes`，则服务是单线程的，这意味着 `xinetd` 将启动服务器，然后停止处理该服务的请求，直到服务器停止。如果为 `no`，则服务是多线程的，`xinetd` 将继续处理其新请求。 |
+
+
+
+# xinetd 配置参数
+
+| `user` | 指定服务器进程的用户 ID（UID）。用户名必须存在于 `/etc/passwd` 中。 |
+| `group` | 指定服务器进程的 GID。组名必须存在于 `/etc/group` 中。 |
+| `instances` | 指定一个服务可以同时激活的服务器进程数。 |
+| `nice` | 指定服务器优先级。 |
+| `server` | 指定为此服务执行的程序。 |
+| `server_args` | 列出传递给服务器的参数。这不包括服务器名称。 |
+| `only_from` | 控制特定服务可用的远程主机。其值是 IP 地址列表。如果没有值，则所有远程主机都被拒绝访问该服务。 |
+| `no_access` | 控制特定服务不可用的远程主机。 |
+| `access_times` | 指定服务可用的时间间隔。间隔的形式为 `hour:min-hour:min`。 |
+| `log_type` | 指定服务日志输出的位置，可以是 syslog 设施（`SYSLOG`）或文件（`FILE`）。 |
+| `log_on_success` | 指定服务器启动和停止时记录的信息。可以指定的信息包括 `PID`（服务器进程 ID）、`HOST`（远程主机地址）、`USERID`（远程用户）、`EXIT`（退出状态和终止信号）以及 `DURATION`（服务会话的持续时间）。 |
+| `log_on_failure` | 指定服务器无法启动时记录的信息。可以指定的信息包括 `HOST`（远程主机地址）、`USERID`（远程用户的用户 ID）、`ATTEMPT`（记录失败的尝试）、`RECORD`（记录来自远程主机的信息，以便监控对服务器的访问尝试）。 |
+| `rpc_version` | 指定 RPC 服务的 RPC 版本。 |
+| `rpc_number` | 指定 `UNLISTED` RPC 服务的编号。 |
+| `env` | 为服务定义环境变量。 |
+| `passenv` | 从 `xinetd` 环境中传递给服务器的环境变量列表。 |
+| `port` | 指定服务端口。 |
+| `redirect` | 允许将 TCP 服务重定向到另一台主机。 |
+| `bind` | 允许将服务绑定到机器上的特定接口。 |
+| `interface` | `bind` 的同义词。 |
+| `banner` | 当与该服务建立连接时，要在远程主机上显示的文件名称。 |
+| `banner_success` | 当与该服务的连接被允许时，要在远程主机上显示的文件名称。 |
+| `banner_fail` | 当与该服务的连接被拒绝时，要在远程主机上显示的文件名称。 |
+| `groups` | 允许访问服务有权访问的组（`yes` 或 `no`）。 |
+| `enabled` | 指定要启用的服务名称列表。 |
+| `include` | 将指定文件的内容作为配置文件的一部分插入。 |
+| `includedir` | 采用目录名称形式，如 `includedir /etc/xinetd.d`。该目录中的每个文件都将作为 `xinetd` 配置文件按顺序读取，合并形成 `xinetd` 配置。 |
+
+## 禁用和启用 xinetd 服务
+
+可以使用 `disable` 属性打开和关闭服务。要启用服务，请将 `disable` 属性设置为 `no`，如下所示：
+
+```
+disable = no
+```
+
+然后你必须重新启动 `xinetd` 才能启动该服务。
+
+```
+# /etc/rc.d/init.d/xinetd restart
+```
+
+> 提示 Red Hat 目前禁用了它在安装 `xinetd` 时最初设置的所有服务。要启用特定服务，你必须将其 `disable` 属性设置为 `no`。
+
+要通过 `chkconfig` 进行管理，需要在每个服务段之前放置一个注释的默认项和描述条目。如果使用单独的文件，则条目放在每个文件的开头。Red Hat 已为其发行版安装的服务（如 POP3 和 SWAT）提供了这些条目。默认条目可以是 `on` 或 `off`。例如，FTP 服务的 `chkconfig` 默认项和描述条目如下所示：
+
+```
+# default: off
+# description: The POP3 service allows users\
+#           to access their mail using a POP3 client \
+#           such as Netscape Communicator, or fetchmail.
+```
+
+Red Hat 指示服务默认是开启还是关闭。如果你想开启默认关闭的服务，你必须将其 `disable` 属性设为 `no` 并重启 `xinetd`。以下是 POP3 邮件服务器 `ipop3d` 的 Red Hat 条目。初始注释告诉你它默认是关闭的，但 `disable` 属性随后将其打开：
+
+```
+# default: off
+# description: The POP3 service allows users\
+#           to access their mail using a POP3 client \
+#           such as Netscape Communicator, or fetchmail.
+
+service pop3
+{
+    socket_type    = stream
+    wait           = no
+    user           = root
+    server         = /usr/sbin/ipop3d
+    log_on_success += HOST DURATION
+    log_on_failure += HOST
+    disable        = no
+}
+```
+
+## Logging xinetd Services
+
+日志记录 `xinetd` 服务
+
+你还可以进一步添加各种其他属性，例如连接日志信息和服务器优先级 `nice`。在以下示例中，`log_on_success` 属性记录对服务的连接的持续时间 `DURATION` 和用户 ID `USERID`，`log_on_failure` 记录连接失败的用户，而 `nice` 将服务的优先级设置为 10。
+
+```
+log_on_success += DURATION USERID
+log_on_failure += USERID
+nice = 10
+```
+
+`defaults` 块中定义的默认属性通常设置全局属性，例如默认日志活动和安全限制。`log_type` 指定日志信息发送到何处，例如特定文件 `FILE` 或系统日志 `SYSLOG`。`log_on_success` 指定建立连接时要记录的信息，`log_on_failure` 指定连接失败时要记录的信息。
+
+```
+log_type = SYSLOG authpriv
+log_on_success = HOST PID
+log_on_failure = HOST RECORD
+```
+
+## xinetd Network Security
+
+`xinetd` 网络安全
+
+对于安全限制，你可以使用 `only_from` 来限制特定远程主机的访问。`no_access` 拒绝来自所列主机的访问，但不拒绝其他主机。这些控制项以 IP 地址作为其值。你可以列出单个 IP 地址、IP 地址范围，或使用网络地址指定网络。`instances` 属性限制特定服务同时可活动的服务器进程数。以下示例将访问限制为本地网络 `192.168.1.0` 和 `localhost`，拒绝来自 `192.168.1.15` 的访问，并使用 `instances` 属性将同时的服务器进程数限制为 60。
+
+```
+only_from = 192.168.1.0
+only_from = localhost
+no_access = 192.168.1.15
+instances = 60
+```
+
+## xinetd Defaults and Internal Services
+
+`xinetd` 默认项和内部服务
+
+以下是示例默认块：
+
+```
+defaults
+{
+    instances = 60
+    log_type = FILE /var/log/servicelog
+    log_on_success = HOST PID
+    log_on_failure = HOST RECORD
+    only_from = 192.168.1.0
+    only_from = localhost
+    no_access = 192.168.1.15
+}
+```
+
+`xinetd` 程序还提供多个内部服务，包括 `time`、`services`、`servers` 和 `xadmin`。`services` 提供当前活动服务的列表，`servers` 提供有关服务器的信息。`xadmin` 提供 `xinetd` 管理支持。
+
+## Service Files in xinetd.d Directory
+
+`xinetd.d` 目录中的服务文件
+
+
+
+与其使用一个大的`xinetd.conf`文件，不如将其拆分为多个配置文件，每个服务一个。你可以通过创建包含`includedir`属性的`xinetd.conf`文件来实现，该属性指定存放不同服务配置文件目录。在以下示例中，`xinetd.d`目录保存`swat`等服务的`xinetd`配置文件。Red Hat 正是采用了这种实现方式。这种方法的好处是，你只需为新服务创建配置文件即可添加服务。修改服务只需编辑其配置文件，而无需编辑整个`xinetd.conf`文件。
+
+```
+includedir /etc/xinetd.d
+```
+
+以下示例显示了 Red Hat Linux 使用的`xinetd.conf`文件：
+
+```
+# Simple configuration file for xinetd
+# Some defaults, and include /etc/xinetd.d/
+```
+
+```
+defaults
+{
+    instances      = 60
+    log_type       = SYSLOG authpriv
+    log_on_success = HOST PID
+    log_on_failure = HOST
+    cps            = 25 30
+}
+includedir /etc/xinetd.d
+```
+
+作为示例，这里展示了`xinetd.d`目录中的`swat`文件。请注意它默认是禁用的：
+
+```
+# default: off
+# description: SWAT is the Samba Web Admin Tool.\
+# Use swat to configure your Samba server. \
+# To use SWAT, connect to port 901 with your \
+# favorite web browser.
+service swat
+{
+    port           = 901
+    socket_type    = stream
+    wait           = no
+    only_from      = localhost
+    user           = root
+    server         = /usr/sbin/swat
+    log_on_failure += USERID
+    disable        = yes
+}
+```
+
+## TCP Wrappers
+
+TCP wrappers 为`xinetd`管理的服务器增加了另一层安全性。实际上，服务器被一个中间的安全层包裹，用于监控连接并控制访问。通过`xinetd`建立的服务器连接会被监控，验证远程用户身份并检查其是否发出有效请求。连接会由`syslogd`守护进程记录（参见第 27 章），可能出现在`/var/log/secure`等`syslogd`文件中。使用 TCP wrappers，你还可以按远程主机限制对系统的访问。主机列表保存在`hosts.allow`和`hosts.deny`文件中。这些文件中的条目格式为`service:hostname.domain`。`domain`是可选的。对于`service`，你可以指定特定服务，如 FTP，或使用`ALL`表示所有服务。对于`hostname`，你可以指定特定主机或使用通配符匹配多个主机。例如，`ALL`将匹配所有主机。表 20-7 列出了可用的通配符。在下面的示例中，第一条条目允许所有主机访问 Web 服务`http`。第二条条目允许`pangol.train.com`主机访问所有服务。第三条和第四条条目允许`rabbit.trek.com`和`sparrow.com`访问 FTP：
+
+```
+http:ALL
+ALL:pangol.train.com
+ftp:rabbit.trek.com
+ftp:sparrow.com
+```
+
+## TABLE 20-7
+
+TCP Wrapper Wildcards
+
+| Wildcard | Description |
+| --- | --- |
+| `ALL` | Matches all hosts or services. |
+| `LOCAL` | Matches any host specified with just a hostname without a domain name. Used to match on hosts in the local domain. |
+| `UNKNOWN` | Matches any user or host whose name or address is unknown. |
+| `KNOWN` | Matches any user or host whose name or address is known. |
+| `PARANOID` | Matches any host whose hostname does not match its IP address. |
+| `EXCEPT` | An operator that lets you provide exceptions to matches. It takes the form of `list1` `EXCEPT` `list2` where those hosts matched in `list1` that are also matched in `list2` are excluded. |
+
+`hosts.allow`文件保存允许访问的主机。如果你想允许除少数特定主机外的所有主机访问，可以在`hosts.allow`文件中为某服务指定`ALL`，但将要拒绝访问的主机列在`hosts.deny`文件中。使用 IP 地址而不是主机名更安全，因为主机名可以通过 DNS 记录被破坏，攻击者可通过欺骗攻击冒充另一台主机。
+
+当`xinetd`收到对 FTP 服务的请求时，TCP wrapper 会监控连接并启动`in.ftpd`服务器程序。默认情况下，所有请求都被允许。要明确允许 FTP 服务的所有请求，你可在`/etc/hosts.allow`文件中输入以下内容。条目`ALL:ALL`将系统对所有主机、所有服务开放：
+
+```
+ftp:ALL
+```
+
+> Tip 最初，TCP wrappers 由`tcpd`守护进程管理。然而，`xinetd`已将其对 TCP wrappers 的支持集成到自己的程序中。如果你愿意，可以显式调用`tcpd`守护进程来处理服务。`tcpd`手册页（`man tcpd`）提供了有关`tcpd`的更详细信息。
+
+# CHAPTER: FTP 服务器
+
+文件传输协议（FTP）旨在跨网络从一个系统向另一个系统传输大型文件。与大多数 Internet 操作一样，FTP 采用客户端/服务器模型。FTP 客户端程序可使用户向运行 FTP 服务器程序的远程系统传输文件。第 14 章讨论了 FTP 客户端。任何 Linux 系统都可以作为 FTP 服务器运行。它只需要运行服务器软件——具有适当配置的 FTP 守护进程。传输在客户端和服务器系统上的用户账户之间进行。远程系统上的用户必须登录到服务器上的一个账户，然后只能传输该账户目录中的文件。一种特殊类型的用户账户，名为`ftp`，允许任何用户使用用户名`anonymous`登录到它。该账户拥有自己的目录和文件集，被视为公开，网络上任何想要下载的人都可以使用。Internet 上的众多 FTP 站点都是支持匿名登录 FTP 用户账户的 FTP 服务器。任何 Linux 系统都可以配置为支持匿名 FTP 访问，从而成为网络 FTP 站点。此类站点可在局域网或 Internet 上运行。
+
+> Note 在 Red Hat 上，匿名 FTP 的配置文件现在包含在`vsftpd`包中。安装此包会设置你的 FTP 目录并配置 FTP 账户。
+
+## FTP 服务器
+
+FTP 服务器软件由 FTP 守护进程和配置文件组成。守护进程是一个程序，持续检查来自远程用户的 FTP 请求。当收到请求时，它管理登录、设置到所请求用户账户的连接，并执行远程用户发送的任何 FTP 命令。对于匿名 FTP 访问，FTP 守护进程允许远程用户使用`anonymous`或`ftp`作为用户名登录到 FTP 账户。用户随后可以访问为 FTP 账户设置的目录和文件。然而，作为进一步的安全措施，守护进程会将该会话的根目录更改为 FTP 主目录。这会将系统的其余部分隐藏于远程用户之外。通常，系统上的任何用户都可以移动到对他/她开放的任何目录。使用匿名 FTP 登录的用户只能看到 FTP 主目录及其子目录。系统的其余部分对该用户是隐藏的。这种效果是通过`chroot`操作实现的（稍后讨论），它从字面上更改了系统根目录，将该用户的权限映射到 FTP 目录。默认情况下，FTP 服务器还要求用户使用有效的 shell。它会检查`/etc/shells`文件中的有效`shell`列表。大多数守护进程都有选项可以关闭此功能。
+
+## 可用服务器
+
+
+
+在 Red Hat 系统上可以使用多个 FTP 服务器（见表 21-1）。Red Hat 附带了非常安全的 FTP 服务器 `vsftpd`。你可以从其 FTP 站点（如 `ftp.redhat.com`）下载特定发行版的 RPM 包更新。软件包包含术语 `ftpd`。非常安全的 FTP 服务器提供了比 `WU-FTPD` 简单且更安全的替代方案，尽管它缺乏 `ProFTPD` 的安全选项和可配置性。
+
+`ProFTPD` 是一个基于 Apache Web 服务器设计的流行 FTP 守护进程。它具有简化的配置和对虚拟 FTP 主机的支持。虽然它目前未包含在大多数发行版中，但你可以从发行版站点以及 `ProFTPD` 站点下载 RPM 包。包名以术语 `proftpd` 开头。最新版本的压缩归档以及文档可在 `ProFTPD` 网站 `www.proftpd.net` 上获得。另一个 FTP 守护进程 `NcFTPd` 是由制作 `NcFTP` FTP 客户端的同一程序员生产的商业产品。`NcFTPd` 可供学术用途免费使用，并为小型网络提供减免费用。有关更多信息，请查看 `www.ncftpd.org`。
+
+还有多个基于安全性的 FTP 服务器可用，包括 `SSLFTP` 和 `SSH sftpd`，以及 `gssftpd`。`SSLFTP` 使用 `SSL`（安全套接字层）来加密和验证传输，并使用 `MD5` 摘要来检查传输文件的完整性。`SSH sftpd` 是一个 FTP 服务器，现已成为 `Open SSH` 包的一部分，使用 `SSH` 加密和身份验证来建立安全的 FTP 连接。`gssftpd` 服务器是 `Kerberos 5` 包的一部分，并为 FTP 操作提供 `Kerberos` 级别的安全性。
+
+## Red Hat FTP 服务器目录
+
+Red Hat 目前在安装期间安装 `vsftpd` 服务器包以及匿名 FTP 支持。此时，会创建 `ftp` 目录以及几个子目录，您可以在其中放置供 FTP 访问的文件。目录已配置为通过远程用户控制访问，仅限制使用 `ftp` 目录及其任何子目录。`ftp` 目录由不同发行版放置在不同目录中。在 Red Hat 上，`ftp` 目录放置在 `/var` 目录中，即 `/var/ftp`。将您希望允许访问的文件放在 `/var/ftp/pub` 目录中。例如，在 Red Hat 上，这将位于 `/var/ftp/pub`。
+
+您还可以创建子目录并在其中放置文件。一旦连接到网络，远程用户就可以连接到您的系统并下载您放置在 `/var/ftp/pub` 或其任何子目录中的文件。`vsftpd` FTP 包为这些目录及其文件实现了默认配置。您可以根据需要更改这些配置。如果您要自行安装 FTP 服务器，则需要了解以下各节中详细说明的安装 FTP 服务器并创建其数据目录的程序。
+
+`vsftpd` FTP 包不会创建用户可以上传文件到 FTP 站点的目录。这样的目录通常命名为 `incoming` 目录，位于 `ftp/pub/incoming`。如果您想要这样的目录，您必须创建它，使其成为 `ftp` 组的成员，然后设置其权限以允许用户写入访问。
+
+```
+chgrp ftp /var/ftp/pub/incoming
+chmod g+w /var/ftp/pub/incoming
+```
+
+| FTP 服务器 | 站点 |
+|---|---|
+| 非常安全的 FTP 服务器 (`vsftpd`) | `vsftpd.beasts.org` |
+| `ProFTPD` | `www.proftpd.net` |
+| `NcFTPd` | `www.ncftpd.org` |
+| `SSH sftp-server` | `www.openssh.org` |
+| 华盛顿大学 Web 服务器 (`WU-FTPD`) | `www.wu-ftpd.org` |
+| Tux | 具有 FTP 功能的 Web 服务器 |
+| `gssftpd` | `Kerberos FTP` 服务器 |
+
+## FTP 用户
+
+在 FTP 服务器上拥有账户的普通用户只需登录其账户即可获得完全的 FTP 访问权限。此类用户可以直接从自己的账户或其有权访问的任何目录访问和传输文件。您还可以创建称为访客用户的用户，他们对 FTP 公共可访问目录的访问受到限制。这涉及设置标准用户限制，并将 FTP 公共目录作为其主目录。
+
+## 匿名 FTP：vsftpd
+
+匿名 FTP 站点本质上是系统上的一个特殊用户，其主目录中包含公共可访问的目录和文件。任何人都可以登录此账户并访问其文件。由于任何人都可以登录匿名 FTP 账户，您必须小心将远程 FTP 用户限制为仅匿名 FTP 目录上的文件。通常，用户的文件与系统的整个文件结构相互连接。普通用户具有写入访问权限，可以创建或删除文件和目录。匿名 FTP 文件和目录可以配置为使其隐藏系统的其余文件系统，并且仅向远程用户授予读取访问权限。在 `ProFTPD` 中，这是通过在其配置文件中放置配置指令来实现的。`vsftpd` 包实现的一种较旧的方法涉及在 FTP 主目录的子目录中放置某些系统配置、命令和库文件的副本。对这些子目录施加的限制随后控制其他用户的访问。在 FTP 主目录内，您然后有一个公共可访问的目录，其中包含您希望提供给远程用户的文件。该目录通常名为 `pub`，表示公共。
+
+FTP 站点由 FTP 用户账户、FTP 主目录以及包含所选配置和支持文件的某些系统目录的副本组成。新一代 FTP 守护进程，例如 `ProFTPD`，不需要系统目录和支持文件。大多数发行版，包括 Red Hat，在您安装系统时已经设置了 FTP 用户账户。
+
+> 注意 在 Red Hat 上，你可以使用 `vsftpd` RPM 包来设置主目录以及系统目录的副本。如果无法访问 `vsftpd` 包，你可能需要自行创建这些系统目录。
+
+## FTP 用户账户：anonymous
+
+要允许其他用户通过匿名 FTP 访问你的系统，你必须拥有一个名为 `FTP` 的用户账户。大多数发行版已经为你创建了此账户。如果你的系统没有此类账户，你将需要创建一个。然后你可以对 `FTP` 账户进行限制，以防止任何远程 FTP 用户访问系统其他部分。你还必须修改 `/etc/passwd` 文件中该账户的条目，以防止对其进行正常用户访问。以下是在 Red Hat 系统上设置的 FTP 登录作为匿名用户的 `/etc/passwd` 文件中的条目：
+
+```
+ftp:x:14:50:FTP User:/var/ftp:
+```
+
+密码字段中的 `x` 阻止了该账户，从而防止任何其他用户访问它，进而控制其文件或访问系统的其他部分。用户 ID `14` 是一个唯一 ID。注释字段为 `FTP User`。登录目录为 `/var/ftp`。当 `FTP` 用户登录到你的系统时，他们将被放置在此目录中。如果尚未设置主目录，请创建一个，然后使用 `chown` 命令将其所有权更改为 `FTP` 用户。
+
+## FTP 组
+
+组 ID 是 `ftp` 组的 ID，该组仅为匿名 FTP 用户设置。你可以对 `ftp` 组设置限制，从而限制任何匿名 FTP 用户。以下是你在 `/etc/group` 文件中找到的 `ftp` 组的条目。如果你的系统没有，你应该添加它：
+
+```
+ftp::50:
+```
+
+## 创建新的 FTP 用户
+
+如果你正在创建虚拟 FTP 主机，你将需要为每个主机创建 FTP 用户及其目录。例如，要为 `host1-ftp` 主机创建 FTP 服务器，你将创建一个具有自己目录的 `host1-ftp` 用户。
+
+```
+useradd -d /var/host1-ftp host1-ftp
+```
+
+你还需要确保 `root` 用户拥有该目录，而不是新的 FTP 用户。这使得只有 `root` 用户可以控制该目录，而不是任何登录的用户。
+
+```
+chown root.root /var/host1-ftp
+```
+
+## 匿名 FTP 服务器目录
+
+如前所述，在 Red Hat 上，FTP 主目录名为 `ftp`，放置在 `/var` 目录中。当用户匿名登录时，他们将被放置在此目录中。保护系统的重要部分是防止远程用户使用受限目录之外的任何命令或程序。例如，你不会让用户使用你的 `ls` 命令来列出文件名，因为 `ls` 位于你的 `/bin` 目录中。同时，你希望 FTP 用户能够使用 `ls` 命令列出文件名。像 `vsftpd` 和 `ProFTPD` 这样的新 FTP 守护进程通过创建对所需系统命令和文件的受限访问来解决此问题，同时将远程用户限制在仅 FTP 站点的目录中。无论如何，请确保 FTP 主目录由 `root` 用户拥有，而不是 `FTP` 用户。使用 `ls -d` 命令检查 FTP 目录的所有权。
+
+```
+ls -d /var/ftp
+```
+
+要更改目录的所有权，你可以使用 `chown` 命令，如本示例所示：
+
+```
+chown root.root /var/ftp
+```
+
+
+
+另一种更传统的解决方案是创建远程用户所需的某些系统目录和文件的副本，并将它们放置在 `ftp` 目录中，用户可以在其中访问它们。`bin` 目录放置在 `ftp` 目录中，远程用户被限制使用它，而不是系统的 `bin` 目录。每当他们使用 `ls` 命令时，远程用户使用的是 `ftp/bin` 中的命令，而不是你在 `/bin` 中使用的命令。如果由于某种原因你自行设置匿名 FTP 目录，你必须使用 `chmod` 命令更改目录的访问权限，以便远程用户无法访问系统的其余部分。创建一个 `ftp` 目录并使用 `chmod` 命令使用权限 `555` 关闭写访问：`chmod 555 ftp`。接下来，在 `ftp` 目录中新建一个 `bin` 目录，然后复制 `ls` 命令并将其放置在 `ftp/bin` 中。对你希望提供给 FTP 用户的任何命令都执行此操作。然后创建一个 `ftp/etc` 目录来保存 `passwd` 和 `group` 文件的副本。同样，其目的是防止 FTP 用户访问 `/etc` 目录中的原始文件。`ftp/etc/passwd` 文件应编辑以删除系统上常规用户的任何条目。所有其他条目应将其密码设置为 `x` 以阻止访问。对于组文件，删除所有用户组并将所有密码设置为 `x`。创建一个 `ftp/lib` 目录，然后复制运行你放置在 `bin` 目录中的命令所需的库。
+
+## 匿名 FTP 文件
+
+位于 FTP 主目录中的名为 `pub` 的目录，通常保存你为远程 FTP 用户下载提供的可用文件。当 FTP 用户登录时，他们将被放置在 FTP 主目录中（Red Hat 上为 `/var/ftp`），然后他们可以更改到 `pub` 目录以开始访问这些文件（Red Hat 上为 `/var/ftp/pub`）。在 `pub` 目录内
+`directory`，你可以添加任意数量的文件和目录。你甚至可以将某些目录指定为上传目录，使 FTP 用户能够向你的系统传输文件。
+
+在 `pub` 目录下为存放 FTP 文件而设置的每个子目录中，你应创建 `README` 文件和 `INDEX` 文件以便 FTP 用户使用。`README` 文件包含对该目录中文件类型的简要描述。`INDEX` 文件包含文件列表以及每个文件内容的描述。
+
+## 非常安全的 FTP 服务器
+
+非常安全的 FTP 服务器（`vsftpd`）小巧、快速、易用且安全。它旨在避免像 `ProFTPD` 这样的大型 FTP 服务器应用程序的开销，同时保持非常高的安全级别。它还可以处理非常大的工作负载，管理 FTP 站点的高流量。它或许最适合许多匿名和访客用户会下载相同文件的站点。从 Red Hat 9 开始，它取代了华盛顿大学的 FTP 服务器 `WU-FTPD`。
+
+非常安全的 FTP 服务器本质上设计为提供尽可能多的安全性，充分利用 Unix 和 Linux 操作系统的特性。服务器分为特权进程和非特权进程。非特权进程接收所有 FTP 请求，解释它们然后通过套接字将它们发送给特权进程，后者再安全地过滤所有请求。即使是特权进程也不以完整的 `root` 权限运行，仅使用执行其任务所必需的权限。此外，非常安全的 FTP 服务器使用自己版本的目录命令如 `ls`，而不是系统的版本。
+
+## 运行 vsftpd
+
+非常安全的 FTP 服务器的守护进程名为 `vsftpd`。在 Red Hat 上，它现在设计为作为独立服务器运行，可以使用 `/etc/rc.d/init.d/vsftpd` 服务器脚本启动和停止。要启动、停止和重启 `vsftpd`，你可以使用 `service` 命令。
+
+```
+service vsftpd start
+```
+
+要使服务器自动启动，你可以使用 `chkconfig` 命令和 `on` 参数将其打开，如下所示。使用 `off` 参数禁用服务器。如果你之前启用了另一个 FTP 服务器如 `ProFTPD`，请先禁用它。
+
+```
+chkconfig vsftpd on
+```
+
+你也可以使用 `redhat-config-services` 来启动和停止 `vsftpd`，或使其自动启动。
+
+或者，你可以实现 `vsftpd` 由 `xinetd` 运行，仅在用户发出请求时运行服务器。`xinetd` 用于服务器的用法在第 20 章中有详细描述。`xinetd` 将运行位于 `/etc/xinetd.d` 目录中的名为 `vsftpd` 的 `xinetd` 脚本文件。
+
+最初，服务器将被关闭。你可以使用 `chkconfig` 命令和 `on` 参数在 `xinetd` 中将其打开，如下所示。使用 `off` 参数禁用服务器。
+
+```
+chkconfig vsftpd on
+```
+
+使用 `service` 命令（或 `redhat-config-services`）重启 `xinetd`，以在你进行配置更改后重启 `vsftpd` 服务器。
+
+```
+service xinetd restart
+```
+
+## 配置 vsftpd
+
+你使用一个配置文件 `/etc/vsftpd/vsftpd.conf` 来配置 `vsftpd`。配置选项简单且保持最小化，使其比 `ProFTPD` 灵活性差，但速度快得多（参见表 21-2）。`vsftpd.conf` 文件包含一组指令，其中选项被赋予一个值（`=` 号前后没有空格）。选项可以是赋予 `YES` 或 `NO` 值的开关功能、取数值的功能，或被赋予字符串的功能。Red Hat 在 `/etc/vsftpd` 目录中安装了默认的 `vsftpd.conf` 文件。该文件列出了一些常用的选项，并为每个选项提供详细解释。未使用的选项前面用 `#` 字符注释掉。选项名称非常易于理解。例如，`anon_upload_enable` 允许匿名用户上传文件，而 `anon_mkdir_write_enable` 则允许匿名用户创建目录。`vsftpd.conf` 的 `man` 手册列出了所有选项，并为每个选项提供详细解释。
+
+| Option | Description |
+|---|---|
+| listen | Set standalone mode |
+| listen_port | Specify port for standalone mode |
+| anonymous_enable | Enable anonymous user access |
+| local_enable | Enable access by local users |
+| no_anon_password | Specify whether anonymous users must submit a password |
+| anon_upload_enable | Enable uploading by anonymous users |
+| anon_mkdir_write_enable | Allow anonymous users to create directories |
+| anon_world_readable_only | Make uploaded files read only to all users |
+| idle_session_timeout | Time limit in seconds for idle sessions |
+| data_connection_timeouts | Time limit in seconds for failed connections |
+| dirmessage_enable | Display directory messages |
+| ftpd_banner | Display FTP login message |
+| xferlog_enable | Enable logging of transmission transactions |
+| xferlog_file | Specify log file |
+| deny_email_enable | Enable denying anonymous users whose e-mail addresses are specified in vsftpd.banned |
+| userlist_enable | Deny access to users specified in vsftpd.user_list file |
+
+TABLE 21-2 Configuration Options for vsftpd.conf
+
+| Option | Description |
+|---|---|
+| userlist_file | 根据 userlist_deny 的设置拒绝或允许用户访问 |
+| userlist_deny | 当设置为 YES 时，userlist_file 中列出的用户将被拒绝访问。当设置为 NO 时，仅 userlist_file 中列出的用户被允许访问 |
+| chroot_list_enable | 将用户限制在其主目录中 |
+| chroot_list_file | 允许用户访问主目录。除非 chroot_local_user 设置为 YES，否则此文件包含不允许访问其主目录的用户列表 |
+| chroot_local_user | 允许所有用户访问其主目录 |
+| pam_service_name | 指定 PAM 脚本 |
+| ls_recurse_enable | 启用递归列表 |
+
+## TABLE 22-1 Configuration Options for vsftpd.conf (continued)
+
+
+
+## 启用独立访问
+
+要将`vsftpd`作为独立服务器运行，您需要将`listen`选项设置为`YES`。这指示`vsftpd`在其分配的端口上持续监听请求。您可以使用`listen_port`选项指定其监听的端口。
+
+```
+listen=YES
+```
+
+## 启用登录访问
+
+在以下取自`vsftpd.conf`文件的示例中，通过将`anonymous_enable`选项赋值为`YES`来启用匿名FTP。`local_enable`选项允许系统上的本地用户使用FTP服务器。
+
+```
+# Allow anonymous FTP?
+anonymous_enable=YES
+#
+# Uncomment this to allow local users to log in.
+local_enable=YES
+```
+
+如果您希望允许匿名用户无需提供密码即可登录，可以将`no_anon_password`设置为`YES`。
+
+## 本地用户权限
+
+多种用户权限控制本地用户如何访问服务器上的文件。如果您希望允许本地用户在其账户上创建、重命名和删除文件和目录，您必须使用`write_enable`选项启用写访问。这样，他们上传的任何文件也可以删除。实际上，`write_enable`选项激活了一系列用于更改文件系统的命令，包括创建、重命名和删除文件和目录。
+
+```
+write_enable=YES
+```
+
+您可以使用`local_umask`选项进一步指定上传文件的权限（Red Hat在`vsftpd.conf`中设置的默认值为`022`，拥有者可读可写，其他用户只读，`644`）。
+
+```
+local_umask=022
+```
+
+尽管默认情况下禁用ASCII上传，但您也可以启用此功能。ASCII上传存在一定的安全风险，因此默认关闭。但如果您需要上传大型文本文件，在特殊情况下可能希望启用它们。使用`ascii_upload_enable`来允许ASCII上传。
+
+## 匿名用户权限
+
+您还可以允许匿名用户上传和删除文件，以及创建或删除目录。匿名用户上传功能通过`anon_upload_enable`选项启用。要让匿名用户也能重命名或删除其文件，您需要设置`anon_other_write_enable`选项。要让他们也能创建目录，您需要设置`anon_mkdir_write_enable`选项。
+
+```
+anon_upload_enable=YES
+anon_other_write_enable=YES
+anon_mkdir_write_enable=YES
+```
+
+`anon_world_readable_only`选项将使上传的文件变为只读（可下载），限制写访问仅限于创建该文件的用户。只有上传文件的用户才能删除它。
+
+所有上传的文件都归匿名FTP用户所有。您可以让文件归另一个用户所有，从而增加安全性。实际上，上传文件的实际所有者对匿名用户来说是隐藏的。要启用此选项，您使用`chown_uploads`并使用`chown_username`指定新用户。切勿将用户设为`root`等管理员用户。
+
+```
+chown_uploads=YES
+chown_username=myftpfiles
+```
+
+上传目录本身应由其他用户赋予写权限。
+
+```
+chmod 777 /var/ftp/upload
+```
+
+您可以使用`anon_mask`选项控制用户对文件的访问类型，设置上传文件的默认读/写权限。默认值为`077`，仅授予所有者读/写权限（`600`）。要允许所有用户读取访问，您可以将`umask`设置为`022`，其中`2`关闭写权限但设置读权限（`644`）。值`000`将允许所有用户进行读写。
+
+## 连接时间限制
+
+为了更有效地控制服务器的工作负载，您可以对空闲用户和传输失败设置时间限制。`idle_session_timeout`将在指定时间后切断空闲用户，而`data_connection_timeout`将切断失败的数据连接。默认设置如下：
+
+```
+idle_session_timeout=600
+data_connection_timeout=120
+```
+
+## 消息
+
+`dirmessage_enable`选项将允许在用户访问某个目录时显示该目录的`.message`文件中保存的消息。`ftpd_banner`让您设置自己的FTP登录消息。默认设置如下所示。
+
+```
+ftpd_banner=Welcome to blah FTP service.
+```
+
+## 日志记录
+
+一组`xferlog`选项控制日志记录。您可以启用日志记录，并指定文件的格式和位置。
+
+```
+xferlog_enable=YES
+```
+
+使用`xferlog_file`选项指定要使用的日志文件。默认设置如下所示：
+
+```
+xferlog_file=/var/log/vsftpd.log
+```
+
+## vsftpd 访问控制
+
+某些选项控制对FTP站点的访问。如前所述，`anonymous_enable`选项允许匿名用户访问，`local_enable`允许本地用户登录其账户。
+
+### 拒绝访问
+
+`deny_email_enable`选项允许您拒绝匿名用户访问，`banned_email_file`选项指定保存这些用户电子邮件地址的文件（通常是`vsftpd.banned`）。`vsftpd.ftpusers`文件列出了永远不能访问的用户。这些通常是系统用户，如`root`、`mail`和`nobody`。有关vsftpd文件的列表，请参见Table 21-3。
+
+`chroot_list_file`将具有相反的含义，列出不允许访问的用户。在以下示例中，本地用户的访问仅限于`vsftpd.chroot`中列出的用户。
+
+```
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+```
+
+## 用户认证
+
+`vsftpd`服务器使用PAM服务来认证通过FTP远程访问其账户的本地用户。在`vsftpd.conf`文件中，用于服务器的PAM脚本通过`pam_service_name`选项指定。
+
+```
+pam_service_name=vsftpd
+```
+
+在`/etc/pam.d`目录中，您会找到一个名为`vsftpd`的PAM文件，其中包含控制对`vsftpd`服务器访问的条目。PAM当前设置为认证具有有效账户的用户，同时拒绝`/etc/vsftpd.ftpusers`文件中的用户访问。默认的`/etc/pam.d/vsftpd`文件如下所示：
+
+
+
+```
+##$PAM-1.0
+auth    required    pam_listfile.so item=user sense=deny
+                file=/etc/vsftpd.ftpusers onerr=succeed
+auth    required    pam_stack.so service=system-auth
+auth    required    pam_shells.so
+account required    pam_stack.so service=system-auth
+session required    pam_stack.so service=system-auth
+```
+
+## Command Access
+
+Command usage is highly restricted by `vsftpd`. Most options for the `ls` command that lists files are not allowed. Only the asterisk file-matching operation is supported (see Chapter 8). To enable recursive listing of files in subdirectories, you have to enable the use of the `-R` option by setting the `ls_recurse_enable` option to `YES`. Some clients, such as `ncftp` (see Chapter 14), will assume that the recursive option is enabled.
+
+| File | Description |
+|---|---|
+| `vsftpd.ftpusers` | Users always denied access |
+| `vsftpd.user_list` | Specified users denied access (allowed access if `userlist_deny` is `NO`) |
+| `vsftpd.chroot_list` | Local users allowed access (denied access if `chroot_local_user` is `on`) |
+| `/etc/vsftpd/vsftpd.conf` | `vsftpd` configuration file |
+| `/etc/pam.d/vsftpd` | PAM `vsftpd` script |
+| `/etc/rc.d/init.d/vsftpd` | Service `vsftpd` server script, standalone (Red Hat default) |
+| `/etc/xinetd.d/vsftpd` | Xinetd `vsftpd` server script |
+
+TABLE 21-3 Files for `vsftpd`
+
+## `vsftpd` Virtual Hosts
+
+Though the capability is not inherently built in to `vsftpd`, you can configure and set up the `vsftpd` server to support virtual hosts. Virtual hosting is where a single FTP server operates as if it has two or more IP addresses. Several IP addresses can then be used to access the same server. The server will then use a separate FTP user directory and files for each host. With `vsftpd`, this involves manually creating separate FTP users and directories for each virtual host, along with separate `vsftpd` configuration files for each virtual host in the `/etc/vsftpd` directory. On Red Hat, `vsftpd` is configured to run as a standalone service. Its `/etc/rc.d/init.d/vsftpd` start-up script will automatically search for and read any configuration files listed in the `/etc/vsftpd` directory.
+
+If, on the other hand, you wish to run `vsftpd` as a `xinetd` service, you would have to create a separate `xinetd` service script for each host in the `/etc/xinetd.d` directory. In effect, you have several `vsftpd` services running in parallel for each separate virtual host. The following example uses two IP addresses for an FTP server.
+
+- First, create an FTP user for each host. Create directories for each host. (You could use the one already set up for one of the users.) For example, for the first virtual host you could use `FTP-host1`. Be sure to set root ownership and the appropriate permissions.
+
+  ```
+  useradd -d /var/ftp-host1 FTP-host1
+  chown root.root /var/ftp-host1
+  chmod a+rx /var/ftp-host1
+  umask 022
+  mkdir /var/ftp-host1/pub
+  ```
+
+- Set up two corresponding `vsftpd` service scripts in the `/etc/xinetd.d` directory. On Red Hat, the `vsftpd` directory in `/usr/share/doc` has an `xinetd` example script, `vsftpd.xinetd`. Within each, enter a `bind` command to specify the IP address the server will respond to.
+
+  ```
+  bind 192.168.0.34
+  ```
+
+- Within the same scripts, enter a `server_args` entry specifying the name of the configuration file to use.
+
+  ```
+  server_args = vsftpd-host1.conf
+  ```
+
+- Within the `/etc/vsftpd` directory, create separate configuration files for each virtual host. Within each, specify the FTP user you created for each, using the `ftp_username` entry.
+
+  ```
+  ftp_username = FTP-host1
+  ```
+
+## `vsftpd` Virtual Users
+
+Virtual users can be implemented by making use of PAM to authenticate authorized users. In effect, you are allowing access to certain users, while not having to actually set up accounts for them on the FTP server system. First create a PAM login database file to use along with a PAM file in the `/etc/pam.d` directory that will access the database. Then create a virtual FTP user along with corresponding directories that the virtual users will access
+
+
+
+（有关更详细的信息，请参阅 `vsftpd.beasts.org` 上的 `vsftpd` 文档）。然后在 `vsftpd.conf` 文件中，你可以禁用匿名 FTP：
+
+```
+anonymous_enable=NO
+local_enable=YES
+```
+
+然后启用访客访问：
+
+```
+guest_enable=YES
+guest_username=virtual
+```
+
+# 专业 FTP 守护进程：ProFTPD
+
+ProFTPD 基于与 Apache Web 服务器相同的设计，采用类似的简化配置结构并支持诸如虚拟主机等灵活功能。ProFTPD 是一个开源项目，以 GPL 许可证提供。你可以从其网站 `www.proftpd.net` 或 `www.proftpd.org` 下载当前版本。在那里你还可以找到详细的文档，包括常见问题解答、用户手册和示例配置。请查看该网站以获取新版本和更新。
+
+RPM 包可用于许多发行版，包括 Red Hat，以及 `www.proftpd.net`。与安装其他 FTP 守护进程不同，你无需在 FTP 主目录中设置系统文件的特殊子目录。不需要特殊的 `bin` 或 `etc` 文件。你还可以根据系统负载设置 ProFTPD 以在 `xinetd` 启动或作为独立服务器持续运行之间自动切换。
+
+ProFTPD 的工具与 WU-FTPD 工具以相同的方式运行。`ftpshut` 在指定时间发出警告后关闭系统。使用 ProFTPD，你可以在主服务器继续运行的同时关闭虚拟主机。`ftpwho` 显示当前连接的所有远程用户列表，按虚拟主机和服务器细分。`ftpcount` 显示按服务器和虚拟主机划分的当前连接数。有关更多信息，请参阅本章末尾的“ProFTPD 和 WU-FTPD 服务器工具”部分。
+
+ProFTPD 设计为可扩展，支持可由定制或第三方开发者提供的动态模块。目前，有模块提供 LDAP 和 SQL 身份验证，以及用于用户配额、日志格式和时间限制等功能的众多增强模块。
+
+## 安装和启动
+
+如果你使用发行版 RPM 包（如 Red Hat 的）安装 ProFTPD，则所需的配置条目会在你的 `proftpd.conf` 文件中创建。如果你从编译的源代码安装，可能需要修改提供的默认 `proftpd.conf` 文件中的条目。确保 `proftpd.conf` 文件中指定的 FTP 用户和组确实存在。
+
+你可以通过 ProFTPD 网站 `www.proftpd.net` 下载 ProFTPD。你可以使用官方 FTP 站点 `ftp.proftpd.org` 或其中一个关联的镜像站点。RPM 包版本将包含三个包：核心应用程序、独立版本和将在 `xinetd` 上运行的 `inetd` 版本。首先下载并安装核心包。然后，根据你希望以独立或 `inetd` 进程运行 ProFTPD，安装 `inetd` 或独立包。
+
+```
+proftpd-1.2.8-1.i686.rpm
+proftpd-inetd-1.2.8-1.i686.rpm
+proftpd-standalone-1.2.8-1.i686.rpm
+```
+
+你可以将 ProFTPD 作为独立进程或从 `xinetd` 运行。确保在 `proftpd.conf` 文件的 `ServerType` 指令中做出适当的条目。独立 RPM 包将安装 `proftpd` 以作为独立服务器运行，将 `ServerType` 设置为 `standalone`。在 Red Hat 系统上，一个名为 `proftpd` 的启动脚本被放置在 `/etc/rc.d/init.d` 目录中，在你启动系统时启动守护进程。独立进程会持续运行。你可以使用 `service` 命令启动、停止和重新启动服务器，如下所示：
+
+```
+service proftpd restart
+```
+
+要设置其自动启动的运行级别，可以使用 `chkconfig` 或 `redhat-config-services`。以下命令将 `proftpd` 设置为从运行级别 3 和 5 自动运行：
+
+```
+chkconfig --level 35 proftpd on
+```
+
+以下命令将禁用 `proftpd`：
+
+```
+chkconfig --del proftpd
+```
+
+如果你想将 `proftpd` 作为 `xinetd` 进程运行，首先必须将 `ServerType` 更改为 `inetd` 并禁用 `/etc/rc.d/init.d` 目录中的 `proftpd` 启动脚本。要从 `xinetd` 运行 ProFTPD，请确保在 `/etc/xinetd.d` 目录中为其创建适当的文件。目前，`proftpd inetd` RPM 包实现了一个指向 `proftpd` 守护进程的 `in.proftpd` 链接。在 ProFTPD `xinetd` 文件中使用此链接来调用 ProFTPD。名为 `proftpd` 的简单 ProFTPD `xinetd` 文件看起来像这样：
+
+```
+# default: on
+service proftp
+{
+    disable       = no
+    socket_type   = stream
+    wait          = no
+    user          = root
+    server        = /usr/sbin/in.proftpd
+}
+```
+
+使用 `chkconfig` 命令并带上 `off` 或 `on` 参数来禁用或启用 `proftpd` 在 `xinetd` 下运行。
+
+```
+chkconfig proftpd on
+```
+
+## proftpd.conf 和 .ftpaccess
+
+ProFTPD 仅使用一个配置文件，名为 `proftpd.conf`，位于 `/etc` 目录中。配置条目采用指令的形式。此格式是有意模仿 Apache 配置指令。通过这些指令，你可以输入基本配置信息，例如你的服务器名称，或执行更复杂的操作，例如实现虚拟 FTP 主机。其设计足够灵活，可以让你为特定的目录、用户或组定义配置功能。
+
+要配置特定目录，可以使用包含配置选项的 `.ftpaccess` 文件放置在该目录中。这些 `.ftpaccess` 选项优先于 `proftpd.conf` 目录中的选项。`.ftpaccess` 文件的设计类似于 Apache Web 服务器中用于配置特定网站目录的 `.htaccess` 文件。你可以在 ProFTPD 网站（`www.proftpd.net`）以及作为 ProFTPD 软件包一部分安装在 `/usr/doc` 中的 ProFTPD 文档中找到 ProFTPD 配置参数的完整列表。表 21-4 中列出了其中一些更常用的参数。在创建新配置时，你应该复制 `proftpd.conf` 配置文件并对其进行修改。然后你可以使用 `proftpd` 命令配合 `-c` 选项和文件名来测试其语法。
+
+```
+proftpd -c newfile.conf
+```
+
+存在不同种类的指令。许多指令设置值，例如 `MaxClients`，它设置客户端的最大数量，或 `NameServer`，它设置 FTP 服务器的名称。其他指令创建可以包含适用于特定 FTP 服务器组件的指令的块。块指令成对出现：开始指令和终止指令。终止指令定义块的结束，由相同的名称组成，以斜杠开头。块指令接受一个参数，指定指令将适用的特定对象。对于 `Directory` 块指令，你必须指定它将适用的目录名。`<Directory mydir>` 块指令创建一个块，其内部的指令适用于 `mydir` 目录。块由 `</Directory>` 指令终止。`<Anonymous ftp-dir>` 配置你的 FTP 服务器的匿名服务。你需要指定用于匿名 FTP 服务的系统上的目录，例如 `/var/ftp`。块以 `</Anonymous>` 指令终止。`<VirtualHost hostaddress>` 块指令用于配置特定的虚拟 FTP 服务器，必须包含用于该服务器的 IP 或域名地址。它的终止指令是 `</VirtualHost>`。你放置在此块内的任何指令都将应用于该虚拟 FTP 服务器。`<Limit permission>` 指令指定你想要限制的访问类型。它接受其参数为几个关键字之一，表示要控制的权限类型：`WRITE` 用于写访问，`READ` 用于读访问，`STOR` 用于传输访问（上传），以及 `LOGIN` 用于控制用户登录。
+
+下面显示了作为 ProFTPD 软件包一部分安装的标准 `proftpd.conf` 文件的示例。它建立一个单一服务器和一个单一匿名登录。请注意默认的 `ServerType` 为 `standalone`。如果要使用 `xinetd` 运行服务器，必须将此条目更改为 `inetd`。展示各种匿名 FTP 和虚拟主机配置的 `proftpd.conf` 文件的详细示例，可以在位于 `/usr/share/doc` 的 ProFTPD 文档中以及 ProFTPD 网站 `www.proftpd.net` 上找到。
+
+```
+ServerName      "ProFTPD Default Installation"
+ServerType      standalone
+DefaultServer   on
+Port            21
+```
+
+
+
+```
+Umask            022
+MaxInstances     30
+User             nobody
+Group            nobody
+<Directory />
+    AllowOverwrite     on
+</Directory>
+# A basic anonymous configuration, with one incoming directory.
+<Anonymous ~ftp>
+    User               ftp
+    Group              ftp
+    RequireValidShell  off
+    MaxClients         10
+    UserAlias          anonymous ftp
+    DisplayLogin       welcome.msg
+    DisplayFirstChdir  .message
+    # Limit WRITE everywhere in the anonymous chroot except incoming
+    <Directory *>
+        <Limit WRITE>
+            DenyAll
+        </Limit>
+    </Directory>
+    <Directory incoming>
+        <Limit WRITE>
+            AllowAll
+        </Limit>
+        <Limit READ>
+            DenyAll
+        </Limit>
+    </Directory>
+</Anonymous>
+```
+
+## Authentication
+
+ProFTPD 中用户认证可以实现在 PAM、LDAP 或 SQL 中。对于 LDAP 或 SQL，你需要加载相应的 ProFTPD 模块。PAM 认证是默认的（有关 LDAP 和 PAM 的更多信息，请参阅第 28 章）。请确保已安装 `/etc/pam.d/ftp` 文件以提供 PAM FTP 支持。ProFTPD 还支持标准密码和 shadow 密码。默认的 PAM 认证可以通过将 `AuthPAMAuthoritative` 指令设置为 `off` 来关闭，从而允许使用其他认证方法，例如 LDAP。如果你的服务器通过 IP Masquerading 技术进一步隐藏在本地网络中，你可以使用 `MasqueradeAddress` 指令指定其公共主机名，使其真实主机名保持隐藏。
+
+## Anonymous Access
+
+你使用 `Anonymous` 配置指令创建一个匿名配置块，在其中可以放置配置匿名 FTP 服务的指令。该指令包含用于匿名 FTP 服务的系统上的目录。ProFTPD 守护进程在此目录上执行 `chroot` 操作，使其成为访问该服务的远程用户的根目录。默认情况下，支持匿名登录，要求用户输入其电子邮件地址作为密码。你可以
+
+修改匿名配置以构建更受控制的匿名服务，例如访客登录和必需密码。
+
+> 注意 对于 ProFTPD，你的匿名 FTP 目录不需要任何系统文件。在 ProFTPD 执行 `chroot` 操作、将目录外的其余系统隐藏起来之前，它会访问并保持打开目录外所需的任何系统文件。
+
+以下示例展示了标准的匿名 FTP 配置。初始的 `Anonymous` 指令指定 `/var/ftp` 为匿名 FTP 主目录。`User` 指令指定匿名 FTP 守护进程将以哪个用户运行，而 `Group` 指示其所属组。在这两种情况下，`FTP`，即大多数系统上用于匿名 FTP 的标准用户名，都被使用。一个带有 `*` 文件匹配字符的 `Directory` 指令随后定义了一个 `Directory` 块，该块适用于 `/var/ftp` 中的所有目录和文件。`*` 符号匹配所有文件名和目录。在 `Directory` 指令内部是一个 `Limit` 指令，你用它来对目录进行控制。该指令接受多个参数，包括用于读取访问的 `READ` 和用于写入访问的 `WRITE`。在此示例中，`Limit` 指令对用户的写入能力施加了限制。在 `Limit` 指令内部，`DenyAll` 指令拒绝写入权限，防止用户创建或删除文件，从而有效地只给予他们读取访问权限。第二个 `Directory` 指令为 `incoming` 目录创建了此规则的例外。`incoming` 目录通常在 FTP 站点上设置以让用户上传文件。对于此目录，第一个 `Limit` 指令通过其 `DenyAll` 指令阻止用户进行 `READ` 和 `WRITE` 访问，从而有效地防止用户在此处删除或读取文件。然而，第二个 `Limit` 指令允许用户上传文件，仅允许传输 `STOR`，并使用 `AllowAll` 指令。
+
+匿名 FTP 配置的一个重要指令是 `RequireValidShell`。默认情况下，FTP 守护进程首先检查远程用户是否尝试使用有效 shell，例如 BASH shell 或 C shell 登录。FTP 守护进程从 `/etc/shells` 文件获取有效 shell 列表。如果远程用户没有有效 shell，则拒绝连接。你可以使用 `RequireValidShell` 指令和 `off` 选项关闭此检查。然后远程用户可以使用任何类型的 shell 登录。
+
+```
+<Anonymous /var/ftp>
+    User ftp
+    Group ftp
+    UserAlias anonymous ftp
+    RequireValidShell off
+    <Directory *>
+        <Limit WRITE>
+            DenyAll
+        </Limit>
+    </Directory>
+    # The only command allowed in incoming is STOR
+    # (transfer file from client to server)
+    <Directory incoming>
+        <Limit READ WRITE>
+            DenyAll
+        </Limit>
+        <Limit STOR>
+            AllowAll
+        </Limit>
+    </Directory>
+</Anonymous>
+```
+
+请记住，FTP 最初设计用于让远程用户连接到系统上他自己的账户。用户可以使用 FTP 服务登录到你系统上的不同账户。匿名用户仅限于匿名用户账户。然而，你可以创建其他用户及其主目录，这些也作为具有相同限制的匿名 FTP 账户运行。此类账户称为访客账户。远程用户需要知道用户名，通常还需要密码。一旦连接，他们只能读取该账户文件的访问权限；文件系统的其余部分对他们是隐藏的。实际上，你在同一位置创建了一个单独的匿名 FTP 站点，具有更受限制的访问权限。
+
+要创建访客账户，首先为其创建用户和主目录。然后在 `proftpd.conf` 文件中为该账户创建一个 `Anonymous` 块。`Anonymous` 指令包括你创建的访客用户的主目录。你可以用 `~` 表示该路径和目录名，通常与用户名相同。在 `Anonymous` 块内部，你使用 `User` 和 `Group` 指令指定用户账户的用户名和组名。如果希望远程用户提供密码，请将 `AnonRequirePassword` 指令设置为 `on`。`UserAlias` 指令为用户名定义别名。远程用户可以使用别名或原始用户名登录。然后你输入剩余的指令来控制对账户主目录中文件和目录的访问。以下是显示初始指令的示例。`User` 指令将用户指定为 `myproject`。主目录为 `~myproject`，通常解析为 `/var/myproject`。`UserAlias` 允许远程用户使用名称 `myproject` 或 `mydesert` 登录。
+
+```
+<Anonymous ~myproject>
+    User myproject
+    Group other
+    UserAlias mydesert myproject
+    AnonRequirePassword on
+    <Directory *>
+```
+
+你也可以同样轻松地创建一个不需要密码的账户，让用户输入他们的电子邮件地址即可。以下示例配置了一个名为 `mypics` 的匿名用户。不需要密码，也不需要有效 shell。远程用户仍需要知道用户名，在本例中为 `mypics`。
+
+```
+<Anonymous /var/mypics>
+    AnonRequirePassword off
+    User mypics
+    Group nobody
+    RequireValidShell off
+    <Directory *>
+```
+
+以下示例提供了一种更通用的访客登录方式。用户名为 `guest`，主目录位于 `~guest`。远程用户需要知道 `guest` 账户的密码。第一个 `Limit` 指令允许所有用户登录。第二个 `Limit` 指令允许来自特定网络（由网络 IP 地址指示）的用户进行写入访问，并拒绝其他任何人的写入访问。
+
+
+
+```
+<Anonymous ~guest>
+User            guest
+Group           nobody
+AnonRequirePassword     on
+<Limit LOGIN>
+AllowAll
+</Limit>
+# Deny write access from all except trusted hosts.
+<Limit WRITE>
+Order           allow, deny
+Allow           from 10.0.0.
+* Deny           from all
+</Limit>
+</Anonymous>
+```
+
+## 虚拟FTP服务器
+
+ProFTPD守护进程可以同时管理多个FTP站点。通过`proftpd.conf`文件中的`VirtualHost`指令，您可以创建一组独立的指令来配置单独的FTP服务器。`VirtualHost`指令通常用于将虚拟服务器配置为FTP站点。您可以配置系统以支持多个IP地址。额外的IP地址可用于虚拟服务器，而不是独立的机器。您可以使用这样一个额外的IP地址来设置虚拟FTP服务器，从而在同一系统上获得另一个FTP站点。这个新增的服务器会将额外的IP地址作为自己的地址。远程用户可以使用该IP地址（而不是系统的主IP地址）访问它。由于这样的FTP服务器不是独立运行在单独机器上，而是位于同一台机器上，因此被称为虚拟FTP服务器或虚拟主机。此功能让您可以在一台机器上运行多个对外呈现为不同FTP服务器的服务。当远程用户使用虚拟FTP服务器的IP地址访问它时，ProFTPD守护进程会检测到该请求并作为该站点的FTP服务运行。ProFTPD可以在一台机器上同时处理大量的虚拟FTP站点。
+
+> 注意：凭借其配置功能，您还可以将任何虚拟FTP站点定制为特定角色，例如访客站点、针对特定组的匿名站点或针对特定用户的匿名站点。
+
+您可以通过在`proftpd.conf`文件中输入`<VirtualHost>`指令来配置虚拟FTP服务器。此类条目以`VirtualHost`指令和IP地址开头，以终止的`VirtualHost`指令`</VirtualHost>`结尾。放在这两者之间的任何指令都应用于该虚拟主机。对于匿名或访客站点，请添加`Anonymous`和`Guest`指令。您甚至可以为特定目录添加`Directory`指令。在独立配置中使用`Port`指令，您可以创建一个在同一系统上运行但连接不同端口的虚拟主机。
+
+```
+<VirtualHost 10.0.0.1>
+    ServerName "My virtual FTP server"
+</VirtualHost>
+```
+
+`Xinetd`和独立配置处理虚拟主机的方式有所不同。`Xinetd`检测到对虚拟主机的请求，然后将其转交给FTP守护进程。FTP守护进程随后检查请求中指定的地址和端口，并为相应的虚拟主机处理请求。在独立配置中，FTP守护进程持续监听所有指定端口上的请求，并在不同虚拟主机的请求进来时生成子进程来处理它们。在独立配置中，ProFTPD可以同时支持大量虚拟主机。
+
+以下示例展示了虚拟FTP主机的示例配置。`VirtualHost`指令使用域名地址作为其参数。使用域名地址时，该地址必须与网络域名服务器中的IP地址关联。该IP地址又必须指向运行ProFTPD守护进程的机器。在`ftp.mypics.com`虚拟FTP服务器上，配置了一个名为`robpics`的匿名访客账户，该账户需要密码才能登录。同时还配置了一个匿名FTP账户，使用主目录`/var/ftp/virtual/pics`。
+
+```
+<VirtualHost ftp.mypics.com>
+    ServerName      "Mypics FTP Server"
+    MaxClients      10
+    MaxLoginAttempts 1
+    DeferWelcome    on
+    <Anonymous ~robpics>
+        User            robpics
+        Group           robpics
+        AnonRequirePassword on
+    </Anonymous>
+    <Anonymous /var/ftp/virtual/pics>
+        User            ftp
+        Group           ftp
+        UserAlias       anonymous ftp
+    </Anonymous>
+</VirtualHost>
+```
+
+| 指令 | 描述 |
+|---|---|
+| `Allow` ["from"] "all" \| "none" \| host \| network[,host] \| network[, ...] | 用于在`<Limit>`上下文中明确指定哪些主机和/或网络可以访问受限的命令或操作。与`Order`和`Deny`一起用于创建访问控制规则。默认值：`Allow from all` 上下文：`<Limit>` |
+| `AllowAll` | 允许访问`<Directory>`、`<Anonymous>`或`<Limit>`块。 |
+
+| Directive | Description |
+|---|---|
+| `AllowFilter` regular-expression | 允许配置一个正则表达式，所有发送到 ProFTPD 的命令都必须匹配该表达式。 |
+| `AllowUser` user-expression | 允许访问的用户。 |
+| `<Anonymous root-directory>` | 创建一个匿名 FTP 登录，由匹配的 `</Anonymous>` 指令终止。root directory 参数是 `proftpd` 首先移动到的目录，然后 `chroot` 到该目录，以隐藏其余文件系统。 |
+| `Bind` address | 允许将额外的 IP 地址绑定到主或`VirtualHost`配置。可以使用多个`Bind`指令来绑定多个地址。 |
+| `DefaultRoot` directory [group-expression] | 用户登录时分配的默认根目录。group-expression 参数将`DefaultRoot`指令限制为某个组或一组组。默认值：`DefaultRoot /` |
+| `Deny` ["from"] "all"/"none"/host/network [,host/network[...]] | 在给定的`<Limit>`上下文块中明确拒绝访问的主机和网络列表。all 表示拒绝所有主机访问，none 表示没有主机被明确拒绝。 |
+| `DenyAll` | 拒绝对目录、匿名 FTP 或`<Limit>`块的访问。 |
+| `DenyFilter` regular-expression | 指定一个正则表达式，该表达式不得匹配任何命令。 |
+| `DenyUser` user-expression | 在`<Limit>`块内被拒绝访问的用户。 |
+| `<Directory pathname>` | 目录特定配置。用于创建适用于指定目录及其子目录的一组指令块。 |
+| `DisplayLogin` filename | 指定在用户登录时向用户显示的文本文件。 |
+| `<Global>` | 全局配置块 |
+| `<Limit command/command-group [command2...]>` | 在给定上下文中对 FTP 命令的访问限制。command-group 指 ProFTPD 文档中定义的命令分组。 |
+| `LsDefaultOptions` "options string" | 目录列表的默认选项（如 `ls` 命令）。 |
+| `MasqueradeAddress` host | 指定 FTP 服务器的公共主机名。用于由 NAT 表（包过滤）伪装的 FTP 服务器。参见第 19 章。 |
+| `MaxClients` number/none message | 允许的最大连接客户端数。指定的消息在客户端连接被拒绝时显示。 |
+| `MaxLoginAttempts` number | 客户端在给定连接期间尝试登录服务器的最大次数。 |
+| `Order` allow, deny / deny, allow | 配置`<Limit>`块内`Allow`和`Deny`指令的检查顺序。默认值：`Order allow,deny` 上下文：`<Limit>` |
+| `PersistentPasswd` on \| off | 当为 `on` 时，`proftpd` 在登录期间打开系统范围的 `/etc/passwd`、`/etc/group` 文件，即使在更改根目录的 `chroot` 操作期间也会访问它们。 |
+| `ServerAdmin` "admin-email-address" | 服务器或虚拟主机的管理员电子邮件地址。 |
+| `ServerType` type-identifier | 服务器守护进程的运行模式，为 `inetd` 或 `standalone`。 |
+| `TimeoutIdle` seconds | `proftpd` 允许客户端在无活动状态下保持连接的最大秒数。默认值：`TimeoutIdle 600` |
+| `Umask` octal-mask | 在给定上下文中应用于新创建的文件和目录的权限。 |
+
+
+
+- `User userid`：`proftpd` 守护进程以其运行的用户。
+- `UserAlias login-user userid`：将客户端使用的登录名映射到服务器上的用户 ID。以 `login-user` 登录的客户端实际上以 user ID 登录。通常在 `<Anonymous>` 块内使用，以允许指定的登录名执行匿名登录。
+- `<VirtualHost address>`：适用于特定主机名或 IP 地址的配置指令。通常与在同一物理机器上运行的虚拟服务器一起使用。该块以 `</VirtualHost>` 指令终止。
+
+## 华盛顿大学 FTP 守护进程：WU-FTPD
+
+华盛顿大学 FTP 服务器虽然使用广泛，但在 Red Hat 9 及更高版本中已不再包含。华盛顿大学 FTP 守护进程的名称为 `wu-ftpd`；必须运行它才能允许远程用户通过 FTP 访问。与其他服务器一样，您可以在启动时启动 FTP 服务器，通过 `xinetd` 在收到请求时启动，或直接从命令行启动。默认情况下，`wu-ftpd` 服务器安装为使用 `xinetd` 运行。服务器使用 `xinetd` 的情况在第 20 章中有详细描述。调用 FTP 服务器的命令名称为 by `xinetd` is in `/etc/xinetd.d/ftpd`. This is a link to the `wu-ftpd` command. `xinetd` will run a file called `wu-ftpd` located in the `/etc/xinetd.d` directory.
+
+You can use numerous configuration options to tailor your FTP server to your site’s particular needs. WU-FTPD makes use of several configuration files located in the system’s `/etc` directory. All begin with the pattern `ftp`. The primary configuration file is named `ftpaccess`. Here, you provide basic server information and access for specified directories.
+
+The `ftphosts`, `ftpusers`, and `ftpgroups` files control access by systems, particular users, and groups. `ftpconversions` specifies how archive and compression operations are to be performed on files before or after they are transferred. `xferlog` is the log file that stores a running log of all transactions performed by the server.
+
+## ProFTPD and WU-FTPD Server Tools
+
+Both the WU-FTPD and ProFTPD daemons provide a set of FTP tools you can use to manage your FTP server. With the `ftpshut` command, you can smoothly shut down a running server, warning users of the shutdown well before it happens. `ftpwho` can tell you who is currently connected and what they are doing. `ftpcount` can give you the number of connections currently in effect. Although each daemon has its own set of tools, they perform the same action with much the same set of options. Tools provided by both ProFTPD and WU-FTPD have the same name and options, though ProFTPD provides more information on virtual hosts and has some added options.
+
+## `ftpshut`
+
+With the `ftpshut` command, you can have the FTP server shut down at a given time, rather than suddenly shutting it down by killing its process. This gives you the chance to warn users the server is shutting down and not to start any long downloads. `ftpshut` takes several options for specifying the time and including a warning message. `ftpshut` takes as its arguments the time until the shutdown, followed by the warning message you want sent to users. The time can be a word such as “now” that effects an immediate shutdown, a `+` sign with the number of minutes remaining, or a specific time of day indicated by an `HHMM` format, where `HH` is the hour in a 24-hour cycle and `MM` is the minute. The following example shuts down the FTP server in ten minutes, issuing a warning to users:
+
+```
+ftpshut +10 "Shutdown in ten minutes"
+```
+
+Shutdown disables any new FTP access ten minutes before a scheduled shutdown, though this can be changed using the `-l` option with the number of minutes you want. Five minutes before a scheduled shutdown, all current connections are disconnected. You can adjust the time with the `-d` option. The warning message is formatted at 75 characters, and you can use special formatting symbols for in-place substitutions of certain values in the warning message, such as the shutdown time. These symbols are called magic cookies. For example, `%s` is the shutdown time, `%r` is the time when new connections are refused, `%d` is the time when current connections are cut, `%m` is the maximum number of users, and `%l` is the local hostname.
+
+## `ftpwho` and `ftpcount`
+
+
+
+With the `ftpwho` command, you can find out who is currently connected to your FTP server. `ftpwho` shows the current process information for each user. The output displays five fields: the process ID, the tty connection, the status of the connection, the amount of CPU time used so far for the process, and the connection details. The status of the connection is `R` for running, `S` for sleeping, and `Z` for crashed. The connection details include the Internet address from where the connection is made, the user making the connection, and the task currently being performed, such as downloading a file. The field begins with the name of the FTP daemon, usually `ftpd`, followed by the different segments separated by colons.
+
+The `ftpcount` command displays the number of users connected to your FTP server, broken down according to the classes specified in your `.ftpaccess` file. Along with the number of users, it shows the maximum number allowed to connect.
+
+# CHAPTER
+
+## Web 服务器：Apache
+
+Linux 发行版为系统提供了多个 Web 服务器供使用。主要 Web 服务器通常是 Apache，它几乎已成为 Red Hat Linux 的标准 Web 服务器。这是一个功能非常强大、稳定且配置相对容易的系统。其他 Web 服务器也可用，例如 Tux。Tux 体积更小，但速度非常快，并且在处理不会改变的 Web 数据时效率很高。Red Hat Linux 为 Web 服务器提供了默认配置，使其在安装后即可使用。
+
+Linux 可用的其他 Web 服务器包括 Red Hat Secure Server (`www.redhat.com`)、`Apache-SSL` (`www.apache-ssl.org`)、`Stronghold Enterprise Server` (`www.redhat.com/software/stronghold`) 和 Netscape Enterprise Server (`home.netscape.com`)。`Apache-SSL` 是一个基于 Apache 和 OpenSSL (`www.openssl.org`) 的加密 Web 服务器。Stronghold 是 Apache Web 服务器的商业版本，具有改进的安全性和管理工具。你也可以使用原始的 NCSA Web 服务器，尽管它已不再受支持 (`hoohoo.ncsa.uiuc.edu`)。AOLserver 是美国在线的 Web 服务器，现在已在 GPL 许可证下提供 (`www.aolserver.com`)。
+
+Apache 可免费使用 OpenSSL 实现完整的 SSH 加密。也有仅在获得许可费用后才可用的私有加密产品。无需直接获取许可，你可以简单地购买包含此类许可的 Apache 商业版本，例如 Stronghold 和 Raven (`www.covalent.net`)。以前，这种限制仅适用于美国对 RSA 技术的应用，当时它曾被专利保护。RSA 专利现已过期，现在可在 OpenSSL 等自由分发产品中使用。
+
+### Tux
+
+Tux，Red Hat 内容加速器，是一种静态内容 Web 服务器，设计为在 Linux 内核中以极快的速度运行。实际上，它在内核空间运行，使得响应时间比标准用户空间 Web 服务器如 Apache 快得多。作为内核空间服务器，Tux 可以非常高效地处理静态内容，例如图像。同时，它可以与用户空间 Web 服务器，如 Apache 协调，以提供动态内容，如 CGI 程序。Tux 甚至可以利用缓存来保存先前生成的动态内容，就像它一样静态。能够与用户空间 Web 服务器协调的功能让你可以使用 Tux 作为主要 Web 服务器。Tux 无法处理的任何内容，它都会交给用户空间 Web 服务器处理。
+
+> NOTE Tux 在 GNU 公共许可证下自由分发，并包含在许多发行版中。
+
+Tux 配置文件位于 `/proc/sys/net/tux`。在这里输入诸如 `serverport`、`max_doc_size` 和 `logfile` 等参数（请查阅 `www.redhat.com/support/manuals` 上的 Tux 参考手册以获取详细列表）。默认值已输入。`serverport`、`clientport` 和 `documentroot` 是必须设置的必需参数。`serverport` 是 Tux 将使用的端口——如果它是主要 Web 服务器则为 80。`clientport` 是 Tux 与之协调的用户空间 Web 服务器（如 Apache）使用的端口。`documentroot` 指定你的 Web 文档的根目录（Red Hat 上为 `/var/www/html`）。理想情况下，Tux 作为主要 Web 服务器运行，Apache 作为次要 Web 服务器运行。要配置 Apache 与 Tux 一起运行，Apache `httpd.conf` 文件中的端口条目需要从 80 改为 8080：
+
+```
+Port 8080
+```
+
+你可以使用 `service` 命令和 `/etc/rc.d/init.d/tux` 脚本来启动、停止和重启服务器。几个参数如 `DOCROOT` 可以作为参数指定给此 Tux 命令。你可以在 `/etc/sysconfig/tux` 文件中输入它们。
+
+> NOTE 你也可以将 Tux 作为 FTP 服务器运行。在 `/proc/sys/net/tux` 目录中，将文件 `serverport` 的内容改为 21，将 `application_protocol` 改为 1，将 `nongle` 改为 0，然后重启 Tux。在文档根目录中使用 `generatetuxlist` 命令生成 FTP 目录列表。
+
+### Apache Web Server
+
+Apache Web 服务器是由 Apache 服务器项目开发和维护的完整功能免费 HTTP（Web）服务器。该项目的目标是提供一个可靠、高效且易于扩展的 Web 服务器，其免费开源代码在自己的 Apache 软件许可证下提供。服务器软件包括服务器守护进程、配置文件、管理工具和文档。Apache 服务器项目由一群核心志愿者程序员维护，并得到全球众多贡献者的支持。Apache 服务器项目是目前由 Apache 软件基金会（前身为 Apache 组织）支持的多个项目之一。该非营利组织为各种 Apache 开源软件项目提供财务、法律和组织支持，包括 Apache HTTPd 服务器、Java Apache、Jakarta 和 XML-Apache。Apache 软件基金会的网站位于 `www.apache.org`。表 22-1 列出了各种与 Apache 相关的网站。
+
+Apache 最初基于在伊利诺伊大学厄巴纳-香槟分校国家超级计算应用中心开发的 NCSA Web 服务器。此后 Apache 已发展成为一个独立的服务器，并已成为使用最广泛的 Web 服务器之一。尽管最初为 Linux 和 Unix 系统开发，Apache 已成为跨平台应用程序，拥有 Windows 和 OS/2 版本。Apache 为其 Web 服务器提供在线支持和文档，网址为 `httpd.apache.org`。基于 HTML 的
+
+manual 也随服务器安装一起提供。你可以使用 Apache 配置工具轻松帮助配置你的 Apache 服务器。它可在任何 X Window System 窗口管理器上运行，包括 GNOME 和 KDE。此外，你还可以使用 Comanche 配置工具。Webmin 和 Linuxconf 也提供 Apache 配置支持。
+
+## Java：Apache Jakarta 项目
+
+
+
+Apache Jakarta 项目支持开源 Java 软件的开发；其网站位于 jakarta.apache.org。目前，Jakarta 支持众多项目，包括库、工具、框架、引擎和服务器应用程序。Tomcat 是 Java Servlet 和 JavaServer Pages 规范的开源实现。Tomcat 设计用于在 Apache 服务器中使用。JMeter 是一个 Java 桌面工具，用于测试服务器资源（如 servlet 和 CGI 脚本）的性能。Velocity 是一个模板引擎，可提供对 Java 对象的便捷访问。Watchdog 是一个检查 servlet 容器兼容性的工具。Struts、Cactus 和 Tapestry 是 Java 框架，是开发 Java Web 应用程序的成熟方法。
+
+## Linux Apache 安装
+
+你的 Linux 发行版通常会在你初始安装 Linux 系统时提供安装 Apache Web 服务器的选项。所有必要的目录和配置文件都会自动为你生成。然后，每当你运行 Linux 时，你的系统已是一个完全功能的网站。每次启动系统时，Web 服务器也会启动并持续运行。在大多数发行版中，为你的网站数据文件保留的目录是 `/var/www/html`。将你的网页放在此目录或其任何子目录中。你的系统已配置为作为 Web 服务器运行。你需要做的只是执行必要的网络服务器配置，然后指定对远程用户开放的文件和目录。你无需做其他任何事。一旦你的网站连接到网络，远程用户就可以访问它。
+
+### TABLE 22.1 Apache 相关网站
+
+| Web Site | Description |
+|---|---|
+| www.apache.org | Apache Software Foundation |
+| httpd.apache.org | Apache HTTP Server Project |
+| java.apache.org | Java Apache Project |
+| jakarta.apache.org | Jakarta Apache Project |
+| gui.apache.org | Apache GUI Project |
+| www.comanche.org | Comanche (Configuration Manager for Apache) |
+| www.apache-ssl.org | Apache-SSL server |
+| www.openssl.org | OpenSSL project (Secure Socket Layer) |
+| www.modssl.org | The SSL module (`mod_ssl`) project to add SSL encryption to an Apache Web server |
+| www.php.net | PHP Hypertext PreProcessor, embedded Web page programming language |
+
+Web 服务器通常在 `/var/www` 目录中设置你的网站。它还为管理站点设置了多个目录。`/var/www/cgi-bin` 目录存放 CGI 脚本，而 `/var/www/html/manual` 存放以 HTML 格式的 Apache 手册。你可以使用浏览器查看它。你的网页应放在 `/var/www/html` 目录中。将你的网站主页放在那里。你的配置文件位于不同的目录 `/etc/httpd/conf`。表 22-2 列出了各种 Apache Web 服务器目录和配置文件。
+
+要升级你的 Apache 服务器，可以使用 Red Hat 升级工具（RHN）或在 Red Hat FTP 站点查找最新的 Apache 更新文件。对于 RPM 支持的发行版 Red Hat 的二进制版本，你可以下载包含 Apache Web 服务器最新版本的 RPM 包，专门为你的 Red Hat Linux 发行版配置。对于 Red Hat，Apache Web 服务器的 RPM 包现在命名为 `httpd` 而不是 `apache`。或者，你可以直接从 Apache 下载最新 Apache Web 服务器的源代码版本并在你的系统上编译。你必须解压缩文件并提取归档。创建了许多相同的目录，并增加了源代码的目录。服务器包包含创建服务器目录和编译软件的安装说明。确保配置文件已设置并安装。
+
+> NOTE 如果你是从源代码安装 Apache，请注意以 `.conf-dist` 扩展名结尾的配置文件版本是提供的。你必须复制这些配置文件，保留相同的前缀，但仅使用 `.conf` 扩展名来设置默认配置。Web 服务器仅从具有 `.conf` 扩展名的文件读取配置信息。
+
+### TABLE 22-2 Apache Web Server Files and Directories (RPM Installation)
+
+| Web Site Directories | Description |
+|---|---|
+| `/var/www` | Directory for Apache Web site files on Red Hat systems |
+| `/var/www/html` | Web site Web files |
+| `/var/www/cgi-bin` | CGI program files |
+| `/var/www/html/manual` | Apache Web server manual |
+| Configuration Files |  |
+| `.htaccess` | Directory-based configuration files: an `.htaccess` file holds directives to control access to files within the directory in which it is located |
+| `/etc/httpd/conf` | Directory for Apache Web server configuration files |
+| `/etc/httpd/conf/httpd.conf` | Apache Web server configuration file |
+| `/etc/httpd/conf/conf.d` | Directory holding module configuration files like `ssl.conf` for SSL and `php.conf` for PHP |
+| Startup Scripts |  |
+| `/etc/rc.d/init.d/httpd` | Startup script for Web server daemon |
+
+| 应用程序文件 | 描述 |
+|---|---|
+| `/usr/sbin` | Apache Web 服务器程序文件和实用程序的位置 |
+| `/usr/share/doc/` | Apache Web 服务器文档 |
+| `/var/log/http` | Apache 日志文件的位置 |
+
+## Apache Web 服务器 2.0
+
+Red Hat 现在使用 Apache 2.0 及更高版本，它取代了旧的 1.3 版。Apache 2.0（有关转换说明，请参阅 Red Hat Linux 参考指南）。Apache 1.3 的大多数指令和功能在 Apache 2.0 上仍然有效。然而，Apache 2.0 引入了一种新的架构，使用多处理模块（MPM），旨在将 Apache 自定义到不同的操作系统。Linux 系统将使用线程 MPM，而 Windows 将使用 `mpm_winnt` MPM。为了与 Apache 1.3 配置保持兼容，您将使用 `prefork` MPM。
+
+Apache 2.0 的架构比 1.3 更加模块化。许多曾经位于 Apache 核心中的指令现在被放置在各自的模块和 MPM 中。通过这种模块化设计，一些指令已被删除，例如 `ServerType`。Apache 2.0 中已弃用的此类指令在表 22-3 中有所说明。
+
+> 注意 所选的 MPM 通常在编译时集成到 Apache 中。Apache 的未来 Linux 发行版应使用 Linux/Unix 默认 MPM，其名称为`threaded`。
+
+| 模块 | 描述 |
+|---|---|
+| `mod_access` | 基于客户端主机名或 IP 地址的访问控制 |
+| `mod_actions` | 基于媒体类型或请求方法执行 CGI 脚本 |
+| `mod_alias` | 在文档树中映射主机文件系统的不同部分；执行 URL 重定向 |
+| `mod_asis` | 发送包含其自身 HTTP 头的文件 |
+| `mod_auth` | 使用文本文件进行用户身份验证 |
+| `mod_auth_anon` | 对经过身份验证的区域的匿名用户访问 |
+| `mod_auth_db` | 使用 Berkeley DB 文件进行用户身份验证 |
+| `mod_auth_dbm` | 使用 DBM 文件进行用户身份验证 |
+| `mod_auth_digest` | MD5 身份验证 |
+| `mod_autoindex` | 自动目录列表 |
+
+
+
+| `mod_cern_meta` | 支持 HTTP 头元文件 |
+
+| `mod_cgi` | 调用 CGI 脚本 |
+
+| `mod_cgid` | 使用外部守护进程调用 CGI 脚本 |
+
+| `mod_charset_lite` | 配置字符集转换 |
+
+| `mod_dav` | 分布式创作和版本控制，WebDAV HTTP 扩展 |
+
+| `mod_dir` | 基本目录处理 |
+
+| `mod_env` | 将环境传递给 CGI 脚本 |
+
+| `mod_example` | 演示 Apache API |
+
+| `mod_expires` | 对资源应用 Expires: 头部 |
+
+| `mod_ext_filter` | 使用外部程序过滤输出 |
+
+| `mod_file_cache` | 将文件缓存到内存中以便更快提供服务 |
+
+| `mod_headers` | 向资源添加任意 HTTP 头部 |
+
+| `mod_imap` | 图像映射文件处理器 |
+
+| `mod_include` | 服务器解析文档 |
+
+| `mod_info` | 服务器配置信息 |
+
+| `mod_isapi` | Windows ISAPI 扩展支持 |
+
+| `mod_log_config` | 用户可配置的日志记录，替代 `mod_log_common` |
+
+| `mod_mime` | 使用文件扩展名确定文档类型 |
+
+| `mod_mime_magic` | 使用“魔数”确定文档类型 |
+
+| `mod_negotiation` | 内容协商 |
+
+| `mod_proxy` | 缓存代理功能 |
+
+| `mod_rewrite` | 使用正则表达式进行强大的 URI 到文件名映射 |
+
+| `mod_setenvif` | 根据客户端信息设置环境变量 |
+
+| `mod_so` | 支持在运行时加载模块 |
+
+| `mod_spelling` | 自动纠正 URL 中的小错误 |
+
+| `mod_ssl` | 由 OpenSSL 支持的 SSL 加密接口 |
+
+| `mod_status` | 服务器状态显示 |
+
+| `mod_userdir` | 用户主目录 |
+
+| `mod_unique_id` | 为每个请求生成唯一的请求标识符 |
+
+| `mod_usertrack` | 使用 cookie 进行用户跟踪（`mod_cookies.c` 的替代品） |
+
+| `mod_vhost_alias` | 支持动态配置的大规模虚拟主机 |
+
+表 22-3 Apache 模块（Apache 2.0）（续）
+
+## 启动和停止 Web 服务器
+
+在大多数系统上，Apache 安装为独立服务器，持续运行。如第 20 章关于 init 脚本的讨论中所述，您的系统会自动启动 Web server daemon，启动系统时调用它。在 Red Hat 上，Web 服务器的启动脚本`httpd`位于`/etc/rc.d/init.d`目录中。通过该脚本运行的符号链接位于相应的运行级别目录中。你通常会在运行级别 3 和 5 目录`/etc/rc.d/rc3.d`和`/etc/rc.d/rc5.d`中找到指向`/etc/rc.d/init.d/httpd`的`S85httpd`链接。你可以使用`chkconfig`命令或 System V Init 编辑器来设置`httpd`服务器启动的运行级别，在适当的运行级别目录中创建链接。以下命令将设置 Web 服务器（`httpd`）在运行级别 3 和 5 启动（有关运行级别的更多详细信息，请参阅第 20 章和第 27 章）。
+
+```
+chkconfig --level 35 httpd on
+```
+
+在 Red Hat 上，你也可以使用`service`命令手动启动和停止`httpd`服务器。这在你测试或修改服务器时可能很有帮助。带有 start 选项的`httpd`脚本启动服务器，stop 选项停止它，而 restart 将重新启动它。直接杀死 Web 进程是不明智的。
+
+```
+service httpd restart
+```
+
+Apache 还提供了一个名为`apachectl`（Apache 控制）的控制工具，用于管理你的 Web 服务器。使用`apachectl`，你可以从命令行启动、停止和重新启动服务器。`apachectl`接受多个参数：start 启动服务器，stop 停止它，restart 关闭并重新启动服务器，graceful 则优雅地关闭并重新启动。此外，你还可以使用`apachectl`通过 config 参数检查配置文件语法。你也可以将`apachectl`用作`/etc/rc.d`目录中服务器的系统启动文件。
+
+记住，`httpd`是一个调用实际`httpd`守护进程的脚本。你也可以使用其完整路径名直接调用该守护进程。该守护进程有几个选项。`-d`选项使你能够为`httpd`程序指定一个目录，如果它与默认目录不同。使用`-f`选项，你可以指定一个不同于`httpd.conf`的配置文件。`-v`选项显示版本。
+
+```
+/usr/sbin/httpd -v
+```
+
+> 注意 目前不支持在`xinetd`下运行 Apache。在 Apache 2.0 中，此类支持由选择设计为在`xinetd`上运行的 MPM 模块决定。
+
+## Apache 配置文件
+
+配置指令放在`httpd.conf`配置文件中。一个有文档记录的`httpd.conf`配置文件会自动安装在`/etc/httpd`中。强烈建议你查阅系统上的此文件。它包含 Apache 指令的详细文档和默认条目。
+
+主配置文件中的任何指令都可以使用位于目录内的`.htaccess`文件按目录覆盖。虽然`.htaccess`文件最初仅设计用于访问指令，但它也可以保存任何资源指令，使你能够定制特定目录中网页的显示方式。你可以在`httpd.conf`文件中配置对`.htaccess`文件的访问。
+
+> 注意 在 Apache 版本 1.3.4 和 2.0 中，所有配置指令都放在一个文件中，即`httpd.conf`文件。旧版本使用了另外两个文件，`srm.conf`和`access.conf`文件。
+
+## Apache 配置和指令
+
+Apache 配置操作以输入到 Apache 配置文件中的指令形式出现。通过这些指令，你可以输入基本配置信息，例如服务器名称，或执行更复杂的操作，例如实现虚拟主机。其设计足够灵活，可以让你为特定目录和不同的虚拟主机定义配置功能。Apache 有各种不同的指令，执行的操作多种多样，如控制目录访问、分配文件图标格式和创建日志文件。大多数指令设置诸如`DocumentRoot`的值，该值保存服务器网页的根目录，或`Port`，该值保存服务器在系统上侦听请求的端口。表 23-4 提供了更常用的 Apache 指令的列表。简单指令的语法如下所示：
+
+```
+directive option option ...
+```
+
+某些指令创建能够容纳适用于特定服务器组件的指令的块，也称为区段指令。例如，`Directory`指令用于定义一个块，在该块中放置仅适用于特定目录的指令。块指令成对输入：开始指令和结束指令。结束指令定义块的结束，其名称与开始指令相同，但以斜杠开头。块指令采用一个参数，指定指令适用的特定对象。对于`Directory`块指令，你必须指定它将适用的目录名。`<Directory mydir>`块指令创建一个块，其内部的指令适用于`mydir`目录。该块由`</Directory>`指令终止。`<VirtualHost hostaddress>`块指令用于配置特定的虚拟 Web 服务器，必须包含用于该服务器的 IP 或域名地址。
+
+`</VirtualHost>`是其终止指令。你放置在这个块内的任何指令都将应用于该虚拟 Web 服务器。`<Limit method>`指令指定你想要限制的访问方法类型，例如`GET`或`POST`。位于该块内的访问控制指令列出了你对这些方法所施加的控制。块指令的语法如下：
+
+```
+<block-directive option ...>
+directive option ...
+directive option ...
+</block-directive>
+```
+
+通常，指令放置在其中一个主配置文件中。这些文件中的目录指令可用于配置特定目录。然而，Apache 也使用基于目录的配置文件。任何目录都可以拥有自己的`.htaccess`文件，其中包含用于仅配置该目录的指令。如果你的站点有许多目录，或者任何目录有特殊的配置需求，你可以将它们的配置指令放在其`.htaccess`文件中，而不是用针对每个目录的特定`Directory`指令填满主配置文件。你可以控制`.htaccess`文件中的哪些指令优先于主配置文件中的指令。如果你的站点允许用户或客户端控制的目录，你可能希望仔细监控或禁用其中`.htaccess`文件的使用。（除非使用`AllowOverride`指令禁用，否则`.htaccess`文件中的指令可能会覆盖标准配置文件中的指令。）
+
+
+
+Apache Web 服务器的大部分功能和灵活性来自于它使用模块来扩展其功能。Apache 实现了核心指令集。可以创建包含其他指令定义的模块。它们可以加载到 Apache 中，使你能够为你的服务器使用这些指令。Apache 发行版中包含一组标准模块，尽管你可以下载其他模块甚至创建自己的模块。例如，`mod_autoindex`模块包含自动索引目录的指令。`mod_mime`模块包含 MIME 类型和处理器指令。模块使用`LoadModule`指令加载。你可以在`httpd.conf`配置文件中找到大多数标准模块的`LoadModule`指令。
+
+```
+LoadModule mime_module modules/mod_mime.so
+```
+
+Apache 包提供的`apxs`应用程序可用于构建 Apache 扩展模块。使用`apxs`应用程序，你可以编译用 C 语言编写的 Apache 模块源代码并创建可使用`LoadModule`指令加载的动态共享对象。`apxs`应用程序要求`mod_so`模块是你的 Apache 应用程序的一部分。它包含广泛的选项，例如`-n`指定模块名称，`-a`在`httpd.conf`文件中添加其条目，以及`-i`将模块安装到你的 Web 服务器上。
+
+你可以在 Apache 网站`httpd.apache.org`上找到 Apache Web 配置指令的完整列表，并在你站点网站根目录中的 Apache 手册中找到该列表。在许多系统上，它位于发行版设置的网站默认目录中的`manual`子目录。在 Red Hat 上，这是`/var/www/manual`。许多常用的指令列在表 22-4 中。
+
+## 服务器配置
+
+某些指令用于配置服务器的整体操作。这些指令放置在`httpd.conf`配置文件中。有些需要路径名，而其他指令只需使用关键字`on`和`off`打开或关闭。Apache 提供了一个默认的`httpd.conf`配置文件。`httpd.conf`文件已包含这些指令。其中一些前面带有`#`符号被注释掉了。你可以通过删除其`#`号来激活指令。许多条目前面都有解释其用途的注释。一些常用的服务器级指令列在表 22-4 中。以下是用于设置用户可以发送邮件以报告管理问题的地址的`ServerAdmin`指令示例。你用想要用于接收系统管理邮件的地址替换`you@your.address`条目。默认情况下，它设置为`root@localhost`。
+
+```
+# ServerAdmin: Your address, where problems should be e-mailed.
+ServerAdmin you@your.address
+```
+
+| Directive | Description |
+|---|---|
+| `AddModule module module ...` | Apache 1.3：启用已编译但未使用的模块。在 Apache 2.0 中已删除。上下文：服务器配置 |
+| `Alias url-path directory-filename` | 启用访问存储在本地文件系统中的文档，而非在文档根目录下。 |
+| `BindAddress saddr` | 将服务器绑定到指定的 IP 地址。如需更精确控制监听的地址和端口，请使用`Listen`指令。在 Apache 2.0 中被`Listen`指令取代。 |
+| `DefaultLanguage MIME-lang` | 指定`MIME-lang`为默认文件语言。上下文：服务器配置，虚拟主机，目录，`.htaccess` |
+| `DefaultType MIME-type` | 对于无法通过其 MIME 类型映射确定类型的文档的默认类型。 |
+| `DocumentRoot directory-filename` | `httpd`提供文件的目录。默认：`DocumentRoot /usr/local/apache/htdocs`。Red Hat 系统上为`/var/www/html` |
+| `Group unix-group` | 设置服务器的组。独立服务器必须最初以`root`身份运行。建议你专门为运行服务器设置一个新组。 |
+| `HostNameLookups on` | `off` | `double` | 启用 DNS 查找以便记录主机名。`Double`指双向反向 DNS。 |
+| 指令 | 描述 |
+|---|---|
+| `<IfDefine [ ]parameter-name ... </IfDefine>` | `<IfDefine test>...</IfDefine>`部分用于指定条件指令。当测试为真时，`IfDefine`部分内的指令会被处理，否则被忽略。测试由一个参数名组成，如果参数已定义，则为真；未定义则为假。如果在参数前放置`!`，则当参数未定义时测试为真。 |
+| `<IfModule [ ]module-name ... </IfModule>` | `<IfModule test>...</IfModule>`部分用于指定条件指令。该测试检查某个模块是否已编译进 Apache。如果存在则为真，否则为假。如果模块不存在，则`!`模块名为真。 |
+| `Include filename` | 包含其他配置文件。 |
+| `KeepAlive on/off` | 启用持久连接，`"Off"`表示禁用。 |
+| `KeepAliveTimeout seconds` | Apache 在关闭连接前等待下一个请求的秒数。 |
+| `Listen [IP address:]port number` | 监听多个 IP 地址或端口。默认情况下，它响应所有 IP 接口上的请求，但仅响应`Port`指令指定的端口。上下文：服务器配置。 |
+| `ListenBacklog backlog` | 待处理连接队列的最大长度。 |
+| `LoadFile filename filename ...` | 在服务器启动或重启时链接指定的目标文件或库。用于加载某些模块运行所需的附加代码。 |
+| `LoadModule module filename` | 链接目标文件或库文件，并将名为`module`的模块结构添加到活动模块列表中。 |
+| `LockFile filename` | 编译 Apache 时使用的锁文件的路径。 |
+| `MaxClients number` | 限制可支持的并发请求数。超出`MaxClients`限制的连接尝试通常会被排队，队列长度上限由`ListenBacklog`指令决定。 |
+| `MaxKeepAliveRequests number` | 当`KeepAlive`开启时，限制每个连接允许的请求数。 |
+| `Port number` | 如果不存在`Listen`或`BindAddress`指令，则`Port`指令设置服务器监听的网络端口。虚拟主机的端口由`VirtualHost`指令设置。 |
+| `ServerAdmin e-mail address` | 服务器管理员的电子邮件地址。 |
+| `ServerAlias host1 host2 ...` | 设置主机的备用名称，用于基于名称的虚拟主机。 |
+| 指令 | 描述 |
+|---|---|
+| `ServerName fully qualified domain name` | 设置服务器的主机名。仅在创建重定向 URL 时使用。如果未指定，服务器将尝试根据其自身的 IP 地址推断出主机名。 |
+| `ServerPath pathname` | 设置主机的旧版 URL 路径名，用于基于名称的虚拟主机。 |
+| `ServerRoot directory-filename` | 设置服务器所在目录。 |
+| `ServerSignature Off` | `On` | `EMail` | 配置服务器生成的文档如错误消息底部的页脚行。 |
+| `SetHandler handler-name` | 强制所有匹配的文件通过`handler-name`指定的处理器进行解析。 |
+| `User unix-userid` | 指定服务器的用户 ID。独立服务器最初必须以`root`身份运行。你可以使用用户名或用户 ID 号。该用户应无权访问系统文件。建议你专门建立一个新用户和组来运行服务器。 |
+| `UserDir directory/filename` | 设置当收到对用户文档的请求时，在用户主目录中使用的实际目录。 |
+| `Redirect [ status ] url-path url` | 将旧 URL 映射到新 URL。 |
+| `ScoreBoardFile filename` | 指定`ScoreBoardFile`文件。 |
+| `TimeOut number` | 设置接收 GET 请求、接收 POST 和 PUT 请求以及 TCP 数据包传输确认的超时时间，以秒为单位。 |
+
+## 表 22-4 服务器指令（续）
+
+某些指令需要关于系统的特定信息。例如，`ServerName`保存您的 Web 服务器的主机名。指定主机名很重要，可以避免不必要的 DNS 查找失败，这些失败可能导致服务器挂起。请注意，该条目前面带有`#`注释。只需删除`#`，并在`new.host.name`处输入您的 Web 服务器的主机名。
+
+
+
+```text
+# ServerName allows you to set a hostname which is sent
+# back to clients for your server if it's different than the
+# one the program would get (i.e. use
+# "www" instead of the host's real name).
+
+#ServerName new.host.name
+```
+
+在 Red Hat 系统上，对于使用 `/var/www` 作为网站目录的标准 Web 服务器安装，已经预先配置了条目。您可以通过更改相应的指令来按需调整您的网站。`DocumentRoot` 指令决定你的 Web 页面的主目录。`ServerRoot` 指令指定了你的 Web 服务器配置、错误和日志文件存放的位置。
+
+```
+DocumentRoot /var/www/html
+ServerRoot /etc/httpd
+```
+
+`MaxClients` 指令设置同时可以连接到你的服务器的客户端的最大数量。
+
+```
+MaxClients 150
+```
+
+> 注意 你还可以将 Apache 配置为仅作为代理和/或缓存服务器运行。默认的代理和缓存服务器指令已包含在 `httpd.conf` 文件中。`ProxyRequests` 指令打开代理活动。缓存可以通过诸如 `CacheRoot` 指定缓存目录、`CacheSize` 指定缓存大小（默认 500KB）以及 `CacheMaxExpire` 设置未修改文档的时间限制等指令进行配置。
+
+## 目录级配置：`.htaccess` 和 `<Directory>`
+
+Apache 最灵活的方面之一是其能够配置单个目录的能力。通过 `Directory` 指令，你可以定义一组仅适用于特定目录的指令。`Directory` 指令列在表 22-5 中。此类指令可以放在 `httpd.conf` 或 `access.conf` 配置文件中。你还可以在特定目录中使用 `.htaccess` 文件来保存配置指令。然后这些指令仅应用于该目录。名称 “`.htaccess`” 实际上是通过 `AccessFileName` 指令设置的。你可以按需更改它。
+
+```
+AccessFileName .htaccess
+```
+
+### TABLE 22-5 Directory Directives
+
+| Directive | Description |
+|---|---|
+| `AccessFileName filename filename ...` | 默认的目录配置文件名位于目录内。 |
+| `<Directory directory> ... </Directory>` | `<Directory>` 和 `</Directory>` 指令作为标签操作，用来包含一组仅适用于指定目录及其子目录的指令。 |
+| `<DirectoryMatch regex> ... </DirectoryMatch>` | `<DirectoryMatch>` 和 `</DirectoryMatch>` 包含一组仅适用于指定目录的指令。其操作与 `<Directory>` 相同，但接受正则表达式作为参数。 |
+| `DirectoryIndex local-url local-url ...` | 指定当客户端请求目录索引时要查找的资源列表，通常是在目录名称末尾指定 `/` 时（通常为 `index.html`）。 |
+| `Options [+|-]option [+|-]option ...` | 控制特定目录中可用的服务器功能。`OPTIONS None` 如果设置为 `None`，则不启用任何额外功能。`All` 除 `MultiViews` 外的所有选项。这是默认设置。`ExecCGI` 允许执行 CGI 脚本。`FollowSymLinks` 服务器在此目录中跟随符号链接。`Includes` 允许服务器端包含。`IncludesNOEXEC` 允许服务器端包含，但禁用 `#exec` 命令和 CGI 脚本的 `#include`。`Indexes` 对于没有 `DirectoryIndex` 的目录，返回格式化的目录列表。`MultiViews` 允许内容协商 `MultiViews`。`SymLinksIfOwnerMatch` 服务器仅跟随目标文件或目录与链接拥有相同用户 ID 的符号链接。 |
+| `AllowOverride override override ...` | 可以由 `.htaccess` 文件中的条目覆盖的指令。`All` 允许覆盖，`none` 禁止覆盖。默认：`AllowOverride All` 上下文：directory |
+
+`Directory` 块以 `<Directory pathname>` 指令开始，其中 `pathname` 是要配置的目录。结束指令使用相同的 `<>` 符号，但在单词 "`Directory`" 前加上斜杠：`</Directory>`。放置在此块内的指令仅适用于指定的目录。以下示例拒绝来自 `www.myvids.com` 的对 `mypics` 目录的访问请求。
+
+```
+<Directory /var/www/html/mypics>
+Order Deny,Allow
+Deny from www.myvids.com
+</Directory>
+```
+
+使用 `Options` 指令，你可以在目录中启用某些功能，例如使用符号链接、自动索引、执行 CGI 脚本和内容协商。默认是 `All` 选项，它打开除内容协商（`MultiViews`）外的所有功能。以下示例启用自动索引（`Indexes`）、符号链接（`FollowSymLinks`）和内容协商（`MultiViews`）。
+
+```
+Options Indexes FollowSymLinks Multiviews
+```
+
+由主配置文件或上层目录中的指令创建的配置会被下层目录继承。保存在 `.htaccess` 文件和 `Directory` 块中的特定目录的指令可以被允许覆盖这些配置。此功能可通过 `AllowOverride` 指令进行控制。使用 `all` 参数，`.htaccess` 文件可以覆盖任何先前的配置。`none` 参数禁止覆盖，effectively 禁用 `.htaccess` 文件。你还可以进一步控制特定组指令的覆盖。`AuthConfig` 启用授权指令的使用，`FileInfo` 用于类型指令，`Indexes` 用于索引指令，`Limit` 用于访问控制指令，而 `Options` 用于 options 指令。
+
+```
+AllowOverride all
+```
+
+## Access Control
+
+通过访问控制指令，例如 `allow` 和 `deny`，你可以控制远程用户和主机对你的 Web 站点的访问。访问控制指令列在表 22-6 中。`allow` 指令后跟主机名列表可将访问限制为仅这些主机。`deny` 指令后跟主机名列表可拒绝这些系统的访问。参数 `all` 将指令应用于所有主机。`order` 指令指定访问控制指令的应用顺序。其他访问控制指令，例如 `require`，可以建立身份验证控制，要求用户登录。访问控制指令可全局使用以控制整个站点的访问，或放置在 `Directory` 指令内以控制对单个指令的访问。在以下示例中，允许所有用户访问：
+
+```
+order allow,deny
+allow from all
+```
+
+### TABLE 22-6 Access Control Directives
+
+| Directive | Description |
+|---|---|
+| `deny from host host ...` | 确定可以访问给定目录的主机：`all`，或部分或完整域名或 IP 地址。 |
+| `allow from host host ...` | 确定可以访问给定目录的主机：`all`，部分或完整域名，或 IP 地址。 |
+| `<Files filename> ... </Files>` | 提供按文件名进行访问控制。与 `<Directory>` 指令和 `<Location>` 指令类似。`<Files>` 部分按其在配置文件中出现的顺序处理，在读取 `<Directory>` 部分和 `.htaccess` 文件之后，但在 `<Location>` 部分之前处理。`<Files>` 可以嵌套在 `<Directory>` 部分内以限制其适用的文件系统部分。 |
+| `<FilesMatch regex> ... </FilesMatch>` | 提供按文件名进行访问控制，如 `<Files>` 指令，但使用正则表达式。 |
+| `<Limit method method ... > ... </Limit>` | `<Limit>` 和 `</Limit>` 指定一组仅适用于指定访问方法、任何有效 HTTP 方法的访问控制指令。出现在 `<Limit>` 指令之外的访问控制指令适用于所有访问方法。方法名称为 `GET`、`POST`、`PUT`、`DELETE`、`CONNECT` 和 `OPTIONS`。 |
+
+
+
+## TABLE 22-6 Access Control Directives (continued)
+
+| Directive | Description |
+| --- | --- |
+| `<LimitExcept method method ... > ... </LimitExcept>` | `<LimitExcept>` 和 `</LimitExcept>` 指定一组访问控制指令，然后适用于未列在参数中的任何 HTTP 访问方法。 |
+| `<Location URL> ... </Location>` | `<Location>` 指令提供按 URL 进行访问控制。与 `<Directory>` 指令类似。 |
+| `<LocationMatch regex> ... </LocationMatch>` | 提供按 URL 进行访问控制，与 `<Location>` 相同，但使用正则表达式作为参数。 |
+| `order ordering` | 控制 `allow` 和 `deny` 指令的评估顺序。 |
+| `Satisfy directive` | 同时使用 `allow` 和 `require` 时的访问策略。参数可以是 `all` 或 `any`。 |
+| `LimitRequestBody number` | 限制 HTTP 请求消息体的大小。 |
+
+你可以通过将它们限制为某些 HTML 访问方法来进一步限定访问控制指令。HTML 访问方法是指浏览器与你的 Web 站点交互的方式。例如，浏览器可以从页面获取信息（`GET`）或通过它发送信息（`POST`）。你可以使用 `<Limit>` 指令控制此类访问方法。`Limit` 以要控制的访问方法列表作为参数。指令然后与 `</Limit>` 指令配对，以定义一个 `Limit` 块，在其中可以放置访问控制指令。这些指令仅适用于指定的访问方法。你可以将此类 `Limit` 块与 `Directory` 块一起放置，以为特定目录设置访问方法控制。以下 `/etc/config/httpd.conf` 文件中的 `Directory` 块控制你的 Web 站点主目录 `/var/www/html` 的访问方法。
+
+```
+# This should be changed to whatever you set DocumentRoot to.
+<Directory /var/www/html>
+    Options Indexes FollowSymlinks
+    AllowOverride All
+    <Limit GET>
+        order allow,deny
+        allow from all
+    </Limit>
+</Directory>
+```
+
+控制从上层目录继承到下层目录。如果你想严格按每个目录为你的整个 Web 站点控制访问，你可以使用以下条目。以下条目可用于拒绝所有用户的访问。然后，在各个目录中，你可以允许特定用户、组或主机访问。
+
+```
+<Directory /var/www/html>
+Order Deny,Allow
+Deny from All
+</Directory>
+```
+
+## URL 路径名
+
+某些指令可以修改或补全用于访问你的网站的 URL 的路径名段。URL 的路径名段指定了网站上的特定目录或网页。指令使你能够别名化或重定向路径名，以及选择默认网页。使用 `Alias` 指令，你可以让用户访问位于系统其他部分、其他文件系统或其它网站上的资源。别名可以使用互联网上站点的 URL，而不是系统上目录的路径名。使用 `Redirect` 指令，你可以将用户重定向到另一个站点。
+
+```
+Alias /mytrain /home/dylan/trainproj
+Redirect /mycars http://www.myautos.com/mycars
+```
+
+如果 Apache 只被给出一个目录来访问，而不是特定的网页，它会查找该目录中的索引网页并显示它。默认网页的可能名称由 `DirectoryIndex` 指令列出。通常使用的名称是 `index.html`，但你可以添加其他名称。标准名称如下所示。当 Apache 只被给出一个网页目录来访问时，它会查找并显示其中的 `index.html` 网页。
+
+```
+DirectoryIndex index.html index.shtml index.cgi
+```
+
+Apache 还允许用户在用户主目录中的一个特殊子目录中维护网页，而不是在主网站目录中。使用 `~` 后跟用户名可以访问此目录。此目录的名称由 `UserDir` 指令指定。默认名称是 `public_html`，如下所示。站点 `turtle.mytrek.com/~dylan` 访问主机 `turtle.mytrek.com` 上的目录 `turtle.mytrek.com/home/dylan/public_html`。
+
+```
+UserDir public_html
+```
+
+## MIME 类型
+
+当浏览器访问网站上的网页时，它通常会访问许多不同类型的对象，包括 HTML 文件、图片或声音文件以及脚本文件。为了正确显示这些对象，浏览器必须知道它们是什么类型的对象。JPEG 图片文件与简单文本文件的处理方式不同。服务器以 MIME 类型的形式提供此类型信息（参见第 13 章）。MIME 类型与通过 Internet 邮件程序（如 Pine）发送附件文件时使用的类型相同。每种类型的对象都与给定的 MIME 类型相关联。提供 MIME 类型后，浏览器可以正确处理和显示该对象。
+
+MIME 协议将特定类型与具有给定扩展名的文件关联。例如，具有 `.jpg` 扩展名的文件将具有 MIME 类型 `image/jpeg`。`TypesConfig` 指令保存 `mime.types` 文件的位置，该文件列出了所有 MIME 类型及其关联的文件扩展名。`DefaultType` 是任何无法确定类型的文件的默认 MIME 类型。`AddType` 使你能够在不编辑 MIME 文件的情况下修改 `mime.type` 类型列表。
+
+```
+TypesConfig /etc/mime.types
+DefaultType text/plain
+```
+
+其他类型指令用于指定对某些文档采取的操作。`AddEncoding` 允许浏览器即时解压缩压缩文件。`AddHandler` 将文件扩展名映射到操作，而 `AddLanguage` 使你能够指定文档的语言。以下示例将带有 `.gz` 扩展名的文件名标记为 gzip 编码文件，并将带有 `.fr` 扩展名的文件标记为法语文件：
+
+```
+AddEncoding x-gzip gz
+AddLanguage fr .fr
+```
+
+Web 服务器可以显示和执行许多不同类型的文件和程序。然而，并非所有 Web 浏览器都能显示所有这些文件。旧浏览器限制最大。某些浏览器，如 Lynx，甚至不设计用于显示简单图形。为了允许 Web 浏览器显示页面，服务器会与其协商以确定它可以处理的文件类型。为了启用此类协商，你需要启用 `Multiviews` 选项。
+
+```
+Option multiviews
+```
+
+## CGI 文件
+
+通用网关接口（CGI）文件是可以由访问你的网站的 Web 浏览器执行的程序。CGI 文件通常由执行程序作为其显示内容一部分的网页启动。传统上，CGI 程序被放置在名为 `cgi-bin` 的目录中，并且只有在位于此类特殊目录中时才能执行。通常，每个网站只有一个 `cgi-bin` 目录。发行版通常会在默认 Web 服务器目录中设置一个 `cgi-bin` 目录（Red Hat 上为 `/var/www/cgi-bin`）。在这里，你放置可在你的网站上执行的任何 CGI 程序。`ScriptAlias` 指令为你的 `cgi-bin` 目录指定一个别名。任何网页或浏览器都可以使用该别名引用此目录。
+
+```
+ScriptAlias /cgi-bin/ /var/www/cgi-bin/
+```
+
+如果你想执行位于网站任何位置的 CGI 程序，你可以指定具有 `.cgi` 扩展名的文件被视为可执行的 CGI 程序。你可以使用 `AddHandler` 指令来做到这一点（参见表 22-7）。该指令将某些处理器应用于给定类型的文件。执行此操作的处理器指令包含在随 Apache 源代码文件提供的默认 `httpd.conf` 文件中，尽管被注释掉了。你可以删除注释符号（`#`）以启用它。
+
+```
+AddHandler cgi-script cgi
+```
+
+| Directive | Description |
+| --- | --- |
+| `Action action-type cgi-script` | 添加一个操作，当请求触发 `action-type` 时激活 `cgi-script`。 |
+| `AddHandler handler-name extension extension ...` | 将文件扩展名 `extension` 映射到处理器 `handler-name`。 |
+| `RemoveHandler extension extension ...` | 移除给定扩展名文件的管理器关联。这允许子目录中的 `.htaccess` 文件撤销从父目录或服务器配置文件继承的任何关联。 |
+| `Script method cgi-script` | 添加一个操作，当使用 `method` 方法（可以是 `GET`、`POST`、`PUT` 或 `DELETE` 之一）请求文件时激活 `cgi-script`。 |
+
+
+
+## 表 22-7 CGI 指令
+
+| 指令 | 描述 |
+|---|---|
+| `ScriptAlias url-path directory-filename` | 将目标目录标记为包含 CGI 脚本。 |
+| `ScriptInterpreterSource 'registry' or 'script'` | 查找用于运行 CGI 脚本的解释器。默认方法是使用脚本中 `#!` 行指向的解释器。 |
+
+## 自动目录索引
+
+当给定一个目录的 URL 而不是 HTML 文件，且目录中没有默认网页时，Apache 会即时创建并显示一个页面。这通常只是目录中不同文件的列表。实际上，Apache 会为你索引目录中的项目。你可以设置多个选项来生成和显示这样的索引。索引指令列于表 22-8 中。如果启用了 `FancyIndexing`，网页项目将显示图标和可用于对列表排序的列标题。
+
+```
+FancyIndexing on
+```
+
+图标指令告诉 Apache 为特定类型的文件显示什么图标。`AddIconByType` 和 `AddIconByEncoding` 指令使用 MIME 类型信息来确定文件类型，然后将指定的图像与之关联。`AddIcon` 使用文件的扩展名来确定其类型。
+
+使用 `IndexOptions` 指令，你可以设置不同选项来显示生成的索引。有用于设置图标和文件名的宽度和高度的选项。`IconsAreLinks` 选项使图标成为文件名锚点的一部分。`ScanHTMLTitles` 选项读取 HTML 文档中的标题，并用这些标题代替文件名显示在索引列表中。还有各种选项用于抑制不同的索引显示功能，如排序、描述以及页眉/自述文件插入。
+
+## 表 22-8 索引指令
+
+| Directive | Description |
+|---|---|
+| `AddDescription string file file ...` | 设置要显示的文件描述。可以是文件扩展名、部分文件名、通配符表达式或完整文件名。字符串用双引号（"）括起来。 |
+| `IndexOptions [+|-]option [+|-]option ...` | 设置目录索引的选项：`FancyIndexing`、`IconHeight`、`IconsAreLinks`、`IconWidth`、`NameWidth`、`ScanHTMLTitles`、`SuppressDescription`。 |
+| `ReadmeName filename` | 指定要附加到索引列表末尾的文件名。 |
+| `AddIcon icon name name ...` | 指定显示在以 `name` 结尾的文件旁边的图标。 |
+| `AddIconByEncoding icon MIME-encoding MIME-encoding ...` | 指定显示在具有 `MIME-encoding`（`FancyIndexing`）的文件旁边的图标。 |
+| `AddLanguage MIME-lang extension extension ...` | 将给定的文件扩展名映射到指定的内容语言。 |
+| `FancyIndexing Boolean` | 为目录设置 `FancyIndexing` 选项。`Boolean` 可以是 `on` 或 `off`。 |
+| `DefaultIcon url` | 指定当没有特定图标时用于文件的图标（`FancyIndexing`）。 |
+| `HeaderName filename` | 指定要插入到索引列表顶部的文件名（`FancyIndexing`）。 |
+
+## 认证
+
+你的 Web 服务器还可以按用户或按组控制对你网站上特定目录的访问。你可以要求不同级别的认证。访问可以限制为特定用户并要求密码，也可以扩展为允许组成员访问。你可以完全省去密码，或设置类似 FTP 使用的匿名访问类型。认证指令见表 22-9。
+
+## 表 22-9 认证指令
+
+| Directive | Description |
+|---|---|
+| `allow from host host ...` | 确定哪些主机可以访问给定目录：全部、部分或完整域名，或 IP 地址。 |
+| `AllowOverride override override ...` | 可以由 `.htaccess` 文件中的条目覆盖的指令。`All` 允许覆盖，`none` 拒绝覆盖。 |
+| `Anonymous user user ...` | 允许在无需密码验证的情况下访问的用户。`User` 通常为 `anonymous`（区分大小写）。 |
+
+## 表 22-9 认证指令（续）
+
+| 指令 | 描述 |
+|---|---|
+| `Anonymous_Authoritative on \| off` | 开启时，不降级使用其他授权方法。 |
+| `AuthDBMUserFile 文件名` | 包含用于用户认证的用户名和密码列表的 DBM 文件。 |
+| `AuthName 认证域` | 目录的授权领域。领域提供给客户端，使用户知道应发送哪个用户名和密码。 |
+| `AuthType 类型` | 目录的用户认证类型。目前仅实现了 `Basic` 和 `Digest` 两种。 |
+| `require 实体名 实体 ...` | 选择可以访问目录的已认证用户。实体名是 `user` 或 `group`，后跟用户或组列表。`require user` 用户ID 用户ID ... `require group` 组名 组名 ... |
+| `AuthUserFile 文件名` | 设置包含用于用户认证的用户名和密码列表的文件名称。 |
+
+要将认证指令应用于某个目录，你可以将这些指令放在 `Directory` 块中或该目录的 `.htaccess` 文件中。使用 `require` 指令来确定哪些用户可以访问该目录。你可以列出特定用户或组。`AuthName` 指令向用户提供认证领域，该名称用于标识此认证过程所访问的特定资源集。`AuthType` 指令指定认证类型，例如 `basic` 或 `digest`。`require` 指令还需要 `AuthType`、`AuthName` 以及指定组和用户认证文件位置的指令。在以下示例中，只有用户 george、robert 和 mark 被允许访问 `newpics` 目录：
+
+```
+<Directory /var/www/html/newpics>
+  AuthType Basic
+  AuthName Newpics
+  AuthUserFile /web/users
+  AuthGroupFile /web/groups
+  <Limit GET POST>
+    require users george robert mark
+  </Limit>
+</Directory>
+```
+
+下一个示例允许管理员组访问 CGI 目录：
+
+```
+<Directory /var/www/html/cgi-bin>
+  AuthType Basic
+  AuthName CGI
+  AuthGroupFile /web/groups
+  <Limit GET POST>
+    require groups admin
+  </Limit>
+</Directory>
+```
+
+要为某个目录设置匿名访问，请在目录的 `Directory` 块或 `.htaccess` 文件中放置 `Anonymous` 指令，并将 `anonymous` 作为其参数。你还可以使用 `Anonymous` 指令为特定用户提供访问权限，而无需他们提供密码。
+
+Apache 维护自己的用户和组认证文件，用于指定哪些用户和组可以访问哪些目录。这些文件通常是简单的平面文件，例如系统密码文件和组文件。然而，它们可能会变得很大，从而可能降低认证查询的速度。作为替代，许多站点使用数据库管理文件来代替这些平面文件。然后使用数据库方法访问这些文件，提供更快的响应时间。根据所使用的文件类型，Apache 提供了用于指定认证文件的指令。`AuthUserFile` 和 `AuthGroupFile` 指令用于指定标准平面文件格式的认证文件的位置。`AuthDBUserFile` 和 `AuthDBGroupFile` 指令用于 DB 数据库文件，而 `AuthDBMUserFile` 和 `AuthDBMGroupFile` 用于 DBMG 数据库文件。
+
+程序 `htdigest`、`htpasswd` 和 `dbmmanage` 是 Apache 软件包提供的工具，用于创建和维护用户认证文件（即用户密码文件，列出可访问你网站上特定目录或资源的用户）。`htdigest` 和 `htpasswd` 管理简单的用户认证记录平面文件，而 `dbmmanage` 使用更复杂的数据库管理格式。如果你的用户列表很大，你可能需要使用数据库文件以实现快速查询。`htdigest` 以认证文件、领域和用户名为参数，创建或更新用户条目。`htpasswd` 还可以对密码进行加密。`dbmmanage` 具有一系列广泛的选项，用于添加、删除和更新用户条目。设置此类文件时使用了多种不同的数据库格式，其中三种常见格式是 Berkeley DB2、NDBM 和 GNU GDBM。`dbmmanage` 按此顺序查找这些格式的系统库。请注意保持一致，对认证文件使用相同的格式。
+
+## 日志文件
+
+
+
+Apache 维护用户对你网站所有请求的日志。默认情况下，这些日志使用通用日志格式（Common Log Format，CLF）的记录。每个请求的记录占据一行，由多个字段组成：主机、身份检查、已认证用户（用于登录）、日期、客户端提交的请求行、发送给客户端的状态以及发送的对象大小（以字节为单位）。日志文件指令列于表 22-10 中。
+
+## Webalizer
+
+可以使用 Webalizer 工具生成 Web 日志报告。Webalizer 将显示有关你网站使用情况的信息。当你运行 `webalizer` 命令时，使用报告将被放置在 `/var/www/html/usage` 目录中。访问索引页面以显示带有月度报告链接的页面，文件：`/var/www/html/usage/index.html`。报告配置在 `/etc/webalizer.conf` 文件中指定。以前的摘要保存在 `/etc/webalizer.history` 文件中。
+
+## 自定义日志
+
+使用 `LogFormat` 和 `CustomLog` 指令，您可以自定义日志记录以添加更多字段并具有不同的详细程度。这些指令使用由字段说明符组成的格式字符串来确定在日志记录中记录的字段。您可以添加任意想要的字段并且按任意顺序排列。字段说明符由百分号 `%` 符号后跟一个标识字符组成。例如，`%h` 是远程主机的字段说明符，`%b` 为字节大小，`%s` 为状态。有关完整列表，请参阅 `mod_log_config` 模块的文档。表 22-11 列出了其中一些常用的说明符。您应该引用内容可能包含多个单词的字段。引号本身必须用反斜杠引用才能包含在格式字符串中。以下示例是作为 `LogFormat` 指令实现的通用日志格式：
+
+```
+LogFormat "%h %l %u %t \"%r\" %s %b"
+```
+
+日志格式中的某些字段说明符可以限定以记录特定信息。`%i` 说明符记录服务器接收到的请求中的标头行。特定标头行的引用放在 `%` 和字段说明符之间的花括号内。例如，User-agent 是指示请求中使用的浏览器软件的标头行。要记录 User-agent 标头信息，请使用转换说明符 `%{User-agent}i`。
+
+为了与 NCSA 服务器保持兼容，Apache 最初实现了 `AgentLog` 和 `RefererLog` 指令来记录 User-agent 和 Referer 标头。这些指令后来已被用于 `LogFormat` 和 `CustomLog` 指令的限定 `%i` 字段说明符所取代。Referer 标头记录来自客户端的链接信息，可检测谁可能链接到您的站点。以下是一个符合 NCSA 的日志格式：
+
+```
+"%h %l %u %t \"%r\" %s %b" "%{Referer}i" "%{User-agent}i"
+```
+
+| 指令 | 描述 |
+|---|---|
+| `CustomLog file-pipe format-or-nickname` | 使用指定的格式创建新的日志文件。 |
+| `ErrorDocument error-code document` | 重定向到本地或外部 URL 以处理问题/错误。 |
+| `ErrorLog filename|syslog[:facility]` | 服务器记录错误的文件。 |
+| `LogFormat format [nickname]` | 设置由 TransferLog 指令命名的默认日志文件的格式。默认值：`LogFormat "%h %l %u %t \"%r\" %s %b"` |
+| `TransferLog file-pipe` | 以最近的 LogFormat 指令定义或默认指定的通用日志格式添加日志文件。 |
+| `LogLevel level` | 调整记录在错误日志中的消息的详细程度。 |
+
+表 22-10 日志指令
+
+| 字段说明符 | 描述 |
+|---|---|
+| `%a` | 远程 IP 地址 |
+| `%A` | 本地 IP 地址 |
+| `%b` | 发送的字节数，不包括 HTTP 标头 |
+| `%{variable}e:` | 环境变量的内容 |
+| `%f` | 文件名 |
+| `%h` | 远程主机 |
+| `%l` | 远程登录名（来自 identd，如提供） |
+| `%m` | 请求方法 |
+| `%P` | 为请求提供服务的子进程的进程 ID |
+| `%r` | 请求的第一行 |
+| `%s` | 状态 |
+| `%t` | 时间，采用通用日志格式时间格式（标准英语格式） |
+| `%u` | 远程用户（来自 auth；如果返回状态 (%s) 为 401，则可能为假） |
+| `%U` | 请求的 URL 路径 |
+| `%v` | 为请求提供服务的服务器的规范 ServerName |
+
+## 表 22-11 Apache 日志字段说明符
+
+## 生成和管理日志文件
+
+与其维护一个大型日志文件，您可以使用 `CustomLog` 或 `TransferLog` 指令创建多个日志文件。这对于虚拟主机很有帮助，您可能希望为每个主机维护一个单独的日志文件。您使用 `LogFormat` 指令定义日志记录的默认格式。`TransferLog` 然后在创建新日志文件时使用此默认值作为其格式。`CustomLog` 将这两个操作结合起来，使您能够创建新文件并为其定义格式。
+
+```
+LogFormat "%h %l %u %t \"%r\" %s %b"
+# 使用 LogFormat 格式创建名为 myprojlog 的新日志文件
+TransferLog myprojlog
+# 使用其自己的格式创建名为 mypicslog 的新日志文件
+CustomLog mypicslog "%h %l %u %t \"%r\" %s %b"
+```
+
+Apache 提供了两个用于处理和管理日志文件的实用程序。`logresolve` 将日志文件中的 IP 地址解析为主机名。`rotatelogs` 在无需杀死服务器的情况下轮换日志文件。您可以指定轮换时间。
+
+> 注意 Apache Web 服务器还可以提供有关服务器活动和配置的详细报告，让您将此信息显示给远程服务器。`Location` 指令 `server-info` 将显示 Web 服务器的配置详细信息，而 `server-status` 指令将显示 Web 进程。页面 `server-info` 和 `server-status` 将显示报告，如 `http://localhost/server-info`。 使用 `ExtendedStatus` 指令启用详细报告。
+
+## Apache 虚拟主机
+
+虚拟主机允许 Apache Web 服务器作为其自身的一部分托管多个网站。实际上，服务器可以充当多个服务器，每个托管网站对外部用户来说看起来都是独立的。Apache 支持基于 IP 地址的虚拟主机和基于名称的虚拟主机。基于 IP 地址的虚拟主机使用有效的注册 IP 地址，而基于名称的虚拟主机使用完全限定的域名。这些域名由请求浏览器的主机头提供。然后服务器可以根据域名 alone 确定要使用的正确虚拟主机。请注意，SSL 服务器需要 IP 虚拟主机。有关更多信息，请参阅 `httpd.apache.org`。
+
+## 基于 IP 地址的虚拟主机
+
+在基于 IP 地址的虚拟主机方法中，您的服务器必须为每个虚拟主机拥有不同的 IP 地址。您使用的 IP 地址已设置好以引用您的系统。网络系统管理操作可以设置您的机器以支持多个 IP 地址。您的机器可以为每个地址拥有单独的物理网络连接，或者特定连接可以配置为同时监听多个 IP 地址。实际上，任何 IP 地址都可以访问您的系统。
+
+您可以配置 Apache 为每个虚拟主机运行一个单独的守护进程，分别监听每个 IP 地址，或者您可以让单个守护进程运行，监听所有虚拟主机的请求。要设置单个守护进程管理所有虚拟主机，请使用 `VirtualHost` 指令。要为每个主机设置单独的守护进程，也请使用 `Listen` 指令。
+
+必须为每个虚拟主机设置一个 `VirtualHost` 指令块。在每个 `VirtualHost` 块内，您放置访问主机的适当指令。您应该具有 `ServerAdmin`、`ServerName`、`DocumentRoot` 和 `TransferLog` 指令，指定该主机的特定值。您可以在 `VirtualHost` 块中使用任何指令，除了 `ServerType`（1.3）、`StartServers`、`MaxSpareServers`、`MinSpareServers`、`MaxRequestsPerChild`、`Listen`、`PidFile`、`TypesConfig`、`ServerRoot` 和 `NameVirtualHost`。
+
+尽管您可以在 `VirtualHost` 指令中的地址使用域名，但使用实际 IP 地址更为可取。这样，您就不依赖于域名服务来建立正确的域名关联。请确保为您的主服务器保留一个 IP 地址。如果您将机器上所有可用的 IP 地址都用于虚拟主机，您将无法再访问您的主服务器。当然，您也可以将主服务器重新配置为虚拟主机。以下示例显示了两个基于 IP 的虚拟主机块：一个使用 IP 地址，另一个使用与 IP 地址关联的域名：
+
+
+
+```
+<VirtualHost 192.168.1.23>
+ServerAdmin webmaster@mail.mypics.com
+DocumentRoot /groups/mypics/html
+ServerName www.mypics.com
+ErrorLog /groups/mypics/logs/error_log
+....
+</VirtualHost>
+```
+
+```
+<VirtualHost www.myproj.org>
+ServerAdmin webmaster@mail.myproj.org
+DocumentRoot /groups/myproj/html
+ServerName www.myproj.org
+ErrorLog /groups/myproj/logs/error_log
+...
+</VirtualHost>
+```
+
+## 基于名称的虚拟主机
+
+使用基于 IP 的虚拟主机，您受限于系统支持的 IP 地址数量。使用基于名称的虚拟主机，您可以使用不增加 IP 地址的方式支持任意数量的虚拟主机。即使您的机器只有一个 IP 地址，您仍然可以支持无限数量的虚拟主机。这种功能由 HTTP/1.1 协议提供，该协议允许服务器识别其被访问的名称。此方法要求客户端，即远程用户，使用支持 HTTP/1.1 协议的浏览器，如当前浏览器所做的那样（尽管较旧的浏览器可能不支持）。使用此类协议的浏览器可以发送主机头，指定机器上要使用的特定主机。
+
+要实现基于名称的虚拟主机，请为每个主机使用 `VirtualHost` 指令，并使用 `NameVirtualHost` 指令指定要用于虚拟主机的 IP 地址。如果您的系统只有一个 IP 地址，您需要使用该地址。在 `VirtualHost` 指令内，您使用 `ServerName` 指令指定要为该主机使用的域名。使用 `ServerName` 指定域名非常重要，以避免 DNS 查找。DNS 查找失败会禁用虚拟主机。`VirtualHost` 指令各自以 `NameVirtualHost` 指令中指定的相同 IP 地址作为其参数。您在 `VirtualHost` 块内使用 Apache 指令分别配置每个主机。基于名称的虚拟主机使用主机头中指定的域名地址来确定要使用的虚拟主机。如果不存在此类信息，则第一个主机用作默认值。以下示例实现了两个基于名称的虚拟主机。
+
+在这里，`www.mypics.com` 和 `www.myproj.org` 被实现为基于名称的虚拟主机，而不是基于 IP 的主机：
+
+```
+ServerName turtle.mytrek.com
+
+NameVirtualHost 192.168.1.5
+
+<VirtualHost 192.168.1.5>
+  ServerName www.mypics.com
+  ServerAdmin webmaster@mail.mypics.com
+  DocumentRoot /var/www/mypics/html
+  ErrorLog /var/www/mypics/logs/error_log
+  ...
+</VirtualHost>
+
+<VirtualHost 192.168.1.5>
+  ServerName www.myproj.org
+  ServerAdmin webmaster@mail.myproj.org
+  DocumentRoot /var/www/myproj/html
+  ErrorLog /var/www/myproj/logs/error_log
+  ...
+</VirtualHost>
+```
+
+如果你的系统只有一个 IP 地址，实现虚拟主机将阻止使用该地址访问你的主服务器。你将无法再直接将主服务器用作 Web 服务器；你只能间接地使用它来管理你的虚拟主机。你可以配置一个虚拟主机来管理主服务器的网页。然后你将使用主服务器来支持一组作为网站运行的虚拟主机，而不是主服务器直接作为一个站点运行。如果你的机器有两个或更多 IP 地址，你可以使用其中一个作为主服务器，另一个用于你的虚拟主机。你甚至可以在服务器上混合使用基于 IP 的虚拟主机和基于名称的虚拟主机。你也可以使用单独的 IP 地址来支持不同的虚拟主机集合。你还可以让多个域名访问同一个虚拟主机。要这样做，请在选定的 `VirtualHost` 块内放置一个 `ServerAlias` 指令列出域名。
+
+```
+ServerAlias www.mypics.com www.greatpics.com
+```
+
+发送到用于你的虚拟主机的 IP 地址的请求必须与其中一个配置的虚拟域名匹配。为了捕获不匹配这些虚拟主机之一的请求，你可以使用 `_default_:*` 设置一个默认虚拟主机。未匹配的请求随后将由此虚拟主机处理。
+
+```
+<VirtualHost _default_:*>
+```
+
+## 动态虚拟主机
+
+如果你在服务器上实现了许多具有相同配置的虚拟主机，你可以使用一种称为动态虚拟主机技术来动态生成这些虚拟主机。实现虚拟主机的代码变得更小，因此你的服务器访问它们的速度更快。添加更多虚拟主机变得很简单，只需创建适当的目录并在 DNS 服务器中为它们添加条目即可。
+
+要使动态虚拟主机工作，服务器使用 `mod_vhost_alias` 模块中的命令（支持 Apache 1.3.6 及更高版本）来重写服务器名称和文档根目录，使其成为适当虚拟服务器的名称和文档根目录（对于 1.3.6 之前的旧版 Apache，你使用 `mod_rewrite` 模块）。动态虚拟主机可以是基于名称的，也可以是基于 IP 的。在任何一种情况下，你都必须以允许服务器使用虚拟主机名而不是服务器自己的名称的方式设置 `UseCanonicalName` 指令。对于基于名称的主机，你只需关闭 `UseCanonicalName`。这允许你的服务器从用户请求的 host header 中获取主机名。对于基于 IP 的主机，你将 `UseCanonicalName` 指令设置为 `DNS`。这允许服务器在 DNS 服务器中查找主机。
+
+```
+UseCanonicalName Off
+UseCanonicalName DNS
+```
+
+然后你必须启用服务器以定位你各种虚拟主机的不同文档根目录和 CGI bin 目录。你使用 `VirtualDocumentRoot` 指令来指定虚拟主机目录的模板。例如，如果你将不同的主机目录放在 `/var/www/hosts` 目录中，那么你可以相应地设置 `VirtualDocumentRoot` 指令：
+
+```
+VirtualDocumentRoot /var/www/hosts/%0/html
+```
+
+`%0` 将在访问该虚拟主机时被替换为虚拟主机的名称。重要的是，你必须使用该主机的名称创建动态虚拟主机的目录。例如，对于名为 `www.mygolf.org` 的动态虚拟主机，你将创建一个名为 `/var/www/hosts/www.mygolf.org` 的目录。然后像 `/var/www/hosts/www.mygolf.org/html` 这样创建文档根和 CGI 程序的子目录。对于 CGI 目录，使用 `VirtualScriptAlias` 指令指定你使用的 CGI 子目录。
+
+```
+VirtualScriptAlias /var/www/hosts/%0/cgi-bin
+```
+
+以下是基于名称的动态虚拟主机指令的简单示例：
+
+```
+UseCanonicalName Off
+VirtualDocumentRoot /var/www/hosts/%0/html
+VirtualScriptAlias /var/www/hosts/%0/cgi-bin
+```
+
+如果对 `www.mygolf.com/html/mypage` 发出请求，那将求值为 `/var/www/hosts/www.mygolf.com/html/mypage`
+
+以下是动态虚拟主机的简单示例：
+
+```
+UseCanonicalName Off
+NameVirtualHost 192.168.1.5
+<VirtualHost 192.168.1.5>
+ServerName www.mygolf.com
+ServerAdmin webmaster@mail.mygolf.com
+VirtualDocumentRoot /var/www/hosts/%0/html
+VirtualScriptAlias /var/www/hosts/%0/cgi-bin
+...
+</VirtualHost>
+```
+
+要实现基于 IP 的动态虚拟主机，请将 `UseCanonicalName` 设置为 `DNS` 而不是 `Off`。
+
+```
+UseCanonicalName DNS
+VirtualDocumentRoot /var/www/hosts/%0/html
+VirtualScriptAlias /var/www/hosts/%0/cgi-bin
+```
+
+## 插值字符串
+
+`mod_vhosts_alias` 模块支持各种插值字符串，每个字符串都以 `$` 符号开头，后跟一个数字。如你所见，`$0` 引用整个 Web 地址。`$1` 仅引用第一段，`$2` 引用第二段，`$-1` 引用最后一部分，`$2-` 引用从第二部分开始的部分。例如，如果你只想使用 Web 地址的第二部分作为目录名，你将使用以下指令：
+
+
+
+```
+VirtualDocumentRoot /var/www/hosts/%2/html
+VirtualScriptAlias /var/www/hosts/%2/cgi-bin
+```
+
+在这种情况下，对 `www.mygolf.com/html/mypage` 发出的请求只会使用 Web 地址的第二部分。这将是 `www.mygolf.com` 中的 `mygolf`，并求值为
+
+```
+/var/www/hosts/mygolf/html/mypage
+```
+
+如果你使用 `%2` 而不是 `%1`，如 `/var/www/hosts/%2/html`，则对 `www.mygolf.com/html/mypage` 的请求将求值为
+
+```
+/var/www/hosts/mygolf.com/html/mypage
+```
+
+相同的方法也适用于 IP 地址，其中 `%1` 引用第一个 IP 地址段，`%2` 引用第二个，以此类推。
+
+## 虚拟主机的日志
+
+动态虚拟主机的一个缺点是，你只能为所有主机设置一个日志。然而，你可以创建自己的 shell 程序来简单地从该日志中剪切出不同主机的条目。
+
+```
+LogFormat "%V %h %l %u %t \"%r\" %>s %b" vcommon
+CustomLog logs/access_log vcommon
+```
+
+## IP 地址
+
+以前面所示的标准方式实现动态虚拟主机将会减慢进程，因为你的服务器必须执行 DNS 查找来发现使用其 IP 地址的服务器名称。你可以通过简单地使用虚拟主机的目录的 IP 地址来避免这一步。因此，对于 IP 虚拟主机 `192.198.1.6`，你将创建一个目录 `/var/www/hosts/192.198.1.6`，并为该主机的文档根目录创建一个 `html` 子目录。你将使用 `VirtualDocumentRootIP` 和 `VirtualScriptAliasIP` 指令来使用 IP 地址作为目录名。现在 IP 地址可以直接映射到文档根目录名，不再需要 DNS 查找。另请确保在日志中包含 IP 地址，`%A`。
+
+```
+UseCanonicalName DNS
+LogFormat "%A %h %l %u %t \"%r\" %>s %b" vcommon
+CustomLog logs/access_log vcommon
+```
+
+```
+VirtualDocumentRootIP /var/www/hosts/%0/html
+VirtualScriptAliasIP /var/www/hosts/%0/cgi-bin
+```
+
+你可以根据需要将这些命令与其他虚拟主机条目混合使用。例如，要指定非动态基于名称的虚拟主机的文档根目录，你可以简单地使用 `VirtualDocumentRoot` 指令。换句话说，你可以简单地对动态和非动态虚拟主机使用相同的目录。你仍然可以为不同的非动态虚拟主机指定其他目录，如你所愿。在以下示例中，基于名称的虚拟主机 `www.mypics.com` 使用动态虚拟主机指令 `VirtualDocumentRoot` 来设置其文档根目录。它现在使用 `/var/www/www.mypics.com/html` 作为其文档根目录。CGI 目录 however 被设为非动态目录，`/var/www/mypics/cgi-bin`。
+
+```
+UseCanonicalName Off
+
+NameVirtualHost 192.168.1.5
+
+<VirtualHost 192.168.1.5>
+ServerName www.mypics.com
+ServerAdmin webmaster@mail.mypics.com
+VirtualDocumentRoot /var/www/$0/html
+ScriptAlias /var/www/mypics/cgi-bin
+...
+</VirtualHost>
+```
+
+## 服务器端包含
+
+服务器端包含（SSIs）旨在提供对你的网站内容的更精细控制，即 Web 页面本身。服务器端包含是放置在特定 Web 页面 HTML 代码中的 Apache 指令。你可以配置 Apache Web 服务器在特定 Web 页面中查找 SSI 指令并执行它们。首先，你必须使用带有 `include` 选项的 `Options` 指令来允许 SSI 指令。
+
+```
+Options Includes
+```
+
+你需要指示服务器解析特定 Web 页面。启用解析的最简单方法是指示 Apache 解析具有指定扩展名的 HTML 文件。通常，扩展名 `.shtml` 用于具有 SSI 指令的 Web 页面。事实上，在默认的 Apache 配置文件中，你可以找到以下条目以启用对 HTML 文件中 SSI 指令的解析。此处的 `AddType` 指令将 `.shtml` 类型添加为 HTML 类型的文件，而 `AddHandler` 指令指定 `.shtml` 文件将被解析（服务器解析）。
+
+```
+# To use server-parsed HTML files
+AddType text/html .shtml
+AddHandler server-parsed .shtml
+```
+
+代替创建单独的文件类型，你可以使用 `XBitHack` 指令让 Apache 解析任何可执行文件以查找 SSI 指令。换句话说，任何具有执行权限的文件（参见第 28 章）都将被解析以查找 SSI 指令。
+
+SSI 指令的操作方式与编程语言中的语句非常相似。你可以定义变量、创建循环并使用测试来选择备用指令。SSI 指令由元素和可以赋值的属性组成。SSI 指令的语法如下所示：
+
+```
+<!--#element attribute=value ... -->
+```
+
+被分配为要测试的表达式。测试可以使用标准比较运算符（如 `<=`、`!=` 或 `=`）比较两个字符串。测试中使用的变量通过以下方式求值：
+
+```
+<!--#set myvar="Goodbye" -->
+<!--#if expr="$myvar = Hello" -->
+```
+
+其他有用的 SSI 元素包括 `exec`，它执行 CGI 程序或 shell 命令，shell 命令可以将文件内容读取到网页中，也可以执行 CGI 文件。`echo` 元素显示诸如日期、文档名称和页面 URL 之类的值。使用 `config` 元素，您可以配置某些值，例如日期或文件大小。
+
+## PHP
+
+PHP（PHP Hypertext Preprocessor，PHP 超文本预处理器）是一种设计用于网页的脚本语言。支持 PHP 的页面允许您创建能够执行任务而不仅仅是显示数据的动态网页。PHP 是 Apache 软件基金会的官方项目。您可以在 `www.php.net` 上了解有关 PHP 的更多信息。
+
+与 CGI 程序（它们与网页分开执行）不同，PHP 命令像 SSI 命令一样以标签形式嵌入页面本身。解释和执行这些命令的 PHP 支持由 Web 服务器直接提供。在 Apache 中，这种嵌入式支持通过 `mod_php` 模块（`/etc/httpd/conf.d/php.conf` 配置文件）启用。使用 PHP，无需单独构建在 Web 服务器之外调用和运行的程序，而是将此类命令嵌入网页并由 Web 服务器运行。Web 服务器在执行任务时始终保持完全控制。但是，也可以以 CGI 模式实现 PHP，在该模式下，PHP 页面被构建为单独的程序，由网页调用，就像基于 Perl 的 CGI 程序一样。
+
+PHP 具有与 C 和 Perl 同等水平的灵活而强大的编程能力。与这些语言一样，您可以创建 `if` 语句和循环等控制结构。此外，PHP 还具有特别适合网页任务的能力。PHP 可以直接与 Oracle、MySQL 和 IBM DB2 等数据库交互。它可以轻松地与所有标准协议（如 IMAP、LDAP、HTTP 和 POP3）交互。它甚至具有文本处理能力，例如解释正则表达式和显示 XML 文档。还有用于搜索、gzip 等压缩工具和语言翻译的扩展。PHP 支持大量可能的操作。请查看其网站以获取完整列表以及在线手册和教程。
+
+## Apache GUI 配置工具
+
+Red Hat 提供了一个名为 Apache 配置工具的 GUI 配置工具，可从 GNOME 和 KDE 桌面访问。还有 Comanche，这是一种流行的 Apache 配置工具，您可以从互联网下载。Apache GUI 项目（`gui.apache.org`）提供了一组用于配置和管理 Apache Web 服务器的 GUI 工具。其当前活跃的项目是 Comanche 和 TkApache。在 Linuxconf 实用程序中，您也可以配置 Apache Web 服务器。Webmin 提供了一个非常完整的 Apache Web 服务器模块。
+
+
+
+Apache 配置工具打开时会显示一个窗口，其中包含 Main、Virtual Hosts、Server 和 Performance Tuning 面板。在每个面板中，您会看到用于打开对话框的按钮，您可以在其中输入默认设置。您还可以为特定项目（如虚拟主机和特定目录）输入设置。例如，在 Virtual Hosts 面板中，您可以为所有虚拟主机输入默认设置，也可以添加和编辑特定的虚拟主机。单击“帮助”按钮将显示一个基于网页的参考手册，其中详细说明了如何使用每个面板。在 Main 面板中，您输入 Web 服务器地址、Web 管理员的电子邮件地址以及 Web 服务器将监听的端口（参见图 22-1）。
+
+在 Virtual Hosts 面板上，请务必单击“编辑默认设置”按钮，为页面搜索、错误代码、日志文件和目录设置默认设置。要添加虚拟主机，请单击“添加”打开一个窗口，您可以在其中输入主机信息，例如虚拟主机名和 IP 地址。在侧边栏中，您可以为虚拟主机选择不同的配置面板，例如日志文件和目录控制。
+
+在 Server 面板上，您可以设置管理设置，例如 Apache 服务器的用户 ID 和进程 ID 文件。Performance Tuning 面板允许您设置不同的使用限制，例如最大请求数和每次连接的请求数。
+
+当 Apache 配置工具保存其设置时，它会覆盖 Apache 配置文件 `/etc/httpd/conf/httpd.conf`。建议您先备份 `httpd.conf` 文件，以防您需要还原发行版为 Apache 创建的原始设置。如果您已经手动编辑过此文件，您将收到警告，并且 Apache 配置工具将在 `/etc/httpd/conf/httpd.conf.bak` 中创建备份副本。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_465_0.png)
+
+## Web 服务器安全：SSL
+
+Web 服务器安全涉及两个不同的任务：保护 Web 服务器免受未经授权的访问，以及为 Web 浏览器客户端与 Web 服务器之间进行的交易提供安全保障。为了防止服务器被未经授权访问，你可以使用 Squid 这样的代理服务器。Squid 是一个 GNU 代理服务器，常与 Linux 系统上的 Apache 一起使用。（参见第 23 章，了解 Squid 服务器的详细说明。）Apache 本身有多个提供安全功能的模块。这些包括用于强制控制的 `mod_access`；提供身份验证支持的 `mod_auth`、`mod_auth_db`、`mod_auth_digest` 和 `mod_auth_dbm`；以及用于匿名 FTP 式日志记录的 `mod_auth_anon`（参见前面关于访问控制和身份验证的部分）。
+
+要确保传输安全，你需要执行三项任务。你必须验证身份，检查数据的完整性，并确保传输的隐私性。为了验证参与传输的主机的身份，你执行身份验证程序。为了检查数据的完整性，你添加包含数据摘要值的数字签名。摘要值是唯一代表数据的数值。最后，为了确保传输的隐私性，你对其进行加密。浏览器与服务器之间的交易随后可以被加密，只有浏览器和服务器本身能够解密传输。用于在 Linux Apache Web 服务器上实现安全传输的最常用协议是最初由 Netscape 为 Web 上的安全交易开发的 Secure Sockets Layer（SSL）协议。
+
+与第 18 章中描述的 Secure Shell（SSH）和第 16 章中讨论的 GPG 类似，SSL 使用一种公钥和私钥加密形式进行身份验证。数据使用公钥加密，但只能用私钥解密。一旦数据得到身份验证，就会使用商定的密码对其进行加密。数字签名对数据的 MD5 摘要值进行加密以确保完整性。身份验证是通过使用证书颁发机构的证书进行的。证书标识安全传输中的不同各方，验证它们就是它们所声称的那一方。Web 服务器将拥有一个验证其身份的证书，验证它就是它声称的那台服务器。联系服务器的浏览器也将拥有一个标识其身份的证书。这些证书反过来都由证书颁发机构签名，验证它们是有效的证书。证书颁发机构是一个双方都信任的独立实体。
+
+证书包含特定服务器或浏览器所拥有的公钥，以及证书颁发机构的数字签名和识别信息，例如运行服务器或浏览器的用户或公司的名称。证书的有效性直接取决于签发它的证书颁发机构的可靠性。为了在 Internet 上运行安全的 Web 服务器，你应该从 Verisign 等知名证书颁发机构获取证书。Stronghold 等商业供应商可以为你办理此事。许多成熟的公司已经维护自己的证书颁发机构，以确保其公司网络内的传输。SSL 会话是使用握手序列建立的，在该序列中，服务器和浏览器通过交换证书进行身份验证，商定用于加密传输的密码，并选择完整性检查的摘要类型。身份验证所使用的公钥加密类型也有选择，可以是 RSA 或 DSA。对于每个会话，都会设置一个唯一的会话密钥，浏览器和服务器使用该密钥。
+
+一种名为 OpenSSL 的免费开源版本的 SSL 可用于 Apache（参见 `www.openssl.org`）。它基于 Eric A. Young 和 Tim J. Hudson 的 SSLeay。然而，美国政府的限制禁止 Apache Web 服务器随内置 SSL 功能一起自由分发。你必须单独获取 SSL 并更新你的 Apache 服务器以纳入此功能。
+
+美国政府对超过 40 位的加密技术维持出口限制。然而，SSL 支持使用 168 位、128 位和 40 位密钥的多种密码（128 位被认为安全，因此相比之下可出口的 40 位版本毫无用处）。这意味着如果 Apache 包含 SSL，就无法在美国境外分发。然而，在美国境外，有一些项目确实使用 OpenSSL 为 Apache 分发 SSL。这些在美国可免费用于非商业用途，尽管出口限制适用。Apache-SSL 项目自由分发内置 SSL 的 Apache，`apache+ssl`。你可以从他们的网站 `www.apache-ssl.org` 下载（尽管对加密技术的出口有限制，但对进口没有限制）。此外，`mod_ssl` 项目提供了一个 SSL 模块和补丁，你可以用它来更新你的 Apache Web 服务器以纳入 SSL（`www.modssl.org`）。`mod_ssl` 在 Apache 风格许可证下可免费用于商业和非商业用途。Red Hat 在其发行版中包含 `mod_ssl` 模块，位于 `mod_ssl` 软件包中（`/etc/httpd/conf.d/ssl.conf` 配置文件）。
+
+`mod_ssl` 对 SSL 的实现为你的 Web 服务器提供了一个使用不同端口（443）和不同协议 `https` 的替代访问方式。实际上，你同时拥有一个 SSL 服务器和一个非安全版本。要访问安全的 SSL 版本，你在 Web 服务器的 URL 地址中使用协议 `https` 而不是 `http`。例如，要访问运行在 `www.mytrek.com` 的 Web 服务器的 SSL 版本，你将在其 URL 中使用协议 `https`，如下所示：
+
+```
+https://www.mytrek.com
+```
+
+你可以使用 Apache 配置文件 `httpd.conf` 中的多个配置指令来配置 `mod_ssl`。在 Red Hat 上，随 Apache 安装的默认配置文件包含 SSL 指令部分以及详细的注释。查阅 `mod_ssl` 在线文档 `www.modssl.org` 以获取列出所有指令的详细参考。提供有全局、基于服务器和基于目录的指令。
+
+在 Red Hat `httpd.conf` 文件中，SSL 指令的包含由 `IfDefine` 块控制，该块由 `HAVE_SSL` 标志启用。例如，以下代码将加载 SSL 模块：
+
+```
+<IfDefine HAVE_SSL>
+LoadModule ssl_module      modules/libssl.so
+</IfDefine>
+```
+
+你的 Apache Web 服务器的 SSL 版本在 `httpd.conf` 文件中作为虚拟主机设置。SSL 指令由使用 `HAVE_SSL` 标志的 `IfDefine` 块启用。已实现多个默认指令，例如 SSL 密钥目录的位置和 SSL 版本的服务器将监听的端口（443）。其他指令被注释掉了。你可以 enable them by removing the preceding `#` symbol, setting your own options. Several of the directives are shown here:
+
+```
+<IfDefine HAVE_SSL>
+## SSL Virtual Host Context
+
+# Server Certificate:
+SSLCertificateFile /etc/httpd/conf/ssl.crt/server.crt
+
+# Server Private Key:
+SSLCertificateKeyFile /etc/httpd/conf/ssl.key/server.key
+
+# Certificate Authority (CA):
+#SSLCAcertificatePath /etc/httpd/conf/ssl.crt
+#SSLCAcertificateFile /etc/httpd/conf/ssl.crt/ca-bundle.crt
+```
+
+
+
+在 `/etc/httpd/conf` 目录中，`mod_ssl` 将设置几个 SSL 目录，其中将包含 SSL 认证和加密密钥及数据。`ssl.crt` 目录将保存服务器的证书。`ssl.key` 目录保存用于认证加密的公钥和私钥。用于撤销过期证书的撤销列表保存在 `ssl.crl` 中。`ssl.csr` 目录保存用于向证书颁发机构请求官方证书的证书签名请求。`ssl.pfm` 保存 DSA 密钥加密方法使用的参数文件。查看每个目录中的 `README` 文件，了解其包含的 SSL 文件的详细信息。
+
+`mod_ssl` 安装将为您提供一个名为 `snakeoil` 的演示证书，您可以用它来测试您的 SSL 配置。当您拥有官方证书时，可以在 `ssl.crt` 目录中使用 `make certificate` 命令安装它。这将覆盖 `server.crt` 服务器证书文件。
+
+## 代理服务器：Squid
+
+代理服务器作为本地网络和更大网络（如互联网）上可用服务之间的中间人。来自本地客户端的对 Web 服务的请求可以由代理服务器处理，加快交易速度并控制访问。代理服务器维护常用 Web 页面的当前副本，通过消除不断访问原始站点的需求来加快 Web 访问时间。它们还执行安全功能，保护服务器免受未经授权的访问。`Squid` 是一个免费的、开源的 Web 客户端代理缓存服务器，旨在加快 Internet 访问速度并为 Web 服务器提供安全控制。它为 Web 客户端实现代理缓存服务，在用户发出请求时缓存 Web 页面。用户访问的 Web 页面的副本保存在 `Squid` 缓存中，并且在发出请求时，`Squid` 会检查是否拥有当前副本。如果 `Squid` 确实拥有当前副本，它将从其缓存中返回副本，而不是查询原始站点。如果它没有当前副本，它将从原始站点检索一个副本。这样，Web 浏览器就可以将本地 `Squid` 缓存用作代理 HTTP 服务器。`Squid` 目前处理支持 HTTP、FTP 和 SSL 协议的 Web 页面（`Squid` 不能与 FTP 客户端一起使用）。替换算法会定期替换缓存中的旧对象。您可以在 `squid.squid-cache.org` 了解更多关于 `Squid` 的信息。
+
+作为代理，`Squid` 做的不仅仅是缓存 Web 对象。它作为 Web 浏览器（客户端）和它们访问的服务器之间的中间人。连接不是直接建立到服务器，而是客户端连接到代理服务器。代理随后将请求中继到 Web 服务器。这对于 Web 服务器置于防火墙后面的情况很有用，防火墙可以然后在客户端和 Web 服务器之间来回传输请求和响应。该设计通常用于允许 Web 服务器在受保护的本地网络上运行，同时仍可在 Internet 上访问。您也可以使用 `Squid` 代理为本地主机提供对 Internet 的 Web 访问。不是使用提供完全 Internet 访问的网关，本地主机可以使用代理让它们仅访问 Web（参见第 5 章）。您还可以将两者结合使用，允许网关访问，但使用代理服务器为 Web 访问提供更多控制。此外，`Squid` 的缓存功能可以为本地主机提供更快的 Web 访问。
+
+从技术上讲，您可以使用代理服务器仅管理 Web 服务器与其希望通信的客户端之间的流量，而完全不进行缓存。`Squid` 将这两种功能结合起来作为代理缓存服务器。
+
+`Squid` 还提供了安全功能，让您可以控制访问 Web 服务器的主机。您可以拒绝特定主机的访问，同时允许其他主机访问。`Squid` 还支持使用加密协议，如 SSL（参见第 22 章）。加密通信会通过 `Squid` 服务器直接隧道传输（即不读取内容直接传递）到 Web 服务器。
+
+`Squid` 由加利福尼亚大学圣迭戈分校的应用网络研究国家实验室（NLANR）在 GNU 公共许可证下提供支持并分发。该工作基于 Harvest 项目，该项目旨在创建一个 Web 索引系统，其中包含一个名为 `cached` 的高性能缓存守护进程。您可以从 `Squid` 主页 `www.squid-cache.org` 获取当前源代码版本和在线文档。`Squid` 软件包由 `Squid` 服务器、名为 `dnsserver` 的域名查找程序、名为 `ftpget` 的 FTP 客户端以及名为 `cachemgr.cgi` 的缓存管理器脚本组成。`dnsserver` 根据域名解析 IP 地址，`ftpget` 程序是 `Squid` 用来从 FTP 服务器检索文件的 FTP 客户端。`cachemgr.cgi` 让您可以查看运行中的 `Squid` 服务器的统计信息。
+
+在 Red Hat 上，您可以使用 `squid` 脚本启动、停止和重启 `Squid` 服务器，如下所示：
+
+```
+service squid restart
+```
+
+您还可以使用 `redhat-config-services` 工具或 `chkconfig` 将 `Squid` 服务器设置为自动启动。
+
+## 配置客户端浏览器
+
+`Squid` 同时支持标准代理缓存和透明缓存。使用标准代理缓存时，用户需要将浏览器配置为专门访问 `Squid` 服务器。而透明缓存则不需要用户进行任何浏览器配置。该缓存是透明的，用户在访问时就像访问普通网站一样。透明缓存由 `IPtables` 通过网络过滤实现，拦截请求并将其定向到代理缓存（参见第 19 章）。
+
+使用标准代理缓存时，用户需要在其 Web 浏览器配置中指定代理服务器。为此，他们需要运行 `Squid` 代理服务器的主机的 IP 地址以及其所用的端口。代理服务器通常使用端口 `3128`。要配置使用第 5 章所述的本地示例网络上的代理服务器，您可以输入以下内容。代理服务器运行在 `turtle.mytrek.com` (`192.168.0.1`) 上，并使用端口 `3128`。
+
+```
+192.168.0.1 3128
+```
+
+在 Mozilla 和 Netscape 中，示例本地网络上的用户应首先在“编辑”菜单下的“首选项”中选择“代理”面板。然后，在“手动代理配置”的“查看”面板中输入上述信息。用户将看到 FTP、Gopher、HTTP 和安全代理的条目。对于标准 Web 访问，请在 FTP、Gopher 和 Web 框中输入 IP 地址，并在对应的端口框中输入 `3128`。
+
+对于 GNOME，请在“首选项”菜单或窗口中选择“网络代理”；对于 KDE 桌面上的 Konqueror，请在“首选项 | Web 浏览”菜单窗口中选择“代理”面板。
+
+在这里，您可以输入代理服务器地址和端口号。
+
+如果您的本地主机使用 Internet Explorer（例如 Windows 系统），则可以在“Internet 选项”窗口中的“局域网设置”中设置代理条目。在 Linux 或 Unix 系统上，本地主机可以设置 `http_proxy`、`gopher_proxy` 和 `ftp_proxy` shell 变量，以配置 Linux 支持的 Web 浏览器（如 `lynx`）的访问。您可以将这些定义放在 `.bash_profile` 或 `/etc/profile` 文件中，以便在登录时自动定义它们。
+
+```
+http_proxy=192.168.0.1:3128
+ftp_proxy=192.168.0.1:3128
+gopher_proxy=192.168.0.0:1:3128
+export http_proxy ftp_proxy gopher_proxy
+```
+
+在本地主机上的客户端可以使用代理服务器之前，必须先在服务器的 `squid.conf` 文件中授予其访问权限，这将在后面的“安全”一节中介绍。可以轻松地为整个网络提供访问权限。对于这里使用的示例网络，您需要在 `squid.conf` 文件中放置以下条目。这些条目将在后续章节中详细说明。
+
+```
+acl mylan src 192.168.0.0/255.255.255.0
+http_access allow mylan
+```
+
+> 提示：需要将您的 `Squid` 服务器作为标准代理缓存来访问的 Web 客户端，必须知道服务器地址以及 `Squid` HTTP 服务所用的端口，默认是 `3128`。
+
+## squid.conf
+
+`Squid` 的配置文件是 `squid.conf`，位于 `/etc/squid` 目录中。在 `/etc/squid/squid.conf` 文件中，您可以设置常规选项（如使用的端口）、控制服务器访问的安全选项，以及用于配置缓存操作的缓存选项。您可以使用名为 `/etc/squid/squid.conf.default` 的备份版本来恢复原始的默认设置。随 `Squid` 软件提供的默认版本 `squid.conf` 包含对所有标准条目的详细说明，以及带注释的默认条目。条目由指定不同属性的标签组成。例如，`maximum_object_size` 和 `maximum_object` 设置了传输对象的限制。
+
+```
+maximum_object_size 4096 KB
+```
+
+作为代理，`Squid` 会为特定服务使用某些端口，例如 Web 浏览器等 HTTP 服务使用端口 `3128`。`Squid` 已经设置了默认端口号。如果您需要使用其他端口，可以在 `/etc/squid/squid.conf` 文件中进行设置。以下条目展示了如何设置 Web 浏览器端口：
+
+```
+http_port 3128
+```
+
+> 注意：`Squid` 使用简单网络管理协议（SNMP）向管理网络的 SNMP 代理提供状态信息和统计信息。您可以通过 `squid.conf` 文件中的 `snmp` 访问和端口配置来控制 SNMP。
+
+
+
+## Security
+
+Squid 可以利用其作为 Web 客户端与 Web 服务器之间中介的角色来实现访问控制，决定谁可以访问 Web 服务器以及如何访问。Squid 通过检查已对其设置控制的主机和域的访问控制列表（ACLs）来实现这一点。当它发现来自这些主机之一的 Web 客户端尝试连接 Web 服务器时，它会执行控制。Squid 支持多种控制，可以拒绝或允许远程主机的 Web 客户端访问 Web 服务器（参见表 23-1）。实际上，Squid 为 Web 服务器设置了一个防火墙。
+
+配置 Squid 安全性的第一步是创建 ACLs。这些是您想要设置控制的主机和域的列表。您使用 `acl` 命令定义 ACLs，在其中为设置控制的系统创建一个标签。然后您使用诸如 `http_access` 之类的命令来定义这些控制。您可以使用多种 `acl` 选项按源 IP 地址、域名，甚至时间和日期来定义系统或一组系统。例如，`src` 选项用于定义具有特定源地址的系统或系统组。要为本地网络中地址为 192.168.0.0 至 192.168.0.255 的系统定义 `mylan` `acl` 条目，请使用以下 ACL 定义：
+
+``` 
+acl mylan src 192.168.0.0/255.255.255.0
+```
+
+定义后，您可以在 Squid 选项中使用 ACL 定义来指定要对这些系统实施的控制。例如，要允许 `mylan` 组中的本地系统通过代理访问 Web，请使用带有 `allow` 操作的 `http_access` 选项指定 `mylan` 作为要使用的 `acl` 定义，如下所示：
+
+``` 
+http_access allow mylan
+```
+
+通过定义 ACLs 并在 Squid 选项中使用它们，您可以根据需要定制网站的安全性。以下示例仅允许 `mylan` 组中的本地系统通过代理访问 Web，拒绝所有其他系统访问。设置了两个 `acl` 条目：一个用于本地系统，一个用于所有其他系统。`http_access` 选项首先允许本地系统访问，然后拒绝所有其他系统访问。
+
+``` 
+acl mylan src 192.168.0.0/255.255.255.0
+acl all src 0.0.0.0/0.0.0.0
+http_access allow mylan
+http_access deny all
+```
+
+您将在 `squid.conf` 文件中找到的默认条目，以及 `mylan` 示例网络的条目，如下所示。您将在 `squid.conf` 文件的 ACCESS CONTROLS 部分找到这些条目。
+
+``` 
+acl all src 0.0.0.0/0.0.0.0
+acl manager proto cache_object
+acl localhost src 127.0.0.1/255.255.255.255
+acl mylan src 192.168.0.0/255.255.255.0
+acl SSL_ports port 443 563
+```
+
+`http_access` 选项的顺序很重要。Squid 从第一个开始向下工作，在第一个匹配 ACL 条目的 `http_access` 选项处停止。在前面的示例中，匹配第一个 `http_access` 命令的本地系统将被允许，而其他系统则会落到第二个 `http_access` 命令并被拒绝。
+
+对于使用代理的系统，您还可以控制它们可以访问哪些站点。对于目标地址，您可以使用 `dst` 限定符创建 `acl` 条目。`dst` 限定符以站点地址作为参数。然后您可以创建 `http_access` 选项来控制对该地址的访问。以下示例拒绝任何使用代理的人访问目标站点 rabbit.mytrek.com。如果您有一个通过代理访问 Web 的本地网络，您可以使用此类命令来限制对某些站点的访问。
+
+``` 
+acl myrabbit dst rabbit.mytrek.com
+http_access deny myrabbit
+```
+
+`squid.conf` 文件中已定义的 `http_access` 条目，以及 `mylan` 网络的条目如下所示。外部用户的访问被拒绝，而本地网络上的主机和本地主机（Squid 服务器主机）的访问被允许。
+
+``` 
+http_access allow localhost
+http_access allow mylan
+http_access deny all
+```
+
+您还可以按域名限定地址。通常，网站可以使用仅域名进行引用。例如，名为 www.mybeach.com 的站点可以使用域名 mybeach.com 进行引用。要创建引用域的 `acl` 条目，请分别对目标域和源域使用 `dstdomain` 或 `srcdomain` 选项。请记住，此类引用指的是该域中的所有主机。具有 mybeach.com 的 `dstdomain` 选项的 `acl` 条目限制对 www.mybeach.com、ftp.mybeach.com、surf.mybeach.com 等的访问。以下示例限制对 www.mybeach.com 站点以及所有其他 .mybeach.com 站点和 mybeach.com 域中的任何主机的访问：
+
+``` 
+acl thebeach dstdomain .mybeach.com
+http_access deny thebeach
+```
+
+您可以在 `acl` 条目中列出多个域或地址以将它们作为组引用，但不能有一个域是另一个域的子域。例如，如果 mybeachblanket.com 是 mybeach.com 的子域，则不能在同一个 `acl` 列表中同时列出两者。以下示例限制对 mybeach.com 和 mysurf.com 的访问：
+
+``` 
+acl beaches dstdomain .mybeach.com .mysurf.com
+http_access deny beaches
+```
+
+`acl` 条目还可以使用模式来指定某些地址和域。在以下示例中，拒绝访问任何 URL 包含模式“chocolate”的请求，但允许所有其他请求：
+
+``` 
+acl Choc1 url_regex chocolate
+http_access deny Choc1
+http_access allow all
+```
+
+Squid 还支持 `ident` 和 `proxy` 身份验证方法来控制用户访问。以下示例仅允许用户 dylan 和 chris 使用 Squid 缓存：
+
+``` 
+ident_lookup on
+acl goodusers user chris dylan
+http_access allow goodusers
+http_access deny all
+```
+
+| 选项 | 描述 |
+|---|---|
+| `src` ip-address/netmask | 客户端的 IP 地址 |
+| `src` addr1-addr2/netmask | 地址范围 |
+| `dst` ip-address/netmask | 目标 IP 地址 |
+| `myip` ip-address/netmask | 本地套接字 IP 地址 |
+| `srcdomain` domain | 反向查找，客户端 IP |
+| `dstdomain` domain | 来自 URL 的目标服务器；对于 `dstdomain` 和 `dstdom_regex`，如果使用基于 IP 的 URL，则会尝试反向查找 |
+| `srcdom_regex` [-i] expression | 匹配客户端名称的正则表达式 |
+| `dstdom_regex` [-i] expression | 匹配目标的正则表达式 |
+| `time` [day-abbrevs] [h1:m1-h2:m2] | 按天、小时和分钟指定的时间。星期缩写：S = 星期日，M = 星期一，T = 星期二，W = 星期三，H = 星期四，F = 星期五，A = 星期六 |
+| `url_regex` [-i] expression | 匹配整个 URL 的正则表达式 |
+| `urlpath_regex` [-i] expression | 匹配 URL 路径的正则表达式 |
+| `port` ports | 指定端口或端口范围 |
+| `proto` protocol | 指定协议，例如 HTTP 或 FTP |
+| `method` method | 指定方法，例如 GET 和 POST |
+| `browser` [-i] regexp | 在 user-agent 头上进行模式匹配 |
+| `ident` username | 在 ident 输出上进行字符串匹配 |
+| `src_as` number | 用于将请求路由到特定缓存 |
+| `dst_as` number | 用于将请求路由到特定缓存 |
+| `proxy_auth` username | 有效用户名列表 |
+| `snmp_community` string | 用于限制对 SNMP 代理访问的社区字符串 |
+
+**表 23-1 Squid ACL 选项**
+
+## 缓存
+
+
+
+Squid 使用 Internet 缓存协议 (ICP) 与其他 Web 缓存通信。使用 ICP 协议，您的 Squid 缓存可以连接到其他 Squid 缓存或其他缓存服务器，例如 Microsoft 代理服务器、Netscape 代理服务器和 Novell BorderManager。这样，如果您的网络的 Squid 缓存没有请求的 Web 页面的副本，它可以联系另一个缓存，看看是否在那里，而不是访问原始站点。您可以通过将其连接到缓存层次结构来配置 Squid 以连接到其他 Squid 缓存。Squid 支持由 child、sibling 和 parent 术语表示的缓存层次结构。Sibling 和 child 缓存可在同一级别访问，并在请求无法在您自己的 Squid 缓存中找到时自动查询。如果这些查询失败，则会查询父缓存，然后父缓存会搜索其自己的子缓存和兄弟缓存——或其自己的父缓存（如有需要）——依此类推。使用 `cache_host` 设置父级和兄弟级层次结构连接。
+
+```
+cache_host sd.cache.nlanr.net parent 3128 3130
+```
+
+您可以通过在 `squid.conf` 文件中使用以下条目注册您的缓存来设置缓存层次结构以连接到主 NLANR 服务器：
+
+```
+cache_announce 24
+announce_to sd.cache.nlanr.net:3131
+```
+
+## 日志
+
+Squid 保留多个日志。`access.log` 包含发送到您的代理的请求，`cache.log` 包含 Squid 服务器消息，例如错误和启动消息，而 `store.log` 包含有关 Squid 缓存的信息，例如添加或删除的对象。您可以使用缓存管理器 (`cachemgr.cgi`) 来管理缓存并在缓存管理器运行时查看其统计信息。要运行缓存管理器，请使用浏览器执行 `cachemgr.cgi` 脚本（此脚本应放置在您的 Web 服务器的 `cgi-bin` 目录中）。
+
+## Web 服务器加速：反向代理缓存
+
+尽管 Squid 缓存可以通过客户端增强对 Web 服务器的访问，但 Squid 也可以减轻 Web 服务器的负载。被请求压垮的 Web 服务器可以将可缓存页面移至 Squid 代理服务器，该服务器可以充当一种替代站点，处理对这些页面的请求。实际上，Web 服务器变得加速了。这种缓存被称为反向代理缓存，关注的是服务器而不是客户端。反向代理缓存将拦截对服务器的请求，处理其缓存页面的请求。只有对未缓存页面的请求才会被转发到原始 Web 服务器。
+
+要配置反向代理缓存，您使用 `httpd_accel` 指令。`httpd_accel_host` 指定原始 Web 服务器的地址，而 `httpd_accel_port` 是其使用的端口。如果代理仅支持一个 Web 服务器，则将 `httpd_accel_single_host` 设置为 on，而如果代理支持多个 Web 服务器，则将其设置为 off。如果您希望代理服务器既用作客户端的代理，又用作 Web 服务器的反向代理，则将 `httpd_accel_with_proxy` 选项设置为 on。但是，客户端随后需要配置其浏览器以访问 Web 服务器，就像访问任何标准代理一样（proxy server）。`httpd_accel_uses_host_header` 指令用于实现透明缓存；对于反向代理缓存应将其关闭。
+
+```
+http_port 80 # Port of Squid proxy
+httpd_accel_host 172.16.1.115 # IP address of web server
+httpd_accel_port 80 # Port of web server
+httpd_accel_single_host on # Forward uncached requests to host
+httpd_accel_with_proxy on #
+httpd_accel_uses_host_header off
+```
+
+如果你的 Squid 代理服务器和 Web 服务器运行在同一主机上，你需要指定 Web 服务器使用的端口。该端口不能与 Squid 使用的端口相同。在下面的示例中，Web 服务器使用端口 81，而 Squid 使用端口 80。
+
+```
+http_port 80 # Port of Squid proxy
+httpd_accel_host localhost # IP address of web server
+httpd_accel_port 81 # Port of web server
+```
+
+此外，外部网络的 DNS 条目应使用代理服务器的 IP 地址作为 Web 服务器主机名，将所有 Web 服务器请求定向到代理服务器。内部网络的 DNS 条目应使用 Web 服务器的 IP 地址作为 Web 服务器主机名，允许代理将未缓存的请求重定向到 Web 服务器。如果你的网络只使用一个 DNS 服务器，你可以设置一个拆分 DNS 服务器来指定内部和外部地址（参见第 34 章）。
+
+## Mail Servers: SMTP, POP, and IMAP
+
+邮件服务器为 Internet 用户提供电子邮件服务。它们有自己的 TCP/IP 协议，如简单邮件传输协议（SMTP）、邮局协议（POP）和 Internet 邮件访问协议（IMAP）。消息通过为本地域提供服务的邮件服务器在 Internet 上传输。域可以看作是更大 Internet 的一个子网，具有自己的服务器来处理从该子网上用户发送或接收的邮件消息。当用户发送邮件时，它首先从其主机系统发送到邮件服务器。然后邮件服务器将消息发送到 Internet 上的另一台邮件服务器，即为收件人用户所在的子网提供服务的服务器。接收邮件服务器随后将消息发送到收件人的主机系统。
+
+在每个阶段，使用不同类型的操作，使用不同的代理（程序）。邮件用户代理（MUA）是邮件客户端程序，如 `mail` 或 `Elm`。有了 MUA，用户可以撰写邮件消息并发送。然后邮件传输代理（MTA）通过 Internet 传输消息。MTA 是使用 SMTP 在一台邮件服务器到另一台邮件服务器之间发送消息的邮件服务器，将它们在子网之间传输。在 Linux 和 Unix 系统中，常用的 MTA 是 `Sendmail`，这是一个邮件服务器守护进程，不断检查来自其他邮件服务器的传入消息并将传出消息发送到适当的服务器。其他越来越受欢迎的 MTA 有 `Postfix`、`Exim`、`Courier` 和 `Qmail`（参见表 24-1）。由邮件服务器接收的传入消息由邮件投递代理（MDA）分发给用户。大多数 Linux 系统使用 `procmail` 作为其 MDA，将邮件服务器接收到的消息投递到用户账户（有关更多信息，请参阅 www.procmail.org）。
+
+### TABLE 24-1
+
+邮件传输代理
+
+| Agent | Description |
+|---|---|
+| `Sendmail` | `Sendmail` mail transfer agent www.sendmail.com |
+| `Postfix` | Fast, easy to configure, and secure mail transfer agent compatible with `Sendmail` and designed to replace it www.postfix.org |
+| `Qmail` | Fast, flexible, and secure MTA with its own implementation and competitive with `Postfix` www.qmail.org |
+| `Exim` | MTA based on `smail3` www.exim.org |
+| `Courier` | Courier MTA www.courier-mta.org |
+| `Mail Transport Agent Switcher` | Red Hat tool to let you switch between using `Sendmail` and `Postfix` (`Mail Transport Agent Switcher` in System Settings menu and window) |
+
+## Mail Servers
+
+Red Hat Linux 会自动为你安装和配置 `Sendmail` 和 `Postfix`。在启动系统时，你可以使用 `Sendmail` 或 `Postfix` 在本地用户之间发送和接收消息。Red Hat 包含一个名为邮件传输代理切换器的特殊工具，可从系统设置菜单或窗口访问，让你在这两者之间切换。你也可以设置你的 Linux 系统运行 POP 服务器。POP 服务器在用户登录访问其邮件之前保存用户的邮件，而不是直接将邮件发送到其主机。`Postfix` 和 `Sendmail` 都将在本章中讨论。
+
+`Courier` 是一个快速、小巧且安全的 MTA，与 `Sendmail` 保持一定的兼容性。`Courier` 软件包还包括 POP、IMAP 和 webmail 服务器以及邮件列表服务。它支持广泛的身份验证方法，包括 shadow 密码、PAM 和 LDAP。
+
+
+
+Qmail 也是一个快速且安全的 MTA，但它与 Sendmail 的兼容性很低。它有自己的配置和维护文件。与 Postfix 一样，它采用模块化设计，为每个邮件任务使用不同的程序。它还注重安全性、速度和易于配置。
+
+> NOTE 在单个独立系统内发送的消息需要一个回环接口。大多数 Linux 发行版，包括 Red Hat，在安装过程中会自动为你完成此操作。回环接口使你的系统能够寻址自身，允许它向自身发送和接收邮件。回环接口使用主机名 `localhost` 和为本地系统保留的特殊 IP 地址 `127.0.0.1`。你可以检查你的 `/etc/hosts` 文件以查看你的回环接口是否已配置为本地主机。你应该看到 `127.0.0.1 localhost` 列为第一项。
+
+## 接收邮件：MX 记录
+
+邮件地址由用户名和主机地址组成。主机地址采用完全限定域名的形式，列出主机名和域名，以句点分隔。主机名的大多数用途，如 FTP 连接，会将主机名转换为 IP 地址，并使用该 IP 地址定位主机系统。邮件消息的运作方式几乎相同。不过，邮件会利用域名服务来确定实际要将消息发送到哪台主机。邮件地址中指定的主机可能并非实际投递的目标主机。不同的网络通常会指定一台邮件服务器，网络内各主机的邮件都应投递到该服务器。例如，发送到 `rabbit.mytrek.com` 主机的邮件可能实际投递到 `turtle.mytrek.com` 主机。`turtle.mytrek.com` 可能运行着 POP 邮件服务器，`rabbit.mytrek.com` 上的用户可以访问该服务器来阅读邮件。
+
+这类邮件服务器通过邮件交换记录（即 MX 记录）与不同主机关联，这些记录位于网络的 DNS 配置中（参见第 34 章）。当网络收到邮件时，会首先检查网络 DNS 配置中的 MX 记录，以确定邮件是否要投递到与邮件地址中不同的主机。例如，下面的 MX 记录说明，任何发给 `rabbit.mytrek.com` 主机的邮件都要投递到 `turtle.mytrek.com` 主机。`turtle.mytrek.com` 是 `rabbit.mytrek.com` 的邮件交换器：
+
+```
+rabbit.mytrek.com. IN MX 0 turtle.mytrek.com.
+```
+
+一台主机可以有多个邮件交换器，每个具有不同的优先级。如果其中一个不可用，将访问优先级次高的那个。这种设计提供了更稳健的邮件投递，让少数维护良好的服务器处理收到的邮件，而不是由每台主机自行处理。
+
+邮件交换记录也用于没有对应主机的邮件地址。例如，你可以指定虚拟主机，或者将域名用作地址。要使用域名，你需要一条 MX 记录，将该域名映射到网络中的一台邮件服务器。发送到该域名的邮件将被发送到这台邮件服务器。例如，使用下面的 MX 记录，发送到 `mytrek.com` 的邮件将被投递到 `turtle.mytrek.com`，该主机将运行像 Sendmail 这样的邮件服务器：
+
+```
+mytrek.com. IN MX 0 turtle.mytrek.com.
+```
+
+发送到 `george@mytrek.com` 的邮件将被发送到 `george@turtle.mytrek.com`。
+
+> 注意：MX 记录不仅用于传入邮件，也用于传出邮件。MX 记录可以指定一台邮件服务器，用于将来自给定主机的邮件中继到更大的网络。
+
+MX 记录在某些邮件配置中发挥作用，例如伪装（masquerading）或集中式邮件服务。MX 记录并非必需。如果你有一个独立系统或只有少数主机的小型网络，你可能希望各主机直接接收邮件。
+
+## Postfix
+
+Postfix 是一个快速、安全且灵活的 MTA，旨在替代 Sendmail，同时尽可能保持兼容性。它由 Wietse Venema 编写，最初以 IBM Secure Mailer 的名称发布，现在以 GNU 许可证提供（`www.postfix.org`）。Postfix 在设计时就考虑到了安全性，将所有传入邮件都视为潜在的安全风险。Postfix 使用了许多与 Sendmail 相同的目录和文件，并利用 Sendmail 包装器，让 Sendmail 客户端能够与 Postfix 服务器无缝交互。Postfix 还更易于配置，使用自己的配置文件。Red Hat 现在随 Sendmail 一起提供 Postfix。
+
+Postfix 不是单个大型程序，而是由一组较小的程序实现，每个程序都设计用于执行特定的邮件相关任务。Postfix 主守护进程持续运行，并管理其他 Postfix 守护进程的使用，仅在需要时运行它们。`bounce` 守护进程处理无法投递的邮件，`trivial-rewrite` 守护进程重定向消息，`showq` 守护进程提供有关邮件队列的信息。
+
+### Postfix 命令
+
+有几条 Postfix 命令可用于管理服务器任务。`sendmail` 命令用于发送消息。你可以使用 `mailq` 显示邮件队列的状态。`newaliases` 命令将 `aliases` 文件中列出的邮件别名存储到 Postfix 可以使用的数据库文件中。`postmap` 命令用于维护 Postfix 使用的各种数据库文件，例如用于邮件别名的 `aliases` 文件和用于限制服务器接收消息的 `access` 文件。此外，Postfix 还提供了一些以 post 开头的底层工具，例如维护别名数据库的 `postalias` 命令，以及显示邮件队列文件的 `postcat`。
+
+### Postfix 配置：main.cf
+
+Postfix 配置通过在其配置文件 `main.cf` 中设置参数来完成。Red Hat 随 Postfix 安装了默认的 `/etc/postfix/main.cf` 文件，其中已设置了大多数基本配置值。参数名称往往对用户友好。例如，目录位置由以 directory 结尾的参数指定，如 `queue_directory` 用于指定 Postfix 队列的位置，`daemon_directory` 用于指定 Postfix 守护进程的位置。大多数参数都已经实现了默认值。例如，针对特定的资源控制设置了默认值，如消息大小、时间限制以及每个队列允许的消息数量。你可以编辑 `main.cf` 文件以更改参数值来满足自己的需求。进行任何更改后，只需使用 `postfix reload` 命令重新加载配置：
+
+```
+postfix reload
+```
+
+### 网络参数
+
+你很可能需要设置几个网络参数。为简化此过程，Postfix 定义了一些保存关键网络信息的参数，例如 `myhostname` 保存系统的主机名，`mydomain` 保存网络的域名。例如，`myhostname` 将设置为主机 `turtle.mytrek.com`，而 `mydomain` 则仅为 `mytrek.com`。像 `myhostname` 和 `mydomain` 这样的参数是它们本身可被用作分配给其他参数的值。在下一个示例中，`myhostname` 和 `mydomain` 被设置为邮件服务器运行的主机及其网络域：
+
+```
+myhostname=turtle.mytrek.com
+mydomain=mytrek.com
+```
+
+`myorigin` 参数指定服务器发送的电子邮件的源地址。默认情况下，它被设置为 `myhostname` 参数的值，如下所示。
+
+```
+myorigin=$myhostname
+```
+
+请注意，`$` 在 `myhostname` 变量之前以便对其进行求值。
+
+如果您使用的是直接连接到 Internet 的单台系统，您可能希望保留此配置，将邮件标记为由您的主机发送。但是，如果您的系统作为网络的网关运行，您的邮件服务器会从该网络上的不同主机发送邮件。您可能希望将源地址更改为域名，以便邮件被视为从该域发送。
+
+```
+myorigin=$mydomain
+```
+
+### 本地网络
+
+`mydestination` 参数保存您的邮件服务器将接收邮件的域名列表。默认情况下，这些包括 `localhost` 和您系统的主机名。
+
+```
+mydestination = $myhostname localhost.$mydomain
+```
+
+如果您希望邮件服务器接收整个本地网络的邮件，则需要同时指定其域名。这样，服务器就可以接收仅针对该域而不是特定主机的邮件。
+
+```
+mydestination = $myhostname localhost.$mydomain $mydomain
+```
+
+此外，如果您的主机使用其他主机名，并且 DNS 记录通过这些名称标识您的主机，则您还需要指定这些名称。例如，您的主机也可能是邮件可以发送到的 Web 服务器。主机 `turtle.mytrek.com` 也可能被标识为网站 `www.mytrek.com`。两个名称都必须列在 `mydestination` 参数中。
+
+```
+mydestination = $myhostname localhost.$mydomain $mydomain www.$mydomain
+```
+
+如果您的系统是一个或多个本地网络的网关，您可以使用 `mynetworks` 参数指定它们。这允许您的邮件服务器中继发往这些网络的邮件。网络使用其 IP 地址指定。`relay_domains` 参数让您可以指定可以中继消息的网络的域名地址。默认情况下，它被设置为 `mydestination`：
+
+
+
+```
+mynetworks=192.168.0.0
+relay_domains=$mydestination
+```
+
+连接到 Internet 的本地网络中的主机需要知道中继主机，即邮件服务器的身份。您使用 `relayhost` 参数设置此项。此外，`myorigin` 应仅设置为 `mydomain`。如果有 DNS 服务器将网关标识为邮件服务器，您只需将 `relayhost` 设置为 `mydomain` 的值。如果没有，则 `relayhost` 应设置为网关/邮件服务器的特定主机名。如果您的本地网络未运行 DNS 服务器，请确保将 `disable_dns_lookups` 设置为 `yes`。
+
+```
+relay_host=$mydomain
+```
+
+## 直接连接
+
+如果您的系统直接连接到 Internet，并且您使用 ISP 接收邮件，您可以将 Postfix 配置为 null 客户端仅发送邮件。将 `relay_host` 参数设置为仅您的域名。此外，在 `master.cf` 文件中，注释掉 SMTP 服务器和本地投递代理条目。
+
+```
+relayhost = $mydomain
+```
+
+## 伪装
+
+如果您的邮件服务器在本地网络的网关上运行，并且您希望隐藏该网络中的主机，您可以选择伪装本地主机，让它看起来所有邮件都来自域本身，而不是特定主机。要设置此选项，您使用 `masquerade_domains` 参数。在以下示例中，所有由本地主机如 `rabbit.mytrek.com` 发送的邮件都将被标记为仅来自 `mytrek.com`。因此，由用户 `chris@rabbit.mytrek.com` 发送的消息将被发送为来自 `chris@mytrek.com`。
+
+```
+masquerade_domains = $mydomain
+```
+
+默认情况下，收到的邮件不会被伪装。这允许 Postfix 仍然将收到的邮件投递到特定主机。如果您希望收到的邮件也被伪装，您必须将 `envelope_recipients` 参数添加到分配给 `masquerade_class` 参数的值列表中。在这种情况下，Postfix 将不再能够投递收到的邮件。
+
+## 虚拟域
+
+如果您的网络已实现虚拟域，您将需要设置一个虚拟域表，然后使用 `virtual_maps` 选项指定该表。设置表很简单，只需在文本文件如 `/etc/postfix/virtual` 中列出虚拟名称及其真实地址。然后使用 `postmap` 命令创建 Postfix 表：
+
+```
+postmap /etc/postfix/virtual
+```
+
+> NOTE 请参阅 www.postfix.org 上的 Postfix FAQ，了解如何为网关、本地工作站或直接连接到互联网的主机（null server）设置 Postfix 的详细说明。
+
+## Security: UCM
+
+Postfix 参数允许您配置控制其礼貌地称为未经请求的商业邮件（UCM）的方法。
+
+## Controlling User and Host Access
+
+使用访问文件，您可以控制特定用户、主机和域的访问权限。访问文件的工作方式与 Sendmail 使用的类似。条目在文本文件中创建，以用户、主机或域名或地址开头，后跟要采取的操作。可以接受、拒绝或带消息拒绝用户、主机或域。一旦条目创建完成，就可以使用 `postmap` 命令将其安装到 Postfix 数据库文件中：
+
+```
+postmap /etc/postfix/access
+```
+
+然后您可以在各种 Postfix 操作中使用访问文件来控制客户端、收件人和发件人。
+
+## Blocking Access
+
+访问也可以通过使用邮件滥用预防系统（MAPS）来控制，该系统提供 RBL+ 服务，这是一组基于邮件地址 DNS 的数据库（mail-abuse.org）。这些数据库，如实时黑洞列表（RBL），列出了已知被邮件滥用者使用的邮件地址。域或主机与服务维护的列表进行匹配。该服务可以访问本地服务器或直接从在线站点访问。各种 Postfix 操作允许您使用 MAPS 数据库来控制客户端、收件人、发件人的访问。
+
+## Header and Body Checks
+
+使用 `header_checks` 参数，您可以指定一个 Postfix 表，在其中列出拒绝消息的标准。标准是可以匹配消息头的模式。可以使匹配的消息被拒绝、带回复被拒绝、直接删除或记录警告。您可以选择执行多个操作，包括 `REJECT`、`DISCARD`、`WARN`、`HOLD` 和 `IGNORE`。
+
+这将拒绝任何地址未解析的客户端；`permit_mynetworks`，允许由 `mynetworks` 定义的任何客户端访问；以及 `check_client_access`，它将检查访问数据库以查看是否应接受或拒绝客户端。`reject_rbl_client` 和 `reject_rhsbl_client` 将拒绝来自指定域的客户端。
+
+```
+smtpd_client_restrictions = permit_mynetworks, \
+    reject_unknown_client, check_client_access, reject_maps_rbl
+```
+
+`reject_rbl_client` 限制基于指定的 MAPS 服务拒绝域地址。该站点可以是在线站点或设置提供该服务的本地站点。`reject_rhsbl_client` 限制拒绝主机地址。
+
+```
+smtpd_client_restrictions = reject_rbl_client relays.mail-abuse.org
+```
+
+要从访问文件实现限制，您可以使用 `hash` 指令和文件名。
+
+```
+smtpd_client_restrictions = hash:/etc/postfix/access
+```
+
+相应的 `smtpd_sender_restrictions` 参数的工作方式与客户端对应参数类似，但控制来自特定发件人的访问。它具有许多相同的限制，并增加了 `reject_non_fqdn_sender`，它将拒绝任何没有完全限定域名邮件头的邮件，以及 `reject_sender_login_mismatch`，它将要求发件人验证。`reject_rhsbl_sender` 限制基于指定的 MAPS 服务拒绝域地址。
+
+`smtpd_recipient_restrictions` 参数将限制服务器将接受邮件的收件人。限制包括 `permit_auth_destination`，它允许授权消息，以及 `reject_unauth_destination`，它拒绝未授权消息。`check_recipient_address` 限制将检查本地网络的收件人地址，而 `check_recipient_maps` 将拒绝在列出本地、 relay 和虚拟收件人以及别名的收件人表中未验证的地址。`reject_unknown_recipient_domain` 限制拒绝没有 DNS 条目的收件人地址。`reject_rhsbl_recipient` 限制基于指定的 MAPS 服务拒绝域地址。
+
+您可以使用诸如 `smtpd_helo_restrictions` 等参数进一步细化限制，它要求客户端发出 HELO 命令。限制参数包括 `reject_invalid_hostname`，它检查语法错误，`reject_unknown_hostname` 用于没有 DNS 条目的主机，以及 `reject_non_fqdn_hostname` 用于名称未完全限定的主机。`strict_rfc821_envelopes` 参数将实施严格的信封协议合规性。
+
+## Sendmail
+
+Sendmail 作为服务器同时接收和发送邮件消息运行。Sendmail 监听从其他主机接收并发送到其服务的网络主机上的用户的任何邮件消息。同时，Sendmail 处理用户发往远程用户的消息，确定将它们发送到哪些主机。您可以了解更多关于 Sendmail 的信息
+
+在 www.sendmail.org 上，包括在线文档和当前软件包。Sendmail 新闻组是 comp.mail.sendmail。你也可以从 www.sendmail.com 获得商业版本。
+
+你的网络设计中的域名服务器指定了运行 Sendmail 服务器的主机。这是你的邮件主机。消息发送到该主机，其 Sendmail 服务器然后将消息发送给适当的用户及其主机。在你的域名服务器配置文件中，邮件主机条目使用 MX 条目指定。要打印待将来投递的消息邮件队列，你可以使用 `mailq`（或 `sendmail -v -q`）。这会使用打印邮件队列的指令运行 Sendmail。
+
+Sendmail 软件包包含用于管理你的 Sendmail 服务器的多个实用程序。其中包括 `mailq`，用于显示传出消息的队列；`mailstats`，显示邮件服务器使用统计；`hoststat`，提供与邮件服务器连接的远程主机的统计；以及 `praliases`，打印 `/etc/aliases` 文件中列出的邮件别名。其中一些，如 `mailq` 和 `hoststat`，只是以某些选项调用 Sendmail。其他，如 `mailstats` 和 `praliases`，是独立的程序。
+
+
+
+Sendmail 现在将所有配置和数据库文件保存在 `/etc/mail` 目录中。在这里你会找到 Sendmail 宏配置文件 `sendmail.mc`，以及多个数据库文件（见表 24-2）。许多文件在 Sendmail 8.10 发布时已更改名称。例如，帮助文件现在是 `/etc/mail/helpfile` 而不是 `/etc/sendmail.ht`。专用文件为某些功能提供支持，例如 `access`，它让你控制不同主机和网络对邮件服务器的访问。`virtusertable` 让你指定虚拟主机。这些文件都有文本和数据库版本。数据库版本以 `.db` 扩展名结尾，是 Sendmail 实际使用的文件。你将在文本版本中进行条目，然后通过生成相应的数据库版本来生效更改。数据库版本使用 `makemap` 命令配合 `hash` 选项以及文本和数据库文件的重定向操作来生成。例如，要拒绝特定主机的访问，你将在 `/etc/mail/access` 文件中为其放置适当的条目，使用任何文本文字处理器编辑文件。然后，要生成 `/etc/mail/access.db` 版本的 `access` 文件，你将切换到 `/etc/mail` 目录并使用以下命令：
+
+```
+cd /etc/mail
+makemap hash access < access
+```
+
+要重新生成所有数据库文件，只需在 `/etc/mail` 目录中使用 `make` 命令：
+
+```
+make
+```
+
+某些文件和目录用于管理收发邮件。传入邮件通常保存在 `/var/spool/mail` 目录中，而传出消息则保存在 `/var/spool/mqueue` 目录中，并为不同用户设有子目录。监控和错误消息记录在 `/var/log/maillog` 文件中。
+
+> NOTE Red Hat 现在将 Sendmail 配置文件 `sendmail.cf` 放在 `/etc/mail` 目录中，而不是像以前版本（7.3 及更早）那样放在 `/etc` 目录中。
+
+| File | Description |
+|---|---|
+| `/etc/mail/sendmail.cf` | Sendmail 配置文件。 |
+| `/etc/mail/sendmail.mc` | Sendmail M4 宏配置文件。 |
+| `/etc/aliases` | Sendmail 别名文件，用于邮件列表。 |
+| `/etc/aliases.db` | Sendmail 别名数据库文件，由 `newaliases` 命令使用别名文件生成。 |
+| `/etc/mail/access` | Sendmail access 文本文件。用于筛选或中继来自不同主机、网络或用户的消息的访问控制。用于生成 `access.db` 文件。 |
+| `/etc/mail/access.db` | Sendmail access 数据库文件。从 access 文本文件生成。 |
+| `/etc/mail/local-host-names` | Sendmail 本地主机文件，用于使用同一邮件服务器的多个主机（以前为 `sendmail.cw`）。 |
+| `/etc/mail/trusted-users` | Sendmail 受信任用户文件（以前为 `sendmail.ct`）。 |
+| `/etc/mail/error-header` | Sendmail 错误头文件（以前为 `sendmail.oE`）。 |
+| `/etc/mail/helpfile` | Sendmail 帮助文件（以前为 `sendmail.ht`）。 |
+| `/etc/mail/statistics` | Sendmail 统计文件（以前为 `sendmail.st`）。 |
+| `/etc/mail/virtusertable` | Sendmail 虚拟用户表文本文件。映射用户虚拟域地址，允许在同一系统上托管虚拟域。在此文件中添加条目，然后使用它生成 `virtusertable.db` 文件。 |
+| `/etc/mail/virtusertable.db` | Sendmail 虚拟用户表数据库，由 `virtusertable` 文件生成。 |
+| `/etc/mail/mailertable` | Sendmail 邮件路由表文本文件，用于覆盖你的域的路由。 |
+| `/etc/mail/mailertable.db` | Sendmail 邮件路由表数据库文件，由 `mailertable` 文件生成。 |
+| `/etc/mail/userdb` | Sendmail 用户数据库文件。 |
+| `/etc/mail/domaintable` | Sendmail `domaintable` 文件，将域名映射到另一个域名。 |
+| `/etc/mail/domaintable.db` | Sendmail `domaintable` 数据库文件，由 `domaintable` 文件生成。 |
+| 文件 | 描述 |
+|---|---|
+| `/var/spool/mail` | 传入邮件。 |
+| `/var/spool/mqueue` | 传出邮件。 |
+| `/var/spool/maillog` | 邮件日志文件。 |
+
+表 24-2 Sendmail 文件和目录（续）
+
+> 注意：如果您的邮件服务器为多个主机提供服务，您需要在 `/etc/mail/local-host-names` 文件中输入这些主机。
+
+## 别名与 LDAP
+
+从 Sendmail 8.10 开始，Sendmail 现在可以支持轻量目录访问协议（LDAP）。LDAP 允许使用单独的服务器来管理 Sendmail 对用户邮件地址的查询。无需在不同服务器上维护别名和 `virtusertable` 文件，Sendmail 利用 LDAP 支持，只需使用一个集中式 LDAP 服务器即可定位收件人。邮件地址在 LDAP 服务器中查找，而无需在不同服务器上搜索多个别名和 `virtusertable` 文件。LDAP 还提供用户安全认证，允许对邮件帐户进行受控访问。以下示例在 `sendmail.mc` 文件中启用 Sendmail 的 LDAP 支持：
+
+```
+FEATURE(`ldap_routing')dnl
+LDAPROUTE_DOMAIN(`mytrek.com')dnl
+```
+
+另外，Sendmail 仍然支持对发送或接收邮件使用别名。它会检查一个名为 `aliases.db` 的别名数据库文件，其中保存着别名及其关联的电子邮件地址。这通常用于管理员邮件，邮件可能会发送到系统的 `root` 用户，然后重定向到实际系统管理员的邮件地址。您还可以为主机地址设置别名，从而仅使用主机别名即可访问网络上的主机。别名条目保存在 `/etc/aliases` 文件中。该文件由一行行的别名记录组成，将别名与用户地址关联起来。您可以编辑此文件来添加新条目或修改旧条目。然后使用 `newaliases` 命令将它们存储在 `aliases.db` 文件中以供查找，该命令以更新 `aliases.db` 文件的指令运行 Sendmail。
+
+别名允许您为一个电子邮件地址或一组电子邮件地址指定不同名称。它最有用的功能之一是创建用户邮件列表。发送到别名的邮件将被发送到与该别名关联的用户或用户列表。别名条目由以冒号结尾的别名组成，后跟一个用户名或以逗号分隔的用户列表。例如，要将别名 `filmcritic` 关联到用户 `george@rabbit.mytrek.com`，您可以使用以下条目：
+
+```
+filmcritic:    george@rabbit.mytrek.com
+```
+
+要将别名 `singers` 关联到本地用户 `aleina` 和 `larisa`，您可以使用
+
+```
+singers:    aleina, larisa
+```
+
+您也可以将别名用作目标地址，在这种情况下，它们将展开为各自的用户地址。例如，`performers` 别名将通过 `filmcritic` 和 `singers` 别名展开为 `george@rabbit.mytrek.com`、`aleina` 和 `larisa` 用户。
+
+```
+performers:  filmcritic; singers
+```
+
+在 `/etc/mail/aliases` 文件中完成条目添加后，您需要使用 `newaliases` 命令生成数据库版本：
+
+```
+newaliases
+```
+
+## Sendmail 配置
+
+Sendmail 的主配置文件是位于 `/etc` 目录下的 `sendmail.cf`。该文件包含一长串邮件定义，这些定义设置常规选项、指定 MTA，并定义地址重写规则。一系列选项用于设置功能，例如邮件消息的最大大小或主机文件的名称。MTA 是 Sendmail 用来路由消息的邮件程序。重写规则会“重写”邮件地址，以便通过适当的 Internet 连接路由到其目的地（这些规则可能很复杂）。有关详细说明，请查看 Sendmail HOW-TO 和在线文档。
+
+
+
+`sendmail.cf`的定义可能复杂且令人困惑。为了简化配置过程，Sendmail 支持使用宏，您可以使用`m4`预处理器来生成`sendmail.cf`文件（这需要安装`sendmail-cf`软件包）。宏放置在`/etc/mail/sendmail.mc`文件中。在这里，您可以使用宏来指定您希望 Sendmail 具有的定义和功能，然后使用宏在`sendmail.cf`文件中生成相应的定义和重写规则。作为 Sendmail 软件包的一部分，`/usr/share/sendmail-cf`目录中提供了多个专用版本的`sendmail.mc`文件。这些文件以系统名称开头，后缀为`.mc`。在许多发行版中，已针对您的发行版定制了专用版本，并作为`/etc/mail/sendmail.mc`文件安装。
+
+配置好`sendmail.mc`文件后，您可以使用以下命令生成`sendmail.cf`文件（请务必先备份原始的`sendmail.cf`文件）。您可以重命名`sendmail.mc`文件以反映具体配置。您可以根据需要拥有任意数量的不同`.mc`文件，并使用它们来实现不同的配置。
+
+```
+m4 sendmail.mc > /etc/mail/sendmail.cf
+```
+
+然后，您需要重启 Sendmail 服务器以使配置生效：
+
+```
+service sendmail restart
+```
+
+在`sendmail.mc`文件中，您可以使用`define`命令来设置 Sendmail 变量的值，也可以使用已定义的 Sendmail 宏来设置特定的 Sendmail 功能，从而配置 Sendmail 的不同方面。例如，要将`PROCMail_PATH`变量指定为`/usr/bin/procmail`目录，您可以使用以下命令：
+
+```
+define('PROCMAIL_MAILER_PATH','/usr/bin/procmail')
+```
+
+同样地，如果有你不想定义的变量，可以使用`undef`命令将其移除：
+
+```
+undef('UUCP_RELAY')
+```
+
+要指定你的 Sendmail 服务器运行的操作系统类型，你可以使用`OSTYPE` Sendmail 宏。以下示例指定了 Linux 操作系统：
+
+```
+OSTYPE('linux')
+```
+
+`MAILER`宏指定要使用的邮件投递代理（MDAs）。你可能有不止一个。通常，你需要一个邮件投递代理，例如`procmail`，用于将邮件投递到网络上的主机。此外，Sendmail 实际上充当 MDA 来接收来自其本地网络主机的消息，然后将其发送到更大的网络。
+
+```
+MAILER(procmail)
+MAILER(smtp)
+```
+
+Sendmail 还支持大量需要显式打开的功能。你可以使用 Sendmail 的`FEATURE`宏来实现。参见表 24-3 中常用 Sendmail 功能的列表。以下示例打开了`redirect`功能，该功能用于通知发件人收件人已更改地址：
+
+```
+FEATURE(redirect)
+```
+
+## TABLE 24-3 Sendmail Features (continued)
+
+| Feature | Description |
+|---|---|
+| `use_cw_file` | 检查邮件服务器由 `/etc/mail/local-host-names` 文件提供的服务主机。 |
+| `use_ct_file` | 从 `/etc/trusted-users` 文件读取用户列表。这些是受信任的用户，可以更改其消息的发件人名称。 |
+| `redirect` | 拒绝所有发往 `"address.REDIRECT"` 的邮件，前提是在 `/etc/aliases` 文件中放置了转发地址。 |
+| `mailertable` | 使用邮件路由表文件 `/etc/mail/mailertable` 来覆盖特定域的路由。 |
+| `domaintable` | 使用域名表文件 `/etc/mail/domaintable` 将一个域名映射到另一个域名。如果更改域名则很有用。 |
+| `allmasquerade` | 导致收件人地址也伪装成来自伪装主机。 |
+| `masquerade_entire_domain` | 伪装 `MASQUERADE_AS` 中指定的域内的所有主机。 |
+| `masquerade_envelope` | 伪装信封发件人和收件人以及邮件头。 |
+| `virtusertable` | 对于虚拟主机，将虚拟地址映射到真实地址。 |
+| `nullclient` | 将 Sendmail 服务器转变为 null 客户端，它仅将邮件消息转发给中央邮件服务器进行处理。 |
+| `local_procmail` | 使用 `procmail` 作为本地邮件投递代理。 |
+| `smrsh` | 使用 Sendmail 受限 Shell（`smrsh`）进行邮件发送。 |
+| `promiscuous_relay` | 允许你中继邮件，允许从域外接收邮件并转发到域外主机。 |
+| `relay_entire_domain` | 允许域内的任何主机（并转发到 `access` 数据库中的主机）。 |
+| `relay_hosts_only` | 检查特定主机的中继权限，而不是域。 |
+| `accept_unqualified_senders` | 允许发件人电子邮件地址为用户名，而不仅仅是包含域名在内的完全限定名称。 |
+| `accept_unresolvable_domains` | 允许 Sendmail 接受无法解析的域名。对于那些在防火墙阻挡下无法访问完整 DNS 命名空间的本地网络用户很有用。默认情况下，Sendmail 要求地址中的域名可通过 DNS 解析。 |
+| `access_db` | 在 `access` 数据库中接受或拒绝来自域和主机的邮件。 |
+| `blacklist_recipients` | 阻止向某些用户发送邮件，例如永远不应接收邮件的用户——像 `nobody` 和 `host`。 |
+| `dnsbl` | 拒绝 Realtime Blackhole List 中的主机。由 MAPS（Mail Abuse Prevention System LLC）管理，旨在限制不需要的大量电子邮件的传输。 `mail-abuse.org`。 |
+| `ldap_routing` | 启用 LDAP 使用。 |
+
+此外，你可以设置某些配置选项。这些是以`conf`为前缀的变量，你可以使用`define`命令设置并为其分配值。配置选项非常多，其中大多数你无需更改。以下示例定义了`confAUTO_REBUILD`配置选项，如果需要，它将自动重建别名数据库。
+
+```
+define('confAUTO_REBUILD')
+```
+
+某些宏和宏类型需要在`sendmail.mc`文件中按照如下所示的特定顺序放置。请注意`MAILER`位于末尾，而`OSTYPE`位于开头。本地宏定义（`define`）和`FEATURE`条目跟在`OSTYPE`和`DOMAIN`条目之后。
+
+```
+VERSIONID
+OSTYPE
+DOMAIN
+define
+FEATURE
+local macro definitions
+MAILER
+LOCAL_RULE_*
+LOCAL_RULESETS
+```
+
+影响特定功能的本地宏和配置选项定义需要在`FEATURE`条目之前输入。例如，`redirect`功能使用`aliases`文件。`aliases`文件的任何本地定义需要在`redirect`功能之前输入。
+
+```
+define(`ALIAS_FILE', `/etc/aliases')
+FEATURE(redirect)
+```
+
+你需要小心在`sendmail.mc`文件中输入注释的方式。该文件被读取为宏流，忽略所有空白字符，包括换行符。不会查找特殊的注释字符。相反，你必须使用`dnl`或`divert`命令来模拟注释指示。`dnl`命令指示从该`dnl`命令之后的所有字符直到下一个换行符（包括换行符）都被忽略。如果你将`dnl`命令放在`sendmail.mc`文件中的文本行开头，它的效果就是将该行变成注释，忽略该行上的所有内容——包括其换行符。即使是空行也需要`dnl`条目来忽略换行符：
+
+```
+dnl you will have to /etc/mail/sendmail.cf by running this the m4
+dnl macro config through preprocessor:
+dnl
+```
+
+另外，你也可以使用`divert`命令。`divert`命令将忽略所有数据，直到遇到另一个`divert`命令为止：
+
+```
+divert(-1)
+This is the macro config file used to generate
+the /etc/mail/sendmail.cf file. If you modify the file regenerate
+you will have to regenerate /etc/mail/sendmail.cf by running the m4
+macro
+divert(0)
+```
+
+Sendmail 要工作，至少需要定义`OSTYPE`和`MAILERS`宏，以及任何需要的功能和选项。下面展示了一个非常简单的 Sendmail 文件。
+
+
+
+```
+mysendmail.mc
+dnl My sendmail.mc file
+OSTYPE(`linux')
+define(`PROCMail_MAILER_PATH', `/usr/bin/procmail')
+FEATURE(`redirect')
+MAILER(procmail)
+MAILER(smtp)
+```
+
+`sendmail.mc` 文件通常包含更多条目，特别是参数和功能。检查你的 Red Hat 系统上的 `/etc/mail/sendmail.mc` 文件，以查看 Sendmail 的标准默认条目。
+
+## Sendmail 伪装
+
+对于从本地主机中继邮件到 Internet 的邮件服务器，你可能希望伪装邮件的来源。在拥有自己的邮件服务器并连接到 Internet 的大型网络中，Sendmail 伪装可以使本地主机发送的消息看起来是由邮件服务器发送的。它们的主机地址将被邮件服务器的地址替换。退回的邮件随后可以发送到邮件服务器并保存在 POP 或 IMAP 服务器邮箱中，以便本地主机上的用户稍后访问。此外，服务器的虚拟用户表条目可以将邮件转发到本地主机中的对应用户。
+
+伪装通常用于用域名掩盖本地主机。任何子域也可以被伪装。这种方法可应用于 ISP 或你的网络管理员已为你的网络分配了自己的域名的情况。然后你可以将所有邮件消息伪装成来自你的域名，而不是来自特定主机或你可能拥有的任何子域。例如，如果网络的官方域名是 `mytrek.com`，那么 `mytrek.com` 网络中的所有主机，如 `rabbit.mytrek.com` 和 `turtle.mytrek.com` 的消息都可以被伪装成仅来自 `mytrek.com`。如果 `mytrek.com` 网络有一个子网络，其域名为 `mybeach.com`，来自 `mybeach.com` 的任何消息也可以被伪装成来自 `mytrek.com`。
+
+伪装通过 `MASQUERADE_AS` 命令开启。该命令以你希望伪装邮件的名称作为参数。通常使用的名称只是域名，不包括邮件主机。在以下示例中，邮件被伪装为 `simply mytrek.com`。来自 `turtle.mytrek.com` 等本地主机的邮件将看起来是由 `mytrek.com` 发送的：
+
+```
+MASQUERADE_AS(`mytrek.com')dnl
+```
+
+你还必须指定本地网络上 Sendmail 服务器应伪装的主机和域。如果你决定伪装本地网络中的所有主机，你只需设置 `masquerade_entire_domain` 功能，如下所示：
+
+```
+FEATURE(`masquerade_entire_domain')dnl
+```
+
+如果你相反想要伪装特定主机或你的域有多个子域需要伪装，你可以在 `MASQUERADE_DOMAIN` 条目中列出它们。
+
+你既可以列出特定的主机，也可以列出整个域名。例如，给定一个本地网络，其本地主机为 `turtle.mytrek.com` 和 `rabbit.mytrek.com`，你可以用 `MASQUERADE_DOMAIN` 将它们列出以进行伪装。它们被伪装成的域名在 `MASQUERADE_AS` 条目中指定。
+
+```
+MASQUERADE_DOMAIN('turtle.mytrek.com rabbit.mytrek.com')dnl
+```
+
+如果你想伪装本地网络中的所有主机，你只需列出本地网络的域名。如果你的本地网络还支持多个子域名，你也可以将它们列出以进行伪装。例如，要伪装 `mybeach.com` 域中的所有主机，你将使用以下条目：
+
+```
+MASQUERADE_DOMAIN('mytrek.com mybeach.com')dnl
+```
+
+如果你的域名或主机列表很长，或者你希望能够轻松更改应被伪装的主机，你可以将它们放在一个供 Sendmail 读取的文件中。使用 `MASQUERADE_DOMAIN_FILE` 命令指定文件：
+
+```
+MASQUERADE_DOMAIN_FILE('mydomains')dnl
+```
+
+如果你只是想伪装本地域中的所有主机，你可以使用 `masquerade_entire_domain` 功能：
+
+```
+FEATURE(masquerade_entire_domain)dnl
+```
+
+本地网络的常见配置会在 `MASQUERADE_AS` 条目和 `MASQUERADE_DOMAIN` 条目中指定域名。使用示例 `myisp.com` 作为域名，条目将如下所示：
+
+```
+MASQUERADE_AS('mytrek.com')dnl
+FEATURE(masquerade_entire_domain)dnl
+```
+
+如果你想伪装成 ISP 的邮件域名，你将在 `MASQUERADE_AS` 条目中使用 ISP 的域名，如下所示：
+
+```
+MASQUERADE_AS('myisp.com')dnl
+MASQUERADE_DOMAIN('mytrek.com')dnl
+```
+
+当从外部接收仅带有地址 `mytrek.com` 的邮件时，你的网络需要知道将其发送到哪个主机。这是被指定为 `mytrek.com` 网络邮件服务器的主机。此信息由你在 DNS 配置中的邮件交换记录提供，该记录将指定发送到 `mytrek.com` 的邮件将由邮件服务器处理——在本例中为 `turtle.mytrek.com`：
+
+```
+mytrek.com. IN MX 0 turtle.mytrek.com.
+```
+
+你还必须确保通过 `relay_based_on_MX` 功能启用了 MX 中继：
+
+```
+FEATURE(relay_based_on_MX)dnl
+```
+
+所有邮件都将看起来源自邮件服务器的主机。例如，如果你的 Sendmail 邮件服务器运行在 `turtle.mytrek.com` 上，则从名为 `rabbit.mytrek.com` 的本地主机发送的邮件看起来将是从 `turtle.mytrek.com` 发送的。
+
+你也可以伪装收件人地址，这样发送到本地主机的用户的邮件将被发送到伪装后的地址。使用 `allmasquerade` 功能启用收件人伪装：
+
+```
+FEATURE (allmasquerade)dnl
+```
+
+## 配置邮件服务器和邮件客户端
+
+Sendmail 可用作邮件服务器，处理网络上各个主机的邮件，或用作邮件客户端，管理特定主机上本地用户的邮件。在简单的网络配置中，你会让每个主机以客户端配置运行 Sendmail，而一台主机作为邮件服务器，转发网络主机的邮件。对于连接到 Internet 的本地网络，你的本地主机将以客户端配置运行 Sendmail，而你的网关将以服务器配置运行 Sendmail（尽管邮件服务器不一定需要在网关上运行）。邮件服务器将把来自本地网络主机的消息中继到 Internet。邮件服务器还可用于阻止来自外部主机的不受欢迎的访问，例如发送垃圾邮件的主机。基本的客户端或服务器 Sendmail 配置仅涉及 `/etc/mail/sendmail.mc` 文件中的几个功能。安装在你的系统上的默认 Red Hat 配置允许在单个主机上使用，管理该主机上用户之间的消息。要启用客户端和服务器使用，你需要对 `/etc/mail/sendmail.mc` 文件进行更改。
+
+## 为简单网络配置配置 Sendmail
+
+Red Hat 最初将 Sendmail 配置为仅在它运行的系统上工作，`localhost`。要使用 Sendmail 向本地网络上的其他主机发送消息，你需要在 `sendmail.mc` 和 `/etc/mail/access` 文件中更改和添加设置。简单的网络配置将让 Sendmail 在每个主机上运行，处理该主机上用户之间发送的邮件以及与其它主机用户之间的邮件。对于每个 Sendmail 服务器配置，你将对以下简单本地网络配置部分中描述的更改进行修改。
+
+对于在网络上主机之间发送的消息，你只需在每个主机上运行 Sendmail 服务器，对其 Sendmail 配置进行少量更改。你网络中的一台主机的 Sendmail 服务器可以配置为在主机之间中继消息的任务。使用前面描述的网络示例，主机 `turtle`、`rabbit` 和 `lizard` 将运行自己的 Sendmail 服务器。`turtle` 主机上的 Sendmail 服务器将配置为在所有主机之间中继消息，包括它自己。
+
+在网络上的每个主机上，编辑 `/etc/mail/sendmail.mc` 文件并进行以下更改。在 Red Hat 系统上，通过在前面放置 `dnl` 词来注释掉默认 `sendmail.mc` 文件中的 `DAEMON_OPTIONS` 行，如下所示。删除此功能将允许你通过本地网络接收消息。此条目将 Sendmail 限制为 `localhost (127.0.0.1)`：
+
+```
+dnl DAEMON_OPTIONS ( `Port=smtp,Addr=127.0.0.1, Name=MTA' )dnl
+```
+
+在要处理中继消息的主机上的 `sendmail.mc` 文件中，你还需要添加以下行：
+
+```
+FEATURE(relay_entire_domain)dnl
+```
+
+运行 `m4` 操作以安装更改后的配置，然后使用 `service` 操作重启服务器，如前所述。
+
+
+
+你现在可以跨网络从一个用户向另一个用户发送电子邮件。例如，`george@turtle.mytrek.com`现在可以向`larisa@rabbit.mytrek.com`发送邮件。本地`Sendmail`服务器将负责发送和投递邮件，无论收件人位于其主机内部还是位于其他网络主机上。
+
+## 为集中式邮件服务器配置 Sendmail
+
+另外，你也可以设置一台中央邮件服务器来处理网络上的所有邮件。各个主机上的邮件客户端可以将邮件发送到中央邮件服务器，中央邮件服务器再将其中继到更大的网络或互联网。邮件也可以在中央邮件服务器接收，客户端随后可以从那里检索。设置中央邮件服务器有多种方法。其中最简单的一种是在网关主机上运行中央邮件服务器，然后在本地主机上运行`Sendmail`的空客户端版本。从本地主机发送的任何邮件都会自动转发到中央邮件服务器。收到的邮件只能投递到中央服务器，通常投递到也在中央服务器主机上运行的`POP`或`IMAP`服务器。用户随后可以访问`POP`服务器来检索邮件。
+
+对于集中式配置，将用户视为使用网络域名作为地址而不是网络中单独的主机是有意义的。因此`rabbit.mytrek.com`上的用户`cece`将使用邮件地址`cece@mytrek.com`，而不是`cece@rabbit.mytrek.com`。用户可以与各自主机上的名称相同，并在网关主机上设置对应的用户来处理由`POP`或`IMAP`服务器管理的收件邮件。
+
+一个有效的简单邮件服务器将涉及以下几个组件：
+
+- 在网关主机上运行的中央邮件服务器
+- 每个客户端以空客户端方式运行`Sendmail`
+- 伪装所有邮件仅使用域名地址，而不是主机地址
+- 在网关主机上运行的`POP`或`IMAP`服务器来处理收件邮件
+
+## 配置具有直接 ISP 连接的工作站
+
+如果你的`Linux`系统不属于某个网络，但通过`ISP`（互联网服务提供商）直接连接到互联网，你可以简单地使用`ISP`的邮件服务器来发送和接收邮件。通常，你会有用于发件的`SMTP`邮件服务器和用于收件的`POP`服务器。然而，你也可以配置`Sendmail`与你的`ISP`接口。
+
+请确保首先注释掉`DAEMON_OPTIONS`选项，如前几节所示。
+
+通常，你的`ISP`会提供一个邮件服务器来处理其主机的邮件。要使用`ISP`邮件服务器，你可以用`SMART_HOST`选项定义它。邮件将通过`ISP`邮件服务器发送。`SMART_HOST`的格式为`type:hostname`，其中`type`是使用的邮件服务器类型，通常为`SMTP`。默认值为`relay`。将`SMART_HOST`选项定义为使用你的`ISP`发送和接收邮件：
+
+```
+define ('SMART_HOST', 'smtp:mail.my-isp.com')dnl
+```
+
+`SMART_HOST`选项用于指定一个特定的远程邮件服务器，让它处理你的网络消息的中继。它可以是`ISP`邮件服务器，也可以是更大网络中的任何邮件服务器。
+
+对于通过调制解调器拨号连接，你可以使用各种配置选项来控制连接。`confMESSAGE_TIMEOUT`选项让你控制邮件在输出队列中保留的时间，让你可以在准备拨号发送之前保留邮件。将`confDELIVERY_MODE`选项设置为`queueonly`即可在你准备好时发送邮件。
+
+## 邮件传输表
+
+邮件传输表让你可以将发往指定主机或域名的消息路由到特定的邮件服务器。你可以使用邮件传输表让发往虚拟域名的邮件路由到你网络的邮件服务器。要引用整个域名，请在域名名前加上句点。邮件被路由到的主机以使用的邮件传输方式为前缀，通常为`Sendmail`的`smtp`。以下条目将把发往`.mybeach.com`的邮件路由到邮件服务器`turtle.mytrek.com`：
+
+```
+.mybeach.com      smtp:turtle.mytrek.com
+```
+
+条目放置在`/etc/mail/mailertable`文件中。完成条目后，使用`make`命令生成`mailertable.db`数据库文件：
+
+```
+make mailertable
+```
+
+> 注意 如你在第 34 章中将看到，你可以为你的网络定义虚拟域名。这些虚拟域名由你的`DNS`服务器映射到一个或多个真实域名。然而，你可以接收具有你虚拟域名用户邮件地址的消息。在这种情况下，你需要将这些地址映射到你真实域名的用户，以便邮件可以投递到现有位置。此映射由称为`/etc/mail/virtusertable`的虚拟用户表执行。虚拟用户表让你可以将虚拟域名的邮件地址映射到真实域名的用户。
+
+## 安全
+
+为了安全，`Sendmail`让你可以筛选特定消息，以及为`Sendmail`传输提供身份验证和加密。在 8.11 版本中，`Sendmail`加入了对安全套接层（`SSL`）和简单身份验证和安全层（`SASL`）的支持。对`SSL`的支持以`Sendmail`命令`STARTTLS`表示，意为“开始传输层安全”。`SSL`为`Sendmail`操作提供身份验证、加密和完整性检查（参见第 18 章）。必须先安装`OpenSSL`才能使用`SSL`加密和身份验证方法。
+
+`SASL`由`AUTH`命令实现，被称为`SMTP AUTH`。`SASL`为邮件用户和服务器提供身份验证。它可以利用已安装的`Kerberos`服务来提供身份验证。
+
+`Sendmail`还提供了筛选来自特定域、主机、`IP`和用户地址的消息的功能。执行此类筛选的规则保存在`/etc/mail/access`文件中。你可以编辑此文件并添加自己的规则。规则由一个地址后跟要采取的操作组成。（支持的操作列在表 24-4 中。）例如，要删除来自`myannoyingad.com`域的所有消息，你将输入：
+
+```
+myannoyingad.com DISCARD
+```
+
+下一个示例拒绝来自`larisa@turtle.mycar.com`的任何消息并发送拒绝通知：
+
+```
+larisa@turtle.mycar.com REJECT
+```
+
+你也可以指定要返回的错误消息，如下所示：
+
+```
+cecelia@rabbit.mytrek.com ERROR:"Retired yesterday"
+```
+
+要向垃圾邮件发送者发送错误消息，你可以包含如下所示的消息。
+
+```
+cyberspammer.com ERROR:"550 We don't accept mail from spammers"
+```
+
+包含前面条目的`/etc/mail/access`文件如下所示：
+
+```
+myannoyingad.com DISCARD
+larisa@turtle.mycar.com REJECT
+cecelia@rabbit.mytrek.com ERROR:"Retired yesterday"
+cyberspammer.com ERROR:"550 We don't accept mail from spammers"
+```
+
+`Sendmail`实际上从位于`/etc/mail`目录中的名为`access.db`的数据库文件读取访问规则。要实现你的规则，你必须使用`access`文件重新生成
+
+## TABLE 24-4
+
+### Access Actions
+
+| Action | Description |
+|---|---|
+| OK | 接受消息，即使其他规则会拒绝（规则的例外）。 |
+| DISCARD | 完全丢弃消息。 |
+| REJECT | 拒绝消息，向发件人发送拒绝通知。 |
+| RELAY | 为指定域中继消息。 |
+| SMTP-code message | 发送给发件人的代码和消息。 |
+
+`access.db`文件。你可以使用`make`命令并以`access`作为参数来完成此操作，如下所示：
+
+```
+make access
+```
+
+然后必须重新启动`Sendmail`以读取新的`access.db`文件。
+
+`access`文件的使用在`sendmail.mc`文件中通过`access_db`功能启用：
+
+```
+FEATURE(`access_db')dnl
+```
+
+`access`文件将拒绝从所列地址收到的邮件。但是，你也可以拒绝发送给它们的任何邮件。你还可以拒绝网络上某些主机的收件邮件。你可以通过在`sendmail.mc`文件中启用`blacklist_recipients`选项来实现。此选项管理收件人，而`access`通常管理发件人。所列地址将无法接收任何邮件。此功能也用于某些永远不应接收邮件的管理用户，例如`nobody`（访客用户）或`ftp`（`FTP`用户）：
+
+```
+FEATURE(`blacklist_recipients')dnl
+```
+
+以下示例将不允许向`cyberspammer.com`（收件人）发送邮件，并且也不能接收发给`justin@lizard.mytrek.com`、`secretproject@rabbit.mytrek.com`或`mysurfboard.com`的邮件：
+
+
+
+```
+mysurfboard.com            ERROR:"Domain does not exist"
+justin@lizard.mytrek.com   "Moved to Hawaii"
+secretproject@rabbit.mytrek.com REJECT
+cyberspammer.com           REJECT
+```
+
+你的发行版`smb.conf`可能配置 Sendmail 使用`access_db`（Red Hat 即是如此）。仅允许本地主机上的用户访问。如果你的系统用作网络的邮件服务器，并且你未启用`relay_entire_domain`功能，则需要允许网络上的其他主机访问。在`access`文件中，你可以为你的网络放置一个`RELAY`规则。`RELAY`规则将允许其他主机使用你的邮件服务器向其他主机发送消息。这通常是为网关主机完成的，该主机需要将来自本地网络的消息中继到 Internet。以下示例允许从 mytrek.com 网络访问：
+
+```
+mytrek.com    RELAY
+```
+
+对于特定主机，将其条目放在`access`文件中，如下所示：
+
+```
+rabbit.mytrek.com    RELAY
+```
+
+为了进一步保护 Sendmail，你应该禁用`VRFY`的使用。该选项允许远程用户尝试验证用户地址的存在。这可用于猜测系统上的有效用户。此选项可通过`noverify`功能禁用：
+
+```
+FEATURE('noverify')dnl
+```
+
+另一个潜在的安全漏洞是`EXPN`选项，它会将邮件列表和别名扩展为其实际地址。使用`noexpn`功能将其关闭：
+
+```
+FEATURE('noexpn')dnl
+```
+
+默认情况下，Sendmail 会拒绝来自无法解析的任何域的邮件。你可以使用`accept_unresolvable_domains`功能覆盖此限制。Sendmail 也会拒绝地址不具有完全限定域名的邮件。你可以使用`accept_unqualified_senders`覆盖此功能。
+
+## POP 服务器
+
+邮局协议（POP）允许远程服务器为用户保存邮件，用户可在准备好时从中获取邮件。与直接将邮件消息传递到 Linux 系统上的用户账户的 Sendmail 和`procmail`不同，POP 协议会保存邮件，直到用户访问 POP 服务器上的账户。POP 服务器随后将收到的消息传输到用户的本地邮箱。服务器通常由 ISP 使用，以为用户提供 Internet 邮件服务。邮件不会直接发送到用户的机器，而是驻留在 POP 服务器上，直到被检索。Linux 发行版通常安装华盛顿大学的 POP 服务器。其他流行的 POP 服务器有 Qpopper、Qmail POP 服务器和 Courier POP 服务器。
+
+你可以从不同的主机访问 POP 服务器；但是，当你这样做时，所有消息都会传输到该主机。它们不会保留在 POP 服务器上（尽管你可以设置选项来保留它们）。POP 服务器只是将你的消息转发到请求的主机上。当你从某台计算机访问你的邮件时，它们会被传输到该计算机并从 POP 服务器中删除。如果你再次从不同的计算机访问你的 POP 服务器，那些之前的邮件就会消失。
+
+POP 协议提供了一组命令，可用于直接测试 POP 服务器。你可以使用`Telnet`通过端口 110 访问 POP 服务器，然后输入一系列 POP 命令来检查服务器的性能。以下示例使用`Telnet`在端口 110 上连接到 turtle.mytrek.com POP 服务器：
+
+```
+telnet turtle.mytrek.com 110
+```
+
+然后你可以使用`USER`和`PASSWORD`命令登录到一个账户。`LIST`命令将列出邮件，`RETR`命令将显示一条邮件。使用`DELE`删除邮件。使用`QUIT`命令结束会话。
+
+> 注意 当前版本的 POP 协议被称为 POP3，而 POP2 是较早的版本，在某些地方仍可能在使用。
+
+> 注意 Red Hat 附带的 IMAP 和 POP 服务器都为安全电子邮件传输提供 SSL 加密。你也可以使用`stunnel`运行 IMAP 和 POP 服务器以提供类似的安全性。`stunnel`是为`imapd`、`popd`甚至`pppd`（调制解调器连接）等守护进程提供 SSL 包装的工具。在服务的`xinetd`脚本中，你可以使用`stunnel`命令调用服务器，而不是直接运行服务器。
+
+### 华盛顿 POP 服务器
+
+Linux 发行版包含华盛顿大学的 POP 服务器（`ftp.cac.washington.edu/imap`），它是华盛顿大学`imap` RPM 包的一部分。只需安装该包，该包已作为标准安装的一部分完成安装（POP2 和 POP3 服务器均已安装）。服务器守护进程称为`ipop2d`和`ipop3d`。你的 Linux 系统随后将作为网络的 POP2 和 POP3 服务器运行。这些服务器通过`xinetd`运行。POP3 服务器使用`/etc/xinetd.d`中的`ipop3`文件。
+
+以下命令将打开服务器：
+
+```
+chkconfig ipop3 on
+```
+
+一旦你安装了 POP 服务器，你只需在它运行的主机上添加标准用户账户即可向其添加账户。你不需要为它们设置主目录。用户使用在 POP 服务器主机上设置的用户名称和密码访问其账户。例如，要为在主机 turtle.mytrek.com 上运行的 POP 服务器设置一个 POP 用户账户，你以 root 身份登录到 turtle.mytrek.com 并像为该主机正常创建用户一样创建一个新用户。要为 larisa 创建一个 POP 用户账户，只需在 turtle.mytrek.com 主机上创建一个 larisa 用户即可。
+
+POP 和 IMAP 华盛顿服务器都支持 Open SSL 身份验证和加密。POP 和 IMAP 服务器的 SSL 启用版本名称为`pop3s`和`imaps`。使用`chkconfig`将其打开或关闭。
+
+```
+chkconfig pop3s on
+```
+
+你还必须在`ssl/certs`目录下以`ipop3d.pem`和`imapd.pem`的名称安装适当的 SSL POP 和 IMAP 证书
+
+### Qpopper
+
+Qpopper 是 Berkeley POP 服务器（`popper`）的当前版本。Qpopper 由 Eudora 电子邮件软件制造商 Qualcomm 支持。Qpopper 网页为`www.eudora.com/qpopper`。你可以从`ftp.qualcomm.com/eudora/servers/unix`获取当前源代码版本。RPM 包版本位于发行版站点或包含在发行版中。
+
+一旦你安装了 Qpopper 并运行了 POP 服务器，你就可以添加用户账户。然后远程系统上的用户可以使用各种邮件客户端或 Fetchmail 访问 POP 服务器。Fetchmail，如第 13 章所述，将从用户处获取邮件 account and place it in the mailbox on the user's local host. The following example fetches mail from a POP server running on turtle.mytrek.com:
+
+```
+fetchmail -p POP3 -u chris turtle.mytrek.com
+```
+
+You can install Qpopper software on your Linux system and have it operate as a POP server for your network. It consists of both the `qpopper` daemon and the `popauth` program, which manages an authentication database with password encryption for secure user access. `popauth` creates a database file called `/etc/pop.auth`. To add a user, enter the `popauth` command with the option `-user` and the username. You are then prompted for a password with which the user can access their POP account.
+
+
+
+If you download the source code version, you use the `./configure`, `make`, and `make install` sequence to configure, compile, and install the server. For the `configure` stage, you may need to enter several options to make Qpopper compatible with your system. For example, if your system uses shadow passwords (as most do), you will need to use the `--enable-specialauth` option. The `--enable-apop` option enables the use of the APOP (Authenticated POP) extension to provide encryption that is managed by the `popauth` command:
+
+```
+./configure --enable-specialauth --enable-apop
+```
+
+Qpopper is usually run through `xinetd`. You would create a `popper` file in the `/etc/xinetd.d` directory similar to that shown here:
+
+```
+service pop-3
+{
+  socket_type = stream
+  wait        = no
+  user        = root
+  server      = /usr/bin/pop3per
+  disable     = no
+}
+```
+
+You can turn the server on or off with the `chkconfig` command:
+
+```
+chkconfig pop-3 on
+```
+
+Be sure that the `pop-3` service is listed in `/etc/services` along with its port, `110`:
+
+```
+pop-3 110/tcp
+```
+
+## IMAP
+
+The Internet Mail Access Protocol (`IMAP`) allows a remote server to hold mail for users who can then log in to access their mail. Unlike the POP servers, `IMAP` servers retain user mail messages. Users can even save their mail on the `IMAP` mail server. This has the advantage of keeping a user's mail in one centralized location accessible anywhere on the network. Users can log in to the mail server from any host on the network and read, send, and save their mail. This interactive connection requires more connect time than the POP protocol and is best suited to an Ethernet LAN where users are always connected, rather than dial-up access through a modem.
+
+Unlike POP, `IMAP` allows users to set up multiple folders on their mail server in which they can organize their mail. `IMAP` also supports the use of shared folders to which several users can access mail on a given topic.
+
+The University of Washington `IMAP` server is included with the Red Hat distributions. Other `IMAP` servers are also available such as Courier-IMAP server (`www.courier-mta.org`) and the Cyrus `IMAP` server (`asg.web.cmu.edu/cyrus`). Courier-IMAP is a small, fast `IMAP` server that provides extensive authentication support including LDAP and PAM. Cyrus `IMAP` servers feature security controls and authentication. The Washington `IMAP`, Courier-IMAP, and Cyrus `IMAP` servers all support SSL, as described earlier for the POP server. The name of the University of Washington `IMAP` server daemon is `imapd`. On Red Hat, there is a file called `imap` in the `/etc/xinetd.d` directory. You turn it on or off with the `chkconfig` command.
+
+## CHAPTER
+
+### Print Servers
+
+Although printer installation is almost automatic on most Linux distributions, it helps to understand the underlying process. Once treated as devices attached to a system directly, printers are now treated as network resources managed by print servers. In the case of a single printer attached directly to a system, the networking features become transparent and the printer appears as just one more device. On the other hand, you could easily make use of a print server's networking capability to let several systems use the same printer. You can find out more information about printing in Linux at `www.linuxprinting.org`.
+
+## CUPS and LPRng
+
+Currently, there are two printer servers available for use on Red Hat Linux, the Line Printer Next Generation (`LPRng`) and the Common Unix Printing System (`CUPS`). `LPRng` was the traditional print server for Linux and Unix systems but has since been dropped from the Red Hat distribution. It is described briefly here. Since Red Hat 9, `CUPS` is now the primary print server for Red Hat Linux and is supported by `redhat-config-printer`. However, in Red Hat 8.0 and earlier, `LPRng` is still used as the default and `LPRng` is the server supported by `redhat-config-printer`.
+
+
+
+Once you have installed your printers and configured your print server, you can print and manage your print queue using print clients. There are a variety of printer clients available for the CUPS server, `redhat-config-printer`, GNOME print manager, the CUPS configuration tool, and various line printing tools like `lpq` and `lpc`. These are described in further detail later in this chapter. The CUPS configuration tool is a Web-based configuration tool that can also manage printers and print jobs (open your browser and enter the URL `http://localhost:631`). A Web page is displayed with entries for managing jobs, managing printers, and administrative tasks. Select the Manage Jobs entry to remove or reorder jobs you have submitted. There are also a variety of printer clients available for the LPRng server, including `Kplq` and various line printing tools such as `lpq` and `lpc` that work much like their CUPS counterparts.
+
+## Printer Devices and Configuration
+
+Before you can use any printer, you first have to install it on a Linux system on your network. A local printer is installed directly on your own system. This involves creating an entry for
+
+打印机配置文件中的打印机条目定义了打印机的类型，以及它所使用的设备文件和假脱机目录等其他特性。在 CUPS 中，打印机配置文件是 `/etc/cups/printers.conf`。安装打印机相当简单：确定要用于打印机的设备文件以及它的配置项。在 Red Hat 中，您可以使用 `redhat-config-printer` 配置工具轻松设置和配置打印机。根据您使用的界面，`redhat-config-printer` 将调用 `redhat-config-printer-gui`（一个 GNOME 图形界面打印机配置工具）或 `redhat-config-printer-tui`（同一个工具，但具有基于屏幕的光标驱动界面）。
+
+> 提示：如果您找不到打印机的驱动程序，可以从 `www.linuxprinting.org` 下载。该站点维护着详尽的驱动程序列表。
+
+### 打印机设备文件
+
+Linux 在安装期间会自动为并行打印机创建三个设备名称：`lp0`、`lp1` 和 `lp2`。（大多数系统目前使用 `lp1`。）这些名称中的数字对应您 PC 上的一个并行端口。`lp0` 引用 LPT1 并行端口，`lp1` 引用 LPT2 并行端口，`lp2` 引用 LPT3。串行打印机使用串行端口，由设备文件 `ttyS0`、`ttyS1`、`ttyS2` 等引用。
+
+### 假脱机目录
+
+当您的系统打印文件时，它会使用称为假脱机目录的特殊目录。打印作业是要打印的文件。当您将文件发送到打印机时，会创建该文件的一份副本并放入为该打印机设置的假脱机目录中。假脱机目录的位置从打印机在其配置文件中的条目获取。在 Linux 上，假脱机目录位于 `/var/spool/cups` 下以打印机名称命名的目录中。例如，`myepson` 打印机的假脱机目录将位于 `/var/spool/cups/myepson`。假脱机目录包含几个用于管理打印作业的文件。有些文件使用打印机名称作为扩展名。例如，`myepson` 打印机具有 `control.myepson` 文件（提供打印机队列控制）、`active.myepson`（用于活动打印作业）以及 `log.myepson`（日志文件）。
+
+## 使用 CUPS 管理打印机
+
+通用 Unix 打印系统（CUPS）是提供打印服务的 LPRng 的替代方案。它在 GNU 公共许可证下免费提供。虽然它现在已包含在大多数发行版中，但您也可以从 `www.cups.org` 下载最新的 CUPS 源代码版本。该站点还提供了关于安装和管理打印机的详细文档。LPRng 源自旧的伯克利行式打印机守护进程（LPD），而 CUPS 基于较新的 Internet 打印协议（IPP）。Internet 打印协议旨在为 Internet 建立打印标准（更多信息，请参阅 `www.pwg.org/ipp`）。旧的基于 LPD 的打印系统主要关注行式打印机，而基于 IPP 的系统提供网络、PostScript 和 Web 支持。CUPS 的工作方式类似于 Internet 服务器，其配置设置与 Apache Web 服务器非常相似。其网络支持让客户端可以直接访问远程服务器上的打印机，而无需自己配置打印机。配置只需在打印服务器上进行维护。
+
+对于 Red Hat 使用的 RPM 版本，`cups` 启动脚本安装在 `/etc/rc.d/init.d` 目录中。您可以使用 `service` 命令和 `cups` 脚本来启动、停止和重启 CUPS。当您进行更改或安装打印机时，请务必重启 CUPS 以使更改生效。在 Red Hat 上，您可以使用以下命令：
+
+```
+service cups restart
+```
+
+## 使用 CUPS 安装打印机
+
+使用 CUPS 配置和安装打印机的最简单方法是使用 `redhat-config-printer`，如第 4 章所述。您也可以使用 CUPS 配置工具，这是一个基于 Web 浏览器的配置工具。为确保浏览器访问，请务必首先使用 Printer System Switcher 选择 CUPS，或者如果您将 `xinetd` 用于 CUPS，请使用 `chkconfig` 命令打开 `cups`。
+
+```
+chkconfig cups on
+```
+
+要在 Red Hat 上启动 Web 界面，请在 Web 浏览器中输入以下 URL。
+
+```
+http://localhost:631
+```
+
+这将打开一个管理屏幕，您可以在其中管理和添加打印机。首先会要求您输入管理员用户名（通常是 root）和密码（通常是 root 用户的密码）。
+
+您通过一系列 Web 页面在 CUPS 上安装打印机，每个页面要求不同的信息。要安装打印机，请单击“添加打印机”按钮以显示一个页面，您可以在其中输入打印机名称和位置（参见图 25-1）。位置是打印机所连接的主机。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_506_0.png)
+
+后续页面会提示你输入打印机型号和驱动程序，你可以从可用列表中选择。一旦添加了打印机，你就可以对其进行配置。点击管理页面中的“管理打印机”条目会列出已安装的打印机。然后你可以点击一台打印机来显示一个页面，让你控制该打印机。你可以停止打印机，配置其打印，修改其安装，甚至删除打印机。点击“配置打印机”按钮会显示一个页面，你可以在其中通过指定分辨率或纸张大小来配置打印机的打印方式。
+
+打印机的配置信息将存储在 `/etc/cups/printers.conf` 文件中。你可以直接查看此文件，甚至进行更改。下面是一个打印机配置条目的示例。请注意，它是使用 `redhat-config-printer` 创建的。它当前处于空闲状态，队列中没有任何内容：
+
+```
+<DefaultPrinter myepson>
+Info Created by redhat-config-printer 0.6.x
+DeviceURI parallel:/dev/lp0
+Location
+State Idle
+Accepting Yes
+JobSheets none none
+QuotaLimit 0
+PageLimit 0
+Klimit 0
+</Printer>
+```
+
+`DeviceURI` 条目指定所使用的设备，在本例中为 `lp0` 并行设备。对于远程打印机，此条目将包含 Internet 地址以及协议。例如，CUPS 服务器上的远程打印机（`ipp`）将如图所示进行指示（Windows 打印机将使用 `smb` 协议）：
+
+```
+DeviceURI ipp://mysuff.com/printers/queue1
+```
+
+
+
+> 注意 你可以使用 `lpadmin` 命令从命令行执行所有管理任务。有关更多详细信息，请参阅 CUPS 文档。
+
+## 在 CUPS 上配置远程打印机
+
+要安装连接到 Windows 系统或运行 CUPS 的另一台 Linux 系统的远程打印机，你需要使用特殊的 URL 协议指定其位置。对于 Windows 打印机，你首先需要安装、配置并运行 Samba。CUPS 使用 Samba 访问 Windows 打印机。当你在 CUPS 上安装 Windows 打印机时，你使用 `smb` URL 协议指定其位置。允许登录打印机的用户在主机名之前输入，并用 `@` 符号与之分隔。在大多数配置中，这是 `guest` 用户。名为 `myhp` 的 Windows 打印机连接到名为 `lizard` 的 Windows 主机的位置条目如图所示。其 Samba 共享引用为 `//lizard/myhp`。
+
+```
+smb://guest@lizard/myhp
+```
+
+要启用 Samba 上的 CUPS，你还必须将 `/etc/samba/smb.conf` 文件中的 `printing` 选项设置为 `cups`，如下所示：
+
+```
+printing = cups
+printcap name = cups
+```
+
+要启用 CUPS 与 Samba 协同工作，你必须将 `smbspool` 链接到 CUPS smb spool 目录：
+
+```
+ln -s /usr/bin/smbspool  /usr/cups/backend/smb
+```
+
+要访问连接到运行 LPRng 的 Linux 或 Unix 系统的打印机，请使用 `lpd` 协议指定其位置。在以下示例中，打印机 `mylaser` 连接到 Linux 主机 `rabbit.mytrek.com`：
+
+```
+lpd://rabbit.mytrek.com/mylaser
+```
+
+## CUPS 打印机类
+
+CUPS 提供了一种让你选择一组打印机来打印作业而不是只选择一台打印机的方法。这样，如果一台打印机忙碌或停机，另一台打印机可以自动被选中来执行作业。这样的打印机分组称为类。一旦你安装了打印机，你就可以将它们分组到不同的类中。例如，你可能希望将所有喷墨打印机分组到一个类中，将激光打印机分组到另一个类中，或者你可能希望将连接到特定打印机服务器的打印机分组到自己的类中。要创建类，请在管理页面上选择“类”并输入类的名称。然后你可以向其中添加打印机。
+
+## CUPS 配置
+
+CUPS 配置文件放置在 `/etc/cups` 目录中。这些文件列在表 25-1 中。`classes.conf`、`printers.conf` 和 `client.conf` 文件可以通过 Web 界面进行管理。`printers.conf` 文件包含已安装的不同打印机的配置信息。如果需要，可以手动编辑这些文件中的任何一个。
+
+| Filename | Description |
+|---|---|
+| `classes.conf` | Configurations for different local printer classes |
+| `client.conf` | Lists specific options for specified clients |
+| `cupsd.conf` | Configures the CUPS server, `cupsd` |
+| `printers.conf` | Printer configurations for available local printers |
+
+### cupsd.conf
+
+CUPS 服务器使用位于 `/etc/cups` 中的 `cupsd.conf` 文件进行配置。你必须手动编辑配置选项；服务器无法通过 Web 界面进行配置。你的 CUPS 安装会安装一个带注释的 `cupsd.conf` 文件，其中列出了每个选项，尽管大多数选项将被注释掉。注释行以 `#` 符号开头。每个选项都有详细说明。服务器配置使用 Apache Web 服务器语法，由一组指令组成。与 Apache 一样，其中几个指令可以将其他指令分组到块中。
+
+## CUPS 指令
+
+某些指令允许你对特定位置设置访问控制。这些位置可以是打印机或资源，例如管理工具或假脱机目录。位置控制通过 `Location` 指令实现。`Allow From` 和 `Deny From` 指令可以允许或拒绝来自特定主机的访问。CUPS 支持 `Basic` 和 `Digest` 两种认证形式，在 `AuthType` 指令中指定。`Basic` 认证使用用户名和密码。例如，要使用 Web 界面，系统会提示你输入 `root` 用户和 `root` 用户密码。`Digest` 认证使用存储在 CUPS 的 `/etc/cups/passwd.md5` 文件中的用户和密码信息，使用用户和密码的 MD5 版本进行认证。`AuthClass` 指令指定允许访问的类别。`System` 类别包括 `root`、`sys` 和 `system` 用户。以下示例显示了 `/admin` 资源（管理工具）的 `Location` 指令：
+
+```
+<Location /admin>
+
+AuthType Basic
+AuthClass System
+
+## Restrict access to local domain
+Order Deny,Allow
+Deny From All
+Allow From 127.0.0.1
+
+</Location>
+```
+
+## CUPS 命令行打印客户端
+
+一旦打印作业被放入打印队列，你可以使用多个打印客户端中的任何一个来管理打印机上的打印作业，例如用于 LPRng 的 Kipp、GNOME 打印管理器以及用于 CUPS 的 CUPS 打印机配置工具。你也可以使用几个命令行 CUPS 打印客户端（在 LPRng 中有相同名称的对应应用程序）。这些包括 `lpr`、`lpc`、`lpq` 和 `lprm` 命令（参见第 10 章）。打印机系统切换器可让你从一组切换到另一组。使用这些客户端，你可以打印文档、列出打印队列、对其重新排序以及移除打印作业，从而有效取消它们。对于网络连接，CUPS 为其命令提供了一个加密选项 `-E`，用于加密通过网络发送的打印作业和打印信息。表 25-2 显示了各种打印机命令。
+
+| 打印机管理 | 描述 |
+|---|---|
+| GNOME 打印管理器 | GNOME 打印队列管理工具（CUPS）。 |
+| CUPS 配置工具 | 打印、管理和配置 CUPS。 |
+| `lpr` 选项 文件列表 | 打印文件，将文件复制到打印机的假脱机目录，并将其放入打印队列依次打印。<br>- `-P` printer 在指定打印机上打印文件。 |
+| `lpq` 选项 | 显示打印队列中的打印作业。<br>- `-P` printer 打印指定打印机的队列。<br>- `-l` 打印详细列表。 |
+| `lpstat` 选项 | 显示打印机状态。 |
+| `lprm` 选项 打印作业 ID 或打印机 | 从打印队列中移除打印作业。你可以通过 `lpq` 列出的编号来识别特定的打印作业。<br>- `-P` printer 移除指定打印机的所有打印作业。 |
+| `lpc` | 管理你的打印机。在 `lpc>` 提示符下，你可以输入命令来检查打印机状态并执行其他操作。 |
+
+表 25-2：CUPS 打印客户端
+
+### lpr
+
+`lpr` 客户端提交作业，然后 `lpd` 依次接收并放入适当的打印队列。`lpr` 以文件名作为其参数。如果未指定打印机，则使用默认打印机。`-P` 选项允许你指定特定的打印机。在下一个示例中，用户首先打印文件 `preface`，然后将文件 `report` 打印到名为 `myepson` 的打印机上：
+
+```
+$ lpr preface
+$ lpr -P myepson report
+```
+
+### lpc
+
+你可以使用 `lpc` 来启用或禁用打印机、重新排序其打印队列以及重新执行配置文件。要使用 `lpc`，请在 shell 提示符下输入命令 `lpc`。然后你会看到一个 `lpc>` 提示符，可以在其中输入 `lpc` 命令来管理打印机并重新排序作业。带有打印机名称的 `status` 命令会显示打印机是否就绪、有多少打印作业等。`stop` 和 `start` 命令可以停止打印机并重新启动它。显示的打印机取决于为特定打印服务器配置的打印机。只有在切换到 CUPS 时，在 CUPS 上配置的打印机才会显示。如果切换到 LPRng，则为 LPRng 配置的打印机将显示。
+
+```
+# lpc
+lpc> status myepson
+myepson:
+printer is on device 'parallel'
+queuing is enabled
+printing is enabled
+1 entry in spool area
+```
+
+### lpq 和 lpstat
+
+你可以使用 `lpq` 和 `lprm` 命令管理打印队列。`lpq` 命令列出当前在打印队列中的打印作业。使用 `-P` 选项和打印机名称，你可以列出特定打印机的作业。如果指定用户名，你可以列出该用户的打印作业。使用 `-l` 选项时，`lpq` 会显示每个作业的详细信息。如果你想了解某个特定作业的信息，只需使用该作业的 ID 号与 `lpq` 即可。要检查打印机的状态，请使用 `lpstat`。
+
+
+
+# lpq
+
+```
+# lpq
+myepson is ready and printing
+Rank Owner Jobs File(s) Total Size
+active chris 1 report 1024
+```
+
+## lprm
+
+`lprm` 命令使你能够从队列中移除打印作业，在作业被打印前将其删除。`lprm` 命令接受与 `lpq` 相同的许多选项。要移除特定作业，请使用作业编号与 `lprm`。要移除特定打印机的所有打印作业，请使用 `-P` 选项并指定打印机名称。不带选项的 `lprm` 会移除当前正在打印的作业。以下命令移除队列中的第一个打印作业（使用 `lpq` 获取作业编号）。
+
+```
+# lprm 1
+```
+
+## CUPS Administrative Tools
+
+CUPS 提供了命令行管理工具，如 `lpadmin`、`lpoptions`、`lpinfo`、`enable`、`disable`、`accept` 和 `reject`。`enable` 和 `disable` 命令直接启动和停止打印队列，而 `accept` 和 `reject` 命令则启动和停止特定作业。`lpinfo` 提供有关打印机的信息，而 `lpoptions` 让你设置打印选项。`lpadmin` 命令让你执行诸如添加打印机和更改配置等管理任务。CUPS 管理工具列在表 25-3 中。
+
+## lpadmin
+
+你可以使用 `lpadmin` 命令设置默认打印机或为打印机配置各种选项。你可以使用 `-d` 选项指定特定打印机作为默认目标（你也可以在 `redhat-config-printer` 中执行此操作）。这里 `myepson` 被设为默认打印机：
+
+```
+lpadmin -d myepson
+```
+
+TABLE 25-3
+
+CUPS
+
+Administrative
+
+Tools
+
+| Administration Tool | Description |
+|---|---|
+| `lpadmin` | CUPS printer configuration |
+| `lpoptions` | Set printing options |
+| `enable` | Activate a printer |
+| `disable` | Stop a printer |
+| `accept` | Allows a printer to accept new jobs |
+| `reject` | Prevents a printer from accepting print jobs |
+| `lpinfo` | List CUPS devices available |
+
+`-p` 选项让你指定要设置各种选项的打印机。以下示例设置打印机描述信息：
+
+```
+lpadmin -p myepson -D Epson550
+```
+
+某些选项让你控制打印作业的每用户配额。`job-k-limit` 设置每个用户允许的作业大小，`job-page-limit` 设置作业的页数限制，而 `job-quota-period` 限制指定时间范围内作业的数量。以下命令为每个用户设置 100 页的页数限制。
+
+```
+lpadmin -p myepson -o job-page-limit=100
+```
+
+用户访问控制通过 `-u` 选项与 `allow` 或 `deny` 列表确定。允许访问的用户列在 `allow` 条目之后，被拒绝访问的用户列在 `deny` 条目中。这里授予 `chris` 访问权限，但拒绝 `aleina` 和 `larisa`。
+
+```
+lpadmin -p myepson -u allow:chris deny:aleina,larisa
+```
+
+使用 `all` 或 `none` 来允许或拒绝所有用户或无用户访问。你可以通过将 `all` 或 `none` 与特定用户访问控制结合使用来创建例外。以下示例允许所有用户访问，除了 `justin`：
+
+```
+lpadmin -p myepson -u allow:all deny:justin
+```
+
+## lpoptions
+
+`lpoptions` 命令让你设置打印选项和默认值，这些选项主要控制你的打印作业如何打印。例如，你可以为特定打印机设置使用的颜色或页面格式。所有用户的默认设置由 `root` 用户在 `/etc/cups/lpoptions` 文件中维护，每个用户都可以创建自己的配置，保存在其 `~/.lpoptions` 文件中。`-l` 选项列出打印机的当前选项，`-p` 选项指定打印机（你也可以使用 `-d` 选项设置默认打印机）。
+
+```
+lpoptions -p myepson -l
+```
+
+打印机选项使用 `-o` 选项以及选项名称和值来设置，`-o option=value`。你可以使用 `-r` 选项移除打印机选项。例如，要在纸张正反面打印，可以将 `sides` 选项设置为 `two-sided`。
+
+```
+lpoptions -p myepson -o sides=two-sided
+```
+
+要移除该选项，请使用 `-r`：
+
+```
+lpoptions -p myepson -r sides
+```
+
+要显示可用选项的列表，请查看 CUPS 软件手册中的标准打印选项，网址为 `www.cups.org`。
+
+## enable 和 disable
+
+`enable` 命令启动打印机，`disable` 命令停止它。使用 `-c` 选项，你还可以取消打印机队列上的所有作业，而使用 `-x` 选项，你可以广播一条解释关机的消息。
+
+```
+disable myepson
+```
+
+## accept 和 reject
+
+`accept` 和 `reject` 命令让你控制特定打印机的打印机队列访问权限。`reject` 命令阻止打印机接收作业，而 `accept` 则允许新的打印作业。
+
+```
+reject myepson
+```
+
+## lpinfo
+
+`lpinfo` 命令是一个方便的工具，可让你了解系统上可用的 CUPS 设备和驱动程序。使用 `-v` 选项查看设备，使用 `-m` 选项查看驱动程序。
+
+```
+lpinfo -m
+```
+
+## 行式打印机服务器：LPRng
+
+LPRng 是 Berkeley 行式打印机守护进程 `LPD` 的增强版本 `lpd` 以及相关的 `lpr` 应用程序。它具有广泛的功能，包括安全措施和访问远程打印机。许多命令与标准 Unix 系统上 `LPD` 使用的命令相同。Linux 打印机服务器程序称为 `lpd`，即行式打印机守护进程。打印机安装在 `lpd` 下运行，`lpd` 然后处理来自本地和远程源的打印作业。虽然 `lpd` 被称为行式打印机守护进程，但它旨在管理任何类型的打印机，而不仅仅是行式打印机。你应该将其视为一种通用打印服务器，能够处理激光、喷墨、PostScript 和点阵打印机。LPRng 还具有配套的 `IFHP` 过滤器包，可为 PostScript、PCL 和文本打印机等提供硬件级支持（见 `www.astart.com/lprng.html`）。
+
+`lpd` 守护进程在安装期间安装并配置在你的 Linux 系统上。`lpd` 由 `/etc/rc.d/init.d` 目录中的 `lpd` 启动脚本作为独立进程运行。你可以使用 `service` 命令在该脚本上启动、停止和重启守护进程：
+
+```
+service lpd restart
+```
+
+## LPRng 打印客户端
+
+你可以使用多种 LPRng 打印客户端来管理打印机或打印机的打印作业，例如 `Klpq` 以及几个命令行打印客户端，如 `lpr` 和 `lpq`。`Klpq` 是一个 KDE 桌面实用程序，被标记为打印作业管理工具。使用 `Klpq`，你可以列出打印机的打印作业、删除打印作业以及将打印作业移至队列顶部。你还可以禁用打印机的打印。为使打印队列列表自动更新，你可以在选项菜单中设置更新频率。
+
+## printcap 文件
+
+`/etc/printcap` 文件保存连接到系统的每个打印机的条目。`printcap` 条目保存信息，例如打印机 `spool` 目录的路径名和打印机使用的打印机端口设备名。`printcap` 条目中的第一个字段是打印机的可能名称列表。这些是你自己可以编造的名称，如果需要也可以添加其他名称。每个名称由 `|` 符号分隔。你使用这些名称在输入各种打印机命令或选项时标识打印机，例如 `-P` 选项。这些名称也用于特殊 shell 变量，例如在许多初始化脚本中使用的 `PRINTER` 变量。
+
+名称列表之后的字段为打印机设置不同的字段。字段由冒号分隔，并使用 `=` 符号赋予值。其中三个更重要的字段是 `lp`、`sd` 和 `if`。`lp` 字段设置为打印机使用的设备名。`sd` 字段设置为 `spool` 目录的路径名，而 `if` 设置为此打印机使用的特定过滤器。一些字段具有布尔值，只需列出字段名而不进行赋值，这表示值为“true”。你可以在 `printcap` 手册页中找到 `printcap` 字段的完整列表：`man printcap`。`printcap` 条目的示例如下：
+
+```
+myprinter|myepson:\n:sh:\n:ml=0:\n:mx=0:\n:sd=/var/spool/lpd/myprinter:\n:lp=/dev/lp0:\n:lpd_bounce=true:\n:if=/usr/share/printconf/mf_wrapper:
+```
+
+
+
+要安装远程（网络或远程主机连接）打印机，请在打印机的 `/etc/printcap` 文件条目中放置打印机主机和设备的远程条目。`:rm` 条目标识控制远程打印机的远程主机，而 `:rp` 条目指定远程打印机的设备名。在以下示例中，远程打印机位于 `rabbit.mytrek.com` 并称为 `lp1`：
+
+```
+:rm=rabbit.mytrek.com
+:rp=lp1
+```
+
+## 配置 lpd
+
+`LPRng` 允许你配置 `lpd` 服务器，设置全局默认值或控制打印机访问。只需管理两个配置文件，并且两者都 heavily 注释。你的发行版通常会为两者提供基本版本。提供了广泛的功能集，让你创建具有强大和复杂功能能力的服务器。
+
+## lpd.conf
+
+`LPRng` 的通用配置（包括 `lpd` 打印服务器）在 `/etc/lpd.conf` 文件中处理。在这里，你可以指定适用于所有打印机和打印管理的功能。你应该将这些功能视为默认功能，因为其中任何一项都可以在打印机的 `printcap` 条目中被覆盖。随 `LPRng` 安装的 `lpd.conf` 文件包含一份详尽的配置参数列表。这些参数全部被注释掉了，前缀为 `#` 号。每个参数前面都有一段描述该参数的注释。条目本身列出参数给出的默认值，并在条目前面加上 `default` 一词。`connect_timeout` 参数的条目如下所示：
+
+```
+# Purpose: connection timeout for remote printers
+# default connect_timeout=10 (INTEGER)
+```
+
+要创建你自己的超时条目，最好在下方添加自己的条目，如下所示。注意，前面的 `#` 和 `default` 一词在新条目中都没有了。远程打印机的连接超时现在设置为 20。这可以被打印机的 `printcap` 文件条目覆盖。
+
+```
+# Purpose: connection timeout for remote printers
+# default connect_timeout=10 (INTEGER)
+connect_timeout=20
+```
+
+参数也可以是你可以打开或关闭的标志。关闭的标志用一个附加的 `@` 符号表示。在下面的示例中，`allow_user_logging` 参数是一个允许用户请求登录信息的标志。默认情况下，它是关闭的。下面的示例将其打开：
+
+```
+# Purpose: allow users to request logging info using lpr -mhost&port
+# default allow_user_logging@ (FLAG off)
+allow_user_logging
+```
+
+## LPRng 访问控制：lpd.perms
+
+`LPRng` 提供访问控制规则，用于控制远程用户如何访问你的打印服务器，以及由此控制它所管理的打印机。这些规则放置在 `/etc/lpd.perms` 文件中，可用于拒绝向特定主机或用户提供打印服务。此类规则由一个动作和一组键（key）组成。键指定要满足的条件，如果条件满足，则执行其关联的动作。在每条规则中，你有一个动作和一个或多个键。如果有多个键，则必须满足所有条件才能执行该动作。键的一个示例是指定主机的 IP 地址。此外，你还必须指定所请求服务的种类，例如打印请求或连接请求。动作通常是 `ACCEPT` 或 `REJECT`。键作为标志或变量操作。要指定主机，你使用赋值运算符将地址赋给 `HOST` 键。对于用户，使用 `USER`；对于 IP 地址，使用 `IPIP`。服务种类由 `SERVICE` 键指定。对于打印请求，你赋的值是 `lpd` 代码 `P`。以下示例将主机指定为键，并将拒绝来自该地址的任何请求：
+
+```
+REJECT SERVICE=P HOST=192.168.0.57
+```
+
+`lpd.perms` 文件由一组规则组成，这些规则按顺序求值，直到找到匹配项。`DEFAULT` 动作规则应该是最后一条规则，通常用于接受任何请求。换句话说，任何未被前面规则匹配的请求都会被接受。通常，你会设置规则来拒绝某些请求，例如来自特定主机的请求。大多数请求不会匹配这些规则，而是会落到 `DEFAULT` 动作，即 `ACCEPT` 它们。
+
+`SERVICE` 键的值根据提交的请求类型而不同。这些值可以从远程服务器的简单连接请求到打印作业的移除。诸如 `lpr`、`lpq`、`lprm` 和 `lpc` 等打印客户端会发出不同类型的服务请求。`lpq` 发出队列信息请求，其 `SERVICE` 键值为 `Q`。`lprm` 发出移除请求，键值为 `M`。
+
+## LPRng 打印客户端
+
+`LPRng` 使用与 `CUPS` 相同的命令行打印客户端。这些包括 `lpr`、`lpc`、`lpq` 和 `lprm` 命令。请查阅每个命令的手册页以了解详细选项。某些功能（如加密）仅 `CUPS` 版本可用。
+
+## 新闻和搜索服务器
+
+新闻服务器为 Internet 用户提供 Usenet 新闻服务。它们拥有自己的 TCP/IP 协议，即网络新闻传输协议（`NNTP`）。在大多数 Linux 系统中，包括 Red Hat，InterNetNews（`INN`）新闻服务器提供新闻服务（www.isc.org）。此外，还存在提供更好 Internet 资源访问的服务器。搜索和索引服务器 `ht://Dig` 能够对 Web 和 FTP 站点进行文档搜索（www.htdig.org）。借助它，您可以索引文档并执行复杂的搜索请求。
+
+### 新闻服务器：INN
+
+InterNetNews（`INN`）新闻服务器访问 Usenet 新闻源，为您网络上的新闻客户端提供完整的新闻组及其文章。新闻组文章使用 `NNTP` 传输，支持该协议的服务器被称为 `NNTP` 服务器。`INN` 由 Rich Salz 编写，目前由 Internet 软件联盟（`ISC`）维护和支持。您可以从其网站 www.isc.org 下载当前版本。`INN` 也包含在大多数 Linux 发行版中。`INN` 在 `/usr/share/doc` 中的文档目录包含大量示例。`INN` 的主要程序是 `innd` 守护进程。
+
+### INN 配置文件
+
+各种 `INN` 配置文件可以在 `/etc/news` 中找到，包括 `inn.conf`、`storage.conf`、`readers.conf` 和 `incoming.conf`（参见表 26-1）。`inn.conf` 设置 `INN` 的选项，而 `incoming.conf` 文件保存您接收新闻源的主机。将在 `readers.conf` 文件中为远程主机放置条目以允许它们访问您的新闻服务器。实际新闻源在 `/var/spool/news` 目录中的目录中管理。在这里您会找到诸如 `article` 的目录，其中保存新闻组文章；`outgoing` 用于您的用户发布到新闻组的文章；以及 `overview`，其中保存有关文章的摘要信息。`INN` 的正确配置可能是一个复杂且耗时的过程，因此请务必查阅参考资料和在线资源，例如文档。当您更改配置时，请务必重新启动 `INN` 服务器。`/etc/rc.d/init.d` 目录中有一个 `innd` 脚本，其参数与 Web `httpd` 脚本类似。您可以使用 `start`、`restart` 和 `stop` 参数与 `innd` 脚本来启动、重新启动和停止 `INN` 服务器。
+
+**表 26-1 INN 配置文件**
+
+| 文件 | 描述 |
+|---|---|
+| `inn.conf` | 通用 INN 配置文件。 |
+| `incoming.conf` | 指定接收新闻源的主机。 |
+| `cycbuff.conf` | 配置 cnfs 存储格式中使用的缓冲区。 |
+| `storage.conf` | 定义存储类。这些由存储方法和使用它的新闻组组成。存储方法为存储格式：tradspool、timehash、timecaf 和 cnfs。额外的方法 trash 会丢弃文章。 |
+| `expire.ctl` | 设置新闻服务器上文章的过期策略。 |
+| `readers.conf` | 指定其用户可以使用新闻阅读器访问新闻服务器的主机。 |
+| `ovdb.conf` | 配置 overviews 的 ovdb 存储方法。 |
+| `newsfeeds` | 定义您的新闻服务器如何将文章馈送到其他新闻服务器。 |
+| `moderated` | 受控新闻组。 |
+| `innfeed.conf` | 配置 innfeed 的新闻源进程。 |
+| `innreport.conf` | 配置 innreport 实用程序以生成基于日志的报告。 |
+| `buffindexed.conf` | 配置 buffindexed 方法的概览缓冲区。 |
+
+> 提示：`INN` 中每个配置文件都有一个 man 手册，提供有关如何配置其功能的详细信息。
+
+#### inn.conf
+
+
+
+在许多发行版中，基本的 `inn.conf` 文件已为您设置好默认设置。您必须自行设置其中几个初始参数，例如 `domain`，其中保存服务器的域名；`pathhost`，您在其中指定新闻阅读器的名称，使其在您发布的新闻文章的 Path 头字段中显示；以及 `server`，您在其中指定新闻阅读器的 IP 或完全限定域名地址，如 `mynews.mytrek.com`。不同的 Path 选项已为您设置好，定义不同 INN 目录的位置，例如 `patharticles` 设置为 `/var/spool/news/articles` 保存您的新闻组文章，以及 `pathetc` 设置为 `/etc/news` 用于您的配置文件。
+
+### 存储格式
+
+对于像 INN 这样的大规模新闻服务器而言，存储格式是处理大量经常下载和访问的新闻文章的核心问题。INN 允许您在四种可能的存储格式中进行选择：`tradspool`、`timehash`、`timecaf` 和 `cnfs`。`tradspool` 是传统方法，其中文章根据其新闻组以简单的目录结构排列。已知这种方法访问和存储非常耗时。`timehash` 存储
+
+按接收时间组织的目录中存放文章，使删除过时的文章变得更容易。`timecal` 与 `timehash` 类似，但同一时间接收的文章被放在同一个文件中，使访问速度更快。`cnfs` 将文章存储到已设置的缓冲文件中。当缓冲文件填满时，旧文章会被新文章覆盖。这是一种极快的 方法，因为不会创建新文件。无需设置最大文章限制，但也无法控制文章保留的时间。在 `storage.conf` 文件中，存储格式被分配为不同新闻组的存储方法。
+
+## 概览
+
+INN 还支持概览。这些是文章的摘要，读者可以查看，而不必下载整篇文章来了解其内容。概览有自己的存储方法：`tradindexed`、`buffindexed` 和 `ovdb`。你在 `inn.conf` 中的 `ovmethod` 功能中指定要使用的 方法。`tradindexed` 对读者来说很快，但服务器生成起来困难。`buffindexed` 对新闻服务器很快，但对读者来说很慢。`ovdb` 使用 Berkeley DB 数据库文件，对两者都非常快，但使用更多的磁盘空间。如果你选择 `ovdb`，可以在 `ovdb.conf` 中为其设置配置参数。
+
+## INN 实现
+
+在许多发行版中，新闻用户已创建并为你的 INN 守护进程使用新闻组，并在 `/var/spool/news` 中设置新闻目录。INN 软件还安装了 cron 脚本，用于更新你的新闻服务器，删除旧文章并获取新文章。这些通常放在 `/etc/cron.daily` 目录中，尽管它们可能位于任何位置。`inn-cron-expire` 删除旧文章，`inn-cron-rnews` 检索新文章。`inn-cron-nntpsend` 将从你的系统发布的文章发送到其他新闻服务器。INN 还包含多个支持程序，用于提供维护和崩溃恢复，并对服务器性能和用法进行统计分析。`cleanfeed` 实现垃圾邮件保护，`innreport` 根据日志生成 INN 报告。INN 还具有非常强大的过滤系统，用于筛选不需要的文章。
+
+> 注意 `Leafnode` 是一个为小型网络设计的 NNTP 新闻服务器，这些网络可能与互联网的连接较慢。你可以从其网站 `www.leafnode.org` 获取 `Leafnode` 软件包以及文档。除了 `Leafnode` NNTP 服务器外，软件包还包括几个实用程序，如 `Fetchnws`、`Texpipe` 和 `Newsys`，用于发送、删除和显示新闻文章。`slrnpull` 是 `Leafnode` 的简单单用户版本，只能与 `slrn` 新闻阅读器一起使用。
+
+## Dig 服务器
+
+`Dig`，正式名称为 `ht://Dig`，是一种为小型网络或内联网设计的 Web 索引和搜索系统。`Dig` 不被视为全规模互联网搜索系统（如 `Lycos`、`Infoseek` 或 `AltaVista`）的替代品。与基于 Web 服务器的搜索引擎不同，`Dig` 可以跨越站点的多个 Web 服务器。`Dig` 在圣地亚哥州立大学开发，并在 GNU 公共许可证下免费分发。你可以在 `www.htdig.org` 获取信息、文档和软件包。
+
+## Dig 搜索
+
+`Dig` 支持简单和复杂的搜索，包括复杂的布尔和模糊搜索方法。模糊搜索支持多种搜索算法，包括精确、`soundex` 和同义词。搜索可以在文本和 HTML 文档上进行。HTML 文档可以放置关键字以实现更准确的检索，你还可以使用 HTML 模板来控制结果的显示方式。
+
+搜索可以通过身份验证要求、位置和搜索深度来限制。为了保护受限目录中的文档，`Dig` 可以被告知请求特定的用户名和密码。你还可以将搜索限制为检索特定 URL 中的文档、搜索数据库的子部分，或仅检索距离指定链接数的文件。
+
+## Dig 配置
+
+所有 `ht://Dig` 程序都使用同一个配置文件 `htdig.conf`，位于 `/etc/htdig` 目录。配置文件由属性条目组成，每个条目以属性行开头，后跟冒号后的值。每个程序只采用它需要的属性：
+
+```
+max_head_length: 10000
+```
+
+你可以指定诸如 `allow_virtual_hosts` 的属性，该属性将虚拟主机作为单独的服务器进行索引，以及 `search_algorithm`，该属性指定搜索时使用的搜索算法。
+
+## Dig 工具
+
+`Dig` 由五个程序组成：`htdig`、`htmerge`、`htfuzzy`、`htnotify` 和 `htsearch`。`htdig`、`htmerge` 和 `htfuzzy` 生成索引，而 `htsearch` 执行实际搜索。首先，`htdig` 收集有关数据库的信息，搜索域中所有 URL 连接并将网页与术语关联。`htmerge` 程序使用此信息创建可搜索数据库，将来自任何先前生成的数据库的信息合并。`htfuzzy` 创建索引以允许使用模糊算法（如 `soundex` 和同义词）进行搜索。一旦数据库创建完成，用户就可以使用调用 `htsearch` 的网页来搜索此索引。结果列在网页上。你可以在 HTML 文档中使用 META 标签输入特定的 `htdig` 关键字、将文档排除在索引之外，或提供通知信息（如电子邮件地址和到期日期）。`htnotify` 使用电子邮件和到期日期在网页过时时通知网页作者。
+
+`htsearch` 程序是一个 CGI 脚本，预计由 HTML 表单调用，它接受 GET 和 POST 两种传递数据的方法。`htsearch` 程序可以接受来自包含所需配置值的任何表单的搜索请求。值包括搜索功能，如 `config`（配置文件）、`method`（搜索方法）和 `sort`（排序标准）。对于调用 `htsearch` 的网页表单，你可以使用 `htdig` 提供的默认页面或创建自己的页面。输出使用你可以修改的模板进行格式化。`htdig` 软件中包含多个示例文件：`rundig` 是创建数据库的示例脚本，`searchform.html` 是包含用于提交 `htdig` 搜索的搜索表单的示例 HTML 文档，`header.html` 是搜索头的示例头，`footer.html` 用于搜索页脚。
+
+## 系统管理
+
+### PART
+
+- CHAPTER 27
+
+- 基础系统管理
+
+- CHAPTER 28
+
+- 管理用户
+
+- CHAPTER 29
+
+- 软件管理
+
+- CHAPTER 30
+
+- 文件系统管理
+
+- CHAPTER 31
+
+- RAID 和 LVM
+
+- CHAPTER 32
+
+- 设备和模块
+
+- CHAPTER 33
+
+- 内核管理
+
+### CHAPTER
+
+基础系统管理
+
+Linux 被设计为同时为许多用户服务，通过其资源、服务和设备的接口在用户和系统之间提供交互。用户拥有自己的 shell 来与操作系统交互，但你可能需要以不同的方式配置操作系统本身。你可能需要添加新用户、打印机和扫描仪等设备，甚至文件系统。此类操作属于系统管理的范畴。执行此类操作的人被称为系统管理员或超级用户。从这个意义上说，与 Linux 的交互有两种类型：普通用户的交互，以及执行系统管理任务的超级用户。本书中的章节涵盖了诸如更改系统运行级别、管理用户、配置打印机、添加文件系统以及编译内核等操作。你只会在很少的情况下执行其中大多数任务，例如添加新打印机或挂载文件系统。其他任务，如添加或删除用户，则需要定期执行。基础系统管理涵盖的主题包括超级用户的系统访问、选择启动的运行级别、系统配置文件以及性能监控。
+
+在 Linux 中，你可以加载不同版本的 Linux 内核以及安装在系统上的其他操作系统。选择和启动操作系统或内核的任务由引导管理实用程序管理，即大一统引导加载程序（`GRUB`）。这是一个多功能的工具，让你可以加载共享同一磁盘驱动器的操作系统，以及让你从可能安装在同一 Linux 系统上的不同 Linux 内核中进行选择。
+
+备份操作已成为管理职责的重要组成部分。Linux 系统提供了多个备份工具，包括 `Anaconda` 和传统的 `dump` 工具。`Anaconda` 提供基于服务器的备份，让网络上的不同系统可以备份到中央服务器。`dump` 工具让你可以优化备份流程，检测自上次备份以来更改的数据。
+
+### 超级用户控制：root 用户
+
+
+
+要执行系统管理操作，你必须首先拥有访问权限，例如正确的密码，使你能够以 `root` 用户身份登录，从而成为超级用户。由于超级用户有权更改系统上的几乎任何内容，因此此类密码通常是严格保密的秘密，会经常更改，并且只提供给负责管理系统的人员。凭借正确的密码，你可以以系统管理员身份登录系统并以不同的方式配置系统。你可以启动和关闭系统，以及切换到不同的操作模式，例如单用户模式。你还可以添加或删除用户，添加或删除整个文件系统，备份和恢复文件，甚至指定系统的名称和地址。
+
+要成为超级用户，你需要登录到 `root` 用户账户。这是一个专用于系统管理操作且可不受限制地访问 Linux 操作系统所有组件的特殊账户。你可以从 GUI（图形用户界面）登录屏幕或命令行登录提示符以 `root` 用户身份登录。然后你就可以访问所有管理工具。使用 GNOME 等 GUI 界面时，`root` 用户可以访问多个 Red Hat GUI 管理工具，例如 `redhat-config-packages` 用于安装软件或 `redhat-config-users` 用于管理用户。如果你从命令行界面登录，你可以运行相应的管理命令，如 `rpm` 用于安装软件包或 `useradd` 用于添加新用户。从你的 GUI 桌面，你也可以使用终端窗口运行命令行管理工具。`root` 用户的命令行界面使用特殊的提示符，即井号 `#`。在下一个示例中，用户以 `root` 用户身份登录系统并收到 `#` 提示符。
+
+```
+login: root
+password:
+#
+```
+
+### `root` 用户密码
+
+作为 `root` 用户，你可以使用 `passwd` 命令更改 `root` 登录的密码，以及系统上任何其他用户的密码。`passwd` 命令将使用可插拔认证模块（PAM）检查你的密码，如第 28 章所述，以查看你是否选择了一个容易被破解的密码。为了更轻松地从 GUI 界面更改 `root` 密码，你可以使用 `redhat-config-rootpassword` 工具。
+
+```
+# passwd root
+New password:
+Re-enter new password:
+#
+```
+
+你必须采取预防措施来保护你的 `root` 密码。任何以 `root` 用户身份获得访问权限的人都将完全控制你的系统。`passwd` 命令的在线手册提供了处理和选择密码的详细建议。例如，永远不要将密码存储在系统上的文件中，并且永远不要基于任何可访问的信息来选择密码，例如你的电话号码或出生日期。一个基本准则是以尽可能复杂的短语来设置密码，使用多个单词、数字以及大小写字母，但同时要足够容易记住，以免你不得不写下来。你可以使用以下命令访问 `passwd` 在线手册页：
+
+```
+# man passwd
+```
+
+### `root` 用户访问：`su`
+
+当你登录到普通用户账户时，你可能需要以 `root` 身份登录并成为超级用户。通常，你必须先注销用户账户，然后再登录 `root`。相反，你可以使用 `su` 命令（switch user）来登录
+
+直接以 `root` 用户身份登录，同时保持登录到你的用户账户。如果你使用类似 GNOME 的图形桌面，可以在终端窗口中输入 `su` 命令，或使用 ALT-CTRL-F1 切换到命令行界面（ALT-CTRL-F10 返回图形界面）。输入 CTRL-D 或 `exit` 命令会返回你自己的用户登录。当你以 `root` 身份登录后，可以使用 `su` 以任何用户身份登录，而无需提供密码。在下一个例子中，用户已经登录。然后 `su` 命令以 `root` 用户身份登录，使用户成为超级用户。表 27-1 显示了一些基本的超级用户命令。
+
+```
+$ pwd
+/home/chris
+$ su
+password:
+# cd
+# pwd
+/root
+# exit
+$
+```
+
+> 提示：出于安全原因，Linux 发行版不允许在 Telnet 会话中使用 `su` 访问 `root` 用户。对于支持 SSH 和 Kerberos 的系统，Red Hat 提供使用 `slogin` (SSH) 和 `rologin` (Kerberos 版本) 的安全登录访问。
+
+| 命令 | 描述 |
+|---|---|
+| `su root` | 从用户登录进入 `root` 超级用户；超级用户通过 CTRL-D 返回原始登录。 |
+| `passwd login-name` | 为登录名设置新密码。 |
+| `crontab options file-name` | 以 `file-name` 为参数，将文件中的 `crontab` 条目安装到 `crontab` 文件；这些条目是在指定时间执行的操作（参见后面的章节）：<br>`e` 编辑 `crontab` 文件<br>`l` 列出 `crontab` 文件的内容<br>`r` 删除 `crontab` 文件 |
+| `telinit runlevel` | 更改系统运行级别。 |
+| `shutdown options time` | 关闭系统。 |
+| `date` | 设置系统日期和时间。 |
+| Red Hat 日期和时间属性工具，`redhat-config-date` | 用于设置系统时间和日期的 GUI 工具（系统设置 \| 日期和时间）。 |
+| `Kcron` | KDE 图形界面 `cron` 管理工具（系统工具 \| 任务计划程序）。 |
+| `redhat-config-rootpassword` | 用于更改 `root` 用户（管理员）密码的 GUI 工具。（系统设置 \| 根密码）。 |
+| `redhat logviewer` | 用于查看 `root` 用户系统日志的 GUI 工具。（系统设置 \| 根密码）。 |
+
+表 27-1 基本系统管理工具
+
+## 系统时间和日期
+
+你可以使用 shell 的 `date` 命令或 Red Hat 的 GUI 工具 `redhat-config-date` 来设置系统时间和日期。你可能在首次安装系统时已经设置了时间和日期。之后应该不需要再次设置。不过，如果你输入的时间不正确，或者更换了时区，可以使用此实用程序来更改时间。
+
+### 使用 `redhat-config-date` 实用程序
+
+设置系统时间和日期推荐使用 Red Hat 日期和时间属性实用程序 (`redhat-config-date`)。在可以从“从这里开始”窗口访问的“系统设置”窗口中选择它。有两个面板，一个用于日期和时间，一个用于时区（参见图 27-1）。使用日历选择年、月和日期。然后使用“时间”框设置小时、分钟和秒。时区面板显示带有位置的地图。选择离你最近的一个来设置时区。
+
+Red Hat 还支持网络时间协议 (NTP)，该协议允许远程服务器设置日期和时间。NTP 可以实现系统时钟最准确的同步。它通常用于管理网络系统的日期和时间，使管理员无需手动同步时钟。日期和时间从 NTP 服务器获取。你的网络可能有自己的 NTP 服务器，也可以使用 www.ntp.org 上列出的公共 NTP 服务器之一。你还可以从 www.ntp.org 站点下载当前文档和 NTP 软件。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_527_0.png)
+
+## 使用 `date` 命令
+
+你也可以在 `root` 用户命令行上使用 `date` 命令来设置系统日期和时间。作为 `date` 的参数，你需要列出月份、日期、时间和年份（不带分隔符）。在下一个示例中，日期设置为 2003 年 4 月 6 日下午 2:59（04 表示四月，06 表示日期，1459 表示时间，03 表示年份 2003）：
+
+```
+# date 0406145903
+Sun Mar 6 02:59:27 PST 2003
+```
+
+> 注意：你也可以使用 KDE 控制中心中的“日期和时间”工具来设置时间和日期。
+
+## 调度任务：`cron`
+
+在 Linux 上，定期维护任务（如备份）的调度由 `cron` 服务管理，该服务由 `cron` 守护进程实现。守护进程是一个持续运行的服务器，它不断检查是否有要执行的特定操作。这些任务列在 `crontab` 文件中。`cron` 守护进程不断检查用户的 `crontab` 文件，查看是否到了执行这些操作的时间。任何用户都可以设置自己的 `crontab` 文件。`root` 用户可以设置 `crontab` 文件来执行系统管理操作，例如每周或每月的特定时间备份文件。
+
+### `crond` 服务
+
+`cron` 守护进程的名称是 `crond`。通常，系统启动时会自动启动它。你可以使用 `redhat-config-services` 或 `chkconfig` 来设置此功能，如第 20 章所述。以下示例使 `crond` 服务在系统每次启动时自动启动。
+
+```
+chkconfig crond on
+```
+
+你也可以手动启动和停止 `crond` 服务，在紧急维护或升级期间可能需要这样做。使用 `service` 命令和 `stop` 选项来关闭服务，使用 `start` 选项来重新运行它：
+
+```
+service crond stop
+```
+
+### `crontab` 条目
+
+
+
+crontab 条目有六个字段：前五个字段用于指定操作的时间，最后一个字段是操作本身。第一个字段指定分钟（0–59），第二个字段指定小时（0–23），第三个字段指定月份中的日期（1–31），第四个字段指定年份中的月份（1–12，或月份前缀，如 Jan 和 Sep），第五个字段指定星期几（0–6，或星期前缀，如 Wed 和 Fri），其中 0 表示星期日。在每个时间字段中，你可以指定一个范围、一组值，或使用星号表示所有值。例如，星期字段中的 1–5 表示周一至周五。在小时字段中，8、12 和 17 分别表示上午 8 点、中午 12 点和下午 5 点。月份字段中的`*`表示每个月。crontab 字段的格式如下：
+
+```
+minute hour day-month month day(s)-week task
+```
+
+以下示例在每个工作日的凌晨 2:00 备份 projects 目录：
+
+```
+0 2 * * 1-5  tar cf /home/backp /home/projects
+```
+
+使用月份和星期几的前缀再次在此列出了相同的条目：
+
+```
+0 2 * * Mon-Fri tar cf /home/backp /home/projects
+```
+
+要指定特定的月份、天、周或小时，可以单独列出它们，用逗号分隔。例如，要在星期日、星期三和星期五执行之前的任务，可以在星期几字段中使用`0,3,5`，或使用其前缀等价物`Sun,Wed,Fri`。
+
+```
+0 2 * * 0,3,5  tar cf /home/backp /home/projects
+```
+
+Cron 还支持注释。注释是以`#`符号开头的任何行。
+
+```
+# Weekly backup for Chris's projects
+0 2 * * Mon-Fri tar cf /home/backp /home/projects
+```
+
+## `cron` 环境变量
+
+cron 服务还允许您为执行的任务定义环境变量。Red Hat 为`SHELL`、`PATH`、`HOME`和`MAILTO`定义了变量。`SHELL`指定用于任务的 shell，在本例中为`bash` shell。`PATH`列出了程序和脚本可以找到的目录。此示例列出了标准目录`/usr/bin`和`/bin`，以及为系统应用程序保留的系统目录`/usr/sbin`和`/sbin`。`MAILTO`指定任务结果发送给谁。默认情况下，这些结果发送给安排它的用户，但您可以将结果发送给特定用户，例如管理员的电子邮件地址，或网络中另一系统的账户。`HOME`是任务的主目录，在本例中为顶级目录。
+
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+```
+
+## `cron.d` 目录
+
+在 heavily 使用的系统上，`/etc/crontab`文件很容易变得拥挤。也可能存在某些条目需要不同变量的情况。例如，您可能需要在不同的 shell 下运行某个任务。为了更好地组织您的 crontab 任务，您可以将 crontab 条目放在`cron.d`目录中的文件中。`cron.d`目录中的文件都包含与`/etc/crontab`格式相同的 crontab 条目。它们可以取任何名称。它们被视为添加的 crontab 文件，cron 会检查它们以运行任务。例如，Red Hat 在`cron.d`中安装了一个`sysstat`文件，其中包含 crontab 条目以运行收集系统统计信息的工具。
+
+## `crontab` 命令
+
+您使用`crontab`命令将条目安装到 crontab 文件中。为此，首先创建一个文本文件并输入您的 crontab 条目。将此文件保存为任意名称，例如`mycronfile`。然后，要安装这些条目，输入`crontab`和文本文件的名称。`crontab`命令获取文本文件的内容并在`/var/spool/cron`目录中创建一个 crontab 文件，同时添加发出命令的用户的名称。在以下示例中，root 用户将`mycronfile`的内容安装为 root 的 crontab 文件。这会创建一个名为`/var/spool/cron/root`的文件。如果名为 justin 的用户安装了 crontab 文件，它将创建一个名为`/var/spool/cron/justin`的文件。您可以使用`/etc/cron.allow`文件控制普通用户对`crontab`命令的使用。只有在此文件中列出其名称的用户才能创建自己的 crontab 文件。相反，`/etc/cron.deny`文件列出了被拒绝使用 cron 工具的用户，阻止他们安排任务。如果两个文件都不存在，则拒绝所有用户访问。如果用户不在`/etc/cron.allow`文件中，则拒绝访问。但是，如果`/etc/cron.allow`文件不存在，而`/etc/cron.deny`文件存在，则未列在`/etc/cron.deny`中的所有用户都会自动获得访问权限。
+
+```
+# crontab mycronfile
+```
+
+## `cron` 编辑
+
+切勿尝试直接编辑您的 crontab 文件。相反，使用带有`-e`选项的`crontab`命令。这会在`/var/spool/cron`目录中以标准文本编辑器（如`Vi`）打开您的 crontab 文件。`crontab`使用`EDITOR` shell 环境变量指定的默认编辑器。要为`crontab`使用不同的编辑器，请通过将编辑器的程序名称分配给`EDITOR`变量并导出该变量来更改默认编辑器。通常，编辑器变量在`/etc/profile`脚本中设置。使用`-l`选项运行`crontab`会显示您的 crontab 文件的内容，而`-r`选项会删除整个文件。使用另一个 crontab 条目文本文件调用`crontab`会覆盖您的当前 crontab 文件，用文本文件的内容替换它。
+
+## 组织计划任务
+
+您可以将管理 cron 任务组织为两个大类：可以定期运行的常见管理任务，或需要在唯一时间运行的专用任务。唯一任务可以作为`/etc/crontab`文件中的条目运行，如下一节所述。常见管理任务虽然可以从`/etc/crontab`文件运行，但最好组织到专门的 cron 目录中。在此类目录中，每个任务都放在自己的 shell 脚本中，该脚本在运行时会调用任务。例如，可能有几个管理任务都需要每周同一天运行，例如系统维护安排在星期日早上。对于这类任务，cron 提供了几个专门的目录，用于自动执行每日、每周、每月和每年的任务。每个目录都包含 cron 前缀和时间间隔后缀。`/etc/cron.daily`目录用于需要每天执行的任务，而每周任务可以放在`/etc/cron.weekly`目录中。cron 目录列在表 27-2 中。
+
+### 表 27-2 Cron 文件和目录
+
+| cron 文件和目录 | 描述 |
+|---|---|
+| `/etc/crontab` | 系统 crontab 文件，仅 root 用户可访问 |
+| `/etc/cron.d` | 包含多个 crontab 文件的目录，仅 root 用户可访问 |
+| `/etc/cron.hourly` | 每小时执行的任务目录 |
+| `/etc/cron.daily` | 每天执行的任务目录 |
+| `/etc/cron.weekly` | 每周执行的任务目录 |
+| `/etc/cron.monthly` | 每月执行的任务目录 |
+| `/etc/cron.yearly` | 每年执行的任务目录 |
+| `/etc/cron.hourly` | 每小时执行的任务目录 |
+| `/etc/cron.allow` | 允许提交 cron 任务的用户 |
+| `/etc/cron.deny` | 被拒绝访问 cron 的用户 |
+
+## 运行 cron 目录脚本
+
+每个目录都包含在同一时间运行的脚本。每个组的调度由`/etc/crontab`文件中的一个条目确定。脚本的实际执行由`/usr/bin/run-parts`执行，它运行给定目录中的所有脚本和程序。给定目录中所有任务的调度由`/etc/crontab`文件中的条目处理。Red Hat 提供了指定时间的条目，您可以根据自己的需要更改它们。默认的 Red Hat crontab 文件如下所示，其中包含在不同 cron 目录中运行脚本的时间。可以看出，大多数脚本都在大约凌晨 4 点运行，每天（4:02）、每周日（4:22）或每月第一天（4:42）。每小时的脚本在整点后一分钟运行。
+
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+# run-parts
+01 * * * * root run-parts /etc/cron.hourly
+02 4 * * * root run-parts /etc/cron.daily
+22 4 * * 0 root run-parts /etc/cron.weekly
+42 4 1 * * root run-parts /etc/cron.monthly
+```
+
+
+
+> 提示 cron 目录中的脚本按字母顺序运行。如果需要某个脚本在其他脚本之前运行，您可能需要更改其名称。一种方法是为名称添加前缀数字。例如，在 `/cron.weekly` 目录中，`anacron` 脚本命名为 `0anacron`，以便它在其他脚本之前运行。
+
+请记住，这些只是包含可执行文件的目录。实际调度由 `/etc/crontab` 文件中的条目执行。例如，如果将 `cron.weekly` `crontab` 条目中的每周字段从 0 改为 1，并将每月字段改为 1（`22 4 1 * *` 而不是 `22 4 * * 0`），则 `cron.weekly` 文件中的任务最终将按月而不是按周运行。
+
+## cron 目录名称
+
+这些目录使用的名称只是约定。对 `cron` 守护进程没有任何特殊意义。实际上，您可以创建自己的目录，将脚本放在其中，并安排 `run-parts` 在给定时间运行这些脚本。在下一个示例中，放在 `/etc/cron.mydocs` 目录中的脚本将在每周三中午 12 点运行。
+
+```
+* 12 * * 3 root run-parts /etc/cron.mydocs
+```
+
+## Anacron
+
+对于可能在 `cron` 可能会运行的时间段内正常关机的系统，您可能希望用 `anacron` 来补充 `cron`。`anacron` 仅在需要执行计划任务时才激活。例如，如果系统在周末关机，而 `cron` 作业已安排在此时运行，则作业将不会执行。但是，`anacron` 会在系统再次打开时检查需要执行的作业，然后运行它们。它仅设计用于每天或每周运行的作业。
+
+对于 `anacron` 作业，您将 `crontab` 条目放在 `/etc/anacrontab` 文件中。对于每个计划任务，您指定执行时间隔的天数（7 为每周，30 为每月）、运行的当天时间（以分钟为单位编号）、任务描述以及要执行的命令。对于备份，命令将是 `tar` 操作。您可以使用 `redhat-config-services` 打开 `anacron` 服务或使其在启动时自动启动。
+
+## 系统运行级别：telinit、initab 和 shutdown
+
+Linux 系统可以根据您想要赋予它的功能在不同的级别运行。例如，您可以在管理级别运行系统，锁定用户访问。正常完全操作只需在一定的操作能力级别运行系统即可激活，例如支持多用户访问或图形界面。这些级别（也称为状态或模式）称为运行级别，即您运行系统的支持级别。
+
+### 运行级别
+
+其他运行级别反映了你希望系统如何使用。运行级别 2 是一个部分多用户状态，允许多个用户访问，但不提供 `NFS` 或 `xinetd`（eXtended InterNET services daemon）等网络服务。此级别适用于不属于网络的系统。运行级别 3 和运行级别 5 都运行一个完全可操作的 Linux 系统，具有多用户支持和远程文件共享访问。它们在使用的界面方面有所不同。运行级别 3 启动系统时使用命令行界面（也称为文本模式界面）。运行级别 5 启动系统时使用 X 会话，运行 X Window System 服务器并调用图形登录，使用显示管理器，如 `gdm` 或 `xdm`。如果你选择在安装期间使用图形登录，运行级别 5 将是你的默认运行级别。Linux 提供了两个键盘序列，让你在登录会话期间在这两者之间切换：CTRL-ALT-F1 从图形界面（运行级别 5）切换到命令行界面（运行级别 3），CTRL-ALT-F7 从命令行界面切换到图形界面。运行级别在表 27-3 中列出。
+
+更改运行级别在特定运行级别出现问题时可能很有帮助。例如，如果你的视频卡未正确安装，那么任何尝试在运行级别 5 启动都可能会失败，因为该级别会立即启动你的图形界面。相反，你应该使用命令行界面，运行级别 3，来修复你的视频卡安装。
+
+> Tip 你可以使用单用户运行级别（1）作为恢复模式状态，允许你在不运行 DNS 等服务的启动脚本的情况下启动系统。这在你尝试启动此类服务时系统挂起时很有帮助。网络被禁用，以及任何多用户访问。你也可以在启动提示符下使用 `linux -s` 进入运行级别 1。如果你想进入单用户状态并同时运行启动脚本，可以使用特殊的 s 或 S 运行级别。
+
+| State | Description |
+| --- | --- |
+| System Runlevels (states) |  |
+| 0 | Halt (do not set the default to this level); shuts down the system completely. |
+| 1 | Administrative single-user mode; denies other users access to the system, but allows root access to the entire multiuser file system. Startup scripts are not run. (Use s or S to enter single-user mode and have startup scripts run.) |
+| 2 | Multiuser, without network services like `NFS`, `xinetd`, and `NIS` (the same as 3, but you do not have networking). |
+| 3 | Full multiuser mode with login to command-line interface; allows remote file sharing with other systems on your network. Also referred to as the text mode state. |
+| 4 | Unused. |
+| 5 | Full multiuser mode that starts up in an X session, initiating a graphical login; allows remote file sharing with other systems on your network (same as 3, but with graphical login). |
+| 6 | Reboots; shuts down and restarts the system (do not set the default to this). |
+
+TABLE 27-3 System Runlevels (States)
+
+### initab Runlevels
+
+当你的系统启动时，它使用 `/etc/inittab` 文件中 default `init` 条目指定的默认运行级别。例如，如果你的默认 `init` 运行级别是 5（图形登录），则 `/etc/inittab` 文件中的默认 `init` 条目将为
+
+```
+id:5:initdefault:
+```
+
+你可以通过编辑 `/etc/inittab` 文件并更改 `init` default 条目来更改默认运行级别。编辑 `/etc/inittab` 文件可能很危险。你应该非常小心地进行操作。作为示例，如果默认运行级别是 3（命令行），则 `/etc/inittab` 文件中默认运行级别的条目应如下所示：
+
+```
+id:3:initdefault:
+```
+
+你可以将 3 改为 5，以将默认运行级别从命令行界面（3）更改为图形登录（5）。仅更改此数字，不要更改其他内容。
+
+```
+id:5:initdefault:
+```
+
+> Tip 如果你的 `/etc/inittab` 文件损坏，你可以重新启动并在启动提示符下输入 `linux single` 启动系统，从而绕过 `inittab` 文件。然后你可以编辑该文件来修复它。
+
+### Changing Runlevels with telinit
+
+无论你从哪个运行级别启动，你都可以使用 `telinit` 命令从一个运行级别更改到另一个运行级别。如果你的默认运行级别是 3，你在运行级别 3 启动，但你可以使用 `telinit 5` 更改为运行级别 5。命令 `telinit 0` 关闭你的系统。在下一个示例中，`telinit` 命令更改为运行级别 1，即管理状态：
+
+```
+# telinit 1
+```
+
+`telinit` 实际上是 `init` 命令的符号链接（命令的另一个名称）。`init` 命令执行实际的启动操作，并在系统启动时自动调用。虽然你可以使用 `init` 更改运行级别，但最好使用 `telinit`。当作为 `telinit` 调用时，`init` 仅更改运行级别。
+
+### runlevel Command
+
+使用 `runlevel` 命令查看你当前运行的状态。它列出先前的状态，然后是当前状态。如果你没有更改状态，先前的状态将列为 N，表示没有先前的状态。这就是你启动时的状态。在下一个示例中，系统正在状态 3 运行，没有先前的状态更改。
+
+```
+# runlevel
+N 3
+```
+
+### Shutdown
+
+虽然你可以使用 `telinit` 命令和 0 状态关闭系统，但你也可以使用 `shutdown` 命令。`shutdown` 命令有一个时间参数
+
+
+
+that gives users on the system a warning before you power down. You can specify an exact time to shut down, or a period of minutes from the current time. The exact time is specified by `hh:mm` for the hour and minutes. The period of time is indicated by a `+` and the number of minutes. The `shutdown` command takes several options with which you can specify how you want your system shut down. The `-h` option, which stands for halt, simply shuts down the system, whereas the `-r` option shuts down the system and then reboots it. In the next example, the system is shut down after ten minutes.
+
+```
+# shutdown -h +10
+```
+
+To shut down the system immediately, you can use `+0` or the word `now`. The following example shuts down the system immediately, and then reboots.
+
+```
+# shutdown -r now
+```
+
+With the `shutdown` command, you can include a warning message to be sent to all users currently logged in, giving them time to finish what they are doing before you shut them down.
+
+```
+# shutdown -h +5 "System needs a rest"
+```
+
+If you do not specify either the `-h` or the `-r` options, the `shutdown` command shuts down the multiuser mode and shifts you to an administrative single-user mode. In effect, your system state changes from `3` (multiuser state) to `1` (administrative single-user state). Only the `root` user is active, allowing the `root` user to perform any necessary system administrative operations with which other users might interfere.
+
+Tip You can also shut down your system from the GNOME or KDE desktops.
+
+The `shutdown` options are listed in Table 27-4.
+
+| Command | Description |
+|---|---|
+| `shutdown [-rkhcnft] time [warning-message]` | Shuts the system down after the specified time period, issuing warnings to users; you can specify a warning message of your own after the time argument; if neither `-h` nor `-r` is specified to shut down the system, the system sets to the administrative mode, runlevel state 1. |
+| Argument |  |
+| Time | Has two possible formats: it can be an absolute time in the format `hh:mm`, with `hh` as the hour (one or two digits) and `mm` as the minute (in two digits); it can also be in the format `+m`, with `m` as the number of minutes to wait; the word `now` is an alias for `+0`. |
+| Command | Description |
+|---|---|
+| Option |  |
+| `-t sec` | Tells `init` to wait `sec` seconds between sending processes the warning and the kill signals, before changing to another runlevel. |
+| `-k` | Doesn't actually shut down; only sends the warning messages to everybody. |
+| `-r` | Reboots after shutdown, runlevel state 6. |
+| `-h` | Halts after shutdown, runlevel state 0. |
+| `-n` | Doesn't call `init` to do the shutdown; you do it yourself. |
+| `-f` | Skips file system checking (`fsck`) on reboot |
+| `-c` | Cancels an already running shutdown; no time argument. |
+
+## Managing Services
+
+As noted previously for the `crond` service, you can select certain services to run and the runlevel at which to run them. Most services are servers like a Web server or proxy server. Other services provide security, such as SSH or Kerberos. You can decide which services to use with the `chkconfig`, `service`, or `redhat-config-services` tools. These are described here briefly, and in more detail in Chapter 20.
+
+### chkconfig
+
+To configure a service to start up automatically, you can use the `redhat-config-services` tool available on the desktop or the `chkconfig` tool, which is run on a command line. `redhat-config-services` will display a list of available services, letting you choose the ones you want to start and deselect. The `chkconfig` command uses the `on` and `off` options to select and deselect services for startup (see Chapter 20 for more details).
+
+```
+chkconfig httpd on
+```
+
+### service Command
+
+To start and stop services manually, you can user either `redhat-config-services` or the `service` command. With the `service` command, you list the service with the `stop` argument to stop it, the `start` argument to start it, and the `restart` argument to restart it.
+
+```
+service httpd start
+```
+
+
+
+### `redhat-config-services`
+
+Most administration tools provide interfaces displaying a simple list of services from which you can select the ones you want to start up. On the `redhat-config-services` tool, the main panel lists different daemons and servers that you can have start by just clicking a check box.
+
+# Red Hat 管理工具
+
+在 Red Hat 上，大多数管理任务都可以通过一套由 Red Hat 开发和支持的独立专用管理工具来处理，例如用于用户管理和显示配置的工具。其中许多是基于 GUI 的，可以在任何 X Window System 环境中运行，例如 GNOME 或 KDE。要访问基于 GUI 的 Red Hat 工具，您需要以 root 用户身份登录到 GNOME 桌面并打开“开始使用”窗口或选择主菜单。系统管理工具列在“系统设置”文件夹中，并在主菜单中列出的“系统设置”菜单中。在这里您会找到设置时间和日期、管理用户、配置打印机以及更新软件的工具。用户和组允许您创建和编辑用户。打印允许您安装和重新配置打印机。所有工具都提供非常直观的 GUI 界面，易于使用。在“系统设置”文件夹和菜单中，工具由简单的描述性术语标识，而其实际名称通常以 `redhat-config` 开头。例如，打印机配置工具列为 Printing，但其实际名称为 `redhat-config-printer`。您可以通过在终端窗口中输入其名称来单独调用任何工具。表 27-5 提供了 Red Hat 管理工具的完整列表。
+
+## 系统目录
+
+您的 Linux 文件系统被组织成用于不同系统功能的目录，其文件（请参阅表 27-6）。对于基本系统管理，您应该熟悉存放应用程序的系统程序目录、存放大多数配置文件 的系统配置目录（`/etc`）以及保存系统日志的系统日志目录（`/var/log`），记录您系统上的活动。其他系统目录在各自的章节中介绍，其中许多在第 30 章中讨论。
+
+| Red Hat Administration Tool | Description |
+
+|---|---|
+
+| System Settings | Red Hat window and menu for accessing administrative tools |
+
+| `redhat-config-users` | User and Group configuration tool |
+
+| `redhat-config-printer` | Printer configuration tool |
+
+| `redhat-config-xfree86` | Red Hat display configuration tool (video card and monitor) |
+
+| `redhat-config-packages` | Software management |
+
+| `redhat-config-rootpassword` | Changes the root user password |
+
+| `redhat-config-keyboard` | Changes the keyboard configuration |
+
+| `redhat-config-date` | Changes system time and date |
+
+| `redhat-config-mouse` | Configures your mouse |
+
+| `redhat-config-language` | Selects a language to use |
+
+| `redhat-config-soundcard` | Configures your sound card |
+
+TABLE 27-5 Red Hat Configuration Tools
+
+| Directories | Description |
+
+|---|---|
+
+| `/bin` | System-related programs |
+
+| `/sbin` | System programs for specialized tasks |
+
+| `/lib` | System libraries |
+
+| `/etc` | Configuration files for system and network services and applications |
+
+| `/home` | The location of user home directories and server data directories, such as Web and FTP site files |
+
+| `/mnt` | The location where CD-ROM and floppy disk files systems are mounted (Chapter 30) |
+
+| `/var` | The location of system directories whose files continually change, such as logs, printer spool files, and lock files (Chapter 30) |
+
+| `/usr` | User-related programs and files; includes several key subdirectories, such as `/usr/bin`, `/usr/X11`, and `/usr/doc` |
+
+| `/usr/bin` | Programs for users |
+
+| `/dev` | Device files (Chapter 32) |
+
+| `/usr/X11` | X Window System configuration files |
+
+| `/usr/share` | Shared files |
+
+| `/usr/share/doc` | Documentation for applications |
+
+| `/tmp` | Directory for system temporary files |
+
+TABLE 27-6 System Directories
+
+## 程序目录
+
+名称中带有“bin”的目录用于存放程序。`/bin` 目录包含基本用户程序，例如 `login`、`shell`（`BASH`、`TC SH` 和 `ZSH`）以及文件命令（`cp`、`mv`、`rm`、`ln` 等）。`/sbin` 目录包含用于文件系统管理（`fsck`、`fdisk`、`mkfs`）等任务以及系统操作（如 `shutdown` 和 `startup`，`init`）的专用系统程序。`/usr/bin` 目录包含为用户任务设计的程序文件。`/usr/sbin` 目录包含用户相关的系统操作，例如 `useradd` 用于添加新用户。`/lib` 目录包含系统使用的所有库，包括主要的 Linux 库 `libc`，以及诸如 `modules` 等子目录，其中存放所有当前内核模块。
+
+## 配置目录和文件
+
+当您配置系统中的不同元素，如用户、应用程序、服务器或网络连接时，您会使用保存在某些系统目录中的配置文件。在 Red Hat 上，配置文件放置在 `/etc` 目录中，更具体的设备和服务配置文件位于 `/etc/sysconfig` 目录中。
+
+## 配置文件：`/etc`
+
+`/etc` 目录存放系统、网络、服务器和应用程序的配置文件。在这里你可以找到列出文件系统的 `fstab` 文件、包含系统上主机 IP 地址的 `hosts` 文件，以及 GRUB 启动管理器支持的启动系统的 `grub.conf`。该目录包含各种子目录，例如 `/apache` 用于 Apache Web 服务器的配置文件，以及 `/X11` 用于 X Window 系统和窗口管理器配置文件。你可以通过直接编辑其配置文件来配置许多应用程序和服务，但最好使用相应的管理工具，例如 Red Hat 提供的工具。表 27-7 列出了在 `/etc` 目录中常见的几个配置文件。
+
+## `/etc/sysconfig`
+
+在 Red Hat 系统上，配置和启动信息也保存在 `/etc/sysconfig` 目录中。在这里你会找到包含用于配置键盘和鼠标等设备的系统变量定义的 `<|message|>`。这些条目在安装期间配置设备时为你定义。你还会找到网络定义以及用于启动和停止网络连接的脚本。
+
+键盘文件 `/etc/sysconfig/keyboard` 的示例如下所示。
+
+```
+KEYBOARDTYPE="pc"
+KEYTABLE="us"
+```
+
+| 文件 | 描述 |
+
+|---|---|
+
+| `/etc/inittab` | 设置默认状态，以及终端连接 |
+
+| `/etc/passwd` | 包含用户密码和登录配置 |
+
+| `/etc/shadow` | 包含用户加密密码 |
+
+| `/etc/group` | 包含每个配置的组列表 |
+
+| `/etc/fstab` | 启动系统时自动挂载文件系统 |
+
+| `/etc/grub.conf` | GRUB 启动管理器的 GRUB 配置文件 |
+
+| `/etc/modules.conf` | 系统中要自动加载的模块 |
+
+
+
+| `/etc/printcap` | 包含每台打印机及其规格的列表 |
+
+| `/etc/termcap` | 包含可连接到系统的终端的终端类型规格列表 |
+
+| `/etc/skel` | 目录，存放初始化文件（如 `.bash_profile`）的版本，这些文件会被复制到新用户的主目录 |
+
+| `/etc/services` | 系统上运行的服务及其使用的端口 |
+
+| `/etc/profile` | 用户的默认 shell 配置文件 |
+
+| `/etc/shells` | 系统上安装的用户可用的 shell |
+
+| `/etc/motd` | 系统管理员的每日消息 |
+
+其中几个文件是由 Red Hat 管理工具生成的，例如 `redhat-config-mouse`、`redhat-config-keyboard` 或 `redhat-config-network`。表 27-8 列出了几个常用的工具以及它们控制的 `sysconfig` 文件。例如，`redhat-config-mouse` 为鼠标设备名称、类型和某些功能生成配置变量，并将其放置在 `/etc/sysconfig/mouse` 文件中，如下所示：
+
+```
+FULLNAME="Generic - 3 Button Mouse (PS/2)"
+MOUSETYPE="PS/2"
+XMOUSETYPE="PS/2"
+XEMU3="no"
+DEVICE=/dev/mouse
+```
+
+其他文件如 `hwconf`，列出所有硬件设备，定义配置变量，例如其类别（视频、CD-ROM、硬盘）、使用的总线（PCI、IDE）、设备名称（如 `hdd` 或 `s0`）、使用的驱动程序以及设备的描述。CD-ROM 条目如下所示：
+
+```
+class: CDROM
+bus: IDE
+detached: 0
+device: hdd
+driver: ignore
+desc: "TOSHIBA DVD-ROM SD-M1402"
+```
+
+包含几个目录，例如 `network-scripts`，其中列出了网络连接的几个启动脚本——例如 `ifup-ppp`，它启动 PPP 连接。一些管理工具使用多个 `sysconfig` 文件。`redhat-config-network` 将其网络配置信息如主机名和网关放在 `/etc/sysconfig/network` 文件中。特定的以太网设备配置将包括你的
+
+| 工具 | 配置文件 | 描述 |
+
+|---|---|---|
+
+| `authconfig-gtk` | `/etc/sysconfig/authconfig`<br>`/etc/sysconfig/network` | 身份验证选项，例如启用 NIS、影子密码、Kerberos 和 LDAP。 |
+
+| `redhat-config-securitylevel` | `/etc/sysconfig/iptables` | 选择防火墙保护级别：高、中和无。 |
+
+| `redhat-config-keyboard` | `/etc/sysconfig/keyboard` | 选择键盘类型。 |
+
+| `redhat-config-mouse` | `/etc/sysconfig/mouse` | 选择鼠标类型。 |
+
+| `redhat-config-network` | `/etc/sysconfig/network`<br>`/etc/sysconfig/network-scripts/ifcfg-ethN` | 设置你的网络设置。 |
+
+| `redhat-config-date` | `/etc/sysconfig/clock` | 设置时间和日期。 |
+
+| `redhat-logviewer` | `/etc/sysconfig/redhat-logviewer` | Red Hat 日志查看器，查看和搜索系统日志。 |
+
+表 27-8 与对应的 Red Hat 系统管理工具的 Sysconfig 文件
+
+IP 地址和网络掩码放置在 `/etc/sysconfig/network-scripts` 目录中的相应以太网设备配置文件中。例如，用于 `eth0` 以太网设备的 IP 地址和网络掩码可以在 `/etc/sysconfig/network-scripts/ifcfg-eth0` 中找到。本地主机设置在 `/etc/sysconfig/network-scripts/ifcfg-lo` 中。
+
+> Tip 一些管理工具，如 `authconfig-gtk`，会进一步为所选服务配置配置文件。`authconfig-gtk` 工具会配置 `/etc/sysconfig/authconfig` 以及用于 Kerberos 身份验证的 `/etc/krb5.conf`、用于 NIS 支持的 `/etc/yp.conf` 和用于 LDAP 身份验证的 `/etc/openldap/ldap.conf`。
+
+## System Logs: `/var/log` and `syslogd`
+
+各种系统日志记录了在系统上执行的任务，存储在 `/var/log` 目录中。在这里你可以找到邮件、新闻以及所有其他系统操作的日志，例如 Web 服务器日志。`/var/log/messages` 文件是所有未被其他日志覆盖的系统任务的日志。这通常包括启动任务，例如加载驱动程序和挂载文件系统。如果启动时某张卡的驱动程序加载失败，你可以在这里找到其错误消息。登录也会记录在此文件中，显示谁尝试登录哪个账户。`/var/log/maillog` 文件记录邮件消息传输和新闻传输。
+
+### `redhat-logviewer`
+
+你可以使用 Red Hat 日志查看器 `redhat-logviewer`（系统工具 | 系统日志）来管理和查看日志。Red Hat 日志查看器在左侧窗格中显示所有当前系统日志的列表（参见图 27-2）。点击一个日志会在右侧窗格中显示该日志的内容。使用 `Filter` 框输入你想要查找的模式，然后点击 `Filter` 按钮执行匹配。`Reset` 会恢复完整列表。在 `Preferences` 对话框中，`Log Files` 面板让你选择日志文件的不同位置。`Alerts` 面板让你创建警报词。任何包含警报词的条目旁边都会显示一个警报图标。配置设置，例如日志文件位置和警报词，都保存在 `/etc/sysconfig/redhat-logviewer` 文件中。
+
+### `syslogd` and `syslog.conf`
+
+`syslogd` 守护进程管理系统中所有的日志，并与网络上其他系统的日志操作进行协调。`syslogd` 的配置信息保存在 `/etc/syslog.conf` 文件中，其中包含系统日志文件的名称和位置。在这里你可以找到 `/var/log/messages` 和 `/var/log/maillog` 等条目。每当你对 `syslog.conf` 文件进行更改时，你需要使用以下命令重启 `syslogd` 守护进程（或使用 `redhat-config-services`，服务器设置 | 服务）：
+
+```
+service syslog restart
+```
+
+### `syslog.conf` Entries
+
+`syslog.conf` 中的一个条目由两个字段组成：选择器和操作。选择器是要记录的服务类型，例如 `mail` 或 `news`，操作是消息要放置的位置。操作通常是一个日志文件，但也可以是远程主机或传递给另一个程序的管道。
+
+**FIGURE 27-2 Red Hat Log Viewer**
+
+服务类型被称为 `facility`。`syslogd` 使用多个术语来指定某些服务类型（参见表 27-9）。`facility` 可以通过优先级进一步限定。优先级指定 `facility` 生成的消息类型。`syslogd` 使用多个指定术语来表示不同的优先级。选择器由 `facility` 和优先级构成，两者用句点分隔。例如，要保存邮件系统生成的错误消息，你使用由 `mail` `facility` 和 `err` 优先级组成的选择器，如下所示：
+
+```
+mail.err
+```
+
+要将这些消息保存到 `/var/log/maillog` 文件，你指定该文件作为操作，从而得到以下条目：
+
+```
+mail.err /var/log/maillog
+```
+
+`syslogd` 还支持使用 `*` 作为匹配字符，以匹配选择器中的所有 `facility` 或优先级。`cron.*` 将匹配所有 `cron` 消息，无论优先级如何。`*.err` 将匹配所有 `facility` 的错误消息，而 `*.*` 将匹配所有消息。以下示例将所有邮件消息保存到 `/var/log/maillog` 文件，并将所有严重消息保存到 `/var/log/mycritical` 文件：
+
+```
+mail.* /var/log/maillog
+*.crit /var/log/mycritical
+```
+
+## Priorities
+
+
+
+当你为一个设施指定优先级时，所有具有更高优先级的消息也会被包含在内。因此 `err` 优先级也包括 `crit`、`alert` 和 `emerg` 优先级。如果你只想选择特定优先级的消息，你可以用 `=` 运算符限定优先级。例如，`mail.=err` 将只选择错误消息，而不包括 `crit`、`alert` 和 `emerg` 消息。你也可以用 `!` 运算符限制优先级。这将消除具有指定优先级及更高优先级的消息。例如，`mail.!crit` 将排除 `crit` 消息，以及更高优先级的 `alert` 和 `emerg` 消息。要专门排除整个设施的所有消息，你使用 `none` 优先级。`mail.none` 排除所有邮件消息。这通常在你在同一条目中定义多个扇区时使用。
+
+你可以通过用逗号分隔来在给定的扇区中列出多个优先级或设施。你也可以通过用分号分隔在同一条目中拥有多个扇区。第一个示例将所有具有 `info` 优先级的消息保存到 `/var/log/messages` 文件中，排除所有 `mail` 和身份验证消息（`authpriv`）。第二个示例将 `uucp` 和 `news` 设施的所有 `crit` 消息及更高优先级消息保存到 `/var/log/spooler` 文件：
+
+```
+*.info;mail.none;news.none;authpriv.none /var/log/messages
+uucp,news.crit /var/log/spooler
+```
+
+## Actions and Users
+
+在 `action` 字段中，你可以指定文件、远程系统、用户或管道。文件 `action` 条目必须始终以 `/` 开头，并指定其完整路径名，例如 `/var/log/messages`。要将消息记录到远程主机，你只需指定以 `@` 符号为前缀的主机名。以下示例将 `rabbit.trek.com` 上的所有内核消息保存：
+
+```
+kern.* @rabbit.trek.com
+```
+
+要向用户发送消息，你列出他们的登录名。以下示例将向用户 chris 和 aleina 的控制台发送 critical 新闻消息：
+
+```
+news.=crit chris,aleina
+```
+
+你也可以将消息输出到命名管道（FIFO）。`action` 字段的管道条目以 `|` 开头。以下示例将内核调试消息通过管道传输到命名管道 `/usr/adm/debug`：
+
+```
+kern.=debug |/usr/adm/debug
+```
+
+| Facilities | Description |
+|---|---|
+| `auth-priv` | 安全/授权消息（私有） |
+| `cron` | 时钟守护进程（`cron` 和 `at`）消息 |
+| `daemon` | 其他系统守护进程消息 |
+| `kern` | 内核消息 |
+| `lpr` | 行式打印机子系统消息 |
+| `mail` | 邮件子系统消息 |
+| `mark` | 仅内部使用 |
+| `news` | Usenet 新闻子系统消息 |
+| `syslog` | `Syslog` 内部消息 |
+| `user` | 通用用户级消息 |
+| `uucp` | UUCP 子系统消息 |
+| `local0 through local7` | 保留供本地使用 |
+
+| Priorities | Description |
+|---|---|
+| `debug` | 7, 调试消息，优先级最低 |
+| `info` | 6, 信息性消息 |
+| `notice` | 5, 通知，正常但重要的条件 |
+| `warning` | 4, 警告 |
+| `err` | 3, 错误消息 |
+| `crit` | 2, 严重条件 |
+| `alert` | 1, 警报，必须立即采取行动 |
+| `emerg` | 0, 紧急消息，系统无法使用，优先级最高 |
+
+| Operators | Description |
+|---|---|
+| `*` | 匹配扇区中的所有设施或优先级 |
+| `=` | 限制为指定的优先级 |
+| `!` | 排除指定优先级及更高优先级 |
+| `/` | 保存消息的文件 |
+| `@` | 发送消息的主机 |
+| `|` | 发送消息的 FIFO 管道 |
+
+## `/etc/syslog.conf` Example
+
+Red Hat 系统的默认 `/etc/syslog.conf` 文件如下所示。消息被记录到 `/var/log` 目录中的各个文件中。
+
+```
+/etc/syslog.conf
+# Log all kernel messages to the console.
+ kern.*                                            /dev/console
+# Log anything (except mail) of level info or higher.
+# Don't log private authentication messages!
+*.info;mail.none;news.none;authpriv.none;cron.none   /var/log/messages
+# The authpriv file has restricted access.
+authpriv.*                                         /var/log/secure
+# Log all the mail messages in one place.
+
+mail.*							/var/log/maillog
+
+# Log cron stuff.
+
+cron.*							/var/log/cron
+
+# Everybody gets emergency messages
+
+*.emerg							*
+
+# Save mail and news errors of level err and higher in a special file.
+
+uucp,news.crit				/var/log/spooler
+
+# Save boot messages also to boot.log
+
+local7.*						/var/log/boot.log
+
+# INN
+
+news.=crit					/var/log/news/news.crit
+
+news.=err					/var/log/news/news.err
+
+news.notice				/var/log/news/news.notice
+```
+
+## Performance Analysis Tools and Processes
+
+Linux 将你在系统上执行的每个任务都视为一个进程，并分配一个编号和名称。你可以检查这些进程甚至停止它们。Red Hat 提供了多个用于检查进程以及系统性能的工具。易于监控由多个 GUI 工具提供，例如 Red Hat 的 Procman 系统监视器。
+
+### `ps` Command
+
+从命令行，你可以使用 `ps` 命令列出进程。使用 `-aux` 选项，可以列出所有进程。将输出通过管道传递给带有模式的 `grep` 命令，可以搜索特定进程。管道将前一个命令的输出作为后一个命令的输入。以下命令列出所有 X Window System 进程：
+
+```
+ps -aux | grep 'X'
+```
+
+系统上的一系列实用程序提供了有关进程的详细信息，以及 CPU 和磁盘使用等其他系统信息（参见表 27-10）。尽管这些工具设计用于在 shell 命令行上使用，以文本行形式显示输出，但其中许多现在都有 KDE 和 GNOME 版本，提供 GUI 界面用于显示结果和管理进程。
+
+| Performance Tool | Description |
+|---|---|
+| `vmstat` | Performance of system components |
+| `top` | Listing of most CPU intensive processes |
+| `free` | Listing of free RAM memory |
+| `sar` | System activity information |
+| `iostat` | Disk usage |
+| Procman System Monitor | Red Hat system monitor for processes and usage monitoring (System Monitor on System Tools menu). |
+| KDE Task Manager and Performance Monitor | KDE system monitor for processes and usage monitoring |
+
+## `vmstat`, `free`, `top`, `iostat`, `Xload`, and `sar`
+
+`vmstat` 命令输出详细的列表，指示不同系统组件的性能，包括 CPU、内存、I/O 和交换操作。报告以一行形式发出，包含不同组件的字段。如果提供时间段作为参数，它将按指定的间隔重复——通常为几秒。`top` 命令提供系统上最占用 CPU 的进程列表，显示哪些进程使用最多资源。列表是实时的，每隔几秒更新一次。提供了用于更改进程状态的命令，例如其优先级。
+
+
+
+`free`命令列出系统上空闲的 RAM 内存量，显示已使用多少和空闲多少，以及用于缓冲区和交换内存的部分。`Xload`是一个 X Window System 工具，显示负载、CPU 和内存。`iostat`显示你的磁盘使用情况，而`sar`显示系统活动信息。
+
+## Procman System Manager
+
+当前版本的 Red Hat 提供了 Procman System Manager 用于显示系统信息和管理系统进程，可从 System Tools | System Monitor 访问。有两个面板，一个用于进程，一个用于系统信息。System Monitor 面板显示 CPU、内存和交换内存使用情况的图表（参见图 27-3）。你的磁盘设备也列出，显示已使用的磁盘空间量和剩余空闲量。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_546_0.png)
+
+Process Listing 面板列出你的进程，让你排序或搜索进程。你可以使用字段按钮按名称、进程 ID、用户、内存，甚至使用的 CPU 时间百分比进行排序。View 弹出菜单让你选择所有进程、仅自己的进程或活动进程。你可以轻松停止任何进程，只需选择它然后点击 End Process 按钮。右键单击项目会显示你可以对进程执行的操作，例如停止或隐藏它。Memory Maps 显示，可从 View 菜单中选择，显示有关虚拟内存、inode 和标志的信息。
+
+## GNOME System Manager (GTop)
+
+使用 GNOME System Manager (`GTop`)，你可以按字段对进程进行排序，只需点击进程列表顶部字段的按钮即可。如果右键单击条目，弹出菜单会显示你可以对该条目执行的操作。系统统计摘要图表显示在窗口顶部，显示 CPU 负载、内存使用和磁盘使用。你可以添加更多图表或更改其显示特性，例如使用的颜色。`GTop`窗口显示三个带标签的面板，用于显示进程、内存使用和文件系统使用的详细报告。你可以添加更多，显示自定义报告，例如仅用户进程。进程列表可以进一步细化，以显示用户、系统或所有进程。要配置 `GTop`，选择 Settings | Preferences 以显示一个菜单，其中包含用于指定不同统计信息的更新频率、确定要显示的摘要以及要显示的进程字段的标签面板。你可以在 Utilities 菜单中找到 GNOME System Manager。
+
+## KDE Process Manager (kpm)
+
+K Desktop 提供了 KDE Process Manager (`kpm`) 用于查看和管理你的进程。你可以按字段对进程进行排序，只需点击进程列表顶部字段的按钮即可。如果选择一个进程，你可以然后选择对其执行多个不同操作，例如结束它（杀死进程）或挂起它（使其休眠）。右键单击进程条目会显示一个弹出菜单，其中包含你可以采取的不同操作。你可以通过选择仅查看自己的进程、系统进程或所有进程来进一步细化进程列表。
+
+## KDE Task Manager and Performance Monitor (KSysguard)
+
+Red Hat 还提供了 KDE Task Manager and Performance Monitor, `KSysguard`，可从 Extras System Tools 菜单作为 KDE System Guard 访问。该工具允许你监控你自己的系统以及远程系统的性能。`KSysguard`可以为各种参数提供简单值或详细表格。System Load 面板提供有关 CPU 和内存使用情况的图形信息，Process Table 以树格式列出当前进程以显示依赖关系。你可以使用工作表设计自己的监控面板，显示你想要显示的不同类型的值以及你想要以何种形式显示它们，例如条形图或数字仪表。Sensor Browser 窗格是传感器信息的可扩展树，例如 CPU System Load 或 Memory's Used Memory。每个你连接的主机，包括你自己的 localhost，都有一个顶级条目。要设计自己的监视器，创建一个工作表并将传感器拖放到其上。
+
+# Grand Unified Bootloader (GRUB)
+
+Grand Unified Bootloader (GRUB) 是一种多启动引导加载程序，其运行方式与 LILO 类似。在许多发行版中，它现在是默认的引导加载程序。GRUB 与各种操作系统具有广泛的兼容性。用户可以在系统启动时从显示的菜单界面中选择要运行的操作系统。使用方向键移动到条目并按 ENTER。输入 e 可编辑命令，让你更改内核参数或指定不同的内核。`c`命令会将你置于命令行界面，类似于 LILO。只要你的系统 BIOS 支持非常大的驱动器，GRUB 就可以从驱动器上的任何位置启动。Linux 和 Unix 操作系统被称为多启动操作系统，并在启动时接收传递给它们的 arguments。在这里你可以指定功能，例如用于 IDE CD-R/RW 驱动器的内核模块（参见第 30 章）。使用`info grub`列出详细文档或查看`grub`手册页。你也可以使用 Boot Configuration 工具来选择默认系统或内核以及设置超时限制（可从 System Settings 菜单中的 Boot Loader 访问。）
+
+GRUB 配置保存在 `/etc/grub.conf` 文件中。你只需创建条目，GRUB 在重新启动时就会自动读取它们。你可以设置多个选项，例如超时时间和要使用的背景图像。你可以通过为其创建以 term title 开头的 title 条目来指定要启动的系统。然后你必须指定操作系统内核或程序的位置，即哪个硬盘以及该硬盘上的哪个分区。此信息在 `root` 选项后用括号列出。编号从 0 开始，而不是 1，并且硬盘以 `hd` 前缀表示，无论它们是 IDE 还是 SCSI 硬盘。因此 `root (hd0, 2)` 引用第一个硬盘（`hda`）和该硬盘上的第三个分区（`hd3`）。对于 Linux 系统，你还必须使用 `kernel` 选项来指示要运行的内核程序，使用完整路径名以及内核可能需要的任何选项。RAM 磁盘由 `initrd` 选项指示。
+
+```
+title Red Hat Linux (2.4.21-20)
+root (hd0,2)
+kernel /boot/vmlinuz-2.4.21-20 ro root=/dev/hda3
+initrd /boot/initrd-2.4.21-20.img
+```
+
+对于 Windows 等其他操作系统，你将使用 `rootnoverify` 选项来指定 Windows 的安装位置。此选项指示 GRUB 不要尝试挂载该分区。使用 `makeactive` 和 `chainloader+1` 选项允许 GRUB 访问它。`chainloader` 选项告诉 GRUB 为该操作系统使用另一个引导程序。数字表示引导程序位于分区上的扇区——例如，`+1` 表示第一个扇区。
+
+```
+title Windows XP
+rootnoverify (hd0,0)
+makeactive
+chainloader +1
+```
+
+Windows 系统都希望从第一块磁盘的第一个分区启动。如果要在不同分区上安装多个 Windows 版本或将 Windows 安装在第一个分区以外的分区上，这就会成为问题。GRUB 让你通过隐藏其他分区，然后取消隐藏你想要的分区，使其看起来像第一个分区来解决这个问题。在此示例中，第一个分区被隐藏，第二个被取消隐藏。这假设第一块硬盘（`hd0,1`）上的第二个分区上有 Windows 系统。现在第一个分区被隐藏，第二个分区看起来像第一个分区。
+
+```
+hide (hd0,0)
+unhide (hd0,1)
+rootnoverify (hd0,1)
+```
+
+下面是一个包含 Linux 和 Windows 条目的示例 `grub.conf` 文件。请注意，内核参数在 `kernel` 选项中作为内核的参数列出。
+
+```
+/etc/grub.conf
+grub.conf generated by anaconda
+#
+#boot=/dev/hda
+default=0
+timeout=30
+splashimage=(hd0,2)/boot/grub/splash.xpm.gz
+title Red Hat Linux (2.4.7-10)
+    root (hd0,2)
+    kernel /boot/vmlinuz-2.4.7-10 ro root=/dev/hda3 hdc=ide-scsi
+    initrd /boot/initrd-2.4.7-10.img
+title Windows XP
+    rootnoverify (hd0,0)
+    makeactive
+    chainloader +1
+```
+
+> NOTE 旧版本的 Red Hat 提供旧的 Linux Loader (LILO) 作为其引导管理器。它执行与 GRUB 相同的任务。你可以使用像 Boot Manager (`LILO-config`) 这样的管理工具修改你的 LILO 配置，也可以通过直接编辑 `/etc/lilo.conf` 配置文件来修改。你也可以使用 KDE Kilo2 工具配置 LILO。
+
+## Backups
+
+
+
+你可以使用 `tar` 等系统归档工具备份和恢复系统，后续再恢复归档。对于备份，`tar` 通常与磁带设备一起使用。要自动安排备份，你可以使用 `cron` 实用程序安排适当的 `tar` 命令。
+
+## Amanda
+
+要备份连接到网络的主机，你可以使用 Advanced Maryland Automatic Network Disk Archiver (Amanda) 来归档主机。Amanda 使用 `tar` 工具将所有主机备份到作为备份服务器运行的单个主机。备份数据由每个主机发送到作为 Amanda 服务器运行的主机，在那里它们被写入到磁带等备份介质。有了 Amanda 服务器，所有主机的备份操作都集中在一个服务器中，而不是每个主机都必须执行自己的备份。任何需要恢复数据的主机只需从 Amanda 服务器请求它，指定文件系统、日期和文件名。Amanda 拥有对应于常见备份任务的自己的命令，以 `am` 开头，例如 `amdump`、`amrestore` 和 `amrecover`。配置文件放在 `/etc/amanda`，日志和数据库文件放在 `/var/adm/amanda`。
+
+## 使用 `dump` 和 `restore` 进行备份
+
+你可以使用 `dump` 和 `restore` 实用程序备份和恢复系统。`dump` 可以备份整个系统或执行增量备份，仅保存自上次备份以来发生变化的文件。`dump` 支持多种用于管理备份操作的选项，例如指定存储介质的大小和长度（参见表 27-11）。
+
+## `dump` 级别
+
+`dump` 使用 `dump` 级别来确定你希望系统备份的程度。`dump` 级别为 0 将完整复制文件系统。其余 `dump` 级别执行增量备份，仅备份自上次较低级别备份以来创建或修改的文件和目录。`dump` 级别 1 将仅备份自上次级别 0 备份以来发生变化的文件。`dump` 级别 2 则仅备份自上次级别 1 备份以来发生变化的文件（如果没有级别 1，则为 0），依此类推，直到 `dump` 级别 9。你可以在 `dump` 级别 0 进行初始完整备份以备份整个系统，然后在某些后续日期运行增量备份，只需备份自完整备份以来的更改即可。
+
+使用 `dump` 级别，你可以为文件系统制定某些备份策略。必须记住，增量备份是在自上次较低级别备份的更改上运行的。例如，如果上次备份为 6，下次备份为 8，则级别 8 将备份自级别 6 备份以来的所有内容。备份的顺序很重要。如果有三个备份，级别分别为 3、然后是 6，然后是 5，则级别 5 备份将采用自级别 3 备份以来的所有内容，而不会停在级别 6。在这种情况下，级别 3 是级别 5 的下一个较低级别备份。这可能导致一些复杂的增量备份策略。例如，如果你希望每个后续增量备份都包含自前一个增量备份以来的所有更改，你可以按降序 `dump` 级别运行备份。给定备份序列为 7、6 和 5，以 0 作为初始完整备份，6 将包含对 7 的所有更改，因为其下一个较低级别是 0。然后 5 将包含 7 和 6 的所有更改，也因为其下一个较低级别是 0，从而包含自级别 0 完整备份以来的所有更改。实现此目的更简单的方法是使增量级别全部相同。给定初始级别为 0，然后两个备份均为级别 1，最后一个级别 1 将包含自级别 0 备份以来的所有更改，因为级别 0 是下一个较低级别——而不是之前的级别 1 备份。
+
+## 记录备份
+
+备份记录在 `/etc/dumpdates` 文件中。该文件将列出所有之前的备份，指定执行备份的文件系统、执行日期以及使用的 `dump` 级别。你可以使用此信息从指定的备份中恢复文件。请记住，`/etc/fstab` 文件也记录了 `dump` 级别以及每个文件系统的推荐备份频率。使用 `-W` 选项，`dump` 将分析 `/etc/dumpdates` 和 `/etc/fstab` 文件以确定需要备份哪些文件系统。带 `-w` 选项的 `dump` 命令仅使用 `/etc/fstab` 来报告准备备份的文件系统。
+
+| 选项 | 描述 |
+| --- | --- |
+| `-0 到 -9` | 指定 `dump` 级别。`dump` 级别 0 为完整备份，复制整个文件系统（另见 `-a` 选项）。大于 0 的 `dump` 级别数字执行增量备份，复制自上次较低级别备份以来文件系统中所有新文件或修改过的文件。默认级别为 9。 |
+| `-B records` | 让你指定卷中的块数，覆盖 `dump` 正常用于多卷转储的末尾介质检测或长度和密度计算。 |
+| `-a` | 让 `dump` 绕过任何磁带长度计算并写入，直到检测到末尾介质指示。推荐用于大多数现代磁带驱动器，也是默认值。 |
+| `-b blocksize` | 让你指定每个 `dump` 记录的千字节数。使用此选项，你可以创建更大的块，加快备份速度。 |
+| `-d density` | 指定磁带的密度，单位为每英寸位数（默认值为 1,600 BPI）。 |
+| `-h level` | 标记为用户 `nodump` 标志的文件在达到或高于此指定级别时将不会被备份。默认值为 1，这将不会在增量备份中备份标记的文件。 |
+| `-f file/device` | 将文件系统备份到指定的文件或设备。这可以是文件或磁带驱动器。你可以指定多个以逗号分隔的文件名。可以以主机名、主机名:文件 的形式引用远程设备或文件。 |
+| `-k` | 使用 Kerberos 身份验证与远程磁带服务器通信。 |
+| `-M file/device` | 实现多卷备份，其中写入的文件被视为前缀，后缀为从 001 开始的编号序列，用于每个后续文件，`file001`、`file002` 等。当备份文件需要大于 Linux ext3 2GB 文件大小限制时很有用。 |
+| `-n` | 如果备份需要操作员注意，则通知操作员。 |
+| `-s feet` | 指定磁带的长度，单位为英尺。当达到长度时，`dump` 将提示插入新磁带。 |
+| `-S` | 估算执行备份所需的空间量。 |
+| `-u` | 在 `/etc/dumpdates` 文件中写入成功更新的条目。 |
+| `-W` | 检测并显示需要备份的文件系统。此信息取自 `/etc/dumpdates` 和 `/etc/fstab` 文件。 |
+| `-w` | 检测并显示需要备份的文件系统，仅使用 `/etc/fstab` 中的信息。 |
+
+## `dump` 操作
+
+`dump` 命令以 `dump` 级别、其存储备份的设备以及正在备份的文件系统的设备名称作为参数。如果存储介质（如磁带）太小而无法容纳备份，`dump` 将暂停并让你插入另一个。`dump` 支持多卷备份。`u` 选项将记录 the backup in the `/etc/dumpdates` file. 在下面的示例中，对 `/dev/hda3` 硬盘分区上的文件系统执行一次完整的备份（`dump` 级别 0）。备份存储在磁带设备 `/dev/tape` 上。
+
+```
+dump -0u -f /dev/tape /dev/hda5
+```
+
+**注意** 你可以使用 `mt` 命令来控制你的磁带设备。`mt` 有用于倒带、擦除和定位磁带的选项。`rmt` 命令控制远程磁带设备。
+
+存储设备可以是另一个硬盘分区，但通常是磁带设备。在你安装系统时，系统很可能检测到该设备并设置了 `/dev/tape` 作为指向它的链接（就像它对你的 CD-ROM 所做的那样）。如果未设置链接，你必须自己创建它或直接使用设备名称。磁带设备可能具有不同的设备名称，具体取决于型号或接口。SCSI 磁带设备以 `st` 为前缀，后面加上特定设备的编号。`st0` 是第一个 SCSI 磁带设备。要在 `dump` 命令中使用它，只需指定其名称即可。
+
+```
+dump -0u -f /dev/st0 /dev/hda5
+```
+
+如果你需要备份到网络上另一台系统上的设备，你必须指定该系统的主机名和其设备的名称。主机名在设备名称之前输入，并以冒号分隔。在下面的示例中，用户将文件系统 `/dev/hda5` 备份到 `rabbit.mytrek.com` 系统上的名为 `/dev/st0` 的 SCSI 磁带设备：
+
+```
+dump -0u -f rabbit.mytrek.com:/dev/st0 /dev/hda5
+```
+
+`dump` 命令一次只处理一个文件系统。如果你的系统有多个文件系统，你需要为每个文件系统分别发出 `dump` 命令。
+
+**提示** 你可以使用系统 `cron` 实用程序按指定时间安排使用 `dump` 进行备份。
+
+## 恢复备份
+
+你使用 `restore` 命令来恢复整个文件系统或仅检索特定文件。`restore` 将从备份归档中提取文件或目录并将其复制到当前工作目录。运行 `restore` 时，请确保你位于要恢复文件的目录中。`restore` 也会根据需要生成任何子目录。`restore` 有多个用于管理恢复操作的选项（请参阅表 27-12）。
+
+要恢复单个文件和目录，你使用 `-i` 选项以交互模式运行 `restore`。这将生成一个包含磁带上所有目录和文件的 shell，让你选择要恢复的文件。完成后，`restore` 将仅从备份中检索你选择的文件。此 shell 具有自己的命令集，可用于选择和提取文件和目录（请参阅表 27-13）。以下命令将生成一个交互式界面，列出 `/dev/tape` 设备上磁带中备份的所有目录和文件：
+
+```
+restore -ivf /dev/tape
+```
+
+| 选项 | 描述 |
+| --- | --- |
+| `-c` | 让你通过比较文件系统上的文件与备份中的文件来检查备份。 |
+
+
+
+| `-I` | 恢复备份中特定文件和目录的交互模式。会生成一个 shell 界面，用户可以在其中使用命令指定要恢复的文件和目录（请参阅表 27-13）。 |
+| `-R` | 指示 `restore` 请求多卷备份的一部分磁带，以继续恢复操作。当多卷恢复操作被中断时很有帮助。 |
+| `-r` | 恢复文件系统。确保已挂载新格式化的分区，并且你已更改到其顶层目录。 |
+| `-t` | 列出备份的内容或其中的指定文件。 |
+| `-x` | 从备份中提取指定的文件或目录。目录连同其所有子目录一起恢复。如果未指定文件或目录，则恢复整个文件系统。 |
+| `-f file/device` | 从指定的文件或设备恢复备份。指定远程设备的 hostname。 |
+| `-k` | 对远程设备使用 Kerberos 身份验证。 |
+| `-h` | 仅提取指定的目录，而不提取其子目录。 |
+| `-M file/device` | 从多卷备份中恢复，其中文件被视为前缀，后缀为编号序列，`file001`；`file002`。 |
+| `-N` | 显示文件和目录的名称；不提取它们。 |
+| `-T directory` | 指定用于存储临时文件的目录。默认值是 `/tmp`。 |
+| `-v` | 详细模式，其中 `restore` 操作的每个文件及其文件类型都会显示。 |
+| `-y` | 默认情况下，如果发生错误，例如坏块，`restore` 会查询操作员是否继续。此选项会抑制该查询，允许 `restore` 自动继续。 |
+
+### 表 27-12 restore 选项
+
+此命令将生成一个包含备份整个目录结构的 shell。你会得到一个 shell 提示符，可以使用 `cd` 命令移动到不同目录，并使用 `ls` 命令列出文件和子目录。你使用 `add` 命令标记文件或目录以便提取。如果你后来决定不提取它，可以使用 `delete` 命令将其从标记列表中删除。选择完所有项目后，输入 `extract` 命令将其从备份归档中检索。要退出 `restore` shell，输入 `quit`。`help` 命令将列出 `restore` shell 命令。
+
+如果你需要恢复整个文件系统，你将使用带 `-r` 选项的 `restore`。你可以将文件系统恢复到任何空白格式化的足够大小的硬盘分区，
+
+| 命令 | 描述 |
+|---|---|
+| `add [arg]` | 将文件或目录添加到要提取的文件列表中。被标记的文件在用 `ls` 列出时，其名称前会显示一个 *。被标记目录的所有子目录也会被提取。 |
+| `cd arg` | 更改当前工作目录。 |
+| `delete [arg]` | 从提取列表中删除文件或目录。被删除目录的所有子目录也将被移除。 |
+| `extract` | 提取提取列表中的文件和目录。 |
+| `help` | 显示可用命令列表。 |
+| `ls [arg]` | 列出当前工作目录或指定目录的内容。 |
+| `pwd` | 显示当前工作目录的完整路径名。 |
+| `quit` | 退出 `restore` 交互模式 shell。`quit` 命令不会执行任何提取，即使提取列表中仍有项目。 |
+| `setmodes` | 为提取列表中的所有文件和目录设置所有者、模式和时间。用于清理中断的 `restore`。 |
+| `verbose` | 在详细模式下，每个文件在被提取时都会被列出。此外，`ls` 命令会列出文件和目录的 inode 编号。 |
+
+## 表 27-13 restore 交互模式 Shell 命令
+
+包括文件系统的原始分区。如果可能的话，将文件系统恢复到另一个分区并检查结果可能是明智的。
+
+恢复整个文件系统涉及设置一个格式化的分区，将其挂载到系统上，然后切换到其顶级目录以运行 `restore` 命令。首先你应该使用 `mkfs` 格式化你要恢复文件系统的分区，然后将其挂载到系统上。然后你使用 `restore` 命令并带上 `-r` 选项和 `-f` 选项来指定保存文件系统备份的设备。在下面的示例中，用户格式化了 `/dev/hda5` 分区，然后在该分区上从 `/dev/tape` 设备上的磁带中恢复文件系统备份。
+
+```
+mkfs /dev/hda5
+mount /dev/hda5 /mystuff
+cd /mystuff
+restore -rf /dev/tape
+```
+
+要从网络上另一台系统上的备份设备恢复，你必须指定该系统的主机名和其设备名。主机名在设备名前输入，并用冒号分隔。在下面的示例中，用户从 `rabbit.mytrek.com` 系统上名为 `/dev/tape` 的磁带设备恢复文件系统：
+
+```
+restore -rf rabbit.mytrek.com:/dev/tape
+```
+
+## 章节
+
+## 管理用户
+
+作为系统管理员，你必须管理系统的用户。你可以添加或删除用户，也可以添加和删除组，并且可以修改用户和组的访问权限和权限。你还可以访问系统初始化文件，用于配置所有用户 shell。你还可以控制在用户账户首次创建时复制到用户账户的默认初始化文件。你可以通过配置这些文件来决定新用户账户应如何初始配置。
+
+> 提示 每个文件都由一个可以控制其访问权限的用户拥有。系统文件由 `root` 用户拥有，仅 `root` 可访问。像 FTP 这样的服务是此规则的例外。虽然可由 `root` 访问，但服务的 files 由其自己的特殊用户拥有。例如，FTP 文件由 `ftp` 用户拥有。这使用户能够访问服务的文件，而无需 `root` 用户访问权限。
+
+## 用户配置文件
+
+任何用于管理用户的实用程序，例如 Red Hat 用户管理器，都使用某些默认文件，即配置文件，以及目录来设置新账户。一组路径名用于定位这些默认文件或指示在何处创建某些用户目录。例如，`/etc/skel` 保存新用户的初始化文件。新用户的主目录在 `/home` 目录中创建。表 28-1 列出了这些路径名。
+
+> 提示 你可以使用 `w` 或 `who` 命令找出当前登录的用户。`w` 命令显示每个连接用户的详细信息，例如他们从何处登录、已空闲多久以及登录的日期和时间。`who` 命令提供的信息较少。
+
+## 表 28-1
+
+用户配置文件路径
+
+| 目录和文件 | 描述 |
+|---|---|
+| `/home` | 用户自己的主目录位置。 |
+| `/etc/skel` | 保存登录 shell 的默认初始化文件，如 `.bash_profile`、`.bashrc` 和 `.bash_logout`。包含许多用户设置目录和文件，如 KDE 的 `.kde` 和 GNOME 的 Desktop。 |
+| `/etc/shells` | 保存登录 shell，如 BASH 或 TCSH。 |
+| `/etc/passwd` | 保存用户的密码。 |
+| `/etc/group` | 保存用户所属的组。 |
+| `/etc/shadow` | 加密密码文件。 |
+| `/etc/gshadow` | 用于组的加密密码文件。 |
+| `/etc/login.defs` | 用户的默认登录定义。 |
+
+## 密码文件
+
+用户通过提供正确的登录名和密码来获得账户访问权限。系统在密码文件中维护密码，以及用户名和 ID 等登录信息。`passwd` 命令等工具允许用户通过修改这些文件来更改密码。`/etc/passwd` 是传统上保存用户密码的文件，尽管是加密形式。然而，所有用户都可以读取 `/etc/passwd` 文件，这将允许用户访问加密密码。为了更好的安全性，密码条目保存在 `/etc/shadow` 文件中，该文件仅限 `root` 用户访问。
+
+## /etc/passwd
+
+当你添加一个用户时，会在 `/etc/passwd` 文件中为该用户创建一个条目，通常称为密码文件。每个条目占一行，由冒号分隔的多个字段组成。字段如下：
+
+- Username 用户的登录名
+- Password 用户账户的加密密码
+- User ID 系统分配的唯一号码
+- Group ID 用于标识用户所属组的号码
+- Comment 任何用户信息，例如用户的全名
+- Home directory 用户的主目录
+- Login shell 用户登录时运行的 shell；这是默认 shell，通常为 `/bin/bash`
+
+根据是否使用 shadow 密码，密码字段（第二个字段）将是 `x` 或用户密码的加密形式。Red Hat 默认实现 shadow 密码，因此这些条目的密码应为 `x`。以下是 `/etc/passwd` 条目的示例。对于此类条目，你必须使用 `passwd` 命令来创建密码。还请注意，在此特定系统中，用户 ID 从 500 开始并递增。 在 Red Hat 中，给出的组不是通用的 User，而是仅由该用户组成的组。例如，`dylan` 用户属于名为 Dylan 的组，而不是通用的 User 组。
+
+```
+dylan:x:500:500:Dylan:/home/dylan:/bin/bash
+chris:x:501:501:Chris:/home/chris:/bin/bash
+```
+
+> 提示 如果关闭 shadow 密码支持，`passwd` 文件中的条目将显示加密密码。由于任何用户都可以读取 `/etc/passwd` 文件，入侵者可以访问并可能破解加密密码。
+
+> 提示 虽然技术上可以直接编辑 `/etc/passwd` 文件中的条目，但不建议这样做。特别是，删除条目不会删除与用户关联的任何其他信息、权限和数据，这会带来安全漏洞，入侵者可能接管已删除用户的 ID 或磁盘空间。
+
+
+
+## `/etc/shadow` 和 `/etc/gshadow`
+
+`/etc/passwd` 文件是一个简单的文本文件，容易受到安全漏洞的攻击。如果任何人获得对 `/etc/passwd` 文件的访问权限，他们可能能够通过暴力破解来破译或破解加密密码。`shadow` 应用程序套件实现了更高级别的安全性。其中包括 `useradd`、`groupadd` 及其对应的更新和删除程序。大多数其他用户配置工具，包括 `redhat-config-users`，都支持 `shadow` 安全措施。有了 `shadow` 安全，密码不再保存在 `/etc/passwd` 文件中。相反，密码保存在一个名为 `/etc/shadow` 的单独文件中。访问仅限于 `root` 用户。
+
+以下示例显示了两个用户的 `/etc/shadow` 条目，列出了他们的加密密码。`chris` 的条目在其 `Password` 字段中有 `x`，表示尚未为该用户创建密码：
+
+```
+dylan:YOTPd3Pyy9hAc:500:500:Dylan:/home/dylan:/bin/bash
+chris:x:501:501:Chris:/home/chris:/bin/bash
+```
+
+还有一个对应的密码文件，称为 `/etc/gshadow`，用于需要密码的组。Red Hat 默认支持 `shadow` 密码。你可以使用 Red Hat 身份验证工具手动指定是否要使用 `shadow` 密码。
+
+## 密码工具
+
+要更改特定用户的任何特定字段，你应使用提供的用户管理工具，例如本章讨论的 `passwd` 命令、`redhat-config-users`、`adduser`、`usermod`、`useradd` 和 `chage`。`passwd` 命令仅允许你更改密码。其他工具，例如 `redhat-config-users`，不仅在 `/etc/passwd` 文件中创建条目，但也为用户创建主目录并在用户的主目录中安装初始化文件。
+
+这些工具还可让您控制用户对其帐户的访问。您可以为用户设置到期日期或将其锁定在帐户之外。被锁定在帐户之外的用户，其密码在 `/etc/shadow` 文件中会以无效字符串 `!` 为前缀。解锁帐户会移除此前缀。
+
+> 提示 使用 Red Hat 身份验证工具（`authconfig-gtk`，见第 4 章），您可以启用和配置各种身份验证工具，例如 NIS 和 LDAP 服务器，以及启用 `shadow` 密码、LDAP 和 Kerberos 身份验证（可在系统设置菜单和窗口中的身份验证中访问）。
+
+## 管理用户环境
+
+每次用户登录时，都会执行两个配置文件脚本，一个对每个用户都相同的系统配置文件脚本，以及可根据每个用户需求自定义的用户登录配置文件脚本。用户注销时，会运行用户注销脚本。此外，每次生成 shell 时，包括登录 shell，都会运行一个用户 shell 脚本。不同 shell 使用不同类型的脚本。在 Red Hat 上，常用的默认 shell 是 BASH shell。作为替代，用户可以使用 TCSH 或 Z shell 等不同 shell，两者均随 Red Hat Linux 安装。
+
+## 配置文件脚本
+
+对于 BASH shell，每个用户在其主目录中都有自己的 BASH 登录配置文件脚本，名为 `.bash_profile`。系统配置文件脚本位于 `/etc` 目录中，名为 `profile` 且前面没有句点。BASH shell 用户 shell 脚本称为 `.bashrc`。`.bashrc` 文件还会运行 `/etc/bashrc` 文件以实现全局定义，例如 `PS1` 和 `TERM` 变量。`/etc/bashrc` 文件还会执行 `/etc/profile.d` 目录中的任何专用初始化文件，例如用于 KDE 和 GNOME 的文件。`.bash_profile` 文件运行 `.bashrc` 文件，并通过它运行 `/etc/bashrc` 文件，实现全局定义。作为超级用户，您可以编辑这些配置文件或 shell 脚本中的任何一个，并在其中放入您希望在用户登录时为每个用户执行的任何命令。例如，您可能希望为命令定义默认路径，以防用户未定义。或者您可能希望通知用户最近的系统新闻或帐户更改。
+
+## `/etc/skel`
+
+当您首次向系统添加用户时，必须为用户提供其登录、shell 和注销初始化文件的骨架版本。对于 BASH shell，这些文件为 `.bash_profile`、`.bashrc` 和 `.bash_logout` 文件。`useradd` 命令和其他用户管理工具（如 Red Hat 用户管理器）会自动添加这些文件，将 `/etc/skel` 目录中的任何文件复制到用户的新主目录。`/etc/skel` 目录包含 `.bash_profile`、`.bashrc` 和 `.bash_logout` 文件的骨架初始化文件，或者，如果您使用 TCSH shell 作为登录 shell，则为 `.login`、`.tcshrc` 和 `.logout` 文件。`/etc/skel` 目录还包含桌面使用的默认文件和目录。这些包括用于 X Window 系统的 `.screenrc` 文件、用于 KDE 桌面的 `.kde` 目录，以及包含 GNOME 桌面默认配置文件的文件夹 `Desktop`。作为超级用户，您可以按任意方式配置 `/etc/skel` 目录中的 `.bash_profile` 或 `.bashrc` 文件。通常会包含基本的系统变量赋值，以定义命令的路径名和命令别名。`PATH` 和 `BASH_ENV` 变量在 `.bash_profile` 中定义。一旦用户拥有自己的 `.bash_profile` 或 `.bashrc` 文件，他们可以根据自己的选择重新定义变量或添加新命令。
+
+## `/etc/login.defs`
+
+系统范围的用于用户和组创建实用程序（如 `useradd` 和 user group）的数值保存在 `/etc/login.defs` 文件中。在这里您可以找到可能的 user 和 group ID 范围列表。`UID_MIN` 包含用户 ID 的最小数字，`UID_MAX` 为最大数字。各种密码选项控制密码控制，例如 `PASS_MIN_LEN`，它决定密码允许的最小字符数。`CREATE_HOME` 等选项可以设置为指示用户工具（如 `useradd`）默认为新帐户创建主目录。以下是这些条目的示例：
+
+```
+MAIL_DIR /var/spool/mail
+PASS_MIN_LEN 5
+CREATE_HOME yes
+```
+
+## `/etc/login.access`
+
+您可以使用 `/etc/login.access` 文件控制远程用户对系统的登录访问。该文件由列出用户、是否允许访问以及可从何处访问系统的条目组成。此文件中的记录由三个以冒号分隔的字段组成：表示是否允许用户访问的加号 (`+`) 或减号 (`-`) 符号、允许访问的用户登录名，以及他们尝试登录的远程系统（主机）或终端（tty 设备）。以下条目允许用户 `chris` 从远程系统 `rabbit.mytrek.com` 访问系统：
+
+```
++:chris::rabbit.mytrek.com
+```
+
+您可以列出多个用户或位置，或在用户或位置处使用 `ALL` 选项以允许所有用户和位置访问。`ALL` 选项可以用 `EXCEPT` 选项限定，以允许除某些指定用户外的所有用户访问。以下条目允许任何有效用户使用控制台登录系统，但用户 `larisa` 和 `aleina` 除外：
+
+```
++:ALL EXCEPT larisa aleina:console
+```
+
+其他访问控制文件用于控制特定服务的访问，例如与 `tcpd` 守护进程一起用于 `xinetd` 支持服务器的 `hosts.deny` 和 `hosts.allows` 文件。
+
+## 控制用户密码
+
+创建用户帐户后，您可以控制用户对其的访问。Red Hat 用户管理器和 `passwd` 工具都可让您锁定和解锁用户帐户。您使用带 `-l` 选项的 `passwd` 命令锁定账户，使其密码失效，并使用 `-u` 选项解锁它。
+
+你也可以通过为该密码设置过期日期，强制用户在给定间隔内更改其密码。Red Hat 用户管理器和 `change` 命令都允许你为用户的密码指定过期限制。用户可能需要每月、每周或在特定日期更改密码。一旦密码过期，用户将被提示输入新密码。你可以在此之前发出警告，告知用户密码过期前剩余的时间。对于你想要关闭的账户，你可以永久过期密码。你甚至可以关闭不活跃时间过长的账户。在下一个示例中，`chris` 账户的密码仅在七天内有效。`-M` 选项后跟天数设置密码可以保持有效的时间。
+
+```
+chage -M 7 chris
+```
+
+要为账户设置特定的过期日期，请使用 `-E` 选项并指定日期为 mm/dd/yyyy。
+
+```
+chage -E 07/30/2003 chris
+```
+
+要了解给定账户当前的过期设置，请使用 `-l` 选项。
+
+```
+chage -l chris
+```
+
+你也可以将选项组合成一个命令，
+
+```
+chage -M 7 -E 07/30/2003 chris
+```
+
+`change` 选项的列表出现在表 28-2 中。
+
+## TABLE 28-2
+
+Options for the change Command
+
+| Option | Description |
+|--------|-------------|
+| `-m` | 用户在能够更改密码之前必须等待的最少天数 |
+| `-M` | 用户在更改密码之前可以等待的最长天数 |
+
+
+
+| 选项 | 描述 |
+|---|---|
+| `-d` | 密码最后更改的日期 |
+| `-E` | 密码的特定过期日期，日期格式为 `yyyy-mm-dd` 或常用的格式如 `mm/dd/yyyy` |
+| `-I` | 允许的账户非活动期（以天为单位），在此之后密码将过期 |
+| `-W` | 警告期，在过期前向用户发送警告消息的天数 |
+| `-l` | 显示当前密码过期控制 |
+
+## Adding and Removing Users with `useradd`, `usermod`, and `userdel`
+
+Linux 还提供了 `useradd`、`usermod` 和 `userdel` 命令来管理用户账户。所有这些命令都将所有信息作为命令行上的选项输入。如果未指定选项，它们将使用预定的默认值。
+
+> **注意**：对于 Red Hat 发行版，你应该使用 Red Hat 用户管理器（`redhat-config-users`）来管理用户账户（参见第 4 章）。你可以通过系统设置窗口和菜单访问 Red Hat 用户管理器。它仅标记为 Users & Groups。你也可以从 GNOME 系统菜单访问它。
+
+### `useradd`
+
+使用 `useradd` 命令，你将值作为命令行上的选项输入，例如用户名，以创建用户账户。然后它会为该名称创建新的登录和目录，并使用新账户的所有默认功能。
+
+```
+# useradd chris
+```
+
+`useradd` 实用程序首先检查 `/etc/login.defs` 文件中创建新账户的默认值。对于未在 `/etc/login.defs` 文件中定义的默认值，`useradd` 会提供自己的默认值。你可以使用带 `-D` 选项的 `useradd` 命令显示这些默认值。默认值包括组名、用户 ID、主目录、skel 目录和登录 shell。用户在命令行上输入的值将覆盖相应的默认值。组名是新账户所属组的名称。默认情况下，这是 `other`，这意味着新账户不属于任何组。用户 ID 是标识用户账户的数字。skel 目录是保存初始化文件副本的系统目录。这些初始化文件在创建时会被复制到用户的新主目录中。登录 shell 是用户计划使用的特定 shell 的路径名。
+
+`useradd` 命令具有对应于每个默认值的选项。表 28-3 列出了你可以用 `useradd` 命令使用的所有选项。你可以在创建特定账户时使用特定值代替这些默认值中的任何一个。登录在你这样做之前是无法访问的。在下一个示例中，`chris` 账户的组名设置为 `introl`，用户 ID 设置为 `578`：
+
+```
+# useradd chris -g introl -u 578
+```
+
+一旦你添加了新的用户登录，你需要为新登录设置密码。密码条目放在 `/etc/passwd` 和 `/etc/shadow` 文件中。使用 `passwd` 命令为用户创建新密码，如下所示。你输入的密码不会显示在屏幕上。你将被提示重复密码。然后会发出一条消息，表明密码已成功更改。
+
+```
+# passwd chris
+Changing password for user chris
+New UNIX password:
+Retype new UNIX password:
+passwd: all authentication tokens updated successfully
+#
+```
+
+| 选项 | 描述 |
+|---|---|
+| `-d dir` | 设置新用户的主目录。 |
+| `-D` | 显示所有设置的默认值。也可用于重置主目录（`-b`）、组（`-g`）、shell（`-s`）、过期日期（`-e`）和密码过期（`-f`）的默认设置。 |
+| `-e mm/dd/yy` | 设置账户的过期日期（默认无）。格式为月/日/年。 |
+| `-f days` | 设置账户在密码过期后仍保持有效的天数。 |
+| `-g group` | 设置组。 |
+| `-m` | 如果用户的主目录不存在，则创建它。 |
+| `-m -k skl-dir` | 设置存放骨架文件的骨架目录，例如 `.profile` 文件，这些文件会在主目录创建时自动复制到用户的主目录；默认为 `/etc/skel`。 |
+| `-M` | 不创建用户的主目录。 |
+| `-p password` | 提供加密密码（crypt 或 MD5）。不带参数时，账户会立即被禁用。 |
+| `-r` | Red Hat 特有的选项，用于创建系统账户（其用户 ID 低于 `login.defs` 中设置的最小值）。除非由 `-m` 指定，否则不创建主目录。 |
+| `-s shell` | 设置新用户的登录 shell。默认为 `/bin/bash`，即 BASH shell。 |
+| `-u userid` | 设置新用户的用户 ID。默认为迄今为止已使用最大编号的递增值。 |
+
+表 28-3 `useradd` 和 `usermod` 的选项
+
+### `usermod`
+
+`usermod` 命令使您能够更改这些特性中的任意值。您可以更改主目录或用户 ID，甚至可以更改账户的用户名。`usermod` 命令使用与 `useradd` 相同的选项，如表 28-3 所列。
+
+### `userdel`
+
+当您想从系统中移除用户时，可以使用 `userdel` 命令删除该用户的登录。使用 `-r` 选项，用户的主目录也会被删除。在下一个示例中，用户 `chris` 将从系统中被移除：
+
+```
+# userdel -r chris
+```
+
+## 管理组
+
+您可以使用 shell 命令或窗口工具（如 Red Hat 用户管理器）来管理组。
+
+### `/etc/group` 和 `/etc/gshadow`
+
+保存组条目的系统文件称为 `/etc/group`。该文件由组记录组成，每行一条记录，字段用冒号分隔。组记录有四个字段：组名、密码、组 ID 以及属于该组的用户。密码字段可以为空。组记录的字段如下：
+
+- **组名**：组的名称，必须唯一。
+- **密码**：在实现 shadow 安全机制后，此字段为 `x`，密码在 `/etc/gshadow` 文件中指明。
+- **组 ID**：系统分配用于标识该组的数字。
+- **用户**：属于该组的用户列表，用逗号分隔。
+
+以下是 `/etc/group` 文件中条目的示例。组名为 `engines`，密码由 shadow 安全机制管理，组 ID 为 `100`，属于该组的用户为 `chris`、`robert`、`valerie` 和 `aleina`。
+
+```
+engines:x:100:chris,robert,valerie,aleina
+```
+
+与 `/etc/passwd` 文件一样，最好使用组管理工具（如 `groupmod`、`groupadd` 或 Red Hat 用户管理器）来更改组条目。所有用户对 `/etc/group` 文件都有读权限。在 shadow 安全机制下，密码等安全组数据保存在 `/etc/gshadow` 文件中，只有 root 用户才能访问。
+
+### 用户私有组
+
+可以将新用户分配到仅为该用户设置的、并使用该用户名称的特殊组中。因此，新用户 `dylan` 会获得一个同样名为 `dylan` 的默认组。组 `dylan` 也会出现在组列表中。这种分配默认用户组的方法称为用户私有组（UPG）方案。UPG 目前用于 Red Hat 系统。附加组是用户可能希望加入的其他组。传统上，所有用户都被分配到一个名为 `users` 的组，这将使所有用户受到 `users` 组的组权限控制。使用 UPG 后，每个用户都有自己的组，并有自己的组权限。
+
+### 组目录
+
+与用户一样，您可以为组创建主目录。为此，只需在 `/home` 目录中为组创建一个目录，并将其组更改为该组，同时允许该组的任何成员访问。以下示例创建了一个名为 `engines` 的目录，并将其组更改为 `engines` 组：
+
+```
+mkdir /home/engines
+chgrp engines /home/engines
+```
+
+然后应使用本章后面讨论的 `chmod` 命令为组级别设置读、写和执行权限：
+
+```
+chmod g+rwx /home/engines
+```
+
+`engines` 组中的任何成员现在都可以访问 `/home/engines` 目录以及其中放置的任何共享文件。该目录成为该组的共享目录。事实上，你可以使用相同的程序在文件系统的任何位置创建其他共享目录。
+
+共享目录中的文件也应设置其权限以允许组中的其他用户访问。当用户将文件放入共享目录时，用户需要设置该文件的权限以允许组的其他成员访问它。读权限允许其他人显示它，写权限允许他们更改它，而执行权限允许他们运行它（用于脚本和程序）。以下示例首先将 `mymodel` 文件的组更改为 `engines`。然后它将 `mymodel` 文件复制到 `/home/engines` 目录并为 `engines` 组设置组读和写权限。
+
+```
+$ chgrp engines mymodel
+$ cp mymodel /home/engines
+$ chmod g+rw /home/engines/mymodel
+```
+
+### 使用 Red Hat 用户管理器管理组
+
+你可以使用 Red Hat 用户管理器轻松添加、删除和修改任何组。首先，通过在“开始使用”窗口中列出的“系统设置”窗口中单击“用户和组”图标来访问 Red Hat 用户管理器。然后在 Red Hat 用户管理器窗口中单击标记为“组”的选项卡面板。这将列出你当前的所有组。每个条目将有三个字段：组名、组 ID 和组成员。
+
+
+
+要添加一个组，只需单击“添加组”按钮。这会打开一个小窗口，你可以在其中输入组名。新组将列在用户管理器的“组”列表中。要将用户添加为组的成员，请选择组的条目并单击“属性”按钮。这会打开一个窗口，其中包含“组数据”和“组用户”选项卡面板。“组用户”面板列出所有当前用户并带有复选框。单击你希望成为该组成员的用户的复选框。如果你想删除一个用户的成员资格，请单击复选框以取消其选中状态。单击“确定”以使你的更改生效。如果你想删除一个组，只需在用户管理器的“组”面板中选择其条目，然后单击“删除”按钮。
+
+## 使用 `groupadd`、`groupmod` 和 `groupdel` 管理组
+
+你也可以使用 `groupadd`、`groupmod` 和 `groupdel` 命令管理组。这些命令行操作让你可以从终端窗口快速管理一个组。
+
+### `groupadd` 和 `groupdel`
+
+使用 `groupadd` 命令，你可以创建新组。当你向系统添加一个组时，系统会将组名放在 `/etc/group` 文件中并为其分配一个组 ID 号。如果启用了 shadow 安全，则会对 `/etc/gshadow` 文件进行更改。`groupadd` 命令仅创建组类别。你需要单独将用户添加到组中。在以下示例中，`groupadd` 命令创建了 `engines` 组：
+
+```
+# groupadd engines
+```
+
+你可以使用 `groupdel` 命令删除一个组。在下一个示例中，`engines` 组被删除：
+
+```
+# groupdel engines
+```
+
+### `groupmod`
+
+你可以使用 `groupmod` 命令更改组的名称或其 ID。输入 `groupmod -g` 加上新的 ID 号和组名。要更改组的名称，请使用 `-n` 选项。输入 `groupmod -n` 加上组的新名称，然后是当前名称。在下一个示例中，`engines` 组的名称被更改为 `trains`：
+
+```
+# groupmod -n trains engines
+```
+
+## 控制对目录和文件的访问：`chmod`
+
+Linux 中的每个文件和目录都包含一组权限，决定谁可以访问它们以及如何访问。你可以以三种方式之一设置这些权限以限制访问：你可以将访问限制为仅你自己，可以允许预先指定的组中的用户访问，也可以允许系统上的任何人访问。你还可以控制给定文件或目录的访问方式。
+
+### 权限
+
+文件或目录可能具有读、写和执行权限。当文件创建时，它会自动为所有者授予读和写权限，使你能够显示和修改文件。你可以将这些权限更改为你想要的任何组合。文件也可能具有只读权限，防止任何修改。
+
+### 权限类别
+
+有三类不同的用户可以访问文件或目录：所有者、组、以及不属于该组的所有其他人。所有者是创建文件的用户。你创建的任何文件，你都拥有。你还可以允许一个组访问文件。通常，用户会被收集到组中。例如，系统管理员可以将某个班级或项目的用户组成一个组。用户可以授予对文件的访问权限给指定组的成员。最后，你还可以将文件的访问权限开放给系统上的所有其他用户。在这种情况下，文件组之外的每个用户都可以访问该文件。在这种意义上，系统上的每个其他用户构成了“其他”类别。如果你想为系统上的所有用户提供相同的访问权限，你可以为组和其他人设置相同的权限。这样，你就包括了组的成员（组权限）和所有非成员用户（其他权限）。
+
+### 读、写、执行权限
+
+每个类别都有自己的读、写和执行权限集。第一组控制用户对其自己文件的访问——所有者访问。第二组控制组对其用户文件的访问。第三组控制所有其他用户对其用户文件的访问。三个类别——所有者、组和其他——的读、写和执行权限三组共计九种权限类型。
+
+带 `-l` 选项的 `ls` 命令会显示文件的详细信息，包括权限。在下面的示例中，左侧的第一组字符是为 `mydata` 文件设置的权限列表：
+
+```
+$ ls -l mydata
+-rw-r--r-- 1 chris weather 207 Feb 20 11:55 mydata
+```
+
+空权限用连字符 `-` 表示。读权限用 `r` 表示，写用 `w`，执行用 `x`。请注意共有十个位置。第一个字符表示文件类型。从广义上讲，目录可以被视为一种文件类型。如果第一个字符是连字符，则表示正在列出文件。如果第一个字符是 `d`，则表示正在显示目录的信息。
+
+接下来的九个字符按不同的用户类别排列。第一组三个字符是文件所有者的权限集。第二组三个字符是文件所属组的权限集。最后三个字符是其他用户的权限集。
+
+## GNOME 上的权限
+
+在 GNOME 中，你可以使用其属性窗口中的权限面板设置目录或文件的权限。在文件管理器窗口中右键单击文件或目录条目并选择属性。然后选择权限面板。在这里你会找到一个包含读、写和执行列以及所有者、组和其他行的复选框表格。勾选你想要的权限对应的适当复选框。通常，所有者权限的读和写复选框已经设置好。你可以从组下拉菜单中指定要提供访问权限的组。这会显示用户所属的组。
+
+## `chmod`
+
+你使用 `chmod` 命令来更改不同的权限配置。`chmod` 将权限更改和文件名作为其参数。你可以用两种不同的方式指定权限列表。一种使用权限符号，称为符号方法。另一种使用所谓的“二进制掩码”，称为绝对或相对方法。表 28-4 列出了 `chmod` 命令的选项。
+
+> 注意 当程序由 `root` 所有时，设置用户 ID 权限将使用户能够以 `root` 权限执行该程序。对于可能产生更改的任何程序来说，这都可能是一个严重的 安全风险——例如 `rm`，它会删除文件。
+
+## 所有权
+
+文件和目录同时属于一个所有者和一个组。组通常由一组用户组成，所有这些用户都属于同一组。在下面的示例中，`mydata` 文件由用户 `robert` 所有，并属于 `weather` 组。
+
+```
+-rw-r--r-- 1 robert weather 207 Feb 20 11:55 mydata
+```
+
+## 表 28-4
+
+文件和目录权限操作
+
+| 命令或选项 | 执行 |
+|---|---|
+| `chmod` | 更改文件或目录的权限。 |
+| 选项 |  |
+| `+` | 添加权限。 |
+| `-` | 移除权限。 |
+| `=` | 分配整个权限集。 |
+| `r` | 为文件或目录设置读权限。文件可以被显示或打印。目录可以显示其文件列表。 |
+| `w` | 为文件或目录设置写权限。文件可以被编辑或删除。目录可以被移除。 |
+| `x` | 为文件或目录设置执行权限。如果文件是 shell 脚本，它可以作为程序执行。目录可以被更改并进入。 |
+| `u` | 为创建并拥有文件或目录的用户设置权限。 |
+| `g` | 为组访问文件或目录设置权限。 |
+| `o` | 为系统上所有其他用户访问文件或目录设置权限。 |
+| `a` | 为所有者、组和所有其他用户设置访问权限。 |
+| `s` | 设置用户 ID 和组 ID 权限；程序由所有者和组拥有。 |
+| `t` | 设置粘滞位权限；程序保留在内存中。 |
+| `chgrp groupname filenames` | 更改文件或文件的组。 |
+| `chown user-name filenames` | 更改文件或文件的拥有者。 |
+| `ls -l filename` | 列出文件名并显示其权限。 |
+| `ls -ld directory` | 列出目录名并显示其权限。 |
+| `ls -l` | 列出目录中的所有文件并显示其权限。 |
+
+一个组也可以只由一个用户组成，通常是创建该文件的用户。系统上的每个用户，包括 `root` 用户，都被分配了自己的组，且该组中只有他自己一个成员，从而确保只有该用户可以访问。在下一个示例中，`report` 文件由 `robert` 用户拥有，并属于该用户唯一的单用户组 `robert`。
+
+```
+-rw-r--r-- 1 robert robert 305 Mar 17 12:01 report
+```
+
+`root` 用户，即系统管理员，拥有大多数系统文件，这些文件也属于 `root` 组，而该组中只有 `root` 用户是成员。大多数管理文件，如 `/etc` 目录中的配置文件，都由 `root` 用户拥有并属于 `root` 组。只有 `root` 用户有权限修改它们，而普通用户可以读取它们，在程序的情况下也可以执行它们。在下一个示例中，`root` 用户拥有 `/etc` 目录中的 `fstab` 文件，该文件也属于 `root` 用户组。
+
+```
+-rw-r--r-- 1 root root 621 Apr 22 11:03 fstab
+```
+
+位于系统目录中的某些目录和文件由服务拥有，而不是 `root` 用户，因为服务需要直接更改这些文件。这对于与远程用户交互的服务尤其如此，例如 Internet 服务器。其中大多数文件位于 `/var` 目录中。在这里你会找到由 Squid 代理服务器和域名服务器（`named`）等服务管理的 files 和目录。在此示例中，Squid 代理服务器目录由 `squid` 用户拥有并属于 `squid` 组。
+
+```
+drwxr-x--- 2 squid squid 4096 Jan 24 16:29 squid
+```
+
+## 更改文件的所有者或组：`chown` 和 `chgrp`
+
+
+
+尽管其他用户可能能够访问一个文件，但只有所有者可以更改其权限。然而，如果你想让其他用户控制你文件的权限，你可以将文件的所有者从自己更改为其他用户。`chown`命令将文件控制权转移给另一个用户。该命令的第一个参数是另一个用户的名称。在用户名之后，列出你要转移的文件。在下一个示例中，用户将`mydata`文件的控制权交给用户`robert`：
+
+```
+$ chown robert mydata
+$ ls -l mydata
+-rw-r--r-- 1 robert weather 207 Feb 20 11:55 mydata
+```
+
+你也可以，如果愿意，使用`chgrp`命令更改文件的组。`chgrp`的第一个参数是文件或文件的新的组名。在新的组名之后，列出你想要更改为该组的文件。在下一个示例中，用户将`today`和`weekend`的组名更改为`forecast`组。`ls -l`命令随后反映了组更改。
+
+```
+$ chgrp forecast today weekend
+$ ls -l
+-rw-rw-r-- 1 chris forecast 568 Feb 14 10:30 today
+-rw-rw-r-- 1 chris forecast 308 Feb 17 12:40 weekend
+```
+
+你可以通过在新所有者后加上冒号并附加组名，将`chgrp`操作合并到`chown`命令中：
+
+```
+$ chown george:forecast tomorrow
+-rw-rw-r-- 1 george forecast 568 Feb 14 10:30 tomorrow
+```
+
+## 设置权限：权限符号
+
+设置权限的符号方法使用字符`r`、`w`和`x`分别表示读、写和执行。任何这些权限都可以添加或删除。添加权限的符号是加号`+`。删除权限的符号是减号`-`。在下一个示例中，`chmod`命令为所有类别的`mydata`文件添加执行权限并删除写权限。读权限未更改。
+
+```
+$ chmod +x-w mydata
+```
+
+权限符号也指定每个用户类别。所有者、组和其他类别分别由字符`u`、`g`和`o`表示。请注意，所有者类别由`u`表示，可视为用户。类别符号放在加号和减号之前，后跟读、写和执行权限。如果未使用类别符号，则假定为所有类别，并且指定的权限将为用户、组和其他设置。如果在下一个示例中，第一个`chmod`命令将组的权限设置为读和写。第二个`chmod`命令将其他用户的权限设置为读。请注意，权限规范与类别之间没有空格。权限列表只是一个长短语，没有空格。
+
+```
+$ chmod g+rw mydata
+$ chmod o+r mydata
+```
+
+用户也可以删除权限，而不仅仅是添加权限。在下一个示例中，为其他用户设置了读权限，但删除了写和执行权限：
+
+```
+$ chmod o+r-wx mydata
+```
+
+还存在另一个权限字符`a`，它代表所有类别。`a`字符是默认值。在下一个示例中，两个命令是等效的。读权限是显式设置的，`a`字符表示所有类型的用户：其他、组和用户。
+
+```
+$ chmod a+r mydata
+$ chmod +r mydata
+```
+
+最常见的权限操作之一是设置文件的执行权限。这通常在 shell 程序文件的情况下完成。执行权限表示文件包含可执行指令并且可以直接由系统运行。在下一个示例中，文件`lsc`的执行权限被设置，然后执行：
+
+```
+$ chmod u+x lsc
+$ lsc
+main.c lib.c
+$
+```
+
+## 绝对权限：二进制掩码
+
+与表28-4中的权限符号不同，许多用户发现使用绝对方法更加方便。绝对方法一次性更改所有权限，而不是逐项指定。它使用一个二进制掩码来引用每个类别中的所有权限。这三个类别，每个类别包含三个权限，符合八进制二进制格式。八进制数的基数为8结构。当转换为二进制数时，每个八进制位会变成三个二进制位。二进制数是一组由1和0组成的数字。一个数中的三个八进制位转换为三组三个二进制位，总共九个——正好是一个文件权限的数量。
+
+你可以使用八进制数字作为掩码来设置不同的文件权限。每个八进制数字对应一个用户类别。可以这样理解：这些数字从左到右与权限类别匹配，从所有者类别开始。第一个八进制数字应用于所有者类别，第二个应用于组，第三个应用于其他用户类别。你选择的实际八进制数字决定了每个类别的读、写和执行权限。此时，你需要了解八进制数字如何转换为其二进制等价形式。
+
+### 计算八进制数
+
+计算八进制数的一个简单方法是利用这样一个事实：用于权限的任何数字都是由十进制数4、2和1相加得到的组合。用4表示读权限，2表示写权限，1表示执行权限。读、写、执行权限就是4 + 2 + 1 = 7。读和执行权限是4 + 1 = 5。你可以用这种方法为每个类别计算八进制数。要得到755，你需要为所有者的读、写、执行权限加4 + 2 + 1，为组的读和执行权限加4 + 1，再为其他用户的读和执行权限加4 + 1。
+
+### 二进制掩码
+
+处理二进制掩码时，你需要为所有三个类别指定三个数字，以及它们的权限。这使得二进制掩码不如权限符号灵活。要为`mydata`文件设置所有者的执行权限为开启、写权限为关闭，并保留读权限，你需要使用八进制数字5（101）。同时，你需要为组和其他用户的访问指定数字。如果这些类别要保持读访问权限，你需要为每个类别使用八进制数字4（100）。这样你就得到了三个八进制数字544，它们转换为二进制数字101 100 100。
+
+```
+$ chmod 544 mydata
+```
+
+### 执行权限
+
+二进制掩码最常见的用途之一是设置执行权限。你可以创建包含Linux命令的文件，称为shell脚本。要执行shell脚本中的命令，你必须首先表明该文件是可执行的——即它包含系统可以执行的命令。你可以通过多种方式做到这一点，其中之一是在shell脚本文件上设置可执行权限。假设你刚刚完成了一个shell脚本文件，需要赋予它可执行权限才能运行它。你还想保留读和写权限，但拒绝组或其他用户的任何访问。八进制数字7（111）将设置所有三个权限，包括执行权限（你也可以将4-读、2-写和1-执行相加得到7）。对组和其他用户使用0则拒绝他们的访问。这样你就得到了数字700，它等同于二进制数字111 000 000。在这个示例中，`myprog`文件的拥有者权限被设置为包含执行权限：
+
+```
+$ chmod 700 myprog
+```
+
+如果你希望其他人能够执行和读取该文件，但不能修改它，你可以使用数字5（101）设置读和执行权限，并关闭写权限。在这种情况下，你可以使用八进制数字755，其二进制等价形式为111 101 101。
+
+```
+$ chmod 755 myprog
+```
+
+### 目录权限
+
+你也可以在目录上设置权限。目录上的读权限允许显示目录中的文件列表。执行权限使用户能够切换到该目录。写权限使用户能够在该目录中创建和删除自己的文件。如果你允许其他用户对目录拥有写权限，他们就可以将自己的文件添加到其中。当你创建目录时，它会自动获得所有者的读、写和执行权限。你可以列出该目录中的文件、切换到该目录以及在其中创建文件。
+
+与文件一样，目录也拥有针对所有者、组和其他用户的权限集。通常，你可能希望允许其他用户切换到你的某个目录并列出其中的文件，但不允许他们将自己的文件添加到其中。在这种情况下，你可以为目录设置读和执行权限，但不设置写权限。这将允许其他用户切换到该目录并列出其中的文件，但不能创建新文件或将他们的任何文件复制到其中。下一个示例为`thankyou`目录的组设置读和执行权限，但移除写权限。组成员可以进入`thankyou`目录并列出那里的文件，但他们不能创建新文件。
+
+```
+$ chmod g+rx-w letters/thankyou
+```
+
+与文件一样，你也可以使用八进制数字设置目录权限。要设置与前面示例相同的权限，你可以使用八进制数字750，其二进制等价形式为111 101 000。
+
+```
+$ chmod 750 letters/thankyou
+```
+
+### 显示目录权限
+
+带有`-l`选项的`ls`命令会列出目录中的所有文件。要仅列出目录本身的信息，请添加一个`d`修饰符。在下一个示例中，`ls -ld`显示了`thankyou`目录的信息。请注意权限列表中的第一个字符是`d`，表示它是一个目录。
+
+```
+$ ls -ld thankyou
+drwxr-x--- 2 chris 512 Feb 10 04:30 thankyou
+```
+
+### 父目录权限
+
+如果你有一个文件希望其他用户能够访问，你不仅需要设置该文件的权限，还必须确保该文件所在目录的权限已设置。要访问你的文件，用户必须先访问该文件的目录。同样的适用于目录的父级。尽管一个目录可能授予其他人访问它的权限，但如果其父目录拒绝访问，则无法到达该目录。因此，你必须密切注意你的目录树。要提供对目录的访问权限，目录树中位于其上方的所有其他目录也必须对其他用户可访问。
+
+## 所有权权限
+
+
+
+## 设置所有权权限
+
+除了读/写/执行权限之外，你还可以为可执行程序设置所有权权限。通常，运行程序的用户在程序运行时拥有它，即使程序文件本身可能由另一用户拥有。设置用户 ID 权限允许程序的原始所有者在另一用户运行程序时始终拥有它。例如，系统上的大多数软件都由 root 用户拥有，但由普通用户运行。其中一些软件可能需要修改 root 拥有的文件。在这种情况下，普通用户需要以 root 保留所有权的方式运行该程序，以便程序能够拥有更改这些 root 拥有文件的权限。组 ID 权限的工作方式相同，只是针对组。由组拥有的程序即使由另一组的用户运行也保留所有权。然后程序可以更改所有者组的文件。这其中存在潜在的安全风险，因为你本质上是给予用户一些有限的 root 级访问权限。
+
+### 使用符号设置所有权权限
+
+要向文件添加用户 ID 和组 ID 权限，你使用 `s` 选项。以下示例将用户 ID 权限添加到由 root 用户拥有的 `pppd` 程序。当普通用户运行 `pppd` 时，root 用户保留所有权，允许 `pppd` 程序更改 root 拥有的文件。
+
+```
+# chmod +s /usr/sbin/pppd
+```
+
+设置用户 ID 和设置组 ID 权限显示为所有者和组段执行位置中的 `s`。设置用户 ID 和组 ID 本质上是执行权限 `x` 的变体。读、写和用户 ID 权限将是 `rws` 而不是仅仅 `rwx`。
+
+```
+# ls -l /usr/sbin/pppd
+-rwsr-sr-x 1 root root 184412 Jan 24 22:48 /usr/sbin/pppd
+```
+
+### 使用二进制方法设置所有权权限
+
+```
+# chmod +t /home/dylan/myreports
+# ls -l /home/dylan/myreports
+drwxr-xr-t 1 root root 4096 /home/dylan/myreports
+```
+
+## 粘滞位权限
+
+另一个特殊权限可为目录提供更高的安全性，即粘滞位。最初粘滞位用于在程序执行完毕后将其保留在内存中以提高效率。当前 Linux 系统忽略此功能。相反，它用于目录以保护其中的文件。设置了粘滞位的目录中的文件只能由 root 用户或目录所有者删除或重命名。
+
+### 使用二进制方法设置粘滞位权限
+
+与所有权一样，对于粘滞位权限，你在八进制数字的开头添加另一个八进制数。粘滞位的八进制数字是 `1`（`001`）。以下示例为 `myreports` 目录设置粘滞位。
+
+```
+# chmod 1755 /home/dylan/myreports
+```
+
+下一个示例将为 `newprogs` 目录同时设置粘滞位和用户 ID 权限。权限 `5755` 的二进制等价为 `101 111 101 101`。
+
+```
+# chmod 5755 /usr/bin/newprogs
+# ls -l /usr/bin/newprogs
+drwsr-xr-t 1 root root 4096 /usr/bin/newprogs
+```
+
+## 权限默认值：`umask`
+
+每当你创建文件或目录时，它都会被赋予默认权限。你可以使用 `umask` 命令显示当前默认值或更改它们。权限以二进制或符号格式显示，如以下各节所述。默认权限包括将应用于目录的任何执行权限。文件的执行权限在创建时默认关闭。这是因为标准数据文件不使用可执行权限（对于你希望可执行的文件，如脚本，你必须手动设置其执行权限）。要显示当前默认权限，请使用无参数的 `umask` 命令。`-S` 选项使用符号格式。
+
+```
+$ umask -S
+u=rwx,g=rx,o=rx
+```
+
+此默认 `umask` 为标准文件提供 `rw-r--r--` 权限，并为目录添加执行权限，`rwxr-xr-x`。
+
+你可以通过符号或二进制格式指定权限来设置新的默认值。要指定新权限，请使用 `-S` 选项。以下示例拒绝其他人读取权限，同时允许用户和组读取访问，这导致权限为 `rwxr-x---`。
+
+```
+$ umask -S u=rwx,g=rx,o=
+```
+
+当你使用二进制格式时，掩码是你想要设置的权限的反码。因此，要设置读取和执行权限为开启，写入权限为关闭，你将使用八进制数字 `2`，即二进制 `010`。要将所有权限都开启，你将使用八进制 `0`，即二进制 `000`。以下示例显示了权限默认值 `rwx`、`rx` 和 `rx`（文件为 `rw`、`r` 和 `r`）的掩码。
+
+```
+$ umask
+0022
+```
+
+要将默认值设置为仅拒绝其他用户的全部权限，你将使用 `0027`，使用其他权限的二进制掩码 `0111`。
+
+```
+$ umask 0027
+```
+
+## 磁盘配额
+
+你可以使用磁盘配额来控制特定用户在你的系统上使用的磁盘空间量。在你的 Linux 系统上，未使用的磁盘空间作为一个公共资源保留，每个用户都可以根据需要访问。随着用户创建更多文件，他们从可用磁盘空间池中获取所需的空间。从这个意义上说，所有用户都在共享一个未使用的磁盘空间资源。然而，如果一个用户用完了所有剩余的磁盘空间，其他用户将无法创建文件甚至运行程序。为了解决这个问题，你可以在特定用户上创建磁盘配额，限制他们可以使用的可用磁盘空间量。
+
+## 配额工具
+
+配额检查可以在安装在你的系统上的硬盘分区的文件系统上实现。配额是使用 `quotacheck` 和 `quotaon` 程序启用的。在 Red Hat 上，它们在 `/etc/rc.d/rc.sysinit` 脚本中执行，该脚本在你启动系统时运行。每个分区都需要使用 `quota` 选项 `usrquota` 或 `grpquota` 挂载。`usrquota` 为用户启用配额控制，而 `grpquota` 适用于组。这些选项通常放在 `/etc/fstab` 文件中特定分区的挂载条目中（参见第 30 章）。例如，要挂载挂载到 `/home` 目录的 `/dev/hda6` 硬盘分区并支持用户和组配额，你需要如下的挂载条目：
+
+```
+/dev/hda6 /home ext2 defaults,usrquota,grpquota 1 1
+```
+
+你还需要为启用配额的每个分区创建 `quota.user` 和 `quota.group` 文件。这些是用于保存每个用户和组的配额信息的配额数据库。你可以通过使用 `-a` 选项或文件系统设备名称运行 `quotacheck` 命令来创建这些文件，以下示例在 `hda1` 硬盘分区上创建配额数据库。
+
+```
+quotacheck -a /dev/hda1
+```
+
+## `edquota`
+
+你可以使用 `edquota` 命令设置磁盘配额。通过它，你可以访问特定用户和组的配额记录，该记录保存在磁盘配额数据库中。你还可以设置默认配额，这些配额将应用于在文件系统上未设置配额的任何用户或组。`edquota` 将在你的默认编辑器中打开记录，你可以使用编辑器进行任何更改。要打开特定用户的记录，请使用 `-u` 选项并将用户名作为 `edquota` 的参数（参见表 28-5）。以下示例打开用户 larisa 的磁盘配额记录：
+
+```
+edquota -u larisa
+```
+
+你为配额设置的限制可以是硬限制或软限制。硬限制将拒绝用户超出其配额的能力，而软限制只会发出警告。对于软限制，你可以指定一个宽限期，在此期间用户有机会将磁盘空间减少到限制以下。如果宽限期到期后磁盘空间仍超过限制，用户可能会被拒绝访问其帐户。例如，软限制通常为 75 兆字节，而硬限制可能为 100 兆字节。超出软限制的用户可能有 48 小时的宽限期。
+
+配额记录以硬盘设备名称开头，后面是使用的内存块和索引节点数。`Limits` 段具有软限制和硬限制的参数。如果这些条目为 `0`，则没有限制。你可以同时设置硬限制和软限制，将硬限制用作严格限制。Linux 中的块目前约为 1,000 字节。索引节点用于文件以保存构成文件内存块的信息。要设置软限制的时间限制，请使用带 `-t` 选项的 `edquota` 命令。以下示例显示 larisa 的配额记录：
+
+```
+Quotas for user larisa:
+/dev/hda3: blocks in use: 9000, limits (soft = 40000, hard = 60000)
+inodes in use: 321, limits (soft = 0, hard = 0)
+```
+
+## `quotacheck`、`quotaon` 和 `quotaoff`
+
+配额记录保存在该分区的配额数据库中。每个启用配额的分区都有自己的配额数据库。你可以使用 `quotacheck` 命令检查配额数据库的有效性。你可以使用 `quotaon` 和 `quotaoff` 命令打开和关闭配额。在系统启动时，会运行 `quotacheck` 检查配额数据库，然后运行 `quotaon` 打开配额。
+
+## `repquota` 和 `quota`
+
+作为系统管理员，你可以使用 `repquota` 命令为指定的文件系统生成磁盘使用情况摘要，检查哪些用户接近或
+
+**表 28-5 `edquota` 的选项**
+
+| `edquota` 选项 | 描述 |
+| --- | --- |
+| `-u` | 编辑用户配额。这是默认值。 |
+| `-g` | 编辑组配额。 |
+| `-p` | 复制指定典型用户的配额。这是用于初始化用户组的配额的正常机制。 |
+| `-t` | 编辑每个文件系统的软时间限制。 |
+
+**表 28-6：`quota` 的选项**
+
+| `quota` 选项 | 描述 |
+| --- | --- |
+
+
+
+
+| `-g` | 打印用户所属组的组配额。 |
+| `-u` | 打印用户配额。 |
+| `-v` | 显示没有分配存储空间的文件系统上的配额。 |
+| `-q` | 打印使用量超过配额的文件系统信息。 |
+
+超出配额限制。`repquota`以要检查的文件系统作为参数；`-a`选项检查所有文件系统。
+
+```
+repquota /dev/hda1
+```
+
+单个用户可以使用`quota`命令检查其磁盘使用情况以及配额中还剩余多少磁盘空间（参见表 28-6）。
+
+# 轻量级目录访问协议
+
+轻量级目录访问协议（LDAP）旨在实现可通过网络访问的用户目录，提供有关用户的信息，如电子邮件地址或电话号码。此类目录还可用于身份验证，识别特定用户是否属于指定网络。你可以在`www.ldapman.org`上了解更多关于 LDAP 的信息。你可以把 LDAP 目录看作一本可通过互联网访问的电话簿，任何人都可以查询你，找到你的电子邮件地址或其他信息。事实上，将这些目录称为数据库可能更准确。它们是用户信息的数据库，可通过互联网等网络访问。通常，本地网络上的用户分布在多个不同的系统中，要获取某个用户的信息，你必须知道该用户在哪个系统上，然后查询该系统。使用 LDAP 后，网络上所有用户的用户信息都保存在 LDAP 服务器中。你只需查询网络的 LDAP 服务器即可获取某个用户的信息。例如，`Sendmail`可以使用 LDAP 查找用户地址。你也可以使用`Mozilla`或`Netscape`查询 LDAP。在`Mozilla`中，打开通讯录，然后选择“文件 | 新建”，并选择 LDAP 目录。在此处输入 LDAP 服务器。在“首选项”对话框中，在“邮件和新闻组”类别下选择“地址设置”。此时将显示一个面板，你可以在其中输入 LDAP 目录服务器。
+
+## LDAP 客户端与服务器
+
+LDAP 目录以客户端和服务器的形式实现，你使用 LDAP 客户端访问管理 LDAP 数据库的 LDAP 服务器。大多数 Linux 发行版（包括 Red Hat）都使用`OpenLDAP`，这是 LDAP 的一个开源版本（你可以在`www.openldap.org`上了解更多关于 OpenLDAP 的信息）。该软件包包括一个 LDAP 服务器（`slapd`）、一个 LDAP 复制服务器（`slurpd`）、一个 LDAP 客户端以及相关工具。`slurpd`用于更新网络上的其他 LDAP 服务器（如果你有多个服务器）。安装 LDAP 服务器后，你可以使用`ldap`启动脚本启动、停止和重启 LDAP 服务器（`slapd`）：
+
+```
+service ldap restart
+```
+
+> 提示：Red Hat 客户端可以使用 Red Hat 身份验证工具（`authconfig-gtk`）启用 LDAP 服务并选择 LDAP 服务器，该工具可通过“系统设置”菜单和窗口中的“身份验证”项访问（参见第 4 章）。
+
+## LDAP 配置文件
+
+所有 LDAP 配置文件都保存在`/etc/openldap`目录中。这些文件包括 LDAP 服务器配置文件`slapd.conf`，以及 LDAP 客户端和工具配置文件`ldap.conf`。要启用 LDAP 服务器，你必须手动编辑`slapd.conf`文件，并将`suffix`和`rootdn`条目的域值（`dc`）更改为你自己网络的域地址。这是将由 LDAP 服务器提供服务的网络。要启用 LDAP 客户端及其工具，你必须在`ldap.conf`文件的`BASE`选项中指定正确的域地址，并在`HOST`选项中指定服务器地址（域名或 IP 地址）。对于客户端，你可以直接编辑`ldap.conf`文件，或使用“系统设置”的“身份验证”工具，在“用户信息”或“身份验证”面板上单击“配置 LDAP”按钮。在这里，你可以输入域名和 LDAP 服务器地址。
+
+## LDAP 工具
+
+LDAP 数据库中的一个条目由一个名称（称为专有名称）后跟一组属性及其值组成。例如，名称可以是用户名，属性可以是用户的电子邮件地址，而地址就是属性的值。允许的属性由`/etc/openldap/schema`目录中定义的对象类集合决定。要实际创建或更改 LDAP 数据库中的条目，可以使用`ldapadd`和`ldapmodify`工具。使用`ldapdelete`可以删除条目。创建 LDAP 数据库后，你可以通过 LDAP 服务器使用`ldapsearch`查询该数据库。对于 LDAP 服务器，你可以使用 LDAP 数据交换格式（LDIF）创建 LDAP 条目的文本文件。然后可以使用`slapadd`工具一次性将这些文本文件读入 LDAP 数据库。`slapcat`工具从 LDAP 数据库中提取条目并将其保存到 LDIF 文件中。要重新索引新增和更改的内容，可以使用`slapindex`工具。
+
+> 提示：你可以使用`authconfig-gtk`工具（系统设置窗口和菜单中的“身份验证”，参见第 4 章）启用和指定 LDAP 服务器。你还可以使用 LDAP Browser/Editor 或 GNOME 目录管理员来管理和编辑 LDAP 目录。
+
+## LDAP 与 PAM
+
+借助 LDAP，你还可以更精细地控制所提供信息的类型以及提供给谁。通过使用 PAM 模块（`pam_ldap`），LDAP 可以执行用户身份验证任务，为用户提供集中式身份验证。用户针对不同服务（如邮件 POP 服务器、系统登录和 Samba 登录）所执行的登录操作都可以执行。
+
+通过LDAP并使用单个受PAM保护的用户ID和密码进行访问。要配置PAM使用LDAP，请使用系统设置身份验证工具（`authconfig-gtk`），并在“身份验证”面板上选择“启用LDAP支持”（参见第4章）。你还应确保正确指定LDAP服务器。要将LDAP用于身份验证，你需要配置PAM来使用它，并将身份验证文件迁移到LDAP格式。`/usr/share/openldap/migration`目录包含可用于将旧文件转换为LDAP版本的脚本。
+
+# LDAP 与名称服务切换服务
+
+借助`libnss_ldap`模块，LDAP 也可用于名称服务切换（NSS）服务，与 NIS 和系统文件一起，为密码和组等系统数据库服务提供支持。客户端可以通过系统设置身份验证工具，并在“用户信息”面板中选择“启用LDAP支持”，轻松地为NSS启用LDAP。你还需要确保指定LDAP服务器。你也可以手动在`/etc/nsswitch.conf`文件中为条目添加`ldap`。
+
+> 提示 为了更安全地访问LDAP服务器，你应该对LDAP管理员的密码进行加密。LDAP管理员在`rootdn`条目中指定，其密码在`rootpw`条目中指定。要创建加密密码，请使用`slappasswd`命令。该命令会提示你输入密码，并显示其加密版本。将该加密版本复制到`rootpw`条目中。
+
+# 可插拔身份验证模块
+
+可插拔身份验证模块（PAM）是一种身份验证服务，允许系统确定为用户执行的身份验证方法。在Linux系统中，传统上通过查找密码来执行身份验证。当用户登录时，登录进程会在密码文件中查找他们的密码。使用PAM后，用户的身份验证请求被定向到PAM，PAM再使用指定的方法对用户进行身份验证。这可以是简单的密码查找或对LDAP服务器的请求，但提供身份验证的是PAM，而不是用户或应用程序直接查找密码。在这方面，身份验证变得集中化，并由特定服务PAM控制。系统管理员可以动态配置实际的身份验证过程。身份验证由模块执行，这些模块可根据所需身份验证类型而变化。管理员只需更改PAM配置文件即可添加或替换模块。有关PAM模块的更多信息和列表，请参阅`www.kernel.org/pub/linux/libs/pam`上的PAM网站。PAM模块位于`/lib/security`目录中。
+
+## PAM 配置文件
+
+在Red Hat上，PAM为请求身份验证的不同服务使用不同的配置文件。这些配置文件保存在`/etc/pam.d`目录中。例如，你有用于登录系统的配置文件（`/etc/pam.d/login`）、用于图形登录的配置文件（`/etc/pam.d/gdm`），以及用于访问Samba服务器的配置文件（`/etc/pam.d/samba`）。如果没有服务文件，则会调用名为`/etc/pam.d/other`的默认PAM配置文件。在Red Hat上，`system-auth`文件包含由`authconfig-gtk`生成的系统服务的标准身份验证模块，并在许多其他配置文件中被调用。此外，Red Hat为其配置工具（如`redhat-config-services`和`redhat-config-network`）设置了身份验证。
+
+## PAM 模块
+
+PAM配置文件包含用于身份验证的模块列表。其格式如下：
+
+```
+module-type control-flag module-path module-args
+```
+
+
+
+`module-path` 是要运行的模块，`module-arguments` 是你希望传递给该模块的参数。虽然有少数通用参数，但大多数模块有各自的参数。`module-type` 指身份验证管理的不同组：账户、身份验证、会话和密码。账户管理执行账户验证，检查账户的各个方面，例如用户是否有访问权限，或密码是否已过期。身份验证（`auth`）通过密码确认等方式验证用户身份。密码管理执行身份验证更新，例如更改密码。会话管理指在访问服务之前以及在服务关闭之前执行的任务。这些任务包括启动用户活动日志，或挂载和卸载主目录。
+
+> 提示 作为 `/etc/pam.d` 目录的替代方案，你可以创建一个名为 `/etc/pam.conf` 的配置文件。该文件中的条目具有 `service` 字段，指使用该模块的应用程序。如果 `/etc/pam.d` 目录存在，则自动忽略 `/etc/pam.conf`。
+
+`control-flag` 字段指示如果模块失败，PAM应如何响应。该控制可以是简单指令，也可以是更复杂的响应，可以指定返回码（如 `open_err`）以及要采取的操作。简单指令包括 `requisite`、`required`、`sufficient` 和 `optional`。`requisite` 指令在模块无法通过身份验证时立即结束身份验证过程。`required` 指令仅在其余模块运行之后才结束身份验证。`sufficient` 指令表示该模块成功就足以提供身份验证，除非前面有 `required` 模块已失败。`optional` 指令表示该模块的成功不是必需的，除非它是其服务的唯一身份验证模块。如果指定返回码，则可以改进身份验证失败或成功的条件。返回码可以被赋予诸如 `die` 或 `ok` 的值。`open_err` 返回码可以被赋予 `die` 操作，这将停止所有身份验证并返回失败。用于FTP服务器的 `/etc/pam.d/vsftpd` 配置文件如下所示：
+
+```
+##PAM-1.0
+auth required pam_listfile.so item=user sense=deny
+    file=/etc/vsftpd.ftusers onerr=succeed
+auth required pam_stack.so service=system-auth
+auth required pam_shells.so
+account required pam_stack.so service=system-auth
+session required pam_stack.so service=system-auth
+```
+
+## 软件管理
+
+在 Red Hat Linux 中，由于广泛使用 Red Hat 软件包管理器（RPM），安装、卸载或更新软件包一直是一个简单的过程。与使用标准 TAR 归档不同，软件被打包成用于 RPM 的特殊归档。RPM 归档包含构成软件应用程序的所有程序文件、配置文件、数据文件，甚至文档。通过一次简单的操作，Red Hat 软件包管理器就会为你安装所有这些内容。它还会检查程序正确运行可能需要的其他软件包。你甚至可以创建自己的 RPM 软件包。Red Hat 提供了一个基于窗口的 RPM 工具 `redhat-config-packages` 来管理你的 RPM 软件包，安装新软件包以及更新或卸载已有的软件包。`redhat-config-packages` 工具提供了一个易于使用的界面来管理你的软件包，使你能够轻松获取有关软件包的详细信息，包括其安装的文件的完整列表。
+
+> 提示 你可以使用 `Yum` 和 `APT` 仓库，例如可通过 Red Hat 更新代理访问的 Red Hat Rawhide 仓库，来更新 Red Hat Fedora Core Linux。RHN（参见第 4 章）。你也可以使用 `Yum` 工具从不同的 Red Hat 软件仓库下载（`linux.duke.edu/projects/yum`）。新版本可以从 rpmfind 的 BitTorrent ISO 服务下载（`rpmfind.net/BitTorrent`）。
+
+你也可以下载应用程序的源代码版本，然后在你的系统上编译和安装它们。过去这个过程曾很复杂，但在添加了 `configure` 脚本后已得到显著简化。大多数当前源代码，包括 GNU 软件，都附带 `configure` 脚本。`configure` 脚本会自动检测你的系统配置并生成一个 `Makefile`，用于编译应用程序并创建与你的系统兼容的二进制文件。在大多数情况下，只需执行几个 `Makefile` 操作，你就可以在任何系统上编译和安装复杂的源代码。
+
+## 软件仓库
+
+你可以从许多在线来源下载 Linux 软件。你可以找到特定类型应用程序的站点，例如 GNOME 和 KDE，以及特定发行版的站点，例如 Red Hat。Red Hat Network 可以自动下载并更新从构成 Red Hat 发行版的 RPM 软件包安装的软件。一些站点是 RPM 软件包的仓库，例如 `rpmfind.net`，而其他站点如 `freshmeat.net` 则将你引向原始站点。
+
+### TABLE 29-1
+
+Linux 软件站点
+
+| FTP 和 Web 站点 | 应用程序 |
+|---|---|
+| `ftp.redhat.com` | 用于 Red Hat 的打包在 RPM 软件包中的软件 |
+| `freshmeat.net` | Linux 软件，包括 RPM |
+| `rpmfind.net` | RPM 软件包仓库 |
+| `freshrpms.net` | 定制的 RPM 软件包 |
+| `sourceforge.net` | Linux 开源软件项目 |
+| `www.gnome.org` | GNOME 软件 |
+| `apps.kde.com` | KDE 软件 |
+| `rpmseek.com` | Linux 软件搜索站点 |
+| `www.filewatcher.org` | Linux FTP 站点监视器 |
+| `www.gnu.org` | GNU 归档 |
+| `www.ximian.com` | Ximian 桌面，GNOME 的办公应用程序 |
+
+大量开源 Linux 项目都可以在 `sourceforge.net` 找到。在这里你可以找到详细的文档和软件包的最新版本。对于为 GNOME 桌面设计的应用程序，你可以查看 `www.gnome.org`，而 KDE 应用程序可以在 `apps.kde.com` 找到。对于特定的数据库和办公应用程序，你可以直接从公司的网站下载软件包，例如 `www.oracle.com` 上的 Oracle 数据库。表 29-1 列出了几个流行的 Linux 软件站点。
+
+## 软件包类型
+
+RPM 站点如 Red Hat 和 `rpmfind.net` 上的软件包将具有文件扩展名 `.rpm`。包含源代码的 RPM 软件包具有扩展名 `.src.rpm`。其他软件包，例如需要你编译的源代码形式，来自各种压缩归档。这些通常具有扩展名 `.tar.gz`、`.tgz` 或 `.tar.bz2`。它们将在本章后面详细解释。表 29-2 列出了你会找到的几种常见的 Linux 软件包文件扩展名。
+
+### TABLE 29-2
+
+| Extension | File |
+|---|---|
+| `.rpm` | 使用 Red Hat 软件包管理器创建的软件包，用于 Red Hat、Caldera、Mandrake 和 SuSE 发行版。 |
+| `.src.rpm` | 使用 Red Hat 软件包管理器创建的应用程序源代码版本的软件包。 |
+| `.gz` | gzip 压缩文件（使用 `gunzip` 解压）。 |
+| `.bz2` | bzip2 压缩文件（使用 `bunzip2` 解压，也可使用 `tar` 的 `j` 选项，如 `xvjf`）。 |
+
+### 表 29-2（续）
+
+| 扩展名 | 文件 |
+|---|---|
+| `.tar` | `tar` 归档文件，使用 `tar` 的 `xvf` 选项解压。 |
+| `.tar.gz` | gzip 压缩的 `tar` 归档文件。使用 `gunzip` 解压缩并使用 `tar` 解压。使用 `tar` 的 `z` 选项，如 `xvzf`，可在一步中同时解压缩和解压。 |
+| `.tar.bz2` | bzip2 压缩的 `tar` 归档文件。使用 `tar -xvj` 解压。 |
+| `.tz` | 使用 `compress` 命令压缩的 `tar` 归档文件。 |
+| `.Z` | 使用 `compress` 命令压缩的文件（使用 `decompress` 命令解压缩）。 |
+| `.deb` | Debian Linux 软件包。 |
+
+## Red Hat 软件包管理器（RPM）
+
+
+
+包括 Red Hat、Mandrake、Caldera 和 SuSE 在内的多个 Linux 发行版使用 RPM 将 Linux 软件组织成可自动安装、更新或删除的软件包。`RPM` 是一个命令行驱动的软件包管理系统，能够安装、卸载、查询、验证和更新 Linux 系统上安装的软件包。`RPM` 软件包作为软件应用程序自身的安装程序运行。Linux 软件应用程序通常由多个需要安装到不同目录的文件组成。程序本身很可能放置在名为 `/usr/bin` 的目录中，在线手册文件如 Man 页面放在其他目录中，库文件放在另一个目录中。此外，安装可能需要修改系统上的某些配置文件。`RPM` 软件包会为你执行所有这些任务。此外，如果你以后决定不再想要某个特定应用程序，可以卸载软件包以从系统中删除所有文件和配置信息。`RPM` 的工作方式类似于 Windows 安装向导，可自动安装软件，包括配置、文档、图像、示例和程序文件，以及应用程序可能使用的任何其他文件。所有文件都会安装到系统上的相应目录中。`RPM` 维护已安装软件的数据库，跟踪所有已安装的文件。这使你也可以使用 `RPM` 卸载软件，自动删除属于该应用程序的所有文件。
+
+## RPM 工具
+
+要安装和卸载 `RPM` 软件包，你可以直接从 shell 提示符使用 `rpm` 命令，或使用 Red Hat 发行版软件管理工具 `redhat-config-packages`。`redhat-config-packages` 工具是 `rpm` 命令的 GUI 前端。虽然你应该为特定发行版下载 `RPM` 软件包，但许多 `RPM` 软件包设计为可在任何 Linux 系统上运行。你可以在其网站 `www.rpm.org` 上了解更多关于 `RPM` 的信息。该网站包含 `RPM` 的最新版本、文档以及 `RPM` 支持程序，如 `rpm2html` 和 `rpm2cpio`。`rpm2html` 会读取包含 `RPM` 软件包的目录并生成网页，列出这些软件包作为可用于下载它们的链接。`rpm2cpio` 是一个用于提取 `RPM` 的 Perl 脚本。此外，《Red Hat Linux 自定义指南》为 `RPM` 和 `redhat-config-packages` 提供了优秀的教程。
+
+## RPM 软件包
+
+`RPM` 软件包的命名约定因发行版而异。在 Red Hat 上，软件包名称包含软件包版本以及其平台（`i386` 代表 Intel PC）和 `.rpm` 扩展名。以下是 Intel 系统上 Emacs 编辑器 `RPM` 软件包的示例：
+
+```
+emacs-21.2-18.i386.rpm
+```
+
+你 DVD-ROM 或发行版 CD-ROM 上的 `RPM` 软件包仅代表可用于 Linux 的软件包的一小部分。`rpmfind.net` 上也设有庞大的 `RPM` 软件包存储库。此处的软件包按发行版、组和名称编入索引。该网站包含每个发行版的软件包，包括 Red Hat。
+
+> 提示 带有 `noarch` 术语的 `RPM` 软件包用于架构无关的软件包。这意味着它们设计为可安装在任何 Linux 系统上。没有 `noarch` 的软件包可能是发行版或架构相关的，设计为安装在特定类型的机器上。
+
+你可以将这些软件包放在系统上的一个目录中，然后使用 `rpm` 或 GUI `RPM` 实用程序（如 `redhat-config-packages` 工具）进行安装。通常，你应始终尝试使用为你的 Red Hat 发行版设置的 `RPM` 软件包版本；例如，如果你运行 Red Hat 9.0，最好下载指定为 Red Hat 9.0 的软件包，而不是下载 Red Hat 7.3 的相同软件包。特定版本的软件包将保存在版本目录中。在许多情况下，尝试安装为不同发行版准备的 `RPM` 软件包可能会失败。
+
+## 从桌面安装：redhat-config-packages
+
+`redhat-config-packages` 工具为管理由你的 Red Hat 发行版提供的 Red Hat `RPM` 软件包提供了一个有效且易于使用的界面，无论你是从 CD-ROM、DVD-ROM、硬盘还是网络安装的。它可在任何窗口管理器上运行，包括 GNOME 和 KDE。你可以使用系统设置窗口中的 Packages 图标访问 `redhat-config-packages`。这将打开一个软件包管理窗口，最初显示可用于安装软件包的软件包类别列表。有关更多详细信息，请参阅第 4 章。
+
+> 提示 你也可以直接安装特定的 `RPM` 软件包。首先使用文件管理器显示它，然后双击它。这会调用 `redhat-config-packages` 工具来安装该软件包。它还会检查依赖软件包并同时安装它们。如果你使用 CD-ROM 而不是 DVD-ROM，将提示你根据需要插入其他 CD-ROM。
+
+## 更新软件
+
+你可以使用发行版更新代理（如 Red Hat Network）自动更新 Linux 系统。你也可以使用 FTP 客户端、Web 浏览器或 GNOME 或 KDE 文件管理器手动下载软件包，然后使用 `rpm` 命令或 `redhat-config-packages` 工具安装软件。
+
+对于 `redhat-config-packages`，你可以使用文件管理器定位 `RPM` 文件并双击 `RPM` 软件包文件。你也可以在 GNOME 上右键单击它，并选择 Open With → Install Packages，或在 KDE 上选择 Install Package。`redhat-config-packages` 启动并检查你可能需要的任何依赖软件包。然后它会为你安装 `RPM` 软件包。
+
+如果你使用 `rpm` 命令，你使用 `-U` 选项来升级软件包。在下面的示例中，带有 `-Uvh` 选项的 `rpm` 命令安装了 Emacs 的升级版本：
+
+```
+# rpm -Uvh emacs-21.2-18.i386.rpm
+```
+
+## 命令行安装：rpm
+
+如果你无法访问桌面，或者你更喜欢从命令行界面工作，你可以使用 `rpm` 命令来管理和安装软件包。`rpm` 是实际执行软件包安装、移除和查询的命令。事实上，`redhat-config-packages` 使用 `rpm` 命令来安装和移除软件包。`RPM` 软件包是包含有关如何安装这些文件的信息的软件文件归档。`RPM` 软件包的文件名以 `.rpm` 结尾，表示可由 Red Hat Package Manager 安装的软件包。
+
+## rpm 命令
+
+使用 `rpm` 命令，你可以维护软件包、查询它们、构建自己的软件包并验证已有的软件包。维护软件包涉及安装新软件包、升级到新版本以及卸载软件包。`rpm` 命令使用一组选项来确定要采取什么操作。此外，某些任务，例如安装或查询软件包，有自己的选项，可进一步限定它们采取的操作类型。例如，`-q` 选项查询一个软件包，但与 `-l` 选项结合使用时，它会列出该软件包中的所有文件。表 29-3 列出了 `rpm` 选项集。`rpm` 命令的语法如下（`rpm-package-name` 是你想要安装的软件包的名称）：
+
+```
+rpm options rpm-package-name
+```
+
+`rpm` 及其功能的完整描述在在线手册中提供：
+
+```
+# man rpm
+```
+
+| 操作模式 | 效果 |
+|---|---|
+| `rpm -i options package-file` | 安装一个软件包；需要软件包文件的完整名称。 |
+| `rpm -e options package-name` | 卸载（擦除）一个软件包；你只需要软件包的名称，通常是一个词。 |
+| `rpm -q options package-name` | 查询一个软件包。选项可以是软件包名称、进一步的选项和软件包名称，或应用于所有软件包的选项。 |
+| `rpm -U options package-name` | 升级；与安装相同，但任何先前版本将被移除。 |
+| `rpm -F options package-name` | 升级，但仅当软件包当前已安装时。 |
+| `rpm --verify options` | 验证软件包是否正确安装；使用与查询相同的选项。你可以使用 `-V` 或 `-y` 代替 `--verify`。 |
+| `--percent` | 在安装期间显示软件包的百分比。 |
+| `--replacepkgs` | 安装已安装的软件包。 |
+| `--replacefiles` | 替换由其他软件包安装的文件。 |
+| `--redhatprovides dependent-files` | 搜索依赖软件包。 |
+| `--oldfiles` | 安装已安装软件包的旧版本。 |
+| `--test` | 测试安装；不安装，只检查冲突。 |
+| `-h` | 在安装软件包时显示 # 符号。 |
+| `--excludedocs` | 排除文档文件。 |
+| `--nodeps` | 安装时不进行任何依赖检查（危险）。 |
+| `--force` | 尽管存在冲突仍强制安装（危险）。 |
+| 卸载选项（与 `-e` 一起使用） |  |
+| `--test` | 测试卸载。不移除，只检查将要移除的内容。 |
+| `--nodeps` | 卸载时不检查依赖关系。 |
+| `--allmatches` | 移除软件包的所有版本。 |
+| 查询选项（与 `-q` 一起使用） |  |
+| `package-name` | 查询软件包。 |
+| `-qa` | 查询所有软件包。 |
+| `-qf filename` | 查询拥有该文件名的软件包。 |
+
+
+
+| `-qR` | 列出此软件包所依赖的软件包。 |
+
+| `-qp package-name` | 查询未安装的软件包。 |
+
+| `-qi` | 显示所有软件包信息。 |
+
+| 操作模式 | 效果 |
+
+|---|---|
+
+| `-ql` | 列出包中的文件。 |
+
+| `-qd` | 仅列出包中的文档文件。 |
+
+| `-qc` | 仅列出包中的配置文件。 |
+
+| `-q --dump` | 仅列出具有完整详细信息的 文件。 |
+
+| 通用选项（可与任何选项一起使用） |  |
+
+| `-vv` | 调试；显示所执行的所有操作 的描述。 |
+
+| `--quiet` | 仅显示错误消息。 |
+
+| `--version` | 显示 rpm 版本号。 |
+
+| `--help` | 显示详细的使用信息。 |
+
+| `--rootdirectory` | 使用目录作为所有操作 的顶级目录（而不是根目录）。 |
+
+| `--dbpathdirectory` | 在指定目录中使用 RPM 数据库。 |
+
+| `--dbpath cmd` | 将 RPM 的输出通过管道传输到 命令 `cmd`。 |
+
+| `--rebuilddb` | 重建 RPM 数据库；可与 `--root` 和 `--dbpath` 选项一起使用。 |
+
+| `--initdb` | 构建新的 RPM 数据库；可与 `--root` 和 `--dbpath` 选项一起使用。 |
+
+| 其他信息来源 |  |
+
+| www.rpm.org | 包含详细文档的 RPM 网站。 |
+
+| RPM 手册页（man rpm） | 选项的详细列表。 |
+
+## 表 29-3 Red Hat 软件包管理器（RPM）选项（续）
+
+### 从 RPM 包和已安装软件中查询信息
+
+`-q` 选项可告诉您某个包是否已安装，而 `-qa` 选项会显示所有已安装包的列表。将此输出通过管道传输到 `more` 等分页实用程序是最好的。
+
+```
+# rpm -qa | more
+```
+
+在下一个示例中，用户检查 Mozilla 是否已安装在系统上。请注意，RPM 归档文件的完整文件名是不必要的。如果包已安装，您的系统已经注册了它的名称以及它所在的位置。
+
+```
+# rpm -q mozilla
+mozilla-1.0.1-24
+```
+
+您可以将 `q` 选项与 `i` 或 `l` 选项组合以显示有关包的信息。选项 `-qi` 显示有关软件的信息，例如版本号或作者（`-qpi` 查询未安装的包文件）。选项 `-ql` 显示软件包中所有文件的列表。`--h` 选项提供 `rpm` 选项的完整列表。常见的查询选项在表 29-4 中显示。
+
+> 提示 请记住已安装软件包名称与包文件名之间的区别。文件名以 `.rpm` 扩展名结尾，只能使用 `p` 选项进行查询。
+
+要直接从 RPM 包中显示信息，您可以按表 29-5 所示将 `p` 限定符添加到 `q` 选项。`-qpi` 组合显示有关特定包的信息，而 `-qpl` 显示给定 RPM 包包含的文件列表。在这种情况下，您必须指定 RPM 包的完整文件名。您只需输入名称的唯一部分并使用 `*` 文件名匹配字符来生成其余部分，即可避免输入整个名称。
+
+如果您的 RPM 查询输出大量数据，例如大量文件列表，您可以将输出通过管道传输到 `more` 命令以逐屏查看，甚至可以将输出重定向到文件。
+
+```
+# rpm -ql mozilla | more
+# rpm -qpl emacs-21.2-18.1386.rpm > mytemp
+```
+
+### 使用 rpm 安装和更新包
+
+您使用 `-i` 选项安装新包，使用 `-U` 选项用新版本更新当前已安装的包。使用 `-e` 选项，`rpm` 会卸载包。如果您尝试使用 `-i` 选项安装已安装包的更新版本，您将收到一条错误消息，提示包已安装。当安装包时，RPM 会使用从软件供应商导入的公钥检查其签名。如果签名检查失败，将显示错误消息，如果您没有适当的公钥，则指定 `NOKEY`。如果您想覆盖已安装的包进行安装，可以使用 `--replacepkgs` 选项强制安装。有时包会包含一个文件，例如库，该
+
+#### 表 29-4
+
+已安装软件的查询选项
+
+| 选项 | 含义 |
+
+|---|---|
+
+| `-q application` | 检查是否安装了某个应用程序。 |
+
+| `-qa application` | 列出所有已安装的 RPM 应用程序。 |
+
+| `-qf filename` | 查询拥有该文件名的应用程序。 |
+
+| `-qR application` | 列出此应用程序所依赖的应用程序。 |
+
+| `-qi application` | 显示所有应用程序信息。 |
+
+| `-ql application` | 列出应用程序中的文件。 |
+
+| `-qd application` | 仅列出应用程序中的文档文件。 |
+
+| `-qc application` | 仅列出应用程序中的配置文件。 |
+
+#### 表 29-5
+
+RPM 包的查询选项
+
+| 选项 | 含义 |
+
+|---|---|
+
+| `-qpi RPM-file` | 显示 RPM 包中的所有包信息。 |
+
+| `-qpl RPM-file` | 列出 RPM 包中的文件。 |
+
+| `-qpd RPM-file` | 仅列出 RPM 包中的文档文件。 |
+
+| `-qpc RPM-file` | 仅列出 RPM 包中的配置文件。 |
+
+| `-qR RPM-file` | 列出此 RPM 包所依赖的包。 |
+
+该文件也由另一个包安装。要允许一个包覆盖另一个包安装的文件，您可以使用 `--replacefiles` 选项。许多包依赖于其他包安装的库。如果这些依赖包尚未安装，您将首先需要安装它们。RPM 会通知您缺失的依赖文件并建议要安装的包。如果没有建议的包，您可以使用 `--redhatprovides` 选项与缺失的文件一起搜索所需的包。
+
+`-U` 选项如果尚未安装也会安装一个包，而 `-F` 选项只会更新已安装的包。如果包包含将覆盖当前已安装配置文件的配置文件，它会将每个当前配置文件的副本保存到以 `.rpmsave` 结尾的文件中，例如 `/etc/mtools.conf.rpmsave`。这保留了您可能对文件所做的任何自定义配置更改。请务必同时检查先前版本和更新版本之间的配置兼容性。如果您尝试安装的包比已安装的包更旧，则需要使用 `--oldpackages` 选项。
+
+```
+# rpm -Uvh mozilla-1.0.1-24.i386.rpm
+```
+
+如果您是从 CD-ROM 安装，可以切换到 CD-ROM 的 RPMS 目录，该目录存放 RPM 包（RPMS 目录可能位于 Red Hat CD-ROM 上的 RedHat 等目录内）。`ls` 命令列出所有软件包。如果您知道包名的开头，您应该在 `ls` 命令中包含它并加上附加的 `*`。包列表很长，不会全部显示在一屏上。这有助于显示包的详细名称。以下示例列出了大多数 X Window System 包：
+
+```
+# ls x*
+```
+
+### 安装示例
+
+在下一个示例中，用户首先使用 `-i` 选项安装一个新包，然后使用 `-U` 选项更新一个包。包含 `-v` 和 `-h` 选项是惯例的。在这里，`-v` 是详细选项，会在安装时显示所有文件，`-h` 会定期显示交叉阴影符号以表明 RPM 仍在工作。在以下示例中，用户安装 Balsa 邮件客户端的软件包。请注意输入了完整文件名。要列出完整名称，您可以使用 `ls` 命令加上前几个字符
+
+和一个星号，`ls balsa*`。然后使用带 `-q` 选项的 `rpm` 命令来检查软件是否已安装。对于已安装的包，只需要使用软件名称——在本例中为 `balsa-1.2.4-7`。
+
+```
+[root@turtle mypackages]# ls balsa*
+balsa-1.2.4-7.i386.rpm
+[root@turtle mypackages]# rpm -ivh balsa-1.2.4-7.i386.rpm
+balsa-1.2.4-7
+[root@turtle mypackages]# rpm -q balsa
+balsa-1.2.4-7
+```
+
+要显示已安装包的信息，使用 `-qi`，`-ql` 显示给定 RPM 包包含的文件列表。
+
+```
+# rpm -qi balsa
+# rpm -ql balsa
+```
+
+如果您担心软件包会错误地安装在您的系统上，您可以在调试模式（`vv`）中使用测试选项（`-test`）来查看 RPM 将采取的确切操作。
+
+```
+# rpm -ivv --test balsa-1.2.4-7.i386.rpm
+```
+
+### 移除 RPM 软件包
+
+要从系统中移除软件包，首先使用 `rpm -q` 确保它确实已安装。然后使用 `-e` 选项卸载它。您不必使用已安装文件的全名。您只需要应用程序的名称即可。例如，如果您决定不需要 Balsa，可以使用 `-e` 选项和软件名称将其移除，如下所示：
+
+```
+# rpm -e balsa
+```
+
+### 验证 RPM 安装
+
+您可以使用验证选项（`-V`）查看安装过程中是否出现任何问题。RPM 将已安装文件的当前属性与包安装时放置在 RPM 数据库中的信息进行比较。如果不存在差异，RPM 不会输出任何内容。否则，RPM 会为每个失败的包中的每个文件输出八个字符序列，每个属性一个，未不同的用句点表示，有差异的用相应的字符代码表示，如表 29-6 所示。以下示例验证 ProFTPD 包：
+
+
+
+```
+[root@turtle mypackages]# rpm -V proftpd
+```
+
+要直接将已安装文件与 RPM 包文件中的文件进行比较，您使用 `-Vp` 选项，类似于 `-qp` 选项。要检查所有包，请使用此处所示的 `-Va` 选项：
+
+```
+# rpm -Va
+```
+
+## 表 29-6
+
+RPM 不一致代码
+
+| 属性 | 说明 |
+|---|---|
+| `5` | MD5 校验和 |
+| `S` | 文件大小 |
+| `L` | 符号链接 |
+| `T` | 文件修改时间 |
+| `D` | 设备 |
+| `U` | 用户 |
+| `G` | 组 |
+| `M` | 模式（包含权限和文件类型） |
+
+如果你想验证一个软件包，但你只知道其中某个文件的名称，你可以将 verify 与 `-V` 选项结合使用。以下示例验证包含 `ftp` 命令的 RPM 软件包：
+
+```
+# rpm -Vf /bin/ftp
+```
+
+## 重建 RPM 数据库
+
+RPM 在其 RPM 数据库中维护已安装软件包的记录。你有时可能需要重建此数据库，以确保 RPM 拥有当前已安装和未安装的信息。使用 `--rebuilddb` 选项重建数据库文件：
+
+```
+# rpm --rebuilddb
+```
+
+要创建新的 RPM 数据库，请使用 `--initdb` 选项。此选项可以与 `--dbpath` 结合使用，以指定新数据库的位置。
+
+## 从 RPM 源代码文件安装软件：SRPMs
+
+Red Hat 以及其他几个发行商还提供其二进制 RPM 打包软件的源代码版本。源代码被打包成 RPM 软件包，将自动安装到指定的目录中，以便你轻松编译和安装软件。源代码包称为 SRPMs。这些包的名称以扩展名 `.src.rpm` 结尾。Red Hat 发行版中软件包的源代码版本位于 Red Hat 发布版的 `SRPMS` 目录中。许多在线站点如 rpmfind.net 也列出 SRPM 软件包。源代码版本的优点在于让你可以对源代码进行自己的修改，从而生成你自己的 RPM 打包软件的定制版本。你仍然使用 `rpm` 命令并带 `-i` 选项来安装源代码包。在以下示例中，你安装 Freeciv 的源代码：
+
+```
+# rpm -i freeciv-1.13.0-2.src.rpm
+```
+
+## 源代码 RPM 目录
+
+在 Red Hat 上，SRPM 文件安装在 `/usr/src/redhat` 目录的各个子目录中。当 SRPM 安装时，一个 `spec` 文件会被放置在 `/usr/src/redhat/SPECS` 目录中，而源代码文件的压缩归档会被放置在 `/usr/src/redhat/SOURCES` 目录中。对于 Freeciv，一个名为 `freeciv.spec` 的 `spec` 文件会被放置在 `/usr/src/redhat/SPECS` 中，而一个名为 `freeciv-1.13.0.tar.gz` 的压缩归档会被放置在 `/usr/src/redhat/SOURCES` 目录中。
+
+## 构建源代码
+
+要构建源代码文件，你需要提取它们并对其运行可能随包包含的任何补丁。你可以通过切换到 `/usr/src/redhat/SPECS` 目录并使用 `rpm` 命令来完成此操作，这次使用 `-bp` 选项来生成源代码文件：
+
+```
+# cd /usr/src/redhat/SPECS
+# rpm -bp freeciv.spec
+```
+
+生成的源代码文件会被放置在其自己的子目录中，该子目录以软件包的名称命名，位于 `/usr/src/redhat/BUILD` 目录下。对于 Freeciv，Freeciv 源代码被放置在 `/usr/src/redhat/BUILD/freeciv-1.13.0` 目录中。在此子目录中，你可以修改源代码，以及编译和安装应用程序。查看软件的 `README` 和 `INSTALL` 文件以获取详细信息。
+
+## 从压缩归档安装软件：`.tar.gz`
+
+Linux 软件应用程序以源代码形式可在互联网上的不同站点获得。你可以下载其中任何软件并将其安装在你的系统上。最新版本通常以压缩归档文件的形式提供。如果没有 RPM 版本，应用程序始终可以作为压缩归档下载。这对于 GNOME 或 KDE 包的最新版本尤其如此。RPM 包仅间歇性生成。
+
+## 一步解压缩和提取软件
+
+虽然你可以分别进行解压缩和提取软件的操作，但你会发现更常见的做法是用单个命令执行这两个操作。`tar` 实用程序提供了可用于让 `tar` 先为你解压缩文件的解压缩选项，调用指定的解压缩实用程序。`z` 选项会自动调用 `gunzip` 来解包 `.gz` 文件，`j` 选项解包 `.bz2` 文件。使用 `Z` 选项处理 `.Z` 文件。例如，要将 `tar.gz` 文件的解压缩和解包操作合并为一个 `tar` 命令，将 `z` 选项插入选项列表，`xzvf`（参见本章后面“提取软件”部分对这些选项的讨论）。下一个示例展示了如何一步完成解压缩和提取：
+
+```
+# tar xzvf htdig-3.1.6.tar.gz
+```
+
+对于 `.bz2` 压缩的归档文件，你应该使用 `j` 选项而不是 `z` 选项。
+
+```
+# tar xvfj htdig-3.1.6.tar.bz2
+```
+
+## 解压缩软件
+
+许多处于开发中或为跨平台实现而设计的软件包可能不是 RPM 格式。相反，它们可能被归档并压缩。这些文件的文件名以 `.tar.gz`、`.tar.bz2` 或 `.tar.Z` 扩展名结尾。不同的扩展名表示使用不同的命令进行不同的解压缩方法：`.gz` 使用 `gunzip`，`.bz2` 使用 `bunzip2`，`.Z` 使用 `decompress`。事实上，大多数具有 RPM 格式的软件也都有对应的 `.tar.gz` 格式。在下载此类软件包后，你必须先解压缩它，然后使用 `tar` 命令解包。压缩归档文件可能包含需要编译的源代码，或者像 Java 软件包那样，包含可直接运行的二进制文件。
+
+压缩归档文件是用 `tar` 创建的归档文件，然后用 `gzip` 等压缩工具压缩。要安装此类文件，你必须先用 `gunzip` 等解压缩工具解压缩，然后使用 `tar` 提取构成软件包的文件和目录。除了 `gunzip` 工具，你也可以使用 `gzip -d`。以下示例解压缩 `htdig-3.1.6.tar.gz` 文件，将其替换为名为 `htdig-3.1.6.tar` 的解压缩版本：
+
+```
+# ls
+htdig-3.1.6.tar.gz
+# gunzip htdig-3.1.6.tar.gz
+# ls
+htdig-3.1.6.tar
+```
+
+你可以从许多不同的站点下载压缩归档文件，包括前面提到的那些站点。下载可以通过 `ncftp` 和 `gftp` 等 FTP 客户端，或使用 Mozilla 等任何 Web 浏览器来完成。下载后，任何以 `.Z`、`.bz2`、`.zip` 或 `.gz` 结尾的文件都是压缩文件，必须解压缩。
+
+对于以 `.bz2` 结尾的文件，你将使用 `bunzip2` 命令。以下示例解压缩从 www.blackdown.org 下载的 Java 2 SDK：
+
+```
+# bunzip2 j2sdk-1.3.0-FCS-linux-i386.tar.bz2
+# ls
+j2sdk-1.3.0-FCS-linux-i386.tar
+```
+
+## 选择安装目录
+
+在解包归档文件之前，将其移动到你想要放置它的目录。源代码软件包应放在 `/usr/local/src` 目录中，二进制软件包放在指定的目录中。源代码文件在 `/usr/local/src` 目录中解包，生成自己的子目录，你可以从中编译和安装软件。安装完成后，你可以删除此目录，保留原始源代码软件包文件（`.tar.gz`）。
+
+包含可直接运行的二进制程序的软件包，如 Java，旨在提取到某些目录中。通常这是 `/usr/local` 目录。大多数归档文件在解包时都会创建一个以应用程序名称及其版本命名的子目录，将构成软件包的所有文件或目录放入该子目录中。例如，文件 `cdrarchive-1.2.2.tar` 解包到名为 `cdrarchive-1.2.2` 的子目录。在某些情况下，包含预编译二进制文件的软件包设计为直接解包到它将被使用的系统子目录中。例如，建议将 `j2sdk-1.3.0-FCS-linux-i386.tar` 解包到 `/usr/local` 目录中，在那里它将创建一个名为 `j2sdk-1.3.0` 的子目录。`/usr/local/j2sdk-1.3.0/bin` 目录包含 Java 二进制程序。
+
+## 提取软件
+
+首先，使用 `tar` 的 `t` 选项检查归档文件的内容。如果第一个条目是目录，那么在提取归档文件时，该目录将被创建，提取的文件将被放置其中。如果第一个条目不是目录，你应该先创建一个，然后将归档文件复制到其中。然后在该目录内提取归档文件。如果没有目录作为第一个条目，文件将被提取到当前目录。你必须自己创建一个目录来保存这些文件。
+
+```
+# tar tvf htdig-3.1.6.tar
+```
+
+现在你可以从 `tar` 归档文件中提取文件了。你使用 `tar` 的 `x` 选项提取文件，`v` 选项在提取时显示文件路径名，以及 `f` 选项，后跟归档文件名：
+
+```
+# tar xvf htdig-3.1.6.tar
+```
+
+提取过程会创建一个由软件名称和版本组成的子目录。在前面的示例中，提取创建了一个名为 `htdig-3.1.6` 的子目录。你可以切换到此子目录并检查其文件，例如 `README` 和 `INSTALL` 文件。
+
+
+
+```
+# cd htdig-3.1.6
+```
+
+你的软件安装可能因每个软件包而异。说明通常与安装程序一起提供。务必查阅随附的 `README` 和 `INSTALL` 文件，如有包含。有关如何在系统上创建和安装应用程序的信息，请参阅以下关于编译软件的部分。
+
+## 编译软件
+
+一些软件可能以源代码形式存在，你需要在安装之前编译它。这对于为跨平台实现而设计的程序尤其正确。设计用于在各种 Unix 系统（如 Sun）以及 Linux 上运行的程序可能以源代码形式分发，在这些不同的系统上下载并编译。近年来，通过使用配置脚本编译此类软件变得大大简化，这些脚本会自动检测给定系统的硬件和软件配置，然后允许你相应地编译程序。例如，C 系统上的编译器可能是 `gcc` 或 `cc`。配置脚本会检测系统中存在哪一个，并将其选用于程序编译。
+
+`configure` 脚本的工作方式是通过生成一个定制化的 `Makefile` 来实现，该 `Makefile` 专为特定系统设计。`Makefile` 包含编译程序的详细命令，包括任何预处理、链接所需的库，以及按正确顺序编译程序组件。复杂应用的许多 `Makefile` 可能需要访问多个软件子目录，每个子目录都有各自需要编译的组件。使用 `configure` 和 `Makefile` 脚本极大地自动化了编译过程，将其简化为几个简单的步骤。
+
+首先切换到已解压软件源代码的目录：
+
+```
+# cd /usr/local/src/cdarchive-1.2.2
+```
+
+在编译软件之前，请阅读随附的 `README` 或 `INSTALL` 文件。这些文件提供了如何编译和安装该特定程序的详细说明。
+
+大多数软件都可以通过三个简单的步骤进行编译和安装。第一步是 `./configure` 命令，它会生成你的定制化 `Makefile`。第二步是 `make` 命令，它使用工作目录中的 `Makefile`（在本例中就是你刚刚用 `./configure` 命令生成的 `Makefile`）来编译你的软件。最后一步也使用 `make` 命令，但这次带上 `install` 选项。由 `./configure` 命令生成的 `Makefile` 还包含在你的系统上安装软件的说明。使用 `install` 选项仅运行这些安装命令。要执行安装，你必须以 `root` 用户身份登录，以便能够将软件文件添加到系统目录中。如果软件使用配置脚本，编译和安装通常只需要以下三个简单的命令：
+
+```
+# ./configure
+# make
+# make install
+```
+
+在前面的示例中，`./configure` 命令执行配置检测。`make` 命令执行实际的编译，使用由 `./configure` 操作生成的 `makefile` 脚本。`make install` 命令将程序安装到你的系统上，将可执行程序放置在 `/usr/local/bin` 等目录中，并将任何配置文件放置在 `/etc` 中。它创建的任何共享库可能会进入 `/usr/local/lib`
+
+一旦你编译并安装了应用程序，并且确认其正常工作，你就可以删除在解压软件时创建的源代码目录。你可以保留归档文件（`tar`），以防需要再次解压软件。使用 `rm` 并带上 `-rf` 选项，以便删除所有子目录，并且无需确认每个删除操作：
+
+```
+# rm -rf cdarchive-1.2.2
+```
+
+提示 请务必记住在 `configure` 命令前加上点和斜杠。`./` 引用的是当前工作目录中的命令，而不是另一个 Linux 命令。
+
+## Configure 命令选项
+
+某些软件可能为 `./configure` 操作设置了特定选项。要了解这些选项，可以使用 `--help` 选项运行 `./configure` 命令。
+
+```
+# ./configure --help
+```
+
+一个常用的选项是 `--prefix` 选项，它允许你指定安装目录：
+
+```
+# ./configure --prefix=/usr/bin
+```
+
+> 提示 一些较旧的 X 应用程序使用 `xmkmf` 直接生成所需的 `Makefile`，而不是使用 `configure` 脚本。在这种情况下，用 `xmkmf` 命令代替 `./configure`。务必查阅软件的 `INSTALL` 和 `README` 文件。
+
+## 开发库
+
+如果你正在编译基于 X、GNOME 或 KDE 的程序，请确保其开发库已安装。对于 X 应用程序，请确保 `xmkmf` 程序也已安装。如果你安装发行版时选择了标准安装，这些很可能未被安装。对于使用 RPM 包的发行版，这些以一组开发 RPM 包的形式提供，通常名称中包含“development”或“develop”。你需要使用 `rpm` 或 `redhat-config-packages` 安装它们。GNOME 尤其有一套用于开发库的广泛 RPM 包。许多 X 应用程序需要特殊的共享库。例如，一些应用程序可能需要 `xforms` 库或 `qt` 库。其中一些你可能需要从在线站点获取。
+
+## 共享库和静态库
+
+库可以是静态的、共享的或动态的。静态库是指其代码在编译时被合并到程序中的库。然而，共享库的代码在程序运行时才被加载以供访问。编译时，这样的程序只需记录其需要的库。然后程序运行时，该库会被加载，程序即可访问其函数。动态库是共享库的一种变体。与共享库类似，它可以在程序运行时被加载。然而，它并不会真正加载，直到程序中的指令指示它加载。它也可以在程序运行时被卸载，并可被另一个库替换。共享库和动态库使得代码更小。程序无需将库作为其可执行文件的一部分包含在内，只需引用它即可。
+
+在你的系统上提供的库位于 `/usr/lib` 和 `/lib` 目录中。这些库的名称始终以前缀 `lib` 开头，后跟库名和后缀。后缀根据它是静态库还是共享库而有所不同。共享库的扩展名为 `.so`，后跟主版本号和次版本号。静态库则简单地具有 `.a` 扩展名。对于旧的 a.out 格式的共享库，还做出了进一步区分。这些的扩展名为 `.sa`。库名称的语法如下：
+
+```
+libname.so.major.minor
+libname.a
+```
+
+名称可以是任意字符串，并且它唯一标识一个库。它可以是一个单词、几个字符，甚至是一个字母。共享数学库的名称为 `libm.so.5`，其中数学库由字母 `m` 唯一标识，其主版本号为 5。`libm.a` 是静态数学库。X Window 库的名称为 `libX11.so.6`，其中 X Window 库由字母 `X11` 唯一标识，其主版本号为 6。
+
+大多数共享库位于 `/usr/lib` 和 `/lib` 目录中。这些目录总是被首先搜索。有些共享库位于它们自己的专用目录中。这些目录的列表会放在 `/etc/ld.conf` 配置文件中。对于给定的库，也会搜索这些目录。默认情况下，Linux 首先查找共享库，然后查找静态库。每当共享库被更新或安装了新的共享库时，你需要运行 `ldconfig` 命令来更新其在 `/etc/ld.conf` 文件中的条目以及指向它的链接（如果你从 RPM 包安装，这通常会自动完成）。
+
+## Makefile 文件
+
+如果不存在 `configure` 脚本，并且程序不使用 `xmkmf`，你可能需要直接编辑软件的 `Makefile`。请务必查看此类软件的文档，以确定是否需要对 `Makefile` 进行任何修改。可能只需要做一些小的改动，但更详细的修改需要理解 C 编程以及 `make` 如何与之配合。如果你成功配置了 `Makefile`，可能只需要输入 `make` 和 `make install` 命令。一个可能的问题是如何找到 C 和 X Window System 的开发库。X 库位于 `/usr/X11R6/lib` 目录中。标准 C 库位于 `/usr/lib` 目录中。
+
+## 命令和程序目录：PATH
+
+程序和命令通常安装在几个标准系统目录中，如 `/bin`、` /usr/bin`、`/usr/X11R6/bin` 或 `/usr/local/bin`。然而，有些包将它们的命令放在子目录中，这些子目录是它们在这些标准目录之一内创建的，或者在一个完全独立的目录中。在这种情况下，你可能无法运行这些命令，因为你的系统可能无法在新的子目录中找到它们。你的系统维护着一组用于搜索命令的目录，每次执行命令时都会在其中搜索。这组目录保存在一个名为 `PATH` 的系统变量中，该变量在系统启动时创建。如果命令位于不在此列表中的目录中，你的系统将无法找到并运行它。要使用此类命令，你首先需要将新目录添加到 `PATH` 变量中的目录集合中。像 `RPM` 这样的安装工具会自动为你更新 `PATH`，添加适当的目录。
+
+在 Red Hat 系统中，`PATH` 变量最初在 `/etc/rc.d/rc.sysinit` 文件中赋值，并在系统启动时由不同的服务进一步添加内容。你可以直接编辑 `/etc/rc.d/rc.sysinit` 文件，但必须非常小心，不要更改任何其他内容。更安全的方法是在 `/etc/profile` 文件中添加 `PATH` 定义。
+
+## /etc/profile
+
+要使应用程序对所有用户可用，你可以将软件的目录添加到 `/etc/profile` 脚本中的路径条目中。`/etc/profile` 脚本是一个系统脚本，在每个用户登录时执行。使用文本编辑器（如 `KEdit`、`gedit`、`Emacs` 或 `Vi`）仔细编辑 `/etc/profile` 文件（你可能想先用 `cp` 命令做一份备份副本）。你添加的一行应以 `PATH` 开头，后跟一个 `+` 号和术语
+
+
+
+`$PATH`，再跟一个冒号，然后是要添加的目录。`PATH` 前面的 `$` 会从 `PATH` 变量中提取路径名。如果要添加多个目录，请确保用冒号分隔它们。末尾也应有一个冒号。例如，如果你安装 Java 2 SDK，Java 命令将安装在 `/usr/local` 目录下名为 `j2sdk-1.3.0/bin` 的子目录中。该目录的完整路径名是 `/usr/local/j2sdk-1.3.0/bin`。你需要将此目录添加到 `/etc/profile` 文件中赋给 `PATH` 的目录列表中。以下示例显示了 `PATH` 变量及其目录列表，并添加了 `/usr/local/j2sdk-1.3.0/bin` 目录。注意 `=` 号后面 `PATH` 之前的 `$`，即 `PATH=$PATH`。
+
+```
+PATH=$PATH:/usr/local/j2sdk-1.3.0/bin
+```
+
+做出更改后，你可以执行 `profile` 文件以使更改生效。
+
+```
+$ . /etc/profile
+```
+
+## .bash_profile
+
+个人用户可以通过在各自的 `.bashrc` 或 `.bash_profile` 文件中放置 `PATH` 赋值来自定义其 `PATH` 变量。这样，用户可以访问他们在自己的用户目录中创建或安装供自己使用的命令和程序（更多细节请参见第 9 章）。在 Red Hat 中，用户的 `.bash_profile` 文件已经包含以下 `PATH` 定义。注意 `$PATH` 的使用，它保留了先前启动脚本（如 `/etc/profile` 和 `/etc/rc.d/rc.sysinit`）中已经添加到 `PATH` 的所有目录。
+
+```
+PATH=$PATH:$HOME/bin
+```
+
+`.bash_profile` 文件中的以下条目将用户的 `newbin` 目录添加到 `PATH` 变量中。注意放在新目录前面的冒号，以及使用 `$HOME` 变量来指定用户主目录的路径名。
+
+```
+PATH=$PATH:$HOME/bin/:$HOME/newbin
+```
+
+对于 `root` 用户，`PATH` 定义还包括 `sbin` 目录。`sbin` 目录存放 `root` 用户需要访问的系统管理程序。`root` 用户的 `PATH` 如下所示：
+
+```
+PATH=/usr/local/sbin:/usr/sbin:/sbin:$PATH:$HOME/bin
+```
+
+## 并发版本系统：CVS
+
+并发版本系统（`CVS`）是一种软件开发方法，允许来自远程地点的开发人员在存储于中央服务器上的软件上工作。`CVS` 允许多个开发人员同时处理同一个文件。这意味着 `CVS` 支持并行开发，因此世界各地的程序员可以通过简单的互联网连接同时处理同一任务。它已成为 Linux 开发人员中流行的利用互联网创建软件的手段。`CVS` 也是不同软件最新版本的来源。像 `KDE` 和 `GNOME` 这样持续进行的项目使用 `CVS` 服务器来发布其桌面应用程序的最新版本，主要因为它易于通过互联网进行程序开发。`sourceforge.net` 网站为许多正在进行的 Linux 项目提供 `CVS` 仓库。许多 `CVS` 站点现在支持 `ViewCVS`（`WebCVS` 的增强版本），它是一个 `CVS` 仓库的 Web 浏览器前端，让您可以轻松浏览和选择软件版本。您可以在 `www.cvshome.org` 上了解更多关于 `CVS` 的信息。
+
+> Tip 您也可以在 `GNOME` 和 `KDE` 上使用 `CVS` GUI 客户端以及 `ViewCVS` 来管理您的 `CVS` 仓库或访问互联网上的仓库。对于 `GNOME`，您可以使用 `Pharmacy`，对于 `KDE`，您可以使用 `Cerosia` 或 `LinCVS`。
+
+使用 `CVS` 仓库进行软件开发涉及访问软件版本、在本地系统上进行更改，然后将更改后的版本上传回 `CVS` 仓库的流程。实际上，您签出软件，以一种仔细记录的方式进行更改，然后将您的版本签回仓库。`CVS` 最初是作为旧版修订控制系统（`RCS`）的前端开发的，并共享许多相同的命令。
+
+## 使用 RPM 打包您的软件
+
+许多研究和企业环境为在其组织内部分发而开发自己的定制软件。有时软件包会被下载然后为特定组织定制。为了更轻松地安装此类定制软件，管理员会将程序打包到自己的 `RPM` 包中。在此类包中，您可以包含自己的配置文件、文档以及修改后的源代码和二进制文件。`RPM` 会自动将软件安装到系统指定的目录中，同时附带任何文档、库或支持程序。
+
+包创建过程旨在将程序经过几个阶段，从从归档中解包开始，然后编译其源代码，最后生成 `RPM` 包。您可以跳过其中任何阶段，直到最后一个阶段。如果您的软件已经解包，您可以从编译开始。如果您的软件已编译，您可以从安装开始。如果它已经安装，您可以直接创建 `RPM` 包。
+
+`RPM` 的构建过程过去包含在 `rpm` 命令中。现在它们已整合到一个名为 `rpmbuild` 的独立工具中。该工具以及支持库和文档位于 `rpm-build` 包中。在尝试构建 `RPM` 包之前，请确保已安装此包。您仍然可以使用构建选项运行 `rpm` 命令，但这些只是对应 `rpmbuild` 命令的别名。
+
+## 文件系统管理
+
+文件驻留在物理存储设备上，例如硬盘、CD-ROM 或软盘。每个存储设备上的文件都组织在文件系统中。Linux 系统上的存储设备以文件系统集合的形式呈现，您可以对其进行管理。
+
+当您想要添加新的存储设备时，需要将其格式化为文件系统，然后将其附加到 Linux 文件结构中。硬盘可以划分为称为分区的独立存储设备，每个分区都有自己的文件系统。您可以对文件系统执行管理任务，例如备份它们、将它们附加或从文件结构中分离、格式化新设备或擦除旧设备，以及检查文件系统是否存在问题。
+
+要访问设备上的文件，您需要将其文件系统附加到指定目录。这称为挂载文件系统。例如，要访问软盘上的文件，您首先需要将其文件系统挂载到特定目录。使用 Linux，您可以挂载多种类型的文件系统。您甚至可以访问 Windows 硬盘分区或磁带驱动器，以及远程服务器上的文件系统。Red Hat 还将 CD-ROM 和软盘媒体配置为可从 `GNOME` 或 `KDE` 自动挂载。
+
+最近为 Linux 开发的文件系统现在支持日志功能，这使您的系统能够轻松从崩溃或中断中恢复。`ext3`、`ReiserFS` 和 `JFS`（IBM）文件系统维护一个称为日志的记录，用于记录文件和目录更改，可用于在系统因停电等不可预见事件突然崩溃时恢复正在使用的文件和目录。大多数发行版目前使用 `ext3` 文件系统作为默认文件系统，尽管您也可以选择使用 `ReiserFS` 或 `JFS`，这是一个独立开发的日志系统。
+
+您的 Linux 系统能够处理连接到它的任意数量的存储设备。您可以配置系统以访问多个硬盘、硬盘上的分区、CD-ROM 光盘、DVD、软盘，甚至磁带。您可以选择手动附加这些存储组件或在启动时自动挂载它们。自动挂载通过配置 `/etc/fstab` 文件来处理。例如，存放 Linux 系统程序的主要分区在每次启动时都会自动挂载，而软盘可以在您将其放入软盘驱动器时手动挂载，尽管即使这些也可以自动挂载。
+
+### 文件系统
+
+尽管 Linux 系统中的所有文件都连接成一个整体的目录树，但该树的某些部分可能位于不同的存储设备上，例如硬盘或 CD-ROM。特定存储设备上的文件被组织成所谓的 文件系统。文件系统是一个已格式化的设备，具有自己的目录和文件树。你的 Linux 目录树可能包含多个文件系统，每个文件系统位于不同的存储设备上。在一个具有多个分区的硬盘上，你将为每个分区拥有一个文件系统。文件本身被组织成一个无缝的目录树，从根目录开始。例如，如果你将 CD-ROM 连接到系统，一个路径名将直接从硬盘分区的文件系统上的根目录通向 CD-ROM 文件系统中的文件。
+
+> 提示 在 Linux 中，你可以挂载不同类型的文件系统，包括由其他操作系统创建的文件系统，如 Windows、IBM OS、Unix 和 SGI。在 Linux 内部支持多种文件系统，包括 `ReiserFS` 和 `ext3` 等几种日志文件系统。
+
+文件系统将其文件组织在其自己的目录树中。你可以将其视为必须附加到主目录树的子树。该树在你专门将其连接之前，与系统的目录树保持分离。例如，带有 Linux 文件的软盘具有自己的目录树。你需要将此子树附加到硬盘分区上的主树上。在它们连接之前，你无法访问软盘上的文件。
+
+### 文件系统层次结构标准
+
+Linux 将其文件和目录组织成一个从根目录开始并延伸到系统和用户目录的整体互连树。系统目录的组织和布局由文件系统层次结构标准（Filesystem Hierarchy Standard，`FHS`）确定。`FHS` 提供了一个标准化的布局，所有 Linux 发行版在设置其系统目录时都应遵循该布局。例如，必须有 `/etc` 目录来保存配置文件，以及 `/dev` 目录用于设备文件。你可以在 `www.pathname.com/fhs` 了解有关 `FHS` 的更多信息，包括官方文档。Linux 发行版、开发人员和管理员都遵循 `FHS`，以为 Linux 文件系统提供一致的组织。
+
+
+
+Linux 使用多个特定命名的目录用于专门的系统管理任务。所有这些目录都位于你的主 Linux 文件系统最顶层，即用单个斜杠`/`表示的文件系统根目录。例如，`/dev`目录保存设备文件，而`/home`目录保存用户主目录及其所有用户文件。你只能以系统管理员身份访问这些目录和文件（尽管用户通常只有只读访问权限）。你需要以 root 用户登录，将自己置于一个特殊的 root 用户管理目录`/root`中。从这里，你可以访问 Linux 文件系统上的任何目录，无论是管理目录还是用户目录。
+
+## 根目录：`/`
+
+根目录`/`中包含的子目录在表 30-1 中列出，同时还有其他有用的子目录。作为管理员，你可能经常访问的目录有保存配置文件的`/etc`目录、保存设备文件的`/dev`目录，以及
+
+| Directory | Function |
+|---|---|
+| `/` | Begins the file system structure—called the root. |
+| `/boot` | Holds the kernel image files and associated boot information and files. |
+| `/home` | Contains users' home directories. |
+| `/sbin` | Holds administration-level commands and any commands used by the root user. |
+| `/dev` | Holds file interfaces for devices such as the terminal and the printer. |
+| `/etc` | Holds system configuration files and any other system files. |
+| `/etc/opt` | Holds system configuration files for applications in `/opt`. |
+| `/etc/X11` | Holds system configuration files for the X Window System and its applications. |
+| `/bin` | Holds the essential user commands and utility programs. |
+| `/lib` | Holds essential shared libraries and kernel modules. |
+| `/lib/modules` | Holds the kernel modules. |
+| `/mnt` | Used to hold directories for mounting file systems like CD-ROMs or floppy disks that are mounted only temporarily. |
+| `/opt` | Holds added software applications (for example, KDE on some distributions). |
+| `/proc` | Process directory, a memory-resident directory containing files used to provide information about the system. |
+| `/tmp` | Holds temporary files. |
+| `/usr` | Holds those files and commands used by the system; this directory breaks down into several subdirectories. |
+| `/var` | Holds files that vary, such as mailbox, Web, and FTP files. |
+
+TABLE 30-1 Linux File System Directories
+
+以及保存 DNS、Web、邮件和 FTP 服务器数据文件，以及系统日志和计划任务的`/var`目录。对于管理不同版本的内核，你可能还需要访问`/boot`和`/lib/modules`目录以及`/usr/src/linux`。`/boot`目录保存你安装的任何新内核的内核映像文件，而`/lib/modules`目录保存不同内核的模块。
+
+## 系统目录
+
+你的 Linux 目录树包含某些目录，其文件用于不同的系统功能。对于基本系统管理，你应该熟悉用于存放应用程序的系统程序目录、系统配置目录（`/etc`）其中大多数配置文件放置的位置，以及保存系统日志的系统日志目录（`/var/log`），记录了系统上的活动。两者都在第 27 章中有详细说明。表 30-2 列出了系统目录。
+
+| Directories | Description |
+| --- | --- |
+| `/bin` | 与系统相关的程序 |
+| `/sbin` | 用于专门任务的系统程序 |
+| `/lib` | 系统库 |
+| `/etc` | 系统和网络服务及应用程序的配置文件 |
+| `/home` | 用户主目录和服务器数据目录的位置，例如 Web 和 FTP 站点文件 |
+| `/mnt` | CD-ROM 和软盘文件系统挂载的位置 |
+| `/var` | 系统目录的位置，其文件不断变化，例如日志、打印机 spool 文件和锁文件 |
+| `/usr` | 与用户相关的程序和文件。包括多个关键子目录，如`/usr/bin`、`/usr/X11`和`/usr/share/doc` |
+| `/usr/bin` | 用户程序 |
+| `/dev` | 设备文件 |
+| `/usr/X11` | X Window System 配置文件 |
+| `/usr/share` | 共享文件 |
+| `/usr/share/doc` | 应用程序文档 |
+| `/tmp` | 系统临时文件目录 |
+
+## Program Directories
+
+名称中带有 bin 的目录用于存放程序。`/bin`目录包含基本用户程序，例如 `login`、shell（`BASH`、`TCSH`和`zsh`）以及文件命令（`cp`、`mv`、`rm`、`ln`等）。`/sbin`目录包含用于文件系统管理（`fsck`、`fdisk`、`mkfs`）等专门系统程序，以及系统操作如关机和启动（`init`）。`/usr/bin`目录包含为用户任务设计的程序文件。`/usr/sbin`目录包含与用户相关的系统操作，例如用于添加新用户的`useradd`。`/lib`目录包含系统使用的所有库，包括主要的 Linux 库`libc`，以及诸如`modules`等子目录，其中存放所有当前内核模块。
+
+## Configuration Directories and Files
+
+当你配置系统的不同元素时，例如用户账户、应用程序、服务器或网络连接，你会使用保存在某些系统目录中的配置文件。在 Red Hat 上，配置文件放置在`/etc`目录中，更具体的设备和服务配置位于`/etc/sysconfig`目录（有关更多详细信息，请参阅第 27 章）。
+
+## The `/usr` Directory
+
+`/usr`目录包含大量重要的子目录，用于支持用户，提供应用程序、库和文档。`/usr/bin`包含众多用户可访问的应用程序和实用程序。`/usr/sbin`包含用户可访问的管理实用程序。`/usr/share`目录包含与体系结构无关的数据，其中包括大量子目录，例如用于文档的`man`、`info`和`doc`文件。表 30-3 列出了`/usr`目录的子目录。
+
+| Directory | Description |
+| --- | --- |
+| `/usr/bin` | 存放大多数用户命令和实用程序程序。 |
+| `/usr/sbin` | 存放管理应用程序。 |
+| `/usr/lib` | 存放应用程序、编程语言、桌面等的库。 |
+| `/usr/games` | 存放游戏和教育程序。 |
+| `/usr/include` | 存放 C 编程语言头文件（.h）。 |
+| `/usr/doc` | 存放 Linux 文档。 |
+| `/usr/local` | 存放本地安装的软件。 |
+| `/usr/share` | 存放与体系结构无关的数据，例如文档。 |
+| `/usr/src` | 存放源代码，包括内核源代码。 |
+| `/usr/X11R6` | 存放基于 X Window System 的应用程序和库。 |
+
+## The `/mnt` Directory
+
+`/mnt`目录通常用于 CD-ROM、DVD、软盘或 Zip 驱动器的挂载点，以及其他挂载的文件系统，例如 Windows 分区。这些是文件系统，你可能经常更改，与固定磁盘上的分区不同。Red Hat Linux 默认安装软盘和 CD-ROM 子目录用于挂载软盘和 CD-ROM，`/mnt/floppy`和`/mnt/cdrom`。附加驱动器在其名称后附加数字，如`/mnt/cdrom1`表示第二个 CD-ROM 驱动器。你还可以为要挂载的任何分区创建目录，例如`/mnt/windows`用于 Windows 分区。
+
+## The `/home` Directory
+
+
+
+`/home`目录存放用户主目录。当设置用户账户时，会在此为该账户设置主目录，通常与用户名相同。作为系统管理员，你可以访问任何用户的主目录，因此你可以控制其文件。
+
+## The `/var` Directory
+
+`/var`目录存放用于文件经常变化的任务的子目录，例如锁文件、日志文件、Web 服务器文件或打印机 spool 文件。例如，`/var`目录包含：
+
+服务器数据目录，例如 Apache Web 服务器的网站文件存放于`/var/www`，FTP 站点文件存放于`/var/ftp`，DNS 服务器的文件则存放于`/var/named`。`/tmp`目录只是用来存放程序在执行特定任务时可能需要的临时文件。
+
+`/var`目录专门用于存放随着 Linux 系统正常运行而变化的数据。例如，你正在打印的文档的假脱机文件就保存在这里。假脱机文件是作为临时打印文件创建的，打印结束后会被删除。其他文件（如系统日志文件）则会不断变化。表 30-4 列出了`/var`目录的子目录。
+
+**表 30-4 `/var` 子目录**
+
+| 目录 | 说明 |
+|---|---|
+| `/var/account` | 进程记账日志。 |
+| `/var/cache` | 存放手册页、Web 代理数据、字体或应用程序特定的缓存数据。 |
+| `/var/crash` | 存放系统崩溃转储文件。 |
+| `/var/games` | 存放可变的游戏数据。 |
+| `/var/lib` | 存放特定应用程序的状态信息。 |
+| `/var/local` | 用于存放`/usr/local`中安装程序所产生的变化数据。 |
+| `/var/lock` | 存放锁文件，用于指示某个程序或文件何时正在使用中。 |
+| `/var/log` | 存放日志文件，例如包含所有内核和系统程序消息的`/var/log/messages`。 |
+| `/var/mail` | 存放用户邮箱文件。 |
+| `/var/opt` | 存放`/opt`中安装应用程序的可变数据。 |
+| `/var/run` | 存放有关系统正在运行的进程的信息。 |
+| `/var/spool` | 存放应用程序的假脱机数据，如邮件、新闻和打印机队列，以及`cron`和`at`任务。 |
+| `/var/tmp` | 存放应在系统重启后保留的临时文件。 |
+| `/var/yp` | 存放网络信息服务（NIS）数据文件。 |
+| `/var/www` | 存放 Web 服务器的网站文件。 |
+| `/var/ftp` | 存放 FTP 服务器的 FTP 文件。 |
+| `/var/named` | 存放 DNS 服务器的域配置文件。 |
+
+## `/proc` 文件系统
+
+`/proc`文件系统是一种在系统内存中生成的特殊文件系统，并不存在于任何磁盘上。`/proc`包含一些提供系统状态重要信息的文件。例如，`/proc/cpuinfo`包含计算机 CPU 处理器的信息；`/proc/devices`列出当前配置为与内核一起运行的设备；`/proc/filesystems`列出文件系统。实际上，`/proc`文件是内核的接口，通过它们可以从内核获取有关系统的信息。表 30-5 列出了`/proc`的子目录和文件。
+
+| 文件 | 说明 |
+|---|---|
+| `/proc/num` | 每个进程都有一个以其编号标记的目录。`/proc/1`是进程 1 的目录。 |
+| `/proc/cpuinfo` | 包含有关 CPU 的信息，例如类型、制造商、型号和性能。 |
+| `/proc/devices` | 列出为当前运行的内核配置的设备驱动程序。 |
+| `/proc/dma` | 显示当前使用的 DMA 通道。 |
+| `/proc/filesystems` | 列出配置到内核中的文件系统。 |
+| `/proc/interrupts` | 显示正在使用的中断。 |
+| `/proc/ioports` | 显示正在使用的 I/O 端口。 |
+| `/proc/kcore` | 保存系统物理内存的映像。 |
+| `/proc/kmsg` | 包含内核生成的消息。 |
+| `/proc/ksyms` | 保存内核的符号表。 |
+| `/proc/loadavg` | 列出系统平均负载。 |
+| `/proc/meminfo` | 显示内存使用情况。 |
+| `/proc/modules` | 列出当前加载的内核模块。 |
+| `/proc/net` | 列出有关网络协议的状态信息。 |
+| `/proc/stat` | 包含系统运行统计信息，例如缺页异常发生次数。 |
+| `/proc/uptime` | 显示系统已运行的时间。 |
+| `/proc/version` | 显示内核版本。 |
+
+> 提示 您可以使用`redhat-config-proc`（内核调整工具，位于“更多系统工具”菜单中）来设置允许更改的`proc`文件值，例如最大文件数，或开启 IP 转发。
+
+## 设备文件：`/dev`
+
+要挂载文件系统，您必须指定其设备名称。系统可能连接的设备接口由称为设备文件的特殊文件提供。
+
+这些设备文件的名称就是设备名。设备文件位于`/dev`目录中，通常使用以设备编号结尾的缩写名称。例如，`fd0`可能引用系统中连接的第一台软盘驱动器。前缀`sd`引用 SCSI 硬盘，因此`sda2`将引用第一块 SCSI 硬盘上的第二个分区。在大多数情况下，你可以使用`man`命令加上前缀来获取有关此类设备的更详细信息。例如，`man sd`会显示 SCSI 设备的 man 手册页。所有设备名称的完整列表可以在 www.kernel.org 网站的`linux/doc/device-list`目录中的`devices`文件中找到，也可以在 Red Hat 系统的`/usr/src/linux/2.4/Documentation`目录下的`devices.txt`文件中找到。表 30-6 列出了几种常用的设备名称。
+
+| 设备名 | 描述 |
+|---|---|
+| `hd` | IDE 硬盘；1-4 为主分区；5 及以上为逻辑分区 |
+| `sd` | SCSI 硬盘 |
+| `scd` | SCSI CD-ROM 驱动器 |
+| `fd` | 软盘 |
+| `st` | SCSI 磁带驱动器 |
+| `nst` | SCSI 磁带驱动器，不自动回卷 |
+| `ht` | IDE 磁带驱动器 |
+| `tty` | 终端 |
+| `lp` | 打印机端口 |
+| `pty` | 伪终端（用于远程登录） |
+| `js` | 模拟操纵杆 |
+| `midi` | MIDI 端口 |
+| `ttyS` | 串行端口 |
+| `md` | RAID 设备 |
+| `rd/cn/dn` | 存放 RAID 设备的目录是`rd`；`cn`是 RAID 控制器，`dn`是该控制器的 RAID 磁盘 |
+| `cdrom` | 指向 CD-ROM 设备文件的链接 |
+| `cdwriter` | 指向 CD-R 或 CD-RW 设备文件的链接 |
+| `modem` | 指向调制解调器设备文件的链接 |
+| `floppy` | 指向软盘设备文件的链接 |
+| `tape` | 指向磁带设备文件的链接 |
+| `scanner` | 指向扫描仪设备文件的链接 |
+
+### 软盘设备
+
+你的软盘驱动器的设备名是`fd0`；它位于`/dev/`目录中。`/dev/fd0`引用你的软盘驱动器。注意`fd`后面的数字 0。如果你有多个软盘驱动器，其他驱动器分别用`fd1`、`fd2`等表示。
+
+### 硬盘设备
+
+IDE 硬盘使用前缀`hd`，而 SCSI 硬盘使用前缀`sd`。另一方面，RAID 设备使用前缀`md`。硬盘的前缀后面跟一个用于标识硬盘的字母，以及一个表示分区的数字。例如，`hda2`引用第一块 IDE 硬盘上的第二个分区，其中第一块硬盘用字母 a 表示，如`hda`。设备`sdb3`指第二块 SCSI 硬盘（`sdb`）上的第三个分区。不过，RAID 设备与软盘驱动器一样从 0 开始编号。设备`md0`引用第一个 RAID 设备，`md1`引用第二个。在 IDE 硬盘设备上，Linux 最多支持 4 个主 IDE 硬盘分区，编号为 1 到 4。逻辑分区的数量不限。要查找设备名，你可以使用`df`显示硬盘分区，或者检查`/etc/fstab`文件。
+
+### CD-ROM 设备
+
+CD-ROM 驱动器的设备名因你所拥有的 CD-ROM 类型而异。IDE CD-ROM 的设备名与 IDE 硬盘分区的前缀相同，都是`hd`，并通过后面的一个字母来与其他 IDE 设备区分。例如，连接到辅助 IDE 端口的 IDE CD-ROM 可能名为`hdc`。作为从设备连接到辅助端口的 IDE CD-ROM 可能名为`hdd`。实际名称在安装 CD-ROM 时确定，就像你安装 Linux 系统时那样。SCSI CD-ROM 驱动器使用不同的命名规则。它们以`scd`开头表示 SCSI 驱动器，后跟一个用于区分的数字。例如，SCSI CD-ROM 的名称可能是`scd0`或`scd1`。你的 CD-ROM 名称在安装系统时确定。你可以通过检查`/etc/fstab`文件来了解它。
+
+## 挂载文件系统
+
+
+
+将存储设备上的文件系统连接到主目录树的过程称为挂载设备。文件系统被挂载到主目录树上的一个空目录中。然后你可以切换到该目录并访问那些文件。如果该目录尚不存在，你必须创建它。文件结构中挂载新文件系统的目录称为挂载点。例如，要访问 CD-ROM 上的文件，首先必须挂载 CD-ROM。
+
+只有 root 用户才能挂载文件系统。这是一项系统管理任务，普通用户无法执行。不过，作为 root 用户，你可以让某个特定设备（如 CD-ROM）允许用户挂载。这样，任何用户都可以挂载 CD-ROM。对于软盘驱动器，你也可以这样做。
+
+> 提示：在 GNOME 中，你可以使用“系统设置”窗口和菜单上的“磁盘管理”工具来挂载和卸载文件系统，包括软盘和 CD-ROM。在 KDE 中，你可以使用 KDiskFree 实用程序（“更多系统工具”菜单），它还会列出你可挂载的文件系统及其磁盘使用情况。
+
+即使你硬盘分区上的文件系统也必须显式挂载。然而，当你安装 Linux 系统并在硬盘上创建 Linux 分区时，你的系统会自动配置为在启动时挂载你的主文件系统。系统关机时，它们会自动卸载。你可以选择卸载任何文件系统，将其从目录树中移除，并可能用另一个替换它，就像更换 CD-ROM 时的情况一样。
+
+一旦文件系统实际被挂载，操作系统就会在 `/etc/mtab` 文件中为其创建一个条目。在这里你会找到所有当前已挂载文件系统的列表。
+
+## 文件系统信息
+
+每个存储设备上的文件系统都被格式化为占用指定量的空间。例如，你可能将硬盘分区格式化为占用 3GB。安装或创建在该文件系统上的文件会占用部分空间，而剩余空间可用于新文件和目录。要了解文件系统上剩余多少可用空间，你可以使用 `df` 命令，或者在 GNOME 上，你可以使用 Procman 系统监视器或 KDE DiskFree 实用程序（更多系统工具菜单）。对于 Procman 系统监视器（系统工具菜单），点击系统监视器标签以显示文件系统可用空间的条形图。KDE DiskFree 显示设备列表，显示每个分区上剩余多少空间以及使用百分比。
+
+### `df`
+
+`df` 命令报告文件系统磁盘空间使用情况。它按设备名称列出你的所有文件系统，它们占用的磁盘空间大小以及磁盘空间使用百分比，以及它们挂载的位置。使用 `-h` 选项，它以更易读的格式显示信息；例如以兆字节而不是内存块来衡量磁盘空间。
+
+`df` 命令也是获取所有分区列表的安全方式，而不用使用 `fdisk`（使用 `fdisk` 你可能会擦除分区）。不过 `df` 只显示已挂载的分区，而 `fdisk` 显示所有分区。
+
+```
+$ df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/hda3 9.7G 2.8G 6.4G 31% /
+/dev/hda2 99M 6.3M 88M 7% /boot
+/dev/hda2 22G 36M 21G 1% /home
+/dev/hdc 525M 525M 0 100% /mnt/cdrom
+```
+
+你也可以使用 `df` 来告诉你给定目录属于哪个文件系统。输入 `df` 后跟目录名或 `df .` 来查看当前目录。
+
+```
+$ df
+Filesystem 1024-blocks Used Available Capacity Mounted on
+/dev/hda3 297635 169499 112764 60% /
+```
+
+### `e2fsck` 和 `fsck`
+
+要检查文件系统的一致性并在损坏时修复它，你可以使用文件系统检查工具。`fsck` 检查并修复 Linux 文件系统。`e2fsck` 设计用于支持 ext2 和 ext3 文件系统，而更通用的 `fsck` 也可用于其他任何文件系统。ext2 和 ext3 文件系统是通常用于 Linux 硬盘分区和软盘的文件系统。从 Red Hat 7.3 开始的 Linux 文件系统通常为 ext3，你会使用 `e2fsck` 来检查。`fsck` 和 `e2fsck` 以文件系统使用的硬盘分区设备名为参数。
+
+```
+fsck device-name
+```
+
+在检查文件系统之前，请确保文件系统已卸载。`e2fsck` 不应在已挂载的文件系统上使用。要使用 `e2fsck`，输入 `e2fsck` 和引用文件系统的设备名。`-p` 选项会自动修复文件系统，而无需用户对每个修复任务先行批准。以下示例检查软盘驱动器中的磁盘和主硬盘：
+
+```
+# e2fsck /dev/fd0
+# e2fsck /dev/hda1
+```
+
+对于 `fsck`，`-t` 选项让你指定要检查的文件系统类型，`-a` 选项自动修复系统，而 `-r` 选项则先请求确认。`-A` 选项检查 `/etc/fstab` 文件中的所有系统。
+
+> 提示 在较早的发行版中，`fsck` 和 `e2fsck` 也用于在磁盘崩溃或按下复位按钮重启后恢复文件系统。随着最近的发行版，引入了 ext3 和 ReiserFS 等文件系统的日志功能。日志功能可在磁盘崩溃时提供快速有效的恢复，因此不再需要使用 `fsck` 或 `e2fsck` 进行恢复。
+
+### 日志功能
+
+ext3 和 ReiserFS 文件系统为 Linux 系统引入了日志功能。日志功能可在磁盘崩溃时提供快速有效的恢复，而无需使用 `e2fsck` 或 `fsck`。使用日志功能，会保留所有文件系统操作的日记，并将其放入日志文件中。在崩溃事件中，Linux 只需读取日志文件并重放它即可将系统恢复到之前（稳定）的状态。正在写入磁盘的文件可以恢复到其原始状态。日志功能还避免了在系统突然断电或冻结并必须物理重启时重启时进行的冗长 `fsck` 检查。系统无需使用 `fsck` 手动检查每个文件和目录，只需读取其日志文件即可恢复文件系统。
+
+保留日志比非日志方法对文件系统的工作量更大。尽管所有日志系统都维护文件系统的目录结构（即所谓的元数据），但它们提供不同级别的文件数据恢复。维护文件数据恢复信息可能耗时，会减慢文件系统的响应时间。同时，日志系统更有效地利用文件系统，比非日志的 ext2 文件系统提供更快的响应时间。
+
+在 GNU 公共许可证下。XFS 是 Silicon Graphics 开发的另一个高性能日志文件系统（oss.sgi.com/projects/xfs/）。XFS 与 RAID 和 NFS 文件系统兼容。
+
+## ext3 日志
+
+Linux 内核通过 ext3 支持日志记录。ext3 文件系统与其取代的早期 ext2 版本完全兼容。要创建 ext3 文件系统，可以使用 `mkfs.ext3` 命令。你甚至可以自动将 ext2 文件系统升级为 ext3 版本，而不会丢失数据或更改分区。此升级只需使用 `tune2fs` 命令向 ext2 文件系统添加一个日志文件并启用日志记录。请务必在所有相应的 `/etc/fstab` 条目中将 ext2 文件类型更改为 ext3。以下示例通过添加日志文件（`-j`，必须是root权限）将 `/dev/hda3` 上的 ext2 文件系统转换为 ext3 文件系统。
+
+```
+tune2fs -j /dev/hda3
+```
+
+尽管 ext3 文件系统支持完整的元数据恢复（目录树恢复），但它提供了不同级别的文件数据恢复。实际上，你是在用较少的文件数据恢复换取更快的速度。ext3 文件系统支持三种选项：`writeback`、`ordered` 和 `journal`。默认选项为 `writeback`。`writeback` 选项仅提供元数据恢复，不提供文件数据恢复。`ordered` 选项支持有限的文件数据恢复，`journal` 选项提供完整的文件数据恢复。崩溃时正在更改的任何文件都将被恢复。要指定 ext3 选项，请在 `mount` 命令中使用 `data` 选项。
+
+```
+data=ordered
+```
+
+## ReiserFS
+
+尽管日志记录通常用于从磁盘崩溃中恢复，但基于日志的文件系统可以做得更多。ext3、JFS 和 XFS 文件系统仅提供恢复中使用的日志操作，而 ReiserFS 使用日志技术来彻底重构文件系统操作。ReiserFS 使用日志记录来读写数据，放弃了传统 Unix 和 Linux 系统中使用的块结构。这使其能够非常快速地访问大量小文件，并且只使用它们所需的磁盘空间量。但是，对于较大文件，效率并没有提高多少。
+
+## 自动挂载文件系统：`/etc/fstab`
+
+文件系统使用 `mount` 命令挂载，该命令将在下一节中介绍。虽然你可以仅使用 `mount` 命令直接挂载文件系统，但你可以通过将挂载信息放入 `/etc/fstab` 配置文件中来简化该过程。使用此文件中的条目，你可以在系统启动时自动挂载某些文件系统。对于其他文件系统，你可以指定配置信息，例如挂载点和访问权限，这些信息可在你挂载文件系统时自动使用。你无需像不使用该文件时那样，将这些信息作为 `mount` 命令的参数输入。正是这一特性，使得 GNOME 或 KDE 上的挂载实用程序可以让你仅通过单击窗口图标来挂载文件系统。所有挂载信息都已经在 `/etc/fstab` 文件中。例如，当你向 Linux 系统添加新的硬盘分区时，你可能希望它在启动时自动挂载，然后在关闭时卸载。否则，每次启动和关闭系统时都必须显式挂载和卸载该分区。要让 Linux 自动挂载新硬盘分区上的文件系统，你只需将其名称添加到 `fstab` 文件中。你可以通过直接仔细编辑 `/etc/fstab` 文件来输入一个新条目。
+
+
+
+`fstab` 文件中的条目包含多个字段，每个字段之间用空格或制表符分隔。这些字段分别描述为设备、挂载点、文件系统类型、选项、`dump` 和 `fsck` 字段，按以下顺序排列：
+
+```
+<device> <mountpoint> <filesystemtype> <options> <dump> <fsck>
+```
+
+第一个字段是要挂载的文件系统的名称。此条目可以是设备名称，也可以是 `ext2` 或 `ext3` 文件系统标签。设备名称通常以 `/dev` 开头，例如第三个硬盘分区为 `/dev/hda3`。标签是通过将标签名称分配给 `LABEL` 标记来指定的，例如 `ext2` 根分区的 `LABEL=/`。下一个字段是文件结构中希望此设备上的文件系统所挂载到的目录。这些目录是用于文件系统的空目录，例如 `/mnt/floppy`。第三个字段是要挂载的文件系统类型。表 30-7 列出了你可以挂载的所有不同类型。标准 Linux 硬盘分区的类型为 `ext3`。下一个示例显示了主 Linux 硬盘分区的条目。此条目挂载在根目录 `/` 下，文件类型为 `ext3`：
+
+```
+/dev/hda3   /   ext3   defaults   0   1
+```
+
+以下示例显示了硬盘分区的 `LABEL` 条目，其中标签名称为 `/`：
+
+```
+LABEL=/   /   ext3   defaults   0   1
+```
+
+## 自动挂载
+
+软盘的文件系统类型可能因你要挂载的磁盘而异。例如，你可能有时要读取 Windows 格式的软盘，有时要读取 Linux 格式的软盘。因此，为软盘设备指定的文件系统类型是 `auto`。使用此选项，将自动检测软盘上格式化的文件系统类型，并使用相应的文件系统类型。
+
+```
+/dev/fd0   /mnt/floppy   auto   defaults,noauto   0   0
+```
+
+| 类型 | 描述 |
+|---|---|
+| auto | 尝试自动检测文件系统类型。 |
+| minix | Minix 文件系统（文件名限制为 30 个字符）。 |
+| ext | 早期版本的 Linux 文件系统，已不再使用。 |
+| ext3 | 标准 Linux 文件系统，支持长文件名和大文件，包含日志功能。 |
+| ext2 | 较旧的标准 Linux 文件系统，支持长文件名和大文件，没有日志功能。 |
+| xiafs | Xiafs 文件系统。 |
+| msdos | 用于 MS-DOS 分区（16 位）的文件系统。 |
+| vfat | 用于 Windows 95、98 和 Millennium 分区（32 位）的文件系统。 |
+| reiserfs | ReiserFS 日志文件系统。 |
+| xfs | Silicon Graphics（SGI）文件系统。 |
+| ntfs | Windows NT、Windows XP 和 Windows 2000 文件系统（只读访问，写入访问是实验性的且危险）。 |
+| smbfs | Samba 远程文件系统，例如 NFS。 |
+| hpfs | 用于 OS/2 高性能分区的文件系统。 |
+| nfs | 用于从远程系统挂载分区的 NFS 文件系统。 |
+| umsdos | UMS-DOS 文件系统。 |
+| swap | Linux 交换分区或交换文件。 |
+| sysv | Unix System V 文件系统。 |
+| iso9660 | 用于挂载 CD-ROM 的文件系统。 |
+| proc | 操作系统用于进程的文件系统（内核支持文件系统）。 |
+| devpts | Unix 98 伪终端（ttys，内核接口文件系统）。 |
+| shmfs 和 tmpfs | Linux 虚拟内存、POSIX 共享内存维护访问（内核接口文件系统）。 |
+
+## 挂载选项
+
+文件系统类型之后的字段列出了挂载文件系统的不同选项。你可以通过直接输入 `defaults` 来指定一组默认选项，也可以使用逗号（无空格）分隔的方式，在彼此旁边列出特定选项。`defaults` 选项规定设备为读/写（`rw`）、异步（`async`）、块设备（`dev`）、普通用户不能挂载（`nouser`），并且可以在其上执行程序（`exec`）。相比之下，CD-ROM 只列出了两个选项：`ro` 和 `noauto`。`ro` 指定设备为只读，`noauto` 指定不自动挂载。`noauto` 选项同时用于 CD-ROM 和软驱，这样它们不会自动挂载，因为你不知道启动时其中是否有内容。同时，CD-ROM 和软驱的条目都指定了当你决定挂载它们时应挂载的位置。在 Red Hat 中，`kudzu` 选项会调用 Red Hat Kudzu 工具，该工具检查设备是否已安装在你的系统中，以及内核是否为该 CD-ROM 或软盘运行相应的驱动程序。表 30-8 列出了挂载文件系统的选项。下面是一个 CD-ROM 和软驱条目的示例。注意 CD-ROM 文件系统的类型与硬盘分区不同，为 `iso9660`。
+
+```
+/dev/hdc   /mnt/cdrom   iso9660   noauto,owner,kudzu,ro   0   0
+/dev/fd0   /mnt/floppy   auto   noauto,owner,kudzu   0   0
+```
+
+| 选项 | 描述 |
+|---|---|
+| async | 指示对文件系统的所有 I/O 都应异步进行。 |
+| auto | 指示可以使用 `-a` 选项挂载文件系统。系统启动时执行的 `mount -a` 命令实际上会自动挂载文件系统。 |
+| defaults | 使用默认选项：rw、suid、dev、exec、auto、nouser 和 async。 |
+| dev | 解释文件系统上的字符或块特殊设备。 |
+| kudzu | 检查设备是否已安装且可访问。 |
+| noauto | 指示文件系统只能显式挂载。`-a` 选项不会导致文件系统被挂载。 |
+| exec | 允许执行二进制文件。 |
+| nouser | 禁止普通（即非 root）用户挂载文件系统。 |
+| remount | 尝试重新挂载已挂载的文件系统。这通常用于更改文件系统的挂载标志，尤其是将只读文件系统变为可写。 |
+| ro | 将文件系统挂载为只读。 |
+| rw | 将文件系统挂载为读/写。 |
+| suid | 允许设置用户标识符或组标识符位生效。 |
+| sync | 指示对文件系统的所有 I/O 都应同步进行。 |
+| user | 允许普通用户挂载文件系统。普通用户始终会激活以下选项：noexec、nosuid 和 nodev。 |
+| nodev | 不解释文件系统上的字符或块特殊设备。 |
+| noexec | 不允许在挂载的文件系统上执行二进制文件。 |
+| nosuid | 不允许设置用户标识符或组标识符位生效。 |
+
+表 30-8 文件系统的挂载选项
+
+## Boot and Disk Check
+
+`fstab` 条目最后两个字段由整数值组成。第一个值由 `dump` 命令用来确定文件系统是否需要转储，从而备份文件系统。第二个值由 `fsck` 用来判断在重启时是否需要检查文件系统，以及与其他文件系统的检查顺序。如果该字段值为 1，表示为启动分区，2 表示其他分区。0 值表示 `fsck` 无需检查该文件系统。
+
+下面展示了一个 `/etc/fstab` 文件的副本。请注意第一行是注释。所有注释行都以 `#` 开头。`/proc` 文件系统的条目是 Linux 操作系统用于管理其进程的特殊条目；它不是实际设备。要在 `/etc/fstab` 文件中添加条目，可以直接编辑 `/etc/fstab` 文件。你可以使用此处所示的示例 `/etc/fstab` 文件作为指南，展示你的条目应如何显示。`/proc` 和 `swap` 分区条目尤其关键。
+
+### `/etc/fstab`
+
+```text
+# <device> <mountpoint> <filesystemtype> <options> <dump> <fsck>
+/dev/hda3  /  ext3  defaults  0  1
+none  /proc  proc  defaults  0  0
+none  /dev/pts  devpts  gid=5,mode=620  0  0
+none  /dev/shm  tmpfs  defaults  0  0
+/dev/hda2  swap  swap  defaults  0  0
+/dev/hdc  /mnt/cdrom  iso9660  noauto,owner,kudzu,ro  0  0
+/dev/fd0  /mnt/floppy  auto  noauto,owner,kudzu  0  0
+/dev/hda1  /mnt/windows  vfat  defaults  0  0
+```
+
+### CD-ROM and Floppy Defaults
+
+
+
+Red Hat 会为你可能拥有的任何 CD-ROM 和软盘设备在`fstab`文件中创建条目。它还会创建可用于挂载这些驱动器的目录。对于 Red Hat，这些目录是 CD-ROM 的`/mnt/cdrom`和软盘的`/mnt/floppy`。如果你有多个 CD-ROM 或软盘驱动器，会为其创建带顺序编号的目录。因此在 Red Hat 上，第二个 CD-ROM 驱动器将使用名为`/mnt/cdrom1`的目录。
+
+### Partition Labels: `e2label`
+
+Red Hat 对硬盘分区上的 ext2 和 ext3 文件系统使用文件系统标签。因此在前面所示的`/etc/fstab`文件中，第一个条目将使用标签作为其设备名，如下所示。在此情况下，标签为斜杠`/`，表示根分区。你可以使用`e2label`更改此设备的标签，但也要同时更改其`/etc/fstab`条目。
+
+```text
+LABEL=/   /   ext3   defaults   0   1
+```
+
+对于 ext2 和 ext3 分区，你可以使用`e2label`工具或带`-L`选项的`tune2fs`来更改或添加标签。指定设备和标签名。如果你更改了标签，请确保同时更改`/etc/fstab`文件中的对应条目。只需使用设备名调用`e2label`即可查出当前标签是什么。在下一个示例中，用户将`/dev/hda3`设备的标签更改为 TURTLE。
+
+```text
+e2label /dev/hda3 TURTLE
+```
+
+### Windows Partitions
+
+你可以将 MS-DOS、Windows 95/98/ME 或 Windows XP、NT 和 2000 分区挂载到你的 Linux 文件结构上，就像挂载任何 Linux 文件系统一样。你需要为 Windows 95/98/ME 指定`vfat`文件类型，为 MS-DOS 指定`msdos`。Windows XP、NT 和 2000 使用`ntfs`文件类型。你可能希望在启动 Linux 系统时自动挂载 Windows 分区。为此，你需要在`/etc/fstab`文件中为 Windows 分区添加条目并赋予`defaults`选项，或确保包含`auto`选项。你为每个要挂载的 Windows 分区各做一个条目，然后指定该分区的设备名，后跟你希望挂载它的目录。`/mnt/windows`目录将是一个合理的选择（请确保在`/mnt`中已创建`windows`目录）。下一个示例显示了`/etc/fstab`文件中一个标准的 Windows 分区条目。请注意`/etc/fstab`文件示例中的最后一个条目就是用于挂载 Windows 分区的条目。
+
+```text
+/dev/hda1 /mnt/windows vfat defaults 0 0
+```
+
+> **Tip:** 目前 Linux kernel 2.4 系统只能可靠地以只读方式挂载 NTFS 文件系统（Windows NT、Windows 2000 和 Windows XP）。它们无法写入这些分区，尽管使用`ntfs`内核模块提供了实验性和不稳定的支持（参见 The Linux-NTFS Project at linux-ntfs.sourceforge.net）。
+
+### Linux Kernel Interfaces
+
+你的`/etc/fstab`文件中还可能包含两个特殊内核接口文件系统的条目，`devpts`和`tmpfs`。两者都提供标准设备不支持的内核接口。`/dev/pts`条目挂载`devpts`文件系统用于伪终端。`/dev/shm`条目挂载`tmpfs`文件系统（也称为`shmfs`）以实现 Linux 虚拟内存、POSIX 共享内存维护访问。它旨在克服当前系统 4GB 内存限制，将可用内存扩展到 64GB。
+
+如果你的`/etc/fstab`文件损坏——例如某行被意外删除或更改——你的系统将启动到维护模式，仅提供对分区的只读访问。要获得读写访问权限以修复你的`/etc/fstab`文件，你必须重新挂载主分区。以下命令执行此类操作：
+
+```text
+# mount -n -o remount,rw /
+```
+
+### noauto
+
+`/etc/fstab`文件中列出的文件系统在每次启动时都会自动挂载，除非通过`noauto`选项显式关闭此功能。请注意，本章前面示例`fstab`文件中的 CD-ROM 和软盘具有`noauto`选项。此外，如果你发出`mount -a`命令，所有没有`noauto`选项的文件系统都会被挂载。如果你希望使 CD-ROM 可由用户挂载，请添加`user`选项。
+
+```text
+/dev/hdc /mnt/cdrom iso9660 ro,noauto,user 0 0
+```
+
+> **提示**：从`/etc/fstab`自动挂载文件系统实际上是通过执行`mount -a`命令来实现的，该命令位于`/etc/rc.d/rc.sysinit`文件中，每次启动时都会运行。`mount -a`命令会挂载`/etc/fstab`文件中列出的所有未带`noauto`选项的文件系统。`umount -a`命令（在系统关闭时执行）则会卸载`/etc/fstab`中的文件系统。
+
+## 直接挂载文件系统：`mount` 和 `umount`
+
+你也可以直接使用`mount`和`umount`命令来挂载或卸载任意文件系统（注意`umount`中没有 n）。前面章节中讨论的挂载操作使用`mount`命令来挂载文件系统。通常，只有 root 用户才能挂载硬盘分区上的文件系统，而 CD-ROM 和软盘则可以被任何用户挂载。表 30-9 列出了`mount`命令的不同选项。
+
+### `mount` 命令
+
+`mount`命令接受两个参数：Linux 访问文件系统所用的存储设备，以及新文件系统所附加到的文件结构中的目录。挂载点是你主目录树上的目录，你希望将存储设备上的文件附加到该目录。设备是一个特殊的设备文件，它将你的系统连接到硬件设备。`mount`命令的语法如下：
+
+```
+# mount device mountpoint
+```
+
+| 挂载选项 | 描述 |
+|---|---|
+| `-f` | 模拟文件系统的挂载。用于检查文件系统是否可以被挂载。 |
+| `-v` | 冗长模式。`mount`会显示其正在执行的操作的描述。与`-f`一起使用以检查挂载文件系统时是否有任何问题，即`-fv`。 |
+| `-w` | 以读/写权限挂载文件系统。 |
+| `-r` | 以只读权限挂载文件系统。 |
+| `-n` | 挂载文件系统时不将其条目写入`mtab`文件。 |
+| `-t type` | 指定要挂载的文件系统类型。有效的文件系统类型请参见表 30-7。 |
+| `-a` | 挂载`/etc/fstab`中列出的所有文件系统。 |
+| `-o option-list` | 使用选项列表挂载文件系统。这是跟随`-o`的逗号分隔的选项列表。选项列表请参见表 30-8。 |
+
+如前所述，设备文件位于`/dev`目录中，通常使用以设备编号结尾的缩写名称。例如，`fd0`可能指连接到系统的第一个软盘驱动器。以下示例将第一个软盘驱动器设备（`/fd0`）中的软盘挂载到`/mnt/floppy`目录。挂载点目录需要为空。如果你已经在那个位置挂载了文件系统，你会收到一条消息，提示另一个文件系统已经挂载在那里，目录正忙。如果你将文件系统挂载到一个已经包含文件和子目录的目录，这些文件和子目录将被绕过，你只能访问所挂载文件系统中的文件。当然，卸载文件系统后，对原始目录文件的访问就会恢复。
+
+```
+# mount /dev/fd0 /mnt/floppy
+```
+
+对于任何在`/etc/fstab`文件中有条目的分区，你只需使用其`fstab`条目中指定的挂载目录即可挂载该分区；无需输入设备文件名。`mount`命令会使用该目录在`fstab`文件中查找分区的条目，从而找到设备名称。例如，要挂载前面示例中的`/dev/hda1` Windows 分区，`mount`命令只需知道它挂载到的目录——在本例中是`/mnt/windows`。
+
+```
+# mount /mnt/windows
+```
+
+如果你不确定软盘持有的文件系统类型，可以使用`-t`选项指定`auto`文件系统类型来挂载它。使用`auto`文件系统类型时，`mount`会尝试自动检测软盘上的文件系统类型。
+
+```
+# mount -t auto /dev/fd0 /mnt/floppy
+```
+
+### `umount` 命令
+
+如果你想用一个已经挂载的文件系统替换另一个文件系统，你必须首先明确卸载已经挂载的那个。假设你挂载了一张软盘，现在你想取出它并放入一张新软盘。你必须先卸载那张软盘，然后才能放入并挂载新软盘。你可以使用`umount`命令卸载文件系统。`umount`命令可以接受设备名或挂载目录作为其参数。语法如下：
+
+```
+# umount device-or-mountpoint
+```
+
+以下示例卸载软盘，无论它挂载在哪里：
+
+```
+# umount /dev/fd0
+```
+
+使用前面设备挂载在`/mydir`目录的示例，你可以使用该目录来卸载文件系统：
+
+
+
+```
+# umount /mydir
+```
+
+`umount` 命令有一个重要的约束。你永远无法卸载当前正在其中工作的文件系统。如果你切换到某个文件系统内的目录，然后尝试卸载该文件系统，你会收到一条错误消息，指出该文件系统正忙。例如，假设你将 CD-ROM 挂载到 `/mnt/cdrom` 目录，然后切换到该 `/mnt/cdrom` 目录。如果你决定更换 CD-ROM，你首先必须使用 `umount` 命令卸载当前的 CD-ROM。这将会失败，因为你正处在该目录中。
+
+目前在挂载它的目录中。你必须先离开该目录，然后才能卸载 CD-ROM。
+
+```
+# mount /dev/hdc /mnt/cdrom
+# cd /mnt/cdrom
+# umount /mnt/cdrom
+umount: /dev/hdd: device is busy
+# cd /root
+# umount /mnt/cdrom
+```
+
+> 提示 如果其他用户正在使用你尝试卸载的文件系统，你可以使用 `lsof` 或 `fuser` 命令来找出他们是谁。
+
+## 挂载软盘
+
+如前所述，要访问软盘上的文件，该磁盘首先必须在你的 Linux 系统上挂载。你的软盘驱动器的设备名为 `fd0`，位于 `/dev` 目录中。输入 `/dev/fd0` 即可引用你的软盘驱动器。注意 `fd` 后面的数字 `0`。如果有多于一个软盘驱动器，额外的驱动器将表示为 `fd1`、`fd2` 等。你可以挂载到任何你想要的目录。Red Hat 创建了一个方便用于软盘的目录 `/mnt/floppy`。以下示例将软盘驱动器中的软盘挂载到 `/mnt/floppy` 目录：
+
+```
+# mount /dev/fd0 /mnt/floppy
+```
+
+> 提示 在 GNOME 上，你可以通过右键单击桌面背景显示桌面菜单，然后在磁盘条目中选择软盘来挂载软盘驱动器。要卸载，请右键单击软盘图标并从弹出菜单中选择弹出。
+
+记住，你挂载的是特定的软盘，而不是软盘驱动器。你不能简单地取出软盘并放入另一张。`mount` 命令已将这些文件附加到你的主目录树中，你的系统期望在软盘驱动器中找到这些文件在软盘上。如果你取出磁盘并放入另一张，当你尝试访问它时会收到错误消息。
+
+要更换磁盘，你必须首先卸载已在磁盘驱动器中的软盘。然后，在放入新磁盘后，你必须显式挂载该新磁盘。为此，使用 `umount` 命令。
+
+```
+# umount /dev/fd0
+```
+
+对于 `umount` 或 `mount` 操作，你可以指定它所挂载的目录或 `/dev/fd0` 设备。
+
+```
+# umount /mnt/floppy
+```
+
+现在你可以取出软盘，放入新的，然后挂载它：
+
+```
+# mount /mnt/floppy
+```
+
+当你关闭系统时，任何已挂载的磁盘都会自动卸载。你无需显式卸载它。
+
+## 挂载 CD-ROM
+
+记住，当你挂载 CD-ROM 或软盘时，不能简单地取出它以便在驱动器中放入另一张。你首先必须卸载它，将文件系统从整体目录树中分离。事实上，CD-ROM 驱动器在你卸载它之前保持锁定状态。一旦你卸载 CD-ROM，你就可以取出它并放入另一张，然后必须挂载后才能访问它。在更换多个 CD-ROM 或软盘时，你会不断地挂载和卸载它们。对于 CD-ROM，除了使用 `umount` 命令外，你还可以使用 `eject` 命令并指定设备名称或挂载点，它将卸载然后弹出 CD-ROM。
+
+你也可以使用 `mount` 命令将 CD-ROM 磁盘挂载到你的 Linux 系统。在许多发行版中，目录 `/mnt/cdrom` 已保留用于 CD-ROM 文件系统。你可以在本章前面介绍的 `/etc/fstab` 文件中看到此条目。有了这样的条目，要挂载 CD-ROM，你只需输入命令 `mount` 和目录 `/mnt/cdrom`。你无需指定设备名称。一旦挂载，你就可以通过 `/mnt/cdrom` 目录访问 CD-ROM。
+
+```
+# mount /mnt/cdrom
+```
+
+> 提示 在 GNOME 上，CD-ROM 会自动挂载，不过你也可以通过右键单击桌面背景显示桌面菜单，然后在磁盘条目中选择 CD-ROM 来手动挂载它们。要卸载，请右键单击 CD-ROM 图标并从弹出菜单中选择弹出。
+
+```
+# umount /mnt/cdrom
+```
+
+如果你想将 CD-ROM 挂载到另一个目录，你必须在 `mount` 命令中包含设备名称。以下示例将 CD-ROM 驱动器中的光盘挂载到 `/mydir` 目录。此示例中 CD-ROM 的特定设备名称为 `/dev/hdc`。
+
+```
+# mount /dev/hdc /mydir
+```
+
+当你刻录 CD 时，你可能需要创建一个 CD 映像文件。你可以从硬盘访问此类映像文件，就像它是一个文件系统一样挂载它（甚至是被抓取的映像也可以这样挂载）。为此，你使用 `loop` 选项，指定一个开放的 loop 设备，如 `/dev/loop0`。如果未指示 loop 设备，`mount` 将尝试找到一个空闲的。文件系统类型为 `iso9660`，一种 CD-ROM iso 映像文件类型。
+
+安装完成后，你可以像访问任何目录一样访问 CD-ROM 上的文件。
+
+Tip 你可以使用 `mkisofs` 来创建由你的文件或另一张 CD-ROM 组成的 CD-ROM 映像。
+
+## 挂载硬盘分区：Linux 和 Windows
+
+你可以使用 `mount` 命令挂载 Linux 或 Windows 硬盘分区。然而，使用 `/etc/fstab` 文件自动挂载它们更为实用，如前所述。你在安装期间创建的 Linux 硬盘分区已经为你自动挂载了。如前所述，要挂载 Linux 硬盘分区，请使用分区设备名和要挂载到的目录输入 `mount` 命令。IDE 硬盘使用前缀 `hd`，SCSI 硬盘使用前缀 `sd`。下一个示例将 Linux 硬盘分区 `/dev/hda4` 挂载到目录 `/mnt/mydata`：
+
+```
+# mount -t ext3 /dev/hda4 /mnt/mydata
+```
+
+你也可以挂载 Windows 分区并直接访问其上的文件。与 Linux 分区一样，你使用 `mount` 命令，但你还必须指定文件系统类型为 Windows。为此，使用 `-t` 选项，然后为 Windows 95/98/ME 输入 `vfat`（`vfat` 用于 MS-DOS）。对于 Windows XP、2000 和 NT，你将使用 `ntfs`（仅限只读访问；写访问为实验性，不推荐）。在下一个示例中，用户将 Windows 硬盘分区 `/dev/hda1` 挂载到 Linux 文件结构中的目录 `/mnt/windows`。`/mnt/windows` 目录是 Windows 文件系统的常用名称，尽管你可以将其挂载到任何目录（例如 `/mnt/dos` 用于 MS-DOS）。如果你有多个 Windows 分区，你可以创建一个 Windows 目录，然后为每个驱动器使用驱动器标签或字母创建子目录，例如 `/mnt/windows/a` 或 `/mnt/windows/mystuff`。请确保在挂载文件系统之前已创建该目录。
+
+```
+# mount -t vfat /dev/hda1 /mnt/windows
+```
+
+## 安装 IDE CD-R/RW 和 DVD R/RW 设备
+
+Linux CD 刻录应用程序都将 CD-R/RW 和 DVDR/RW 驱动器视为 SCSI 驱动器。这意味着 IDE CD-R/RW 驱动器必须模拟 SCSI 驱动器，才能被 CD 或 DVD 写入软件识别和使用。即使你只想在 CD 写入应用程序中使用 IDE CD-ROM 或 DVD-ROM——例如仅作为读取器来复制 CD 光盘——该 IDE CD-ROM 驱动器仍必须模拟 SCSI CD-ROM 驱动器。只有 SCSI 驱动器（CD-R/RW/ROM 或 DVDR/RW/ROM）才会被 Linux CD 或 DVD 写入软件识别。例如，如果你有一个普通的 IDE CD-ROM 并希望将其与 Linux CD 刻录软件一起使用来复制 CD（抓取），你仍必须让该 IDE CD-ROM 模拟 SCSI CD-ROM。请查阅 `www.tldp.org` 上的 CD-Writing HOW-TO 了解更多详情。下面提供简要说明。
+
+Tip IDE 设备的 SCSI 模拟在内核中作为 ATA/IDE/MFM/RLL 支持窗口中 IDE、ATA 和 ATAPI 块设备条目下的 SCSI 模拟支持来实现，该窗口从主内核配置菜单打开。通常，它被编译为模块。
+
+IDE CD 和 DVD 驱动器（CD-R/RW/ROM 或 DVDR/RW/ROM）在安装期间被识别为 IDE 设备并作为此类安装。然而，当你启动系统时，你需要指示 Linux 内核让 IDE CD 和 DVD 驱动器模拟 SCSI CD 或 DVD 驱动器。这意味着通常会被识别为 `/dev/hdc` 驱动器的 CD-R 驱动器必须被识别为 `/dev/scd0` 设备，即第一个 SCSI CD-ROM 驱动器。你通过加载 `ide-scsi` 模块来实现这一点，该模块允许 IDE CD 驱动器模拟 SCSI CD 驱动器。
+
+## SCSI 模拟
+
+
+
+你可以通过两种方式之一为 IDE CD 和 DVD 驱动器实现 SCSI 模拟：通过将 `ide-scsi` 模块作为内核参数加载，或在 `/etc/modules.conf` 文件中指定该模块（2.5 和 2.6 内核中的 `/etc/modprobe.conf`）。你还必须指示要模拟的 IDE 驱动器。如果 `ide-scsi` 模块编译到内核中（而不是作为单独模块），你必须将其作为内核参数加载。`ide-scsi` 模块可以通过任一方式加载。
+
+### Tip
+
+在安装期间，Red Hat 将识别你系统上安装的 IDE CD 和 DVD 驱动器，并将 `ide-scsi` 内核参数自动包含为 LILO 或 GRUB 启动加载程序配置的一部分。你无需执行本节中描述的任何特定配置任务。
+
+## 启动时的内核参数
+
+作为内核参数，你可以在启动提示符下手动输入 `ide-scsi` 参数，或将其放在 `/etc/grub.conf` 或 `/etc/lilo.conf` 文件中（取决于你使用的是 GRUB 还是 LILO 启动加载程序），以使其自动输入。参数在系统启动时读取。将每个需要模拟 SCSI 驱动器的 IDE CD 或 DVD 驱动器列出为使用 `ide-scsi` 模块。你将 `ide-scsi` 模块分配给要模拟的 IDE CD 驱动器的设备名。以下示例加载 `ide-scsi` 模块以使 secondary IDE 连接上的主 IDE 驱动器（`hdc`）模拟 SCSI 驱动器：
+
+```
+hdc=ide-scsi
+```
+
+## Grub 和 CD 刻录机
+
+如果你在安装 Red Hat 时 IDE CD-R/RW 驱动器已连接，GRUB 将自动检测到它，并在其启动参数中列出该驱动器的 `ide-scsi` 模块。你始终可以通过在启动计算机时显示的 GRUB 启动条目中输入 `a` 来手动输入该参数。你的 Linux 系统的参数将被列出。只需添加 CD-R/RW `ide-scsi` 模块分配。以下示例显示了在 Linux 启动提示符下指定了两个 IDE CD 驱动器的方式：
+
+```
+grub append> ro root=/dev/hda3 hdc=ide-scsi
+```
+
+对于 `/etc/grub.conf` 文件，将这些参数添加到 Linux 内核行中，就像添加到启动条目一样：
+
+```
+kernel /boot/vmlinuz-2.4.18-3 ro root=/dev/hda3 hdc=ide-scsi
+```
+
+## 提示
+
+如果您未使用 GRUB，或者由于某种原因不想修改 `/etc/grub.conf` 文件，您可以配置 `/etc/modules.conf` 文件（在 2.5 和 2.6 内核上为 `/etc/modprob.conf`）来加载并实现对 IDE CD 驱动器的 SCSI 仿真。这需要在 `/etc/modules.conf` 文件中输入多个模块配置命令。系统启动时，它将按该文件中指定的方式加载模块。
+
+## scanbus
+
+要检查您的 IDE 驱动器是否被识别为 SCSI 驱动器，请使用 `-scanbus` 选项运行 `cdrecord`（或对 DVD 刻录机使用 `dvdrecord`）。此示例显示了两个 IDE CD 驱动器现在正在仿真 SCSI CD 驱动器。其中一个是 Plextor IDE CD-RW 驱动器（`scd0`），另一个是 Toshiba DVD-ROM 驱动器（`scd1`）。
+
+```
+# cdrecord -scanbus
+Cdrecord 1.9 (i686-pc-linux-gnu) Copyright (C) 1995-2000 Jörg Schilling
+Linux sg driver version: 3.1.17
+Using libscg version 'schily-0.1'
+scsibus0:
+ 0,0,0 0) 'PLEXTOR ' 'CD-R   PX-W1210A' '1.02' Removable CD-ROM
+ 0,1,0 1) *
+ 0,2,0 2) *
+ 0,3,0 3) *
+ 0,4,0 4) *
+ 0,5,0 5) *
+ 0,6,0 6) *
+ 0,7,0 7) *
+```
+
+## 创建文件系统：mkfs、mke2fs、mkswap、parted 和 fdisk
+
+Linux 提供了多种用于创建和管理文件系统的工具，让您可以添加新的硬盘分区、创建 CD 映像并格式化软盘。要使用新的硬盘，您首先必须对其进行分区，然后在其上创建文件系统。您可以使用 `parted` 或 `fdisk` 对硬盘进行分区。要在分区上创建文件系统，您使用 `mkfs` 命令，它是各种文件系统构建器的前端。对于交换分区，您使用专用工具 `mkswap`，而要创建 CD-ROM 上的文件系统，您使用 `mkisofs` 工具。Linux 分区和文件系统工具列在表 30-10 中。
+
+## fdisk
+
+要启动 `fdisk`，请在命令行上输入 `fdisk` 并加上您要分区的硬盘的设备名称。这会启动一个交互式程序，您可以用它来创建 Linux 分区。请小心使用 Linux `fdisk`。如果不小心，它实际上可以擦除整个硬盘分区以及该分区上的所有数据。以下命令调用 `fdisk` 在 `hdb` 硬盘上创建分区。
+
+```
+fdisk /dev/hdb
+```
+
+分区有不同的类型，您需要指定。Linux `fdisk` 是一个行式程序。它有一组单字符命令，您只需按一下。然后您可能会被提示输入某些信息并按 ENTER。如果在过程中遇到问题，您可以随时按 `Q`，您将返回到上一个屏幕且不会做任何更改。直到您按 `W` 时，才会对硬盘进行实际更改。这应该是您的最后一个命令；它会对硬盘进行实际更改，然后退出 `fdisk`，返回到安装程序。表 30-11 列出了常用的 `fdisk` 命令。执行以下步骤创建 Linux 分区。
+
+当您按 `N` 定义新分区时，您将被询问是否为主要分区。按 `P` 表示它是主要分区。Linux 支持最多四个主分区。输入您要创建的分区的分区号。输入分区的起始柱面。这是提示末尾括号中的第一个数字。然后会提示您输入最后一个柱面号。您可以输入此分区所需的最后一个柱面，或输入大小。您可以将大小输入为 `+1000M` 表示 1GB，并在数量前加上 `+` 号。请记住，大小不能超过您的可用空间。然后您指定分区类型。Linux 分区的默认类型为 `83`。如果您正在创建
+
+| 工具 | 描述 |
+|------|-------------|
+| `fdisk` | 用于创建和删除分区的菜单驱动程序。 |
+| `cfdisk` | `fdisk` 的屏幕界面。 |
+| `parted` | GNU 分区管理工具。 |
+| `mkfs` | 在分区或软盘上使用指定的文件系统类型创建文件系统。格式化实用程序的前端。 |
+| `mke2fs` | 在 Linux 分区上创建 ext2 文件系统；使用 `-j` 选项创建 ext3 文件系统。 |
+| `mkfs.ext3` | 在 Linux 分区上创建 ext3 文件系统。 |
+| `mkfs.ext2` | 在 Linux 分区上创建 ext2 文件系统。 |
+| `mkfs.reiserfs` | 在 Linux 分区上创建 Reiser 日志文件系统（链接到 mk reiserfs）。 |
+| `mkfs.jfs` | 在 Linux 分区上创建 JFS 日志文件系统。 |
+| `mkfs.dos` | 在给定分区上创建 DOS 文件系统。 |
+| `mkfs.vfat` | 在给定分区上创建 Windows 16 位文件系统（Windows 95、98 和 ME）。 |
+| `mkswap` | 用于在设备或文件中设置 Linux 交换区的工具。 |
+| `mkdosfs` | 在 Linux 下创建 MS-DOS 文件系统。 |
+| `mkisofs` | 创建 ISO CD-ROM 磁盘映像。 |
+| `gfloppy` | GNOME 工具，用于格式化软盘（系统工具菜单上的 Floppy Formatter 条目）。 |
+
+表 30-10 Linux 分区和文件系统创建工具
+
+在 `fdisk` 过程中，如果遇到问题，您可以随时按 `Q`，您将返回到上一个屏幕且不会做任何更改。直到您按 `W` 时，才会对硬盘进行实际更改。这应该是您的最后一个命令；它会对硬盘进行实际更改，然后退出 `fdisk`，返回到安装程序。表 30-11 列出了常用的 `fdisk` 命令。执行以下步骤创建 Linux 分区。
+
+当您按 `N` 定义新分区时，您将被询问是否为主要分区。按 `P` 表示它是主要分区。Linux 支持最多四个主分区。输入您要创建的分区的分区号。输入分区的起始柱面。这是提示末尾括号中的第一个数字。然后会提示您输入最后一个柱面号。您可以输入此分区所需的最后一个柱面，或输入大小。您可以将大小输入为 `+1000M` 表示 1GB，并在数量前加上 `+` 号。请记住，大小不能超过您的可用空间。然后您指定分区类型。Linux 分区的默认类型为 `83`。如果您正在创建
+
+## 表 30-11 常用 fdisk 命令
+
+| Command | Action |
+|---|---|
+| `a` | Toggle a bootable flag |
+| `l` | List known partition types |
+| `m` | List commands |
+| `n` | Add a new partition |
+
+
+
+- `p`: Print the partition table
+- `q`: Quit without saving changes
+- `t`: Change a partition's system ID
+- `w`: Write table to disk and exit
+
+Different type of partition, such as a swap partition, press `T` to indicate the type you want. Enter the partition number, such as 82 for a swap partition. When you are finished, press `W` to write out the changes to the hard disk, and then press `ENTER` to continue.
+
+### `parted`
+
+As an alternative to `fdisk`, you can use `parted` (www.gnu.org/software/parted). `parted` lets you manage hard disk partitions, create new ones, and delete old ones. Unlike `fdisk`, it also lets you resize partitions. For you to use `parted` on the partitions in a given hard drive, none of the partitions on that drive can be in use. This means that if you wish to use `parted` on partitions located on that same hard drive as your kernel, you have to boot your system in rescue mode and choose not to mount your system files. For any other hard drives, you only need to unmount their partitions and turn your swap space off with the `swapoff` command. You can then start `parted` with the `parted` command and the device name of the hard disk you want to work on. The following example starts `parted` for the hard disk `/dev/hda`.
+
+```
+parted /dev/hda
+```
+
+You use the `print` command to list all your partitions. The partition number for each partition will be listed in the first column under the `Minor` heading. The `Start` and `End` columns list the beginning and end positions that the partition uses on the hard drive. The numbers are in megabytes, starting from the first megabyte to the total available. To create a new partition, use the `mkpart` command with either primary or extended, the file system type, and the beginning and end positions. You can create up to three primary partitions and one extended partition (or four primary partitions if there is no extended partition). The extended partition can, in turn, have several logical partitions. Once you have created the partition, you can later use `mkfs` to format it with a file system. To remove a partition, use the `rm` command and the partition number. To resize a partition, use the `resize` command with the partition number and the beginning and end positions. You can even move a partition using the `move` command. The `help` command lists all commands.
+
+### `mkfs`
+
+Once you create your partition, you have to create a file system on it. To do this, use the `mkfs` command to build the Linux file system and pass the name of the hard disk partition as a parameter. You must specify its full pathname with the `mkfs` command. Table 30-12 lists the options for the `mkfs` command. For example, the first partition on the second hard drive has the device name `/dev/hdb1`. You can now mount your new hard disk partition, attaching it to your file structure. The next example formats that partition:
+
+```
+# mkfs -t ext3 /dev/hdb1
+```
+
+
+
+The `mkfs` command is really just a front end for several different file system builders. A file system builder performs the actual task of creating a file system. Red Hat supports various file system builders, including several journaling file systems and Windows file systems. The name of a file system builder has the prefix `mkfs` and a suffix for the name of the type of file system. For example, the file system builder for the `ext3` file system is `mkfs.ext3`. For Reiser file systems, it is `mkfs.reiserfs`, and for Windows 16-bit file systems (95, 98, ME), it is `mkfs.vfat`. Some of these file builders are just other names for traditional file system creation tools. For example, the `mkfs.ext2` file builder is just another name for the `mke2fs` ext2 file system creation tool, and `mkfs.msdos` is the `mkdosfs` command. As `ext3` is an extension of `ext2`, `mkfs.ext3` simply invokes `mke2fs`, the tool for creating `ext2` and `ext3` file systems, and directs it to create an `ext3` file system (using the `-j` option). Any of the file builders can be used directly to create a file system of that type. Options are listed before the device name. The next example is equivalent to the preceding one, creating an `ext3` file system on the `hdb1` device.
+
+```
+mkfs.ext3 /dev/hdb1
+```
+
+## 表 30-12 mkfs 选项
+
+| Options | Description |
+|---|---|
+| Blocks | Number of blocks for the file system. There are 1,440 blocks for a 1.44MB floppy disk. |
+| `-t file-system-type` | Specifies the type of file system to format. The default is the standard Linux file system type, `ext3`. |
+| file-system-options | Options for the type of file system specified. Listed before the device name, but after the file system type. |
+| `-V` | Verbose mode. Displays description of each action `mkfs` takes. |
+| `-v` | Instructs the file system builder program that `mkfs` invokes to show actions it takes. |
+| `-c` | Checks a partition for bad blocks before formatting it (may take some time). |
+| `-l file-name` | Reads a list of bad blocks. |
+
+`mkfs` 命令的语法如下。你可以在类型之后、设备之前为特定文件系统添加选项。块大小用于不检测磁盘大小的文件构建器。
+
+```
+mkfs options [-t type] file-system options device size
+```
+
+> 提示 格式化磁盘后，你可以使用本章前面描述的 `e2label` 命令为其命名。
+
+同样的流程也适用于软盘。在这种情况下，`mkfs` 命令的参数是设备名。它使用 `ext2` 文件系统（`mkfs` 的默认值），因为软盘太小，无法支持日志文件系统。
+
+```
+# mkfs /dev/fd0
+```
+
+> 提示 在桌面上，你可以使用“系统工具”菜单中列出的软盘格式化工具来格式化软盘。格式化工具使你能够选择 MS-DOS 或 Linux 文件系统类型。
+
+## mkswap
+
+如果你想创建交换分区，首先使用 `fdisk` 或 `parted` 创建分区（如果尚未存在），然后使用 `mkswap` 命令将其格式化为交换分区。`mkswap` 会格式化整个分区，除非另有指示。它以交换分区的设备名为参数。
+
+```
+mkswap /dev/hdb2
+```
+
+然后你需要在 `/etc/fstab` 文件中为其创建一个条目，以便系统启动时自动挂载。
+
+## CD-ROM 和 DVD ROM 刻录
+
+在 Linux 上向 CD-ROM 光盘刻录数据涉及创建 CD-ROM 的 CD 映像文件，然后将该映像文件写入 CD-R 或 CD-RW 光盘驱动器中的光盘。使用 `mkisofs` 命令，你可以创建 CD 映像文件，然后将其写入 CD-R/RW 写入设备。创建 CD 映像文件后，你可以使用 `cdrecord` 或 `cdwrite` 应用程序将其写入 CD 写入设备。`cdrecord` 应用程序是一个功能更强大的应用程序，具有许多选项。你也可以使用 GNOME 和 KDE 刻录应用程序（如 `K3b` 和 `GNOME Toaster`）轻松创建 CD。大多数都是 `mkisofs` 和 `cdrecord` 工具的前端。要在 DVD 刻录机上刻录 DVD 光盘，可以使用 `dvdrrecord`（`cdrecord` 的对应工具）用于 DVD-R/RW 驱动器，以及 `dvd+rw` 工具用于 DVD+R/R 驱动器。如果你想在 DVD 刻录机上刻录 CD-ROM，只需使用 `cdrecord` 即可。
+
+`dvdrtools` 应用程序目前仅在 DVD-R/RW 驱动器上工作；它是 `dvdrtools` 软件包的一部分。如果你想使用 DVD+RW/R 驱动器，你将使用 `dvd+rw` 工具，如 `growisofs` 和 `dvd+rw-format`。`dvd+rw` 工具在 Red Hat 中包含在 `dvd+rw-tools` 软件包中。查看 DVD+R/W 工具网站了解更多信息，http://fy.chalmers.se/~appro/linux/DVD+RW。
+
+## mkisofs
+
+要创建 CD 映像，首先选择要放在 CD 上的文件。然后你可以使用 `mkisofs` 创建它们的 ISO CD 映像。
+
+### mkisofs 选项
+
+你可能需要使用 `mkisofs` 包含几个重要选项才能正确创建数据 CD。`-o` 选项用于指定 CD 映像文件的名称。这可以是你想要的任何名称。`-R` 选项指定 RockRidge CD 协议，`-J` 选项提供长 Windows 95/98/ME 或 XP 名称。`-r` 选项除了 RockRidge 协议（`-R`）之外，还为你的文件设置标准全局权限，例如所有用户可读且无写权限，因为 CD-ROM 是只读的。`-T` 选项为在非 RockRidge 兼容系统上使用的文件名创建转换表。
+
+`-U` 选项提供非标准 ISO 兼容的宽松文件名，例如长文件名、名称中包含多个句点的文件名、以句点开头的文件名（如 shell 配置文件），以及使用小写字符的文件名（也有针对这些功能的单独选项，如果你只想使用其中几个）。大多数 RPM 和源代码包名称都属于此类。`-iso-level` 选项可让你删除 ISO 限制，例如文件名的长度。`-V` 选项设置 CD 的卷标（名称）。最后，`-v` 选项显示映像创建的进度。
+
+### 磁盘映像创建
+
+最后一个参数是包含要制作 CD 映像的文件的目录。对于此，你可以指定一个目录。例如，如果你要创建包含 `mydocs` 目录中数据文件的 CD-ROM，你将指定该目录。此顶级目录不会包含在内，只包含其中的文件和子目录。你也可以更改到该目录，然后使用 `.` 表示当前目录。
+
+
+
+如果你要创建可在 Linux 上使用的简单 CD，你将使用`mkisofs`首先创建 CD 映像。这里详细选项将显示创建进度，`-V`选项可让你指定 CD 标签。名为`songs.iso`的 CD 映像使用位于`newsong`目录中的文件创建：
+
+```
+mkisofs -v -V "Goodsongs" -o moresongs.iso newsongs
+```
+
+如果你还想在 Windows 系统上使用该 CD，你将添加`-r`（RockRidge 与标准全局文件访问）和`-J`（Joliet）选项：
+
+```
+mkisofs -v -r -J -V "Goodsongs" -o moresongs.iso newsongs
+```
+
+如果你使用的是不符合 ISO 规范的文件名，例如字符数超过 31 个或使用小写字符的文件名，则需要包含某些选项。`-U`选项可让你使用完全不受限制的文件名，而某些选项如`-L`用于不受限制的长度，只会解除特定限制。以下示例使用位于`mdoc`目录中的文件和子目录创建名为`mydoc.iso`的 CD 映像，并将 CD 映像命名为“doc”：
+
+```
+mkisofs -v -r -T -J -U -V "Greatdocs" -o mydocuments.iso mydocs
+```
+
+## 挂载磁盘映像
+
+创建好 CD 映像后，你可以通过将其作为文件系统挂载到 Linux 系统上来检查其是否正确。实际上，要测试 CD 映像，你将其挂载到一个目录，然后像访问另一个文件系统一样访问它。挂载 CD 映像需要使用循环设备。通过`loop`选项指定循环设备，如下一个示例所示。这里`mydoc.iso`被挂载到`/mnt/cdrom`目录，作为类型为`iso9660`的文件系统。完成后请确保将其卸载。
+
+```
+mount -t iso9660 -o ro,loop=/dev/loop0 mydocuments.iso /mnt/cdrom
+```
+
+## 可启动 CD-ROM
+
+如果你正在创建可启动 CD-ROM，你需要指定要使用的启动映像文件和启动目录。使用`-e`选项指定启动目录。使用`-b`选项指定启动映像。启动映像是一个启动磁盘映像，如用于启动安装程序的那种。例如，在 Red Hat CD-ROM 上，启动映像是`isolinux/isolinux.bin`，启动目录是`isolinux/boot.cat`（你也可以使用`images/boot.img`和`boot.cat`）。将这些文件复制到你的硬盘上。以下示例使用位于 CD-ROM 驱动器上的 Red Hat 发行版文件创建可启动 CD-ROM 映像。
+
+```
+mkisofs -o r8-0.iso -b isolinux/isolinux.bin -c isolinux/boot.cat \ -no-emul-boot -boot-load-size 4 -boot-info-table \ -V -r -R -T -J -V "Red8.0" /mnt/cdrom
+```
+
+## `cdrecord` 和 `dvdrecord`
+
+一旦`mkisofs`创建了 CD 映像文件，你就可以使用`cdrecord`或`cdrwite`将其写入 CD 可写光盘。如果你有多个 CD 刻录设备，你应该通过指定其 SCSI 总线号来指定要使用的 CD-R/RW 驱动器（请记住，即使是 IDE CD-R/RW 驱动器在 Linux 上也被视为 SCSI 设备）。你可以使用`cdrecord`的`-scanbus`选项来查找你的可重写设备的编号。在此示例中，如前面`-scanbus`示例所示，可重写 CD-RW 驱动器的设备号为 0,0。`dev=`选项用于指示此驱动器。`cdrecord`的最后一个参数是 CD 映像文件的名称。`dvdrecord`在 DVD-R/RW 刻录机上以相同的方式工作，实际上是`cdrecord`的扩展。
+
+```
+cdrecord dev=0,0 mydocuments.iso
+```
+
+如果你正在创建音频 CD，请使用`-audio`选项，如下所示。此选项使用 CD-DA 音频格式：
+
+```
+cdrecord dev=0,0 -audio moresongs.iso
+```
+
+`dvdrecord`的类似操作也适用，只是`dvdrecord`会将内容写入 DVD-R 刻录机上的 DVD-R 光盘。
+
+> TIP `cdrecord`的`dummy`选项可让你测试给定映像的 CD 写入操作。
+
+## `dvd+rw` 工具
+
+主要的`dvd+rw`工具是`growisofs`，用它来创建 DVD+RW/R 光盘。还包含另外两个次要支持工具，一个格式化工具`dvd+rw-format`，和一个兼容性工具`dvd+rw-booktype`。有关详细说明，请参阅`/usr/share/doc`中的`dvd+rw-tools`页面。
+
+`growisofs`工具的功能类似于`mkisofs`工具，只是它直接写入 DVD+RW/R 光盘，而不是写入映像。它具有与`mkisofs`相同的选项，只是有些例外，并且实际上是`mkisofs`命令的前端。当然，没有`-o`选项来指定磁盘映像。你指定 DVD 设备即可。例如，要将`newsongs`目录的内容写入 DVD+RW 光盘，你可以直接使用`growisofs`。
+
+```
+growisofs -v -V "Goodsongs" -Z /dev/scd0 newsongs
+```
+
+设备通过其名称指定，通常`/dev/scd0`为第一个 SCSI 设备。请记住，IDE DVD 刻录机在系统启动时由`ide-scsi`模块配置为 SCSI 设备。`growisofs`提供特殊的`-Z`选项用于刻录初始会话。对于多会话（DVD-RW），你可以使用`mkisofs -M`选项。如果你想重用 DVD-RW 光盘，只需覆盖它即可。你不需要重新格式化它。
+
+要将 ISO 映像文件刻录到光盘，请使用`-Z`选项并将 iso 映像分配给设备。
+
+```
+growisofs -v -V "Goodsongs" -Z /dev/scd0=moresongs.iso
+```
+
+尽管`growisofs`会自动格式化新的 DVD+RW 光盘，`dvd+rw`工具还包括`dvd+rw-format`工具，用于显式执行格式化操作。你仅在显式格式化新的 DVD+RW（读写）光盘以便写入时才使用`dvd+rw-format`工具。这只需执行一次，并且仅适用于从未使用过的 DVD+RW 光盘。DVD+R 光盘不需要任何格式化。
+
+`dvd+rw-booktype`工具为可能无法读取 DVD+RW/R 光盘的旧式 DVD-ROM 读卡器设置兼容性设置。
+
+## RAID 与 LVM
+
+随着廉价、高效且容量巨大的硬盘的出现，即使是最专业的系统也会使用多个硬盘。使用多个硬盘为保障存储可靠性以及更便捷地组织硬盘访问提供了可能。Linux 提供了两种更好地管理硬盘的方法：独立磁盘冗余阵列（RAID）和逻辑卷管理（LVM）。RAID 是一种将相同数据存储在多块硬盘不同位置的方式。这些多块硬盘被视为一块硬盘。它们包含恢复信息，一旦某块硬盘发生故障，你就可以恢复文件。LVM 是一种将所有硬盘组织成逻辑卷的方法，让你能够将多块硬盘的存储能力整合到一个逻辑卷中。这样，你的系统会看到一个大型存储设备，你无需对每块底层硬盘及其分区进行细致管理。
+
+## 在内核中启用 RAID 和 LVM
+
+Red Hat 提供了在 Linux 安装过程中创建、安装和配置 RAID 与 LVM 设备的方法。如果你希望之后添加这些设备，则需要首先在内核中启用 RAID 支持。除非你在安装时安装了 RAID 设备，否则 RAID 默认不会启用。如第 32 章和第 33 章所述，你需要配置内核模块——在本例中，即 RAID 和 LVM 设备的模块。在内核配置期间，从“Linux 内核配置”窗口中选择“多设备支持（RAID 和 LVM）”。然后，你可以选择将 RAID 和 LVM 支持启用为模块或作为内核的内置功能（如果将它们作为内核的一部分，则必须重新构建整个内核）。对于 RAID 设备，你可以选择要安装的 Linux 软件 RAID 设备类型。
+
+## 配置 RAID 设备
+
+RAID 是一种跨多块磁盘存储数据的方法，以提供更高的性能和冗余性。实际上，你可以让操作系统将多块硬盘视为一块硬盘。RAID 会高效地跨所有这些磁盘存储和检索数据，而不是让操作系统将每块磁盘作为单独的文件系统进行访问。存储和检索的底层细节不再是操作系统关心的问题。这在添加或移除硬盘时提供了更大的灵活性，同时也通过实现存储系统中的冗余来提供更高的可靠性。使用 RAID，你可以将多块硬盘视为一个虚拟磁盘，其中部分磁盘用作实时镜像，复制数据。你可以根据所需的可靠性程度，以多种方式使用 RAID。当你将数据放置在多块磁盘上时，I/O 操作可以以平衡的方式重叠，从而提高性能。由于多块磁盘增加了平均故障间隔时间（MTBF），冗余存储数据也提高了容错能力。
+
+
+
+# RAID 实现概述
+
+RAID 可以在硬件或软件层面实现。在硬件层面，你可以将硬盘连接到 RAID 硬件控制器，通常是一块特殊的 PC 卡。然后，你的操作系统通过 RAID 硬件控制器访问存储。或者，你可以将 RAID 实现为软件控制器，让软件 RAID 控制器程序管理对被视为 RAID 设备的硬盘的访问。软件版本允许你使用 IDE 硬盘作为 RAID 磁盘。Linux 使用 `2.4` 内核支持的 `MD` 驱动程序来实现软件 RAID 控制器。Linux 软件 RAID 支持五个级别（线性、`0`、`1`、`4` 和 `5`），而硬件 RAID 支持更多级别。硬件 RAID 级别（如 `6` 到 `10`）提供了更高的性能和可靠性的组合。
+
+> 提示 要在系统上使用 RAID，请确保你的内核以及你想使用的 RAID 级别已获得支持。如果没有，你将不得不重新配置并安装内核的 RAID 模块。请检查内核配置中的“多驱动器支持”组件。你可以指定对任意或全部 RAID 级别的支持。
+
+## Linux 软件 RAID 级别
+
+Linux 软件 RAID 可以在不同级别实现，具体取决于你所需要的组织、效率、冗余或重建能力。每种能力对应不同的 RAID 级别。对于大多数级别，硬盘设备的大小应相同。对于镜像（RAID `1`），需要相同大小的磁盘，而对于 RAID `5`，则建议使用相同大小。Linux 软件 RAID 支持如表 31-1 所示的五个级别。（在 Red Hat 中，级别 `4` 作为级别 `5` 的一部分实现。）
+
+| RAID 级别 | 能力 | 描述 |
+|---|---|---|
+| 线性 | 追加 | 简单地将 RAID 硬盘视为一个虚拟驱动器，不进行条带化、镜像或奇偶校验重建。 |
+| `0` | 条带化 | 跨驱动器实现磁盘条带化，无冗余。 |
+| `1` | 镜像 | 实现高水平的冗余。每个驱动器都被视为所有数据的镜像。 |
+| `5` | 分布式奇偶校验 | 使用奇偶校验信息实现数据重建能力。奇偶校验信息分布在所有驱动器上，而非像 RAID `4` 那样使用单独的驱动器。 |
+
+### Linear
+
+线性级别让你可以简单地将多个硬盘组织成一个逻辑硬盘，提供一个连续的存储池。无需在每个硬盘上强制设置单独的分区，实际上你只有一个硬盘。存储是顺序管理的。当一个硬盘填满时，下一个硬盘会被使用。实际上，你是将一个硬盘追加到另一个硬盘上。此级别不提供恢复能力。如果你的硬盘 RAID 阵列包含两个 `80GB` 磁盘，使用完一个的存储后，你会自动开始使用下一个。
+
+### RAID 0: Striping
+
+为了提高效率，RAID 使用磁盘条带化存储数据，其中数据被组织成标准化的条带，可以存储在 RAID 驱动器上以实现更快的访问（级别 `0`）。RAID `0` 也将你的硬盘组织成常见的 RAID 设备，但将其视为单个硬盘，在所有磁盘上随机存储数据。如果你的硬盘 RAID 阵列包含两个 `80GB` 磁盘，你可以将其作为一个 `160GB` RAID 设备访问。
+
+### RAID 1: Mirroring
+
+RAID 级别 `1` 通过镜像实现冗余。在镜像中，相同的数据写入每个 RAID 驱动器。每个磁盘都有所有写入数据的完整副本，因此如果一个或多个磁盘发生故障，其他磁盘仍然有你的数据。虽然非常安全，但冗余可能非常低效并消耗大量存储。例如，在由两个 `80GB` 磁盘驱动器组成的 RAID 阵列上，一个磁盘用于标准存储，另一个是实时备份。这使你在系统上只有 `80GB` 可用。写操作也必须在 RAID 阵列使用的所有镜像硬盘上重复，从而减慢操作速度。
+
+### RAID 5: Distributed Parity
+
+作为镜像的替代方案，数据可以使用奇偶校验信息在硬盘崩溃时重建。奇偶校验信息被保存，而不是数据的完整复制。奇偶校验信息占用相当于一个驱动器的空间，使 RAID 驱动器上的大部分空间可用于存储。RAID `5` 结合了条带化和奇偶校验（参见 RAID `4`），其中奇偶校验信息分布在硬盘上，而不是在一个专门用于此目的的驱动器上。这允许使用更高效的访问方法，即条带化。条带化和奇偶校验相结合，RAID `5` 提供了快速访问和恢复能力，使其成为使用最广泛的 RAID 级别。例如，由四个 `80GB` 硬盘组成的 RAID 阵列将被视为一个 `320GB` 硬盘，其中部分存储（`80GB`）用于保存奇偶校验信息，剩余 `240GB` 可用。
+
+### RAID 4: Parity
+
+虽然由于开销成本，Red Hat 不支持它，但 RAID `4` 与 RAID `5` 一样，支持使用奇偶校验信息而不是镜像数据进行更压缩的恢复形式。在 RAID `4` 中，奇偶校验信息保存在单独的磁盘上，而其他磁盘用于数据存储，类似于线性模型。
+
+> **提示：** Red Hat 还允许你在安装期间创建和格式化 RAID 驱动器。此时，你可以创建你的 RAID 分区和设备。
+
+## RAID 设备和分区：`md` 和 `fd`
+
+RAID 设备命名为 `md`，并使用 `MD` 驱动程序。这些设备已在你的 Linux 系统的 `/dev` 目录中定义，从 `md0` 开始。`/dev/md0` 是第一个 RAID 设备，`/dev/md1` 是第二个，以此类推。每个 RAID 设备反过来使用硬盘分区，其中每个分区包含整个硬盘。这些分区通常称为 RAID 磁盘，而 RAID 设备是其使用的 RAID 磁盘的阵列。
+
+创建 RAID 分区时，你应将分区类型设置为 `fd`，而不是标准 Linux 分区的 `83`。`fd` 类型是 RAID 用于自动检测的类型。
+
+## 对应的硬盘分区
+
+术语设备可能令人困惑，因为它也用于指构成 RAID 设备的特定硬盘分区。事实上，软件 RAID 设备是硬盘分区的阵列，其中每个分区可以，但不一定，占用整个硬盘。在这种情况下，你可以将 RAID 设备视为由一组（阵列）硬盘（设备）组成。实际上，你的 RAID 配置中的硬盘通常包含几个对应的硬盘分区，每个集合大小相同。每个对应的分区集合将构成一个 RAID 设备。因此，你可以使用同一组硬盘拥有多个 RAID 设备。这对于 Linux 分区配置尤其正确，其中不同的系统目录放置在其自己的分区中。例如，`/boot` 可能在一个分区中，`/home` 在另一个分区中，`/`（根）又在另一个分区中。为了设置 RAID 设备，使你拥有 `/boot`、`/home` 和 `/`（根）的单独分区，你需要创建三个不同的 RAID 设备，例如 `md0` 用于 `/boot`，`md1` 用于 `/home`，`md2` 用于根。如果有两个硬盘，例如 `hda` 和 `hdb`，每个都有三个分区，`/boot`、`/home` 和 `/`。第一个 RAID 设备 `md0` 将由两个 `/boot` 分区组成，一个在 `hda` 上，一个在 `hdb` 上。类似地，第二个 RAID 设备 `md1` 将由两个 `/home` 分区组成，一个在 `hda` 上，一个在 `hdb` 上。`md2` 将由 `hda` 和 `hdb` 上的两个 `/`（根）分区组成（参见图 31-1）。
+
+当你为特定 RAID 设备创建分区时，重要的是确保每个分区具有相同的大小。例如，用于 `hda` 磁盘上 `md0` 设备的 `/boot` 分区必须与 `hdb` 磁盘上对应的 `md0` 分区大小相同。因此，如果 `hda` 上的 `md1` 分区为 `20GB`，则 `hdb` 上的对应分区也必须为 `20GB`。如果 `md2` 在一个驱动器上为 `100GB`，则所有其他驱动器上的对应分区也必须为 `100GB`。
+
+> **提示：** 在安装期间，Red Hat Disk Druid 支持克隆工具，可让你基于已设置的分区自动在其他硬盘上创建对应分区。实际上，你在一块硬盘上为每个 RAID 设备设置 RAID 分区，然后使用克隆工具在其他硬盘上创建其对应分区。
+
+## 从 RAID 设备启动
+
+作为安装过程的一部分，Red Hat 允许你创建可从中启动系统的 RAID 设备。你的 Linux 系统将被配置为加载 RAID 内核支持并自动检测你的 RAID 设备。引导加载程序将安装在你的 RAID 设备上，即安装在构成该设备的全部硬盘上。
+
+### FIGURE 31-1
+
+RAID devices
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_638_0.png)
+
+Red Hat 不支持从 RAID `5` 启动，仅支持 RAID `1`。这意味着如果您想使用 RAID `5` 并且仍从 RAID 磁盘启动，您将需要使用硬盘上对应的分区创建至少两个（或更多如果您想要）RAID 设备。其中一个设备将保存您的 `/boot` 分区并作为 RAID `1` 设备安装。此 RAID `1` 设备将是第一个 RAID 设备，`md0`，由每个硬盘上的第一个分区组成。第二个 RAID 设备，`md1`，则可以是 RAID `5` 设备。它将由其他硬盘上的对应分区组成。您的系统然后可以从 RAID `1` 设备启动但使用 RAID `5` 设备。
+
+
+
+如果您在安装期间未创建 RAID 磁盘，而是在之后创建并且想要从中启动，您将必须确保您的系统配置正确。RAID 设备需要使用持久超级块创建。内核中必须启用对 RAID 设备的支持。在 Red Hat 上，此支持作为模块启用。困难出现在您对 `/`（根）分区使用 RAID 5 时。此分区包含 RAID 5 模块，但要访问该分区，您必须先加载 RAID 5 模块。为了解决此限制，您可以在 `/boot` 分区中创建一个包含 RAID 5 模块的 RAM 磁盘。使用 `mkinitrd` 命令创建 RAM 磁盘并使用 `--with` 选项指定要包含的模块。
+
+```
+mkinitrd --preload raid5 --with=raid5 raid-ramdisk 2.4.20-8
+```
+
+## Automatic Detection: Persistent Superblocks
+
+Linux 软件 RAID 现在支持 RAID 设备的自动检测。这允许您的 RAID 设备在系统每次启动时自动被检测到，就像标准分区一样。然后您可以使用任何 RAID 设备 `md` 就像使用硬盘分区 `hd` 或 `sd` 一样，在 `/etc/fstab` 文件中使用它们（参见第 30 章）。自动检测是通过在每个 RAID 磁盘上放置的持久超级块来实现的，以保存配置信息。持久超级块需要在您使用 `mkraid` 创建 RAID 设备时创建。要指示 `mkraid` 创建持久超级块，您需要在 `/etc/raidtab` 文件中指定 `persistent-superblock` 选项，这是 RAID 配置文件。如果没有持久超级块选项，您将必须使用 `raidstart` 命令手动启动您的 RAID 设备。`raidstart -a` 启动所有您的设备。
+
+## RAID Tools
+
+RAID 工具对于在 Linux 上管理软件 RAID 设备很有用。`mkraid` 创建 RAID 设备，`raidstop` 停止设备，而 `raidstart` 打开它（参见表 31-2）。这些将在下一节中详细讨论。
+
+## Creating and Installing RAID Devices
+
+如果您在安装过程中创建了 RAID 设备及其分区，您应该已经拥有可工作的 RAID 设备。您的 RAID 设备将配置在 `/etc/raidtab` 文件中，并且您的 RAID 设备的状态将列在 `/proc/mdstat` 文件中。您可以使用 `raidstart` 和 `raidstop` 命令手动启动或停止您的 RAID 设备。`-a` 选项对它们全部操作，不过您也可以指定特定设备如果您想要。
+
+要为已安装的系统手动创建一个新的 RAID 设备，请按照以下步骤操作：
+
+- 1. 确保您的内核支持您要为正在创建的设备使用的 RAID 级别。要在内核中启用对 RAID 级别的支持，请使用内核配置工具为其创建一个模块，如前所述。
+- 2. 如果您尚未这样做，请创建您将用于 RAID 设备的 RAID 磁盘（分区）。
+- 3. 在 `/etc/raidtab` 文件中配置您的 RAID 设备（`/dev/md n`），指定要使用的 RAID 磁盘。务必指定持久超级块选项以便在启动时自动检测您的 RAID 设备。
+- 4. 使用 `mkraid` 创建您的 RAID 设备。
+- 5. 使用 `raidstart` 激活 RAID 设备。
+- 6. 在 RAID 设备上创建文件系统（`mkfs`）然后挂载它。
+
+### TABLE 31-2
+
+RAID Tools
+
+| Tool | Description |
+|------|-------------|
+| `mkraid` | 从一组块设备创建（配置）RAID 设备，并对其进行初始化。 |
+| `raidstart` | 激活 RAID 设备。 |
+| `raid0start` | 激活旧的非持久线性 RAID 和 RAID 0 RAID 设备。 |
+| `raidstop` | 关闭一个 RAID 设备。 |
+
+## 创建硬盘分区：fd
+
+要添加新的 RAID 设备或首先创建它们，您需要手动创建它们将使用的硬盘分区，然后配置 RAID 设备以使用这些分区。要为 RAID 阵列创建硬盘分区，请使用 `fdisk` 或 `parted` 并将文件系统类型指定为 `fd`。您使用要创建分区的硬盘的设备名称调用 `fdisk` 或 `parted`。务必将 `fd` 指定为分区类型。以下示例为硬盘 `/dev/hdb`（主 IDE 连接上的第二个硬盘）调用 `fdisk`：
+
+```
+fdisk /dev/hdb
+```
+
+尽管从技术上讲是分区，但在 RAID 配置文档和文件中，这些硬盘设备被称为磁盘。
+
+## 配置 RAID：/etc/raidtab
+
+一旦有了磁盘，就需要将它们配置为 RAID 设备。RAID 设备在 `/etc/raidtab` 文件中进行配置。此文件将由 `mkraid` 命令用于创建 RAID 设备。在 `/etc/raidtab` 文件中，您为每个 RAID 设备创建一个 `raiddev` 条目，并指定它们将使用的磁盘以及任何 RAID 选项。对于 `raiddev` 条目，您指定正在配置的 RAID 设备的名称，例如 `/dev/md0` 表示第一个 RAID 设备。
+
+```
+raiddev /dev/md0
+```
+
+然后您使用 `raid-level` 关键字后跟 RAID 级别数字指定 RAID 设备的级别，例如 0、1 或 5。然后添加您可能需要的任何选项以及构成 RAID 阵列的磁盘列表。磁盘使用 `device` 条目定义，并使用 `raid-disk` 选项指定其在 RAID 阵列中的位置。配置指令和选项列在表 31-3 中。以下是 `/etc/raidtab` 文件的示例条目：
+
+```
+raiddev /dev/md0
+  raid-level       5
+  nr-raid-disks    3
+  nr-spare-disks   1
+  persistent-superblock 1
+  chunk-size       4
+  parity-algorithm left-symmetric
+  device           /dev/hdb1
+    raid-disk       0
+  device           /dev/hdc1
+    raid-disk       1
+  device           /dev/hdd1
+    raid-disk       0
+```
+
+前面的示例将 RAID 设备 `/dev/md0` 配置为 RAID 5（`raid-level 5`）设备。构成此 RAID 阵列的有三个磁盘（分区），`/dev/hdb1`、`/dev/hdc1` 和 `/dev/hdd1`，其中 `/dev/hdb1` 为第一个，`/dev/hdc1` 为第二个。有 一个备用磁盘 `/dev/hdd1`。总共有三个 RAID 磁盘（`nr-raid-disks`）和一个备用分区（`nr-spare-disks`）。RAID 文件系统使用持久超级块（`persistent-superblock`）来保存文件系统配置信息，从而允许自动检测您的设备。`parity-algorithm` 选项用于 RAID 5 设备，以指定用于奇偶校验恢复的奇偶校验算法类型，在此示例中为 `left-symmetric`。
+
+| 指令和选项 | 描述 |
+|---|---|
+| `raiddev device` | 为特定 RAID 设备开始一个配置段。 |
+| `raid-level num` | RAID 设备的 RAID 级别，例如 0、1、4、5 和 -1（线性）。 |
+| `device disk-device` | 要添加到 RAID 阵列的磁盘设备（分区）。为 RAID 设备指定的 `device` 条目数量必须与 `nr-raid-disks` 指定的数量相匹配。 |
+| `nr-raid-disks count` | 阵列中的 RAID 设备数量。每个 RAID 设备段必须有此指令。最大值为 12。 |
+| `nr-spare-disks count` | 阵列中的备用设备数量。仅用于 RAID 4 和 RAID 5。内核必须配置为允许根据需要自动添加新的 RAID 磁盘。您可以使用 `raidhotadd` 和 `raidhotremove` 添加和删除备用磁盘。 |
+| `persistent-superblock 0/1` | 指定新创建的 RAID 阵列是否应使用持久超级块。用于帮助内核自动检测 RAID 阵列。RAID 阵列信息保存在每个 RAID 成员的超级块中。 |
+| `chunk-size size` | 将条带大小设置为 `size` 字节，以 2 的幂为单位。 |
+| `device devpath` | 将最近定义的设备添加到构成 RAID 系统的设备列表中。 |
+| `raid-disk index` | 将最近定义的 RAID 设备插入 RAID 阵列中指定位置。 |
+| `spare-disk index` | 将最近定义的 RAID 设备作为备用设备插入 RAID 阵列中指定位置。 |
+| `parity-disk index` | 最近定义的设备用作奇偶校验设备，将其放置在 RAID 阵列的末尾。 |
+
+
+
+- `parity-algorithm algorithm`：对于 RAID 5 设备，指定要使用的奇偶校验算法：`left-asymmetric`、`right-asymmetric`、`left-symmetric` 或 `right-symmetric`。
+- `failed-disk index`：最近定义的设备作为故障设备添加到 RAID 阵列中指定位置。
+
+## `mkraid` 命令
+
+一旦你在`/etc/raidtab`文件中配置了你的 RAID 设备，你就可以使用`mkraid`命令来创建你的 RAID 设备。`mkraid`以 RAID 设备的名称作为参数，例如第一个 RAID 设备的`/dev/md0`。它随后在`/etc/raidtab`文件中查找该设备的条目，并使用该配置信息在该设备上创建 RAID 文件系统。如果你愿意，可以使用`-c`选项指定一个替代的配置文件。`mkraid`可作为 RAID 设备的`mkfs`命令的一种，初始化分区并创建 RAID 文件系统。构成 RAID 阵列的分区上的任何数据都将被擦除。
+
+```
+mkraid /dev/md0
+```
+
+## `raidstart` 命令
+
+一旦你创建了 RAID 设备，你就可以使用`raidstart`命令来激活它们。`raidstart`使你的 RAID 文件系统可访问。`raidstart`以你想要启动的 RAID 设备名称作为参数。`-a`选项激活所有 RAID 设备。
+
+```
+raidstart /dev/md0
+```
+
+## 创建文件系统
+
+一旦 RAID 设备被激活，你就可以在 RAID 设备上创建文件系统并挂载这些文件系统。以下示例在`/dev/md0`设备上创建了一个标准 Linux 文件系统：
+
+```
+mkfs.ext3 /dev/md0
+```
+
+在以下示例中，用户随后创建了一个名为`/myraid`的目录并将 RAID 设备挂载到那里：
+
+```
+mkdir /myraid
+mount /dev/md0 /myraid
+```
+
+如果你计划使用你的 RAID 设备来维护你的用户目录和文件，你会将 RAID 设备挂载为你的`/home`分区。这种挂载点通常在你安装系统时创建 RAID 设备时使用。要将当前的主目录转移到 RAID 设备，首先将它们备份到另一个分区，然后挂载你的 RAID 设备，将主目录复制到其上。
+
+## `raidstop` 命令
+
+如果你决定更改 RAID 配置或添加新设备，你首先必须停用当前活动的 RAID 设备。要停用 RAID 设备，你使用`raidstop`命令。请务必先关闭设备上打开的任何文件并卸载任何文件系统。
+
+```
+umount /dev/md0
+raidstop /dev/md0
+```
+
+提示：热插拔是指在系统运行时更换驱动器的操作。其可行性有限。切勿尝试热插拔 IDE 驱动器；你可能会损坏驱动器。SCSI 驱动器可能成功交换，但最有可能不会。IBM SCA 驱动器可以成功交换。你可以使用`raidhotadd`和`raidhotremove`命令执行此类交换。
+
+## RAID 示例
+
+本章前面，图 31-1 显示了一个简单的 RAID 配置，其中使用两个硬盘上的对应分区创建了三个 RAID 设备，用于`/boot`、`/`（根）和`/home`分区。引导分区配置为 RAID 1 设备，因为系统只能从 RAID 1 设备启动，而不能从 RAID 5 启动。其他分区是 RAID 5 设备，这是一种更常用的 RAID 访问方法。
+
+你可以在安装期间设置这样的系统，使用 Disk Druid 选择和格式化你的 RAID 设备及其分区。这里描述的步骤假设你已经在标准 IDE 驱动器上安装了系统，并且正在两个其他 IDE 磁盘驱动器上设置 RAID 设备。然后你可以将文件从你的标准驱动器复制到你的 RAID 设备。
+
+首先使用像`parted`或`fdisk`这样的分区工具创建硬盘分区。然后在`/etc/raidtab`文件中配置三个 RAID 设备。
+
+```
+raiddev /dev/md0
+    raid-level        1
+    nr-raid-disks     2
+    nr-spare-disks    0
+    persistent-superblock 1
+    chunk-size        4
+    device            /dev/hda1
+    raid-disk         0
+    device            /dev/hdc1
+    raid-disk         1
+```
+
+```
+raiddev /dev/md1
+    raid-level        5
+    nr-raid-disks     2
+    persistent-superblock 1
+    chunk-size        4
+    parity-algorithm  left-symmetric
+    device            /dev/hda2
+    raid-disk         0
+    device            /dev/hdc2
+    raid-disk         1
+```
+
+```
+raiddev /dev/md2
+    raid-level        5
+    nr-raid-disks     2
+    persistent-superblock 1
+    chunk-size        4
+    parity-algorithm  left-symmetric
+    device            /dev/hda3
+    raid-disk         0
+    device            /dev/hdc3
+    raid-disk         1
+```
+
+然后，使用`mkraid`创建 RAID 设备。
+
+```
+mkraid md0 md1 md2
+```
+
+使用`raidstart`激活 RAID 设备。
+
+```
+raidstart md0 md1 md2
+```
+
+在 RAID 设备上创建文件系统。
+
+```
+mkfs.ext3 md0 md1 md2
+```
+
+然后，你可以将`/boot`、`/`和`/home`下的文件从当前硬盘迁移到 RAID 设备。将引导加载程序安装在第一个 RAID 设备`md0`上，并从第二个 RAID 设备`md1`加载根文件系统。
+
+## 逻辑卷管理器
+
+为了更方便地管理硬盘存储，你可以将系统设置为使用逻辑卷管理器（LVM），创建 LVM 分区，这些分区被组织为逻辑卷，并自动分配空闲空间。逻辑卷提供了一种更灵活、更强大的磁盘存储管理方式，将物理分区组织为逻辑卷，从而可以轻松管理磁盘空间。逻辑卷的磁盘存储被视为一个存储池，尽管该卷实际上可能包含分布在多个不同硬盘上的若干硬盘分区。添加一个新的 LVM 分区只会增加整个系统可访问的存储池。
+
+### LVM 结构
+
+在 LVM 结构中，LVM 物理分区（也称为区段）被组织成逻辑组，逻辑组又被逻辑卷使用。实际上，你面对的是三个不同层次的组织。最低层是物理卷，即你用`parted`或`fdisk`等分区创建工具创建的物理硬盘分区。分区类型可以是任何标准 Linux 分区类型，如`ext3`或`ext2`。这些物理卷被组织成逻辑组（称为卷组），其作用类似于逻辑硬盘。你将物理卷集合分配给不同的逻辑组。例如，如果你有物理卷，由两个硬盘`hda`和`hdb`上的硬盘分区`hda2`、`hda3`、`hdb1`、`hdb2`和`hdb3`组成，你可以将其中一些分配给一个逻辑组，另一些分配给另一个逻辑组。组成不同逻辑组的分区可以来自不同的物理硬盘。例如，`hda2`和`hdb3`可以属于逻辑组`turtle`，而`hda3`、`hdb2`和`hdb3`可以组成另一个不同的逻辑组，比如`rabbit`。逻辑组名称可以是任何你想赋予的名称，就像给硬盘命名一样。
+
+一旦有了逻辑组，就可以创建逻辑卷。逻辑卷的功能很像标准设置中的硬盘分区。例如，在`turtle`逻辑组上，你可以创建一个`/var`逻辑卷；在`rabbit`逻辑组上，你可以创建`/home`和`/projects`逻辑卷。一个逻辑组上可以有多个逻辑卷，就像一块硬盘上可以有多个分区一样。
+
+你可以像对待任何普通硬盘分区一样对待逻辑卷。使用`mkfs`命令在其上创建文件系统，然后可以使用`mount`命令挂载该文件系统以供使用。
+
+逻辑卷上的存储使用所谓的区段来管理。逻辑组为区段定义一个标准大小，比如 4MB，然后将组内的每个物理卷划分为该大小的区段。逻辑卷也被划分为相同大小的区段，然后映射到物理卷上的区段。
+
+对于逻辑卷，有一个限制和一个建议。引导分区不能是逻辑卷的一部分。你仍然必须创建一个单独的硬盘分区作为引导分区，挂载点为`/boot`，并在其中安装内核和所有必需的引导文件。此外，建议你不要将`/`（根）分区放在逻辑卷上，否则会使任何必要的数据恢复变得复杂。
+
+### 使用 Disk Druid 创建 LVM
+
+创建逻辑卷涉及几个步骤。首先，创建物理 LVM 分区；然后创建放置这些分区的卷组；接着，从卷组中创建逻辑卷，并为这些逻辑卷指定挂载点和文件系统类型。
+
+
+
+在 Red Hat 上，你可以在安装过程中使用 Disk Druid 创建 LVM 分区。在 Disk Druid 中，单击 New，并在“文件系统类型”中选择“physical volume (LVM)”。为硬盘上需要的每个分区创建一个 LVM 物理分区。创建完 LVM 物理分区后，单击 LVM 按钮创建逻辑卷。
+
+首先，你需要将 LVM 物理分区分配给卷组。卷组本质上就是逻辑硬盘。你可以将来自不同硬盘的 LVM 物理分区分配给同一个卷组，让卷组跨越多个不同的硬盘。卷组创建完成后，就可以创建逻辑卷了。你可以在每个组内创建多个逻辑卷。逻辑卷的功能类似于分区。你必须为创建的每个逻辑卷指定文件系统类型和挂载点。
+
+## LVM 工具
+
+在 Red Hat 上，你可以在安装过程中创建逻辑卷，或者以后使用一组 LVM 工具来管理 LVM 卷，添加新的 LVM 物理分区并移除现有分区。LVM 将配置信息保存在 `/etc/lvmconf` 目录中。
+
+## 显示 LVM 信息
+
+你可以使用 `pvdisplay`、`vgdisplay` 和 `lvdisplay` 命令显示物理分区、卷组和逻辑卷的详细信息。`pvscan`、`vgscan` 和 `lvscan` 命令会列出你的物理卷、卷组和逻辑卷。
+
+## 管理 LVM 物理卷
+
+物理卷可以是任何硬盘分区或 RAID 设备。一个 RAID 设备被视为一个单独的物理卷。你可以从单个硬盘或硬盘上的分区创建物理卷。在拥有许多硬盘的超大型系统上，你更可能为每个物理卷使用整个硬盘。
+
+要创建新的物理卷，请使用 `pvcreate` 命令并指定分区的设备名称来初始化它，如下所示。
+
+```
+pvcreate /dev/hda3
+```
+
+要在一整个硬盘上初始化物理卷，你使用硬盘设备名，如下所示。
+
+```
+pvcreate /dev/hdc
+```
+
+然后使用 `vgextend` 命令将分区添加到逻辑组中，在本例中为 `rabbit`。实际上，你是通过添加一个新的物理分区来扩展逻辑组的尺寸。
+
+```
+vgextend rabbit /dev/hda3
+```
+
+要移除一个物理分区，首先将其从其逻辑卷中移除。你可能需要使用 `pmove` 命令将数据从物理分区移走。然后使用 `vgreduce` 命令将其从其逻辑组中移除。
+
+## 管理 LVM 组
+
+你可以使用 `vgcreate` 命令手动创建一个卷组，并提供组名以及你想要包含在组中的物理分区列表。以下示例创建了一个名为 `rabbit` 的组，由三个物理分区组成，`/dev/hda3`、`/dev/hdb4` 和 `/dev/hdb4`。
+
+```
+vgcreate rabbit /dev/hda3 /dev/hdb2 /dev/hdb4
+```
+
+你可以通过先使用 `vgchange -a n` 操作将其停用，然后使用 `vgreduce` 命令来移除一个卷组。
+
+## 激活卷组
+
+在标准文件系统结构中，你挂载和卸载硬盘分区，而在 LVM 结构中，你激活和停用整个卷组。组卷在你使用带有 `-a` 选项的 `vgchange` 命令激活它们之前是无法访问的。要激活一个组，首先重新启动系统，然后输入带有 `-a` 选项和 `y` 参数的 `vgchange` 命令以激活逻辑组（使用 `n` 参数将停用该组）。
+
+```
+vgchange -a y rabbit
+```
+
+## 管理 LVM 逻辑卷
+
+要创建逻辑卷，你使用 `lvcreate` 命令。使用 `-n` 选项指定卷的名称，该名称类似于硬盘分区的标签。你使用 `-L` 选项指定卷的大小。以下示例在 `rabbit` 逻辑组上创建一个名为 `projects` 的逻辑卷，大小为 20GB。
+
+```
+lvcreate -n projects -L 20000M rabbit
+```
+
+你可以使用 `lvremove` 命令移除逻辑卷。使用 `lvextend` 可以增加逻辑卷的大小，而 `lvreduce` 则会减小其大小。
+
+## LVM 示例
+
+使用图 31-2 中的示例，创建和访问逻辑卷所涉及的步骤在以下命令中描述。首先使用 `fdisk` 或 `parted` 等分区创建工具在硬盘 `hda` 和 `hdb` 上创建物理分区。在本例中，你创建分区 `hda1`、`hda2`、`hda3`、`hdb1`、`hdb2`、`hdb3` 和 `hdb4`。
+
+然后使用 `pvcreate` 命令初始化物理卷。`hda1` 和 `hda2` 分区保留用于启动分区和根分区，不进行初始化。
+
+```
+pvcreate /dev/hda3 /dev/hdb1 /dev/hdb2
+pvcreate /dev/hdb3 /dev/hdb4
+```
+
+然后你使用 `vgcreate` 命令创建想要的逻辑组。在本例中，有两个逻辑组，`turtle` 和 `rabbit`。`turtle` 组使用 `hdb1` 和 `hdb3`，`rabbit` 使用 `hda3`、`hdb2` 和 `hdb4`。如果以后创建物理卷并想将其添加到卷组中，你将使用 `vgextend` 命令。
+
+```
+vgcreate turtle  /dev/hdb1 /dev/hdb3
+vgcreate rabbit  /dev/hda3 /dev/hdb2 /dev/hdb4
+```
+
+### FIGURE 31-2
+
+逻辑卷管理
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_647_0.png)
+
+你现在可以在每个卷组中创建逻辑卷，使用 `lvcreate` 命令。
+
+```
+lvcreate -n var      -l 2000M  turtle
+lvcreate -n home      -l 5000M  rabbit
+lvcreate -n projects  -l 2000M  rabbit
+```
+
+然后你可以激活逻辑卷。重新启动并使用带有 `-a y` 选项的 `vgchange` 来激活逻辑卷。
+
+```
+vgchange -a y turtle rabbit
+```
+
+你现在可以为每个逻辑卷创建文件系统。
+
+```
+mkfs.ext3 var
+mkfs.ext3 home
+mkfs.ext3 projects
+```
+
+然后你可以挂载逻辑卷。
+
+```
+mount var /var
+mount home /home
+mount projects /mnt/myprojects
+```
+
+# CHAPTER
+
+## 设备和模块
+
+所有设备，如打印机、终端和 CD-ROM，都通过称为设备文件的特殊文件连接到你的 Linux 操作系统。这样的文件包含操作系统控制指定设备所需的所有信息。这种设计带来了极大的灵活性。操作系统独立于管理特定设备的具体细节；这些细节都由设备文件处理。操作系统只需告知设备要执行什么任务，而设备文件则告诉它如何执行。如果更换设备，你只需更改设备文件，而无需更改整个系统。
+
+要在 Linux 系统上安装设备，你需要为其提供设备文件、软件配置（如配置工具提供的配置）以及内核支持——通常由模块提供或已编译并内置于内核中。已经为各种设备设置了大量的设备文件。通常你只需要一个，即特定于你的设备的那个。当你添加新的硬件设备时，Kudzu，Red Hat 硬件探测工具，会在系统启动时检查新硬件。Kudzu 工具会自动检测新设备并让你配置它。Kudzu 会将你的硬件配置概要保存到 `/etc/sysconfig/hwconf` 文件中。对于更专业的内核支持，你可能需要加载内核模块或重新编译内核，这两种操作都很简单（参见第 33 章）。在大多数情况下，支持已内置于内核中。
+
+## 设备文件
+
+设备文件的名称设计为反映设备的任务。打印机设备文件以 `lp` 开头，表示“line print”。由于你的系统可能连接多个打印机，特定的打印机设备文件由 `lp` 前缀后跟两个或多个数字或字母来区分，例如 `lp0`、`lp1`、`lp2`。终端设备文件也是如此。它们以 `tty` 开头，表示“teletype”，并由数字或字母进一步区分，例如 `tty0`、`tty1`、`tty50` 等。你可以从 kernel.org 网站 www.kernel.org/pub/linux/docs/device-list/devices.txt 获取当前设备文件名及其所用设备的完整列表。
+
+## 设备符号链接
+
+所有这些文件名都将作为设备文件实现在你的 `/dev` 目录中。在这里你可以找到打印机、CD-ROM、硬盘、SCSI 和声音设备文件，以及许多其他文件。某些文件实际上是符号链接，它们使用常见的设备名称，通常链接到实际使用的设备文件。符号链接是文件的另一个名称，用作快捷方式，引用该文件。例如，`/dev/cdrom` 符号链接指向用于你的 CD-ROM 的实际设备文件。如果你的 CD-ROM 是 IDE 设备，它可能使用设备文件 `hdc`。在这种情况下，`/dev/cdrom` 将是 `/dev/hdc` 的链接。实际上，`/dev/cdrom` 是 `/dev/hdc` 的另一个名称。还存在一个 `/dev/modem` 链接文件用于你的调制解调器。如果你的调制解调器连接到第二个串行端口，其设备文件将是 `/dev/ttyS1`。在这种情况下，`/dev/modem` 将链接到该设备文件。应用程序然后可以使用 `/dev/modem` 来访问你的调制解调器，而不必知道实际使用的设备文件。常用设备链接的列表显示在表 32-1 中。
+
+
+
+> TIP 你会注意到 `/dev` 文件中没有以太网设备的条目，例如 `eth0` 或 `eth1`。那是因为这些实际上是 `/etc/modules.conf` 文件中定义的内核模块的别名，或由内核直接处理的设备。它们不是设备文件。
+
+## 硬件设备安装：Kudzu
+
+硬件设备由 Red Hat 硬件探测工具 Kudzu 自动检测。Kudzu 是一种检测和配置系统上新硬件或更改硬件的工具。Kudzu 在启动时运行以配置新硬件设备并检测已移除的设备。你也可以手动运行 Kudzu。当你启动 Kudzu 时，它会检测当前硬件并将其与存储在 `/etc/sysconfig/hwconf` 中的数据库进行比较。然后它确定是否有任何硬件被添加到系统或从系统中移除。当它检测到新硬件或添加的硬件时，Kudzu 会在需要时调用该设备的适当配置工具，例如视频卡的 `redhat-config-xfree86`，或键盘的 `redhat-config-keyboard`。对于像 CD-ROM 这样简单的硬件配置，Kudzu 只是将 `cdrom` 设备符号链接到新设备，`/dev/cdrom`。
+
+Kudzu 然后更新其位于 `/etc/sysconfig/hwconf` 的数据库。如果检测到已移除的设备，`hwconf` 文件会相应更新。如果设备只是通过设备链接安装，例如 `/dev/cdrom` 或 `/dev/mouse`，则该链接将被移除。对于网卡，像 `eth0` 这样的别名条目将被移除。
+
+## 表 32-1
+
+设备链接
+
+| Link | Description |
+|---|---|
+| `/dev/mouse` | Current mouse device |
+| `/dev/tape` | Current tape device |
+| `/dev/cdrom` | Current CD-ROM device |
+| `/dev/cdwriter` | Current CD-writer device |
+| `/dev/scanner` | Current scanner device |
+| `/dev/modem` | Current dial-out device, modem port |
+| `/dev/root` | Current root file system |
+| `/dev/swap` | Current swap |
+
+## 手动创建设备文件
+
+Linux 实现两种类型的设备：块设备和字符设备。块设备，例如硬盘，一次传输一个数据块。字符设备，例如打印机或调制解调器，一次传输一个字符，或者更确切地说作为连续的数据流传输，而不是作为单独的块。字符设备的设备驱动文件在 `ls` 命令显示的权限段中第一个字符为 `c`。块设备的设备驱动文件为 `b`。在下一个示例中，`lp0`（打印机）是字符设备，而 `hda1`（硬盘）是块设备：
+
+```
+# ls -l hda1 lp0
+brw-rw---- 1 root disk 3, 1 Jan 30 02:04 hda1
+crw-rw---- 1 root lp 6, 0 Jan 30 02:04 lp0
+```
+
+## 设备类型
+
+设备类型可以是 `b`、`c`、`p` 或 `u`。如前所述，`b` 表示块设备，`c` 表示字符设备。`u` 表示非缓冲字符设备，`p` 表示 FIFO（先进先出）设备。相同类型的设备通常具有相同的名称；例如，所有串行接口都具有名称：`ttyS`。相同类型的设备然后通过附加到名称的数字唯一标识。该数字有两个组成部分：主设备号和次设备号。设备可能具有相同的主设备号，但如果是这样，次设备号始终不同。这种主次结构旨在处理多个设备可能依赖于一个较大设备的情况，例如连接到同一 I/O 卡的多个调制解调器。所有调制解调器都将具有引用该卡的相同主设备号，但每个调制解调器将具有唯一的次设备号。主设备号和次设备号对于块设备和字符设备（`b`、`c` 和 `u`）都是必需的。然而，它们不用于 FIFO 设备。
+
+有效设备名称及其主设备号和次设备号列在内核源代码的 `/Documentation` 目录中的 `devices.txt` 文件中，`/usr/src/linux-/Documentation`。当你创建设备时，你使用主设备号和次设备号以及特定种类设备的设备名称前缀。大多数这些设备已经为你创建，并列在 `/etc/dev` 目录中。
+
+## mknod
+
+尽管大多数发行版已为你设置了广泛的设备文件集，但你可以创建自己的设备。你使用 `mknod` 命令创建设备文件，字符或块类型。`mknod` 命令具有以下语法：
+
+```
+mknod options device device-type major-num minor-num
+```
+
+例如，Linux 系统通常提供三个并行端口的设备文件（`lp0-2`）。如果需要更多，你可以使用 `mknod` 命令创建新的一个。打印机设备是字符设备，必须由 `root` 和 `daemon` 拥有。打印机权限
+
+设备对所有者和组具有读写权限，`660`（有关文件权限的讨论请参见第28章）。主设备号设为 `6`，而次设备号设为打印机的端口号，例如 LPT1 为 `0`，LPT2 为 `1`。创建设备后，你使用 `chown` 将其所有权更改为 `root` 用户，因为只有管理员才应控制它。使用 `chgrp` 命令将组更改为 `lp`。
+
+大多数设备属于各自的组，例如磁盘用于硬盘分区，`lp` 用于打印机，`floppy` 用于软盘，`tty` 用于终端。在下一个示例中，在第四个并行端口上创建了一个并行打印机设备，`/dev/lp3`。`-m` 选项指定权限——本例中为 `660`。设备是一个字符设备，由设备名后的 `c` 参数表示。主号为 `6`，次号为 `3`。如果你在 `/dev/lp4` 上创建设备，主号仍为 `6`，但次号将为 `4`。创建设备后，`chown` 命令随后将并行打印机设备的所有权更改为 `root`。对于打印机，请确保已为你的设备创建了 spool 目录。如果没有，你需要创建一个。Spool 目录包含根据设备输出或输入而变化的数据文件，如打印机或扫描仪。
+
+```
+# mknod -m 660 /dev/lp3 c 6 3
+# chown root /dev/lp3
+# chgrp lp /dev/lp3
+```
+
+## 设备信息：/proc 和 /etc/sysconfig/hwconf
+
+在 Red Hat 中，Kudzu 在 `/etc/sysconfig/hwconf` 文件中维护所有已安装硬件设备的完整配置档案（`/etc/sysconfig` 在第30章中讨论）。如前所述，该文件由 Kudzu（`kudzu`）更新；新硬件会被添加，旧设备会被移除。条目定义配置变量，如设备的类别（视频、CD-ROM、硬盘驱动器等）、它使用的总线（PCI、IDE 等）、其设备名称（如 `hdd` 或 `st0`）、它使用的驱动程序以及设备的描述。以下是鼠标条目的示例：
+
+```
+class: MOUSE
+bus: PS AUX
+detached: 0
+device: psaux
+driver: generic3ps/2
+desc: "Generic 3 Button Mouse (PS/2)"
+```
+
+`/proc` 文件系统（参见第30章）为你的设备维护特殊的信息文件。`/proc/devices` 文件列出所有已安装的字符设备和块设备以及它们的主号。当前用于设备的 IRQ、DMA 和 I/O 端口分别列在 `interrupts`、`dma` 和 `ioports` 文件中。某些文件列出涵盖多个设备的信息，如 `pci`，它列出所有 PCI 设备，`sound`，它列出所有声音设备。`sound` 文件列出有关你的声卡的详细信息。几个子目录，如 `net`、`ide` 和 `scsi`，包含不同设备的信息文件。某些文件保存可动态更改的配置信息，如 IP 分包转发功能和最大文件数。你可以使用 `redhat-config-proc` 工具（系统工具菜单中的内核调优）更改这些值，或通过手动编辑某些文件进行更改。表 32-2 列出了几个与设备相关的 `/proc` 文件（有关其他条目，请参见第30章）。
+
+## 表 32-2
+
+Proc 设备信息文件
+
+| File | Description |
+|---|---|
+| `/proc/devices` | Lists the device drivers configured for the currently running kernel |
+| `/proc/dma` | Displays the DMA channels currently used |
+| `/proc/interrupts` | Displays the IRQs (interrupts) in use |
+| `/proc/ioports` | Shows the I/O ports in use |
+| `/proc/pci` | Lists PCI devices |
+| `/proc/sound` | Lists sound devices |
+| `/proc/scsi` | Directory for SCSI devices |
+| `/proc/ide` | Directory for IDE devices |
+| `/proc/net` | Directory for network devices |
+
+## 安装和管理终端和调制解调器
+
+
+
+在 Linux 中，多个用户可以同时登录。当然，每个用户都需要自己的终端来访问 Linux 系统。PC 上的显示器充当一个特殊的终端，称为控制台，但你可以通过 PC 上的串行端口或安装在 PC 上的特殊多端口卡添加其他终端。其他终端可以是独立终端或使用终端仿真程序的 PC。有关终端安装的详细说明，请参阅 `/usr/share/doc/HOWTO` 中的 `Term-HOWTO` 文件（作为 Red Hat 文档 CD-ROM 的一部分安装）或 Linux 文档项目网站（`www.tldp.org`）。下面提供简要说明。
+
+### 串行端口
+
+PC 上的串行端口称为 `COM1`、`COM2`、`COM3` 和 `COM4`。这些串行端口对应于终端设备 `/dev/ttyS0` 至 `/dev/ttyS3`。请注意，其中一些串行设备可能已被用于其他输入设备，如鼠标，以及通信设备，如调制解调器。如果你有串行打印机，其中一个串行设备已被用于此。如果你安装了多端口卡，你将有更多可供选择的端口。对于你添加的每个终端，你必须在 Linux 系统上创建一个字符设备。与打印机一样，你使用 `mknod` 命令创建终端设备。终端设备的权限为 `660`。终端设备是字符设备，主号为 `4`，次号通常从 `64` 开始。
+
+> Tip `/etc/fstab` 文件中的 `/dev/pts` 条目在 `/dev/pts` 上挂载 `devpts` 文件系统，用于 Unix98 伪 TTY。这些伪终端由按编号命名的设备标识。
+
+## mingetty、mgetty 和 agetty
+
+终端设备由系统使用 `getty` 程序和一组配置文件进行管理。当系统启动时，它读取 `init` tab 文件并为每个终端执行适当的 `getty` 程序，如 `mingetty`、`mgetty` 或 `agetty`。这些 `getty` 程序设置了你的 Linux 系统与指定终端之间的通信。`mingetty` 为虚拟控制台提供最少支持，而 `agetty` 为终端连接提供增强支持。`agetty` 还包括波特率和超时参数。`mgetty` 专为传真/调制解调器连接设计，让你配置拨号、登录和传真参数。`mgetty` 配置文件保存在 `/etc/mgetty+sendfax` 目录中。调制解调器连接信息保存在 `/etc/mgetty+sendfax/mgetty.config` 文件中。所有 `getty` 程序都可以读取放在 `/etc/issue` 文件中的初始消息，该文件可以包含特殊代码以提供系统名称和当前日期时间。
+
+## termcap 和 inittab 文件
+
+`/etc/inittab` 文件保存了系统管理终端设备的指令。`/etc/inittab` 文件中的一行有四个基本组成部分：ID、运行级别、动作和进程。终端设备由 ID 号标识，从 `1` 开始为第一个设备。终端运行的运行级别通常为 `1`。动作通常为 `respawn`，意思是持续运行进程。进程是对 `mingetty`、`mgetty` 或 `agetty` 的调用，并带终端设备名。`/etc/termcap` 文件保存不同终端类型的规范。这些是用户可用于登录系统的不同类型的终端。你的 `/etc/termcap` 文件已填入当前生产的大多数终端的规范。`/etc/termcap` 文件中的条目由可用于终端的各种名称组成，以竖线字符（`|`）分隔，然后是一系列参数规范，每个以冒号结尾。你可以在此找到特定终端类型使用的名称。你可以使用 `more` 显示 `/etc/termcap` 文件，然后使用搜索 `/` 定位你的终端类型。你可以为终端设备设置许多选项。要更改这些选项，请使用 `stty` 命令，而不是直接更改配置文件。`stty` 命令不带参数时列出终端的当前设置。
+
+## tset
+
+用户登录时，使用 `tset` 命令初始化终端设备是有帮助的。通常，`tset` 命令放在用户的 `.bash_profile` 文件中，并在用户登录系统时自动执行。你使用 `tset` 命令设置终端类型以及终端设备所需的其他选项。`.bash_profile` 文件中 `tset` 的常见条目如下。`-m dialup` 选项提示用户输入终端类型。此处指定的类型是显示在括号中的默认类型。用户按 ENTER 选择默认值。提示如下所示：`TERM=(vt100)`?
+
+```
+eval `tset -s -Q -m dialup:?vt100`
+```
+
+## 输入设备
+
+输入设备，如鼠标和键盘，在多个层面显示。初始配置在安装期间进行，此时选择鼠标和键盘类型。你可以使用管理配置工具更改该配置，例如 `redhat-config-mouse` 和 `redhat-config-keyboard`（系统设置菜单和窗口中的鼠标和键盘）。X Window System、KDE 和 GNOME 桌面也存在鼠标和键盘的特殊配置。你选择键盘布局和语言，以及配置鼠标的速度和显示。
+
+## PCMCIA 设备
+
+PCMCIA 设备是常见于笔记本电脑的卡读卡器，用于连接调制解调器或无线卡等设备，尽管它们也正成为许多台式机系统的标准。同一 PCMCIA 设备可以支持多种不同类型的设备，包括网卡、调制解调器、硬盘和蓝牙设备。除了配置 PCMCIA 卡槽本身外，你还可以配置可能插入其中的每个特定设备，例如无线卡。配置将与直接连接到系统的标准设备配置类似。请查阅 `www.tldp.org` 站点上的 `PCMCIA-HOWTO`，了解 PCMCIA 卡及其配置的详细讨论。
+
+PCMCIA 设备的支持像服务一样管理。与大多数设备模块直接加载不同，支持由 `pcmcia` 服务脚本加载，就像网络或服务器等服务由服务脚本加载一样。与其他服务脚本一样，`pcmcia` 脚本位于 `/etc/rc.d/init.d` 目录中。你可以使用 `service` 命令手动启用或禁用支持，使用脚本。像任何服务一样，你可以使用 Service 工具或 `chkconfig` 配置 `pcmcia` 在系统启动时自动运行，并指定运行级别。
+
+```
+service pcmcia start
+```
+
+在 Red Hat 上，基本配置由 `/etc/sysconfig` 目录中的 `pcmcia` 脚本处理，而不是 `/etc` 目录。在这里，你可以设置基本启动选项，例如 `PCMCIA` 以启用 `pcmcia`，`PCIC` 指定卡接口控制器（`yenta_socket`），以及 `PCIC_OPTS` 指定控制器选项。`CORE_OPTS` 保存 `pcmcia_core` 模块的选项，`CARDMGR_OPTS` 保存 `cardmgr` 守护进程的选项。`SCHEME` 条目可用于选择方案。
+
+可连接到 `pcmcia` 设备的不同类型设备的详细配置保存在 `/etc/pcmcia` 目录中。在这里，你会找到 `pcmcia` 无线、ISDN、串行、SCSI 和 IDE 硬盘以及蓝牙设备的配置文件。这里有每个设备的启动脚本以及相应的选项文件，例如 `wireless` 和 `wireless.opts`、`ide` 和 `ide.opts`，以及 `bluetooth` 和 `bluetooth.conf`。每个脚本将保存配置该设备的适当命令，如无线设备的 `iwconfig` 命令、蓝牙的 `hciattach`，以及用于更新 IDE 和 SCSI 驱动器分区条目的 `updfstab`。相应的选项文件将保存对应类型设备的配置设置。`bluetooth.opts` 文件保存不同类型蓝牙设备的参数，而 `wireless.opts` 文件列出不同无线卡的可能选项。`shared` 文件保存在各种启动脚本中使用的函数，例如 `add_parts`，它将添加 IDE 或 SCSI 硬盘 PCMCIA 设备上的块设备，如分区，调用 `add_blkdev` 函数，该函数将检查并挂载分区。许多脚本将运行 `shared` 脚本来启用这些函数。
+
+你可以随意添加和移除 PCMCIA 卡。它们将从受支持卡的数据库中被识别，并使用相应的启动脚本进行配置。此任务由 `cardmgr` 守护进程处理，该守护进程扫描 PCMCIA 设备上的插入和移除事件，检测到添加的设备并自动加载适当的内核模块。`cardmgr` 工具将生成一个 `/var/lib/pcmcia/stab` 文件，其中将列出套接字号、设备类、驱动程序，以及使用相同驱动程序的设备的设备号。`stab` 条目可以使用设备类来确定为该设备使用哪个启动配置脚本。
+
+你可以使用 `cardctl` 命令获取有关 PCMCIA 设备的信息，以及手动弹出和插入设备。`status`、`config` 和 `ident` 选项将显示设备的套接字状态和配置，以及设备的识别信息。`insert` 和 `eject` 选项将让你添加和移除设备。`cardinfo` 命令也提供设备信息。
+
+不建议热插拔 IDE 或 SCSI 设备。对于这些设备，你应首先使用 `cardctl` 命令手动关闭设备。
+
+```
+cardctl eject
+```
+
+所有 PCMCIA 配置都支持使用方案，这让你可以为设备指定不同的设置集。例如，对于以太网设备，你可以有一套在办公室使用的设置和一套在家使用的设置。对于办公室设置，你可以创建一个 `office` 方案，对于家庭设置，则创建一个 `home` 方案。启动设备时，你可以指定要使用的方案。你可以使用 `cardctl` 命令和不带参数的 `scheme` 选项来查找当前使用的方案。要更改为某个方案，你提供 `scheme` 参数，这将更改该设备的方案。
+
+```
+cardctl scheme home
+```
+
+## 安装声卡、网卡和其他卡
+
+
+
+要安装新卡，你的内核必须首先配置为支持它。大多数卡的支持以可动态加载到内核的模块形式提供。安装卡的支持通常只需加载包含其驱动程序的模块即可。例如，Sound Blaster 声卡的驱动程序位于模块`sb.o`中。加载此模块会使你的声卡可供 Linux 使用。大多数发行版会自动检测系统上安装的卡并加载所需的模块。如果你更换声卡，新卡会被 Kudzu 自动检测，调用`redhat-config-soundcard`来配置它。对于网卡，Kudzu 会调用`redhat-config-network`来执行配置。你也可以手动加载所需的模块，移除旧的冲突模块。本章后面的“Modules”部分描述了此过程。
+
+系统上的以太网卡。用于引用该特定卡所用模块的别名，例如，3Com Etherlink XL 卡别名为`3c59x`网络模块，如果它是第一块以太网卡，其别名将为`eth0`。模块本身保存在内核的模块目录`/lib/modules`中，如上一节所述。
+
+## 音频设备
+
+在 Red Hat 上，你可以使用`redhat-config-soundcard`实用程序在 Linux 上安装大多数声卡。不同音频设备的列表在表 32-3 中提供。某些声卡可能需要更专业的支持。对于声卡，你可以通过列出`/dev/sndstat`文件的内容来了解当前的音频配置。你可以通过简单地将音频文件重定向到它来测试你的卡，如下所示：
+
+```
+cat sample.au > /dev/audio.
+```
+
+对于 2.4 内核，大多数 Linux 音频驱动程序作为 Open Sound System（OSS）的一部分开发，并作为 OSS/Free 免费分发。这些作为 Linux 发行版的一部分安装。OSS 设备驱动程序旨在为所有 Unix 平台，包括 Linux，提供统一的 API。它们支持 Sound Blaster 和 Windows Sound System 兼容的声卡（ISA 和 PCI）。OSS 也可以以象征性费用获得，并提供设备设置的配置界面。
+
+高级 Linux 音频架构（ALSA）取代了 2.6 Linux 内核中的 OSS，旨在成为 OSS 的更好替代，同时保持与其兼容。ALSA 提供模块化音频驱动程序、API 和配置管理器。ALSA 是一个 GNU 项目，完全免费；其网站`www.alsa-project.org`包含广泛的文档、应用程序和驱动程序。目前可用的有 ALSA 音频驱动程序、ALSA 内核 API、用于支持应用程序开发的 ALSA 库，以及为驱动程序提供配置界面的 ALSA 管理器。ALSA 源自 Linux Ultra Sound Project。
+
+Linux 音乐数字接口（MIDI）和 Sound Pages，目前位于`www.xdt.com/ar/linux-snd`，提供了指向 Linux 各种声卡音频驱动程序的 Web 和 FTP 站点的链接。它们还包括指向 Linux MIDI 和音频软件站点的链接。
+
+### 表 32-3 声音设备
+
+| Device | Description |
+|---|---|
+| `/dev/sndstat` | Sound driver status |
+| `/dev/audio` | Audio output device |
+| `/dev/dsp` | Sound sampling device |
+| `/dev/mixer` | Control mixer on sound card |
+| `/dev/music` | High-level sequencer |
+| `/dev/sequencer` | Low-level sequencer |
+| `/dev/midi` | Direct MIDI port |
+
+## 视频、电视和 DVD 设备
+
+用于电视、视频和 DVD 设备的设备名称列于表 32-4。已为 DVD 和电视解码器开发了驱动程序。mg4linux (`marvel.sourceforge.net`) 正在为 Matrox 多媒体卡（如 Marvel G200）开发视频支持。通用 ATI 电视和叠加软件（GATOS）(`gatos.sourceforge.net`) 已为 ATI 视频卡当前未支持的功能开发了驱动程序，特别是电视功能。BTTV 驱动项目已为 Booktree 视频芯片开发了驱动程序。Creative Labs 为 Creative 系列 DVD DXR2 解码器赞助了 Linux 驱动程序 (`opensource.creative.com`)。
+
+### 表 32-4 视频设备
+
+| 设备名称 | 设备类型 |
+|---|---|
+| `/dev/video` | 视频捕获接口 |
+| `/dev/vfx` | 视频特效接口 |
+| `/dev/vdec` | 视频编解码器接口 |
+| `/dev/vout` | 视频输出接口 |
+| `/dev/radio` | AM/FM 收音机设备 |
+| `/dev/vtx` | 图文电视接口芯片 |
+| `/dev/vbi` | 数据服务接口 |
+
+## 模块
+
+Linux 内核采用模块来支持不同的操作系统功能，包括对各种设备（如声卡和网卡）的支持。在许多情况下，您可以选择将对设备的支持实现为模块，或直接编译为内置内核功能，这需要您重建内核（参见第 33 章）。更安全、更稳健的解决方案是使用模块。模块是 Linux 内核的组件，可根据需要加载。要为新设备添加支持，您现在只需指示内核加载该设备的模块。在某些情况下，您可能只需要重新编译该模块即可为您的设备提供支持。使用模块的额外优点是减少了内核程序的大小，同时使系统更稳定。内核只能在需要时将模块加载到内存中。如果模块失败，只有该模块停止运行，而不会影响整个系统。例如，用于调制解调器的 PPP 网络接口的模块仅在您连接到 ISP 时才需要使用。
+
+## 内核模块工具
+
+系统所需的模块通常在安装期间确定，基于您提供的配置信息类型以及 Kudzu 执行的自动检测。例如，如果您的系统使用在安装期间指定类型的以太网卡，系统将加载该卡的模块。但是，您可以手动控制要为系统加载哪些模块。实际上，这使您可以按您想要的方式自定义内核。您可以使用多个命令、配置工具和守护进程来管理内核模块。2.4 Linux 内核包含内核模块加载器（Kmod），它具有在需要时自动加载模块的能力。内核中也必须启用内核模块加载支持，尽管这通常被认为是标准配置的一部分，并且包含在 Red Hat 发行版中。此外，还有多个工具可让您在必须时手动加载和卸载模块。内核模块加载器使用某些内核命令来执行加载或卸载模块的任务。`modprobe`命令是一个通用命令，用于调用`insmod`加载模块和`rmmod`卸载它们。这些命令列于表 32-5。特定模块的选项、通用配置，甚至特定模块加载都可以在`/etc/modules.conf`文件中指定。您可以使用此文件自动加载和配置模块。您也可以在启动提示符或`grub.conf`中指定要加载的模块（参见第 27 章）。
+
+### 表 32-5 内核模块命令
+
+| 命令 | 描述 |
+|---|---|
+| `lsmod` | 列出当前已加载的模块。 |
+| `insmod` | 将模块加载到内核中。不检查依赖关系。 |
+| `rmmod` | 卸载当前已加载的模块。不检查依赖关系。 |
+| `modinfo` | 显示有关模块的信息：`-a`（作者），`-d`（描述），`-p`（模块参数），`-f`（模块文件名），`-v`（模块版本）。 |
+| `depmod` | 创建依赖文件，列出指定模块可能依赖的所有其他模块。 |
+| `modprobe` | 加载模块及其可能需要的任何依赖模块。使用`depmod`生成的依赖列表文件：`-r`（卸载模块），`-l`（列出模块） |
+
+## 模块文件和目录
+
+模块的文件名扩展名为`.o`。内核模块位于`/lib/modules/version`目录中，其中`version`是当前内核的版本号。2.4.22-1 内核的目录是`/lib/modules/2.4.22-1`。随着您在系统上安装新内核，将为它们生成新的模块目录。访问当前内核目录的一种方法是使用`uname -r`命令生成内核版本号。该命令需要反引号。
+
+```
+cd /lib/modules/`uname -r`
+```
+
+在此目录中，内核的模块位于`/kernel`目录中。在`/kernel`目录中包含多个子目录，包括保存诸如声卡驱动程序或视频驱动程序等模块的`/drivers`目录。这些子目录用于对模块进行分类，使其更易于定位。例如，`kernel/drivers/net`目录保存以太网卡的模块，而`kernel/drivers/sound`目录包含声卡模块。
+
+## 使用 `/etc/modules.conf` 管理模块
+
+如前所述，有多个命令可用于管理模块。`lsmod`命令列出当前已加载到内核中的模块，而`modinfo`则提供特定模块的信息。虽然你可以使用`insmod`和`rmmod`命令直接加载或卸载模块，但应仅对这些任务使用`modprobe`。 （请参阅表 33-5 中的内核模块命令。）然而，通常给定模块需要其他模块被加载。例如，Sound Blaster 声卡的模块`sb.o`需要`sound.o`模块也被加载。
+
+## depmod 命令
+
+
+
+与其手动尝试确定给定模块依赖于哪些模块，你可以使用 `depmod` 命令为你检测依赖关系。`depmod` 命令生成一个文件，列出给定模块所依赖的所有模块。`depmod` 命令生成一个分层列表，指出应首先加载哪些模块以及加载顺序。然后，要加载模块，你使用 `modprobe` 命令并使用该文件。`modprobe` 读取 `depmod` 生成的文件并按正确顺序加载任何依赖模块，以及你想要的模块。你需要在第一次使用 `modprobe` 之前使用 `-a` 选项执行一次 `depmod`。输入 `depmod -a` 会创建所有模块依赖关系的完整列表。此命令在当前内核版本的模块目录 `/lib/modules/version` 中创建一个名为 `modules.dep` 的文件。
+
+```
+depmod -a
+```
+
+## modprobe 命令
+
+要手动安装模块，你使用 `modprobe` 命令和模块名称。你可以添加模块可能需要的任何参数。以下命令使用 I/O、IRQ 和 DMA 值安装 Sound Blaster 声卡模块。`modprobe` 还支持使用 `*` 字符，使你能够使用模式来选择多个模块。此示例使用了声卡常用的几个值。你应使用系统上为你的声卡推荐的值。
+
+```
+modprobe sb io=0x220 irq=5 dma=1
+```
+
+要了解模块接受哪些参数，你可以使用 `-p` 选项的 `modinfo` 命令。
+
+```
+modinfo -p sb
+```
+
+你可以使用 `-l` 选项列出模块，使用 `-t` 选项在指定的子目录中查找模块。在下一个示例中，用户列出了 `sound` 目录中的所有模块：
+
+```
+# modprobe -l -t sound
+/lib/modules/2.4.22-1/kernel/drivers/sound/sb.o
+/lib/modules/2.4.22-1/kernel/drivers/sound/sb_lib.o
+/lib/modules/2.4.22-1/kernel/drivers/sound/sound.o
+/lib/modules/2.4.22-1/kernel/drivers/sound/soundcore.o
+```
+
+`modprobe` 命令的选项放在 `/etc/modules.conf` 文件中。在这里，你可以输入配置选项，例如默认目录和别名。别名为模块提供一个简单名称。例如，以下条目使你能够将 `3c59x.o` 以太网卡模块引用为 `eth0`（Kmod 自动检测 3Com 以太网卡并加载 `3c59x` 模块）：
+
+```
+alias eth0 3c59x
+```
+
+## insmod 命令
+
+`insmod` 命令执行模块的实际加载。`modprobe` 和内核模块加载器都使用此命令来加载模块。虽然 `modprobe` 是首选，因为它会检查依赖关系，但你可以使用 `insmod` 和 `rmmod` 命令单独加载或卸载特定模块。`insmod` 命令以模块名称作为参数，`rmmod` 也是如此。名称可以是简单的基名，如 `sb` 代表 `sb.o` 模块。你可以使用 `-o` 选项指定完整的模块文件名。其他有用的选项是 `-p` 选项，它允许你先探测系统以查看模块是否可以成功加载，以及 `-n` 选项，它执行除实际加载模块之外的所有任务（试运行）。`-v` 选项（详细）会在发生时列出所有操作。在那些你可能必须强制加载模块的罕见情况下，你可以使用 `-f` 选项。在下一个示例中，`insmod` 加载 `sb.o` 模块。
+
+```
+# insmod -v sb
+```
+
+## rmmod 命令
+
+`rmmod` 命令执行模块的实际卸载。它是 `modprobe` 和内核模块加载器用于卸载模块的命令。只要模块未被使用或不被其他模块需要，你就可以使用 `rmmod` 命令删除特定模块。你可以使用 `-r` 选项删除一个模块及其所有依赖模块。`-a` 选项删除所有未使用的模块。使用 `-e` 选项时，`rmmod` 卸载模块时，会将任何持久数据（参数）保存到持久数据目录，通常为 `/var/lib/modules/persistent`。
+
+## /etc/modules.conf 文件
+
+请注意，`/dev` 目录中没有以太网设备的设备名称。这是因为设备名称实际上是 `modules.conf` 文件中已定义的以太网网络模块的别名。如果你要添加另一块相同类型的以太网卡，你将在 `modules.conf` 文件中为其放置一个别名。对于第二块以太网卡，你将使用设备名称 `eth1` 作为别名。这样，第二块以太网设备就可以使用名称 `eth1` 进行引用。`modules.conf` 条目如下所示：
+
+```
+alias eth1 ne2k-pci
+```
+
+> 提示 修改 `/etc/modules.conf` 后，你应再次运行 `depmod` 以记录模块依赖关系的任何更改。
+
+前一条条目假设以太网卡是同一型号。如果您添加了不同型号的以太网卡，则必须指定用于该类型卡的模块。在下面的示例中，第二张卡是标准的 PCI Realtek 卡。Kmod 已经自动检测到新卡并为您加载了 `ne2k-pci` 模块。您只需在 `/etc/modules.conf` 文件中将其标识为 `eth1` 卡即可。
+
+```
+alias eth0 3c59x
+alias eth1 ne2k-pci
+```
+
+下面显示了一个示例 `modules.conf` 文件。请注意 USB 控制器和声卡的别名。
+
+```
+alias eth0 3c59x
+alias eth1 ne2k-pci
+alias parport_lowlevel parport_pc
+alias usb-controller usb-uhci
+alias sound-slot-0 1810_audio
+```
+
+> 提示 在某些情况下，Kmod 可能不会按您希望的方式检测设备，从而不会加载您想要的内核模块。第 30 章就是这种情况，您需要为 IDE CD 写入设备提供 SCSI 仿真。在这种情况下，已向 GRUB 启动加载程序指定了内核参数以加载正确的模块。
+
+## 为内核安装新模块
+
+您的 Linux 内核源代码包含大量模块，其中只有少数几个在您的系统上实际使用。当您安装新设备时，可能需要安装为其提供驱动程序的内核模块。这涉及从列表中选择所需的模块，然后使用包含新模块重新生成内核模块。然后将新模块复制到模块库中，将其安装到您的系统上。然后您可以将其与任何选项一起输入到 `/etc/modules.conf` 文件中，或使用 `modprobe` 手动安装它。
+
+首先，确保您已将内核源代码安装在 `/usr/src/linux` 目录中（请参阅第 33 章）。如果没有，只需使用 `rpm` 工具或 `redhat-config-packages` 等安装实用程序来安装内核源 RPM 包即可。如果您使用的是内核的源代码版本，请将其解包并将其内容移动到 `/usr/src` 目录。
+
+使用第 33 章中描述的菜单选择所需的模块。确保每个模块都标记为模块，在 `xconfig` 中单击 Module 复选框或在 `menuconfig` 中键入 `m`。配置内核后，保存并退出配置菜单。然后使用以下命令编译模块，创建模块二进制文件：
+
+```
+make modules
+```
+
+这会将模块放置在内核源模块目录中：`/usr/src/linuxversion/`。您可以将所需的模块复制到内核模块目录 `/lib/modules/version/kernel`，其中 `version` 是 Linux 内核的版本号。更简单的方法是使用以下命令重新安装所有模块。这会将所有编译的模块复制到 `/lib/modules/version/kernel` 目录。
+
+```
+make modules_install
+```
+
+例如，如果您想提供 AppleTalk 支持，而您的发行版没有创建 AppleTalk 模块或直接将支持合并到内核中，您可以使用此方法创建和安装 AppleTalk 模块。首先，检查您的发行版是否已包含该模块。AppleTalk 模块应位于 `/lib/modules/version/kernel/net/appletalk` 目录中。如果没有，您可以移动到 `/usr/src/linuxversion` 目录，运行 `make xconfig`，并将 AppleTalk 选择为模块。然后使用 `make modules` 命令生成模块。然后您可以使用 `make modules_install` 命令安装新模块以及其他模块。或者您可以将 `appletalk` 目录及其包含的模块复制到模块目录。
+
+## 内核管理
+
+内核是操作系统，执行核心任务，例如管理内存和磁盘访问，以及与构成系统的硬件接口。例如，内核使多任务处理和多用户支持等标准 Linux 功能成为可能。它还处理与 CD-ROM 或硬盘等设备的通信。用户通过内核发送对这些设备的访问请求，然后内核处理实际向设备发送适当指令的低级任务。鉴于可用的设备种类繁多，连接到 Linux 系统的设备类型会有所不同。安装 Linux 时，内核会针对已连接的设备进行适当配置。但是，如果您添加新设备，可能需要在内核中启用对其的支持。这涉及重新配置现有内核以支持新设备，通常称为构建或编译内核。此外，不断提供内核的新版本，提供对设备的改进支持，以及对新功能和更高可靠性的支持，以实现更流畅的系统运行。您可以下载、编译并将这些新版本安装到您的系统上。
+
+## 内核版本
+
+
+
+Linux 内核的版本号由三个部分组成：主版本号、次版本号和修订号。主版本号在内核发生重大更改时递增。次版本号表示稳定性。偶数用于稳定发行版，而奇数则保留用于开发发行版，可能不稳定。新的功能首先出现在开发版本中。如果您关心稳定性，您应该等待稳定版本。修订号指的是已更正的版本。随着错误被发现并得到纠正，以及新功能被引入，内核的新修订版将被发布。开发内核可能有许多修订。例如，内核 2.4.22 的主版本号为 2，次版本号为 4，修订号为 22。发行版通常会添加另一个数字，表示应用于内核的一组特定补丁。例如，对于 Fedora Linux，内核为 2.4.22-1，其中 1 是补丁号。在支持 RPM 包的发行版上，您可以使用 RPM 查询来了解已安装的版本，如下所示：
+
+```
+rpm -q kernel
+```
+
+你可以在系统上安装多个版本的内核。要查看当前正在运行的是哪个版本，可以使用带有`-r`选项的`uname`命令（`-a`选项提供更详细的信息）。
+
+```
+uname -r
+```
+
+新内核在两个不同的轨道上发布，稳定轨道和开发轨道。稳定内核具有偶数修订号，而开发内核使用奇数。稳定内核可能是 2.4，其开发内核为 2.5。通常，开发内核虽然不稳定，但包含对最新硬件和软件功能的支持。然而，除非你在进行内核开发实验，否则你应始终安装稳定版本的内核。
+
+Linux 内核一直在不断开发中，并在准备好时发布新版本。发行版可能包含不同的内核版本。Red Hat 在其发行版中包含最新的稳定内核。Linux 内核可在 kernel.org 获取。此外，发行版更新站点通常也提供新内核的 RPM 包。你可能需要升级内核的原因之一是为新硬件或发行版版本不支持的功能提供支持。例如，你可能需要对发行版内核版本中未提供的设备提供支持。某些功能可能未包含在发行版版本中，因为它们被视为实验性或存在安全风险。
+
+> 提示 在许多情况下，你可能不需要编译并安装新内核来为新设备添加支持。内核以可加载模块的形式提供大部分设备支持，其中只有需要的模块随内核一起安装。很可能你的当前内核已包含你需要的模块；你只需编译并安装它即可。有关此任务，请参阅第 32 章中的“为内核安装新模块”部分。
+
+你可以在 kernel.org 了解更多关于 Linux 内核的信息，这是当前 Linux 内核的官方存储库。最新的源代码以及文档都在那里。你的发行版网站也将提供在其系统上安装和编译内核的在线文档。关于该主题还存在多个 Linux HOW-TO。内核源代码软件包也包含大量文档。内核源代码文件始终安装在`/usr/src/linux-version`目录中，其中 version 为内核版本，如`/usr/src/linux-2.4`。在此目录中，你可以找到名为`/Documentation`的子目录，其中包含大量文件和目录，记录内核功能、模块和命令。以下内核资源列表也包含更多信息：
+
+- kernel.org 官方 Linux 内核网站。所有新内核都源于此。
+- www.linuxhq.com Linux 总部，内核源代码和补丁。
+- kernelnewbies.org Linux 内核源代码和信息。
+- www.tldp.org Linux 文档项目。
+
+## 内核调优：内核运行时参数
+
+可以在不编译和安装新内核或模块的情况下打开或关闭多个内核功能，例如 IP 转发或最大文件数。这些可调参数由`/proc/sys`目录中的文件控制。proc 文件系统在第 30 章中描述。你可以使用`redhat-config-proc`工具为这些参数分配值。`redhat-config-proc`可从“更多系统工具”菜单中的内核调优访问。`redhat-config-proc`列出网络、文件系统、虚拟内存、内核和硬件的标题。网络让你控制诸如 IP 转发、ICMP 广播消息和 TCP 时间戳等功能。文件系统选项让你设置最大文件数。内核选项让你控制日志、共享内存以及某些安全功能，例如禁用调试。硬件选项让你控制 RAID 速度。
+
+你设置的参数保存在`/etc/sysctl.conf`文件中。Red Hat 安装此文件，其中包含 IP 转发和调试控制等基本配置条目。`redhat-config-proc`工具会覆盖此文件，用为不同`/proc/sys`文件分配值的条目替换它。对`/proc/sys`文件的更改在你单击“激活已保存配置”按钮之前不会生效。例如，如果你在网络 IP 面板中打开 IP 转发，则`/proc/sys/net/ipv4/ip_forward`的内容将在你保存并激活 proc 值后设置为 1。
+
+除了使用`redhat-config-proc`，你还可以直接使用`sysctl`命令。`-p`选项使`sysctl`从`/etc/sysctl.conf`文件读取参数（你可以指定不同的文件）。你可以使用`-w`选项更改特定参数。你使用其键引用参数。键是参数名称加上其 proc 系统类别（目录）前缀，例如`net.ipv4.ip_forward`用于位于`/proc/sys/net/ipv4/`中的`ip_forward`参数。要显示特定参数的值，只需使用其键。`-a`选项列出所有可更改的参数。在下一个示例中，用户更改域名参数，使用`kernel.domainname`键引用它（`domainname`命令也设置`kernel.domainname`参数）：
+
+```
+# sysctl -w kernel.domainname="mytrek.com"
+```
+
+以下示例打开 IP 转发：
+
+```
+# sysctl -w net.ipv4_ip_forward=1
+```
+
+如果你只使用键，则会显示参数的当前值：
+
+```
+# sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+```
+
+## 安装新内核版本
+
+要安装新内核，你需要将该内核的软件包下载到你的系统。你可以通过从发行版网站下载二进制版本并安装它来安装新内核，也可以通过下载源代码、编译内核，然后安装生成的二进制文件以及模块来安装。对于 Red Hat，内核的二进制版本以 RPM 包提供。你可以像安装任何其他 RPM 软件包一样安装新内核。
+
+在 Red Hat 上安装新内核的最简单方法是使用 Red Hat Network 更新代理（Red Hat Network 现在是你需要付费的订阅服务）。更新代理会自动下载、更新和安装新内核。Red Hat Network 不会自动选择要下载的内核文件。尽管它们被列出，但你必须明确选择它们以便下载和安装。
+
+如果你想直接从Red Hat手动下载内核RPM软件包，请记住，完整的内核安装通常包含一系列RPM软件包，所有软件包名称都以kernel开头。你可能还需要其他软件包，这些软件包包含新内核所使用的更新系统配置文件。你可以以系统中已安装的软件包作为参考。使用带`-qa`选项的`rpm`命令列出所有软件包，然后通过管道将该列表传递给`grep`命令并以`kernel`模式进行过滤，以仅显示内核软件包：
+
+```
+rpm -qa | grep kernel
+```
+
+源代码版本可从发行版FTP站点下载，并包含在发行版CD-ROM中。你也可以直接从www.kernel.org下载最新源代码。无论你从哪里下载内核版本，它总是相同的。从发行站点下载的特定内核版本的源代码与www.kernel.org上的源代码相同。该版本的补丁可以应用于任何发行版。
+
+## Red Hat 内核软件包
+
+例如，下面列出了Red Hat的内核软件包。你应该只安装`kernel-version-i386`和`athlon`软件包中的一个。这足以满足标准的单处理器计算机。其他软件包则是你可能需要的优化、支持或配置软件包，具体取决于你PC的硬件配置，即多处理器机器、笔记本电脑和内存大于4GB的计算机。名称中包含`nptl`，表示此版本的内核支持原生POSIX线程库（NPTL），提供更高效的进程控制，从而提高性能和处理器可扩展性。
+
+```
+kernel-2.4.22-1.2115.nptl.athlon.rpm
+kernel-2.4.22-1.2115.nptl.i586.rpm
+kernel-2.4.22-1.2115.nptl.i686.rpm
+kernel-doc-2.4.22-1.2115.nptl.i386.rpm
+kernel-bigmem-2.4.22-1.2115.nptl.i686.rpm
+kernel-pcmcia-cs-3.1.31-13.i386.rpm
+kernel-smp-2.4.22-1.2115.nptl.i686.rpm
+kernel-smp-2.4.22-1.2115.nptl.athlon.rpm
+kernel-utils-2.4.9-1.101.fedora.i386.rpm
+kernel-source-2.4.22-1.2115.nptl.i386.rpm
+kernel-BOOT-2.4.22-1.2115.nptl.i686.rpm
+```
+
+## CPU 内核软件包
+
+
+
+Red Hat为各种流行的CPU提供了优化后的不同内核软件包。请为你的机器选择合适的一个。每个软件包都命名为`kernel`，但每个都有不同的限定符。Red Hat包含三个不同的内核软件包：一个用于Athlon和Duron CPU，一个用于Pentium 2、3和4 CPU，另一个用于较旧的Pentium、AMD K6 CPU和其他旧系统。每个软件包的文件名中都会有一个CPU参考标识：`athlon`用于Athlon和Duron，`686`用于Pentium 2、3和4，`586`用于Pentium、K6和其他系统。
+
+```
+kernel-2.4.22-1.2115.nptl.athlon.rpm
+kernel-2.4.22-1.2115.nptl.i586.rpm
+kernel-2.4.22-1.2115.nptl.i686.rpm
+```
+
+此外，如果你在笔记本电脑或使用PCMCIA卡的系统上安装，你还需要安装`pcmcia-cs`软件包。
+
+```
+kernel-pcmcia-cs-3.1.31-13.i386.rpm
+```
+
+如果你的计算机拥有超过4GB的RAM内存，你还需要安装`bigmem`软件包。
+
+```
+kernel-bigmem-2.4.22-1.2115.nptl.i686.rpm
+```
+
+如果你的系统支持多个CPU处理器，你还需要安装`smp`软件包，而不是标准的cpu软件包。Red Hat为Athlon和Pentium计算机提供了相应的软件包。
+
+```
+kernel-smp-2.4.22-1.2115.nptl.i686.rpm
+kernel-smp-2.4.22-1.2115.nptl.athlon.rpm
+```
+
+> 提示 `kernel-BOOT`软件包是一个较小版本的内核，仅用于软盘安装盘。
+
+## 支持软件包
+
+此外，如果你打算自定义内核，你应该下载源代码软件包。`doc`软件包提供更新的文档。`utils`软件包包含各种硬件监控工具，例如用于硬盘的`smartctl`，以及用户模式Linux（UML）工具。
+
+```
+kernel-utils-2.4.8-31.i386.rpm
+kernel-source-2.4.22-1.2115.nptl.i386.rpm
+kernel-doc-2.4.22-1.2115.nptl.i386.rpm
+```
+
+## 安装内核软件包：`/boot`
+
+如果您的系统有 SCSI 控制器或任何其他专用硬件，RPM 还会创建一个 RAM 磁盘来保存适当的支持模块（您可以使用`mkinitrd`命令手动创建 RAM 磁盘）。RAM 磁盘名为`initrd-kernel-version.img`，位于`/boot`目录中，如`/boot/initrd-2.4.22-1.img`。
+
+> 提示 `redhat-config-packages`工具不支持内核软件包安装。您必须使用终端窗口中的`rpm`命令手动安装内核软件包。
+
+如果您正在定制内核，安装内核的源代码和头文件也是必不可少的。您需要源代码来生成任何模块，并根据自己的需要调整内核。例如，您可以使用源代码生成包含您可能已安装的任何不常见设备驱动程序的模块，如下所示：
+
+```
+# rpm -Uvh kernel-source-2.4.22-1.2115.nptl.1386.rpm
+```
+
+在大多数发行版中，内核安装在`/boot`目录中。对该目录执行`ls -l`操作会列出所有当前已安装的内核。现在会有一个旧内核文件和一个新内核文件，以及一个名为`vmlinuz`的链接文件，它指向新的内核文件。如果您按照上一节所述采取了预防措施，则可能已经重命名了旧内核。如果您使用的是 GRUB 之类的引导加载程序，则无需更改其配置文件（`grub.conf`），因为调用内核的条目仍然引用`/boot/vmlinuz`链接，而该链接现在指向新内核。内核通过`/boot/vmlinuz`链接启动内核文件。在`grub.conf`文件中，内核文件的内核行引用此链接。您还需要为 RAM 磁盘`initrd`添加一行。
+
+```
+kernel /boot/vmlinuz-2.4.22-1.2115.nptl ro root=/dev/hda 3
+initrd /boot/initrd-2.4.22-1.2115.nptl.img
+```
+
+> 提示 虽然 Red Hat 10 中没有包含用户模式 Linux（UML），但它是内核的一个可选版本，设计为独立于内核的单独程序运行。实际上，它创建了一个虚拟机，其磁盘存储在用户文件上实现。UML 常用于测试软件或试验内核配置，而不会破坏真实系统。您还可以使用 UML 通过在单个物理主机上运行多个虚拟机来实现虚拟主机。通过虚拟机，您可以控制对主机系统的访问，提供更高的安全性。您可以在`user-mode-linux.sourceforge.net`上找到有关用户模式 Linux 的更多信息。
+
+## 修改相同版本内核的预防措施
+
+如果您想修改内核配置并构建新内核，则应保留当前内核的副本。如果修改后的版本出现问题，您始终可以从保留的副本启动。如果您安装的是新版本的内核，则不必担心这种情况。新内核会被赋予不同的名称，因此旧内核不会被覆盖。
+
+和`module-info`。这个`System.map`文件包含了模块启动内核功能所需的内核符号。例如，内核映像文件名为`vmlinuz-version`，其中`version`是附加的版本号，如`vmlinuz-2.4.22-1`。该内核的`System.map`文件名为`System.map-2.4.22-1`。以下是版本 2.4.22-1 的内核文件。
+
+```
+/boot/vmlinuz-2.4.22-1
+/boot/System.map-2.4.22-1
+/boot/module-info-2.4.22-1
+/boot/config-2.4.22-1
+```
+
+特定内核的`vmlinuz`、`System.map`和`module-info`文件也有使用这些名称（不带版本号）的符号链接。例如，`vmlinuz`是指向当前内核映像文件（此处为`vmlinuz-2.4.22-1`）的链接，`System.map`是指向当前`System.map`文件`System.map-2.4.22-1`的链接。当您安装新内核时，链接会改为指向该内核。因此，如果您安装了新版本（如 2.4.22-10），`/boot/vmlinuz`将会链接到该内核的`vmlinuz`文件`/boot/vmlinuz-2.4.22-10`。
+
+```
+/boot/vmlinuz          /boot/vmlinuz-2.4.22-1
+/boot/System.map       /boot/System.map-2.4.22-1
+/boot/module-info      /boot/module-info-2.4.22-1
+```
+
+另一方面，如果您正在创建同一内核的修改版本，内核文件（此处称为`vmlinuz-2.4.22-1`）将连同`System.map`和`module-info`文件一起被新的内核映像文件覆盖。为了保留当前可用的版本，您必须首先制作这些文件的副本。您可以将`/boot/vmlinuz-2.4.22-1`文件复制一份，并赋予另一个名称，如下所示：
+
+```
+cp /boot/vmlinuz-2.4.22-1 /boot/vmlinuz-2.4.22-1.old
+```
+
+您还应该备份`System.map`和`module-info`文件。`System.map`文件是指向`System.map-2.4.22-1`文件的符号链接。您还应该备份位于`/lib/modules/version`目录中的模块，其中`version`是内核的版本号。否则，您将丢失已经设置为与原始内核一起工作的模块。对于版本 2.4.22-1，库位于`/lib/modules/2.4.22-1`。如果您编译的是不同版本，这些库将放在以新版本号命名的新目录中。
+
+## 引导加载程序
+
+如果您使用引导加载程序，则应在引导加载程序配置文件中为旧内核创建一个新条目。然后您可以为新内核创建一个条目。建议保留旧内核的条目，以防新内核出现问题。这样，您可以随时重新启动并选择旧内核。例如，在`grub.conf`中，添加一个类似于旧内核的新条目，其`kernel`语句中引用了新内核。`grub.conf`条目如下代码所示。然后您可以在 GRUB 菜单中选择标题为 "Old Linux (2.4.22-1.old)" 的条目来启动旧内核。
+
+```
+title Old Linux (2.4.22-1.old)
+root (hd0,2)
+kernel /boot/vmlinuz-2.4.22-1.old root=/dev/hda3
+initrd /boot/initrd-2.4.22-1.old.img
+```
+
+如果为启动分区使用标签，则内核语句的`root`选项对于标签为`/`的启动分区如下所示：
+
+```
+kernel /boot/vmlinuz-2.4.22-1.old ro root=LABEL=/
+```
+
+## 启动磁盘
+
+
+
+您还应准备好启动磁盘，以防安装出现问题（通常在安装期间已创建）。有了启动磁盘，您就可以在不使用启动加载器的情况下启动系统。您可以使用 `mkbootdisk` 实用程序创建启动磁盘。要创建启动磁盘，您需要知道内核的完整版本号。实际上，您可以安装多个内核，并为每个内核创建启动磁盘（您的 `grub.conf` 文件列出了内核版本号）。如果内核版本为 `2.4.22-1`，请将其用作 `mkbootdisk` 命令的参数来为您的系统创建启动磁盘：
+
+```
+mkbootdisk 2.4.22-1
+```
+
+如果您想制作启动 CD-ROM，可以使用 `--iso` 选项配合 `--device` 选项来指定 CD 映像文件。然后可以将映像文件刻录到 CD-ROM 光盘中。在下面的示例中，用户为 `2.4.22-1` 内核创建了一个名为 `myimage.iso` 的 CD-ROM 映像文件，用于启动 CD-ROM：
+
+```
+mkbootdisk --iso --device myimage.iso 2.4.22-1
+```
+
+## 从源代码编译内核
+
+与其安装已经编译好的内核二进制版本，您可以在系统上安装内核源代码并自行创建内核二进制文件。内核源代码文件与任何其他源代码文件一样使用 `gcc` 编译器进行编译。编译内核的一个优点是您可以增强其配置，为某些类型的设备（如蓝牙设备）添加支持。这里描述的是 2.4 内核。
+
+## 安装内核源代码：内核归档文件和补丁
+
+源代码以压缩归档文件（`.tar.gz`）的形式提供。它们以 `linux` 为前缀，后缀为版本号。您可以使用以下命令解压缩并提取归档文件。首先切换到 `/usr/src` 目录，然后解包归档文件。它会创建一个名为 `linux` 的目录，其中放置源文件。以下示例提取 `2.4.22-1` 内核：
+
+```
+cd /usr/src
+tar -xzvf linux-2.4.22-1.tar.gz
+```
+
+请务必在 `/usr/src` 目录中解包归档文件。归档文件会提取一个名为 `linux` 的目录，其中包含源代码文件。这样，文件就位于 `/usr/src/linux` 目录中。您应该重命名此目录，添加内核版本，如 Red Hat 所做，`/usr/src/linux-2.4.22-1`。
+
+> 提示 如果您使用的是原始内核源代码，还应检查是否有任何补丁。
+
+## 配置内核
+
+安装源代码后，必须配置内核。配置包括确定您希望提供内核级支持的功能。这些包括不同设备的驱动程序，例如声卡和 SCSI 设备。您可以将功能配置为直接包含在内核本身中，也可以配置为内核按需加载的模块。您也可以明确排除某些功能。直接集成到内核中的功能会使内核程序更大。作为独立模块设置的功能也可以轻松更新。许多提供声音、视频或网络支持的设备的文档可以在 `/usr/share/doc` 目录中找到。检查 `kernel-doc` 软件包以查找提供的文档列表。
+
+```
+rpm -ql kernel-doc
+```
+
+> 注意 如果您之前配置过内核，现在想从默认设置重新开始，可以使用 `make mrproper` 命令恢复默认的内核配置。
+
+## 内核配置工具
+
+您可以使用其中一种可用的配置工具来配置内核：`config`、`menuconfig`、`xconfig`，以及在 2.6 内核中，`gconfig`。您也可以直接编辑配置文件。这些工具执行相同的配置任务，但使用不同的界面。`config` 工具是一个简单的配置脚本，为不同的配置选项提供基于行的提示。`menuconfig` 工具提供基于光标的菜单，您仍可从命令行运行。菜单条目存在于不同的配置类别中，您可以挑选所需的内容。要将功能标记为包含在内核中，请移动到该功能并按空格键。条目左侧的空括号中会出现一个星号。如果您想将其设为模块，请按 `M`，括号中会出现 `M`。`xconfig` 工具在窗口管理器上运行，并提供带有按钮和菜单的窗口界面。您可以使用鼠标选择条目。菜单由配置类别组成，这些类别列为可单击的按钮。2.6 内核的 `gconfig` 工具使用 GNOME 界面提供可扩展的菜单树、可选面板和帮助窗口。可选功能包括可单击的复选按钮。所有这些工具都将其设置保存到内核源代码目录中的 `.config` 文件。如果你想完全删除一个配置，可以使用 `mrproper` 选项来删除 `.config` 文件和任何二进制文件，从头开始。
+
+```
+make mrproper
+```
+
+你通过在工具前加上 `make` 命令来启动一个配置工具。确保你位于 `/usr/src/linux-version` 目录中。启动配置工具的过程是一个 `make` 操作，使用的是 Linux 内核 `makefile`。`xconfig` 工具应从你的窗口管理器中的终端窗口启动。`menuconfig` 和 `config` 工具在 shell 命令行上启动。以下示例列出了启动 `xconfig`、`menuconfig` 和 `config` 的命令：
+
+```
+make xconfig
+make menuconfig
+make config
+```
+
+## `xconfig`
+
+`xconfig` 工具打开一个 Linux 内核配置窗口，列出不同的配置类别。图 33-1 显示了 2.4 内核的配置类别。屏幕右侧的按钮用于保存配置或将其复制到文件，以及退出。点击一个条目会打开一个窗口，列出你可以包含的不同功能。每个条目左侧的三个复选框使你可以选择将功能直接编译到内核中、作为可在运行时加载的单独模块创建，或完全不包含。作为一般规则，持续使用的功能，如网络和文件系统支持，应直接编译到内核中。容易发生变化的功能，如声卡，或使用频率较低的功能，应编译为模块。否则，你的内核映像文件可能会变得过大且运行变慢。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_675_0.png)
+
+图 33-1 `xconfig` Linux 内核配置工具，内核 2.4
+
+## `gconfig`（内核 2.6）
+
+`gconfig` 工具打开一个 Linux 内核配置窗口，列出不同的配置类别。图 33-2 显示了 2.6 内核的配置类别。你会注意到类别比 2.4 内核少。许多类别已重新组织到几个主要标题下，其中许多现在包含在设备驱动程序菜单下。`Load` 和 `Save` 按钮以及 `File` 菜单条目可用于保存配置或将其复制到文件。`Single`、`Split` 和 `Full` 视图按钮让你以一个窗口显示菜单、以一个显示面板与包含可展开树以选择条目的另一个面板显示，或作为单个可展开条目树显示。`Expand` 按钮会展开所有标题和子标题，而 `Collapse` 按钮则让你仅展开你想要显示的那些。使用每个条目的下三角和侧三角来展开或折叠子条目。
+
+点击一个条目会打开一个窗口，列出你可以包含的不同功能。条目按列排列，列出选项、其实际名称、其范围（`yes`、`module` 或 `no`）以及其数据（`yes`、`no` 或 `module` 状态）。`Options` 菜单中的条目让你确定要显示哪些列：`Name` 用于实际模块名称；`Range` 用于可选择的 `yes`、`no` 和 `module` 条目；`Data` 用于选项状态，标题为 `Value`。
+
+`Range` 条目标题为 `N`、`M` 和 `Y`，用于选择是否包含一个选项（`N`）、作为模块加载（`M`）或直接编译到内核中（`Y`）。可以选择的条目会显示下划线。点击下划线会将其条目更改为 `Y` 表示模块或直接内核包含，以及 `N` 表示不包含。`Value` 列会显示当前选择的内容。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_676_0.png)
+
+图 33-2 `gconfig` Linux 内核配置工具，内核 2.6
+
+`Options` 列将包含一个状态，显示选项是直接包含（复选标记）、作为模块包含（线条标记）还是完全不包含（空）。要快速选择或取消选择一个条目，双击 `Options` 字段中的选项名称。你会看到其复选框被选中、划线（模块）或为空。对应的 `N`、`M` 和 `Y` 条目分别用于不包含、模块或内核包含被选中。该选项的模块或直接内核包含的默认偏好会自动选择。你也可以手动更改。
+
+## 重要内核配置功能
+
+`xconfig`、`menuconfig` 和 `gconfig` 工具为每个条目提供出色的上下文相关帮助。每个条目右侧都有一个 `Help` 按钮。点击它以显示该功能详细说明其作用以及为何将其直接包含或作为模块包含，甚至排除它。当你对某个功能不确定时，务必使用 `Help` 按钮来了解它确切的作用以及为何你会想要使用它。这里描述了许多关键功能。2.6 内核对应的条目列在括号中。
+
+- `Loadable Module Support` 在大多数情况下，你应确保你的内核可以加载模块。点击 `Loadable Module Support` 按钮以显示多个模块管理选项的列表。确保 `Enable Loadable Module Support` 被标记为 `Yes`。此功能允许你的内核在需要时加载模块。`Kernel Module Loader` 也应设置为 `Yes`，因为这允许你的守护进程，如你的 Web 服务器，加载它们可能需要的任何模块。
+
+- `Processor Type And Features` `Processor Type And Features` 窗口使你能够为你的特定系统设置支持。在这里，你选择你拥有的处理器类型（486、586、686、Pentium III、Pentium IV 等），以及你的系统支持的最大内存量（使用 2.4 内核可达 64GB）。
+
+
+
+## General Setup
+`General Setup` 窗口使你能够选择通用功能，如网络、PCI BIOS 支持和电源管理，以及对 ELF 和 a.out 二进制文件的支持。还支持 `sysctl` 用于动态更改 `/proc` 文件中指定的内核参数。你可以使用 `redhat-config-proc`（系统工具菜单中的内核调优工具）对内核进行这些动态更改。在附加设备驱动程序支持菜单中，你可以启用诸如 Crypto IP Encapsulation（CIPE）和加速 SSL 之类的专用功能。
+
+## Block Devices（Device Drivers）
+`Block Devices` 窗口列出启用对你的 IDE、软盘驱动器和并行端口设备支持的条目。特殊功能，如 RAM 磁盘支持和用于挂载 CD-ROM 映像文件的回环设备也在其中。
+
+## Multi-Device Support（RAID and LVM）（Device Drivers）
+`Multi-Device Support` 窗口列出启用 RAID 设备使用的条目。你可以选择想要的 RAID 支持级别。在这里你也可以启用逻辑卷管理支持（LVM），它让你将分区组合成可以动态管理的逻辑卷。
+
+`features that enable your system to operate as a gateway, firewall, or router.` `Network Aliasing` enables support for IP aliases. Support also exists for other kinds of networks, including AppleTalk and IPX. AppleTalk must be enabled if you want to use NetTalk to connect to a Macintosh system on your network（Filesystems）。
+
+## ATA/IDE/MFM/RLL 支持（设备驱动程序）
+在 `ATA/IDE/MFM/RLL 支持` 窗口中，你可以点击“IDE、ATA 和 ATAPI 块设备”按钮打开一个窗口，在此窗口中可以选择对 IDE ATA 硬盘和 ATAPI CD-ROM 的支持。
+
+## SCSI 支持（设备驱动程序）
+如果你的系统上有任何 SCSI 设备，请确保 `SCSI 支持` 窗口中的条目设置为 Yes。在此你可以启用对 SCSI 磁盘、磁带驱动器和 CD-ROM 的支持。`SCSI 低级驱动程序` 窗口列出了 Linux 当前支持的广泛 SCSI 设备列表。请确保你拥有的设备已被选中。
+
+## 网络设备支持（设备驱动程序/网络支持）
+`网络设备支持` 窗口列出了网络设备支持的多个通用功能。这里有条目可打开列出特定类型网络设备支持的窗口，包括以太网（10 或 100MB）设备、令牌环设备、WAN 接口和 AppleTalk 设备。其中许多设备作为模块创建，可根据需要加载。你可以选择重建内核，将其中任何设备的支持直接内置到内核中。
+
+## 多媒体设备（设备驱动程序）
+多媒体设备提供对各种多媒体卡以及 Video4Linux 的支持。
+
+## 文件系统（文件系统）
+`文件系统` 窗口列出了 Linux 可支持的不同类型文件系统。这些包括 Windows 文件系统，如 DOS、VFAT（Windows 95/98）和 NTFS，以及 CD-ROM 文件系统，如 ISO 和 UDF。网络文件系统如 NFS、SMB（Samba）和 NCP（NetWare）也包含在内，以及其他杂项文件系统如 HFS（Macintosh）。
+
+## 字符设备（设备驱动程序）
+`字符设备` 窗口列出了键盘、鼠标和串口等设备的特性。存在对串行和总线鼠标的支持。
+
+## 声音（设备驱动程序）
+对于 2.4 内核，声音窗口列出了内核支持的不同声卡。选择你系统上的那一个。对于旧系统，你可能需要提供声卡使用的 IRQ、DMA 和 Base I/O。这些被编译为单独的模块，其中一些你可以选择直接包含在内核中。对于 2.6 内核，你可以选择高级 Linux 声音架构声音支持，并将其展开到特定声音设备的驱动程序（还包括已弃用的开放声音系统）。
+
+## 蓝牙设备（设备驱动程序/网络）
+此处提供对蓝牙外设的支持，列出了 USB、串行和 PC 卡接口的驱动程序。
+
+## 内核黑客（内核黑客）
+`内核黑客` 窗口列出了对在内核级别工作并需要修改内核代码的开发人员感兴趣的功能。你可以让内核包含调试信息，并在崩溃时提供一定程度的控制。
+
+设置好选项后，保存你的配置。`Save And Exit` 选项会覆盖你的 `.config` 配置文件。`Store To Configuration File` 选项允许你将配置保存到特定文件。
+
+> Tip Red Hat Linux 整合了对 Native POSIX Thread Library（NPTL）的支持，NPTL 是 Linux POSIX 线程的更新版本，可更高效地使用高端处理器。尽管该功能设计为向后兼容，但某些旧模块可能不兼容，可能需要使用新内核重新编译。
+
+# 编译和安装内核
+
+现在配置已准备就绪，你可以编译内核。首先需要生成一个依赖树，以根据你的配置确定要编译的源代码部分。在 `/usr/src/linux-2.4` 中使用以下命令：
+
+```
+make dep
+```
+
+你还必须清理可能残留的上一次编译的对象文件和依赖文件。使用以下命令删除此类文件：
+
+```
+make clean
+```
+
+你可以使用多个选项编译内核（参见表 33-1）。`bzImage` 选项仅生成名为 `bzImage` 的内核文件并将其放置在 `arch` 目录中。对于 Intel 和 AMD 系统，你可以在 `i386/boot` 子目录中找到 `bzImage`，`arch/i386/boot`。对于内核源码，这将位于 `/usr/src/linux-2.4/arch/i386/boot`。
+
+```
+make bzImage
+```
+
+表 33-1 中的选项会创建内核，但不会创建模块——即要编译为单独模块的内核特性。要编译模块，请使用带有 `modules` 参数的 `make` 命令。
+
+```
+make modules
+```
+
+表 33-1
+
+内核 make 命令的编译选项
+
+| 选项 | 描述 |
+|---|---|
+| zImage | 创建名为 zImage 的内核文件，位于 /usr/src/linux/arch 或 arch/i386/boot 目录中。 |
+| install | 创建内核并将其安装到你的系统上。 |
+| zdisk | 创建内核文件并将其安装到软盘上（创建启动盘）。 |
+| bzImage | 创建压缩的内核文件并命名为 bzImage。 |
+| bzdisk | 创建内核并将其安装到软盘上（创建启动盘）。 |
+
+要安装你的模块，请使用带有 `modules_install` 选项的 `make` 命令。这会将模块安装到 `/lib/modules/version-num` 目录中，其中 `version-num` 是内核的版本号。在安装新模块之前，你应该先备份旧模块的副本。
+
+```
+make modules_install
+```
+
+`install` 选项会同时生成内核文件并将它们安装到你的系统上作为 `vmlinuz`，并包含 `make bzImage` 步骤。此操作会将内核文件如 `bzImage` 文件放置在 `/boot` 目录中，并赋予它们适当的名字和内核版本号。
+
+```
+make install
+```
+
+如果你使用 `loadlin` 从 DOS 启动 Linux，你需要将 `bzImage` 文件复制到 DOS 分区上的 `loadlin` 目录中，即你从该分区启动 Linux 的位置。
+
+以下是简单编译和安装的命令示例：
+
+```
+make dep
+make clean
+make bzImage
+make modules
+make modules_install
+make install
+```
+
+如果你愿意，可以将这些命令全部写在更少的行上，用分号分隔命令，如下所示：
+
+```
+make dep; make clean; make bzImage; make modules
+make modules_install; make install
+```
+
+在单行上执行这些操作更安全的方法是使它们彼此条件依赖，使用 `&&` 命令。在前一种方法中，如果一个操作出现错误，下一个操作仍会被执行。通过使操作条件化，只有在前一个操作成功时下一个操作才会被运行。
+
+```
+make dep && make clean && make bzImage
+make modules
+make modules_install && make install
+```
+
+## 手动安装内核映像
+
+
+
+要手动安装内核 `bzImage` 文件，请将 `bzImage` 文件复制到内核所在的目录，并赋予其发行版使用的名称，例如 `vmlinuz-2.4.22-1`。请记住先备份旧的内核文件，如预防性步骤所述。`vmlinuz` 是指向实际内核文件的符号链接，该文件将带有版本号的 `vmlinuz` 术语。因此，要手动安装 `bzImage` 文件，你将其复制到 `/boot` 目录，并命名为 `vmlinuz` 加上版本号，例如 `vmlinuz-2.4.22-1`。然后从 `/boot/vmlinuz` 创建一个指向 `/boot/vmlinuz-2.4.22-1` 的符号链接。
+
+```
+make bzImage
+cp arch/i386/boot/bzImage /boot/vmlinuz-2.4.22-1
+ln -s /boot/vmlinuz /boot/vmlinuz-2.4.22-1
+```
+
+> TIP `bzImage` 选项，以及以字母 b 开头的那些选项，会创建压缩的内核映像。此内核映像可能无法在旧系统上工作。如果不行，请尝试使用 `zImage` 选项创建名为 `zImage` 的内核文件。然后以与 `bzImage` 相同的方式手动安装 `zImage` 文件。请记住，`zImage` 的支持最终将被淘汰。
+
+你还必须复制 `System.map` 文件，并将其链接到 `System.map` 符号链接。
+
+```
+cp arch/i386/boot/System.map /boot/System.map-2.4.22-1
+ln -s /boot/System.map /boot/System.map-2.4.22-1
+```
+
+以下命令展示了基本的编译和手动安装。首先，使用 `clean` 选项删除所有先前的二进制文件。然后使用 `bzImage` 选项创建内核。这会在 `arch/i386/boot` 目录中创建名为 `bzImage` 的内核程序。将此内核文件复制到 `/boot` 目录并命名为 `vmlinuz-2.4.22-1`，然后创建名为 `/boot/vmlinuz` 的符号链接指向内核 `vmlinuz-2.4.22-1` 文件。接下来，创建模块并安装它们：
+
+```
+make dep
+make clean
+make bzImage
+make modules
+make modules_install
+cp arch/i386/boot/bzImage /boot/vmlinuz-2.4.22-1
+ln -s /boot/vmlinuz-2.4.22-1 /boot/vmlinuz
+cp System.map /boot/System.map-2.4.22-1
+ln -s /boot/System.map-2.4.22-1 /boot/System.map
+```
+
+## 内核启动磁盘
+
+与其将内核安装到你的系统上，你可以简单地将其放置在启动磁盘上并从该磁盘启动系统。在这种情况下，你只需使用 `bzdisk` 选项创建一个启动磁盘。此选项将内核安装到放置在软盘驱动器中的软盘上。内核驻留在软盘上，要使用该内核，你需要从软盘启动系统（内核不会像使用 `install` 选项那样安装到你的根分区上）。
+
+```
+make bzdisk
+```
+
+确保软盘驱动器中有软盘。`make bzdisk` 命令会直接将映像复制到软盘。你仍需创建并安装你的模块。确保 `bzImage` 文件足够小，可以放入软盘。如果不行，你将不得不重新配置内核，将尽可能多的功能编译为模块而不是作为内核的一部分。
+
+```
+make clean
+make bzImage
+make bzdisk
+make modules
+make modules_install
+```
+
+> TIP 如果你正在试验内核配置，将新内核版本放在启动磁盘或启动 CD-ROM 上会更安全，而不是将其安装在你的系统上。如果出现问题，你仍然可以用原来的内核正常启动（尽管你也可以始终配置启动加载程序以访问以前的版本）。
+
+## Boot Loader Configurations
+
+如果你使用的是 GRUB 或 LILO 等启动加载程序，可以配置系统以便启动任意已安装的内核。如本章前面“修改相同版本内核的预防措施”一节所述，你可以在启动加载程序配置文件中为旧内核创建一个附加条目。随着你安装新的内核版本，你只需添加更多条目，即可使用任何以前的内核。每次启动时，启动加载程序都会为你列出可供选择的内核列表。例如，你可以安装内核的开发版本，同时保留当前稳定版本和旧版本。在每个条目的映像行中，你指定内核的文件名。你可以为旧内核创建另一个启动加载程序条目。
+
+## GRUB Configurations
+
+在下一个示例中，`/etc/grub.conf` 文件包含两个 Linux 内核的条目，一个是之前安装的内核 `2.4.18-4`，另一个是更新的内核 `2.4.22-1`。使用 GRUB 时，只需为新内核添加一个新条目即可。
+
+```
+# grub.conf generated by anaconda
+#
+#boot=/dev/hda
+default=0
+timeout=30
+splashimage=(hd0,2)/boot/grub/splash.xpm.gz
+title New Linux (2.4.22-1)
+    root (hd0,2)
+    kernel /boot/vmlinuz-2.4.22-1 ro root=/dev/hda3 hdc-ide-scsi
+    initrd /boot/initrd-2.4.22-1.img
+title Old Linux (2.4.18-4)
+    root (hd0,2)
+    kernel /boot/vmlinuz-2.4.18-4 ro root=/dev/hda3 hdc-ide-scsi
+    initrd /boot/initrd-2.4.18-4.img
+title Windows XP
+    rootnoverify (hd0,0)
+    makeactive
+    chainloader +1
+```
+
+## Module RAM Disks
+
+如果你的系统使用内核不支持的某些块设备，例如某些 SCSI、RAID 或 IDE 设备，则在启动时需要加载某些必需模块。此类块设备模块保存在 RAM 磁盘上，系统首次启动时访问该磁盘（RAM 磁盘也用于无盘系统）。例如，如果你有 SCSI 硬盘或 CD-ROM，其 SCSI 驱动程序通常保存在模块中，在你启动系统时加载。这些模块存储在启动过程读取的 RAM 磁盘中。如果你创建了一个需要加载模块才能启动的新内核，则必须为这些模块创建新的 RAM 磁盘。只有当你的内核需要在启动时加载模块时，才需要创建新的 RAM 磁盘。例如，如果你使用 SCSI 硬盘，但已将 SCSI 硬盘和 CD-ROM 支持（包括对特定型号的支持）直接集成到内核中，则无需设置 RAM 磁盘（大多数 IDE 硬盘和 CD-ROM 的支持已直接集成到内核中）。
+
+如果需要创建 RAM 磁盘，可以使用 `mkinitrd` 命令创建 RAM 磁盘映像文件。`mkinitrd` 命令会整合你的系统使用的所有 IDE、SCSI 和 RAID 模块，包括 `/etc/modules.conf` 文件中列出的模块。有关更多详细信息，请参阅 `mkinitrd` 的手册页和 RAM 磁盘文档。`mkinitrd` 以 RAM 磁盘映像文件名称和模块取自的内核作为参数。在以下示例中，在 `/boot` 目录中创建名为 `initrd-2.4.22-1.img` 的 RAM 磁盘映像，使用 `2.4.22-1` 内核的模块。`2.4.22-1` 内核必须已安装在你的系统上，并且其模块已创建。
+
+```
+# mkinitrd /boot/initrd-2.4.22-1.img 2.4.22-1
+```
+
+你可以选择在任何 SCSI 模块之前或之后加载某些模块。`--preload` 选项在 SCSI 模块之前加载，`--with` 在之后加载。例如，要在 SCSI 模块之前加载 RAID 5 支持，请使用 `--preload=raid5`：
+
+```
+mkinitrd --preload=raid5 raid-ramdisk 2.4.22-1
+```
+
+在新内核的 `grub.conf` 段中，放置一个 `initrd` 条目指定新的 RAM 磁盘：
+
+```
+initrd /boot/initrd-2.4.22-1.img
+```
+
+## 网络管理
+
+## PART
+
+- CHAPTER 34
+
+  域名系统
+
+- CHAPTER 35
+
+  DHCP 服务器
+
+- CHAPTER 36
+
+  NFS 和 NIS
+
+- CHAPTER 37
+
+  Samba
+
+- CHAPTER 38
+
+  管理 TCP/IP 网络
+
+## CHAPTER
+
+域名系统
+
+域名系统 (`DNS`) 是一种 Internet 服务，用于定位并将域名翻译成对应的 Internet 协议 (`IP`) 地址。正如你可能回忆的那样，所有连接到 Internet 的计算机都使用 `IP` 地址进行寻址。作为网络上的普通用户可能需要访问许多不同的主机，跟踪所需的 `IP` 地址很快就成了一个问题。用名称标记主机并使用名称访问它们要容易得多。名称与 `IP` 地址相关联。当用户使用名称访问主机时，会先查找对应的 `IP` 地址，然后再使用该地址提供访问。
+
+### DNS 地址转换
+
+
+
+将 IP 地址翻译成相关名称的过程相当直接。小网络只需基本配置即可轻松设置。随着网络规模增大以及接入 Internet，任务变得复杂得多。任务的庞大规模可能使 DNS 配置成为一项复杂操作。
+
+### 完全限定域名
+
+IP 地址与对应的名称相关联，称为完全限定域名。完全限定域名由三个或更多段组成。第一段是标识主机的名称，其余段用于主机所在的网络。完全限定域名的网络段通常简称为域名，而主机部分称为主机名（尽管这也常用来指完整的完全限定域名）。实际上，子网被称为域。完全限定域名 `www.linux.org` 可能具有 IP 地址 `198.182.196.56`，其中 `198.182.196` 是网络地址，`56` 是主机 ID。计算机只能通过 IP 地址访问，因此完全限定域名必须先翻译成对应的 IP 地址才有任何用处。构成域名和主机的 IP 地址部分可能会有所不同。有关 IP 地址的详细讨论，包括网络类别和无类别域间路由 (`CIDR`)，请参阅第 38 章。
+
+### IPv4 地址
+
+IP 地址可能以较新的 `IPv6`（Internet 协议第 6 版）格式或较旧且更常见的 `IPv4`（Internet 协议第 4 版）格式实现。由于 `IPv4` 地址更容易阅读，这些示例将使用该格式。在较旧的 `IPv4` 格式中，IP 地址由四个段组成的数字构成，段之间用句点分隔。根据网络类型，前几个段用于网络地址，最后一个或多个段用于主机地址。在小型网络中使用的标准 C 类网络中，前三个段是计算机的网络地址，最后一个段是计算机的主机 ID（如这些示例中所用）。例如，在地址 `192.168.0.2` 中，`192.168.0` 是网络地址，`2` 是该网络中计算机的主机 ID。它们共同组成一个 IP 地址，可通过该地址从 Internet 上的任何位置寻址计算机。IP 地址很难记住且容易出错。
+
+### IPv6 地址
+
+`IPv6` 地址使用一种非常不同的方法，旨在提供更大的灵活性和对非常大地址空间的支持（请参阅第 38 章）。`IPv6` 地址有三种类型：单播、多播和任播，其中单播是最常用的。单播地址指向特定接口。根据地址的使用方式，存在几种单播地址。例如，你可以拥有用于通过 Internet 访问的全局单播地址，或用于私有网络的站点级单播地址。
+
+尽管由 128 位组成，共八个段（每段 16 位，2 字节），`IPv6` 地址由多个字段组成，大致符合 `IPv4` 地址的段和功能，包括网络信息、子网信息和接口标识符（主机 ID）。网络信息包括指示网络连接类型的格式前缀。此外，还可以使用子网标识符指定本地子网（请参阅第 38 章）。网络信息占用前几个段。其余部分用于接口 ID。接口 ID 是一个 64 位（四个段）的扩展唯一标识符 (`EUI-64`)，由网络设备的媒体访问控制 (`MAC`) 地址生成。IP 地址以十六进制数字书写，使用起来很困难。每个段之间用冒号分隔，连续的零值段组可以留空。
+
+### 手动转换：`/etc/hosts`
+
+Internet 上的任何计算机都可以维护一个文件，手动将 IP 地址与域名关联。在 Linux 和 Unix 系统上，该文件称为 `/etc/hosts` 文件。在这里，你可以输入经常访问的计算机的 IP 地址和域名。然而，使用这种方法，每个计算机都需要列出 Internet 上所有其他计算机的完整清单，并且该清单必须不断更新。早期，这对于 Internet 来说显然不切实际，尽管对于小型隔离网络仍然可行。
+
+### DNS 服务器
+
+域名系统已实现以处理将 Internet 上任何计算机的域名翻译为其 IP 地址的任务。该任务由
+
+互连的服务器管理域名系统（也称为 DNS 服务器或名称服务器）。这些 DNS 服务器保存完全限定域名及其 IP 地址的列表，并将两者相互匹配。它们为网络提供的这种服务被称为域名系统。互联网由许多连接的子网组成，称为域，每个域都有自己的域名系统（DNS）服务器，负责跟踪其网络上所有计算机的完全限定域名和 IP 地址。DNS 服务器在层次上链接到根服务器，而根服务器又连接到其他根服务器以及互联网上其子网的 DNS 服务器。给定 DNS 服务器负责的网络部分称为区域。虽然区域可能对应于一个域，但实际上许多区域可能位于一个域内，每个区域都有自己的名称服务器。对于大型域而言，这一点尤其正确，因为系统太多，一个名称服务器无法管理。
+
+## DNS 操作
+
+当用户输入完全限定域名以访问远程主机时，解析器程序会查询本地网络的 DNS 服务器，请求该远程主机的相应 IP 地址。有了 IP 地址后，用户就可以访问远程主机了。在图 34-1 中，`rabbit.mytrek.com` 的用户想要连接到远程主机 `lizard.mytrek.com`。`rabbit.mytrek.com` 首先向网络的 DNS 服务器发送请求——在本例中为 `turtle.mytrek.com`——查找名称 `lizard.mytrek.com` 并找到其 IP 地址。然后它将 `lizard.mytrek.com` 的 IP 地址 `192.168.0.3` 返回给请求主机 `rabbit.mytrek.com`。有了 IP 地址后，`rabbit.mytrek.com` 的用户就可以连接到 `lizard.mytrek.com` 了。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_688_0.png)
+
+## DNS 客户端：解析器
+
+为主机网络提供服务的 DNS 服务器名称保存在主机的 `/etc/resolv.conf` 文件中（参见第 38 章）。在设置 Internet 连接时，由您的 Internet 服务提供商（ISP）提供的名称服务器被放置在此文件中。这些名称服务器解析您在访问不同 Internet 站点时使用的任何完全限定域名。例如，当您在浏览器中输入网站名称时，该名称会被名称服务器查找，然后使用该名称关联的 IP 地址来访问该站点。
+
+```
+/etc/resolv.conf
+search mytrek.com mytrain.com
+nameserver 192.168.0.1
+nameserver 192.168.0.3
+```
+
+## 本地局域网寻址
+
+如果您为未连接到 Internet 的本地局域网（LAN）设置 DNS 服务器，您应该使用为此类本地网络保留的特殊 IP 号码集（也称为私有网络或内联网）。如果您正在实现 IP 伪装，这一点尤其重要，其中只有网关机器具有 Internet 地址，而其他机器使用该地址连接到 Internet。对于一个类 C `IPv4` 网络（254 台主机或更少），这些是具有特殊网络号 `192.168` 的号码，如这些示例中所用。如果您正在设置 LAN，例如小型企业或家庭网络，您可以自由地为本地机器使用这些号码。您可以使用诸如以太网卡和以太网集线器之类的网络卡设置私有网络，例如内联网，然后将机器配置为从 `192.168.0.1` 开始的 IP 地址。主机段的范围为 1 到 254，其中 255 用于广播地址。如果您的家庭网络上有三台机器，您可以给它们分配地址 `192.168.0.1`、`192.168.0.2` 和 `192.168.0.3`。然后，您可以在其中一台机器上运行 DNS 服务器来为您的网络设置域名服务。该机器成为您网络的 DNS 服务器。然后，您可以为机器分配完全限定域名，并配置 DNS 服务器将名称翻译为相应的 IP 地址。如图 34-2 所示，例如，您可以给机器 `192.168.0.1` 起名为 `turtle.mytrek.com`，并给机器 `192.168.0.2` 起名为 `rabbit.mytrek.com`。您还可以通过在机器上设置服务器来实现 FTP、Web 和邮件服务等 Internet 服务。然后，您可以配置 DNS 服务器让用户使用完全限定域名访问这些服务。例如，对于 `mytrek.com` 网络，Web 服务器可以使用名称 `www.mytrek.com` 访问。您也可以不在使用域名服务，而是让每台机器中的 `/etc/hosts` 文件包含网络中所有机器的 IP 地址和域名的完整列表。但对于任何更改，您都必须更新每台机器的 `/etc/hosts` 文件。
+
+## IPv4 私有网络
+
+`IPv4` 为 `IPv4` 支持的三个类别提供了范围的私有地址。如您所见，具有特殊网络号 `192.168` 的类 C `IPv4` 网络号。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_690_0.png)
+
+## FIGURE 34-2 DNS server and network
+
+数字也为类 A 和类 B 的非互联网本地网络保留。表 34-1 列出了这些地址。可用地址的范围在地址的主机段中从 0 到 255。例如，类 B 网络地址范围从 `172.16.0.0` 到 `172.16.255.255`，给你总共 65,534 个可能的主机。类 C 网络范围从 `192.168.0.0` 到 `192.168.255.255`，给你 254 个可能的子网，每个子网有 254 个可能的主机。数字 `127.0.0.0` 保留用于系统的回环接口，使其能够与自身通信，因为它允许同一系统上的用户相互发送消息。
+
+
+
+这些数字最初是为基于类的寻址设计的。然而，它们同样可以轻松用于无类域间路由 CIDR 寻址，在其中你可以创建主机数更少的小子网。例如，类 C 网络中寻址的 254 个主机可以分成两个子网，每个子网有 125 个主机。有关更多详细信息，请参阅第 38 章。
+
+### TABLE 34-1
+
+Non-Internet
+
+Private Network IP
+
+Addresses
+
+| Address | Networks |
+|---|---|
+| 10.0.0.0 | Class A network |
+| 172.16.0.0 to 172.31.255.255 | Class B network |
+| 192.168.0.0 | Class C network |
+| 127.0.0.0 | Loopback network (for system self-communication) |
+
+## IPv6 Private Networks
+
+IPv6 支持使用站点本地地址的私有网络，提供与 IPv4 私有地址相同的功能。站点本地地址没有公共路由信息。它们无法访问互联网。它们仅限于使用它们的站点。站点本地地址仅使用三个字段：格式前缀、子网标识符和接口标识符。站点级地址的格式前缀为 `fec0`。如果没有子网，它将被设置为 0。这将给你一个网络前缀 `fec0:0:0:0`。你可以去掉一组空零，给你 `fec0::`。接口 id 字段将保存接口识别信息，类似于 IPv4 中的主机 ID 信息。
+
+```
+fec0::		IPv6 site-local prefix
+```
+
+## BIND
+
+目前在 Linux 系统上使用的 DNS 服务器软件是伯克利互联网名称域 Berkeley Internet Name Domain (`BIND`)。`BIND` 最初在加州大学伯克利分校开发，目前由互联网软件联盟 Internet Software Consortium (`ISC`) 维护和支持。你可以从其网站 `www.isc.org` 获得 `BIND` 信息和当前软件版本。网页文档和手册包含在软件包中。RPM 包可在发行版 FTP 站点获得。`/usr/share/doc` 中的 `BIND` 目录包含大量文档，包括网页手册和示例。Linux 域名服务 HOW-TO，`DNS-HOWTO`，提供了详细的示例。文档、新闻和 DNS 工具可以从 DNS 资源目录 DNS Resource Directory (`DNSRD`) `www.dns.net/dnsrd` 获得。该站点包含大量链接和在线文档，包括 BIND 操作指南 BIND Operations Guide (`BOG`)。请参阅表 34-2 获取 DNS 资源列表。
+
+## Alternative DNS Servers
+
+现在有几种替代的 DNS 服务器可用。这些包括以其安全功能著称的 `djbdns`、用 Java 实现的动态服务器 CustomDNS (`customdns.sourceforge.net`)，以及嵌入式服务器 Yaku-NS。`djbdns` 服务器 (`cr.yp.to/djbdns.html`)，由 D.J. Bernstein 编写，专为安全而设计，提供一组小型服务器守护进程，每个执行专门的任务。特别是，`djbdns` 将名称服务器、缓存服务器和区域传输任务分离到单独的程序中：`tinydns` (`tinydns.org`) 实现网络的权威名称服务器，而 `dnscache` 实现一个缓存服务器，将解析来自 Web 浏览器等 DNS 客户端的请求。实际上，`dns cache` 充当你的应用程序将用于解析地址的名称服务器。`dns cache` 然后会查询 `tinydns` 以解析你本地网络上的地址。区域传输由 `axfrdns` 和 `asfget` 单独处理。
+
+### TABLE 34-2
+
+BIND Resources
+
+| Web Site | Resource |
+|---|---|
+| www.isc.org | Internet Software Consortium |
+| www.dns.net/dnsrd | DNS Resource Directory |
+| www.nominum.com | Nominum, BIND support and consulting |
+
+## DNS 文档
+
+目前，`ISC` 已与两家公司 Nominum 和 Mind 签约提供 `BIND` 支持。Nominum 是 `ISC` 的支持合作伙伴，并在 `BIND` 开发中发挥了积极作用。在其网站 `www.nominum.com` 上，您可以找到 `BIND` 文档，包括 `BIND 9` 管理员参考手册。Nominum 与许多支持开源软件的商业公司一样，提供专业的咨询和支持服务，同时也自由地为开源开发做出贡献。Mind 为欧洲市场提供咨询服务。
+
+## BIND 服务器和工具
+
+`BIND` DNS 服务器软件由一个名称服务器守护进程、多个示例配置文件和解析器库组成。自 1998 年起，`BIND` 的新版本从 8.x 系列开始，采用了新的配置文件语法。版本 9.0 增加了新的安全功能和对 IPv6 的支持。较旧的版本以 4.x 开头，使用不同且语法更旧的配置文件。大多数发行版目前安装的是更新的 `BIND 9.x` 版本。
+
+`BIND` 名称服务器守护进程的名称为 `named`。要将您的机器作为名称服务器运行，只需使用适当的配置运行 `named` 守护进程即可。`named` 守护进程监听解析请求并提供所请求主机名的正确 IP 地址。您可以使用 `BIND` 提供的远程名称守护进程控制器实用程序 `rndc`，在测试其配置时启动、停止、重启并检查服务器状态。`rndc` 使用 `stop` 命令停止 `named`，并使用 `start` 命令重新启动它，同时读取您的 `named.conf` 文件。`rndc` 使用 `help` 命令提供所有 `rndc` 命令的列表。有关配置 `rndc` 访问您的 DNS 服务器的详细信息，请参阅 Red Hat 参考指南。一旦名称服务器运行，您可以使用 `dig` 或 `nslookup` 实用程序对其进行测试，该实用程序查询名称服务器，提供有关主机和域的信息。如果您在不带参数的情况下启动 `dig`，它会进入交互模式，您可以在其中发出不同的 `dig` 命令来细化查询。还有许多其他 DNS 工具可用，例如 `nslnt` 和 `host`。请查看 `www.dns.net/dnsrd` 上的 DNS 资源目录以获取列表。表 34-3 列出了多个 DNS 管理工具。
+
+| Tool | Description |
+|---|---|
+| dig domain | Domain Information Groper，用于获取 DNS 服务器信息的工具。优于 nslookup。 |
+| host hostname | 简单的主机查询。 |
+| nslookup domain | 用于查询 DNS 服务器以获取有关域和主机的信息的工具。 |
+| rndc command | Remote Name Daemon Controller，用于管理 DNS 服务器的管理员工具（版本 9.x）。 |
+| ndc | Name Daemon Controller（版本 8.x）。 |
+| redhat-config-bind | Red Hat Bind DNS 服务器配置工具。 |
+
+## 启动和停止 BIND 服务器
+
+在 Red Hat 上，`named` 守护进程使用位于 `/etc/rc.d/init.d` 目录中的名为 `named` 的启动脚本启动。您可以使用该脚本通过 `stop`、`start` 和 `restart` 参数来启动、停止和重启守护进程。您可以使用 `service` 命令按如下所示调用该脚本：
+
+```
+service named restart
+```
+
+在大多数发行版中，`named` 以独立守护进程运行，在系统启动时启动并持续运行。如果您不希望 `named` 自动启动，可以使用 `redhat-config-services` 或 `chkconfig` 来更改其状态。
+
+## 域名服务配置
+
+您使用一个配置文件、多个区域文件和一个缓存文件来配置 DNS 服务器。名称服务器负责的网络部分称为区域。区域与域不同，因为在一个大型域中您可能有多个区域，每个区域都有自己的名称服务器。您也可以让一个名称服务器服务于多个区域。在这种情况下，每个区域都有自己的区域文件。
+
+## DNS 区域
+
+区域文件保存资源记录，为 DNS 服务器负责的网络上的计算机提供主机名和 IP 地址关联。区域文件存在于服务器的网络和本地机器上。区域条目在 `named.conf` 文件中定义。在这里，您放置主、从和转发 DNS 服务器的区域条目。最常用的区域类型描述如下：
+
+- Master zone 这是 DNS 服务器支持的网络的主区域文件。它保存该网络上所有主机的域名到 IP 地址的映射。
+- Slave zone 这些是指向您网络中其他 DNS 服务器的引用。您的网络可以有一个主 DNS 服务器和多个从 DNS 服务器来分担工作负载。从 DNS 服务器会自动从主 DNS 服务器复制其配置文件，包括所有区域文件。对主配置文件的任何更改都会触发这些文件自动下载到从服务器。实际上，您只需要管理主 DNS 服务器的配置文件，因为它们会自动复制到从服务器。
+
+
+
+## 转发区域
+
+`Forward zone` 转发区域列出了网络外部的名称服务器，如果您网络的名称服务器无法解析地址，则应搜索这些名称服务器。
+
+## IN-ADDR.ARPA zone
+
+`DNS` 还可以提供反向解析，其中使用 IP 地址来确定关联的域名地址。此类查询由 `IN-ADDR.ARPA` 区域文件提供。每个主区域文件通常都有一个对应的 `IN-ADDR.ARPA` 区域文件，以为该区域提供反向解析。对于每个主区域条目，都存在一个对应的反向映射区域条目，名为 `IN-ADDR.ARPA`，以及一个用于 `localhost` 的条目。该条目执行
+
+从 IP 地址到其域名的反向映射。区域条目的名称使用域 IP 地址，即从主机开始列出各段而非网络部分的 IP 地址。因此，对于 IP 地址 `192.168.0.4`，其中 `4` 是主机地址，对应的域 IP 地址为 `4.0.168.192`，按相反顺序列出各段。`localhost` 的反向映射是 `1.0.0.127`。
+
+## IPv6.ARPA 区域
+
+这是 `IN-ADDR.ARPA` 区域的 IPv6 对应项，为该区域提供反向解析。`IP6.ARPA` 区域使用更易于书写的位标签，无需 DNS 管理员进行反向计算。
+
+## IPv6.INT 区域
+
+这是 IPv6 `IP6.ARPA` 区域的旧形式，相当于 IPv4 的 `IN-ADDR.ARPA` 区域，为区域提供反向解析。`IP6.INT` 旨在与较旧的 `AAAA` IPv6 地址记录一起使用。`IP6.INT` 使用半字节（nibble）格式来指定反向区域。在该格式中，IPv6 十六进制地址被分割成 32 个十六进制数字，并按相反顺序列出，每个数字之间用句点分隔。
+
+## 提示区域
+
+提示区域指定根名称服务器，并用句点（`.`）表示。`DNS` 服务器通常连接到更大的网络，如互联网，该网络有自己的 `DNS` 服务器。`DNS` 服务器以这种层级方式连接，每台服务器都有其根服务器，可向其发送解析查询。根服务器在提示区域中指定。
+
+> 注意
+>
+> 在 Red Hat 上，你可以使用 Red Hat `BIND` 配置工具 `redhat-config-bind` 来为简单的本地网络配置 `DNS` 服务器（参见第 5 章）。`redhat-config-bind`（可从“服务器设置”窗口或菜单访问）提供了一个 `GNOME` 界面，用于设置服务器所需的主、从、转发和 `IN-ADDR.ARPA` 区域。但请注意，它会覆盖你的 `/etc/named.conf` 文件。可从“服务器设置”菜单访问 `redhat-config-bind`。
+
+## DNS 服务器类型
+
+`DNS` 服务器有多种类型，每种都设计用于在域名服务（Domain Name Service）下执行不同类型的任务。最基本的 `DNS` 服务器是主服务器。每个网络必须至少有一台主服务器，负责解析网络上的名称。大型网络可能需要多台 `DNS` 服务器。其中一些可以是能从主服务器直接更新的从服务器。另一些则可能是网络中的主机可以使用的备用主服务器。这两类通常都称为辅助服务器。对于 `DNS` 服务器无法解析的 `DNS` 请求，该请求可以被转发到网络外部的特定 `DNS` 服务器，比如互联网上的服务器。网络中的 `DNS` 服务器可以设置为执行此任务，称为转发服务器。为了分担工作负载，可以在网络内设置充当缓存服务器的本地 `DNS` 服务器。这样的服务器只是收集它之前发送给主 `DNS` 服务器的请求所对应的 `DNS` 查询结果。任何重复的请求随后都可以由缓存服务器来应答。
+
+能够以权威身份回答给定区域 `DNS` 查询的服务器称为权威服务器。权威服务器保存区域中主机的 `DNS` 配置记录，这些记录将每个主机的 `DNS` 名称与 IP 地址关联起来。例如，主服务器就是权威服务器。从服务器和隐蔽服务器也是如此（见后面的列表）。
+
+缓存服务器不是权威服务器。它只保存从其他服务器获取的关联信息，无法保证这些关联是有效的。
+
+- **主服务器** 这是区域的主 `DNS` 服务器。
+- **从服务器** 从主服务器接收区域信息的 `DNS` 服务器。
+- **转发服务器** 将未解析的 `DNS` 请求转发到外部 `DNS` 服务器的服务器。可用于使本地网络上的其他服务器对互联网隐藏。
+- **仅缓存服务器** 缓存从 `DNS` 服务器接收的 `DNS` 信息，并用它来解析本地请求。
+- **隐蔽服务器** 主 `DNS` 服务器未将其列为名称服务器的区域 `DNS` 服务器。
+
+## named.conf
+
+`named` 守护进程的配置文件是 `named.conf`，位于 `/etc` 目录中。它使用类似于 C 程序的灵活语法。该格式支持轻松配置所选区域，并实现访问控制列表和分类日志等功能。`named.conf` 文件由 `BIND` 配置语句及附加的配置块组成，其中列出特定的选项。配置语句后跟参数和用花括号分隔的块。块内是选项和功能条目行。每个条目以分号结尾。注释可以使用 C、C++ 或 Shell/Perl 语法：用 `/* */` 括起来、以 `//` 开头或以 `#` 开头。下面的示例显示了一个区域语句，后跟区域名称和一个以左花括号 `{` 开头的选项块。每个选项条目以分号结尾。整个块以右花括号结尾，后面也跟分号。此处展示了 `named.conf` 条目的格式，以及允许的不同注释类型。表 35-5、35-6 和 35-7 列出了一些常用的语句和选项。
+
+```
+// comments
+/* comments */
+# comments
+```
+
+```
+statements {
+    options and features; //comments
+};
+```
+
+下面的示例显示了一个简单的缓存服务器条目：
+
+```
+// a caching only nameserver config
+//
+zone "." {
+    type hint;
+    file "named.ca";
+};
+```
+
+> **注意** `named.conf` 文件是随 `BIND` 版本 8.x 和 9.x 实现的新功能。较旧的 `BIND` 4.x 版本使用名为 `named.boot` 的文件。该文件不再被 8.x 版本使用。这些配置文件中使用的语法截然不同。如果您升级到 8.x，可以使用随 `BIND` 软件提供的 `named-bootconf.pl` Perl 脚本来将您的 `named.boot` 文件转换为 `named.conf` 文件。
+
+## zone 语句
+
+`zone` 语句用于指定名称服务器将提供服务的域。您输入关键字 `zone`，后跟放在双引号内的域名。不要在域名末尾放置句点。在以下示例中，句点在域名内，但不在末尾：`"mytrek.com"`；这与区域文件不同，区域文件要求在完整域名末尾加上句点。
+
+在区域名称之后，您可以指定类 `in`，代表 Internet。您也可以省略它，在这种情况下假定为 `in`（只有少数其他鲜为人知的类很少使用）。在区域块内，您可以放置多个选项（参见本章后面的表 34-6）。两个基本选项是 `type` 和 `file`。`type` 选项用于指定区域的类型。`file` 选项用于指定为此区域使用的区域文件名。您可以从几种区域类型中选择：`master`、`slave`、`stub`、`forward` 和 `hint`。`master` 指定该区域保存主信息并有权对其进行操作。主服务器在旧的 4.x `BIND` 配置中称为主服务器。`slave` 表示该区域需要定期从指定的主名称服务器更新其数据。如果您的名称服务器作为另一个主 `DNS` 服务器的辅助服务器运行，则使用此条目。`stub` 区域仅复制其他名称服务器条目，而不是整个区域。`forward` 区域将所有查询定向到 `forwarders` 语句中指定的名称服务器。`hint` 区域指定所有 Internet `DNS` 服务器使用的根名称服务器集合。
+
+您还可以指定多个选项，这些选项可以覆盖使用 `options` 语句设置的任何全局选项。表 34-4 列出了 `BIND` 区域类型。以下示例显示了 `mytrek.com` 域的简单区域语句。其类为 Internet（`in`），类型为 `master`。其区域文件名通常与区域名相同，在本例中为 `"mytrek.com"`。
+
+```
+zone "mytrek.com" in {
+    type master;
+    file "mytrek.com";
+};
+```
+
+**表 34-4. DNS BIND 区域类型**
+
+| Type | Description |
+|------|-------------|
+| `master` | Primary DNS zone |
+| `slave` | Slave DNS server; controlled by a master DNS server |
+| `hint` | Set of root DNS Internet servers |
+| `forward` | Forwards any queries in it to other servers |
+| `stub` | Like a slave zone, but holds only names of DNS servers |
+
+## 配置语句
+
+
+
+其他语句，例如 `acl`、`server`、`options` 和 `logging`，使您能够为名称服务器配置不同的功能（参见表 34-5）。`server` 语句定义与远程名称服务器关联的特征，例如传输方法和用于事务安全的密钥 ID。`controls` 语句定义特殊的控制通道。`key` 语句定义要在 `server` 语句中使用的密钥 ID，该语句将一种身份验证方法与特定名称服务器关联（参见本章后面的“DNSSEC”）。`logging` 语句用于配置名称服务器的日志选项，例如日志文件的最大大小和消息的严重级别。表 34-5 列出了 BIND 语句。`sortlists` 语句让您指定在查询返回多个响应时使用的首选项。例如，您可以优先考虑本地主机网络或私有本地网络，例如 192.168.0.0。
+
+| Statements | Description |
+|---|---|
+| `/* comment */` | BIND comment in C syntax. |
+| `// comment` | BIND comment in C++ syntax. |
+| `# comment` | BIND comment in Unix shell and Perl syntax. |
+| `acl` | Defines a named IP address matching list. |
+| `include` | Includes a file, interpreting it as part of the `named.conf` file. |
+| `key` | Specifies key information for use in authentication and authorization. |
+| `logging` | Specifies what the server logs and where the log messages are sent. |
+| `options` | Global server configuration options and defaults for other statements. |
+| `controls` | Declares control channels to be used by the `ndc` utility. |
+| `server` | Sets certain configuration options for the specified server. |
+| `sortlists` | Gives preference to specified networks according to a query's source. |
+| `trusted-keys` | Defines DNSSEC keys preconfigured into the server and implicitly trusted. |
+| `zone` | Defines a zone. |
+| `view` | Defines a view. |
+
+## 表 34-6 区域选项
+
+| Options | Description |
+|---|---|
+| `type` | 指定区域类型。 |
+| `file` | 指定区域的区域文件。 |
+| `directory` | 指定区域文件的目录。 |
+| `forwarders` | 列出用于转发请求的 DNS 服务器主机。 |
+| `masters` | 列出从服务器的 DNS 主服务器主机。 |
+| `notify` | 允许主服务器在主区域数据更改且需要更新时通知其从服务器。 |
+| `allow-transfer` | 指定允许接收区域传输的主机。 |
+| `allow-query` | 指定允许进行查询的主机。 |
+| `allow-recursion` | 指定允许在服务器上执行递归查询的主机。 |
+
+## `options` 语句
+
+`options` 语句定义全局选项，并且只能在配置文件中使用一次。大量选项涵盖转发、名称检查、目录路径名、访问控制和区域传输等组件（见表 34-7）。完整列表可在 BIND 文档中找到。
+
+## 表 34-7 选项
+
+| Options | Description |
+|---|---|
+| `sortlist` | 根据查询源为指定网络提供优先级。 |
+| `directory` | 指定区域文件的目录。 |
+| `forwarders` | 列出用于转发请求的 DNS 服务器主机。 |
+| `allow-transfer` | 指定允许接收区域传输的主机。 |
+| `allow-query` | 指定允许进行查询的主机。 |
+| `allow-recursion` | 指定允许在服务器上执行递归查询的主机。 |
+| `notify` | 允许主服务器在主区域数据更改且需要更新时通知其从服务器。 |
+| `blackhole` | 消除由 `allow-query` 引起的拒绝响应的选项。 |
+
+## `directory` 选项
+
+在大多数配置文件中都能找到的一个至关重要的选项是 `directory` 选项，它保存了名称服务器的区域和缓存文件在系统上的位置。以下示例取自 Red Hat `/etc/named.conf` 文件。此示例指定区域文件位于 `/var/named` 目录中。在此目录中，您可以找到您的区域文件，包括用于本地系统的那些文件。
+
+```
+options {
+    directory "/var/named";
+    forwarders { 192.168.0.34;
+                192.168.0.47;
+    };
+};
+```
+
+## `forwarders` 选项
+
+另一个常用的全局选项是 `forwarders` 选项。使用 `forwarders` 选项，您可以列出多个 DNS 服务器，如果本地 DNS 服务器无法解析，则可以将查询转发给它们。这对于可能需要使用连接到 Internet 的 DNS 服务器的本地网络很有帮助。`forwarders` 选项也可以放在转发区域条目中。
+
+## `notify` 选项
+
+启用 `notify` 选项后，主区域 DNS 服务器会在其配置更改时向任何从 DNS 服务器发送消息。从服务器随后可以执行区域传输，在其中下载更改后的配置文件。从服务器始终使用从其主 DNS 服务器复制的 DNS 配置文件。`notify` 接受一个参数 `yes` 或 `no`，其中 `yes` 为默认值。使用 `no` 参数，可以使主服务器不向从服务器发送任何消息，从而有效地阻止任何区域传输。
+
+## `named.conf` 示例
+
+以下示例是一个简单的 `named.conf` 文件，基于 BIND 文档中提供的示例。此示例展示了多个配置语句的示例。文件以使用 C++ 语法 `//` 的注释开头。`options` 语句具有一个 `directory` 条目，将区域和缓存文件的目录设置为 `/var/named`。在这里，您可以找到您的区域文件，例如 `named.local` 和反向映射文件，以及缓存文件 `named.ca`。第一个区域语句（ ）定义了一个提示区域，指定根名称服务器。列出这些服务器的缓存文件名为 `named.ca`。第二个区域语句定义了 `mytrek.com` 域的区域。其类型为 `master`，其区域文件名为 `"mytrek.com"`。下一个区域用于前一个区域的反向 IP 映射。其名称由 `mytrek.com` 域的 IP 地址的反向列表组成，并附加了 `IN-ADDR.ARPA` 术语。`mytrek.com` 的域地址为 192.168.0，因此反向为 1.168.192。`IN-ADDR.ARPA` 域是一个特殊域，支持网关定位和 Internet 地址到主机映射。最后一个区域语句定义了回环接口的反向映射区域，这是系统用于寻址自身并在系统上的本地用户之间实现通信的方法。此本地区域使用的区域文件名为 `named.local`。
+
+`named.conf`
+
+```
+//
+// A simple BIND 9 configuration
+//
+
+logging {
+
+    category cname { null; };
+
+};
+
+options {
+
+    directory "/var/named";
+
+};
+
+zone "." {
+
+    type hint;
+
+    file "named.ca";
+
+};
+
+zone "mytrek.com" {
+
+    type master;
+
+    file "mytrek.com";
+
+};
+
+zone "1.168.192.IN-ADDR.ARPA" {
+
+    type master;
+
+    file "192.168.0";
+
+};
+
+zone "0.0.127.IN-ADDR.ARPA" {
+
+    type master;
+
+    file "named.local";
+
+};
+```
+
+## IPv6 `named.conf` 版本
+
+
+
+前面 `named.conf` 文件的 IPv6 版本看起来非常相似，只是反向区域条目中的 `IN-ADDR.ARPA` 域被 `IP6.ARPA` 域取代（`IP6.INT` 是较旧的已弃用版本）。`IP6.ARPA` 使用位标签，提供地址的位级指定。这只是完整的十六进制地址，包括零，且不带中间的冒号。你需要对 `mytrek.com` 域和 `localhost` 域都使用 IPv6 地址的 `IP6.ARPA`。`localhost` 域的 IPv6 地址是 `0000000000000001`，这是一个特殊的保留地址。`IP6.INT` 是 `IP6.ARPA` 的较旧版本，使用用于反向地址的半字节格式（稍后讨论）。
+
+```named.conf
+//
+// A simple BIND 9 configuration
+//
+logging {
+    category cname { null; };
+};
+options {
+    directory "/var/named";
+};
+
+zone "." {
+    type hint;
+    file "named.ca";
+};
+
+zone "mytrek.com" {
+    type master;
+    file "mytrek.com";
+};
+
+zone "\[xFEC000000000000/64].IP6.ARPA" {
+    type master;
+    file "fec.ip6.arpa";
+};
+
+zone "\[x000000000000000000000000000001/128].IP6.ARPA" {
+    type master;
+    file "named.local";
+};
+```
+
+## 仅缓存服务器
+
+当 `BIND` 初始安装时，它会创建一个默认配置，即所谓的仅缓存服务器。仅缓存服务器复制用户发出的查询并将其保存在缓存中，以便在查询重复时稍后使用。这可以节省 DNS 查找响应时间。缓存保存在内存中，仅在 `named` 运行期间持续存在。以下示例是为仅缓存服务器初始安装的 `named.conf` 文件。仅定义了本地和缓存区域。
+
+`named.conf`（仅缓存服务器）
+
+```// generated by named-bootconf.pl
+
+options {
+
+    directory "/var/named";
+
+};
+
+// a caching only nameserver config
+
+//
+
+zone "." {
+
+    type hint;
+
+    file "named.ca";
+
+};
+
+zone "0.0.127.IN-ADDR.ARPA" {
+
+    type master;
+
+    file "named.local";
+
+};
+```
+
+## 资源记录
+
+你的名称服务器在区域和反向映射文件中保存有关网络上主机域名的信息，形式为资源记录。资源记录用于将 IP 地址与完全限定域名关联起来。名称服务器服务的区域中每台计算机都需要一条记录。一条记录占用一行，尽管你可以使用括号将一条记录分成多行，通常 `SOA` 记录就是这种情况。资源记录使用如下所示的标准资源记录格式：
+
+```
+name [<ttl>] [<class>] <type> <rdata> [<comment>]
+```
+
+这里，`name` 是此记录的名称。它可以是域名或主机名（完全限定域名）。如果只指定主机名，则会附加默认域。如果不存在 `name` 条目，则使用上一个特定名称。如果使用 `@` 符号，则使用名称服务器的域名。`ttl`（生存时间）是可选条目，指定记录应被缓存多长时间。`class` 是记录的类别。大多数资源记录条目中使用的类别是 `IN`，表示 Internet。默认情况下，它与 `named.conf` 文件中为域指定的类别相同。`type` 是记录的类型。`rdata` 是资源记录数据。以下是资源记录条目的示例。名称为 `rabbit.mytrek.com`，类别为 Internet（`IN`），类型为主机地址记录（`A`），数据为 IP 地址 `192.168.0.2`
+
+```
+rabbit.mytrek.com.   IN   A   192.168.0.2
+```
+
+## 资源记录类型
+
+存在不同类型的资源记录，用于不同类型的主机和名称服务器操作（请参阅表 34-8 获取资源记录类型的列表）。`A`、`NS`、`MX`、`PTR` 和 `CNAME` 是常用类型。`A` 用于将域名与 IP 地址匹配的主机地址记录。`NS` 用于引用名称服务器。`MX` 指定为此区域提供服务的邮件服务器的主机地址。邮件被发送到该主机。`PTR` 类型用于指向其他资源记录的记录，并用于反向映射。`CNAME` 用于标识系统上主机的别名。
+
+| Type | Description |
+|------|-------------|
+| A | An IPv4 host address, maps hostname to IPv4 address |
+| A6 | An IPv6 host address |
+| NS | Authoritative name server for this zone |
+| CNAME | Canonical name, used to define an alias for a hostname |
+| SOA | Start of Authority, starts DNS entries in zone file, specifies name server for domain, and other features such as server contact and serial number |
+| WKS | Well-known service description |
+
+TABLE 34-8 Domain Name Service Resource Record Types
+
+| 类型 | 描述 |
+|------|-------------|
+| PTR | 指针记录，用于执行反向域名查找，将 IP 地址映射到主机名 |
+| RP | 包含有关主机联系信息的文本字符串 |
+| HINFO | 主机信息 |
+| MINFO | 邮箱或邮件列表信息 |
+| MX | 邮件交换器，通知远程站点您区域的邮件服务器 |
+| TXT | 文本字符串，通常是有关主机的信息 |
+| KEY | 域私钥 |
+| SIG | 资源记录签名 |
+| NXT | 下一个资源记录 |
+
+## 表 34-8 域名服务资源记录类型（续）
+
+## 起始授权：SOA
+
+区域或反向映射文件总是以一个特殊的资源记录开始，称为起始授权记录（`SOA` 记录）。该记录指定所有后续记录对该域具有权威性。它还保存有关名称服务器域的信息，该信息将提供给其他名称服务器。`SOA` 记录的格式与其他资源记录相同，只是其数据段的排列方式不同。`SOA` 记录的格式如下：
+
+```
+name (ttl) class SOA Origin Person-in-charge (
+  Serial number
+  Refresh
+  Retry
+  Expire
+  Minimum )
+```
+
+每个区域都有自己的 `SOA` 记录。`SOA` 以 `named.conf` 区域条目中指定的区域名称开头。这通常是一个域名。通常使用 `@` 符号表示名称，它充当宏展开为域名。类通常是 Internet 类，`IN`。`SOA` 是类型。`Origin` 是记录的来源机器，通常是运行您的名称服务器守护进程的机器。负责人是管理名称服务器的人员的电子邮件地址（使用点而不是 `@` 表示电子邮件地址，因为该符号用于域名）。多个配置条目放在用大括号分隔的块中。第一个是序列号。当您添加或更改记录时，您会更改序列号，以便由其他服务器更新。序列号可以是任意数字，只要每次对区域中的任何记录进行更改时都递增即可。常见做法是使用年-月-日-编号作为序列号，其中编号是当天的更改次数。例如，`1999120403` 表示 1999 年 12 月 4 日的第三次更改。确保在进行更改时更新它。
+
+`Refresh` 指定刷新 `SOA` 信息的时间间隔。`Retry` 是尝试联系权威服务器的频率。`Expire` 是辅助名称服务器在不更新的情况下保留区域信息的时间长度。`Minimum` 是区域中记录的生存时间。时间以秒为单位指定。
+
+以下示例显示了一个 `SOA` 记录。运行名称服务器的机器是 `turtle.mytrek.com`，负责服务器的人员的电子邮件地址是 `hostmaster.turtle.mytrek.com`。注意这些名称末尾的句点。对于没有句点的名称，会附加域名。`turtle` 与 `turtle.mytrek.com` 相同。在输入完整主机名时，请确保添加句点，以便不附加域。
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    1997022700 ; Serial
+    28800 ; Refresh
+    14400 ; Retry
+    3600000 ; Expire
+    86400 ) ; Minimum
+```
+
+## 名称服务器：NS
+
+
+
+名称服务器记录指定此区域的名称服务器的名称。这些的资源记录类型为 `NS`。如果您有多个名称服务器，请在 `NS` 记录中列出它们。这些记录通常跟在 `SOA` 记录之后。由于它们通常适用于与 `SOA` 记录相同的域，因此其名称字段通常留空或继承由 `@` 符号在前一个 `SOA` 记录中指定的服务器域名。
+
+```
+IN NS turtle.mytrek.com.
+```
+
+如果愿意，您也可以显式输入域名，如下所示：
+
+```
+mytrek.com. IN NS turtle.mytrek.com.
+```
+
+## 地址记录：A 和 A6
+
+类型为 `A` 的资源记录是地址记录，将完全限定域名与 IP 地址关联。通常，只指定其主机名。任何没有终止句点的域名都会自动附加域。给定域 `mytrek.com`，以下示例中的 `turtle` 名称扩展为 `turtle.mytrek.com`：
+
+```
+rabbit.mytrek.com. IN A 192.168.0.2
+turtle IN A 192.168.0.1
+```
+
+`BIND` 版本 `8.2.2` 和 `9.1` 支持 IPv6 地址。IPv6 IP 地址的格式与常用的 IPv4 地址非常不同（参见第 38 章）。IPv4 地址使用四个段排列的数字，而 IPv6 使用七个段排列的十六进制数字。在以下示例中，`turtle.mytrek.com` 与站点本地 IPv6 地址 `fec0::` 相关联。请记住，站点本地地址只有三个字段：格式前缀、子网标识符和接口标识符。子网标识符的空段可以用空冒号对 `::` 表示。接口标识符 `8:800:200C:417A` 后跟
+
+```
+turtle.mytrek.com. IN A6 FEC0::8:800:200C:417A
+```
+
+IPv6 还支持使用 IPv4 地址作为接口标识符，而不是基于 MAC 的标识符。IPv6 地址的网络信息部分将使用 IPv6 记法，而剩余的接口（主机）标识符将使用完整的 IPv4 地址。这些被称为混合地址。在下一个示例中，`lizard.mytrek.com` 被分配了一个使用 IPv6 网络信息和 IPv4 接口信息的混合地址。IPv6 网络信息用于 IPv6 站点本地地址。
+
+```
+lizard.mytrek.com. IN A6 fec0::192.168.0.3
+```
+
+`AAAA` 记录是较旧且已弃用的 IPv6 记录版本。它在许多网络中仍在使用。`AAAA` 记录的工作方式与标准 `A` 地址记录非常相似，需要完整的 IPv6 地址。你也可以用 `A6` 记录做同样的事情。`A6` 记录更灵活，因为它不需要完整地址。相反，你可以把 `A6` 记录串联起来，让你在每个记录中只指定地址的一部分。例如，你可以只为一台主机指定接口标识符，让网络通过另一个 IPv6 记录提供信息。在下一个示例中，第一个 `A6` 记录只列出了主机 `divit` 的接口标识符地址。地址之后是域名 `mytrek.com`，其地址将被用来完成 `divit` 的地址，提供网络信息。下一个 `A6` 记录提供了 `mytrek.com` 的网络地址信息。
+
+```
+divit.mygolf.com. IN A6 0:0:0:0:1234:5678:3466:af1f mytrek.com.
+mytrek.com. IN A6 3ffe:8050:201:1860::
+```
+
+## Mail Exchanger: MX
+
+邮件交换记录 `MX` 指定用于此区域或特定主机的邮件服务器。邮件交换器是邮件发送到的服务器。在以下示例中，邮件服务器指定为 `turtle.mytrek.com`。发送到该区域中任何机器地址的任何邮件都将被发送到邮件服务器，然后邮件服务器再将其发送到特定机器。例如，发送给 `rabbit.mytrek.com` 上的用户的邮件将首先发送到 `turtle.mytrek.com`，然后再转发到 `rabbit.mytrek.com`。在以下示例中，主机 `192.168.0.1`（`turtle.mytrek.com`）被定义为 `mytrek.com` 域的邮件服务器：
+
+```
+mytrek.com. IN MX 10 turtle.mytrek.com.
+```
+
+你也可以从 `SOA` 记录继承域名，将域名条目留空。
+
+```
+IN MX turtle.mytrek.com.
+```
+
+你也可以使用 IP 地址，但在较大网络中，可能需要域名来查找和解析特定机器的 IP 地址，而该地址可能会发生变化。
+
+```
+mytrek.com. IN MX 10 192.168.0.1
+```
+
+`MX` 记录识别一个额外的字段，用于指定邮件交换器的优先级。如果你的区域有多个邮件服务器，你可以在其 `MX` 记录中为它们分配不同的优先级。数字越小优先级越高。这样，如果邮件无法到达第一个邮件服务器，它就可以被路由到备用服务器以到达主机。在以下示例中，`mytrek.com` 域主机的邮件首先路由到 `192.168.0.1`（`turtle.mytrek.com`）处的邮件服务器，如果失败，则路由到 `192.168.0.2`（`rabbit.mytrek.com`）处的邮件服务器。
+
+```
+mytrek.com. IN MX 10 turtle.mytrek.com.
+IN MX 20 rabbit.mytrek.com.
+```
+
+你也可以为特定主机指定邮件服务器。在以下示例中，`lizard.mytrek.com` 的邮件服务器指定为 `rabbit.mytrek.com`：
+
+```
+lizard.mytrek.com. IN A 192.168.0.3
+IN MX 10 rabbit.mytrek.com.
+```
+
+## Aliases: CNAME
+
+类型为 `CNAME` 的资源记录用于为区域中的主机指定别名。别名常用于运行多种不同类型服务器的机器，例如同时运行 Web 和 FTP 服务器。它们也用于在主机更改名称时定位主机。旧名称成为新名称的别名。在以下示例中，`ftp.mytrek.com` 是实际名为 `turtle.mytrek.com` 的机器的别名：
+
+```
+ftp.mytrek.com. IN CNAME turtle.mytrek.com.
+```
+
+术语 `CNAME` 代表规范名称。规范名称是主机的实际名称。在前面的示例中，规范名称是 `turtle.mytrek.com`。别名，也称为 `CNAME`，是 `ftp.mytrek.com`。在 `CNAME` 条目中，别名指向规范名称。别名不能用于 `NS`（名称服务器）或 `MX`（邮件服务器）条目。对于这些记录，你需要使用原始域名或 IP 地址。
+
+实现别名的更稳定方法是简单地为主机或域创建另一个地址记录。你可以为同一个 IP 地址设置任意多个主机名，前提是它们经过认证。例如，要使 `www.mytrek.com` 成为 `turtle.mytrek.com` 的别名，你只需为其添加另一个地址记录，使其具有与 `turtle.mytrek.com` 相同的 IP 地址。
+
+```
+turtle.mytrek.com. IN A 192.168.0.1
+www.mytrek.com. IN A 192.168.0.1
+```
+
+## Pointer Record: PTR
+
+`PTR` 记录用于从 IP 地址反向映射到主机。`PTR` 记录用于反向映射文件。名称条目保存反向 IP 地址，数据条目保存主机名。以下示例将 IP 地址 `192.168.0.1` 映射到 `turtle.mytrek.com`：
+
+```
+1.1.168.192 IN PTR turtle.mytrek.com.
+```
+
+在 `PTR` 记录中，你可以只指定地址的最后一段数字（主机地址），让 DNS 自动填充地址的域名部分。在接下来的示例中，`1` 会自动加上域名地址 `1.168.192`，形成 `1.1.168.192`：
+
+```
+1 IN PTR turtle.mytrek.com.
+```
+
+## 主机信息：HINFO、RP、MINFO 和 TXT
+
+`HINFO`、`RP`、`MINFO` 和 `TXT` 记录用于提供有关主机的信息。`RP` 记录允许你指定负责某个主机的人员。`HINFO` 记录提供基本的硬件和操作系统标识。`TXT` 记录用于输入你想要的任何文本。`MINFO` 提供主机的邮件和邮箱信息。这些记录使用较少，因为它们可能会泄露过多关于服务器的信息。
+
+## 区域文件
+
+
+
+一台DNS服务器使用多个区域文件来覆盖DNS的不同组成部分。每个区域使用两个区域文件：主区域文件和反向映射区域文件。区域文件包含该区域内主机的资源记录。反向映射文件包含用于对域名条目进行反向映射的记录，使你能够从IP地址映射到域名。区域文件使用的文件名可以是任意名称。文件名在`named.conf`文件的`zone`语句的`file`条目中指定。如果你的服务器支持多个区域，你可能希望使用一个能表示特定区域的名称。大多数系统使用域名作为区域文件的名称。例如，`mytrek.com`区域会有一个同样名为`mytrek.com`的区域文件。这些文件可以放在名为`zones`或`master`的子目录中。以下示例中使用的区域文件名为`mytrek.com`。反向映射文件可以使用任意名称，但通常使用其对应区域文件中指定的反向IP地址域。例如，对于`mytrek.com`区域文件，反向映射文件可能被称为`192.168.0`，即`mytrek.com`区域文件中定义的`mytrek.com`域的IP地址。该文件将包含域中所有主机地址的反向映射，允许将其主机名地址映射到相应的IP地址。此外，BIND还会为localhost设置一个缓存文件和一个反向映射文件。缓存文件保存着你的名称服务器所连接的根名称服务器的资源记录。缓存文件可以使用任意名称，尽管通常称为`named.ca`。localhost反向映射文件保存着本地回环接口localhost的反向IP资源记录。虽然localhost可以使用任意名称，但它通常命名为`named.local`。
+
+## 互联网区域的区域文件
+
+区域文件包含遵循特定格式的资源记录。文件以定义默认域或包含其他资源记录文件的一般指令开头。接着是单个SOA记录、名称服务器和域资源记录，然后是不同主机的资源记录。注释以分号开头，可以放置在文件中的任何位置。`@`符号就像一个特殊宏，代表记录所应用区域的域名。`@`符号在资源记录或SOA记录的第一个字段中用作该区域的域名。可以使用`*`匹配字符来指定多个名称。资源记录中的第一个字段是其适用的域的名称。如果该字段留空，则会自动使用另一个资源记录中之前显式输入的名称。这样，你可以列出适用于同一主机的多个条目，而无需重复主机名。在此文件中使用的任何主机名或域名，如果未以句点结尾，都会自动附加区域的域名。例如，如果区域的域名是`mytrek.com`，而资源记录中只有名称`rabbit`且没有尾随句点，则会自动附加区域域名，得到`rabbit.mytrek.com`。每当你输入完整的完全限定域名（如`turtle.mytrek.com`）时，请务必包含尾随句点。
+
+## 指令
+
+你还可以使用几个指令来设置全局属性。`$ORIGIN`设置默认域名，用于附加到不以句点结尾的地址名称上。`$INCLUDE`包含一个文件。`$GENERATE`可以生成域名或IP地址仅因迭代数字不同而有所区别的记录。`$ORIGIN`指令通常用于指定在地址记录中使用的根域。请务必包含尾随句点。以下示例将域原点设置为`mytrek.com`，并且`lizard`主机名之后会自动附加该域名。
+
+```
+$ORIGIN  mytrek.com.
+lizard   IN  A    192.168.0.2
+```
+
+## SOA记录
+
+区域文件以SOA记录开头，该记录指定名称服务器运行的机器以及其他规范。`@`符号用作SOA记录的名称，表示区域的域名。在SOA之后，列出名称服务器资源记录（NS）。名称服务器记录的正下方是域本身的资源记录。其后是主机地址（A）、别名（CNAME）和邮件交换器（MX）的资源记录。下一个示例显示了一个示例区域文件，该文件以SOA记录开头，后跟NS记录、域的资源记录，然后是各个主机的资源记录：
+
+```
+; Authoritative data for turtle.mytrek.com
+@  IN  SOA  turtle.mytrek.com.  hostmaster.turtle.mytrek.com. (
+                  93071200  ; Serial number
+                  10800    ; Refresh 3 hours
+                  3600     ; Retry 1 hour
+                  3600000  ; Expire 1000 hours
+                  86400 )  ; Minimum 24 hours
+
+                 IN  NS   turtle.mytrek.com.
+                 IN  A    192.168.0.1
+                 IN  MX  10   turtle.mytrek.com.
+                 IN  MX  15   rabbit.mytrek.com.
+
+turtle   IN  A     192.168.0.1
+         IN  HINFO  PC-686 LINUX
+gopher   IN  CNAME  turtle.mytrek.com.
+ftp      IN  CNAME  turtle.mytrek.com.
+```
+
+```
+www	IN	A	192.168.0.1
+rabbit	IN	A	192.168.0.2
+lizard	IN	A	192.168.0.3
+IN	HINFO	MAC MACOS
+localhost	IN	A	127.0.0.1
+```
+
+前两行是对使用此区域文件的服务器的注释。请注意，前两行以分号开头。文件中每个资源记录的类均为 IN，表示这些是 Internet 记录。SOA 记录以 @ 符号开头，表示区域的域名。在此示例中，它是 mytrek.com。在此文件中使用的任何主机或域名如果未以句点结尾，则会自动追加此域名。例如，在以下资源记录中，turtle 没有句点，因此自动扩展为 turtle.mytrek.com。rabbit 和 lizard 也是如此。它们被读取为 rabbit.mytrek.com 和 lizard.mytrek.com。另外，在 SOA 中，请注意 hostmaster 的电子邮件地址使用句点而不是 @ 符号；@ 是区域文件中的特殊符号，不能用于其他任何目的。
+
+## Nameserver Record
+
+下一个资源记录指定此区域的名称服务器。在这里，它是 mytrek.com。请注意此资源记录的名称为空。如果名称为空，资源记录将继承前一条记录的名称。在这种情况下，NS 记录继承 SOA 记录中 @ 的值，即其前一条记录。这是区域的域名，NS 记录指定 turtle.mytrek.com 为此区域的名称服务器。
+
+```
+IN	NS	turtle.mytrek.com.
+```
+
+这里域名是继承的。该条目可以读作如下。请注意域名末尾的尾随句点：
+
+```
+mytrek.com. IN NS turtle.mytrek.com.
+```
+
+## Address Record
+
+以下地址记录为域名本身设置了一个地址。这通常与名称服务器相同，在本例中为 192.168.0.1（turtle.mytrek.com 的 IP 地址）。这使用户能够引用域名本身，而不是其中的特定主机。随后是一个邮件交换器记录，将域的邮件路由到名称服务器。用户可以向 mytrek.com 域发送邮件，它将被路由到 turtle.mytrek.com。
+
+```
+IN	A	192.168.0.1
+```
+
+这里域名是继承的。该条目可以读作如下：
+
+```
+mytrek.com. IN A 192.168.0.1
+```
+
+## Mail Exchanger Record
+
+下一个记录是邮件交换器（MX）记录，列出 turtle.mytrek.com 和 fast.mytrek.com 作为此区域的邮件服务器。你可以为一个主机设置多个邮件交换器记录。可以通过多个主机路由邮件。这些可以在邮件交换器记录中列出，你可以为其设置优先级排名（数字越小排名越高）。在此示例中，如果无法访问 turtle.mytrek.com，其邮件将通过 rabbit.mytrek.com 路由，后者也已设置用于处理 mytrek.com 域的邮件：
+
+```
+IN    MX    100    turtle.mytrek.com.
+IN    MX    150    rabbit.mytrek.com.
+```
+
+再次，域名是继承的。条目可以读作如下：
+
+```
+mytrek.com.    IN    MX    100    turtle.mytrek.com.
+mytrek.com.    IN    MX    150    rabbit.mytrek.com.
+```
+
+## Address Record with Host Name
+
+以下资源记录是一个地址记录（A），将 IP 地址与完全限定域名 turtle.mytrek.com 关联。资源记录名称仅包含 turtle 且没有尾随句点，因此自动扩展为 turtle.mytrek.com。此记录提供了 turtle.mytrek.com 可以映射到的 IP 地址。
+
+```
+turtle    IN    A    192.168.0.1
+```
+
+
+
+## Inherited Names
+
+紧接着有几个资源记录，其名称为空。它们继承自前一个完整记录的名称——在本例中为 `turtle.mytrek.com`。实际上，这些记录也适用于该主机。使用空白名称是列出同一主机的额外资源记录的一种简便方法（请注意出现了明显的缩进）。第一条记录是信息记录，提供机器的硬件和操作系统。
+
+```
+IN    HINFO    PC-686    LINUX
+```
+
+## Alias Records
+
+如果你使用同一台机器运行多个不同的服务器，例如 Web、FTP 和 Gopher 服务器，你可能希望为这些服务器分配别名，以便用户更轻松地访问它们。不要使用实际的域名，例如 `turtle.mytrek.com` 来访问其上运行的 Web 服务器，用户可能发现使用以下方式更容易：对于 Web 服务器，使用 `www.mytrek.com`；对于 Gopher 服务器，使用 `gopher.mytrek.com`；对于 FTP 服务器，使用 `ftp.mytrek.com`。在 DNS 中，你可以使用别名记录来实现此功能。在示例区域文件中，存在两个用于 `turtle.mytrek.com` 机器的 `CNAME` 别名记录：FTP 和 Gopher。下一个记录使用另一个地址记录为 `www` 实现别名，指向同一台机器。名称条目均未以句点结尾，因此会自动追加域名 `mytrek.com`。`www.mytrek.com`、`ftp.mytrek.com` 和 `gopher.mytrek.com` 都是 `turtle.mytrek.com` 的别名。用户输入这些 URL 时会自动访问 `turtle.mytrek.com` 机器上的相应服务器。
+
+## Loopback Record
+
+地址记录和邮件交换记录随后在此区域列出另外两台机器：`rabbit.mytrek.com` 和 `lizard.mytrek.com`。你可以为这些条目添加 `HINFO`、`TXT`、`MINFO` 或别名记录。文件以 `localhost` 的条目结束，`localhost` 是允许系统寻址自身的特殊回环接口。
+
+## IPv6 Zone File
+
+这是使用 IPv6 地址的相同文件。地址是站点本地地址（`FEC0`），而不是全局地址（3），提供私有网络寻址。回环设备由 IPv6 地址 `::1` 表示。使用 `A6` IPv6 地址记录。
+
+```
+; Authoritative data for turtle.mytrek.com, IPv6 version
+; 
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    93071200 ; Serial number
+    10800 ; Refresh 3 hours
+    3600 ; Retry 1 hour
+    3600000 ; Expire 1000 hours
+    86400 ) ; Minimum 24 hours
+
+    IN NS turtle.mytrek.com.
+    IN A6 FEC0::8:800:200C:417A
+    IN MX 10 turtle.mytrek.com.
+    IN MX 15 rabbit.mytrek.com.
+
+turtle IN A6 FEC0::8:800:200C:417A
+    IN HINFO PC-686 LINUX
+gopher IN CNAME turtle.mytrek.com.
+ftp   IN CNAME turtle.mytrek.com.
+www   IN A6 FEC0::8:800:200C:417A
+
+rabbit IN A6 FEC0::FEDC:BA98:7654:3210
+
+lizard IN A6 FEC0::0:18F7:3466:7D
+    IN HINFO MAC MACOS
+localhost IN A6 ::1
+```
+
+## Reverse Mapping File
+
+使用反向映射文件启用反向名称查找。反向映射文件将完全限定域名映射到 IP 地址。这种反向查找功能并非必要，但很方便。有了反向映射，当用户访问远程主机时，可以使用其域名地址来识别其主机，而不仅仅是 IP 地址。文件的名称可以随意指定。在大多数当前发行版中，它是区域的域名地址（区域 IP 地址的网络部分）。例如，IP 地址为 `192.168.0.1` 的区域的反向映射文件为 `192.168.0`。在使用 `BIND` 旧实现的一些系统上，反向映射文件名可能由区域文件的根名称加上 `.rev` 扩展名组成。例如，如果区域文件名为 `mytrek.com`，则反向映射文件可能名为 `mytrek.rev`。
+
+## IPv4 IN-ADDR.ARPA Reverse Mapping Format
+
+在 IPv4 中，`named.conf` 文件中反向映射的区域条目使用一个特殊的域名，由反向的 IP 地址加上 `IN-ADDR.ARPA` 扩展组成。这个反向 IP 地址成为反向映射文件中 `@` 符号引用的区域域名。例如，IP 地址为 `192.168.43` 的域的反向映射区域名称为 `43.168.192.IN-ADDR.ARPA`。在以下示例中，域名地址为 `192.168.0` 的反向域名为 `1.168.192.IN-ADDR.ARPA`：
+
+```
+zone "1.168.192.IN-ADDR.ARPA" in {
+    type master;
+    file "192.168.0";
+};
+```
+
+反向映射文件以 `SOA` 记录开头，与正向映射文件中使用的一样。随后是正向映射文件中定义的每台机器的资源记录。这些资源记录是 `PTR` 记录，指向区域中的主机。这些必须是实际主机，而不是用 `CNAME` 记录定义的别名。反向映射的记录以反向的 IP 地址开头。IP 地址中的每个段依次反转。每个段以主机 ID 开头，后跟反向的网络号。如果只列出主机 ID 且没有尾随句点，则会自动附加区域域名。在反向映射文件的情况下，`zone` 语句中指定的区域域名是反向的域名 IP 地址。1 扩展为 `1.1.168.192`。在以下示例中，`turtle` 和 `lizard` 继承域名 IP 地址，而 `rabbit` 则显式输入其地址：
+
+```
+; reverse mapping of domain names 1.168.192.IN-ADDR.ARPA
+@       IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+                92050300 ; Serial (yymmddxx format)
+                10800    ; Refresh 3 hours
+                3600     ; Retry 1 hour
+                3600000  ; Expire 1000 hours
+                86400 ) ; Minimum 24 hours
+
+@               IN  NS      turtle.mytrek.com.
+1               IN  PTR     turtle.mytrek.com.
+2.1.168.192     IN  PTR     rabbit.mytrek.com.
+3               IN  PTR     lizard.mytrek.com.
+```
+
+## IPv6 IP6.ARPA Reverse Mapping Format
+
+在 IPv6 中，反向映射可以使用当前的 `IP6.ARPA` 域格式或旧的 `IP6.INT` 格式来处理。使用 `IP6.ARPA` 时，地址由位级表示表示，将十六进制地址放在括号内。第一个括号前有一个反斜杠。地址前必须有一个 `x` 表示它是十六进制地址。地址之后是一个数字，表示引用的位数。在 128 位地址中，通常前 64 位引用网络地址，后 64 位用于接口地址。以下示例显示了 `lizard` 的网络地址和接口地址。
+
+`FE C0:0000:0000:0000:00E0:18F7:3466:007D`      `lizard` IPv6 地址 `[xFEC0000000000000/64]`                     `lizard` 网络地址 `[x00E018F73466007D/64]`                     `lizard` 接口地址
+
+在 `named.conf` 文件中带有 `IP6.ARPA` 扩展的反向映射区域条目将使用网络地址的位级表示。
+
+```
+zone "\[x fec0000000000000/64].IP6.ARPA" in {
+    type master;
+    file "fec.ip6.arpa";
+};
+```
+
+反向映射文件随后对接口地址使用相同的位级格式。
+
+
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    92050300 ; Serial (yymmddxx format)
+    10800   ; Refresh 3Hours
+    3600    ; Retry 1 hour
+    3600000 ; Expire 1000 hours
+    86400 ) ; Minimum 24 hours
+```
+
+```
+[x000808002000C417A/64] IN PTR turtle.mytrek.com.
+[\xFEC0DA9876543210/64] IN PTR rabbit.mytrek.com.
+[\x00E018F73466007D/64] IN PTR lizard.mytrek.com.
+```
+
+## IPv6 IP6.INT 反向映射格式
+
+较旧的 `IP6.INT` 格式对 IPv6 地址使用半字节格式。十六进制地址被分割为每个十六进制数字，以句点分隔并反向书写。这给你 32 个反向顺序的十六进制数字。`lizard` 地址的 `IP6.INT` 版本如下所示。
+
+`FEC0:0000:0000:0000:00E0:18F7:3466:007D`      `lizard` IPv6 地址
+
+`0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f`          `lizard` 网络地址
+
+`D.7.0.0.6.6.4.3.7.F.8.1.0.0.E.0`            `lizard` 接口地址
+
+在 `named.conf` 文件中带有 `IP6.INT` 扩展的反向映射区域条目将使用网络地址的反向半字节格式。
+
+```
+zone "0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f.IP6.INT" in {
+    type master;
+    file "fec.ip6.int";
+};
+```
+
+反向区域文件随后对每个接口地址使用反向半字节格式。
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    92050300 ; Serial (yymmddxx format)
+    10800   ; Refresh 3Hours
+    3600    ; Retry 1 hour
+    3600000 ; Expire 1000 hours
+```
+
+```
+$ORIGIN 0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f IN NS turtle.mytrek.com.
+A.7.1.4.C.0.0.2.0.0.8.0.8.0.0.0 IN PTR turtle.mytrek.com.
+0.1.2.3.4.5.6.7.8.9.A.B.C.D.E.F IN PTR rabbit.mytrek.com.
+D.7.0.0.6.6.4.3.7.F.8.1.0.0.0 IN PTR lizard.mytrek.com.
+```
+
+## Localhost 反向映射
+
+`localhost` 反向映射文件实现了对本地回环接口的反向映射，该接口称为 `localhost`，其网络地址为 `127.0.0.1`。此文件可以是任何名称。在大多数系统上，`localhost` 被命名为 `named.local`。在其他系统上，`localhost` 可能使用 IP 地址的网络部分 `127.0.0`。此文件允许将域名 `localhost` 映射到 `localhost` IP 地址，该地址在每台机器上始终为 `127.0.0.1`。地址 `127.0.0.1` 是一个特殊地址，可用作机器的本地地址。它允许机器寻址自身。在此文件的区域语句中，区域的名称为 `0.0.127.IN-ADDR.ARPA`。IP 地址的域名部分以反向顺序输入，并附加 `IN-ADDR.ARPA`，`0.0.127.IN-ADDR.ARPA`。`named.conf` 条目如下所示：
+
+```
+zone "0.0.127.IN-ADDR.ARPA" {
+    type master;
+    file "named.local";
+};
+```
+
+用于 `localhost` 反向映射文件的名称通常为 `named.local`，尽管它可以是任何名称。`NS` 记录指定 `localhost` 应使用的名称服务器。此文件具有 `PTR` 记录，可将 IP 地址映射到 `localhost`。用作名称的 `1` 会扩展为附加区域域名——在这种情况下，给出 `1.0.0.127`，一个反向 IP 地址。`named.local` 文件的内容如下所示。请注意 `localhost` 的尾随句点：
+
+```
+@ IN SOA localhost. root.localhost. (
+    1997022700 ; Serial
+    28800 ; Refresh
+    14400 ; Retry
+    3600000 ; Expire
+    86400 ) ; Minimum
+
+    IN NS turtle.mytrek.com.
+1 IN PTR localhost.
+```
+
+在 IPv6 中，本地主机反向映射使用 IPv6 `localhost` 地址的反向指定。此地址由 31 个零和一个 `1` 组成，可以简写为 `::1`，其中 `::` 表示 31 个零的序列。使用 IPv6 `IP6.ARPA` 格式，这些可以用位级格式书写，其中前 64 位由全零的网络地址组成，而接口地址的值为 `1`。
+
+```
+0000:0000:0000:0000:0000:0000:0000:0001 localhost IPv6 地址
+\[x0000000000000000000000000001/128] localhost 地址
+```
+
+在 `named.conf` 文件中，`IP6.ARPA` 的 `localhost` 条目看起来像这样。
+
+```
+zone "\[x00000000000000000000000000000001/64].IP6.ARPA" in {
+    type master;
+    file "192.168.0.";
+};
+```
+
+在 `localhost` 反向映射文件中，`localhost` 条目将如下所示。
+
+```
+\[x0000000000000001/64]    IN    PTR    localhost.
+```
+
+对于旧的 `IP6.INT` 格式，`localhost` 条目将使用相同的全零网络地址，但 `localhost` 反向映射文件将使用如下所示的半字节格式表示地址。
+
+```
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    localhost.
+```
+
+## 子域和从服务器
+
+向 DNS 服务器添加子域只是在 `named.conf` 文件中创建额外的 `master` 条目，然后在主 DNS 服务器的区域文件中为该子域放置名称服务器和授权条目即可。子域反过来拥有自己的区域文件，其中包含其 `SOA` 记录和列出属于其子域的主机条目，包括其自身的邮件和新闻服务器。
+
+### 子域区域
+
+子域的名称可以完全不同，也可以与主域具有相同的后缀。在以下示例中，子域称为 `beach.mytrek.com`。它同样可以称为 `mybeach.com`。该域的名称服务器位于主机 `crab.beach.mytrek.com` 上，其 IP 地址为 `192.168.0.33`，其区域文件为 `beach.mytrek.com`。`beach.mytrek.com` 区域文件保存由该名称服务器提供服务的全部主机的 DNS 条目。以下示例显示了其 `named.conf` 中的区域条目：
+
+```
+zone "beach.mytrek.com" {
+    type master;
+    file "beach.mytrek.com";
+};
+
+zone "1.168.192.IN-ADDR.ARPA" {
+    type master;
+    file "192.168.0.";
+};
+```
+
+### 子域记录
+
+在主 DNS 服务器上，以示例 `turtle.mytrek.com` 为例，你需要在 `master` 区域文件中放置条目以标识子域服务器的主机并将其指定为名称服务器。
+
+此类条目也称为胶水记录。在此示例中，你将在 `turtle.mytrek.com` 上的 `mytrek.com` 区域文件中放置以下条目：
+
+```
+beach.mytrek.com. IN NS beach.mytrek.com.
+beach.mytrek.com. IN A 192.168.0.33.
+```
+
+现在，通过 `mytrek.com` 提供服务的任何主机都可以访问由 `beach.mytrek.com` 提供服务的主机的 URL 引用，而无需维护有关 `beach.mytrek.com` 主机的任何信息。它只需将此类 URL 引用指向 `beach.mytrek.com` 名称服务器即可。
+
+## 从服务器
+
+
+
+从 DNS 服务器直接绑定到主 DNS 服务器，并定期从其接收 DNS 信息。你使用主 DNS 服务器自动配置其从 DNS 服务器。对主服务器所做的任何更改都会自动传输到其从服务器。这种信息传输称为区域传输。区域传输会在从服务器的刷新时间到达时或从服务器收到主服务器的通知消息时自动启动。刷新时间是区域 SOA 条目中的第二个参数。通知消息会在对主区域配置文件进行更改并重新启动 `named` 守护进程时由主服务器自动发送。实际上，从区域由主区域自动配置，接收主区域的区域文件并将其作为自己的文件使用。
+
+## 从区域
+
+使用前面的示例，假设你想在 `rabbit.mytrek.com` 上设置一台从服务器。如下例所示的区域条目设置在 `rabbit.mytrek.com` 的从 DNS 服务器的 `named.conf` 配置文件中。从服务器在与主服务器相同的域中运行，因此它具有相同的区域名称 `mytrek.com`。其 SOA 文件名为 `slave.mytrek.com`。文件名中的“slave”只是便于识别为从服务器配置文件的一种约定。`masters` 语句列出了其主 DNS 服务器——在本例中为 `192.168.0.1`。每当从服务器需要进行区域传输时，它都会从该主 DNS 服务器传输数据。该从服务器的反向映射文件条目将其反向映射文件列为 `slave.192.168.0`。
+
+```
+zone "mytrek.com" {
+    type slave;
+    file "slave.mytrek.com";
+    masters { 192.168.0.1;
+    };
+}
+```
+
+```
+zone "1.168.192.IN-ADDR.ARPA" {
+    type slave;
+    file "slave.192.168.0";
+    masters { 192.168.0.1;
+    };
+}
+```
+
+## 从属记录
+
+在主 DNS 服务器上，主 SOA 区域文件中有条目用于标识持有从属 DNS 服务器的主机并将其指定为 DNS 服务器。在本示例中，你将在 `mytrek.com` 区域文件中放置以下内容：
+
+```
+IN    NS    192.168.0.2
+```
+
+你还需要在 `mytrek.com` 反向映射文件中为此名称服务器放置一个条目：
+
+```
+IN    NS    192.168.0.2
+```
+
+## 控制传输
+
+主 DNS 服务器可以使用 `allow-transfer` 语句控制哪些从属服务器可以从其传输区域信息。将该语句与要允许访问的从属服务器的 IP 地址列表一起放置。此外，主 DNS 服务器应确保其 `notify` 选项未被禁用。`notify` 选项由 `options` 或 `zone` `named.conf` 条目中的 `"notify no"` 语句禁用。只需删除 `"no"` 参数即可启用 `notify`。
+
+## 增量区域传输
+
+使用 BIND 版本 8.2.2 和 9.0，BIND 现在支持增量区域传输（IXFR）。以前，更新时所有区域数据都会被替换，而不是像添加几个资源记录这样的更改只是被编辑进去。使用增量区域传输，主区域会维护一个更改数据库。然后只将更改传输到从属区域，从属区域使用此信息更新其自己的区域文件。要实现增量区域传输，你需要在 `options` 部分打开 `maintain-ixfr-base` 选项。
+
+```
+maintain-ixfr-base yes;
+```
+
+然后你可以在 `zone` 部分使用 `ixfr-base` 选项指定一个特定的数据库文件来保存更改。
+
+```
+ixfr-base "db.mytrek.com.ixfr";
+```
+
+## IP 虚拟域
+
+基于 IP 的虚拟主机允许为一台机器使用多个 IP 地址。如果一台机器有两个已注册的 IP 地址，任一地址都可用于寻址该机器。如果你想将额外的 IP 地址作为域中的另一个主机来处理，你只需在域的区域文件中为其创建一个地址记录。主机的域名将与你的域名相同。但是，如果你想为额外的 IP 使用不同的域名，则必须为其设置虚拟域。这需要为其创建新的 `zone` 语句并使用自己的区域文件。例如，如果额外的 IP 地址是 `192.168.0.42` 并且你想为其指定域名 `sail.com`，你必须在 `named.conf` 文件中为其创建一个新的 `zone` 语句并使用新的区域文件。`zone` 语句看起来像以下这样。区域文件名为 `sail.com`。
+
+```
+zone "sail.com" in {
+    type master;
+    file "sail.com";
+};
+```
+
+在 `sail.com` 文件中，名称服务器名为 `turtle.mytrek.com`，电子邮件地址为 `hostmaster@turtle.mytrek.com`。在名称服务器（NS）记录中，名称服务器是 `turtle.mytrek.com`。这是运行名称服务器的同一台机器，使用原始地址。`turtle.mytrek.com` 也是处理发往 `sail.com` 的邮件的主机（MX）。然后地址记录将额外的 IP 地址 `192.168.0.42` 与 `sail.com` 域名关联起来。然后在此域上定义一个虚拟主机 `jib.sail.com`。还为该主机生成了 `www` 和 `ftp` 别名，创建了 `www.sail.com` 和 `ftp.sail.com` 虚拟主机。
+
+```
+; Authoritative data for sail.com
+; @ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    93071200 ; Serial (yymmddxx)
+    10800    ; Refresh 3 hours
+    3600     ; Retry 1 hour
+    3600000  ; Expire 1000 hours
+    86400 )  ; Minimum 24 hours
+
+    IN  NS    turtle.mytrek.com.
+    IN  MX  10 turtle.mytrek.com.
+    IN  A     192.168.0.42 ;address of the sail.com domain
+
+jib  IN  A     192.168.0.42
+www  IN  A     jib.sail.com.
+ftp  IN  CNAME jib.sail.com.
+```
+
+在你的反向映射文件（`/var/named/1.168.192`）中，为任何虚拟域添加 PTR 记录。
+
+```
+42.1.168.192  IN  PTR  sail.com.
+42.1.168.192  IN  PTR  jib.sail.com.
+```
+
+你还必须配置你的网络连接以在你的机器上侦听这两个 IP 地址（参见第 5 章）。
+
+## 缓存文件
+
+缓存文件用于将 DNS 服务器连接到 Internet 上的根服务器。文件可以是任何名称。在许多系统上，缓存文件称为 `named.ca`。其他系统可能将缓存文件称为 `named.cache` 或 `roots.hints`。缓存文件通常是由你的 BIND 软件安装的标准文件，其中列出了 Internet 指定根服务器的资源记录。你可以从 `rs.internic.net` FTP 站点获取 `named.ca` 文件的当前版本。以下示例显示了从 `named.ca` 文件中取出的示例条目：
+
+; formerly NS.INTERNIC.NET
+
+;
+
+3600000 IN NS A.ROOT-SERVERS.NET.
+
+A.ROOT-SERVERS.NET. 3600000 A 198.41.0.4
+
+; formerly NS1.ISI.EDU
+
+;
+
+3600000 NS B.ROOT-SERVERS.NET.
+
+B.ROOT-SERVERS.NET. 3600000 A 128.9.0.107
+
+如果要创建隔离的内联网，则在连接到互联网之前需要创建自己的根 DNS 服务器。实际上，你正在创建一个假的根服务器。这可以是系统上另一个假装成根的服务器或同一个名称服务器。
+
+## 动态更新：DHCP 和日志文件
+
+存在需要动态更新区域的情况。不是手动编辑区域文件来更改区域中的内容，而是外部进程更新区域，自动进行更改并保存文件。动态更新既由主区域更新从区域完成，也由 DHCP 服务器将为主机生成的 IP 地址提供给 DNS 服务器完成。
+
+会维护一个日志文件来记录对区域所做的所有更改，其扩展名为 `.jnl`。如果系统崩溃，将读取此文件以实施最新更改。如果要手动更新动态更新的区域，则首先需要删除其日志文件；否则，你的更改将被日志文件条目覆盖。
+
+你可以通过指定 `allow-update` 选项来允许区域自动更新。此选项指示可以执行更新的主机。
+
+```
+allow-update {turtle.mytrek.com};
+```
+
+或者，对于主区域，你可以使用 `update-policy` 语句创建更精细的访问规则集。使用 `update-policy` 语句，你可以为不同主机和主机类型列出多个授予和拒绝规则。
+
+## TSIG 签名和更新
+
+
+
+使用 BIND 9.x，TSIG 签名名称可用于`allow-update`和`update-policy`语句，而不是主机名或 IP 地址（请参阅以下关于 TSIG 的部分）。使用 TSIG 签名可实现执行动态更新的主机的身份验证，提供更高级别的安全性。例如，要允许 DHCP 服务器更新区域文件，你将在`named.conf`文件中区域语句中放置一个`allow-update`条目。
+
+TSIG 密钥在`key`语句中定义，其中命名了由`dnssec-keygen`命令之前创建的密钥。算法为`HMAC-MD5`，密钥为由`dnssec-keygen`生成的`.private`文件中列出的加密密钥。
+
+```
+key mydhcpserver {
+    algorithm HMAC-MD5;
+secret "ONQAFbBLnvwWU9H8hRqQ/WA==";
+};
+```
+
+然后密钥名称可用于`allow-update`或`allow-policy`语句中以指定 TSIG 密钥。
+
+```
+allow-update { key mydhcpserver; };
+```
+
+## 手动更新：`nsupdate`
+
+你可以使用更新过程执行任何你想要的更新。你可以手动或使用脚本自动执行更新。对于 DHCP 更新，DHCP 服务器设计为执行 DNS 服务器的动态更新。你需要适当地配置 DHCP 服务器，指定要使用的 TSIG 密钥和要更新的区域。
+
+你可以使用`nsupdate`命令手动执行更新，使用`-k`选项指定保存密钥的文件。
+
+```
+nsupdate -k myserver.private
+```
+
+在提示符下，你可以使用`nsupdate`命令来实现更改。你使用其完整或部分条目匹配记录。要更新记录，你将首先删除旧记录，然后添加更改后的版本，如下所示：
+
+```
+update delete rabbit.mytrek.com. A 192.168.0.2
+update add rabbit.mytrek.com. A 192.168.0.44
+```
+
+## DNS 安全：访问控制列表、TSIG 和 DNSSEC
+
+DNS 安全目前允许你控制主机对 DNS 服务器的特定访问，以及在服务器之间提供加密通信和 DNS 服务器的身份验证。使用访问控制列表，你可以确定谁将有权访问你的 DNS 服务器。DNS 安全扩展（DNSSEC）随 BIND 9.x 提供，提供私有/公钥加密身份验证和传输。TSIG（传输签名）使用共享私有密钥来提供服务器的身份验证，以确保诸如 DNS 服务器和 DHCP 服务器之间的动态更新等操作的安全。
+
+### 访问控制列表
+
+要控制其他主机的访问，你使用访问控制列表，使用`acl`语句实现。`allow`和`deny`选项与访问控制主机列表一起使用，可让你拒绝或允许指定主机访问名称服务器。使用`allow-query`，你可以将查询限制为指定主机或网络。通常这将导致响应说访问被拒绝。你可以通过在`options`语句中使用`blackhole`选项进一步消除此响应。
+
+你使用`acl`语句定义 ACL，后跟你想要赋予列表的标签，然后是地址列表。地址可以是 IP 地址、网络地址或基于 CIDR 表示法的地址范围。你也可以使用之前定义的 ACL。以下示例定义了一个名为`mynet`的 ACL：
+
+```
+acl mynet { 192.168.0.1; 192.168.0.2; };
+```
+
+如果要指定一个范围，例如网络，你也可以通过在这些地址前加上感叹号（!）来向列表中添加例外。在下面的示例中，`mynetx` ACL 列出了 192.168.0.0 网络中的所有主机，除了 192.168.0.3：
+
+```
+acl myexceptions { 192.168.0.0; !192.168.0.3; };
+```
+
+已经为你预定义了四个默认 ACL。你可以在任何使用地址列表作为参数的选项中使用它们。它们分别是`any`表示所有主机，`none`表示无主机，`localhost`表示所有本地 IP 地址，以及`localnet`表示 DNS 服务器所服务的本地网络上的所有主机。
+
+一旦定义了列表，你就可以在区域语句中使用它与`allow-query`、`allow-transfer`、`allow-recursion`和`blackhole`选项，以控制对区域的访问。`allow-query`指定可以查询 DNS 服务器的主机。`allow-transfer`用于主/从区域，指定是否允许更新传输。`allow-recursion`指定可以在服务器上执行递归查询的主机。`blackhole`选项将拒绝其列表中任何主机的联系，而不发送拒绝响应。在下一个示例中，创建了一个名为`mynet`的 ACL。然后在`mytrek.com`区域中，只有这些主机被允许查询服务器。由于服务器没有从 DNS 服务器，因此完全禁用区域传输。`blackhole`选项拒绝来自`myrejects`列表的访问，而不发送任何拒绝通知。
+
+```
+acl mynet { 192.168.0.0; };
+acl myrejects { 10.0.0.44; 10.0.0.93; };
+```
+
+```
+zone "mytrek.com" {
+    type master;
+    file "mytrek.com";
+    allow-query { mynet; };
+    allow-recursion { mynet; };
+    allow-transfer { none; };
+    blackhole {myrejects};
+};
+```
+
+## Secret Keys
+
+不同的安全措施将使用`dnssec-keygen`命令生成的加密密钥。你可以使用`dnssec-keygen`创建不同类型的密钥，包括区域 (`ZONE`)、主机 (`HOST`) 和用户 (`USER`) 密钥。你使用`-n`选项指定密钥类型。区域密钥将需要名称`ZONE`和区域的域名。区域密钥用于 DNSSEC 操作。以下示例为`mytrek.com`区域创建了一个区域密钥：
+
+```
+dnssec-keygen -n ZONE mytrek.com.
+```
+
+要创建主机密钥，你将使用`HOST`类型。`HOST`密钥通常用于 TSIG 操作。
+
+```
+dnssec-keygen -n HOST turtle.mytrek.com.
+```
+
+你可以进一步指定加密算法 (`-a`) 和密钥大小 (`-b`)。使用`-h`选项获取`dnssec-keygen`选项的列表。目前你可以从`RSA`、`DSA`、`HMAC-MD5`和`DH`算法中选择。位范围将根据算法而变化。`RSA`范围为 512 到 4096，`HMAC-MD5`范围为 1 到 512。以下示例使用 768 位密钥和`DSA`加密算法创建了一个区域密钥：
+
+```
+dnssec-keygen -a DSA -b 768 -n ZONE mytrek.com.
+```
+
+`dnssec-keygen`命令将创建公钥和私钥，每个密钥都在相应的文件中，后缀分别为`.private`和`.key`。`.key`文件是包含公钥的`KEY`资源记录。对于 DNSSEC，私钥用于为区域生成签名，公钥用于验证签名。对于 TSIG，则使用`HMAC-MD5`算法生成的共享私钥代替公钥/私钥对。
+
+## DNSSEC
+
+DNSSEC 为 DNS 提供加密身份验证。有了 DNSSEC，你可以创建一个经过签名的区域，该区域通过加密签名安全地标识。这种形式的安全性主要用于保护主 DNS 服务器和从 DNS 服务器之间的连接，以便主服务器仅向授权的从服务器传输更新记录，并且使用安全的加密通信进行传输。建立这种安全连接的两个服务器使用一对公钥和私钥。实际上，你有一个父区域，可以使用加密传输安全地验证子区域。这涉及为每个子区域创建区域密钥，并让这些密钥由父区域用于验证子区域。
+
+### Zone Keys
+
+你使用`dnssec-keygen`命令生成区域密钥，并使用`-n`选项指定区域类型`ZONE`。对于密钥名称，你使用区域的域名。以下示例为`mytrek.com`区域创建了一个区域密钥。
+
+```
+dnssec-keygen -n ZONE mytrek.com.
+```
+
+你可以进一步指定加密算法 (`-a`) 和密钥大小 (`-b`)。使用`-h`选项获取`dnssec-keygen`选项的列表。由于你正在设置公钥/私钥对，因此应选择`RSA`或`DSA`算法。位范围将根据算法而变化。`RSA`范围为 512 到 4096，`DSA`范围为 512 到 1024。以下示例使用 768 位密钥和`DSA`加密算法创建了一个区域密钥：
+
+```
+dnssec-keygen -a DSA -b 768 -n ZONE mytrek.com.
+```
+
+`dnssec-keygen`命令将创建公钥和私钥，每个密钥都在相应的文件中，后缀分别为`.private`和`.key`。私钥用于为区域生成签名，公钥用于验证签名。`.key`文件是包含公钥的`KEY`资源记录。这用于解密由相应私钥生成的签名。你使用`$INCLUDE`语句将公钥添加到 DNS 配置文件`named.conf`中，以包含`.key`文件。
+
+### DNSSEC 资源记录
+
+
+
+在区域文件中，你随后使用三个 DNSSEC DNS 资源记录来实现给定区域的安全通信：`KEY`、`SIG` 和 `NXT`。在这些记录中，你使用已生成的区域的签名密钥。`KEY`记录保存与区域、主机或用户关联的公钥。`SIG`记录存储一组资源记录的数字签名和过期日期。`NXT`记录用于确定域的资源记录不存在。此外，还有几个实用程序可让你管理 DNS 加密。使用 `dnskeygen` 实用程序，你生成用于加密的公钥和私钥。`dnsigner` 使用区域的私钥对区域进行签名，设置身份验证。
+
+要使用 DNSSEC 保护 DNS 区域，首先使用 `dnskeygen` 为 DNS 区域创建公钥和私钥。然后使用 `dnsigner` 创建身份验证密钥。在 DNS 区域文件中，你输入一个 `KEY` 资源记录，其中包含公钥。公钥将显示为一长串随机字符。对于 `KEY`记录，你输入域名，后跟 `KEY`，然后是公钥。
+
+```
+mytrek.com. KEY 0x4101 3 3 (
+AvqXqgKk/uguxKjF/hbqYzx2FG3x8fNK38917G6w7e1ly
+BJ14TgvDrV8x84Sxp/OfC0u1aNr840ER2dG6n1rAMzA1
+jFPV00WDwHCR2JjNVq9Z8U2LQJgTheDevyCM1KGd2Gok
+AensmN41UfgKzy/3K9sKmJmEp/EBRr48AsgA79Mh3V3
+NGwtoqG50dw1501R0J4r-cdR+tS200Ksc1AODP7dxcRn
+vXf3qVFV58eWmBdeW3r1Xk1rH7M3Q3M0YraVGV506LMAQ
+K1TyHU3VMS6VH/7QqsZDe0FZ8EmDPlK8XHFYKJ2FKcYj
+jZ0H1xK1tk )
+```
+
+对于身份验证，你可以为给定域或主机签名特定的资源记录。输入域或主机，后跟术语 `SIG`，然后是资源记录的签名。
+
+```
+mytrek.com. SIG KEY 3 86400 19990321010705 19990218010705 4932 com. (
+Am3tWJEDZUIxw/hzkiJ0+8UqPt1JhUpQx1snKpdUqZxm
+igMZEV== )
+```
+
+`NXT`记录让你能够对查询进行否定回答。
+
+```
+mytrek.com. NXT ftp.mytrek.com. A NS SOA MX SIG KEY NXT
+```
+
+## 签名密钥
+
+为了在父级（主）DNS 服务器和子级（从）DNS 服务器之间设置安全通信，公钥然后需要发送到父区域。在那里，密钥可以由父级签名。由于你可能有多个区域密钥，因此使用 `dnssec-makekeyset` 命令创建一个密钥集。这会生成一个扩展名为 `.keyset` 的文件，然后发送给父级。父区域随后使用 `dnssec-signkey` 命令对子级的密钥集进行签名。这会生成一个前缀为 `signedkey-` 的文件。这会发送回子级，现在同时包含子级的密钥集和父级的签名。一旦子级拥有 `signedkey-` 文件，就可以使用 `dnssec-signzone` 命令对区域进行签名。`dnssec-signzone` 命令将生成一个扩展名为 `.signed` 的文件。此文件随后使用 `INCLUDE` 操作包含在 `named.conf` 文件中。`trusted-keys` 语句需要列出父区域的公钥。
+
+## TSIG 密钥
+
+TSIG（事务签名）也提供安全的 DNS 通信，但它们共享私钥而不是公钥/私钥对。它们通常用于两个本地 DNS 服务器之间的通信，以及为动态更新提供身份验证，例如 DNS 服务器和 DHCP 服务器之间的更新。
+
+> 注意 对于 BIND 8.0，你使用 `dnskeygen` 而不是 `dnssec-keygen`。
+
+### 生成 TSIG 密钥
+
+要为你的 DNS 服务器创建 TSIG 密钥，你使用如前所述的 `dnssec-keygen` 命令。与用于 DNSSEC 的密钥不同，你创建一个新集合用于事务签名。对于 TSIG，使用共享私钥而不是公钥/私钥对。对于 TSIG 密钥，你将使用 `HMAC-MD5` 算法，该算法在 `.key` 和 `.private` 文件中生成相同的密钥。使用 `-a` 选项指定要使用的 `HMAC-MD5` 算法，使用 `-b` 选项指定位数（`HMAC-MD5` 范围为 1 到 512）。`-n` 选项指定密钥类型，在本例中为 `HOST` 表示主机名。位范围将根据算法而变化。以下示例使用 128 位密钥和 `HMAC-MD5` 加密算法创建主机密钥：
+
+```
+dnssec-keygen -a HMAC-MD5 -b 128 -n HOST turtle.mytrek.com
+```
+
+这会创建位于 `.key` 和 `.private` 文件中的私钥和公钥。在 TSIG 方案中，两个主机都将使用相同的私钥进行身份验证。例如，为了使 DHCP 服务器能够更新 DNS 服务器，两者都需要 TSIG 身份验证的私钥（密钥）。`HMAC-MD5` 密钥用作共享私钥，在 `.key` 和 `.private` 文件中生成相同的私钥和公钥。
+
+### 密钥语句
+
+然后你使用 `key` 语句在 `named.conf` 文件中指定密钥。对于 `algorithm` 选项，你列出 `HMAC-MD5` 算法，对于 `secret` 选项，你列出私钥。此密钥将同时列在 `.private` 和 `.key` 文件中。前面的示例将生成名为 `Kturtle.mytrek.com.+157.43080.key` 和 `Kturtle.mytrek.com.+157.43080.private` 的密钥和私钥文件。`.key` 文件的内容由此处所示的资源记录组成：
+
+```
+turtle.mytrek.com. IN KEY 512 3 157 ONQAFbBLnvWU5H8hRqg/WA==
+```
+
+私钥文件的内容显示相同的密钥以及算法。
+
+```
+key myserver {
+    algorithm HMAC-MD5;
+    secret "ONQAfBbLNwV9H8hRqg/WA==";
+};
+```
+
+然后密钥的名称就可以在其他命名语句中引用该密钥，例如 `allow-update` 语句。
+
+```
+allow-update { key myserver; };
+```
+
+你正在设置通信的 DNS 服务器或 DHCP 服务器也必须拥有相同的密钥。有关 DHCP 和 TSIG 的更多信息，请参阅前面“动态更新：DHCP 和日志文件”部分以及第 35 章。对于两个 DNS 服务器之间的通信，每个服务器都必须有一个指定共享密钥的 `server` 语句。在下面的示例中，位于 192.168.0.1 上的 DNS 服务器的 `named.conf` 文件必须具有以下 `server` 语句才能使用共享的 `myserver` 密钥与位于 10.0.0.1 上的 DNS 服务器通信。位于 10.0.0.1 DNS 服务器上的 `named.conf` 文件必须为 192.168.0.1 服务器具有相应的 `server` 语句。
+
+```
+server 10.0.0.1 { keys { myserver; }; };
+```
+
+## Split DNS: Views
+
+BIND 9.3 允许你将 DNS 空间划分为内部和外部视图。这种划分为不同视图的组织被称为 split DNS。这种配置有助于管理连接到更大网络（例如 Internet）的本地网络。你的内部视图将包含本地网络中主机的 DNS 信息，而外部视图仅显示对其他网络可访问的 DNS 空间的一部分。DNS 视图通常在你拥有想要从 Internet 等更大网络保护的本地网络时使用。实际上，你可以保护本地网络中主机的 DNS 信息不被 Internet 等更大的外部网络访问。
+
+### Internal and External Views
+
+要实现 split DNS 空间，你需要为内部和外部视图设置不同的 DNS 服务器。内部 DNS 服务器将保存有关本地主机的 DNS 信息。外部 DNS 服务器通过网关维护与 Internet 的连接，同时管理允许外部访问的任何本地主机的 DNS 信息，例如 FTP 或 Web 站点。网关和可通过 Internet 访问的站点构成了网络主机的外部视图。内部服务器处理所有对本地主机或子域的查询。对外部主机（如 Internet 站点）的查询发送到外部服务器，然后由其转发到 Internet。发送到那些运行外部服务器（如 Internet FTP 和 Web 站点）的本地主机的查询发送到外部 DNS 服务器进行处理。从 Internet 发送到本地主机的邮件首先由外部服务器处理，然后再转发到内部服务器。使用 split DNS 配置，本地主机可以访问其他本地主机、Internet 站点以及维护 Internet 服务器的本地主机。另一方面，Internet 用户只能访问对 Internet 开放的主机（由外部服务器提供服务），例如具有 Internet 服务器如 FTP 和 HTTP 的主机。Internet 用户可以向任何本地主机、内部和外部发送邮件消息。
+
+
+
+你也可以使用 DNS 视图来管理私有网络之间的连接，该私有网络可能仅使用一个 Internet 地址将主机连接到 Internet。在这种情况下，内部视图保存私有地址（192.168...），外部视图将具有 Internet 地址的网关主机连接到 Internet。这增加了另一层安全性，提供与 IP 伪装类似的结果（参见第 38 章）。
+
+### Configuring Views
+
+DNS 视图使用 allow 语句进行配置，例如 `allow-query` 和 `allow-transfer`。通过这些语句，你可以指定区域可以向其发送和接收查询以及传输的主机。例如，内部区域可以接受来自其他本地主机的查询，但不能接受来自具有外部访问权限的本地主机（如 Internet 服务器）的查询。然而，本地 Internet 服务器可以接受来自本地主机的查询。所有 Internet 查询都转发到网关。在外部配置中，本地 Internet 服务器可以从任何地方接受查询。网关接收来自本地主机和本地 Internet 服务器的查询。
+
+在下面的示例中，一个由三个内部主机和一个外部主机组成的网络被设置为 split view。有两个 DNS 服务器：一个用于内部网络，一个用于基于外部主机的外部访问。实际上它们构成一个网络，但被划分为两个视图。内部视图称为 mygolf.com，外部称为 greatgolf.com。在每个配置中，内部主机在标记为 `internals` 的 ACL 中指定，外部主机在标记为 `externals` 的 ACL 中指定。如果你想将整个 IP 地址范围指定为内部，只需使用网络地址即可，如 192.168.0.0/24。在 `options` 部分，`allow-query`、`allow-recursion` 和 `allow-transfer` 在网络内限制访问。
+
+### Split View Example
+
+下面的示例仅显示实现内部视图所需的配置条目。在 mygolf.com 区域中，仅允许内部主机之间进行查询和传输。全局 `allow-recursion` 选项允许 `internals` 之间进行递归。
+
+```
+Internal DNS server
+acl internals { 192.168.0.1; 192.168.0.2; 192.168.0.3; };
+acl externals { 10.0.0.1; };
+options {
+    forward only;
+    forwarders { 10.0.0.1; }; // forward to external servers
+    allow-transfer { none; }; // allow-transfer to no one by default
+    allow-query { internals; externals; }; // restrict query access
+    allow-recursion { internals; }; // restrict recursion to internals
+};
+zone "mygolf.com" {
+    type master;
+    file "mygolf";
+    forwarders { };
+    allow-query { internals; };
+    allow-transfer { internals; }
+};
+```
+
+在外部 DNS 服务器的配置中，`internals` 和 `externals` 的 ACL 设置相同。在 `options` 语句中，递归现在对 `externals` 和 `internals` 都允许。在 mygolf.com 区域中，查询允许来自任何地方，递归对 `externals` 和 `internals` 允许。传输完全不允许。
+
+### External DNS server
+
+```
+acl internals { 192.168.0.1; 192.168.0.2; 192.168.0.3; };
+acl externals {10.0.0.1};
+options {
+    allow-transfer { none; }; // allow-transfer to no one
+    allow-query { internals; externals; };// restrict query access
+    allow-recursion { internals; externals }; // restrict recursion
+};
+zone "greatgolf.com" {
+    type master;
+    file "greatgolf";
+    allow-query { any; };
+    allow-transfer { internals; externals; };
+};
+```
+
+## CHAPTER DHCP Server
+
+现在许多网络都提供 DHCP 服务，可自动为所有连接的主机提供网络配置。它们使用一种名为 DHCP（动态主机配置协议）的协议。通过 DHCP 协议，管理员可以使用一个 IP 地址池，根据需要为主机分配 IP 地址。该协议还可以用于提供所有必要的网络连接信息，例如网络的网关地址或子网掩码。无需分别配置每台主机，网络配置可以通过中央 DHCP 服务器处理。地址可以使用的时间长度可以通过租约来控制，从而有效利用可用地址。如果你的网络使用 DHCP 配置系统，你就无需手动配置。所有必要的信息将自动输入到你的网络配置文件中。
+
+DHCP 为连接到 TCP/IP 网络的系统提供配置信息，无论是 Internet 还是内联网。网络上的机器作为 DHCP 客户端运行，从其网络上的 DHCP 服务器获取网络配置信息。网络上的一台机器运行 DHCP 客户端守护进程，可自动从其网络的 DHCP 服务器下载网络配置信息。这些信息包括其 IP 地址，以及网络的名称服务器、网关和代理地址，包括子网掩码。本地系统无需手动配置。这还有助于将网络配置的控制集中在网络上的不同系统上。网络管理员可以从 DHCP 服务器管理网络上所有系统的网络配置。
+
+> NOTE DHCP 基于为无盘工作站开发的 BOOTP 协议。查阅 DHCP 文档以了解专为与 BOOTP 配合使用而设计的机器的特定选项。
+
+DHCP 服务器还支持几种 IP 地址分配方法：自动、动态和手动。自动分配为一台主机分配永久 IP 地址。手动分配由网络管理员指定的 IP 地址分配给主机。使用动态分配时，DHCP 服务器只能在主机实际需要使用时才为网络上的主机分配 IP 地址。动态分配从主机在需要时可以使用并在完成后释放的 IP 地址池中获取地址。
+
+当前版本的 DHCP 现在支持 DHCP 故障转移协议，其中两个 DHCP 服务器支持相同的地址池。如果其中一个出现故障，另一个可以继续为网络提供 DHCP 服务。此方案中的主服务器和次服务器分别用 `primary` 和 `secondary` 语句指定。
+
+有多种 DHCP 服务器和客户端可用于不同的操作系统。对于 Linux，你可以从 Internet 软件联盟（ISC）获取 DHCP 软件，网址为 www.isc.org。软件包包括 DHCP 服务器、客户端和中继代理。Linux 包含 DHCP 服务器和客户端。DHCP 客户端称为 `dhcpc`，服务器称为 `dhcpd`。DHCP 客户端下载的网络信息保存在其自己的 `/etc/dhcpcd` 目录中的网络配置文件中。例如，你可以在这里找到网络名称服务器的 `resolv.conf` 文件。
+
+### Configuring DHCP Client Hosts
+
+将主机配置为使用 DHCP 服务器，只需为其网络接口设备（如以太网卡）设置选项即可。对于 Linux 主机，你可以使用发行版的网络工具将主机设置为自动访问 DHCP 服务器以获取网络信息。在网络工具的 Internet 连接配置面板上，通常会找到用于选择 DHCP 的复选框。单击此框即可启用 DHCP。对于 Red Hat，你可以使用 `redhat-config-network` 工具并在 Devices 面板上选择网络设备并编辑它。在 General 面板上，单击标记为 Automatically Obtain IP Address Settings With 的条目，并确保从弹出菜单中选择 DHCP。如果要连接到 Internet 服务提供商（ISP），在 DHCP Setting 下，单击 Automatically Obtain DNS Information From Provider。在 Red Hat 中，`BOOTPROTO` 条目将被设置为 DHCP，该条目位于 `/etc/sysconfig/network-scripts` 目录中该接口的网络脚本中，例如 `ifcfg-eth0` 代表第一块以太网卡。你也可以手动添加此条目：
+
+```
+BOOTPROTO=dhcp
+```
+
+
+
+确保使用网络脚本重新启动网络设备以使更改生效。DHCP 服务器提供给客户端的信息列在客户端的 `/etc/dhcpcd` 目录中。在这里你会找到客户端特定网络设备的信息文件。例如，为第一块以太网设备提供的信息将列在 `/etc/dhcpcd/dhcpcd-eth0.info` 文件中。你会找到诸如 IP 地址、子网掩码、广播地址、主机名、域名和 DNS 服务器等信息——所有这些都由 DHCP 服务器分配给客户端。
+
+在 Windows 客户端上，找到网络接口卡的 TCP/IP 条目，然后打开其属性窗口。单击标记为 Obtain IP Address Automatically 的框。然后找到 Wins 面板（通常通过单击 Advanced 按钮）并选择 DHCP 作为你想要使用的协议。
+
+### Configuring the DHCP Server
+
+在 Red Hat 系统上，你可以使用 `/etc/rc.d/init.d` 目录中的 `dhcpd` 命令停止和启动 DHCP 服务器。使用 `redhat-config-services` 工具或 `service` 命令配合 `start`、`restart` 和 `stop` 选项。以下示例启动 DHCP 服务器。使用 `stop` 选项关闭它，`restart` 将重新启动它。
+
+```
+service dhcpd start
+```
+
+动态分配的IP地址会在一段时间内分配，这段时间称为租约。当租约到期时，可以延长租约或生成新租约。当前租约会列在位于 `/var/lib/dhcp` 目录下的 `dhcpd.leases` 文件中。租约条目将指定IP地址、租约的开始和结束时间以及客户端的主机名。
+
+在Red Hat中，DHCP服务器参数和选项可以在 `/etc/sysconfig/dhcpd` 文件中指定。网络设备参数指定DHCP服务器应运行在哪个网络设备上。你还可以指定选项，例如要使用的配置文件或要监听的端口。如果你的系统有两个或更多网络接口，但希望DHCP服务器仅在选定的连接上运行，则需要网络设备参数。这类参数通过 `DHCPDARGS` 设置列在 `/etc/sysconfig/dhcpd` 文件中。下面的示例说明仅在以太网设备 `eth0` 上运行DHCP服务器：
+
+```
+DHCPDARGS=eth0
+```
+
+这种配置对于通过不同网络设备同时连接到本地网络和更大网络（如互联网）的网关系统非常有用。在互联网连接上，你可能希望运行DHCP客户端从ISP获取IP地址；而在本地网络连接上，你可能希望运行DHCP服务器为本地主机分配IP地址。
+
+DHCP服务器的配置文件是 `/etc/dhcpd.conf`，你可以在其中指定参数和声明，这些参数和声明定义了DHCP服务器如何访问网络上的不同DHCP客户端，以及定义DHCP服务器传递给客户端的信息的选项。这些参数、声明和选项可以全局定义，适用于特定子网或特定主机。全局参数、声明和选项适用于所有客户端，除非被子网或主机声明中相应的声明和选项覆盖。从技术上讲，`dhcpd.conf` 文件中的所有条目都是语句，可以是声明或参数。所有语句以分号结尾。选项在选项参数语句中指定。参数与声明的不同之处在于，参数定义是否以及如何执行任务，例如租约分配多长时间。声明描述网络特性，例如要分配的地址范围或可访问的网络。请参阅本章末尾的表35-1，了解常用声明和选项的列表。
+
+声明为DHCP服务器提供信息或指定其要执行的操作。例如，`range` 声明用于指定要动态分配给主机的IP地址范围：
+
+```
+range 192.168.0.5 192.168.0.128;
+```
+
+使用参数，你可以指定服务器如何对待客户端。例如，`default-lease-time` 声明设置租约分配给客户端的秒数。`filename` 声明指定客户端要使用的引导文件。`server-name` 声明告知客户端它从哪个主机引导。`fixed-address` 声明可用于为客户端分配静态IP地址。有关完整列表，请参阅 `dhcpd.conf` 的手册页。
+
+选项向客户端提供它们访问网络服务所需的信息，例如网络的域名、客户端使用的域名服务器或广播地址。有关完整列表，请参阅 `dhcp-options` 的手册页。此信息由选项参数提供，如下所示：
+
+```
+option broadcast-address 192.168.0.255;
+option domain-name-servers 192.168.0.1, 192.168.0.4;
+option domain-name "mytrek.com";
+```
+
+你的 `dhcpd.conf` 文件通常以你为DHCP服务器服务的网络定义的声明、参数和选项开头。下面的示例向客户端提供路由器（网关）、子网掩码、域名和DNS服务器信息。其他参数定义了动态分配IP地址的默认和最大租约时间。
+
+```
+option routers 192.168.0.1;
+option subnet-mask 255.255.255.0;
+option domain-name "mytrek.com";
+option domain-name-servers 192.168.0.1;
+default-lease-time 21600;
+max-lease-time 43200;
+```
+
+使用 `subnet`、`host` 和 `group` 声明，你可以引用特定网络中的客户端、特定客户端或跨网络的不同客户端分组。在这些声明中，你可以输入仅适用于这些客户端的参数、声明或选项。作用域声明、参数和选项用花括号括起来。例如，要为特定主机定义声明，可以使用 `host` 声明，如下所示：
+
+```
+host rabbit {
+    declarations, parameters, or options;
+}
+```
+
+你可以使用 `group` 声明将不同的子网、全局和主机声明收集到组中。在这种情况下，全局声明仅应用于组内声明的那些子网和主机。
+
+## 动态地址
+
+你的DHCP服务器可以配置为从给定范围选择IP地址并将其分配给不同的客户端。如果你有许多可能并非始终连接到网络的客户端，则可以使用较小的IP地址池有效服务它们。IP地址仅在需要时分配。使用 `range` 声明，你可以指定可动态分配给客户端的地址范围。该声明接受两个参数，即范围中的第一个和最后一个地址。
+
+```
+range 192.168.1.5 192.168.1.128;
+```
+
+```
+range 192.168.0.5 192.168.0.128;
+```
+
+你还应定义租约时间，包括默认值和最大值：
+
+```
+default-lease-time 21600;
+max-lease-time 43200;
+```
+
+对于小型简单的家庭网络，你只需列出范围声明以及任何全局选项，如下所示。如果你的 DHCP 服务器管理多个子网，你将需要使用子网声明。
+
+为了为网络分配动态地址，DHCP 服务器需要你的网络拓扑被映射。这意味着它需要知道哪些网络地址属于给定网络。即使你只使用一个网络，也需要为其指定地址空间。你使用子网声明来定义一个网络。在此子网声明中，你可以为该网络指定任何参数、声明或选项。子网声明告知 DHCP 服务器给定子网所包含的可能 IP 地址。这由网络 IP 地址和该网络的网络掩码决定。下一个示例定义了一个本地网络，其地址空间从 192.168.0.0 到 192.168.0.255。范围声明允许从 192.168.0.5 到 192.168.0.128 分配地址。
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.0.5 192.168.0.128;
+}
+```
+
+3.0 之前的 DHCP 版本要求你甚至映射未由 DHCP 服务的已连接网络接口。因此每个网络接口都必须有一个对应的子网声明。未由 DHCP 服务的接口将具有如下所示的 not authoritative 参数（192.168.2.0 为不由 DHCP 服务的网络）。在 3.0 及更高版本中，DHCP 只是忽略未映射的网络接口：
+
+```
+subnet 192.168.2.0 netmask 255.255.255.0 {
+    not authoritative;
+}
+```
+
+动态地址的非常简单的 DHCP 服务器实现显示在以下示例 `dhcpd.conf` 文件中。
+
+```
+/etc/dhcpd.conf
+option routers 192.168.0.1;
+option subnet-mask 255.255.255.0;
+option domain-name "mytrek.com";
+option domain-name-servers 192.168.0.1;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+range 192.168.0.5 192.168.0.128;
+default-lease-time 21600;
+max-lease-time 43200;
+}
+```
+
+## 动态 DNS 更新
+
+
+
+对于同时支持域名服务器的网络，动态分配 IP 地址目前需要解决一个主要限制：`DHCP` 需要与 `DNS` 服务器同步。`DNS` 服务器将主机名与特定 IP 地址关联，而在动态分配的情况下，`DHCP` 服务器会随机为不同主机分配自己的 IP 地址。这些地址可能与 `DNS` 服务器期望与主机名关联的 IP 地址相同，也可能不同。解决此问题的方案正在开发中，称为动态 `DNS`。通过动态 `DNS`，`DHCP` 服务器能够自动用 `DHCP` 服务器分配给不同主机的 IP 地址更新 `DNS` 服务器。
+
+> 注意 另外，如果你想用固定地址静态同步你的 `DHCP` 和 `DNS` 服务器，你将配置 `DHCP` 为主机分配那些固定地址。然后你可以让 `DHCP` 服务器执行 `DNS` 查找以获取应分配的 IP 地址，或者你可以在 `DHCP` 配置文件中手动分配相同的 IP 地址。执行 `DNS` 查找的优点是 IP 地址只需在一个地方指定，即 `DNS` 服务器。
+
+### 3.0 DHCP 服务器动态更新 BIND DNS 服务器区域配置文件
+
+如第 34 章所述，`DNS` 服务器必须通过在 `named.conf` 文件中为区域文件指定 `allow-update` 选项来启用动态更新。此外，强烈建议你使用 `TSIG` 签名密钥（参见第 34 章）来引用和验证 `BIND` 和 `DHCP` 服务器。目前，`DHCP` 使用临时 `DNS` 更新方案来执行动态 `DNS` 更新，取代了早期的临时 `DNS` 更新方案。最终版本将在未来的 `DHCP` 版本中实现。你可以在 `dhcpd.conf` 手册页中找到有关动态 `DNS` 的详细信息。
+
+启用 `TSIG` 密钥的使用涉及同步你的 `DHCP` 和 `DNS` 服务器的配置。两者都必须为相同域配置相同的密钥。首先，你需要使用 `dnssec-keygen` 创建共享的秘密 `TSIG` 签名密钥，如第 34 章所述。在 `DNS` 服务器中，你在服务器的 `named.conf` 文件中放置 `TSIG` 密钥声明和 `allow-update` 条目，如此示例所示：
+
+```
+key mydhcpserver {
+    algorithm HMAC-MD5;
+    secret "ONQATfBbLnwU9H8hRqg/Wa==";
+};
+```
+
+```
+zone "mytrek.com" {
+    type master;
+    file "mytrek.com";
+    allow-update (key mydhcpserver);
+};
+```
+
+```
+zone "1.168.192.IN-ADDR.ARPA" {
+    type master;
+    file "192.168.0";
+    allow-update (key mydhcpserver);
+};
+```
+
+在 `DHCP` 服务器中，您需要在服务器的 `dhcpd.conf` 文件中放置相应的 `TSIG` 密钥声明和 `allow-update` 条目，如下例所示。`key` 声明的语法与 `DNS` 服务器中的相同。然后使用 `DHCP zone` 语句来指定域名的 IP 地址和要使用的 `TSIG` 密钥。`DNS` 和 `DHCP` 服务器的配置文件中的域名和 IP 地址需要完全匹配。与 `named.conf` 文件不同，`dhcpd.conf` 文件中的域名或 IP 地址周围没有引号。在 `dhcpd.conf` 文件中，`zone` 语句中使用的域名和 IP 地址也需要以句点结尾，就像在 `DNS` 区域文件中一样。`key` 语句列出要使用的密钥。尽管 `DHCP` 会尝试确定要更新的 `DNS` 服务器，但建议您使用 `zone` 条目中的 `primary` 语句来显式标识它们。
+
+```
+key mydhcpserver {
+    algorithm HMAC-MD5;
+    secret "ONQAfBbLnvWU9H8hRqq/WA==";
+};
+```
+
+```
+zone mytrek.com. {
+    primary 192.168.0.1;    #DNS domain zone to update
+    #address of DNS server
+    key mydhcpserver;       #TSIG signature key
+};
+```
+
+```
+zone 1.168.192.IN-ADDR.ARPA. {
+    primary 192.168.0.1;    #domain PTR zone to update
+    #address of DNS server
+    key mydhcpserver;       # TSIG signature key
+};
+```
+
+为了生成在 `DNS` 更新中使用的完全限定主机名，`DHCP` 服务器通常会使用自己的域名和 `DHCP` 客户端提供的主机名（有关例外情况，请参阅 `dhcpd.conf` 手册页）。如果希望为某个主机分配特定的主机名，可以使用 `ddns-hostname` 语句在主机硬件部分中指定它。域名在 `domain-name` 选项中指定：
+
+```
+option domain-name "mytrek.com"
+```
+
+可以使用 `ddns-update-style` 语句为所有域打开或关闭 `DNS` 更新功能。该功能默认是打开的。要为特定域关闭 `DNS` 更新，可以使用 `ddns-updates` 语句。这一功能默认也是开启的。下面展示了 `dhcpd.conf` 文件中一个简单的 `DHCP` 服务器 `DNS` 更新配置。
+
+```
+/etc/dhcpd.conf
+option routers 192.168.0.1;
+option subnet-mask 255.255.255.0;
+option domain-name "mytrek.com";
+option domain-name-servers 192.168.0.1;
+key mydhcpserver {
+    algorithm HMAC-MD5;
+    secret "ONQAfBbLnvWU9H8hRqq/WA==";
+};
+```
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.128;
+  default-lease-time 21600;
+  max-lease-time 43200;
+  zone mytrek.com. {
+    primary 192.168.0.1;
+    key mydhcpserver;
+  }
+  zone 1.168.192.IN-ADDR.ARPA. {
+    primary 192.168.0.1;
+    key mydhcpserver;
+  }
+}
+```
+
+## 子网
+
+如果你正在将网络空间划分为多个子网，可以使用单个 `DHCP` 服务器来管理它们。在这种情况下，你需要为每个子网定义一个 `subnet` 声明。如果你正在建立自己的小型网络，可以使用以 `192.168` 开头的网络地址。`range` 将指定该网络内可能的 IP 地址。因此，对于地址为 `192.168.0.0` 的网络，你需要创建一个子网掩码为 `255.255.255.0` 的 `subnet` 声明。在这个声明中，你需要放置一个 `range` 声明，以及你想提供给客户端主机的任何其他信息。在下面的示例中，可以将从 `192.168.0.1` 到 `192.168.0.75` 的 IP 地址范围分配给该网络上的主机：
+
+```
+subnet 192.168.0.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.75;
+}
+```
+
+你可能希望为每个子网指定不同的策略，例如不同的租约时间。`subnet` 声明中的任何条目都会覆盖全局设置。因此，如果你已经设置了全局租约时间，`subnet` 声明中的租约设置将覆盖该子网的全局设置。下一个示例为不同的子网设置了不同的租约时间，以及不同的地址分配。第一个子网的租约时间取自全局租约时间设置，而第二个子网定义了自己的租约时间：
+
+```
+default-lease-time 21600;
+max-lease-time 43200;
+```
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.75;
+}
+```
+
+```
+subnet 192.168.1.128 netmask 255.255.255.252 {
+  range 192.168.0.129 192.168.0.215;
+  default-lease-time 56000;
+  max-lease-time 62000;
+}
+```
+
+如果你的子网是同一个物理网络的一部分，那么你需要将它们声明为共享网络来通知服务器。你可以通过放置 `subnet` 来实现。
+
+共享网络声明中的声明用于指定共享网络的名称。所使用的名称可以是任何描述性名称，尽管你可以使用域名。在共享网络声明内、子网声明外指定的任何选项，对这些子网都是全局的。在下一个示例中，子网属于同一个物理网络，因此被放在一个共享网络声明中。
+
+
+
+```
+shared-network mytrek.com
+{
+    default-lease-time 21600;
+    max-lease-time 43200;
+    subnet 192.168.1.0 netmask 255.255.255.0 {
+        range 192.168.0.5 192.168.0.75;
+    }
+    subnet 192.168.1.128 netmask 255.255.255.252 {
+        range 192.168.0.129 192.168.0.215;
+        default-lease-time 56000;
+        max-lease-time 62000;
+    }
+}
+```
+
+> 注意：在一个网络中，可能会有一些子网运行 DHCP 服务器，而另一些则不运行。在这种情况下，你可以使用 DHCP 中继代理（DHCP Relay Agent），让没有 DHCP 服务器的子网上的 DHCP 客户端，使用运行在另一个子网上的 DHCP 服务器。DHCP 中继代理是`dhcrelay`，可以使用`service`命令进行管理。它通过`/etc/sysconfig/dhcrelay`文件配置，在该文件中你可以指定接收请求的网络接口以及要使用的 DHCP 服务器。
+
+## 固定地址
+
+除了为主机使用可能的 IP 地址池外，你可能希望为每一台主机分配一个特定地址。使用 DHCP 服务器仍然可以让你控制哪个地址将分配给指定主机。然而，要为特定主机分配地址，你需要知道该主机网络接口卡（NIC）的硬件地址。实际上，你必须告知 DHCP 服务器，使其将特定的网络连接设备与指定的 IP 地址关联起来。要做到这一点，DHCP 服务器需要知道你指的是哪个网络设备。你可以通过硬件地址（即 MAC 地址）来识别网络设备。要查找客户端的硬件地址，你可以登录客户端并使用`ifconfig`命令查看网络设备的信息。要列出所有网络设备，请使用`-a`选项。如果你知道网络设备名称，可以直接使用该名称。下一个示例将列出第一个以太网设备`eth0`的所有信息：
+
+```
+ifconfig eth0
+```
+
+这将列出客户端所有网络连接设备的信息。带有`HWaddr`字样的条目（通常是第一个）会显示 MAC 地址。一旦你获得了 MAC 地址，就可以在 DHCP 服务器上使用它，为那个设备分配特定的 IP 地址。
+
+在`dhcpd.conf`文件中，你可以使用`host`声明来为客户端设置固定地址。在`host`声明中，放置一个`hardware`选项，在其中列出网络连接设备的类型及其 MAC 地址。然后使用`fixed-address`参数指定分配给该设备的 IP 地址。在以下示例中，MAC 地址为`08:00:2b:4c:29:32`的客户端网络设备被分配了 IP 地址`192.168.0.2`：
+
+```
+host rabbit {
+  option host-name "rabbit.mytrek.com"
+  hardware ethernet 08:00:2b:4c:29:32;
+  fixed-address 192.168.0.2;
+}
+```
+
+你也可以让 DHCP 服务器执行 DNS 查找来获取主机的 IP 地址。这样做的好处是，你只需在一个地方（DNS 服务器）管理 IP 地址。当然，这要求 DNS 服务器正常运行，以便 DHCP 服务器能够确定 IP 地址。例如，代理服务器连接（可以提供直接的 Web 访问）只需一个 IP 地址即可运行，而不需要 DNS 主机名。如果 DNS 服务器宕机，前面的示例仍然会为主机分配一个 IP 地址，而下面的示例则不会：
+
+```
+host rabbit {
+  option host-name "rabbit.mytrek.com"
+  hardware ethernet 08:00:2b:4c:29:32;
+  fixed-address rabbit.mytrek.com;
+}
+```
+
+你还可以使用`host`声明为无盘工作站或终端定义网络信息。在这种情况下，你需要添加一个`filename`参数，指定该工作站或终端使用的引导文件。在这里，名为`myterm`的终端从服务器`turtle.mytrek.com`获取引导信息。
+
+```
+host myterm {
+  option host-name "myterm.mytrek.com"
+  filename "/boot/vmlinuz";
+  hardware ethernet 08:00:2b:4c:29:32;
+  server-name "turtle.mytrek.com";
+}
+```
+
+下面示例的`dhcpd.conf`文件展示了为固定地址实现的一个非常简单的 DHCP 服务器。在第二个`host`声明中，DHCP 将执行 DNS 查找来获取`rabbit.mytrek.com`的 IP 地址。
+
+```
+/etc/dhcpd.conf
+option routers 192.168.0.1;
+option subnet-mask 255.255.255.0;
+option domain-name "mytrek.com";
+option domain-name-servers 192.168.1.1;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  host turtle {
+    option host-name "turtle.mytrek.com"
+    hardware ethernet 08:00:2b:4c:29:32;
+    fixed-address 192.168.0.1;
+  }
+}
+```
+
+```
+host rabbit {
+    option host-name "rabbit.mytrek.com"
+    hardware ethernet 00:80:AD:30:17:2A;
+    fixed-address rabbit.mytrek.com;
+}
+
+host lizard {
+    option host-name "lizard.mytrek.com"
+    hardware ethernet 00:70:2b:4b:29:14;
+    fixed-address 192.168.0.3;
+}
+```
+
+主机声明也可以放置在子网声明内，以提供有关该子网中特定主机的信息。
+
+固定地址的常见候选是网络的 DNS 服务器。通常，您希望 DNS 服务器位于同一 IP 地址，以便可以直接访问。DHCP 服务器然后可以将其 IP 地址提供给其客户端。
+
+**TABLE 35-1 DHCP Declarations, Parameters, and Options**
+
+| 条目 | 描述 |
+|---|---|
+| **声明** | |
+| `shared-network name` | 用于指示某些子网是否共享同一物理网络 |
+| `subnet subnet-number netmask` | 引用整个子网地址 |
+| `range [ dynamic-bootp ] low-address [ high-address ];` | 提供最高和最低动态分配的 IP 地址 |
+| `host hostname` | 引用特定主机 |
+| `group` | 允许您为一组参数和声明命名标签，然后使用该标签将它们应用于子网和主机 |
+| `allow unknown-clients; deny unknown-clients;` | 不向未知客户端动态分配地址 |
+| `allow bootp; deny bootp;` | 确定是否响应 bootp 查询 |
+| `allow booting; deny booting;` | 确定是否响应客户端查询 |
+| **参数** | |
+| `default-lease-time time;` | 分配给租约的长度（以秒为单位） |
+| `max-lease-time time;` | 租约的最大长度 |
+| `hardware hardware-type hardware-address;` | 网络硬件类型（以太网或令牌环）和地址 |
+| `filename "filename";` | 初始引导文件的名称 |
+| `server-name "name";` | 客户端引导的服务器名称 |
+| `next-server server-name;` | 加载 `filename` 中指定的初始引导文件的服务器 |
+| **条目** | |
+| `fixed-address address [, address ...];` | 为客户端分配固定地址 |
+| `get-lease-hostnames flag;` | 确定是否查找并使用客户端的 IP 地址 |
+| `authoritative; not authoritative;` | 拒绝无效地址请求 |
+| `server-identifier hostname;` | 指定服务器 |
+| **选项** | |
+| `option subnet-mask ip-address;` | 客户端的子网掩码 |
+
+
+
+| 选项 | 描述 |
+| --- | --- |
+| `option routers ip-address [, ipaddress...];` | 客户端子网上的路由器 IP 地址列表 |
+| `option domain-name-servers ip-address [, ip-address...];` | 客户端使用的域名服务器列表 |
+| `option log-servers ip-address [, ip-address...];` | 客户端使用的日志服务器列表 |
+| `option host-name string;` | 客户端的主机名 |
+| `option domain-name string;` | 客户端的域名 |
+| `option broadcast-address ip-address;` | 客户端的广播地址 |
+| `option nis-domain string;` | 客户端的网络信息服务域 |
+| `option nis-servers ip-address [, ip-address...];` | 客户端可使用的 NIS 服务器 |
+| `option smtp-server ip-address [, ip-address...];` | 客户端使用的 SMTP 服务器列表 |
+| `option pop-server ip-address [, ip-address...];` | 客户端使用的 POP 服务器列表 |
+| `option nntp-server ip-address [, ip-address...];` | 客户端使用的 NNTP 服务器列表 |
+| `option www-server ip-address [, ip-address...];` | 客户端使用的 Web 服务器列表 |
+
+# CHAPTER: NFS 和 NIS
+
+Linux 提供了多种工具，用于访问连接到网络的远程系统上的文件。网络文件系统 Network File System (NFS) 使您能够连接到并直接访问驻留在另一台机器上的资源，例如文件或 CD-ROM 等设备。网络信息服务 Network Information Service (NIS) 维护网络上所有系统的配置文件。通过 Samba，您可以将 Windows 客户端连接到 Microsoft Windows 网络上的服务，例如由 Linux Samba 服务器控制的共享文件、系统和打印机（请参阅第 37 章）。
+
+## 网络文件系统：NFS 和 `/etc/exports`
+
+NFS 使您能够将远程计算机上的文件系统挂载到自己的系统上，就像它是本地的一样。然后您可以直接访问该远程文件系统上的任何文件。这具有这样的优势：网络上的不同系统可以直接访问相同的文件，而无需各自保留自己的副本。只有一个副本位于远程文件系统上，每个计算机都可以访问它。您可以在其网站 nfs.sourceforge.net 上了解更多关于 NFS 的信息。
+
+> NOTE 基于 BSD Unix 的 Macintosh 计算机的 Mac OS X 现在支持 NFS 用于文件共享。要使用旧版 Apple 操作系统访问 Apple 文件系统和打印机，可以使用 Netatalk。Netatalk 在 Unix 和 Linux 系统上实现了经典的 AppleTalk 和 AppleShare IP 网络协议。当前的 Netatalk 网站是 netatalk.sourceforge.net，提供了指向 FAQ 和 HOW-TO 部分的链接。
+
+## NFS Daemons
+
+NFS 在 TCP/IP 网络上运行。保存文件系统的远程计算机将其提供给网络上的其他计算机。它通过在名为`/etc/exports`的 NFS 配置文件中进行条目，以及运行多个守护进程来支持其他系统的访问来实现这一点。其中包括`rpc.mountd`、`rpc.nfsd`和`rpc.portmapper`。可以通过`/etc/hosts.allow`和`/etc/hosts.deny`文件来控制对 NFS 服务器的访问。以下是 NFS 守护进程的列表：
+
+- `rpc.nfsd` 接收来自远程系统的 NFS 请求并将其转换为对本地系统的请求。
+- `rpc.mountd` 执行请求的挂载和卸载操作。
+- `rpc.portmapper` 将远程请求映射到适当的 NFS 守护进程。
+- `rpc.rquotad` 提供用户磁盘配额管理。
+- `rpc.statd` 在远程主机重新启动时提供锁定服务。
+- `rpc.lockd` 处理已宕机的系统的锁恢复。
+
+> 注意 建议仅在本地安全网络上使用 NFS。如果通过 Internet 使用，NFS 会使您的系统暴露于不安全访问。
+
+## 启动和停止 NFS
+
+在 Red Hat 上，您可以使用`/etc/rc.d/init.d/nfs`服务来启动和关闭 NFS 守护进程，您可以使用`service`命令调用它，`service nfs start`。要使 NFS 自动启动，您可以使用`chkconfig`或`redhat-config-services`工具来指定其运行的运行级别。以下示例将使 NFS 在 Red Hat 的运行级别 3 和 5 下自动启动：
+
+```
+chkconfig -level 35 nfs on
+```
+
+`nfs`脚本将启动`portmapper`、`nfsd`、`mountd`和`rquotad`守护进程。要启用 NFS 锁定，您使用`nfslock`脚本。这将启动`statd`和`lockd`守护进程。NFS 锁定可提供更好的恢复能力，以应对因远程主机系统崩溃而可能中断的操作。
+
+要查看 NFS 是否实际运行，您可以使用带有`-p`选项的`rpcinfo`命令，如下所示。您应该会看到`mountd`和`nfs`的条目。如果没有，则 NFS 未运行。
+
+## NFS 分析工具
+
+NFS 软件包还包括可用于衡量 NFS 服务器性能的分析工具。`nfssstone`会通过基于一系列不同 NFS 操作生成的人工负载（对服务器的需求）来生成指定测试目录的性能数据。`nfsrun`将使用各种负载运行`nfssstone`。您可以使用`nfsnum`生成数据的图表，并使用`nfsfgraph`生成 PostScript 版本。`nfsstat`将显示有关 NFS 客户端和服务器的当前统计信息。您可以将请求缩小为仅网络活动、NFS 协议、服务器使用情况或 RPC 数据的信息。
+
+## 使用 Red Hat NFS 配置工具配置 NFS
+
+无需手动挂载和配置 NFS 目录，您可以使用 Red Hat NFS 配置工具（`redhat-config-nfs`）。从 Server Settings 窗口中选择 NFS Server。这将打开如 Figure 36-1 所示的 NFS Server Configuration Tool 窗口。请确保已安装 NFS 服务器软件（`redhat-config-packages`）并且 NFS 服务器正在运行（`redhat-config-services`）。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_742_0.png)
+
+### FIGURE 36-1 Red Hat NFS Configuration Tool
+
+要添加要共享的目录，请单击 Add 按钮以打开 Add NFS Share 对话窗口，类似于 Figure 36-1 所示的 Edit NFS Share 窗口。您可以在 Directory 框中浏览或输入要共享的目录。然后列出其所在的主机，并指定访问权限。在 General Options 选项卡上，您可以设置基本安全性和更新功能，例如不安全的文件锁定或立即同步写操作。默认情况下，Sync Write Operations On Request 选项已设置。在 User Access 选项卡上，您可以将用户视为本地 root 用户或作为具有特定用户或组 ID 的匿名用户。
+
+单击 OK 后，该条目将列在 NFS Server Configuration 窗口中。更改在单击 Apply 之前不会生效。这将在`/etc/exports`文件中为共享目录创建条目。您以后可以通过选择该条目并单击 Properties 来打开 Edit 对话框，从而更改这些设置中的任何一个。要保存设置，请单击 Apply。
+
+Figure 36-1 显示了与下一节中描述的`/etc/exports`文件中使用的相同条目。使用此示例由 NFS Server Configuration 工具生成的`/etc/exports`文件如下所示。
+
+```
+/home/foodstuff/    lizard.mytrek.com(rw,sync)
+/mnt/cdrom         rabbit.mytrek.com(ro,sync)
+/home/richlp       *(ro,sync)
+/pub               *(ro,insecure,sync,all_squash)
+```
+
+
+
+Options set in the Basic, General Options, and User Access panels show up as options listed for each entry. For example, Read access is `ro` and Read/Write access is `rw`. Check the NFS Server Configuration help documents for a complete listing. Options are listed in Table 36-1.
+
+## NFS Configuration: `/etc/exports`
+
+An entry in the `/etc/exports` file specifies the file system to be exported and the hosts on the network that can access it. For the file system, enter its mountpoint, the directory to which it was mounted on the host system. This is followed by a list of hosts that can access this file system along with options to control that access. A comma-separated list of export options placed within a set of parentheses may follow each host. For example, you might want to give one host read-only access and another read and write access. If the options are preceded by an `*` symbol, they are applied to any host. A list of options is provided in Table 36-1. The format of an entry in the `/etc/exports` file is shown here:
+
+```
+directory-pathname  host-designation(options)
+```
+
+## NFS Host Entries
+
+You have a great deal of flexibility when specifying hosts. For hosts within your domain, you can just use the hostname, whereas for those outside, you need to use a fully qualified domain name. You could also just use the host’s IP address. Instead of just a single host, you can reference all the hosts within a specific domain, allowing access by an entire network. A simple way to do this is to use the `*` for the host segment, followed by the domain name for the network, such as `*.mytrek.com` for all the hosts in the mytrek.com network. Instead of domain names, you could use IP network addresses using a CIDR format where you specify the netmask to indicate a range of IP addresses. You can also use an NIS netgroup name to reference a collection of hosts. The NIS netgroup name is preceded by a `@` sign.
+
+```
+directory    host(options)
+directory    *(options)
+directory    *.domain(options)
+directory    192.168.1.0/255.255.255.0(options)
+directory    @netgroup(options)
+```
+
+## NFS Options
+
+cause problems with some file systems). If an exported directory is actually a subdirectory in a larger file system, its parent directories are checked to make sure that the subdirectory is the valid directory (`subtree_check`). This option works well with read-only file systems but can cause problems for write-enabled file systems, where filenames and directories can be changed. You can cancel this check with the `no_subtree_check` option.
+
+| General Options | Description |
+| --- | --- |
+| `secure` | Requires that requests originate on secure ports, those less than 1024. This is on by default. |
+| `insecure` | Turns off the `secure` option. |
+| `ro` | Allows only read-only access. This is the default. |
+| `rw` | Allows read/write access. |
+| `sync` | Performs all writes when requested. This is the default. |
+| `async` | Performs all writes when the server is ready. |
+| `no_wdelay` | Performs writes immediately, not checking to see if they are related. |
+| `wdelay` | Checks to see if writes are related, and, if so, waits to perform them together. Can degrade performance. This is the default. |
+| `hide` | Automatically hides an exported directory that is the subdirectory of another exported directory. The subdirectory has to be explicitly mounted to be accessed. Mounting the parent directory does not allow access. This is the default. |
+| `no_hide` | Does not hide an exported directory that is the subdirectory of another exported directory (opposite of `hide`). Only works for single hosts and can be unreliable. |
+| `subtree_check` | Checks parent directories in a file system to validate an exported subdirectory. This is the default. |
+
+
+
+| `no_subtree_check` | Does not check parent directories in a file system to validate an exported subdirectory. |
+
+| `insecure_locks` | Does not require authentication of locking requests. Used for older NFS versions. |
+
+| User ID Mapping | Description |
+
+| --- | --- |
+
+| `all_squash` | Maps all UIDs and GIDs to the anonymous user. Useful for NFS-exported public FTP directories, news spool directories, and so forth. |
+
+| `no_all_squash` | The opposite option to `all_squash`. This is the default setting. |
+
+| `root_squash` | Maps requests from remote root user to the anonymous UID/GID. This is the default. |
+
+| `no_root_squash` | Turns off root squashing. Allows the root user to access as the remote root. |
+
+| `anonuid`, `anongid` | Sets explicitly the UID and GID of the anonymous account used for `all_squash` and `root_squash` options. The defaults are nobody and nogroup. |
+
+## NFS 用户级访问
+
+除了常规选项，还有一些适用于用户级访问的选项。作为一项安全措施，NFS 服务器会把客户端的 root 用户当作匿名用户处理。这称为对用户进行压缩（squashing）。对于客户端 root 用户而言，压缩可防止客户端试图伪装成 NFS 服务器的 root 用户。如果你希望某个特定客户端的 root 用户对 NFS 服务器拥有 root 级控制权，可以指定 `no_root_squash` 选项。为了防止任何客户端用户试图伪装成 NFS 服务器上的某个用户，可以将他们归类为匿名用户（`all_squash` 选项）。这些匿名用户只能访问属于匿名组的目录和文件。
+
+通常，如果客户端系统上的某个用户在 NFS 服务器上有用户账户，该用户就可以在 NFS 服务器上挂载并访问其文件。但是，NFS 要求该用户在两个系统上的用户 ID 必须相同。如果情况并非如此，则他或她会被视为两个不同的用户。要解决这个问题，可以使用 NIS 服务，将用户 ID 信息只维护在一个地方，即 NIS 密码文件（有关 NIS 的信息，请参阅下一节）。
+
+## NFS /etc/exports 示例
+
+下面展示了 `/etc/exports` 文件中的条目示例。所有主机对挂载在 `/pub` 目录（通常用于公共访问的名称）上的文件系统拥有只读访问权限。但是，用户会被视为匿名用户（`all_squash`）。对于挂载在 `/home/foodstuff` 目录上的文件系统，`lizard.mytrek.com` 计算机拥有读写访问权限。下一个条目允许 `rabbit.mytrek.com` 仅以只读访问权限访问 NFS 服务器的 CD-ROM。最后一个条目允许任何人安全访问 `/home/richlp`。
+
+```
+/etc/exports
+/pub			*(ro,insecure,all_squash,sync)
+/home/foodstuff	lizard.mytrek.com(rw,sync)
+/mnt/cdrom	rabbit.mytrek.com(ro,sync)
+/home/richlp	*(secure,sync)
+```
+
+## 应用更改
+
+每次系统启动 NFS 服务器时（通常在系统启动时），都会读取 `/etc/exports` 文件，并导出其中指定的目录。导出目录时，会在 `/var/lib/nfs/xtab` 文件中为其创建一条条目。NFS 读取并使用该文件来执行实际的导出操作。条目从 `/etc/exports` 中读取，并在 `/var/lib/nfs/xtab` 中创建相应的条目。`xtab` 文件维护实际导出的列表。
+
+如果希望在不必重启的情况下立即导出 `/etc/exports` 文件中新增的条目，可以使用带有 `-a` 选项的 `exportfs` 命令。添加 `-v` 选项有助于显示 NFS 正在执行的操作。对 `/etc/exports` 文件所做的任何更改，使用相同的选项即可使其生效。
+
+```
+exportfs -a -v
+```
+
+如果之后对 `/etc/exports` 文件进行了更改，可以使用 `-r` 选项重新导出其中的条目。`-r` 选项会将 `/var/lib/nfs/xtab` 文件与 `/etc/exports` 中的条目重新同步，移除任何其他导出项或具有不同选项的导出项。
+
+```
+exportfs -r -v
+```
+
+如果既要导出新增的条目，又要重新导出已更改的条目，可以将 `-r` 和 `-a` 选项结合使用。
+
+```
+exportfs -r -a -v
+```
+
+## 手动导出文件系统
+
+你也可以使用 `exportfs` 命令手动导出文件系统，而不必在 `/etc/exports` 文件中为它们添加条目。导出条目将直接添加到 `/var/lib/nfs/xtab` 文件中。使用 `-o` 选项可以列出各种权限，然后在其后附上要导出的主机和文件系统。主机和文件系统之间用冒号分隔。例如，要手动将 `/home/myprojects` 目录以 `rw` 和 `insecure` 权限导出到 `golf.mytrek.com`，可以使用以下命令：
+
+```
+exportfs -o rw,insecure golf.mytrek.com:/home/myprojects
+```
+
+你也可以使用 `exportfs` 取消导出已经导出的目录，无论该目录是手动导出还是通过 `/etc/exports` 文件导出的。只需将 `-u` 选项与主机和已导出的目录一起使用即可。该导出的条目将从 `/var/lib/nfs/xtab` 文件中移除。以下示例将取消导出之前导出到 `lizard.mytrek.com` 的 `/home/foodstuff` 目录：
+
+```
+exportfs -u lizard.mytrek.com:/home/foodstuff
+```
+
+## NFS 安全：/etc/hosts.allow 和 /etc/hosts.deny
+
+`/etc/hosts.allow` 和 `/etc/hosts.deny` 文件用于限制你的服务器向网络上的主机或互联网上的主机（如果可访问）提供的服务的访问。例如，你可以使用 `hosts.allow` 文件允许某些主机访问你的 FTP 服务器。`hosts.deny` 文件中的条目则会明确拒绝某些主机的访问。对于 NFS，你可以通过控制对特定 NFS 守护进程的访问来提供同样类型的安全保护。
+
+> 注意：你可以让 NFS 传输通过 TCP 而不是 UDP 运行，以进一步保护 NFS 传输的安全。使用 `tcp` 选项挂载 NFS 文件系统（默认使用 UDP）。但是，NFS 使用 TCP 时性能确实会下降。
+
+## Portmapper 服务
+
+第一道防线是控制对 `portmapper` 服务的访问。`portmapper` 会告诉主机在系统上的何处可以找到 NFS 服务。限制访问使远程主机甚至无法定位 NFS。为了达到较强的安全级别，你应该拒绝除明确允许的主机之外的所有主机的访问。在 `hosts.deny` 文件中，可以放置以下条目，默认拒绝所有主机的访问。`ALL` 是一个特殊关键字，表示所有主机。
+
+```
+portmap:ALL
+```
+
+然后，在 `hosts.allow` 文件中，输入你网络上的主机，或任何其他你希望允许访问 NFS 服务器的主机。同样，指定 `portmapper` 服务，然后列出你允许访问的主机的 IP 地址。你可以列出特定的 IP 地址，也可以使用网络掩码列出网络范围。以下示例
+
+仅允许本地网络 `192.168.0.0` 中的主机以及主机 `10.0.0.43` 访问。您可以用逗号分隔地址。
+
+```
+portmap: 192.168.0.0/255.255.255.0, 10.0.0.43
+```
+
+端口映射器也由其他服务如 NIS 使用。如果您在 `hosts.deny` 中关闭了对端口映射器的所有访问，那么如果您正在运行这些服务，您还需要在 `hosts.allow` 中允许对 NIS 服务的访问。其中包括 `ypbind` 和 `ypxserver`。此外，如果您支持它们，可能还必须为远程命令如 `rptime` 和 `rusers` 添加条目。
+
+此外，建议对特定的 NFS 服务也添加相同级别的控制。在 `hosts.deny` 文件中，您将为每个服务添加条目，如下所示：
+
+```
+mountd:ALL
+rquotad:ALL
+statd:ALL
+lockd:ALL
+```
+
+
+
+然后，在 `hosts.allow` 文件中，您可以为每个服务添加条目：
+
+```
+mountd: 192.168.0.0/255.255.255.0, 10.0.0.43
+rquotad: 192.168.0.0/255.255.255.0, 10.0.0.43
+statd: 192.168.0.0/255.255.255.0, 10.0.0.43
+lockd: 192.168.0.0/255.255.255.0, 10.0.0.43
+```
+
+## Netfilter 规则
+
+您可以使用 Netfilter 来检查来自特定主机对 NFS 服务使用的端口的传输，从而进一步控制访问。请参阅第 19 章了解 Netfilter 的说明。端口映射器使用端口 111，`nfsd` 使用 2049。如果您有一个具有 Internet 连接的私有网络，并且想要保护它免受 Internet 的侵害，Netfilter 会很有帮助。通常，一个特定的网络设备，例如以太网卡，专门用于 Internet 连接。
+
+以下示例假设设备 `eth1` 连接到 Internet。任何尝试访问端口 111 和 2049 的数据包都会被拒绝。
+
+```
+iptables -A INPUT -i eth1 -p 111 -j DENY
+iptables -A INPUT -i eth1 -p 2049 -j DENY
+```
+
+要为本地网络启用 NFS，您将必须允许数据包分片。假设 `eth0` 是用于本地网络的设备，您可以使用以下示例：
+
+```
+iptables -A INPUT -i eth0 -f -j ACCEPT
+```
+
+> 注意 远程主机上的 root 用户可以尝试以 root 用户身份并使用 root 级权限访问远程 NFS 服务器。`root_squash` 选项（默认）会自动将远程 root 用户更改为 `nobody`（匿名）用户。
+
+## 挂载 NFS 文件系统：NFS 客户端
+
+一旦 NFS 将目录提供给不同的主机，这些主机就可以在自己的系统上挂载这些目录并访问它们。主机需要能够作为 NFS 客户端运行。当前所有 Linux 内核都内置了 NFS 客户端功能。这意味着任何 NFS 客户端都可以通过执行简单的挂载操作来挂载其有权访问的远程 NFS 目录。
+
+## 自动挂载 NFS：/etc/fstab
+
+您可以通过 `/etc/fstab` 文件中的条目或通过显式的 `mount` 命令来挂载 NFS 目录。您可以通过在 `/etc/fstab` 文件中为它们放置条目，使 NFS 文件系统自动挂载。`/etc/fstab` 文件中的 NFS 条目的挂载类型为 NFS。NFS 文件系统名称由其所在的计算机的主机名，后跟其挂载的目录的路径名组成。两者用冒号分隔。例如，`rabbit.trek.com/home/project` 指定在 `rabbit.trek.com` 计算机上挂载在 `/home/project` 的文件系统。`/etc/fstab` 文件中 NFS 条目的格式如下。请注意文件类型为 `nfs`。
+
+```
+host:remote-directory   local-directory   nfs   options   0   0
+```
+
+您还可以包含多个 NFS 特定的挂载选项与您的 NFS 条目一起使用。您可以指定发送和接收的数据报的大小，以及您的计算机等待主机系统响应的时间。您还可以指定文件系统是要硬挂载还是软挂载。对于硬挂载文件系统，如果由于某种原因远程系统未能响应，您的计算机将不断尝试建立联系。软挂载文件系统在指定间隔后放弃尝试建立联系并发出错误消息。硬挂载是默认值。持续失败的硬挂载尝试的系统在不断尝试实现挂载时将停止响应用户输入。因此，软挂载可能更可取，因为它们会简单地停止尝试持续失败的挂载。表 36-2 和 `mount` 的手册页包含这些 NFS 客户端选项的列表。它们与前面指出的 NFS 服务器选项不同。
+
+下面是一个 NFS 条目的示例。远程系统是 `rabbit.mytrek.com`，文件系统挂载在 `/home/projects`。此文件系统在本地系统上挂载为 `/home/dylan/projects` 目录。`/home/dylan/projects` 目录必须已在本地系统上创建。系统类型为 NFS，`timeo` 选项指定本地系统等待响应的时间最长为 20 个十分之一秒（两秒）。挂载为软挂载，并且可以被 NFS 中断。
+
+```
+rabbit.mytrek.com:/home/projects   /home/dylan/projects   nfs   soft,intr,timeo=20
+```
+
+## 手动挂载 NFS：mount
+
+您也可以使用 `mount` 命令并带 `-t nfs` 选项来显式挂载 NFS 文件系统。要显式挂载之前的条目，请使用以下命令：
+
+```
+# mount -t nfs -o soft,intr,timeo=20 \
+    rabbit.mytrek.com:/home/projects   /home/dylan/projects
+```
+
+当然，您也可以使用 `umount` 命令卸载 NFS 目录。您可以指定本地挂载点或远程主机和目录，如下所示：
+
+```
+umount /home/dylan/projects
+umount rabbit.mytrek.com:/home/projects
+```
+
+> 注意 在 Red Hat 系统上，你也可以使用 `/etc/rc.d/init.d/netscript` 一次性挂载和卸载所有 NFS 文件系统，该脚本可通过 `service` 命令调用。此脚本读取 `/etc/fstab` 文件中的 NFS 条目，使用它们来挂载和卸载 NFS 远程目录。使用 `stop` 参数会卸载文件系统，而使用 `start` 参数则会重新挂载它们。`restart` 参数会先卸载然后再重新挂载文件系统。
+
+## 按需挂载 NFS：autofs
+
+你也可以使用 `automount` 服务 `autofs` 来挂载 NFS 文件系统。这需要在客户端进行额外的配置。`autofs` 服务仅在你尝试访问文件系统时才挂载它。对指定目录的目录更改操作（`cd`）会触发挂载操作，此时挂载远程文件系统。
+
+`autofs` 服务使用主文件来列出映射文件进行配置，而映射文件则列出要挂载的文件系统。`/etc/auto.master` 文件是 `autofs` 主文件。主文件会列出可以挂载文件系统的根路径名以及每个路径名对应的映射文件。映射文件随后会列出键（子目录）、挂载选项以及可在该根路径名目录中挂载的文件系统。在某些发行版中，`/auto` 目录已实现为自动挂载文件系统的根路径名。你也可以在 `/etc/auto.master` 文件中添加自己的条目以及自己的映射文件。 你会发现 `/etc/auto.master` 文件包含以下用于 `/auto` 目录的条目，其映射文件为 `auto.misc`：
+
+```
+/auto    auto.misc    --timeout 60
+```
+
+在映射文件之后，你可以添加选项，如前例所示。`timeout` 选项指定在尝试自动卸载前等待的非活动秒数。
+
+在映射文件中，你列出键、挂载选项和要挂载的文件系统。键将是文件系统在本地系统上挂载的子目录。例如，要将 `rabbit.mytrek.com` 主机上的 `/home/projects` 目录挂载到 `/auto/projects` 目录，你可以使用以下条目：
+
+```
+projects  soft,intr,timeo=20  rabbit.mytrek.com:/home/projects
+```
+
+你也可以在主文件中为 NFS 文件系统创建新条目，如下所示：
+
+```
+/myprojects    auto.myprojects    --timeout 60
+```
+
+然后你将创建 `/etc/auto.myprojects` 文件并在其中放置 NFS 文件系统挂载的条目，如下所示：
+
+```
+dylan    soft,intr,rw    rabbit.mytrek.com:/home/projects
+newgame  soft,intr,ro    lizard.mytrek.com:/home/supergame
+```
+
+> 注意 `autofs` 服务可用于任何文件系统，包括软盘和 CD-ROM。参见第 30 章。
+
+| Options | Description |
+
+|---|---|
+
+| rsize=n | NFS 从 NFS 服务器读取文件时使用的字节数。默认值为 1,024 字节。设置为 8,192 可大大提高性能。 |
+
+| wsize=n | NFS 向 NFS 服务器写入文件时使用的字节数。默认值为 1,024 字节。设置为 8,192 可大大提高性能。 |
+
+| timeo=n | 超时后发送第一次重传前的值，单位为十分之一秒。默认值是零点七秒。 |
+
+| retry=n | 在放弃之前重试 NFS 挂载操作的分钟数。默认值为 10,000 分钟（一周）。 |
+
+| retrans=n | NFS 挂载操作在发生主要超时前重传或次要超时的次数（默认为 3）。届时，连接将被取消或显示“服务器无响应”消息。 |
+
+| soft | 使用软挂载挂载系统。 |
+
+| hard | 使用硬挂载挂载系统。这是默认值。 |
+
+
+
+- `intr`：允许 NFS 中断文件操作并返回到调用程序。默认是不允许中断文件操作。
+- `bg`：如果第一次挂载尝试超时，则在后台继续尝试挂载。默认是失败且不进入后台。
+- `tcp`：使用 TCP 协议而不是默认的 UDP 协议挂载 NFS 文件系统。
+
+# 网络信息服务：NIS
+
+在支持 NFS 的网络上，许多资源和设备由同一系统共享。通常，每个系统都需要为每个设备或资源拥有自己的配置文件。更改需要逐个更新每个系统。然而，NFS 提供了一种特殊的服务，称为网络信息系统（NIS），它为整个网络维护此类配置文件。对于更改，你只需更新 NIS 文件即可。NIS 可用于大多数管理任务所需的信息，例如与用户、网络访问或设备相关的内容。例如，你可以使用 NIS 服务维护用户和密码信息，只需更新那些 NIS 密码文件即可。
+
+> 注意 NIS+ 是 NIS 的更高级形式，提供加密和身份验证支持。然而，它的管理更困难。
+
+NIS 由 Sun Microsystems 开发，最初被称为 Sun 的黄页（YP）。NIS 文件保存在 NIS 服务器上（NIS 服务器有时仍被称为 YP 服务器）。网络上的各个系统使用 NIS 客户端来发出请求 NIS服务器。NIS服务器将其信息维护在称为映射的特殊数据库文件中。Linux版本同时支持NIS客户端和服务器。Linux NIS客户端可以通过NIS轻松连接到任何网络。
+
+NIS客户端在大多数Linux发行版的初始安装过程中就已安装。NIS客户端程序包括`ypbind`（NIS客户端守护进程）、`ypwhich`、`ypcat`、`yppoll`、`ypmatch`、`yppasswd`和`ypset`。每个程序都有各自的手册页，详细说明其用法。NIS服务器程序包括`ypserv`（NIS服务器）、`ypinit`、`yppasswdd`、`yppush`、`ypxfr`和`netgroup`，同样每个程序都有自己的手册页。你可以使用`service`命令启动和停止`ypbind`客户端守护进程和`ypserv` NIS服务器。或者，也可以使用`redhat-config-services`来启动和停止NIS客户端和服务器守护进程。
+
+```
+service ypbind start
+service ypserv start
+```
+
+> 注意 你可以使用Red Hat的`authconfig-gtk`来指定你网络上的远程NIS服务器。
+
+## NIS服务器
+
+在设置NIS服务器时，你有很大的灵活性。如果网络很小，可能只需要一个NIS域，为此只需一个NIS服务器。对于较大的网络，你可以将网络划分为多个NIS域，每个域都有自己的服务器。即使只有一个域，也可能需要多个NIS从服务器。对于一个NIS域，可以有一个NIS主服务器和多个NIS从服务器。从服务器可以作为备份，以防主服务器出现故障。从服务器只包含NIS主服务器上配置文件的副本。配置NIS服务器涉及以下几个步骤：
+
+1. 定义NIS服务器将服务的NIS域名。
+2. 启动`ypserv`守护进程。
+3. 在`/var/yp/Makefile`文件中，设置任何NIS服务器选项，并指定要管理的配置文件。
+4. 使用`ypinit`创建配置文件的NIS版本。
+
+### 定义NIS域
+
+首先必须定义NIS域名。你可以通过在`/etc/sysconfig/network`文件中定义`NIS_DOMAIN`变量，在系统每次启动时自动定义NIS域。为该变量指定你想要赋予NIS域的名称。以下示例定义名为`myturtles.nis`的NIS域：
+
+```
+NIS_DOMAIN=myturtles.nis
+```
+
+在首次设置服务器时，你可能希望在无需重启系统的情况下定义NIS域名。可以使用`domainname`命令来完成，如下所示：
+
+```
+domainname myturtles.nis
+```
+
+可以使用`ypserv`启动脚本启动NIS服务器：
+
+```
+service ypserv start
+```
+
+### 设置NIS服务器选项
+
+然后编辑`/var/yp/Makefile`文件，选择NIS服务器将维护的配置文件，并设置任何NIS服务器选项。标准选项以及最常用的配置文件通常已经设置好了。
+
+NIS服务器选项列在最前面。`NOPUSH`选项将被设置为`true`，表示没有NIS从服务器。如果你要为该域设置任何NIS从服务器，则必须将此选项设置为`no`：
+
+```
+NOPUSH = true
+```
+
+最小用户ID和组ID设置为500。这些通过`MINUID`和`MINGID`变量设置：
+
+```
+MINUID=500
+MINGID=500
+```
+
+大多数发行版使用影子密码和影子组文件来加密密码和组。`MERGE_PASSWD`和`MERGE_GROUP`设置将被设置为`true`。NIS会将影子密码信息合并到其密码文件中：
+
+```
+MERGE_PASSWD=true
+MERGE_GROUP=true
+```
+
+然后使用`YPSRCDIR`和`YPPWDDIR`变量定义NIS查找密码和其他配置文件的目录。通常，`/etc`目录保存你的配置文件：
+
+```
+YPSRCDIR = /etc
+YPPWDDIR = /etc
+```
+
+然后列出NIS可以管理的配置文件。在这里，你会看到诸如`PASSWD`（用于密码）、`GROUP`（用于用户组）和`PRINTCAP`（用于打印机）之类的条目。以下展示了部分条目示例：
+
+```
+GROUP     = $(YPPWDDIR)/group
+PASSWD    = $(YPPWDDIR)/passwd
+SHADOW    = $(YPPWDDIR)/shadow
+GSHADOW   = $(YPPWDDIR)/gshadow
+ALIASES   = /etc/aliases
+ETHERS    = $(YPSRCDIR)/ethers   # ethernet addresses (for rarpd)
+BOOTPARAMS = $(YPSRCDIR)/bootparams # for booting Sun boxes (bootparamd)
+HOSTS     = $(YPSRCDIR)/hosts
+NETWORKS  = $(YPSRCDIR)/networks
+PRINTCAP  = $(YPSRCDIR)/printcap
+PROTOCOLS = $(YPSRCDIR)/protocols
+```
+
+### 指定共享文件
+
+在网络上实际共享的文件列在 `all:` 条目中，该条目位于配置文件列表之后。只有部分定义的文件被列为共享，即在 `all:` 之后的第一行中列出的文件。其余行会被自动注释掉（前面加上 # 号）。你可以通过移除 # 号或将其条目移动到第一行来添加文件。
+
+```
+all: passwd group hosts rpc services netid protocols mail \
+  # netgrp shadow publickey networks ethers bootparams printcap \
+  # amd.home auto.master auto.home auto.local passwd.adjunct \
+  # timezone locale netmasks
+```
+
+请务必不要修改 `Makefile` 的其余部分。
+
+### 创建 NIS 数据库
+
+然后你使用 `-m` 选项输入 `ypinit` 命令来创建由 NIS 配置文件组成的 NIS 数据库。你的 NIS 服务器将被检测到，然后你将被要求输入此 NIS 域中使用的任何从属 NIS 服务器的名称。如果有，请输入它们。完成后，按 CTRL-D。NIS 数据库文件随后将被创建。
+
+```
+ypinit -m
+```
+
+对于 NIS 从属服务器，你将使用
+
+```
+ypinit -s masterhost
+```
+
+如果收到以下错误，这很可能意味着你的 NIS 服务器未运行。请确保在运行 `ypinit` 之前启动 `ypserv`。
+
+```
+failed to send 'clear' to local ypserv: RPC: Program not registered
+```
+
+如果你以后需要更新 NIS 服务器文件，你需要切换到 `/var/yp` 目录并发出 `make` 命令。
+
+```
+cd /var/yp
+make
+```
+
+### 控制访问
+
+`/var/yp/secure` nets 文件启用主机访问你的 NIS 服务器。主机可以通过网络或单独引用。条目由子网掩码和 IP 地址组成。例如，你可以通过以下条目为本地网络中的所有主机提供访问权限：
+
+```
+255.255.255.0 192.168.1.0
+```
+
+对于单个主机，你可以使用掩码 255.255.255.255 或仅使用术语 `host`，如下所示：
+
+```
+host 192.168.1.4
+```
+
+控制不同主机访问 NIS 共享数据的方式在 `/etc/ypserv.conf` 中确定。
+
+## Netgroups
+
+
+
+你可以使用 NIS 设置 netgroups，这允许你创建用户网络级组。而普通组是在单独主机上本地创建的，NIS netgroup 可用于网络范围的服务。例如，你可以使用 NIS netgroups 控制对 NFS 文件系统的访问。Netgroups 在 `/etc/netgroup` 文件中定义。条目由 netgroup 名称后跟成员标识符组成，成员标识符由三个段组成：主机、用户和 NIS 域：
+
+```
+group  (host, user, NIS-domain) (host, user, NIS-domain) ...
+```
+
+例如，在 NIS 域 `myturtles.nis` 中，要定义一个名为 `myprojects` 的组，由主机 `rabbit` 上的用户 `chris` 和主机 `lizard.mytrek.com` 上的用户 `george` 组成，你将使用以下内容：
+
+```
+myprojects (rabbit, chris, myturtles.nis) \
+            (lizard.mytrek.com, george, myturtles.nis)
+```
+
+空白段将匹配任何值。以下条目包含主机 `rabbit` 上的所有用户：
+
+```
+newgame (rabbit, , myturtles.nis)
+```
+
+如果你的组使用不需要用户或主机段，你可以使用连字符 `-` 消除其中一个或另一个。以下示例生成一个仅由主机名组成的 netgroup，没有用户名：
+
+```
+myservers (rabbit, -, ) (turtle.mytrek.com, -, )
+```
+
+然后你可以通过在 netgroup 名称前加上 `@` 符号在各种配置文件中引用不同的 netgroup，如下所示：
+
+```
+@newgame
+```
+
+## NIS 客户端
+
+要使主机在你的网络上使用 NIS，首先需要在该主机上指定你的 NIS 域名。此外，你的 NIS 客户端需要知道你的 NIS 服务器的名称。如果你已在已运行 NIS 的网络上安装了 Linux，你可能已在安装过程中输入了此信息。
+
+### 指定 NIS 域和服务器
+
+在 Red Hat 上，你可以使用 `authconfig-gtk` 工具指定你的 NIS 域名和服务器，你可以从系统设置窗口访问该工具。在该窗口中，选择身份验证。这将打开身份验证配置窗口。在用户信息面板上，单击配置 NIS 按钮以打开一个对话框，在其中可以输入 NIS 域的名称以及 NIS 服务器。务必也在用户信息面板上启用 NIS。NIS 域将保存在 `/etc/sysconfig/network` 文件中，而 NIS 服务器则保存在 `/etc/yp.conf` 文件中。
+
+### 访问服务器
+
+网络上每个 NIS 客户端主机都需要运行 `ypbind` NIS 客户端来访问服务器。在客户端的 `/etc/yp.conf` 文件中，你需要指定它将使用的 NIS 服务器。以下条目将引用位于 `192.168.1.1` 的 NIS 服务器：
+
+```
+ypserver 192.168.1.1
+```
+
+或者，你可以指定 NIS 域名以及它使用的服务器：
+
+```
+domain mydomain.nis server servername
+```
+
+`authconfig-gtk` 工具将在 `/etc/yp.conf` 中为使用 `turtle.mytrek.com` 服务器的 `myturtle.nis` NIS 域做出以下条目：
+
+```
+domain myturtles.nis server turtle.mytrek.com
+```
+
+要启动 NIS 客户端，你运行 `ypbind` 脚本：
+
+```
+service ypbind start
+```
+
+然后，为了检查一切是否正常工作，你可以使用 `ypcat` 来尝试列出 NIS 密码文件：
+
+```
+ypcat passwd.
+```
+
+你可以使用 `ypcat` 来列出任何 NIS 配置文件。`ypwhich` 命令将显示客户端正在使用的 NIS 服务器的名称。`ypmatch` 可用于在配置文件中找到特定条目。
+
+```
+ypmatch cecelia passwd.
+```
+
+用户可以通过使用 `yppasswd` 命令来更改 NIS `passwd` 文件中的密码。它与 `passwd` 命令的工作方式相同。你也必须运行 `yppasswd` 守护进程。
+
+### 使用 nsswitch.conf 指定配置文件
+
+为了确保客户端为特定配置文件访问 NIS 服务器，你应该在 `/etc/nsswitch.conf` 文件中指定文件条目中的 `nisplus`。`nisplus` 选项指的是目前在 Red Hat 上使用的 NIS 版本 3。`nis` 选项用于指代旧的 NIS 版本 2。`/etc/nsswitch.conf` 文件指定主机应在哪里查找某些类型的信息。例如，以下条目表示首先检查本地配置文件 `files`，然后检查 NIS 服务器 `nisplus` 以获取密码数据：
+
+```
+passwd: files nisplus
+```
+
+`files` 指定首先使用系统自己的文件，即本地主机上的文件。`nis` 表示在 NIS 文件中查找条目，访问 NIS 服务器。`nisplus` 表示使用 NIS+ 服务器维护的 NIS+ 文件。`dns` 表示执行 DNS 查找；它只能用于包含主机名的文件，如 `hosts`。以下是一些标准条目：
+
+```
+passwd:      files nisplus
+
+shadow:      files nisplus
+
+group:       files nisplus
+
+hosts:       files nisplus dns
+
+bootparams: nisplus [NOTFOUND=return] files
+
+ethers:      files
+
+netmasks:    files
+
+networks:    files
+
+protocols:   files nisplus
+
+rpc:         files
+
+services:    files nisplus
+
+netgroup:    files nisplus
+
+publickey:   nisplus
+
+automount:   files nisplus
+
+aliases:     files nisplus
+```
+
+## CHAPTER
+
+## Samba
+
+使用 Samba，你可以将 Windows 客户端连接到 Microsoft Windows 网络上的服务，例如由 Linux Samba 服务器控制的共享文件、系统和打印机，同时允许 Linux 系统访问 Windows 系统上的共享文件和打印机。Samba 是一组 Linux 工具，允许你通过 Windows 网络与 Windows 系统通信。实际上，Samba 允许 Linux 系统或网络充当 Windows 服务器，使用与 Windows 网络中相同的协议。而大多数 Unix 和 Linux 系统使用 TCP/IP 协议进行网络连接，Microsoft 使用 Windows 的网络使用不同的协议，称为服务器消息块 `SMB` 协议，它实现了一个运行 Windows 的 PC 的局域网 `LAN`。`SMB` 使用一种称为网络基本输入输出系统 `NetBIOS` 的网络接口，允许 Windows PC 共享资源，例如打印机和磁盘空间。这样的网络上的一个 Windows PC 可以访问另一个 Windows PC 的磁盘驱动器的部分，就好像它是自己的。`SMB` 最初是为小型局域网设计的。为了将其连接到更大的网络，包括那些具有 Unix 系统的网络，Microsoft 开发了通用互联网文件系统 `CIFS`。`CIFS` 仍然使用 `SMB` 和 `NetBIOS` 进行 Windows 网络。Andrew Tridgell 为了将他的 Linux 系统连接到 Windows PC，编写了一个 `SMB` 客户端和服务器，他称之为 Samba。Samba 允许 Unix 和 Linux 系统连接到这样的 Windows 网络，就好像它们是 Windows PC 一样。Unix 系统可以像另一个 Windows PC 一样在 Windows 系统上共享资源。Windows PC 也可以像 Windows 系统一样访问 Unix 系统上的资源。Samba 实际上已成为专业级、开源和免费的 `CIFS` 版本。它运行的速度也比 `CIFS` 快得多。Samba 有效地使你能够使用 Linux 或 Unix 服务器作为 Windows 网络上的一组 Windows 机器的网络服务器。你也可以使用它在 Linux 系统上与其它 Windows PC 共享文件，或从 Linux 系统访问 Windows PC 上的文件，以及在 Windows PC 之间。 在 Linux 系统上，`smbfs` 文件系统使你能够有效地将远程 `SMB` 共享目录挂载到你自己的文件系统上。然后你可以像访问本地系统上的目录一样访问它。
+
+### Samba 文档
+
+你可以在 Samba 的 Web 和 FTP 站点 `www.samba.org` 和 `ftp.samba.org` 上获得广泛的文档和当前版本。Red Hat 的 RPM 包可以获得
+
+### Samba 应用
+
+
+
+来自 Red Hat 和 RPM 仓库（参见第 1 章）。Samba 也包含在大多数 Linux 发行版中。其他信息可以从 SMB 新闻组 comp.protocols.smb 获得。软件包中提供了大量文档，并在您的系统上安装，通常位于 `/usr/share/doc` 目录下，子目录以 Samba 版本命名。在这里，您可以找到以 HTML 和文本格式编写的详尽文档，以及众多示例和当前常见问题解答。Samba HOW-TO 文档也可在 www.tldp.org 上获得。示例包括针对不同类型配置的示例 `smb.conf` 文件。`SWAT` 配置实用程序的主页还提供基于网页的 Samba 文档，以及不同功能的上下文级帮助。
+
+Samba 软件包由两个服务器守护进程和多个实用程序组成（参见表 37-1）。其中一个守护进程 `smbd`，为 SMB 客户端和其他支持 SMB 的系统（如 Windows）提供文件和打印机服务。`nmbd` 实用程序是一个守护进程，提供 NetBIOS 名称解析和服务浏览器支持。`smbclient` 实用程序为 Linux 客户端提供类似 FTP 的 Samba 服务访问方式。`smbmount` 和 `smbumount` 使 Linux 客户端能够挂载和卸载 Samba 共享目录。`smbstatus` 实用程序显示 SMB 服务器的当前状态以及正在使用它的用户。您使用 `testparm` 来测试 Samba 配置。`smbtar` 是一个 shell 脚本，可直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器。您使用 `nmblookup` 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址。随包还包括 Samba Web 管理工具（`SWAT`）和 `redhat-config-samba`。这使您可以使用网页或 GUI 界面创建和维护 Samba 配置文件 `/etc/samba/smb.conf`。Samba 配置文件保存在 `/etc/samba` 目录中。
+
+> 注意：要使用 `redhat-config-packages` 安装 Samba，请选择 Windows 文件服务器条目。
+
+Samba 提供四项主要服务：文件和打印机服务、身份验证和授权、名称解析以及服务公告。SMB 守护进程 `smbd` 提供文件和打印机服务，以及这些服务的身份验证和授权。这意味着网络上的用户可以共享文件和打印机。您可以通过要求用户提供密码来控制对这些服务的访问。当用户尝试访问共享目录时，会提示输入密码。控制可以以共享模式或用户模式实现。共享模式为共享资源设置一个密码，然后允许任何拥有该密码的用户访问它。用户模式为每个用户提供不同的密码。为此目的，Samba 维护自己的密码文件：`/etc/samba/smbpasswd`。
+
+名称解析和服务公告由 `nmbd` 服务器处理。名称解析本质上是将 NetBIOS 名称解析为 IP 地址。服务公告，也称为浏览，是将网络上可用的服务列表告知已连接的 Windows PC（以及通过 Samba 连接的 Linux PC）的方式。
+
+Samba 还包括 `winbind` 守护进程，它允许 Samba 服务器使用 Windows 域提供的身份验证服务。Samba 服务器无需维护自己的用户集来允许访问，而是可以使用 Windows 域身份验证服务对用户进行身份验证。
+
+> 注意：如果您想从 www.samba.org 下载压缩归档（`.tar.gz`）中的源代码或二进制文件，归档将解压到其自己的 `samba` 子目录中。要使用它，请将归档解压到 `/usr/local` 等软件目录中。确保将 `/usr/local/samba/bin` 添加到您的 `PATH` 中。或者，您也可以将 `samba/bin` 文件复制到 `/usr/bin` 中，但 `nmbd` 和 `smbd` 应复制到 `/usr/sbin`。
+
+| 应用 | 描述 |
+|---|---|
+| `smbd` | Samba 服务器守护进程，为 SMB 客户端提供文件和打印机服务 |
+| `nmbd` | Samba 守护进程，提供 NetBIOS 名称解析和服务浏览器支持 |
+| `smbclient` | 为 Linux 客户端提供类似 FTP 的 Samba 服务访问方式 |
+| `smbmount` | 在 Linux 客户端上挂载 Samba 共享目录 |
+| `smbumount` | 卸载 Linux 客户端上挂载的 Samba 共享目录 |
+| `smbpasswd` | 在 Samba 服务器上更改 SMB 加密密码 |
+| `smbstatus` | 显示 SMB 网络连接的当前状态 |
+| `smbrun` | `smbd` 与外部程序之间的接口程序 |
+| `testparm` | 测试 Samba 配置文件 `smb.conf` |
+| `smbtar` | 直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器 |
+| `nmblookup` | 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址 |
+| `redhat-config-samba` | Samba GUI 配置工具（系统设置：服务器设置：Samba 服务器） |
+| `SWAT` | Samba Web 管理工具，用于通过 Web 浏览器配置 `smb.conf`；使您能够使用网页界面创建和维护 Samba 配置文件 `smb.conf` |
+| `winbind` | 使用 Windows 域提供的身份验证服务 |
+
+表 37-1 Samba 应用
+
+## 启动 Samba
+
+对于简单的 Samba 设置，您应该能够使用随 Linux 发行版 Samba 软件包安装的默认 `smb.conf` 文件。如果需要进行更改，则必须重新启动 Samba 服务器才能使更改生效。启动、停止和重新启动 Samba 服务器由 `/etc/rc.d/init.d/smb` 脚本管理，使用选项 `start`、`stop` 和 `restart`。在 Red Hat 上，您可以直接按如下所示运行 `smb` 脚本：
+
+```
+service smb restart
+```
+
+在 Red Hat 上，您也可以使用桌面服务配置工具（`redhat-config-services`）来启动和停止 Samba。
+
+为了确保名称解析，您可以在 `/etc/lmhosts` 文件中输入主机名及其 IP 地址。在 Windows 系统中，`lmhosts` 条目由 IP 地址和系统的 NetBIOS 名称组成，即它在 Microsoft 网络上所知的名称。对于您的 Linux 系统，您可以输入 IP 地址和 Linux 系统的主机名。
+
+## 从 Linux 访问 Samba
+
+要从 Linux 系统测试连接，您可以使用 `smbclient` 命令查询 Samba 服务器。要访问 Samba 服务器上用户的 home 目录，请使用 Samba 服务器的 IP 或主机名地址，以及 `homes` 部分。使用 -U 选项指定要在系统上连接的用户，如下所示：
+
+```
+smbclient //turtle.mytrek.com/homes -U dylan
+```
+
+然后会提示您输入密码。如果客户端密码与服务器密码不同，请使用服务器密码。连接后，您会看到如下所示的 SMB 客户端提示符。然后您可以访问用户 home 目录中的文件：
+
+```
+smb: \>
+```
+
+## 从 Windows 访问 Samba
+
+要为 Windows 客户端设置连接，您需要指定 Windows 工作组名称并配置密码。工作组名称是在 Windows 桌面网络邻居中的整个网络窗口中显示的名称（在 Windows 2000、NT 和 XP 上为我的网络位置）。在 `smb.conf` 文件中，您在 `global` 部分的 `workgroup=` 条目中指定工作组名称。工作组名称应为大写，不超过八个字符，且不包含空格。
+
+然后您可以重新启动 Samba 服务器。在 Windows 客户端上，您将在网络邻居中的整个网络文件夹中看到工作组名称。在工作组中有一个 Samba 服务器的图标，在其中有一个用户目录的图标，如 `smb.conf` 文件的 `homes` 部分中指定的那样。
+
+## Samba 配置文件和工具
+
+Samba 配置选项保存在 `/etc/samba/smb.conf` 文件中。您编辑此文件以更改配置。完成任何更改后，您应该使用 `testparm` 程序测试 `smb.conf` 文件。`testparm` 程序检查配置条目的有效性。默认情况下，`testparm` 使用 `/etc/samba/smb.conf` 文件，尽管您可以将不同的配置文件作为参数提供：
+
+```
+testparm
+```
+
+要检查网络连接，请使用 `smbstatus` 命令。此命令返回所有活动 SMB 连接的列表。
+
+> 注意 `/etc/samba/smbusers` 文件将 Windows 网络用户名与 Linux Samba 服务器上的相应用户关联起来。例如，`admin` 和 `administrator` 被视为等同于 Linux `root` 用户。
+
+## 密码
+
+
+
+Windows 客户端与 Samba 服务器之间的连接因 Microsoft 网络上密码加密的实现而变得更加复杂。当前版本的 Windows 操作系统，包括升级版的 Windows NT、2000、98 和 95，现在默认要求使用加密密码。另一方面，Samba 默认使用未加密密码。要在 Samba 服务器和 Windows 客户端之间实现通信，您必须将 Windows 客户端更改为使用未加密密码，或将 Samba 服务器更改为使用加密密码。更安全的做法是在 Samba 服务器上实现加密密码，尽管这需要更多管理工作。尽管默认情况下未分发，Samba 可以构建为具有 SSL 支持。此 SSL 启用的 Samba 提供对加密 SSL 网络通信的支持。SSL 启用的 Samba 包含多个以 ssl 开头的 SSL 特定配置选项。例如，`ssl cipher` 允许您确定可使用的密码，`ssl CA certfile` 指定证书文件。
+
+Samba 还提供其自己的 Samba 密码 PAM 模块 `pam_smbpass.o`。有了此模块，您可以为 Samba 密码提供 PAM 身份验证支持，从而能够在受 PAM 控制的网络上使用 Windows 主机。该模块可用于在 PAM samba 文件中进行身份验证和密码管理。PAM samba 文件中的以下条目将使用 Samba 密码数据库实现 PAM 身份验证和密码：
+
+```
+auth required pam_smbpass.so nodelay
+password required pam_smbpass.so nodelay
+```
+
+请确保在 `smb.conf` 文件中启用 PAM：
+
+```
+obey pam restrictions = yes
+```
+
+## Samba 加密密码：`smbpasswd`
+
+如果您使用的是用户级安全而不是共享级安全，则加密密码会发挥作用。使用用户级安全，Windows 客户端对 Samba 服务器资源的访问仅允许该客户端上的用户。Windows 客户端上的每个用户都必须在 Samba 服务器上拥有相应的用户帐户。用户登录其 Windows 帐户，然后可以登录其 Samba 服务器帐户。用户必须提供用户名和密码登录。他们的用户名和密码必须在 `/etc/samba/smbpasswd` 文件中向 Samba 服务器注册。您使用 `smbpasswd` 命令添加这些密码。
+
+## 创建 Samba 密码文件
+
+要在 Samba 上实现加密密码，Samba 服务器随后需要维护一个加密的用户密码版本，以便 Windows 客户端使用。这个加密密码文件是 `/etc/samba/smbpasswd`。Samba 密码可以使用 `smbpasswd` 命令为不同用户添加或更改。最初，你应该生成 Samba 密码文件，以便为所有当前 Samba 用户提供条目。对于此任务，你使用 `mksmbpasswd.sh` 脚本。你将 Samba 服务器的 `/etc/passwd` 文件内容输入到此脚本中，它会生成可用于加密密码的条目。你使用重定向（>）来创建加密文件。在下面的示例中，`/etc/samba/smbpasswd` 文件最初由 `mksmbpasswd.sh` 脚本生成。`cat` 命令与管道操作一起使用，将 `/etc/passwd` 文件的内容输入到 `mksmbpasswd.sh` 脚本中：
+
+```
+cat /etc/passwd | mksmbpasswd.sh > /etc/samba/smbpasswd
+```
+
+如果你的用户及其密码由 NIS 管理，你将使用 `ypcat` 命令来访问用户密码，如下所示：
+
+```
+ypcat passwd | mksmbpasswd.sh > /etc/samba/smbpasswd
+```
+
+然后你需要更改此文件的权限以防止未经授权的访问。600 选项仅允许 root 用户进行读和写访问：
+
+```
+chmod 600 /etc/samba/smbpasswd
+```
+
+## 添加和更改密码
+
+此时，`/etc/samba/smbpasswd` 将包含所有当前用户的条目，密码字段为虚拟字段。然后你使用 `smbpasswd` 命令添加或稍后更改加密密码。要为特定用户添加密码，你使用带有用户名的 `smbpasswd` 命令：
+
+```
+# smbpasswd dylan
+New SMB Password: new-password
+Repeat New SMB Password: new-password
+```
+
+用户可以使用 `smbpasswd` 来更改自己的密码。以下示例显示了如何使用 `smbpasswd` 更改你的 Samba 密码。如果用户没有 Samba 密码，他们只需按 ENTER 键即可。
+
+```
+$ smbpasswd
+Old SMB password: old-password
+New SMB Password: new-password
+Repeat New SMB Password: new-password
+```
+
+## 配置加密密码
+
+你还必须确保 Samba 配置为使用加密密码。将 `encrypt passwords` 选项设置为 `yes` 并指定 SMB 密码文件。这些选项已设置在 `/etc/samba/smb.conf` 文件中（在下一节中描述），但它们前面带有 ; 符号被注释掉了。只需找到这些行并删除行开头的 ; 符号即可：
+
+```
+encrypt passwords = yes
+smb passwd file = /etc/samba/smbpasswd
+```
+
+你也可以使用 SWAT 来进行此更改。在 GLOBALS 页面中，从 `Encrypt Password` 条目的弹出菜单中选择 Yes。然后通过单击 Commit Changes 按钮保存更改。
+
+务必使用以下命令重新启动 Samba 服务器：
+
+```
+service smb restart
+```
+
+## 使用 `redhat-config-samba` 配置 Samba
+
+Red Hat 现在提供了一个简单的配置工具，用于提供有关 Samba 服务器的基本信息，以及添加 Samba 用户和指定 Samba 共享（见图 37-1）。
+
+你可以从 System Setting 菜单中可访问的 Server Settings 菜单中的 Samba 条目启动 `redhat-config-samba`（或从 Start Here 窗口的 System Settings 窗口中的 Server Settings 窗口启动）。`redhat-config-samba` 工具将列出服务器的所有共享。你可以使用顶部的按钮来管理你的共享，添加新的或删除当前的。如果删除它们，实际目录不会被删除；它们只是失去了作为共享目录的状态。在图 37-1 中，已设置了一个名为 `/grouppie/vacation` 的共享目录，具有只读访问权限。
+
+## 使用 `redhat-config-samba` 进行服务器配置
+
+要配置你的 Samba 服务器，请从 Preferences 菜单中选择 Server Settings。这将打开一个窗口，其中包含两个面板，Basic 和 Security。在 Basic 面板上，你输入 Samba 服务器的工作组名称。在 Security 面板上，你指定身份验证模式、密码加密选项以及访客帐户的名称，以及身份验证服务器。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_764_0.png)
+
+FIGURE 37-1 `redhat-config-samba`
+
+-   如后面详细解释的那样，认证模式指定了访问级别，可以是 `user`、`share`、`server` 或 `domain`。用户级访问通过用户密码限制访问，而共享访问则允许任何访客访问。
+-   通常，你会选择加密密码，而不是让密码以明文形式在网络上传输。
+-   Guest 用户是用于允许访问你希望对任何用户开放的共享或打印机而无需提供密码的账户名称的。弹出菜单会列出你当前的所有用户，其中 `nobody` 为默认选中项。
+
+## 使用 `redhat-config-samba` 添加 Samba 用户
+
+使用 `redhat-config-samba`，你可以轻松添加用户和共享。用户级访问将用户限制为那些也在 Samba 服务器上拥有账户的用户。Samba 为用户维护自己的密码列表。要为用户提供 Samba 访问权限，你需要将该用户注册为 Samba 用户。从 Preferences 菜单中选择 Samba Users 以打开 Samba Users 窗口，点击 Add User 按钮。在这里你输入 Unix Username、Windows Username 和 Samba Password。还有一个额外的框用于确认 Samba Password。Unix Username 是一个弹出窗口，列出你在 Samba 服务器上的所有用户。
+
+## 使用 `redhat-config-samba` 指定 Samba 共享
+
+
+
+点击 Add 以添加共享，或从 File 菜单中选择 Add Share。在 Basic 面板上，你可以输入要在 Samba 服务器上共享的目录，并指定完整路径名。Browse 按钮可让你搜索并选择目录。你还可以将权限设置为只读或读写。在 Access 面板上，你可以限制对特定用户的访问或允许所有用户访问。系统中所有 Samba 用户都将列出，并带有复选框，你可以在其中选择要授予访问权限的用户。
+
+# Samba smb.conf 配置文件
+
+你使用位于`/etc/samba`目录中的`smb.conf`文件来配置 Samba 守护进程。该文件分为两个基本部分：一个用于全局选项，另一个用于共享服务。共享服务，也称为共享，可以是文件空间服务（客户端用作其本地文件系统的扩展）或可打印服务（客户端用于访问运行服务器的主机上的打印服务）。文件空间服务是一个客户端被授予访问权限的目录；他们可以将其中的空间用作其本地文件系统的扩展。可打印服务为客户端提供对打印服务的访问，例如由 Samba 服务器管理的打印机。
+
+`/etc/samba/smb.conf`文件保存各种共享资源的配置，以及适用于所有资源的全局选项。Linux 会在你的`/etc/samba`目录中安装一个`smb.conf`文件。该文件包含用于你的发行版的默认设置。你可以编辑该文件以根据自己的需要自定义配置。许多条目都用分号或`#`号注释，你可以删除初始注释符号使其生效。不要直接编辑文件，你可能希望使用 SWAT 配置实用程序，它提供了一个易于使用的全屏网页界面，用于输入共享资源的配置。SWAT 配置实用程序还提供广泛的帮助功能和文档。要获取 Samba 配置参数的完整列表，请查看`smb.conf`的手册页。大量`smb.conf`示例文件位于`/usr/share/doc/samba*`目录的 examples 子目录中。
+
+在`smb.conf`文件中，全局选项首先设置，然后是每个共享资源的配置。`smb.conf`文件的基本组织组件是 section。每个资源都有自己的 section，其中包含其服务名称及其属性的定义。即使是全局选项也放在自己的 section 中，标记为`global`。例如，每个文件空间共享的 section 由目录和允许文件空间用户使用的访问权限组成。每个共享的 section 以共享资源名称标记。特殊 section，称为`printers`和`homes`，为 Samba 服务器上可访问的用户目录和打印机提供默认描述。在特殊 section 之后，输入特定服务的 section，即对特定目录或打印机的访问。
+
+一个 section 以 section 标签开始，该标签由共享资源名称括在括号中组成。除了特殊 section 外，section 标签可以是你想要的任何名称。在 section 标签之后，在单独的行上，输入此服务的不同参数。参数定义要授予服务用户访问权限。例如，对于一个目录，你可能希望它可浏览，但只读，并使用某个打印机。参数以`parameter name = value`的格式输入。你可以通过在注释行开头放置分号来输入注释。
+
+一个 section 配置的简单示例如下。section 标签括在括号中，后跟两个参数条目。`path`参数指定允许访问的目录。`writable`参数指定用户是否对该目录及其文件空间具有写访问权限。
+
+```
+[mysection]
+path = /home/chris
+writable = true
+```
+
+打印机服务具有相同的格式，但需要某些其他参数。`path`参数指定打印机 spool 目录的位置。`read-only`和`printable`参数设置为 true，表示该服务为只读且可打印。`public`表示任何人都可以访问它。
+
+```
+[myprinter]
+path = /var/spool/samba
+read only = true
+printable = true
+public = true
+```
+
+参数条目通常同义但不同条目具有相同含义。例如，`read only = no`、`writable = yes`和`write ok = yes`都意味着相同的事情，即向用户提供写访问权限。`public`参数是`guest ok`的同义词。SWAT 将使用`guest ok`而不是`public`，并使用`read only`代替`writable`。
+
+## SWAT 与 smb.conf
+
+SWAT 是一款基于网络的 Samba 配置工具，它使用网页界面让你能够配置`smb.conf`文件。SWAT 是迄今为止配置 Samba 服务器最简单、最易用的方式。SWAT 提供了一个简单易用的网页界面，带有按钮、菜单和文本框用于输入值。顶部的一排简单按钮栏让你可以选择要配置的部分。甚至还有一个按钮栏用于添加密码。要查看 SWAT 修改`smb.conf`文件的内容，请点击 View。初始屏幕（HOME）显示 Samba 文档的索引（见图 37-2）。SWAT 更有帮助的功能之一是其上下文相关帮助。对于 SWAT 显示的每个参数和选项，你可以点击 Help 按钮来显示该选项的详细解释及其使用示例。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_767_0.png)
+
+### 激活 SWAT
+
+SWAT 通常随 Samba 一起安装。SWAT 是一个`xinetd`服务。作为`xinetd`服务，它会列在`/etc/services`和`/etc/xinetd.d/swat`文件中。SWAT 程序使用端口 901，如`/etc/services`文件中所示：
+
+```
+swat 901/tcp # Samba Web Administration Tool
+```
+
+作为`xinetd`服务，SWAT 在`/etc/xinetd.d`目录下会有自己的`xinetd`文件，即`/etc/xinetd.d/swat`。SWAT 默认是关闭的，其`disable`选项设置为 yes。要使用 SWAT，你必须将`disable`选项更改为 no，如下所示：
+
+```
+# default: off
+# description: SWAT is the Samba Web Admin Tool. Use swat \
+#           to configure your Samba server. To use SWAT, \
+#           connect to port 901 with your favorite web browser.
+service swat
+{
+    disable = no
+    port = 901
+    socket_type = stream
+    wait = no
+    only_from = 127.0.0.1
+    user = root
+    server = /usr/sbin/swat
+    log_on_failure += USERID
+}
+```
+
+你可以通过使用`chkconfig`或服务配置工具来打开 SWAT 服务，或者通过手动编辑`/etc/xinetd.d/swat`文件并将`disable`选项更改为 no 来实现此操作。`chkconfig`会为你编辑`/etc/xinetd.d/swat`文件，进行此更改（有关`chkconfig`的更多信息，请参阅第 20 章）。以下示例展示了如何使用`chkconfig`命令启用 SWAT：
+
+```
+chkconfig swat on
+```
+
+使用`chkconfig`，你无需手动重启`xinetd`服务器。但是，如果你手动编辑文件，你还必须重启服务器才能使更改生效。在 Red Hat 上，你可以使用`xinetd`脚本轻松完成此操作，如下所示：
+
+```
+service xinetd restart
+```
+
+在使用 SWAT 之前，请备份当前的`smb.conf`文件。SWAT 会覆盖原始文件，用它自己更简短、更简洁的版本替换。`smb.conf`文件在最初安装时列出了大量带有详细解释的选项。这是一个很好的学习工具，提供了创建各种打印机和目录部分的优秀示例。只需制作一个备份副本：
+
+```
+cp /etc/samba/smb.conf /etc/samba/smb.bk
+```
+
+### 访问 SWAT
+
+你可以通过在 GNOME 或 KDE 系统菜单中选择 Samba Configuration 条目来启动 SWAT。这将使用本地主机 IP 地址`127.0.0.1`和端口 901 打开你的网页浏览器到 SWAT 页面，如图 37-2 所示。你也可以打开浏览器并输入 IP 地址`127.0.0.1`和端口 901 来访问 SWAT。
+
+```
+http://127.0.0.1:901
+```
+
+
+
+你可以通过在网页浏览器中输入 Samba 服务器的地址以及其端口（901）从远程位置启动 SWAT。但是，你首先必须在`/etc/xinetd.d/swat`文件中启用此功能。目前，该文件中的`only_from`行将访问限制为仅`localhost`。要启用来自任何远程系统的访问，只需删除此行。如果你想为某些特定主机提供访问权限，可以在`only_from`行的`127.0.0.1`之后列出它们。确保在进行任何更改后重启 SWAT。以下示例启用了来自`127.0.0.1`和`rabbit.mytrek.com`的访问：
+
+```
+only_from 127.0.0.1 rabbit.mytrek.com
+```
+
+在远程系统上的网页浏览器中输入以下 URL 即可显示`turtle.mytrek.com` Samba 服务器上的 SWAT 网页界面：
+
+```
+http://turtle.mytrek.com:901
+```
+
+首先会要求你输入用户名和密码。要配置 Samba，你需要输入 root 和 root 密码。（如果你是从远程系统连接，不建议以明文形式输入 root 密码——请参阅第 28 章。）
+
+## SWAT 配置页面
+
+主 SWAT 页面显示一个按钮栏，其中包含 HOME、GLOBAL、SHARES、PRINTERS、STATUS、VIEW 和 PASSWORD 的链接按钮（见表 37-2）。你可以使用 STATUS 列出活动的 SMB 网络连接。
+
+| Page | Description |
+|------|-------------|
+| HOME | SWAT 主页，列出文档资源。 |
+| GLOBALS | 配置 Samba 的全局部分。 |
+| SHARES | 选择并配置要共享的目录（共享）。 |
+| PRINTERS | 设置对打印机的访问。 |
+| STATUS | 检查 Samba 服务器的状态，包括`smbd`和`nmbd`；列出当前活动的客户端及其正在执行的操作。你可以从此页面重启、停止或启动 Samba 服务器。 |
+| VIEW | 显示`smb.conf`配置文件。 |
+| PASSWORD | 设置服务器和有访问权限的用户的密码访问。 |
+
+对于各个部分，SWAT 可以显示基本版本或高级版本。基本版本仅显示简单配置所需的条目，而高级版本则显示该类型部分的全部可能条目。一个按钮——分别标记为“高级视图”和“基本视图”——位于部分页面顶部，用于在高级版本和基本版本之间切换（参见图37-3）。打印机和共享的部分页面还设有附加按钮和一个菜单，用于选择要配置的特定打印机或共享。这里使用的术语“共享”指的是你希望通过 Samba 提供的目录。当你点击 SHARES 按钮时，最初只会在 SHARES 页面顶部看到几个按钮。你可以使用这些按钮来创建新的部分或编辑已设置的共享部分。要设置一个新的共享部分，请在“创建共享”按钮旁边的框中输入其名称，然后点击该按钮。新的共享名称会出现在“选择共享”按钮旁边的下拉菜单中。最初，此按钮为空白。点击它可显示当前共享部分的列表。选择你想要的共享，然后点击“选择共享”按钮。页面随后会显示用于配置共享的条目。对于新共享，这些条目要么为空白，要么为默认值。例如，要选择配置用户主目录默认设置的`Homes`部分，请点击下拉菜单，在其中找到`Homes`条目。选择它，然后点击“选择共享”按钮。`Homes`部分的条目便会显示出来。同样的流程也适用于打印机页面，你可以在其中选择打印机部分或为特定打印机创建部分。
+
+> 注意：Samba 会自动为已在你的系统或网络上配置好的任何打印机创建条目。它会从你的`/etc/printcap`文件中读取这些信息。你需要编辑打印机条目以控制对打印机的访问。Samba 要使用打印机，首先必须在你的系统中将其配置为本地或网络打印机（参见第4章中的`redhat-config-printer`）。请记住，网络打印机可能是连接到 Windows 系统的打印机。
+
+在图37-3中，请注意每个条目旁边的 Help 链接。这样的链接会显示一个网页，展示`smb.conf`的 Samba 文档，并定位到相应条目处。在此图中，用户点击`Guest OK`条目旁边的 Help 链接后，文档中`Guest OK`部分的内容便显示出来。
+
+当你完成某个部分的编辑后，点击其页面上的“提交更改”按钮以保存更改。对你处理的每个单独页面（包括 GLOBALS 页面）都执行此操作。点击“提交更改”按钮会生成新版本的`smb.conf`文件。为了让 Samba 服务器读取这些更改，你需要重新启动它。你可以通过点击“状态”页面上的“重新启动`smb`”按钮来完成此操作。
+
+## 使用 SWAT 创建新共享
+
+使用 SWAT 创建新共享的基本步骤如下：
+
+1. 选择“共享”页面，并在“创建共享”文本框中输入新共享的名称。
+
+2. 点击“创建共享”按钮以打开新共享的配置页面。新共享的名称将出现在“选择共享”按钮旁边的弹出菜单中。
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_771_0.png)
+
+图37-3  SWAT 共享页面，显示`Homes`部分
+
+3. 输入各种选项。对于“基本选项”，你必须在“路径”文本框中指定共享的目录。在“注释”文本框中，输入将显示在 Windows 上的共享标签。
+
+4. 点击“提交更改”按钮以将你的共享条目保存到 Samba 配置文件`smb.conf`中。然后重新启动 Samba 服务器以使更改生效（点击“状态”页面上的“重新启动`smb`”按钮）。
+
+你可以按照类似的过程添加新打印机，但请确保打印机也已在使用 Samba 服务器的系统上配置好。
+
+当然，你也可以直接编辑`/etc/samba/smb.conf`文件。这是一个简单的文本文件，你可以使用任何文本编辑器进行编辑。你仍然必须重新启动 SMB 服务器才能使更改生效，在 Red Hat 上你可以使用以下命令手动完成：
+
+```
+service smb restart
+```
+
+## 一个由 SWAT 生成的 smb.conf 示例
+
+以下示例展示了一个由 SWAT 为简单配置生成的`smb.conf`文件。这比 Samba 最初附带的注释密集的版本要小得多。在此配置中，实现了共享级安全性并启用了密码加密。定义了一个名为`myprojects`的共享，它允许来宾访问且可写。还定义了一个名为`myhp`的打印机共享，它也支持来宾访问。
+
+```
+# Samba config file created using SWAT
+# from localhost.localdomain (127.0.0.1)
+
+# Date: 2001/09/09 01:09:07
+
+# Global parameters
+
+[global]
+
+    server string = Samba Server
+
+    security = SHARE
+
+    encrypt passwords = Yes
+
+    ssl CA certFile = /usr/share/ssl/certs/ca-bundle.crt
+
+    log file = /var/log/samba/%m.log
+
+    max log size = 0
+
+    socket options = TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192
+
+    dns proxy = No
+
+    printing = cups
+
+[homes]
+
+    comment = Home Directories
+
+    path = /home
+
+    writeable = Yes
+
+    guest ok = Yes
+
+[printers]
+
+    comment = All Printers
+
+    path = /var/spool/samba
+
+    guest ok = Yes
+
+    printable = Yes
+
+    browseable = No
+
+[myprojects]
+
+    path = /myprojects
+
+    writeable = Yes
+
+    guest ok = Yes
+
+[myhp]
+
+    path = /var/spool/samba
+
+    writeable = Yes
+
+    guest ok = Yes
+
+    printable = Yes
+
+    printer = myhp
+
+    oplocks = No
+
+    share modes = No
+```
+
+## Global Section
+
+`Global`部分决定了整个服务器的配置，以及在`home`和目录段中使用的默认条目。在此部分中，您可以找到工作组名称、密码配置和目录设置的条目。这里讨论了其中几个更重要的条目。图 37-4 显示了 SWAT 上的 Global Variables 页面，您可以使用它来设置全局选项。此页面的 Basic View 列出了您最可能需要的选项。
+
+### Global Variables
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_773_0.png)
+
+### FIGURE 37-4 SWAT Global Variables page
+
+
+
+## Specifying the Workgroup and Server
+
+`workgroup`条目指定您想要赋予网络的工作组名称。这是 Windows 客户端的 Network Neighborhood 窗口中显示的工作组名称。`smb.conf`文件中默认的`workgroup`条目如下所示：
+
+```
+[global]
+# workgroup = NT-Domain-Name or Workgroup-Name
+workgroup = MYGROUP
+```
+
+工作组名称必须对 Samba 服务器支持的每个 Windows 客户端都相同。在 Windows 客户端上，工作组名称通常可以在控制面板窗口中的系统工具的 Network Identification 或 General 面板中找到。在许多客户端上，这默认为`WORKGROUP`。如果您想保留此名称，则必须相应地更改`smb.conf`文件中的`workgroup`条目。`workgroup`条目和每个 Windows 客户端上的工作组名称必须相同。
+
+```
+workgroup = WORKGROUP
+```
+
+`server string`条目保存您希望在客户端系统上为服务器显示的描述性名称。在 Windows 系统上，这是 Samba 服务器图标上显示的名称。默认值为 Samba Server，但您可以将其更改为您想要的任何名称。
+
+```
+# server string is the equivalent of the NT Description field
+server string = Samba Server
+```
+
+## Security Level
+
+Samba 资源通常以共享级或用户级安全进行访问。在共享级别，任何用户都可以访问资源而无需登录服务器。在用户级别，每个用户都必须使用密码登录。此外，Windows 98、ME、NT 和 XP 客户端在登录过程中使用加密密码。您将需要为这些客户端启用加密密码。加密密码的默认值为`no`，因此您需要将其更改为`yes`。在`smb.conf`文件中，`security`选项设置为您想要的级别，`encrypt passwords`选项设置为`yes`以启用加密。
+
+```
+security = user
+encrypt passwords = yes
+```
+
+如果您想要共享级安全，请将`security`选项指定为`share`：
+
+```
+security = share
+```
+
+在 SWAT Globals 页面上，从 Security 弹出菜单中选择安全级别，即 User 或 Share。然后将`encrypt passwords`条目选择为`Yes`。
+
+## Network Access Control
+
+作为安全措施，您可以将对 SMB 服务的访问限制为某些指定的本地网络。在主机网络上，输入您想要允许访问的本地网络的网络地址。要拒绝网络中除少数特定主机之外的所有人访问，您可以在网络地址后使用 EXCEPT 选项并附上这些主机的 IP 地址。localhost (127) 始终自动包含在内。下一个示例允许访问两个本地网络：
+
+```
+hosts allow = 192.168.1. 192.168.2.
+```
+
+## Printing
+
+要启用打印，请允许 Samba 从您的`printcap`文件加载打印机描述。
+
+```
+printcap name = /etc/printcap
+load printers = yes
+```
+
+要指定您的打印系统，您可以设置`printing`选项。在 Red Hat 上，CUPS 现在是受支持的打印服务器。要将打印系统设置为 CUPS，请使用以下设置：
+
+```
+printing = cups
+```
+
+## Guest User Access
+
+您可以使用访客用户登录来使资源对任何人可用，而无需密码。访客用户登录将处理任何未使用特定帐户登录的用户。在 Linux 系统上，默认情况下 Samba 将使用`nobody`用户作为访客用户。或者，您可以设置并指定一个特定用户作为访客用户。您使用`smb.conf`文件中的`guest account`条目指定访客用户。随 Samba 提供的注释`smb.conf`文件目前列出了一个用于设置名为`pcguest`的访客用户的注释条目。您可以将其设为您想要用作访客用户的用户。请确保将访客用户添加到密码文件：
+
+```
+guest account = pcguest
+```
+
+在 SWAT 中，你可以在 GLOBALS 页面上指定一个访客账户条目。默认情况下，这已经设置为`nobody`用户。
+
+## 密码
+
+如前所述，用户级安全要求每个用户使用密码登录 Samba 服务器。Samba 可以使用明文或加密密码，尽管当前 Windows 客户端支持加密密码。你可以使用`smbpasswd`命令来添加和更改 Samba 密码。在 SWAT 中，你可以在 Globals 页面上启用密码加密，并在 Passwords 页面上管理密码。在 Server Password Management 部分，你可以添加、更改、删除、启用或禁用用户。要添加新用户，输入用户名和密码，然后点击 Add New User。作为 Samba 服务器上的`root`用户，你可以添加新密码以及启用或禁用现有密码。普通用户可以使用 Client/Server Password Management 部分来更改自己的密码。
+
+## Homes 部分
+
+`homes`部分指定了通过 SMB 协议由远程用户访问用户主目录的默认控制。要在 SWAT 上访问`homes`部分，只需选择 SHARES 页面，从下拉菜单中选择`homes`条目，然后点击 Choose Share。将`browseable`条目设置为`no`可防止客户端在文件浏览器中列出文件。`writable`条目指定用户对其主目录中的文件是否具有读写控制。`create mode`和`directory mode`设置新文件和目录的默认权限（在 SWAT 上，这些是`create mask`和`directory mask`）。`valid user`条目使用`%S`宏映射到当前服务。
+
+```
+[homes]
+comment = Home Directories
+browseable = no
+writable = yes
+valid users = %S
+create mode = yes
+directory mode = 775
+```
+
+## Printer 部分
+
+`printers`部分指定了访问打印机的默认控制。这些用于没有特定部分的打印机。在这种情况下，Samba 使用服务器`printcap`文件中定义的打印机。
+
+在此上下文中，将`browseable`设置为`no`只是将`printers`部分从客户端隐藏起来，而不是隐藏打印机。`path`条目指定 Samba 将用于打印机文件的 spool 目录的位置。要启用打印，`printable`条目必须设置为`yes`。要允许访客用户打印，将`guest ok`条目设置为`yes`。`writable`条目设置为`no`可防止任何写入访问，除了打印机对 spool 文件的管理。在 SWAT 上，选择 PRINTER 页面并在下拉菜单中选择`printers`条目，然后选择 Choose Printers。以下是`printers`部分的标准实现：
+
+```
+[printers]
+comment = All Printers
+path = /var/spool/samba
+browseable = no
+guest ok = yes
+writable = no
+printable = yes
+```
+
+如果无法打印，请务必检查 Default Print 条目。这指定了服务器实际用于打印文档的命令。
+
+## Shares
+
+特定共享资源（如系统上的目录）的部分通常放在`homes`和`printers`部分之后。对于定义共享目录的部分，为系统输入一个标签。然后，在单独的行上，输入其路径名和你想要设置的各种权限选项。在`path =`选项中，指定目录的完整路径名。`comment =`选项保存要赋予共享的标签。你可以使目录可写、公开或只读。你可以使用`valid users`条目控制对目录的访问。通过此条目，你可以列出允许访问的用户。对于未设置的选项，将使用在`global`、`homes`和`printers`段中输入的默认值。
+
+在 SWAT 中，你使用 SHARES 页面来创建和编辑共享目录。从下拉菜单中选择要编辑的目录并点击 Choose Share。Basic View 显示常用条目。对于`valid users`等条目，你需要选择 Advanced View。务必在转到另一个 Share 或 Printer 部分之前点击 Commit Changes（参见图 37-5）。
+
+以下示例是由 SWAT 从图 37-5 所示的共享页面生成的`myprojects`共享。在这里，`/myprojects`目录被定义为对任何具有访客访问权限的用户开放的共享资源。
+
+
+
+```
+[myprojects]
+comment = Great Project Ideas
+path = /myprojects
+writable = yes
+guest ok = yes
+printable = yes
+```
+
+要将访问限制为特定用户，可以列出有效用户集。将 `guest ok` 选项设置为 `no` 可将其关闭以防止他人访问。
+
+```
+[mynewmusic]
+comment = Service
+path = /home/specialprojects
+valid users = mark
+guest ok = no
+writable = yes
+printable = no
+```
+
+要允许完全的公共访问，将 `guest ok` 条目设置为 `yes`，且不设置 `valid user's` 条目。
+
+```
+[newdocs]
+path = /home/newdocs
+guest ok = yes
+writable = yes
+printable = yes
+```
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_777_0.png)
+
+## 分享参数
+
+### 图 37-5 SWAT Samba 共享
+
+要设置一个可由多个用户共享的目录，且每个用户对其创建的文件拥有控制权，只需在 `Valid Users` 条目中列出用户即可。创建文件的权限由 `Create Mask` 条目指定（与 `create mode` 相同）。在此示例中，权限设置为 `765`，这为所有者提供读/写/执行访问权限，为组成员提供读/写访问权限，仅为其他所有人提供读/执行访问权限（默认值为 `744`，组和其他权限为只读，参见第 28 章）：
+
+```
+[myshare]
+comment = Writer's projects
+path = /usr/local/drafts
+valid users = justin chris dylan
+guest ok = no
+writeable = yes
+printable = no
+create mask = 0765
+```
+
+更多示例，请查看原始 `smb.conf` 文件中为目录 `fredsdir` 显示的 Shares 部分的示例。
+
+## 打印机
+
+对特定打印机的访问在 `smb.conf` 文件的 Printers 部分中定义。你也可以在 SWAT Printers 页面中配置打印机。对于打印机，你需要包含 `Printer` 和 `Printable` 条目，并指定所使用的打印服务器类型。通过 `Printer` 条目命名打印机，并将 `Printable` 条目设置为 `yes` 以允许打印。
+
+你可以使用 `valid users` 条目控制对特定用户的访问，并将 `Public` 条目设置为 `no`。对于公共访问，将 `Public` 条目设置为 `yes`。对于 Red Hat 上使用的 CUPS 服务器，将 `printing` 选项设置为 `cups`。在 SWAT 上，你可以在 Printers 页面上创建单独的 Printer 部分。默认条目已为你设置好。
+
+以下示例设置了一个可供访客用户访问的打印机。这将打印机开放给网络上的任何用户使用。用户需要对位于 `/var/spool/samba` 的打印机 spool 目录具有写访问权限。请记住，任何打印机都必须首先安装在你的系统上。以下打印机已作为 `myhp` 安装，并且在 `/etc/printcap` 中有该名称的条目。在 Red Hat 上，你可以使用 `redhat-config-printer` 安装 LPRng 打印机，为其命名并选择驱动程序（参见第 4 章和第 25 章）。你使用 CUPS 管理工具为 CUPS 服务器设置打印机（参见第 25 章）。`Printing` 选项可以从通用 Printers 共享继承。
+
+```
+[myhp]
+
+    path = /var/spool/samba
+    writeable = yes
+    guest ok = yes
+    printable = yes
+    printer = myhp
+    oplocks = no
+    share modes = no
+    printing = cups
+```
+
+与共享类似，你可以将打印机使用限制为特定用户，拒绝公共访问。以下示例设置了一个仅 `larisa` 和 `aleina` 用户可访问的打印机（如果你愿意，可以添加其他用户）。用户需要对打印机的 spool 目录具有写访问权限。
+
+```
+[larisalaser]
+
+    path = /var/spool/samba
+    writeable = yes
+    valid users = larisa aleina
+    guest ok = no
+    printable = yes
+    printing = cups
+    printer = myhp
+    oplocks = no
+    share modes = no
+```
+
+## 变量替换
+
+对于分配给参数的字符串值，你可以加入替换运算符。这提供了在指定可能依赖上下文的值，例如用户名时更大的灵活性。例如，假设一项服务需要为每个登录的用户使用单独的目录。这样的目录路径可以使用 `$u` 变量指定，该变量会替换为当前用户的名称。字符串 `path = /tmp/$u` 对于用户 `justin` 会变成 `path = /tmp/justin`，对于用户 `dylan` 会变成 `/tmp/dylan`。表 37-3 列出了一些更常见的替换变量。
+
+### 表 37-3 Samba 替换变量
+
+| Variable | Description |
+|---|---|
+| `%S` | Name of the current service |
+| `%P` | Root directory of the current service |
+| `%u` | Username of the current service |
+| `%H` | Home directory of the user |
+| `%h` | Internet hostname on which Samba is running |
+| `%m` | NetBIOS name of the client machine |
+| `%L` | NetBIOS name of the server |
+| `%M` | Internet name of the client machine |
+| `%I` | IP address of the client machine |
+
+## 测试 Samba 配置
+
+在对 `smb.conf` 文件进行更改后，你可以使用 `testparm` 程序来检查条目是否正确输入。`testparm` 检查 Samba 条目的语法和有效性。默认情况下，`testparm` 检查 `/etc/samba/smb.conf` 文件。如果你使用不同的文件作为配置文件，可以将其作为参数指定给 `testparm`。你也可以让 `testparm` 检查特定主机是否可以访问配置文件设置的服务。
+
+在 SWAT 中，Status 页面会列出你的连接和共享。从命令行，你可以使用 `smbstatus` 命令检查网络上当前 Samba 连接的情况。
+
+要检查 Samba 服务器的实时运行情况，你可以登录到运行 Samba 服务器的 Linux 系统上的用户账户并连接到服务器。
+
+## 域登录
+
+Samba 还支持域登录，即用户可以登录到网络。可以为单个用户设置登录脚本。要配置此类 netlogon 功能，你需要在 `smb.conf` 文件中设置一个 netlogon 共享。以下示例取自原始 `smb.conf` 文件。此共享保存 netlogon 脚本——在本例中为 `/home/netlogon` 目录——该目录不应可写但应可被所有用户访问（Guest OK）：
+
+```
+[netlogon]
+comment = Network Logon Service
+path = /home/netlogon
+guest ok = yes
+writable = no
+share modes = no
+```
+
+Global 部分将启用以下参数：
+
+```
+domain logons = yes
+```
+
+使用 netlogon，你可以将 Samba 配置为 Linux 和 Windows 主机的身份验证服务器。每个主机都需要设置一个 Samba 用户名和密码。在 `smb.conf` 文件的 Global 部分中，请确保启用加密密码、用户级安全以及域登录，并且操作系统的级别为 33 或更高：
+
+```
+[global]
+encrypt passwords = yes
+security = user
+domain logons = yes
+os level = 33
+```
+
+> 注意 你也可以将 Samba 配置为 Windows NT 网络的主域控制器（PDC）。作为 PDC，Samba 可以处理域登录、检索用户和组列表，并提供用户级安全。
+
+## 使用客户端访问 Samba 服务
+
+
+
+连接到 SMB 网络的客户端系统可以访问 Samba 服务器提供的共享服务。Windows 客户端应该能够通过 Windows 桌面上的“网络邻居”和“整个网络”图标自动访问共享目录和服务。对于连接到同一网络的其他 Linux 系统，可以使用特殊的 Samba 客户端程序访问 Samba 服务。使用`smbclient`，本地 Linux 系统可以连接到 Samba 服务器上的共享目录并传输文件，以及运行 shell 程序。使用`smbmount`，可以将 Samba 服务器上的目录挂载到 Linux 客户端的本地目录。
+
+> 注意 有多个 Samba 浏览器客户端可用于 GNOME 和 KDE。对于 KDE，你可以使用 Komba2（可从 apps.kde.com 下载）。对于 GNOME，你可以使用 Gnomba。
+
+## `smbclient`
+
+`smbclient` 实用程序像 FTP 一样操作，用于通过 SMB 协议访问系统。与使用 FTP 客户端可以访问 FTP 服务器或 Unix 系统不同，使用`smbclient`你可以访问 SMB 共享服务，无论是在 Samba 服务器上还是在 Windows 系统上。许多`smbclient`命令与 FTP 相似，例如`mget`用于传输文件或`del`用于删除文件。`smbclient`程序有多个选项用于查询远程系统以及连接到它。有关完整选项和命令列表，请参阅`smbclient`手册页。`smbclient`程序以服务器名称和你想在该服务器上访问的服务作为参数。双斜杠在服务器名称前，单斜杠将其与服务分隔开。服务可以是任何共享资源，例如目录或打印机。服务器名称是其 NetBIOS 名称，可能与 IP 名称相同也可能不同。例如，要指定名为`turtle.mytrek.com`的服务器上的`myreports`共享目录，请使用`//turtle.mytrek.com/myreports`。如果必须指定路径名，请对 Windows 文件使用反斜杠，对 Unix/Linux 文件使用正斜杠：
+
+```
+//server-name/service
+```
+
+你也可以提供访问服务的密码。将其作为服务名称之后的参数输入。如果不提供密码，将提示你输入。
+
+> 注意 你也可以使用 Nautilus（GNOME 文件管理器）来访问 Samba 共享。使用`smb:`协议，如`smb://lizard/windata`。仅输入`smb://`将显示所有 Samba 共享。
+
+## 使用 `smbclient` 访问共享
+
+然后你可以添加多个选项来访问共享，例如远程用户名或可用服务的列表。使用`-I`选项，你可以使用 IP 地址指定系统。你使用`-U`选项和登录名来指定在远程系统上想要使用的远程登录名。如果需要密码，请附加`%`与密码一起使用。使用`-L`选项，你可以获取服务器上提供的服务列表，例如共享目录或打印机。以下命令将列出主机`turtle.mytrek.com`上可用的共享：
+
+```
+smbclient -L turtle.mytrek.com
+```
+
+要访问远程系统上的特定目录，请将目录作为`smbclient`命令的参数输入，后跟任何选项。对于 Windows 文件，你对路径名使用反斜杠，对于 Unix/Linux 文件你使用正斜杠。连接后，将显示 smb 提示符，你可以使用`smbclient`命令如`get`和`put`来传输文件。`quit`或`exit`命令退出`smbclient`程序。在以下示例中，`smbclient`访问`turtle.mytrek.com`系统上的`myreports`目录，使用 dylan 登录名：
+
+```
+smbclient //turtle.mytrek.com/myreports -I 192.168.0.1 -U dylan
+```
+
+在大多数情况下，你只需使用服务器名称来引用服务器，如下所示：
+
+```
+smbclient //turtle.mytrek.com/myreports -U dylan
+```
+
+如果你正在访问 Samba 服务器上某个特定账户的主目录，你可以简单地指定`homes`服务。在下一个示例中，用户在被提示输入该账户密码后访问 Samba 服务器上 aleina 账户的主目录：
+
+```
+smbclient //turtle.mytrek.com/homes -U aleina
+```
+
+你也可以使用`smbclient`来访问位于 Windows 客户端上的共享资源。指定 Windows 客户端的计算机名称以及其共享文件夹。在下一个示例中，用户访问名为`lizard`的 Windows 客户端上的`windata`文件夹。该文件夹配置为允许任何人访问，因此用户只需在密码提示时按 ENTER 键。
+
+```
+$ smbclient //lizard/windata
+added interface ip=192.168.0.2 bcast=192.168.0.255 netmask=255.255.255.0
+Got a positive name query response from 192.168.0.3 ( 192.168.0.3 )
+Password:
+
+Domain=[WORKGROUP] OS=[Windows 5.1] Server=[Windows 2000 LAN Manager]
+
+smb: \> ls
+
+.       D    0  Sat Sep  7 17:29:19 2002
+
+..      D    0  Sat Sep  7 17:29:19 2002
+
+hi      A   10  Sat Sep  7 17:29:27 2002
+
+mynewdoc.doc  A    0  Sat Sep  7 16:59:13 2002
+
+39997 blocks of size 1048576. 39930 blocks available
+
+smb: \> mget hi
+
+Get file hi? y
+
+getting file hi of size 10 as hi (1.22069 kb/s) (average 1.2207 kb/s)
+
+smb: \> quit
+```
+
+## `smbclient` 命令
+
+登录后，您可以执行`smbclient`命令来管理文件和更改目录。Shell 命令可以使用`!`操作符执行。要传输文件，您可以使用`mget`和`mput`命令，就像在 FTP 程序中使用它们一样。`recurse`命令使您能够打开递归，以便一次复制整个子目录。您可以使用此处称为掩码的文件匹配运算符来选择特定的一组文件。文件匹配（掩码）运算符为`*`、`[]`和`?`（参见第 8 章）。默认掩码为`*`，匹配所有内容。以下示例使用`mget`复制所有具有`.c`后缀的文件，如`myprog.c`：
+
+```
+smb> mget *.c
+```
+
+在传输期间，您可以让`smbclient`对每个单独的文件进行提示，或者直接传输所有选定的文件。`prompt`命令可切换此文件提示的开启和关闭。
+
+要访问远程系统上的特定打印机，请将打印机名称作为`smbclient`命令的参数输入，后跟任何选项。在以下示例中，`smbclient`使用 dylan 登录名访问`turtle.mytrek.com`系统上的`myepson`打印机：
+
+```
+smbclient //turtle.mytrek.com/myepson -U dylan
+```
+
+连接后，会显示 SMB 提示符，您可以使用`smbclient`命令如`print`来打印文件，并使用`printmode`指定图形或文本。在下一个示例中，用户在访问`turtle.mytrek.com`上的`myepson`打印机后打印名为`myfile`的文件：
+
+```
+smb> print myfile
+```
+
+## `smbmount`
+
+使用`smbmount`命令，Linux 或 Unix 客户端可以将共享目录挂载到其本地系统。`smbmount`命令的语法与`smbclient`命令类似，具有许多对应的选项。`smbmount`命令以 Samba 服务器和共享目录作为参数，后跟您想要挂载目录的本地目录。以下示例将`myreports`目录挂载到本地系统上的`/mnt/myreps`目录：
+
+```
+smbmount //turtle.mytrek.com/myreports /mnt/myreps -U dylan
+```
+
+要卸载目录，请使用`smbumount`命令并指定本地目录名，如下所示：
+
+```
+smbumount /mnt/myreps
+```
+
+要挂载服务器上特定用户的 home 目录，请指定`homes`服务和用户的登录名。以下示例将用户 larisa 的 home 目录挂载到本地系统上的`/home/chris/larisastuff`目录：
+
+```
+smbmount //turtle.mytrek.com/homes /home/chris/larisastuff -U larisa
+```
+
+
+
+# 使用 smbmount 挂载 Windows 共享文件夹
+
+您也可以使用 `smbmount` 挂载 Windows 客户端上的共享文件夹。只需指定 Windows 客户端的计算机名以及其文件夹。如果文件夹名包含空格，请用单引号括起来。在以下示例中，用户将 `lizard` 上的 `windata` 文件夹挂载为 `/mylinux` 目录。对于任何人都可以访问的文件夹，只需在密码提示时按 ENTER 键即可。
+
+```
+$ smbmount //lizard/windata /mylinux
+Password:
+$ ls /mylinux
+_hi_mynewdoc.doc_myreport.txt
+```
+
+当您使用完共享文件夹后，使用 `smbumount` 命令将其卸载。
+
+```
+smbumount /mylinux
+```
+
+除了显式使用 `smbmount` 外，您还可以使用具有文件系统类型 `smbfs` 的 `mount` 命令。`mount` 然后会运行 `/sbin/mount.smbfs` 命令，该命令将调用 `smbclient` 来挂载文件系统：
+
+```
+mount -t smbfs //lizard/windata /mylinux
+```
+
+如果需要用户级访问，您也可以将用户名和密码指定为选项：
+
+```
+mount -t smbfs -o username=chris,passwd=mypass //lizard/windata /mylinux
+```
+
+您还可以在 `/etc/fstab` 条目中使用 `smbfs` 类型，以便 Samba 文件系统自动挂载：
+
+//lizard/windata /mylinux smbfs defaults 0 0
+
+## 与 Samba 客户端共享 Windows 目录和打印机
+
+要管理目录共享，请在控制面板的 Administrative 窗口中打开计算机管理工具。单击 `Shared Folders`，您可以在其中看到 `Shares`、`Sessions` 和 `Open` 文件夹。要添加新的共享，请单击 `Shares` 文件夹，然后单击
+
+操作菜单并选择“新建文件共享”。“会话”和“打开的文件夹”的操作菜单允许您断开活动会话和文件夹。
+
+要允许其他客户端或 Samba 服务器上的用户进行共享级开放访问，请确保在 Windows 客户端上启用 `guest` 用户。默认情况下未启用。通过控制面板中的“用户和密码”工具来设置 `guest` 用户。`Guest` 访问对于让其他系统访问连接到 Windows 客户端的打印机尤为重要。想要访问 Windows 系统上打印机的 Linux 系统会将其自身系统上的打印机配置为远程 Samba 打印机。访问打印机时通常输入的用户是 `guest`。为了让 Linux 系统访问 Windows 打印机，该 Windows 系统必须有一个 `guest` 用户。
+
+### 共享 Windows 目录
+
+要共享目录，请右键单击该目录，然后从弹出菜单中选择“共享”（在 Windows XP 中是“共享和安全”）。单击“共享此文件夹”，然后输入共享名称，即 Samba 将识别该目录所用的名称。您可以指定是否允许其他人更改共享上的文件。您还可以指定用户限制（默认是允许的最大值）。您还可以进一步单击“权限”按钮来控制用户的访问。在这里，您可以指定哪些用户拥有访问权限以及访问类型。例如，您可以只允许对目录进行只读访问。
+
+### 共享 Windows 打印机
+
+要共享打印机，请在“打印机”窗口中找到该打印机，右键单击它，然后选择“共享为”选项。这将打开“共享”面板，您可以在其中单击“共享为”按钮，并输入其他主机识别该打印机所用的名称。例如，在名为 `lizard` 的 Windows 客户端上，要将名为 `Epson Stylus Color` 的打印机共享为 `myepson`，该打印机的“共享”面板应选中“共享为”按钮，并输入名称 `myepson`。然后，当用户双击“附近的计算机”窗口中的 `lizard` 图标时，将出现标有 `myepson` 的打印机图标。
+
+对于 Linux 系统要使用此打印机，必须首先在 Linux 系统上将其配置为远程 Windows 打印机。对于使用 `LPRng` 打印服务器的打印机，您可以使用 `redhat-config-printer`（系统设置菜单和窗口中的“打印”）轻松完成此操作；对于使用 `CUPS` 打印服务器的打印机，您可以使用 `CUPS` 打印配置工具（附加系统工具菜单）。
+
+要配置远程打印机，您需要为打印机指定一个在 Linux 系统上识别的名称、Windows 客户端计算机名称、在 Windows 客户端上访问打印机所使用的名称，以及访问用户名（通常是 `guest`）。配置完成后，您的打印命令只需使用打印机名称即可访问它，就像访问任何其他打印机一样。例如，安装在 Windows 客户端上的 `myepson` 打印机也必须作为 Samba 服务器的 Linux 系统上的 `CUPS` 安装。对于 `CUPS` 打印服务器，您可以使用 `redhat-config-printer` 配置 Windows 打印机。如果您愿意，可以给打印机起相同的名称，然后在“队列类型”面板中选择“Windows 打印机 (SMB)”。对于“共享”，输入 `lizard/myepson`；对于“用户”，输入 `guest`；对于“工作组”，输入 Windows 客户端的工作组（通常是 `WORKGROUP`）。
+
+对于 `CUPS` 打印服务器，您还可以使用 `CUPS` 打印配置工具并添加打印机。对于设备，选择“通过 Samba 的 Windows 打印机”。对于设备 URI，输入带有 `smb:` 协议的共享名称，`smb://lizard/myepson`。此外，要启用 `CUPS` 使用 Samba，您需要将 `samba` 假脱机目录链接到 `CUPS` 的 `smb` 目录。
+
+```
+ln -s /usr/bin/smbspool  /usr/lib/cups/backend/smb
+```
+
+安装完成后，您可以重新启动 `CUPS` 服务器。然后 `lpr` 命令可以直接访问远程 Windows 打印机。下一个示例将 `mydoc` 文件打印到 Windows 客户端的 Epson 打印机上。
+
+```
+lpr -P myepson mydoc
+```
+
+## Windows 客户端
+
+要从 Windows 系统访问 Samba 资源，您需要确保 Windows 系统已启用 TCP/IP 网络。如果您的 Windows 客户端已连接到 Microsoft 网络，则可能已经如此。如果您需要将 Windows 系统直接连接到运行 Linux Samba 服务器的 TCP/IP 网络，则应检查该 Windows 系统上是否已启用 TCP/IP 网络。这涉及确保已安装 Microsoft 网络客户端和 TCP/IP 协议，并且您的网络接口卡（NIC 适配器）已配置为使用 TCP/IP。这些过程在 Windows 2000 和 XP 以及 Windows 95、98 和 ME 上略有不同。
+
+连接后，您的 Samba 共享和打印机将出现在 Windows 网络窗口中。如果您要经常使用某个共享，可以为其分配一个驱动器盘符。右键单击共享并选择“映射网络驱动器”，然后选择要使用的驱动器盘符。在 XP 上，您还可以选择是否希望在登录时自动挂载该驱动器。请按照您的特定 Windows 系统上的说明访问远程共享资源，例如打印机和目录。
+
+## 管理 TCP/IP 网络
+
+Linux 系统被配置为连接到使用 TCP/IP 协议的网络。这些是互联网使用的相同协议，许多局域网（LAN）也是如此。在第 19 章中，你已经了解了 TCP/IP，这是一套健壮的协议，旨在为使用不同操作系统和硬件的系统之间提供通信。TCP/IP 协议是在 1970 年代作为一项特殊的 DARPA 项目开发的，旨在增强大学和研究中心之间的通信。这些协议最初是在 Unix 系统上开发的，其中大部分研究是在加利福尼亚大学伯克利分校进行的。Linux 作为 Unix 的一个版本，受益于这种对 Unix 的原始关注。目前，TCP/IP 协议的开发由互联网工程任务组（IETF）管理，而 IETF 又受互联网协会（ISOC）的监督。ISOC 监督负责互联网开发不同领域的多个组织，例如互联网号码分配局（IANA），负责互联网寻址（见表 38-1）。多年来，TCP/IP 协议标准和文档以请求评论（RFC）文档的形式发布。请在 IETF 网站 `www.ietf.org` 上查看最新的文档以了解当前的发展。
+
+### TCP/IP 协议套件
+
+TCP/IP 协议套件实际上由不同的协议组成，每个协议都为 TCP/IP 网络中的特定任务而设计。三个基本协议是传输控制协议（TCP），负责接收和发送通信，互联网协议（IP），负责实际传输，以及用户数据报协议（UDP），也负责接收和发送数据包。IP 协议是所有其他协议使用的基础协议，负责实际传输，处理带有发送方和接收方信息的数据包。TCP 协议旨在处理连贯的消息或数据。该协议检查接收到的数据包并将其按指定顺序排序，形成原始消息。对于发送的数据，TCP 协议将数据分解为单独的数据包，并指定其顺序。UDP 协议旨在在更原始的层面上工作，也将数据分解为数据包，但不检查其顺序。TCP/IP 协议旨在提供稳定可靠的连接，确保
+
+| Group | Title | Description |
+| --- | --- | --- |
+
+
+
+| ISOC | Internet Society | Professional membership organization of Internet experts that oversees boards and task forces dealing with network policy issues www.isoc.org |
+| IESG | The Internet Engineering Steering Group | Responsible for technical management of IETF activities and the Internet standards process www.ietf.org/iesg.html |
+| IANA | Internet Assigned Numbers Authority | Responsible for Internet Protocol (IP) addresses www.iana.org |
+| IAB | Internet Architecture Board | Defines the overall architecture of the Internet, providing guidance and broad direction to the IETF www.iab.org |
+| IETF | Internet Engineering Task Force | Protocol engineering and development arm of the Internet www.ietf.org |
+
+### TABLE 38-1 TCP/IP Protocol Development Groups
+
+所有数据都被接收并重新组织为原始顺序。另一方面，UDP 旨在尽可能多地发送数据，但不保证数据包会被全部接收或按正确顺序放置。UDP 通常用于传输大量可以承受少量数据包丢失的数据，例如在互联网上显示的临时图像、视频和横幅。
+
+其他协议提供各种网络和用户服务。域名服务（DNS）提供地址解析。文件传输协议（FTP）提供文件传输，网络文件系统（NFS）提供对远程文件系统的访问。表 38-2 列出了 TCP/IP 协议套件中的不同协议。这些协议使用 TCP 或 UDP 协议来发送和接收数据包，而后者又使用 IP 协议来实际传输数据包。
+
+在 TCP/IP 网络中，消息被分解为小的组件，称为数据报，然后通过各种相互连接的路由传输并交付给目标计算机。接收后，数据报会被重新组装成原始消息。数据报本身可以被分解为更小的数据包。数据包是实际在网络之间传输的物理消息单元。将消息作为小组件发送已被证明比作为一个庞大的传输发送更可靠、更快。对于小组件，如果其中一个丢失或损坏，只需重新发送该组件，而如果大型传输的任何部分损坏或丢失，则必须重新发送整个消息。
+
+在你的 Linux 系统上配置 TCP/IP 网络是通过一组网络配置文件实现的（本章后面的表 38-7 提供了完整列表）。其中许多可以使用管理程序（如 `redhat-config-network`）以及第三方工具如 `Webmin` 在你的 root 用户桌面上进行管理（见第 5 章）。你也可以使用更专业的程序，如 `netstat`、`ifconfig`、`Ethereal` 和 `route`。一些配置文件很容易使用文本编辑器自行修改。
+
+TCP/IP 网络通过一组实用程序进行配置和管理：`ifconfig`、`route` 和 `netstat`。`ifconfig` 实用程序从你的 root 用户桌面运行，使你能够完全配置网络接口，添加新的接口并修改其他接口。`ifconfig` 和 `route` 实用程序是低级程序，使用它们需要对网络有更具体的了解。`netstat` 实用程序为你提供有关网络连接状态的信息。`Ethereal` 是一个网络协议分析器，允许你在数据包在网络上传输时捕获它们，并选择要检查的数据包。
+
+| Category | Protocol | Description |
+|---|---|---|
+
+| Transport | TCP | Transmission Control Protocol; places systems in direct communication |
+| Transport | UDP | User Datagram Protocol |
+| Transport | IP | Internet Protocol; transmits data |
+| Transport | ICMP | Internet Control Message Protocol; status messages for IP |
+| Routing | RIP | Routing Information Protocol; determines routing |
+| Routing | OSPF | Open Shortest Path First; determines routing |
+| Network Addresses | ARP | Address Resolution Protocol; determines unique IP address of systems |
+| Network Addresses | DNS | Domain Name Service; translates hostnames into IP addresses |
+| Network Addresses | RARP | Reverse Address Resolution Protocol; determines addresses of systems |
+| User Services | FTP | File Transfer Protocol; transmits files from one system to another using TCP |
+| User Services | TFTP | Trivial File Transfer Protocol; transfers files using UDP |
+| User Services | Telnet | Remote login to another system on the network |
+| User Services | SMTP | Simple Mail Transfer Protocol; transfers e-mail between systems |
+| User Services | RPC | Remote Procedure Call; allows programs on remote systems to communicate |
+| Gateway | EGP | Exterior Gateway Protocol; provides routing for external networks |
+| Gateway | GGP | Gateway-to-Gateway Protocol; provides routing between Internet gateways |
+| Gateway | IGP | Interior Gateway Protocol; provides routing for internal networks |
+| Network Services | NFS | Network File System; allows mounting of file systems on remote machines |
+| Network Services | NIS | Network Information Service; maintains user accounts across a network |
+| Network Services | BOOTP | Boot Protocol; starts system using boot information on server for network |
+| Network Services | SNMP | Simple Network Management Protocol; provides status messages on TCP/IP configuration |
+| Network Services | DHCP | Dynamic Host Configuration Protocol; automatically provides network configuration information to host systems |
+
+## IPv4 and IPv6
+
+传统上，TCP/IP 地址由四个段组成，由句点分隔的数字。这称为 IP 地址。IP 地址实际上代表一个 32 位整数，其二进制值标识网络和主机。这种形式的 IP 地址遵循 Internet Protocol，版本 4，也称为 IPv4。IPv4，即本文所述的 IP 地址类型，仍被广泛使用。
+
+
+
+## IPv6
+
+目前，一种新的 IP 协议版本称为 Internet Protocol，版本 6 (IPv6) 正在逐步取代旧的 IPv4 版本。IPv6 通过使用 128 位扩展了可能的 IP 地址数量。它与仍在使用 IPv4 的系统完全兼容。IPv6 地址的表示方式不同，使用八个 16 位段，每个段之间用冒号分隔。每个段由一个十六进制数字表示。一个示例地址为：
+
+```
+FEC0:0:0:0:800:BA98:7654:3210
+```
+
+IPv6 的优势包括以下内容：
+
+- 具有简化头部，允许更快的处理。
+- 提供对加密和身份验证以及使用集成 IPSEC 协议的虚拟专用网络 (VPN) 的支持。
+- 将地址空间扩展到覆盖 2 的 128 次方个可能的主机（数十亿的数十亿）。这远远超过 IPv4 支持的 42 亿。
+- 支持主机的无状态地址自动配置，绕过了 DHCP 配置此类地址的需求。地址可以直接使用接口的 MAC（媒体访问控制）硬件地址生成。
+- 支持服务质量 (QoS) 操作，为多媒体和电信任务等服务提供足够的响应时间。
+- 协议内置了组播功能，为多媒体任务提供直接支持。组播寻址也提供了与 IPv4 广播寻址相同的功能。
+- 可以通过任播寻址确保更强大的传输，其中数据包可以定向到任播系统组，只需其中一个接收即可。支持给定网络的多个 DNS 服务器可以被指定为任播组，其中只需要一个 DNS 服务器接收传输，从而提供更大的传输成功可能性。
+- 为移动节点提供更好的访问，例如 PDA、笔记本电脑和手机。
+
+## TCP/IP Network Addresses
+
+如前所述，传统的 IPv4 TCP/IP 地址由四个段组成，由句点分隔的数字。这种类型的地址仍被广泛使用，也是人们通常所指的 IP 地址。IP 地址的一部分用于网络地址，另一部分用于标识该网络中主机上的特定接口。你应该意识到 IP 地址是分配给接口的——例如以太网卡或调制解调器——而不是主机计算机。通常一台计算机只有一个接口并且是仅使用该接口的 IP 地址即可访问。在这方面，IP地址可以被视为标识网络上特定主机系统，因此 IP 地址通常被称为主机地址。
+
+事实上，一个主机系统可能有多个接口，每个接口都有自己的 IP 地址。对于作为本地网络到 Internet 的网关和防火墙运行的计算机来说就是这种情况。一个接口通常连接到局域网，另一个连接到 Internet，例如通过两块以太网卡。每个接口（如以太网卡）都有自己的 IP 地址。例如，当你使用 Red Hat 网络配置工具为系统上的以太网卡指定 IP 地址时，Devices 面板会为安装在计算机上的每块以太网卡列出一个条目，从第一块开始为 `eth0`。打开一个 Device 窗口，你可以在 Protocols 面板中选择 TCP 协议，以打开一个 TCP/IP 设置窗口，在其中可以输入该卡的 IP 地址。其他以太网卡也有各自的 IP 地址。目前，Linux 内核最多可支持四个网络适配器。如果你使用调制解调器连接到 ISP，你将设置一个 PPP 接口，该接口也将拥有自己的 IP 地址（通常由 ISP 动态分配）。记住这种区别很重要，如果你计划使用 Linux 设置本地或家庭网络，使用 Linux 作为通往 Internet 的网关机器（参见第 19 章中的“IP Masquerading”部分）。
+
+## IPv4 网络地址
+
+IP地址分为两部分：一部分标识网络，另一部分标识特定主机。网络地址标识主机上某个接口所属的网络。实现 IP 地址的网络和主机部分存在两种方法：原始的基于类的 IP 地址分配和当前的无类域间路由（CIDR）地址分配。基于类的 IP 地址分配为网络地址和主机地址指定官方预先确定的地址部分，而 CIDR 地址分配则允许使用网络掩码动态确定这些部分。
+
+### 基于类的 IP 地址分配
+
+最初，IP地址是按类组织的。在 Internet 上，网络根据其大小组织成三个类别——A 类、B 类和 C 类。A 类网络仅使用第一个段作为网络地址，其余三个段用于主机，允许将大量计算机连接到同一网络。大多数 IP 地址引用较小的 C 类网络。对于 C 类网络，前三个段用于标识网络，最后一个段仅用于标识主机。总的来说，这形成了一个唯一地址，用于标识 TCP/IP 网络中计算机上的任何网络接口。例如，在 IP 地址 `192.168.1.72` 中，网络部分是 `192.168.1`，接口/主机部分是 72。接口/主机是网络 `192.168.1.0` 的一部分。
+
+在 C 类网络中，前三个数字标识 IP 地址的网络部分。该部分分为三个网络号，每个网络号标识一个子网。Internet 上的网络组织成子网，从最大开始，缩小到小的子网络。最后一个数字用于标识特定计算机，称为主机。你可以将 Internet 视为一系列具有子网络的网络；这些子网络也有自己的子网络。最右边的数字标识主机计算机，其前面的数字标识计算机所属的子网。其左侧的数字标识子网所属的网络，以此类推。Internet 地址 `192.168.187.4` 引用连接到由数字 187 标识的网络的第四台计算机。网络 187 是更大网络 168 的子网。该更大网络本身是网络 192 的子网。以下是其分解方式：
+
+| `192.168.187.4` | IPv4 地址 |
+| `192.168.187` | 网络标识 |
+| `4` | 主机标识 |
+
+### 网络掩码
+
+系统使用网络掩码从主机地址得出网络地址。你可以将 IP 地址视为一系列 32 个二进制位，其中一部分用于网络，其余用于主机。网络掩码将网络位集合设为 1，主机位设为 0（见图 38-1）。在标准的基于类的 IP 地址中，主机地址网络部分中的所有数字都设为 255，主机部分设为 0。这相当于将构成网络地址的所有二进制位设为 1。这就是你的网络掩码。因此，主机地址 `192.168.1.72` 的网络掩码是 `255.255.255.0`。网络部分 `192.168.1` 已设为 `255.255.255`，主机部分 72 已设为 0。系统然后可以使用你的网络掩码从你的主机地址得出你的网络地址。它们可以确定你的主机地址的哪一部分构成你的网络地址以及这些数字是什么。
+
+对于熟悉计算机编程的人来说，对网络掩码和主机地址进行按位 `AND` 操作会将主机部分置零，只留下主机地址的网络部分。你可以将地址视为一个四字节整数，每个字节对应地址的一个段。在 C 类地址中，三个网络段对应前三个字节，主机段对应第四个字节。网络掩码旨在屏蔽地址的主机部分，保留网络段。在标准 C 类网络的网络掩码中，前三个字节全为 1，最后一个字节全为 0。最后一个字节中的 0 会屏蔽地址的主机部分，前三个字节中的 1 会保留地址的网络部分不变。图 38-1 显示了网络掩码对地址 `192.168.1.4` 的按位操作。这是一个 C 类地址，其掩码由构成前三个字节的二十四个 1 和构成最后一个字节的八个 0 组成。当它应用于地址 `192.168.1.4` 时，网络地址保持不变（`192.168.1`），主机地址被屏蔽（4），从而得到网络地址 `192.168.1.0`。
+
+在无类域间路由（CIDR）中使用的网络掩码要灵活得多。网络地址的大小及其掩码不再由网络类别决定，而是由附加在 IP 地址末尾的数字决定。该数字仅指定网络地址的大小，即在地址中占用多少位。例如，在网络部分占用前三个字节（段）的 IP 地址中，用于该网络部分的位数为 24——每个字节（段）八位。不是使用网络掩码来确定网络地址，而是将网络大小的数字以斜杠附加在地址末尾，如下所示：
+
+#### 图 38-1
+
+基于类的网络掩码操作
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_792_0.png)
+
+CIDR 让你能够指定任意大小位数的网络，而不仅仅是三种可能的段。你可以拥有一个地址占用 14 位、22 位，甚至 25 位的网络。主机地址可以使用剩下的位。具有 21 位网络的 IP 地址可以覆盖使用剩余 11 位的主机地址，0 到 2,047。
+
+### 无类别域间路由（CIDR）
+
+目前，基于类的 IP 地址组织方式正在被 CIDR 格式取代。CIDR 是为中型网络设计的，即介于 C 类和主机数大于 256 且小于 65,534 的类之间。基于 C 类网络的 IP 地址仅使用一个段作为主机，仅使用一个段，即 8 位整数，最大值为 256。基于 B 类网络的 IP 地址使用两个段，构成一个 16 位整数，其最大值为 65,534。你可以将地址视为占用四个字节的 32 位整数，其中每个字节为 8 位。每个段对应四个字节中的一个。C 类网络使用三个段，或 24 位，构成其网络地址。B 类网络则使用两个段，或 16 位，作为其地址。在此方案中，允许的主机和网络地址每次按整个字节、逐段更改。使用 CIDR 地址，你可以按位而非按整个段来定义主机和网络地址。例如，你可以使用 CIDR 地址将主机段从 8 位扩展到 9 位，而不必跳到 B 类的 16 位（两个段）。
+
+CIDR 地址表示法通过在 IP 地址中加入网络掩码信息来实现这一点（网络掩码应用于 IP 地址以确定地址的网络部分）。在 CIDR 表示法中，构成网络地址的位数放在 IP 地址之后，斜杠之后。例如，C 类 `192.168.187.4` IP 地址的 CIDR 形式为：
+
+```
+192.168.187.4/24
+```
+
+#### 图 38-2
+
+CIDR 地址
+
+
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_793_0.png)
+
+图 38-2 显示了一个 CIDR 地址及其网络掩码的示例。IP 地址为 192.168.16，网络掩码为 22 位，192.168.16.1/22。网络地址占用 IP 地址的前 22 位，剩余的 10 位用于主机地址。主机地址占用相当于基于类 IP 地址的第四段（8 位）和第三段的 2 位。
+
+表 38-3 列出了可用的不同 IPv4 CIDR 网络掩码以及最大主机数。网络掩码的简写形式和全写形式均已列出。
+
+## IPv4 CIDR 地址
+
+任何标准 C 类 IPv4 IP 地址的网络地址占用前三个段，24 位。如果你想创建一个最多 512 个主机的网络，可以为它们分配网络地址为 23 位、主机地址占用 9 位（0–511）的 IP 地址。IP 地址表示法保持不变，仍使用四个 8 位段。
+
+| 简写形式 | 全写形式 | 最大主机数 |
+|---|---|---|
+| /8 | /255.0.0.0 | 16,777,215（A 类） |
+| /16 | /255.255.0.0 | 65,535（B 类） |
+| /17 | /255.255.128.0 | 32,767 |
+| /18 | /255.255.192.0 | 16,383 |
+| /19 | /255.255.224.0 | 8,191 |
+| /20 | /255.255.240.0 | 4,095 |
+| /21 | /255.255.248.0 | 2,047 |
+| /22 | /255.255.252.0 | 1,023 |
+| /23 | /255.255.254.0 | 511 |
+| /24 | /255.255.255.0 | 255（C 类） |
+| /25 | /255.255.255.128 | 127 |
+| /26 | /255.255.255.192 | 63 |
+| /27 | /255.255.255.224 | 31 |
+| /28 | /255.255.255.240 | 15 |
+| /29 | /255.255.255.248 | 7 |
+| /30 | /255.255.255.252 | 3 |
+
+### 表 38-3 CIDR IPv4 网络掩码
+
+这意味着给定段的数字可能同时用于网络地址和主机地址。段不再完全属于主机地址或网络地址。分配 23 位网络地址和 9 位主机地址意味着第三段中的数字同时属于网络地址和主机地址，前 7 位用于网络，最后 1 位用于主机。在以下示例中，第三个数字 145 被用作网络地址的结尾和主机地址的开头：
+
+```
+192.168.145.67/23
+```
+
+这种情况使 CIDR 地址变得复杂，在某些情况下，唯一表示该地址的方法是指定两个或多个网络地址。有关更多详细信息，请查阅 RFC 1520，网址为 `www.ietf.org`。
+
+> 注 计算网络可寻址主机数的一个简单方法是取其主机段的位数作为 2 的幂，然后减去 2——即 2 的主机位数次方，减 2。例如，8 位主机段为 2 的 8 次方，等于 256。减去 2（1 个用于广播地址 255，1 个用于零值 000）后，剩下 254 个可能的主机。
+
+CIDR 还允许网络管理员将 IP 地址中官方的主机部分取出并划分为具有更少主机的子网。这称为子网划分。给定网络将拥有在 Internet 或更大网络中被识别的官方 IP 网络地址。该网络的网络管理员进而可以使用 CIDR 网络掩码在其内部创建几个更小的网络。经典示例是取一个标准 C 类网络，拥有 254 个主机，并将其划分为两个更小的网络，每个网络有 64 个主机。你通过使用 CIDR 网络掩码从 IP 地址的主机部分取一位并用于子网来实现这一点。原始 254 个地址范围内第一位设为 1 的数字将代表一个子网，而第一位设为 0 的其他数字将构成剩余网络。在网络地址为 192.168.187.0 的网络中，最后一个段用于主机名，该最后主机段可进一步划分为两个子网，每个子网拥有自己的主机。对于两个子网，你将使用最后一个 8 位段中的第一位作为网络。剩余的 7 位可用于主机地址，为每个网络提供 127 个主机的范围。位设为 0 的子网的范围为 1 到 127，CIDR 网络掩码为 25。第一个主机的 8 位段为 00000001。因此该网络中地址为 1 的主机具有以下 IP 地址：
+
+```
+192.168.187.1/25
+```
+
+对于第一位为 1 的子网，第一个主机的地址为 129，CIDR 网络掩码为 25，如下所示。第一个主机的 8 位序列为 10000001。
+
+```
+192.168.187.129/25
+```
+
+每个子网将拥有 126 个地址，第一组从 1 到 126，第二组从 129 到 254；127 是第一个子网的广播地址，128 是第二个子网的网络地址。可用的可能子网及其掩码如表 38-4 所示。
+
+#### 表 38-4 子网和掩码
+
+| 子网 | CIDR 地址 | 二进制掩码 |
+|---|---|---|
+| 第一个子网网络地址 | .0/25 | 00000000 |
+| 第二个子网网络地址 | .128/25 | 10000000 |
+| 第一个子网广播地址 | .127/25 | 01111111 |
+| 第二个子网广播地址 | .255/25 | 11111111 |
+| 第一个子网中的第一个地址 | .1/25 | 00000001 |
+| 第二个子网中的第一个地址 | .129/25 | 10000001 |
+| 第一个子网中的最后一个地址 | .126/25 | 01111110 |
+| 第二个子网中的最后一个地址 | .254/25 | 11111110 |
+
+## IPv6 CIDR 地址
+
+IPv6 CIDR 地址的工作方式与 IPv4 方法基本相同。用于网络信息的位数由地址后面的数字表示。主机（接口）地址可能占用 IPv6 地址中通常的 64 位以上的位数，使得网络前缀（地址）部分小于 64 位。网络前缀使用的位数由后面的数字表示。在下一个示例中，网络前缀（地址）仅使用 IPv6 地址的前 48 位，而主机地址使用剩余的 80 位。
+
+```
+FEC0:0000:0000:0000:FEDC:BA98:7654:3210/48
+```
+
+你也可以使用压缩版本
+
+```
+FEC0::FEDC:BA98:7654:3210/48
+```
+
+尽管你可以使用 CIDR 对地址进行子网划分，IPv6 也支持可用于子网的子网字段。
+
+## 获取 IP 地址
+
+IP 地址由 IANA 正式分配，IANA 管理互联网寻址的所有方面（`www.iana.org`）。IANA 监督互联网注册机构（IRs），后者又在区域和本地层面维护互联网地址。美洲的互联网注册机构是美国互联网号码注册管理机构（ARIN），其网站为 `www.arin.net`。这些地址由互联网服务提供商（ISPs）提供给用户。你可以从 ISP 获取自己的互联网地址，或者如果你已在已连接互联网的网络上，网络管理员可以为你分配一个。如果你使用 ISP，ISP 每次使用时可能会从其手头的池中临时分配一个。
+
+## IPv4 保留地址
+
+某些数字是保留的。数字 127、0 或 255 不能作为官方 IP 地址的一部分。数字 127 用于指定系统上环回接口的网络地址。环回接口使系统上的用户能够在系统内部相互通信，而无需通过网络连接进行路由。其网络地址为 127.0.0.0，其 IP 地址为 127.0.0.1。对于基于类的 IP 地址，数字 255 是一个特殊的广播标识符，可用于向网络上的所有站点广播消息。使用 255 作为 IP 地址的任何部分都引用该级别连接的所有节点。例如，192.168.255.255 向网络 192.168、其所有子网及其主机广播消息。地址 192.168.187.255 向本地网络上的每台计算机广播。如果你在地址的网络部分使用 0，则主机号引用本地网络中的一台计算机。例如，0.0.0.6 引用本地网络中的第六台计算机。如果你想向本地网络上的所有计算机广播，可以使用数字 0.0.0.255。对于 CIDR IP 地址，广播地址可能看起来像一个正常的 IP 地址。如前一节所述，CIDR 地址允许使用任意数量的位来构成 IP 地址的网络或主机部分。对于广播地址，主机部分必须将其所有位都设置为 1（参见图 38-3）。
+
+
+
+一组特殊的数字保留用于非互联网局域网（`RFC 1918`）。这些是数字以特殊网络号 `192.168` 开头的数字（用于 C 类网络），如这些示例中所用。如果你正在设置局域网，例如小型企业或家庭网络，你可以自由地为本地机器使用这些数字。你可以使用网络卡，例如以太网卡和以太网集线器设置内部网，然后将机器配置为从 `192.168.1.1` 开始的 IP 地址。主机段可高达 256。如果你家网络上有三台机器，你可以给它们分配地址 `192.168.1.1`、`192.168.1.2` 和 `192.168.1.3`。你可以在本地机器上实现互联网服务，例如 `FTP`、`Web` 和邮件服务，并使用任何互联网工具来使用这些服务。它们都使用互联网上使用的相同 `TCP/IP` 协议。例如，使用 `FTP` 工具，你可以在网络上的机器之间传输文件。使用邮件工具，你可以从一台机器向另一台机器发送消息，并使用 Web 浏览器访问可能安装在运行其自身 Web 服务器的机器上的本地网站。如果你想让你的其中一台机器连接到互联网或其他网络，你可以将其设置为网关机器。按照惯例，网关机器通常分配地址 `192.168.1.1`。通过一种称为 IP 伪装的方法，你可以让任何非互联网机器使用网关连接到互联网。
+
+数字也为 A 类和 B 类非互联网本地网络保留。表 38-5 列出了这些地址。可用地址的范围在地址主机段的 0 到 255 之间。例如，B 类网络地址范围从 `172.16.0.0` 到 `172.31.255.255`，给你总共 32,356 个可能的主机。C 类网络范围从 `192.168.0.0` 到 `192.168.255.255`，给你 256 个可能的子网，每个子网有 256 个可能的主机。网络地址 `127.0.0.0` 保留用于系统的环回接口，使其能够与自身通信，使同一系统上的用户能够相互发送消息。
+
+### 表 38-5 非互联网 IPv4 本地网络 IP 地址
+
+| IPv4 私有网络地址 | 网络类别 |
+|---|---|
+| 10.0.0.0 | A 类网络 |
+| 172.16.0.0 to 172.31.255.255 | B 类网络 |
+| 192.168.0.0 | C 类网络 |
+| 127.0.0.0 | 环回网络（用于系统自通信） |
+
+## 广播地址
+
+广播地址允许系统向网络上所有系统同时发送同一消息。使用基于类的 IPv4 IP 寻址，你可以根据主机地址轻松确定广播地址：广播地址将地址的主机部分设置为 255。网络部分保持不变。因此，主机地址 `192.168.1.72` 的广播地址是 `192.168.1.255`（你将地址的网络部分与主机部分中的 255 结合）。对于 CIDR IP 寻址，你需要知道子网掩码中的位数。其余位设置为 1（参见图 38-3）。例如，IP 地址 `192.168.4.6/22` 的广播地址是 `192.168.7.255/22`。在这种情况下，前 22 位是网络地址，后 10 位是设置为广播值（全 1）的主机部分。
+
+实际上，你可以将 C 类广播地址视为仅使用 24 位（前三个段）作为网络地址、最后 8 位（第四段）作为广播地址的 CIDR 地址。以二进制表示，值 255 就是全为 1 的 8 位。255 等同于 `11111111`。
+
+| IP地址 | 广播地址 | IP广播数字 | 二进制等价形式 |
+|---|---|---|---|
+| 192.168.1.72 | 192.168.1.255 | 255 | 11111111 |
+| 192.168.4.6/22 | 192.168.7.255/22 | 7.255（7中的最后2位） | 1111111111 |
+
+## 网关地址
+
+一些网络有一台被指定为通往其他网络的网关的计算机。进出网络到其他网络的每个连接都要经过这台网关计算机。大多数本地网络使用网关建立与互联网的连接。如果你在这种网络上，必须提供网关地址。如果你的网络没有连接到互联网或更大的网络，则可能不需要网关地址。网关地址是向网络提供网关服务的主机系统的地址。在许多网络上，该主机的主机 ID 为 1：地址为 `192.168.1` 的网络的网关地址将是 `192.168.1.1`，但这只是一种惯例。要确定你的网关地址，请询问你的网络管理员。
+
+## 名称服务器地址
+
+许多网络（包括互联网）都有提供域名服务（`DNS`）的计算机，该服务将网络和主机的域名转换为 IP 地址。这些计算机被称为网络的域名服务器。`DNS` 仅通过你的域名而不是你的 IP 地址就能让你的计算机在网络中可被识别。你也可以使用其他系统的域名来引用它们，因此无需知道它们的 IP 地址。但是，你必须知道网络上任何域名服务器的 IP 地址。你可以从系统管理员那里获取这些地址（通常不止一个）。即使你使用 ISP，也必须知道你的 ISP 为互联网运营的域名服务器的地址。
+
+### 图 38-3
+
+基于类和 CIDR 的广播寻址
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_797_0.png)
+
+## IPv6 寻址
+
+`IPv6` 地址在互联网协议（有关更多详细信息，请参阅 www.ietf.org/rfc 或 www.faqs.org 上的 RFC 3513）下对系统寻址的格式和方法引入了重大变化。网络段有几种不同的字段，对应不同种类的寻址。主机段已扩展到 64 位地址，允许直接寻址更多数量的系统。每个地址以指定地址类型的类型字段开头，该类型字段将决定其网络段如何组织。这些更改不仅旨在扩展地址空间，还旨在提供对传输在地址级别的更大控制。
+
+## IPv6 地址格式
+
+`IPv6` 地址由 128 位组成，高于 `IPv4` 地址中使用的 32 位。前 64 位用于网络寻址，其中前几位保留用于指示地址类型。后 64 位用于接口地址，称为接口标识符字段。用于子网划分的位数可以通过 `CIDR` 掩码进行调整，这与 `IPv4 CIDR` 寻址非常相似（请参阅上一节）。
+
+`IPv6` 地址写为 8 个段，每个段代表 16 位（共 128 位）。为了更容易表示 16 位二进制数，使用了十六进制数字。十六进制数字使用 16 个唯一数字，而不是八进制编号中使用的 8 个。这些数字是 0 到 9，接着是字符 A 到 F。
+
+在以下示例中，前四个段表示 `IPv6` 地址的网络部分，后四个段表示接口（主机）地址。
+
+```
+FEC0:0000:0000:0000:0008:0800:200C:417A
+```
+
+你可以省略任何给定段中的前导零，但不能省略尾随零。全零的段可以缩减为单个零。
+
+```
+FEC0:0:0:0:8:800:200C:417A
+```
+
+用于本地主机寻址的回环地址可以写为 7 个前导零和 1。
+
+```
+0:0:0:0:0:0:0:1
+```
+
+许多地址会有连续的零。`IPv6` 支持一种简写符号来表示相邻字段中连续几个零的序列，即双冒号 `::`。每个地址中只能使用一次 `::` 符号。
+
+```
+FEC0::8:800:200C:417A
+```
+
+回环地址 `0000000000000001` 可以简化为如下形式。
+
+```
+::1
+```
+
+为了便于从 `IPv4` 地址过渡到 `IPv6`，也支持一种包含 `IPv4` 地址的寻址形式。在这种情况下，`IPv4` 地址（32 位）可用于表示 `IPv6` 地址的最后两个段，并可使用 `IPv4` 记法书写。
+
+```
+FE80::192.168.0.3
+```
+
+## IPv6 接口标识符
+
+`IPv6` 地址的标识符部分占用后 64 位，由 4 个段组成，每个段包含四位十六进制数字。接口 ID 是一个 64 位（4 段）的扩展唯一标识符（`EUI-64`），由网络设备的媒体访问控制（`MAC`）地址生成。
+
+## IPv6 地址类型
+
+`IPv6` 地址有三种基本类型：单播、多播和任播。这些又可以各自拥有自己的地址类型。
+
+- 单播地址用于发送到单个目的地的报文。
+- 任播地址用于可以发送到多个目的地的报文。
+- 多播地址用于向一系列目的地广播报文。
+
+在 `IPv6` 中，寻址由格式前缀控制，格式前缀可作为一种地址类型。格式前缀是 IP 地址的第一个字段。三种主要的单播网络地址类型为全局、链路本地和站点本地。全局、站点本地和链路本地由各自的格式前缀表示（见表 38-6）。
+
+- 全局地址以地址类型 3 开头，站点本地以 `FEC` 开头，链路本地以 `FE8` 开头。全局地址可通过互联网发送。
+- 链路本地地址用于物理连接的本地网络上的系统。
+- 站点本地地址可用于本地网络上的任何主机。站点本地地址的工作方式类似于 `IPv4` 私有地址，但仅用于本地访问，不能用于通过互联网传输。
+
+此外，`IPv6` 还有两个特殊保留地址。地址 `0000000000000001` 保留用于系统的本地主机地址的回环地址，而地址 `0000000000000000` 为未指定地址。
+
+## IPv6 单播全局地址
+
+`IPv6` 全局地址目前使用四个字段：格式前缀、全局路由前缀、子网标识符和接口标识符。单播全局地址的格式前缀为 3（3 位）。全局路由前缀引用网络地址（45 位），子网 ID 引用站点内的子网（16 位）。
+
+| IPv6 地址格式前缀和保留地址 | 描述 |
+| --- | --- |
+| 3 | 单播全局地址 |
+| FE8 | 单播链路本地地址，用于网络上物理连接的主机 |
+| FEC | 单播站点本地地址，可与 IPv4 私有地址相比 |
+
+
+
+| 0000000000000001 | 单播回环地址（用于系统自身通信，localhost） |
+| 0000000000000000 | 未指定地址 |
+| FF | 多播地址 |
+
+## 表 38-6 IPv6 格式前缀和保留地址
+
+## IPv6 单播本地使用地址：链路本地和站点本地地址
+
+对于本地使用，IPv6 提供了链路本地和站点本地地址。链路本地寻址用于物理连接到网络的接口（主机）。这通常是一个小型本地网络。链路本地地址仅使用三个字段：格式前缀 `FE8`（10 位）、空字段（54 位）和接口标识符（主机地址）（64 位）。实际上，网络段为空。
+
+IPv6 站点本地地址有三个字段：格式前缀（10 位）、子网标识符（54 位）和接口标识符（64 位）。除本地子网划分外，没有网络地址。
+
+## IPv6 多播地址
+
+多播地址的格式前缀为 `FF`（8 位），并带有标志和作用域字段，用于指示多播组是永久还是临时，以及作用域是本地还是全局。组标识符（112 位）引用多播组。对于作用域，2 为链路本地，5 为站点本地，E 为全局。除了接口标识符外，主机会还有一个可作为广播地址使用的组 ID。你使用此地址向主机广播。以下示例将在组 ID 为 101 时仅向本地网络（5）上的主机广播。
+
+```
+FF05:0:0:0:0:0:101
+```
+
+要向链路本地作用域中的所有主机广播，可使用广播地址：
+
+```
+FF02:0:0:0:0:0:1
+```
+
+对于站点本地作用域，即本地网络，可使用：
+
+```
+FF05:0:0:0:0:0:2
+```
+
+## TCP/IP 配置文件
+
+位于 `/etc` 目录中的一组配置文件（如表 38-7 所示）用于设置和管理你的 TCP/IP 网络。这些配置文件指定诸如主机名和域名、IP 地址以及接口选项之类的网络信息。你要访问的其他互联网主机的 IP 地址和域名就输入在这些文件中。如果你在安装过程中配置了网络，那么你已经可以在这些文件中找到这些信息。
+
+### 识别主机名：`/etc/hosts`
+
+如果没有 TCP/IP 网络用于标识计算机的唯一 IP 地址，就无法定位某台特定的计算机。由于 IP 地址难以使用或记忆，因此使用域名来代替。每个 IP 地址都对应一个域名。当你使用域名来引用网络上的某台计算机时，你的系统会将其转换为对应的 IP 地址。然后，你的网络便可以使用该地址来定位那台计算机。
+
+最初，网络上的每台计算机都负责维护一份主机名及其 IP 地址的列表。该列表至今仍保存在 `/etc/hosts` 文件中。当你使用域名时，系统会在 `hosts` 文件中查找其 IP 地址。系统管理员负责维护此列表。由于互联网的爆炸式增长以及越来越多大型网络的发展，关联域名和 IP 地址的职责已由域名服务器接管。不过，`hosts` 文件仍用于保存频繁访问的主机的域名和 IP 地址。在额外执行访问名称服务器这一步骤之前，你的系统通常会先在 `hosts` 文件中查找域名的 IP 地址。
+
+`hosts` 文件中域名条目的格式是 IP 地址后跟域名，两者用空格分隔。然后你可以为主机名添加别名。在该条目的同一行后面，你可以输入注释。注释总是以 `#` 符号开头。你可以在 `hosts` 文件中找到一个 `localhost` 条目，其 IP 地址为 `127.0.0.1`。`localhost` 是你的计算机使用的一种特殊标识，用于让系统上的用户能够在本地相互通信。IP 地址 `127.0.0.1` 是每台计算机为此目的而使用的特殊保留地址。它标识的是技术上所称的回环设备。下面显示了一个 `/etc/hosts` 文件的示例。
+
+```text
+# /etc/hosts
+
+127.0.0.1      turtle.mytrek.com localhost
+192.168.0.1    turtle.mytrek.com
+192.168.0.2    rabbit.mytrek.com
+192.168.34.56  pangol.mytrain.com
+```
+
+### `/etc/resolv.conf`
+
+如第 34 章所述，`/etc/resolv.conf` 文件保存着你的 DNS 服务器的 IP 地址以及要搜索的域。DNS 条目以 `nameserver` 开头，后面跟名称服务器的 IP 地址。`search` 条目会列出网络域地址。检查此文件，以确认你的网络 DNS 服务器是否已正确列出。
+
+```text
+# /etc/resolv.conf
+
+search mytrek.com mytrain.com
+nameserver 192.168.0.1
+nameserver 192.168.0.3
+```
+
+### `/etc/sysconfig/network-scripts`
+
+`/etc/sysconfig/network-scripts` 目录保存着不同网络连接设备的配置信息，例如所使用的 IP 地址和网络地址。有关详细讨论，请参见本章后面的“网络接口和路由”一节。
+
+### `/etc/sysconfig/networking`
+
+`/etc/sysconfig/networking` 目录保存着通过 `redhat-config-network`（系统设置菜单和窗口中的“网络”）设置的配置信息。这些文件不应手动编辑。`profiles` 目录保存着你设置的不同配置文件的配置。不同的配置文件目录将包含 `hosts` 文件（列出主机域名和 IP 地址）、`network` 文件（保存你系统的主机名）以及 `resolv.conf` 文件（包含你的域名服务器）。用于该配置文件的连接的设备配置文件也会被列出，例如第一个以太网设备的 `ifcfg-eth0`。这些都是可能根据你所使用的配置文件而变化的配置。例如，在办公室，你可能会在公司网络上使用以太网连接，该网络有自己的 DNS 服务器；而在家里，你可能会使用调制解调器连接到拥有自己的互联网 DNS 服务器的 ISP。你的主机名和域名可能会因不同配置文件所连接的网络而异。
+
+### `/etc/services`
+
+`/etc/services` 文件列出了你系统上可用的网络服务（如 FTP 和 Telnet），并将每个服务与特定端口关联。在这里，你可以查看你的 Web 服务器正在监听哪个端口，或者你的 FTP 服务器使用哪个端口。你可以为服务指定一个别名，在端口号后指定。然后你可以使用该别名引用此服务。
+
+### `/etc/protocols`
+
+`/etc/protocols` 文件列出了你系统当前支持的 TCP/IP 协议。
+
+### `/etc/sysconfig/network`
+
+`/etc/sysconfig/network` 文件包含你的网络配置的系统定义。这些定义包括域名、网关和主机名，如下所示：
+
+```text
+NETWORKING=yes
+HOSTNAME=turtle.mytrek.com
+GATEWAY=192.168.0.1
+```
+
+## 域名服务（DNS）
+
+每台连接到 TCP/IP 网络（如互联网）的计算机都通过其自身的 IP 地址来识别。IP 地址难以记忆，因此也使用每个 IP 地址的域名版本来标识主机。如第 34 章所述，域名由两部分组成：主机名和域。主机名是计算机的具体名称，域则标识该计算机所属的网络。美国使用的域通常带有标识主机类型的扩展名。例如，`.edu` 用于教育机构，`.com` 用于企业。国际域通常带有表示其所在国家的扩展名，如 `.de`。
+
+| 地址 | 说明 |
+|---|---|
+| 主机地址 | 您系统的 IP 地址；它包含一个网络部分用于标识您所在的网络，以及一个主机部分用于标识您自己的系统 |
+| 网络地址 | 您所在网络的 IP 地址 |
+| 广播地址 | 用于同时向您网络上的所有主机发送消息的 IP 地址 |
+| 网关地址 | 您网关系统的 IP 地址（如果有的话）（通常是您主机 IP 地址的网络部分，主机部分设为 1） |
+| 域名服务器地址 | 您网络所使用的域名服务器的 IP 地址 |
+| 子网掩码 | 用于确定您 IP 地址的网络部分和主机部分 |
+
+| 文件 | 说明 |
+| /etc/hosts | 将主机名与 IP 地址关联，列出远程主机及其 IP 地址的域名 |
+| /etc/sysconfig/network-scripts | 网络连接配置 |
+| /etc/host.conf | 列出解析器选项 |
+| /etc/nsswitch.conf | 名称切换服务配置 |
+| /etc/resolv.conf | 列出域名服务器名称、IP 地址（nameserver）以及远程主机可能所在的域名（search） |
+| /etc/protocols | 列出您系统上可用的协议 |
+| /etc/services | 列出可用的网络服务（如 FTP 和 Telnet）及其使用的端口 |
+| /etc/sysconfig/networking | 保存由 redhat-config-network 管理的网络配置文件 |
+| /etc/sysconfig/network | 网络配置信息 |
+
+## 表 38-7 TCP/IP 配置地址和文件
+
+用于德国或 `.au` 用于澳大利亚。主机名、域名和扩展名的组合构成一个唯一名称，计算机通过该名称被引用。而域名本身又可以进一步划分为子域。
+
+
+
+如您所知，网络上的计算机即使有主机名，也仍然只能通过其 IP 地址来识别。您可以使用主机名来引用网络上的计算机，但这需要利用主机名在数据库中查找相应的 IP 地址。随后网络使用 IP 地址（而非主机名）来访问该计算机。在大型 TCP/IP 网络（如互联网）出现之前，网络上的每台计算机都可以维护一个文件，其中列出其所在网络上所有已连接计算机的主机名和 IP 地址。每当使用一个主机名时，就会在该文件中查找并找到对应的 IP 地址。您仍然可以在自己的系统上为经常访问的远程系统执行此操作。
+
+随着网络规模扩大，让每台计算机都维护自己的所有域名和 IP 地址列表变得不切实际——就互联网而言，甚至是不可能的。为了提供将域名地址转换为 IP 地址的服务，人们开发了域名数据库并将其放置在专用服务器上。要查找域名的 IP 地址，您需要向名称服务器发送查询，该服务器会为您查找 IP 地址并将其发送回来。在大型网络中，多个名称服务器可以覆盖网络的不同部分。如果某个名称服务器找不到特定的 IP 地址，它会将查询发送给另一个更可能拥有该地址的名称服务器。
+
+如果您正在管理一个网络并需要为其设置名称服务器，您可以将 Linux 系统配置为名称服务器。为此，您必须启动名称服务器守护进程，然后等待域名查询。名称服务器使用多个配置文件来应答请求。Linux 系统上使用的名称服务器软件是互联网软件联盟（Internet Software Consortium，`www.isc.org`）发布的 Berkeley Internet Name Domain（BIND）服务器。第 34 章详细描述了设置域名服务器的过程。
+
+名称服务器由解析器查询。这些是专门设计用于从名称服务器获取地址的程序。要在您的系统上使用域名，您必须配置自己的解析器。您的本地解析器通过 `/etc/host.conf` 和 `/etc/resolv.conf` 文件进行配置。您也可以使用 `/etc/nsswitch` 来代替 `/etc/host.conf`。
+
+## `host.conf`
+
+您的 `host.conf` 文件列出解析器选项（见表 38-8）。每个选项可以有多个字段，以空格或制表符分隔。您可以在行首使用 `#` 来添加注释。这些选项告诉解析器要使用哪些服务。列表的顺序很重要。解析器从列出的第一个选项开始，然后依次处理下一个选项。您可以在 `/etc` 目录中找到 `host.conf` 文件，以及其他配置文件。
+
+在下面的 `host.conf` 文件示例中，`order` 选项指示您的解析器首先在本地 `/etc/hosts` 文件中查找名称，如果失败，再查询域名服务器。该系统没有多个地址。
+
+### 表 38-8 解析器选项，`host.conf`
+
+| 选项 | 说明 |
+|---|---|
+| `order` | 指定名称解析方法的顺序：<br>`hosts` 在本地 `/etc/host` 文件中查找名称<br>`bind` 向 DNS 名称服务器查询地址<br>`nis` 使用网络信息服务协议获取地址 |
+| `alert` | 检查尝试访问您系统的远程站点地址；使用 `on` 和 `off` 选项开启或关闭 |
+| `nospoof` | 确认尝试访问您系统的远程站点的地址 |
+| `trim` | 检查您本地主机的文件；移除域名并仅检查主机名；使您可以在主机文件中仅使用主机名来对应 IP 地址 |
+| `multi` | 检查您本地主机文件；允许一个主机拥有多个 IP 地址；使用 `on` 和 `off` 选项开启或关闭 |
+
+```
+/etc/host.conf
+# host.conf file
+# Lookup names in host file and then check DNS
+order bind host
+# There are no multiple addresses
+multi off
+```
+
+## `/etc/nsswitch.conf`：名称服务转换
+
+标准 C 库中的不同函数必须配置为在 Linux 系统上运行。以前，像密码支持和 NIS 或 DNS 等名称服务这样的数据库式服务，直接访问这些函数，使用固定的搜索顺序。对于当前 Linux 版本使用的 GNU C 库 2.x，此配置由称为名称服务转换（NSS）的方案执行，该方案基于 Sun Microsystems Solaris 2 OS 使用的同名方法。数据库来源及其查找顺序列在 `/etc/nsswitch.conf` 文件中。
+
+`/etc/nsswitch.conf` 文件包含可由 NSS 控制的不同配置文件条目。NSS 支持的系统配置文件列在表 38-9 中。条目由两个字段组成：服务和配置规范。服务由配置文件后跟冒号组成。第二个字段是该文件的配置规范，其中包含查找过程如何工作的说明。配置规范可以包含服务规范和操作项。服务规范是要搜索的服务。目前，有效的服务规范为 `nis`、`nis-plus`、`files`、`db`、`dns` 和 `compat`（参见表 38-10）。并非所有都对每个配置文件有效。例如，`dns` 服务仅对 `hosts` 文件有效，而 `nis` 对所有文件有效。以下示例将首先检查本地 `/etc/password` 文件，然后检查 NIS。
+
+```
+passwd: files nisplus
+```
+
+### 表 38-9 NSS 支持的文件
+
+| Files | Description |
+|---|---|
+| `aliases` | 邮件别名，由 Sendmail 使用 |
+| `ethers` | 以太网号码 |
+| `group` | 用户组 |
+| `hosts` | 主机名和号码 |
+| `netgroup` | 网络范围的主机和用户列表，用于访问规则；`glibc` 2.1 之前的 C 库仅通过 NIS 支持 `netgroups` |
+| `network` | 网络名称和号码 |
+| `passwd` | 用户密码 |
+| `protocols` | 网络协议 |
+| `publickey` | SecureRPC 用于 NFS 和 NIS+ 的公钥和密钥 |
+| `rpc` | 远程过程调用名称和号码 |
+| `services` | 网络服务 |
+| `shadow` | 影子用户密码 |
+
+### 表 38-10 NSS 配置服务
+
+| Service | Description |
+|---|---|
+| `files` | 检查对应的 `/etc` 文件以获取配置（例如 `hosts` 的 `/etc/hosts`）；该服务对所有文件有效 |
+| `db` | 检查对应的 `/var/db` 数据库以获取配置；除 `netgroup` 外对所有文件有效 |
+| `compat` | 仅对 `passwd`、`group` 和 `shadow` 文件有效 |
+| `dns` | 检查 DNS 服务；仅对 `hosts` 文件有效 |
+| `nis` | 检查 NIS 服务；对所有文件有效 |
+| `nisplus` | NIS 版本 3 |
+| `hesoid` | 使用 `Hesoid` 进行查找 |
+
+操作项指定对特定服务应采取的操作。操作项放在服务后的括号内。配置规范可以列出多个服务，每个服务都有自己的操作项。在以下示例中，`network` 文件的条目具有配置规范，说明先检查 NIS 服务，如果未找到，则检查 `/etc/protocols` 文件：
+
+```
+protocols: nisplus [NOTFOUND=return] files
+```
+
+操作项由状态和操作组成。状态保存服务查找的可能结果，操作是在状态为真时要采取的操作。目前，可能的状态值为 `SUCCESS`、`NOTFOUND`、`UNAVAIL` 和 `TRYAGAIN`（服务暂时不可用）。可能的操作为 `return` 和 `continue`：`return` 停止该配置文件的查找过程，而 `continue` 继续下一个列出的服务。在前面的示例中，如果在 NIS 中未找到记录，则查找过程结束。
+
+下面是当前 Red Hat `/etc/nsswitch.conf` 文件的副本，其中列出了常用的条目。注释和被注释掉的条目以 `#` 符号开头。
+
+```
+/etc/nsswitch.conf
+#
+# /etc/nsswitch.conf
+#
+# An example Name Service Switch config file.
+passwd:    files nisplus
+shadow:    files nisplus
+group:     files nisplus
+hosts:     files nisplus dns
+bootparams: nisplus [NOTFOUND=return] files
+ethers:    files
+netmasks:  files
+networks:  files
+protocols: files
+rpc:       files
+services:  files
+netgroup:  nisplus
+publickey: nisplus
+automount: files nisplus
+aliases:  files nisplus
+```
+
+## 网络接口和路由：`ifconfig` 和 `route`
+
+
+
+你的系统通过特定的硬件接口（如以太网卡或调制解调器）连接到网络。通过该接口传输的数据随后会被路由到你的网络。`ifconfig`命令用于配置你的网络接口，而`route`命令则相应地设置网络连接。如果你使用网络配置工具（如`redhat-config-network`）配置接口，则无需使用`ifconfig`或`route`。然而，如果你愿意，也可以直接使用`ifconfig`和`route`配置接口。每次启动系统时，网络接口及其路由都必须建立。这在启动时由`/etc/rc.d/init.d/network`初始化文件自动完成，该文件会在每次启动系统时为每个接口执行`ifconfig`和`route`命令。如果你手动添加自己的接口，必须设置网络脚本以对新接口执行`ifconfig`和`route`操作。
+
+## 网络启动脚本：`/etc/rc.d/init.d/network`
+
+在 Red Hat 上，你的网络接口使用`/etc/rc.d/init.d`目录中的`network`脚本启动。该脚本将激活你的网络接口卡（NICs），并实现诸如网关、主机和名称服务器身份等配置信息。你可以使用该脚本以及`restart`、`start`或`stop`选项手动关闭和启动网络接口。你可以在 Red Hat 上使用`service`命令运行该脚本。以下命令将关闭然后重新启动你的网络接口：
+
+```
+service network stop
+service network start
+```
+
+如果你更改了网络配置，则必须重新启动网络接口才能使更改生效：
+
+```
+service network restart
+```
+
+要测试你的接口是否正常工作，请使用`ping`命令并指定网络上某台系统的 IP 地址，例如你的网关机器。`ping`命令会不断重复，直到你使用`CTRL-C`停止它。
+
+```
+ping 192.168.0.1
+```
+
+## 接口配置脚本：`/etc/sysconfig/network-scripts`
+
+`/etc/rc.d/init.d/network`文件通过执行位于`/etc/sysconfig/network-scripts`目录中的多个专用脚本来执行启动操作。`network`脚本使用该目录中的`ifup`脚本来激活网络连接，并使用`ifdown`脚本来关闭连接。`ifup`和`ifdown`将调用针对正在操作的设备类型定制的其他脚本，例如用于使用 PPP 协议的调制解调器的`ifup-ppp`，或用于使用 IP 协议版本 6 地址的网络设备的`ifup-ipv6`。
+
+> NOTE 你可以使用从系统工具菜单中可访问的网络设备控制工具来激活和停用网络接口。
+
+`ifup`和`ifdown`脚本使用以当前配置的网络接口名称命名的接口配置文件，例如第一个以太网设备的`ifcfg-eth0`。这些文件定义了保存接口信息的 shell 变量，例如是否在启动时启动它们。例如，`ifcfg-eth0`文件保存了`NETWORK`、`BROADCAST`和`IPADDR`的定义，它们被分配设备使用的网络、广播和 IP 地址。
+
+`ifdown`和`ifup`脚本反过来保存`ifconfig`和`route`命令，使用这些在接口配置文件中定义的变量来激活脚本。如果你想使用`ifup`手动启动接口，只需将其接口配置文件作为参数使用。以下命令启动第二块以太网卡：
+
+```
+cd /etc/sysconfig/network-scripts
+ifup ifcfg-eth1
+```
+
+接口配置文件在你配置网络连接时自动生成，例如使用发行版的网络管理工具或第三方工具如`r3`或`Webmin`。你也可以手动编辑这些接口配置文件，进行诸如是否在启动时启动接口等更改（尽管使用`redhat-config-network`等配置工具更容易）。下面展示了一个使用静态 IP 地址的`ifcfg-eth0`文件示例。对于 DHCP，请将`BOOTPROTO`设置为`dhcp`。
+
+```
+/etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+BOOTPROTO=static
+BROADCAST=192.168.0.255
+IPADDR=192.168.0.1
+NETMASK=255.255.255.0
+NETWORK=192.168.0.0
+ONBOOT=yes
+```
+
+## `ifconfig`
+
+`ifconfig`命令以接口名称和 IP 地址以及选项作为参数。然后`ifconfig`命令将 IP 地址分配给接口。你的系统现在知道存在这样的接口，并且它引用特定的 IP 地址。此外，你可以指定 IP 地址是主机地址还是网络地址。你可以使用域名作为 IP 地址，前提是该域名连同其 IP 地址一起列在`/etc/hosts`文件中。`ifconfig`命令的语法如下：
+
+```
+# ifconfig interface -host_net_flag address options
+```
+
+对于这种简单的配置，`ifconfig`会自动生成标准的广播地址和网络掩码。标准的广播地址是主机地址为数字 255 的网络地址。对于 C 类网络，标准网络掩码是`255.255.255.0`，而对于 A 类网络，标准网络掩码是`255.0.0.0`。然而，如果你连接到具有特定网络掩码和广播地址的网络，则在使用`ifconfig`时必须指定它们。指定广播地址的选项是`broadcast`；对于网络掩码，则是`netmask`。表 38-11 列出了不同的`ifconfig`选项。在下一个示例中，`ifconfig`包含了网络掩码和广播地址：
+
+```
+# ifconfig eth0 192.168.0.1 broadcast 192.168.0.255 netmask 255.255.255.0
+```
+
+配置好接口后，你可以使用`ifconfig`配合`up`选项来激活它，并使用`down`选项来停用它。如果你在`ifconfig`操作中指定了 IP 地址，如前面的示例中那样，则`up`选项是隐含的。
+
+```
+# ifconfig eth0 up
+```
+
+点对点接口，如并行线路 IP（PLIP）、串行线路 IP（SLIP）和点对点协议（PPP）需要你包含`pointopoint`选项。PLIP 接口名称以`plip`标识并附带一个数字。例如，`plip0`是第一个 PLIP 接口。SLIP 接口使用`slip0`。PPP 接口以`ppp0`开始。点对点接口通常仅在两个主机之间运行，例如通过调制解调器连接的两台计算机。当你指定`pointopoint`选项时，需要包含主机的 IP 地址。在下一个示例中，一个 PLIP 接口被配置，用于连接 IP 地址为`192.168.1.72`的计算机和 IP 地址为`204.166.254.14`的计算机。如果这些系统的域名在`/etc/hosts`中列出，则可以使用域名代替 IP 地址。
+
+```
+# ifconfig plip0 192.168.1.72 pointopoint 204.166.254.14
+```
+
+如果需要，你也可以使用`ifconfig`来配置你的回环设备。回环设备的名称是`lo`，其 IP 地址是特殊地址`127.0.0.1`。以下示例显示了配置：
+
+```
+# ifconfig lo 127.0.0.1
+```
+
+`ifconfig`命令对于检查接口的状态非常有用。如果输入`ifconfig`命令并加上接口名称，将显示有关该接口的信息：
+
+```
+# ifconfig eth0
+```
+
+要查看你的回环接口是否已配置，可以使用`ifconfig`并加上回环接口名称`lo`：
+
+```
+# ifconfig lo
+lo Link encap:Local Loopback
+inet addr:127.0.0.1 Bcast:127.255.255.255 Mask:255.0.0.0
+UP BROADCAST LOOPBACK RUNNING MTU:2000 Metric:1
+RX packets:0 errors:0 dropped:0 overruns:0
+TX packets:12 errors:0 dropped:0 overruns:0
+```
+
+## 路由
+
+传输过程中数据包到达目的地需要经过一定的路由。在大型网络中，数据包从一台计算机传输到另一台计算机，直到到达目标计算机。路由决定了过程的起点，以及你的系统需要将数据包发送到哪台计算机才能到达目的地。在小型网络中，路由可能是静态的——也就是说，从一个系统到另一个系统的路由是固定的。一个系统知道如何通过固定路径到达另一个系统。然而，在大型网络和互联网上，路由是动态的。你的系统只需知道将数据包发送给的第一台计算机，然后该计算机再将数据包传递下去，传递给另一台计算机，后者再决定传递到哪里。对于动态路由，你的系统只需知道很少的信息。然而，静态路由可能变得复杂，因为你必须跟踪所有的网络连接。
+
+你的路由列在`/proc/net/route`文件中的路由表中。要显示路由表，输入不带参数的`route`（`netstat -r`命令也会显示路由表）：
+
+
+
+```
+# route
+Kernel routing table
+Destination Gateway Genmask Flags Metric Ref Use Iface
+loopback * 255.0.0.0 U 0 0 12 lo
+pangol.train.com * 255.255.255.0 U 0 0 eth0
+```
+
+| Option | Description |
+|---|---|
+| Interface | Name of the network interface, such as `eth0` for the first Ethernet device or `ppp0` for the first PPP device (modem) |
+| up | Activates an interface; implied if IP address is specified |
+| down | Deactivates an interface |
+| allmulti | Turns on or off the promiscuous mode; preceding hyphen (`-`) turns it off; this allows network monitoring |
+| mtu n | Maximum number of bytes that can be sent on this interface per transmission |
+| dstaddr address | Destination IP address on a point-to-point connection |
+| netmask address | IP network mask; preceding hyphen (`-`) turns it off |
+| broadcast address | Broadcast address; preceding hyphen (`-`) turns it off |
+| point-to-point address | Point-to-point mode for interface; if address is included, it is assigned to remote system |
+| hw | Sets hardware address of interface |
+| Address | IP address assigned to interface |
+
+**TABLE 38-11 The Ifconfig Options**
+
+| 字段 | 说明 |
+| --- | --- |
+| Destination | 路由的目标 IP 地址 |
+| Gateway | 路由使用的网关的 IP 地址或主机名；`*` 表示未使用网关 |
+| Genmask | 路由的网络掩码 |
+| Flags | 路由类型：U = up，H = host，G = gateway，D = dynamic，M = modified |
+| Metric | 路由的度量值 |
+| Ref | 依赖此路由的路由数 |
+| Window | AX.25 网络的 TCP 窗口 |
+| Use | 使用次数 |
+| Iface | 此路由使用的接口类型 |
+
+表 38-12 路由表条目
+
+路由表中的每个条目都有几个字段，提供诸如路由目标和所用接口类型等信息。表 38-12 中列出了这些不同字段。路由表中应至少有一个回环接口的条目。如果没有，则必须使用 `route` 命令为回环接口配置路由。接口的 IP 地址必须先添加到路由表中，然后才能使用该接口。使用 `route` 命令和 `add` 选项可以添加地址：
+
+```
+route add address
+```
+
+下一个示例将回环接口的 IP 地址添加到路由表中：
+
+```
+route add 127.0.0.1
+```
+
+使用 `add` 参数，可以通过 `-net` 选项为网络添加路由，或通过 `-host` 选项为 IP 接口（主机）添加路由。`-host` 选项是默认的。此外，还可以指定几个信息参数，例如网络掩码（`netmask`）、网关（`gw`）、接口设备（`dev`）和默认路由（`default`）。如果系统中有多个 IP 接口，例如多块以太网卡，则必须使用 `dev` 参数指定接口名称。如果网络有网关主机，可以使用 `gw` 参数来指定它。如果系统连接到网络，则路由表中应至少有一个指定默认路由的条目。当没有其他路由条目通向目的地时，消息数据包将采用该路由。以下示例是以太网接口的路由配置：
+
+```
+# route add 192.168.1.2 dev eth0
+```
+
+如果系统只有单个以太网设备作为 IP 接口，则可以省略 `dev eth0` 参数：
+
+```
+# route add 192.168.1.2
+```
+
+可以通过使用 `del` 参数和该路由的 IP 地址调用 `ifconfig` 来删除已建立的任何路由，如下例所示：
+
+```
+# route del 192.168.1.2
+```
+
+对于网关，首先添加一条到网关接口的路由，然后添加一条指定其为网关的路由。本示例中网关接口的地址是 `192.168.1.1`：
+
+```
+# route add 192.168.1.1
+# route add default gw 192.168.1.1
+```
+
+如果使用网关访问子网，请添加该网络的网络地址（本示例中为 `192.168.23.0`）：
+
+```
+# route add -net 192.168.23.0 gw dev eth1
+```
+
+要为系统中不同的网络接口添加另一个 IP 地址，请结合新 IP 地址使用 `ifconfig` 和 `route` 命令。以下命令将第二个以太网卡（`eth1`）配置为 IP 地址 `192.168.1.3`：
+
+```
+ifconfig eth1 192.168.1.3
+route add 192.168.1.3 dev eth1
+```
+
+## 监控你的网络：ping、netstat、tcpdump 和 Ethereal
+
+使用 `ping` 程序，可以检查是否确实能够访问网络上的另一台主机。`ping` 程序向主机发送请求以请求应答。主机随后发回应答，并显示在屏幕上。除非使用中断命令 `CTRL-C` 将其停止，否则 `ping` 程序会持续发送此类请求。屏幕上会不断滚动显示一个接一个的应答，直到你停止该程序。如果 `ping` 无法访问某台主机，它会发出一条消息，说明该主机不可达。如果 `ping` 失败，则可能表明网络连接无法正常工作。问题可能只是特定接口、基本配置问题或物理连接不良。`Ping` 使用第 19 章讨论的 Internet 控制消息协议（ICMP）。网络可能出于安全考虑而阻止这些协议，这也会导致 `ping` 无法工作。`ping` 失败也可能仅仅表示被查询网络采取了安全预防措施。
+
+要使用 `ping`，请输入 `ping` 和主机名称。
+
+```
+$ ping ftp.redhat.com
+```
+
+### Ethereal
+
+`Ethereal` 是一款网络协议分析器，可捕获网络中传输的数据包，并选择和检查你关注的协议的数据包。你可以检查特定传输的数据包，并以可读格式显示数据。`Ethereal` 界面显示三个窗格：当前数据包列表、当前选中数据包的协议树、所选数据包内容的显示。第一个窗格按时间、来源、目标和协议对条目进行分类。有用于以下内容的按钮标题
+
+each. 要按特定类别对一组条目进行排序，请单击其标题。例如，按协议分组条目，请单击 `Protocol` 按钮；对于目标，请使用 `Destination` 按钮。
+
+## Capture Options
+
+要启动 `Ethereal`，请从 `Capture` 菜单中选择 `Start` 条目。这会打开一个选项窗口，您可以在其中选择要监视的网络接口。在这里，您还可以选择用于保存捕获信息的目标文件以及捕获的大小限制，以及用于筛选数据包的过滤器。选择 `promiscuous` 模式后，您可以看到通过该设备传输的所有网络流量，而关闭后，您将只能看到发往该设备的那些数据包。
+
+- `Capture Files` 选项让您可以选择保存捕获的文件。如果未选择文件，则数据仅在 `Ethereal` 窗口中显示。如果您想保持网络流量的连续运行快照，可以使用环形缓冲区。这些是一系列用于保存捕获数据的
+- `Display options` 控制数据包是否实时显示在 `Ethereal` 窗口中。
+- `Capture limits` 让您可以按数据包数量、大小或时间设置捕获限制。
+- `Name resolution` 启用主机和域名而不是 IP 地址的显示，如果可能的话。
+
+## Ethereal Filters
+
+过滤器让您可以选择与指定条件匹配的数据包，例如来自特定主机的包。条件使用 Packet Capture Library 支持且由 `tcpdump` 实现的表达式指定。`Ethereal` 过滤器使用与 `tcpdump` 命令中使用的类似表达式。请查阅 `tcpdump` 手册页以获取详细说明。
+
+
+
+一个表达式由 ID，例如主机名或号码，以及限定符组成。限定符有三种类型：类型、方向和协议。类型可以引用主机、网络或端口。类型限定符为 `host`、`net` 和 `port`。方向选择源或目标数据包，或两者。源限定符为 `src`，目标为 `dst`。没有目标限定符时，两者方向都被选中。协议让您可以指定特定协议的数据包。协议使用其小写名称表示，例如 `icmp` 代表 ICMP。例如，列出来自特定主机的所有传入数据包的表达式为 `src host hostname`，其中 `hostname` 为源主机。以下示例将显示来自 `192.168.0.3` 主机的所有数据包。
+
+```
+src host 192.168.0.3
+```
+
+仅使用 `host` 将检查该主机的所有出站以及入站数据包。`port` 限定符将检查通过特定端口的数据包。要检查特定协议，您使用协议名称。例如，要检查所有 ICMP 数据包，您可以使用表达式
+
+```
+icmp
+```
+
+还有几个特殊限定符可让您进一步控制选择。`gateway` 限定符让您检测通过网关传输的数据包。`broadcast` 和 `multi-cast` 限定符检测广播到网络的数据包。`greater` 和 `less` 限定符可应用于端口或 IP 地址等数字。
+
+您可以使用 `and`、`or` 或 `not` 将表达式组合成单个复杂的布尔表达式。这让您可以创建更精细的过滤器。例如，要仅捕获来自主机 `192.168.0.2` 的 ICMP 数据包，您可以使用
+
+```
+src host 192.168.0.3 and icmp
+```
+
+要创建或选择过滤器，请在首次开始捕获时单击选项窗口中的 `Filter` 按钮。这将打开一个 Capture Filter 窗口，其中列出了您已创建的过滤器。过滤器名称和过滤器字符串的框显示在下方。要创建新过滤器，请在 `Filter Name` 框中输入您要赋予的名称。然后在 `Filter String` 框中输入过滤器表达式，如 `icmp`。然后单击 `New`。您的新过滤器将出现在列表中。要更改过滤器，请选择它并在 `Filter String` 框中更改其表达式，然后单击 `Change`。
+
+## tcpdump
+
+与 Ethereal 一样，`tcpdump` 会捕获网络数据包，将其保存到文件中以便您检查。`tcpdump` 完全从命令行运行。您必须打开一个终端窗口来运行它。使用各种选项，您可以细化捕获，指定您想要的数据包类型。`tcpdump` 使用一组选项来指定您想要执行的操作，其中包括限制捕获大小、决定保存到哪个文件以及选择要应用于它的任何过滤器。请查阅 `tcpdump` 手册页以获取完整列表。
+
+- `-i` 选项让您可以指定要监听的接口。
+- 使用 `-c` 选项，您可以限制要捕获的数据包数量。
+- 数据包默认输出到标准输出。要将其保存到文件，您可以使用 `-w` 选项。
+- 您以后可以使用 `-r` 选项读取数据包文件并对其应用过滤器表达式。
+
+`tcpdump` 以过滤器表达式作为参数，您可以使用它来细化捕获。Ethereal 使用与 `tcpdump` 相同的过滤器表达式（请参阅 Ethereal 中的过滤器讨论）。
+
+## netstat
+
+`netstat` 程序提供有关网络连接状态的实时信息，以及网络统计信息和路由表。`netstat` 命令有几个选项，您可以使用它们来显示有关网络的不同类型信息：
+
+```
+# netstat
+Active Internet connections
+Proto Recv-Q Send-Q Local Address Foreign Address (State) User
+tcp 0 0 turtle.mytrek.com:01 pangol.mytrain.com:.ftp ESTABLISHED dylan
+Active UNIX domain sockets
+Proto RefCnt Flags Type State Path
+unix 1 [ ACC ] SOCK_STREAM LISTENING /dev/printer
+unix 2 [ ] SOCK_STREAM CONNECTED /dev/log
+unix 1 [ ACC ] SOCK_STREAM LISTENING /dev/nwapi
+unix 2 [ ] SOCK_STREAM CONNECTED /dev/log
+unix 2 [ ] SOCK_STREAM CONNECTED /dev/log
+unix 1 [ ACC ] SOCK_STREAM LISTENING /dev/log
+```
+
+不带任何选项的 `netstat` 命令会列出系统上的网络连接。首先列出活动的 TCP 连接，然后列出活动的域套接字。域套接字包含用于在系统与其他系统之间建立通信的进程。你可以使用带 `-r` 选项的 `netstat` 来显示路由表，而带 `-l` 选项的 `netstat` 则显示不同网络接口的使用情况。
+
+### IP 别名
+
+在某些情况下，你可能希望为只有一个网络接口的单个 Linux 系统分配两个或多个 IP 地址。例如，你可能希望在同一系统上运行可以通过不同 IP 地址访问的不同网站。实际上，你为系统设置了一个别名，即另一个可访问它的地址。事实上，你是将两个 IP 地址分配给同一个网络接口——例如，为一块以太网卡分配两个 IP 地址。此过程称为 IP 别名，用于为 Internet 服务器设置多个基于 IP 的虚拟主机。此方法使你能够使用单个接口（或在多个接口中的每个接口上使用多个）在同一台机器上运行多个 Web 服务器。有关虚拟主机的 FTP 和 Web 服务器信息，请参阅第 21 章和第 22 章，有关域名服务配置的信息，请参阅第 34 章。
+
+设置 IP 别名只是在系统上配置网络接口以侦听新增的 IP 地址。系统需要知道它应该侦听哪些 IP 地址以及在哪个网络接口上。你可以使用 `ifconfig` 和 `route` 命令或网络管理工具来设置 IP 别名。
+
+要向同一接口添加另一个地址，你需要通过添加冒号和数字来限定接口。例如，如果你要向第一块以太网卡（`eth0`）添加另一个 IP 地址，你会在其接口名称后加上 `:0`，即 `eth0:0`。以下示例显示了以太网接口 `192.168.1.2` 的 `ifconfig` 和 `route` 命令，以及添加到该接口的两个 IP 别名：`192.168.1.100` 和 `192.168.1.101`。要向同一接口添加另一个 IP 地址，你将使用 `eth0:1`，增加限定符，以此类推。第一个 `ifconfig` 命令将主 IP 地址 `192.168.1.2` 分配给第一个以太网设备 `eth0`。然后，将另外两个 IP 地址分配给同一设备。在第一个 `route` 命令中，为以太网设备设置网络路由，然后为每个 IP 接口设置路由。两个别名的接口分别用 `eth0:0` 和 `eth0:1` 表示
+
+```
+ifconfig eth0 192.168.1.2
+ifconfig eth0:0 192.168.1.100
+ifconfig eth0:1 192.168.1.101
+route add -net 192.168.1.0 dev eth0
+route add -host 192.168.1.2 dev eth0
+route add -host 192.168.1.100 dev eth0:0
+route add -host 192.168.1.101 dev eth0:1
+```
+
+在你可以使用 IP 别名之前，必须由内核支持。如果你的内核不支持它，你可能需要重新构建内核（包括 IP 别名支持），或使用可加载模块来添加 IP 别名。
+
+## 附录
+
+### 关于 DVD-ROM
+
+随书附带的 Linux 发行版 DVD-ROM，Red Hat Fedora Core，包含完整的六张 CD-ROM 集，用于整个 Fedora Core 发行版。Red Hat Fedora Core Linux 发行版安装了一个专业级且非常稳定的 Linux 系统，同时包含 KDE 和 GNOME GUI 界面、灵活易用的系统配置工具、大量 Internet 服务器、各种多媒体应用程序，以及超过 1500 种各类 Linux 应用程序。DVD 还包含所有提供的 Linux 软件的完整源代码文件，总计超过 3GB 的软件。你可以在 `fedora.redhat.com` 找到有关 Red Hat Fedora 项目的最新信息。
+
+你需要一台计算机上的 DVD-ROM 驱动器来读取 DVD-ROM 光盘。随书附带的 DVD-ROM 已配置为可启动，像一张可启动 CD-ROM 一样工作。如果你的系统支持可启动 CD-ROM，那么它将从此 DVD-ROM 启动，让你可以直接从 DVD-ROM 安装你的 Red Hat 系统。
+
+或者，你也可以使用软盘驱动器从 DVD-ROM 安装 Red Hat。在这种情况下，在 Windows、DOS 或 Linux 系统上，你需要使用 DVD-ROM 上的 `images/bootdisk.img` 文件创建一个安装软盘（除非你执行网络或硬盘安装）。有关如何为 DVD-ROM 创建启动软盘的详细信息，请参阅第 2 章。
+
+> 注意 DVD-ROM 会一次性连续安装软件包。实际上，安装程序将 DVD-ROM 视为一张非常大的 CD-ROM，包含所有需要的软件包。
+
+
+
+DVD 包含一套全面的 Linux 软件应用程序，包括 GNU 软件包（图形、通信、出版、编辑、编程、游戏），以及开发工具和 Internet 服务器（ftp、Web、邮件、新闻和 DNS）。GNOME 和 K 桌面环境（KDE）GUI 用户界面，以及大量 GNOME 和 KDE 应用程序，均包含在内。
+
+# 索引
+
+对图形的引用以斜体显示。
+
+?（问号），141，143，144
+
+$ 运算符，154
+
+*（星号），141，142-143
+
+[ ]（方括号），141，143-144
+
+{ }（大括号），144-145
+
+|（管道），148-149，286
+
+|| 和标准误差，149-150
+
+A
+
+访问控制列表，参见 ACLs
+
+账户，参见 用户账户
+
+ACLs，440-442，687-688
+
+操作，510
+
+Adabas D，223
+
+地址记录，671-672
+
+管理工具，9，47-48，49
+
+Afterstep，43
+
+agetty，621-622
+
+AIM，280
+
+别名，165-166，455-456
+
+CNAME，673
+
+命令，167
+
+命令和参数，166
+
+命令和选项，166
+
+IP 别名，782
+
+Amanda，516-517
+
+匿名 FTP，379-380
+
+文件，381-382
+
+服务器目录，381
+
+Apache 配置工具，431-432
+
+Apache Jakarta 项目，405-408
+
+Apache Web 服务器，402-403
+
+访问控制，415-417
+
+身份验证，420-422
+
+自动目录索引，419-420
+
+CGI 文件，418-419
+
+配置和指令，408-424
+
+配置文件，408
+
+目录级配置，413-414
+
+文件和目录，404-405
+
+日志文件，422-424
+
+MIME 类型，417-418
+
+模块，405-406
+
+服务器配置，410-413
+
+启动和停止，406-408
+
+URL 路径名，417
+
+版本 2.0，405-406
+
+虚拟主机，425-430
+
+网站，403
+
+Webalizer，422
+
+小程序，97
+
+GNOME，111-112
+
+应用程序，K Desktop Environment，124-125
+
+APT，53
+
+归档
+
+归档到软盘，206
+
+归档到磁带，207
+
+压缩，206-207
+
+和压缩文件，202
+
+创建，203-204
+
+显示归档内容，203
+
+提取，205
+
+File Roller，202-210
+
+Linux，181
+
+tar 实用程序，203-207
+
+更新，205
+
+参数，44
+
+shell 脚本，155-156
+
+身份验证
+
+Apache Web 服务器，63
+
+配置，63
+
+Kerberos，324-325
+
+ProFTPD，392
+
+SSH，314-315
+
+自动挂载，581
+
+B
+
+后台作业，150-151
+
+备份，516-521
+
+dump，517，518-519
+
+记录，517
+
+restore，519-521
+
+Balsa，240-241
+
+BASH shell
+
+控制结构，159-160
+
+历史列表，137-141
+
+特殊变量和特性，168
+
+.bash_logout，178
+
+.bash_profile，配置，174-177
+
+.bashrc，177-178
+
+贝尔实验室，10
+
+BIND
+
+服务器和工具，659
+
+启动和停止，660
+
+BitTorrent，54
+
+Blackdown，260-261
+
+Bluecurve，41-43
+
+Bluetooth，64-65
+
+配置，65
+
+个人局域网（PANs），65-66
+
+书签，269
+
+启动盘，35-36，640
+
+创建，25-27
+
+内核，648-649
+
+启动加载器，30，639-640
+
+配置，649
+
+广播地址，764
+
+浏览器，256-259
+
+bzip2，209
+
+邮件客户端，242-245
+
+wvDial，76-78
+
+通用 Unix 打印系统。参见 CUPS
+
+压缩文件，202
+
+bzip2，209
+
+compress and uncompress，209
+
+使用 File Roller，202-210
+
+gzip，207-209
+
+Zip，209-210
+
+并发版本系统（CVS），566-567
+
+条件，156
+
+配置
+
+身份验证，63
+
+Bluetooth，65
+
+CUPS，475-476
+
+目录和文件，505-508，572
+
+DSL 和 ISDN，74
+
+GNOME，112-114
+
+接口配置脚本，75-76
+
+KDE 桌面，119-120
+
+局域网（LANs），82-92
+
+调制解调器，73-74
+
+网络配置工具，67
+
+打印机，50-52
+
+安全，60-63
+
+用户，48-50
+
+无线连接，74-75
+
+连接跟踪，337-338
+
+控制结构，156-161
+
+条件，158-160
+
+循环，160-161
+
+Courier，446
+
+cp，193-195
+
+cron
+
+anacron，499
+
+crond 目录，496
+
+crond 服务，495
+
+crontab 命令，497
+
+crontab 条目，495-496
+
+目录名，499
+
+编辑，497
+
+环境变量，496
+
+文件和目录，498
+
+组织计划任务，497-498
+
+运行目录脚本，498-499
+
+Crypto IP Encapsulation（CIPE），312
+
+CUPS，471，472-480
+
+管理工具，478-480
+
+命令行打印客户端，476-478
+
+配置，475-476
+
+在上配置远程打印机，474-475
+
+使用安装打印机，473-474
+
+打印机类，475
+
+C
+
+缓存文件，685-686
+
+仅缓存服务器，668
+
+cat，187，188
+
+cc，189，191
+
+CD-ROM
+
+默认值，584
+
+信息要求，23-24
+
+挂载，589-590
+
+从 KDE 桌面挂载，125-126
+
+刻录，596-599
+
+CD-R/RW 安装设备，590-592
+
+证书，310
+
+链，329
+
+防火墙，330
+
+NAT，339-340
+
+用户定义，334
+
+chkconfig，360-361，362，365，503
+
+配置 xinetd，364
+
+启用和禁用 xinetd 服务，363-364
+
+工作原理，364-365
+
+列出服务，362
+
+选项，363
+
+移除和添加服务，364
+
+使用启动和停止服务，362-363
+
+无类域间路由（CIDR），759-762
+
+命令行界面，39-41，43-44，135-137
+
+命令和文件名补全，137
+
+编辑，136-137
+
+D
+
+DARPA，11
+
+数据库管理系统，220-223
+
+数据报，253
+
+date，494-495
+
+配置，33
+
+DB2，222-223
+
+依赖，31
+
+设备文件，575-577，617-620
+
+手动创建，619-620
+
+符号链接，618
+
+df 命令，578
+
+DHCP，695-696
+
+配置客户端主机，696
+
+配置服务器，696-698
+
+声明、参数和选项，705-706
+
+动态地址，698-699
+
+动态 DNS 更新，700-702
+
+与日志文件，686-687
+
+子网络，702-703
+
+Dig，487-488
+
+数字签名，290
+
+检查软件包数字签名，298-300
+
+与加密结合，290，291
+
+解密，297
+
+磁盘配额，542-544
+
+显示管理器，38-39
+
+DNS，769-773
+
+地址转换，653-656
+
+客户端，656
+
+配置，660-662
+
+安全性，687-692
+
+拆分 DNS，692-694
+
+区域，660-661
+
+DNS 服务器，654-655
+
+备选，658
+
+使用 redhat-config-bind 配置，88-92
+
+文档，659
+
+动态更新，700-702
+
+实现，86-88
+
+类型，661-662
+
+DNSSEC，689-691
+
+文档查看器，219-220
+
+文档，7-8，19-20
+
+帮助，44-45
+
+Samba，725-726
+
+域名地址，253-254
+
+域，445
+
+拖放，GNOME 中，100
+
+驱动程序，不支持的，63-64
+
+DSL，配置，74
+
+dump，517，518-519
+
+DVD 设备，626
+
+DVD R/RW
+
+安装设备，590-592
+
+刻录，596-599
+
+dvd+rw 工具，599
+
+DVI，219-220
+
+e2fsck，578-579
+
+e2label，584
+
+编辑，136-137
+
+编辑器，10，223-224
+
+Emacs，224，225-226
+
+gedit，224
+
+Kate、KEdit 和 KWrite，225
+
+Vim，223，226-230
+
+
+
+- Emacs, 225, 226, 241-242
+
+- 加密
+
+  - 与签名结合, 290, 291
+
+  - GNU 隐私卫士 (GPG), 291-298
+
+  - 公钥, 289-290
+
+  - SSH, 314-315
+
+- Enlightenment, 43
+
+- 环境, 12
+
+  - 变量, 169
+
+- Epiphany, 258
+
+- `/etc/fstab`, 580-586
+
+- `/etc/init.d`, 365-368
+
+- `/etc/rc.d`, 355-357
+
+- `/etc/sysconfig`, 355-357
+
+- `/etc/sysconfig/hwconf`, 620-621
+
+- `/etc/sysconfig/network-scripts`, 75-76
+
+- 以太网, 779-781
+
+- 以太网卡, 配置更换或不支持的, 72
+
+- Ettrich, Matthias, 116
+
+- Evolution, 239, 240
+
+- `export`, 169
+
+- ext3 日志, 589
+
+- 扩展 Internet 服务守护进程。参见 xinetd
+
+- `fdisk`, 592-594
+
+- Fedora Core
+
+  - 特性, 8-9
+
+  - 硬盘配置, 23
+
+  - 硬件要求, 22-23
+
+  - 信息要求, 23-25
+
+  - 安装, 21-22
+
+  - Red Hat 管理工具, 9
+
+  - 更新, 52-54
+
+  - Yum 仓库, 53
+
+- Fedora 项目, 6
+
+- Fetchmail, 247
+
+- `fgrep`, 162-163
+
+- 文件结构, 12
+
+  - Linux, 184-187
+
+  - 父/子结构, 184
+
+  - 树形结构, 184
+
+- 文件系统, 570
+
+  - 创建, 592-596
+
+  - 信息, 578-579
+
+  - 挂载, 577-578
+
+  - 类型, 582
+
+- 文件类型, 183
+
+- 文件名
+
+  - 展开, 141-145
+
+  - 生成模式, 144-145
+
+  - 匹配字符范围, 143-144
+
+  - 匹配多个字符, 142-143
+
+  - 匹配 shell 符号, 144
+
+  - 匹配单个字符, 143
+
+- 文件, Linux, 181, 182-184
+
+- 文件系统层次结构标准 (FHS), 570-579
+
+- 过滤器, 161-164
+
+- `find`, 192-193, 194
+
+- `finger`, 277, 278
+
+- 防火墙
+
+  - 链, 330
+
+  - `iptables`, 328-329
+
+  - Netfilter, 327
+
+  - 设置, 81
+
+- 固定地址, 703-706
+
+- 软盘
+
+  - 启动盘, 25-27
+
+  - 默认设置, 584
+
+  - 挂载, 588-589
+
+  - 从 KDE 桌面挂载, 125-126
+
+- `free` 命令, 513
+
+- 自由软件基金会, 14
+
+  - GNU 项目, 3
+
+- `fsck`, 578-579
+
+- `ftp`, 270-274
+
+  - 客户端命令, 271-272
+
+  - `netrc`, 274-276
+
+- FTP, 262-263
+
+  - 匿名, 379-380, 381-382
+
+  - 客户端, 262-276
+
+- FTP 服务器, 377-379
+
+  - 可用的服务器, 378
+
+  - ProFTPD, 378, 389-398
+
+  - Red Hat FTP 服务器目录, 378-379
+
+  - `vsftpd`, 378
+
+  - 非常安全的 FTP 服务器 (`vsftpd`), 378
+
+  - 虚拟, 395-398
+
+  - `vsftpd`, 379-380, 382-389
+
+  - 华盛顿大学 FTP 守护进程 (WU-FTPD), 398-399
+
+- FTP 用户帐户, 380-382
+
+  - 创建新 FTP 用户, 380-381
+
+  - `ftp` 组, 380
+
+- 完全限定域名, 653
+
+- 网关地址, 764
+
+- 网关, 82
+
+- `gconf`, 643-644
+
+- GDM, 38-39
+
+- `gedit`, 224
+
+- gFTP, 264
+
+- GNOME 显示管理器, 38-39
+
+- GNOME, 12-13, 95-96
+
+  - 添加抽屉, 110
+
+  - 添加菜单, 110
+
+  - 添加面板, 109
+
+  - 小程序, 111-112
+
+  - 应用程序启动器, 110
+
+  - 应用程序链接, 100
+
+  - Bluecurve, 41-42
+
+  - 组件, 98
+
+  - 配置, 112-114
+
+  - 角落面板, 109
+
+  - 桌面, 100-102
+
+  - 桌面菜单, 101
+
+  - 目录和文件, 113-114
+
+  - 磁盘挂载器, 111
+
+  - 显示面板, 109
+
+  - 拖放, 100
+
+  - 驱动器图标, 101
+
+  - 边缘面板, 109
+
+  - Electric Eyes, 232
+
+  - 增强功能, 96
+
+  - Epiphany, 258
+
+  - 浮动面板, 109
+
+  - GConf, 114
+
+  - `gedit`, 224
+
+  - GIMP, 233
+
+  - gPhoto, 233
+
+  - GQview, 232
+
+  - 图形工具, 232-233
+
+  - `gtkmm`, 232
+
+  - GTK+, 97
+
+  - 帮助, 99
+
+  - Image Shaker, 232
+
+  - 界面, 97-99
+
+  - 邮件客户端, 240-241
+
+  - 菜单面板, 109
+
+  - 移动和删除对象, 110-111
+
+  - Nautilus, 258, 264
+
+  - Nautilus 文件管理器, 96, 102-108
+
+  - Office, 217-219
+
+  - OpenOffice, 213-215
+
+  - 面板, 108-111
+
+  - 面板对象, 109-111
+
+  - 面板属性对话框, 108-109
+
+  - 退出, 99
+
+  - 滑动面板, 109
+
+  - 特殊面板对象, 111
+
+  - Start Here 窗口, 99
+
+  - 系统管理器 (GTop), 514
+
+  - 任务列表, 110-112
+
+  - 用户目录, 112
+
+  - 窗口管理器, 102
+
+  - 工作区切换器, 112
+
+- GNU 通用公共许可证, 13-14
+
+- GNU 网络对象模型环境。参见 GNOME
+
+- GNU 隐私卫士 (GPG), 60, 291-298
+
+  - 命令和选项, 292-293
+
+  - 解密数字签名, 297
+
+  - 解密消息, 297
+
+  - 加密消息, 297
+
+  - 设置, 293-296
+
+  - 签署消息, 297-298
+
+  - 使用, 296-298
+
+- GNU 软件, 14
+
+- GNU SQL, 223
+
+## G
+
+- Grand Unified Bootloader (GRUB), 30, 515-516
+
+  - 以及 CD 刻录机, 591-592
+
+  - 配置, 649
+
+  - 另见 boot loaders
+
+- 图形工具, 331
+
+  - GNOME, 232-233
+
+  - KDE, 232
+
+  - X Window System, 233
+
+- `grep`, 162-163
+
+- GTK+, 97
+
+- GUI, 从命令行启动, 40-41
+
+- `gvim`, 226-230
+
+- `gzip`, 207-209
+
+## H
+
+- 硬盘
+
+  - 配置, 23
+
+  - 信息需求, 23-24
+
+  - 挂载分区, 590
+
+- 硬件
+
+  - 设备安装, 618-619
+
+  - 安装需求, 22-23
+
+- 帮助, 44-45
+
+  - GNOME, 99
+
+  - KDE, 124
+
+  - 另见 documentation；references；resources
+
+- 历史记录
+
+  - 命令和事件引用, 139
+
+  - 配置, 141
+
+  - 事件编辑, 140
+
+  - 事件, 138-139
+
+  - `HISTFILE` 和 `HISTSAVE`, 141
+
+  - 列表, 137
+
+- `/home` 目录, 573
+
+- 超文本数据库, 254
+
+## I
+
+- ICMP 数据包, 335
+
+- ICQ, 286, 281
+
+- IDE CD-R/RW, 安装设备, 590-592
+
+- `ifconfig`, 775-777
+
+- `ignoreeof`, 167-168
+
+- IKE, 309-310
+
+- IMAP, 469-470
+
+- `info` 页面, 45
+
+  - 另见 Help
+
+- 信息需求, 23-25
+
+- Informix, 222
+
+- `init.d` 脚本, 357-358
+
+- 初始化文件, 170-171, 178-179
+
+- `inittab` 文件, 622
+
+- 输入设备, 622-623
+
+- 安装软盘, 26
+
+  - 另见 boot disks
+
+- 安装
+
+  - 额外软件, 34
+
+  - `redhat-config-packages`, 55-56
+
+  - `rpm` 命令, 57-58
+
+  - 软件, 54-60
+
+
+
+## J
+
+- `Java`
+  - Blackdown，260-261
+  - 软件开发工具包 (`SDK`)，261
+- 作业
+  - 调到前台，152
+  - 杀死，152-153
+  - 管理操作，151
+  - 通知，151-152
+  - 后台运行，150-151
+  - 停止和挂起，152-153
+- 日志，569，579-580
+
+## K
+
+- `k5login`，284
+- KDE。另见 K Desktop Environment
+- Kerberos，61，323
+  - 身份验证，324-325
+  - 配置服务器，325-326
+  - Kerberized 服务，325
+  - 服务器，323-324
+- 内核，3，12
+  - 归档和补丁，640-641
+  - 启动磁盘，648-649
+  - 编译和安装，646-649
+  - 从源代码编译，640-644
+  - 配置功能，644-646
+  - 配置，641-644
+  - CP 内核包，636-637
+  - 安装新版本，633-638
+  - 安装内核包，637-638
+  - 手动安装内核映像，647-648
+  - Linux 内核接口，585
+  - 修改相同版本的内核，638-640
+  - 模块工具，626-627
+  - Red Hat 内核包，636
+  - 运行时参数，634-635
+  - 支持包，637
+  - 版本，633-634
+- K Desktop Environment，12-13
+  - 应用程序，124-125
+  - Bluecurve，41，42-43
+  - 配置桌面，119-120
+  - 控制中心，130-133
+  - 桌面，117-123
+  - 桌面文件，120-121
+  - 桌面链接，125
+  - 桌面操作，119
+  - Desktop Pager，122
+  - 桌面用户目录，132
+  - 目录和文件，132-133
+  - 编辑器，225
+  - 文件管理器。另见 Konqueror
+  - 图形工具，222
+  - 帮助中心，124
+  - 安装目录，133
+  - kde 目录，132
+  - KDE 面板，123
+  - KFourier，232
+  - Kicker，123
+  - KMail，241
+  - KOffice，216-217
+  - Konqueror，126-130，258，263-264
+    - 复制文件，129
+    - 删除文件，130
+    - 键盘快捷键，129
+    - 移动文件，129
+    - 浏览目录，128-129
+    - 导航面板，127-128
+    - 权限，130
+    - 重命名文件，130
+    - 搜索文件，128
+    - 选择文件，129
+    - Web 和 FTP 访问，130
+    - 窗口，126-127
+  - KParts，217
+  - Krita，232
+  - KSnapshot，232
+  - KSysguard，514
+  - KuickShow，232
+  - KView，232
+  - 菜单，118
+  - MIME 类型和关联应用程序，132
+  - 挂载 CD-ROM 和软盘，125-126
+  - 概述，115-116
+  - 进程管理器 (`kpm`)，514
+  - Qt 库，117
+  - 退出，118-119
+  - 标准链接，124-125
+  - 任务管理器和性能监视器，514
+  - URL 桌面文件，120-121
+  - 虚拟桌面，122
+  - 网站，116
+  - 窗口，121-122
+- Kudzu，618-619，620
+- LDAP，455-456，544-546
+- `less`，187，188
+- `lprq`，276
+- 许可证，13-14
+- 行式打印机服务器。参见 LPRng
+- 链接，259
+- Linux
+  - 归档，181
+  - 归档和压缩文件，202-210
+  - 复制和移动文件，196，197
+  - 复制文件，193-195
+  - 复制文件到 DOS 软盘，199-200
+  - 复制文件到 DOS 分区，202
+  - 目录命令，189-190
+  - 文档，19-20
+  - 删除文件和目录，196
+  - 文件操作，197
+  - 文件卷管理器，202-210
+  - 文件结构，184-187
+  - 文件，181，182-184
+  - 绘图工具，233-234
+  - 硬链接，198-199
+  - 历史，10-12
+  - 主目录，185
+  - 安装，22-33
+  - 链接，197-199
+  - 列出、显示和打印文件，187-189
+  - 管理目录，189-192
+  - 移动文件，195-196
+  - `mtools`，199-202
+  - 办公套件，213
+  - 在线信息来源，18-19
+  - 与操作系统，10
+  - 概述，3-4，12-13
+  - 路径名，185-186
+  - 引用父目录，191-192
+  - 搜索目录，192-193
+  - 软件，14-17
+  - 符号链接，197-198
+  - 系统目录，186-187
+- `linux-wlan`，80
+- `ln`，197-199
+- 局域网 LAN
+  - 地址，656-658
+  - 静态或动态分配 IP 地址，84-86
+  - 配置，82-92
+  - 实现 DNS 服务器，86-88
+  - IP 地址，83
+  - 物理配置，83
+  - Squid 代理服务器，86
+
+- 源代码应用程序，59-60
+- 即时通讯，281-282
+- 完整性检查，290
+- 接口配置脚本，75-76
+- Internet Cache Protocol (`ICP`)，443
+- Internet 配置向导，73
+  - DSL 和 ISDN 配置，74
+  - 调制解调器配置，73-74
+  - 无线配置，74-75
+- Internet Mail Access Protocol。另见 IMAP
+- Internet Protocol Security。另见 IPsec
+- InterNetNews (`INN`)，485
+  - 配置文件，485-486
+  - 实现，487
+  - `inn.conf`，486-487
+  - 概述，487
+  - 存储格式，486-487
+- 局域网，84
+- 入侵检测，301
+- `iostat`，513
+- IP 地址，83-84，253
+  - 静态或动态分配，84-86
+  - 基于类的，757-758
+  - 动态，698-699
+  - 固定，703-706
+  - 获取，762-763
+  - 虚拟主机，425-426
+- IP 别名，782
+- IP 转发，351
+- IP 伪装，349-351
+  - 本地网络，350
+  - NAT 规则，350
+  - 选定主机，352
+- 基于 IP 的虚拟域，684-685
+- `IPsec`，62，303
+  - 证书，310
+  - 使用 `setkey` 配置连接，306-309
+  - 使用 `racoon` 配置，309-310
+  - 使用 `redhat-config-network` 配置，305-306
+  - Crypto IP Encapsulation (`CIPE`)，312
+  - 以及 `IPtables`，305
+  - 密钥交换协议 (`IKE`)，309-310
+  - 模式，304
+  - 协议，303-304
+  - 接收主机，308
+  - 安全关联，307
+  - 安全数据库，304-305
+  - 安全策略，307-308
+  - 隧道模式，310-312
+  - 双向传输，308-309
+- `iptables`，328-329
+  - 接受和拒绝数据包，333-334
+  - 添加和更改规则，331
+  - 命令，331
+  - 控制端口访问，336-337
+  - ICMP 数据包，335
+  - 以及 `IPsec`，305，335
+  - 选项，332-333
+  - 脚本示例，343-349
+  - 支持，341-343
+  - 目标，350
+  - 用户定义链，334
+- `IPv4`，756
+  - 地址，654，757
+  - CIDR 地址，760-762
+  - 保留地址，762-763
+- `IPv6`，756
+  - 地址，654，765-767
+  - CIDR 地址，762
+- IRC，280-281
+- ISDN，配置，74
+- `iwconfig`，78-79
+- `iwlist`，80
+- `iwpriv`，79-80
+- `iwspy`，80
+
+
+
+# L
+
+- 逻辑卷管理 `LVM`，30
+
+    - 使用 `Disk Druid` 创建 `LVM`，612
+
+    - 在内核中启用，601
+
+    - `LVM` 结构，611-612
+
+    - `LVM` 工具，612，613，614-615
+
+    - 逻辑卷，30
+
+- 登录/注销，34-35
+
+    - 从命令行界面，39-40
+
+- 循环，156
+
+- `lpq`，188-189
+
+- `lpr`，187，188-189
+
+- `lprm`，188-189
+
+- `LPRng`，480-483
+
+    - 配置 `lpd`，481-483
+
+    - 打印客户端，481，483
+
+    - `printcap` 文件，481
+
+- `ls`，187，189，190-191，285
+
+- `Lynx`，259
+
+- 宏，270
+
+- 邮件，243-244
+
+- 邮件客户端，237-238
+
+    - 访问远程 `POP` 邮件服务器上的邮件，246-247
+
+    - `Balsa`，240-241
+
+    - 命令行，242-245
+
+    - `Emacs`，241，242
+
+    - `Evolution`，239，240
+
+    - `Fetchmail`，247
+
+    - `GNOME`，240-241
+
+    - `KMail`，241
+
+    - `Mail`，243-244
+
+    - `MIME`，238-239
+
+    - `Mozilla`，241-242
+
+    - `Mutt`，242-243
+
+    - 新消息处理实用程序 `nmh`，244-245
+
+    - 收到邮件的通知，245-246
+
+- 邮件服务器，446
+
+    - 收到邮件，447
+
+- 邮件传输代理，446
+
+- 邮件列表，250-251
+
+- `mangle` 表，340
+
+- 手册翻译，654
+
+- 伪装，349-351
+
+- 主区域，89-90
+
+    - 反向，91-92
+
+- 消息客户端，280-281
+
+- `Metacity`，43
+
+- `mgetty`，621-622
+
+- `Microsoft Office`，访问性，214
+
+- `MIME`，238-239
+
+- `mingetty`，621-622
+
+- `Minix`，11
+
+- `mkdir`，189，190
+
+- `mkfs`，595-596
+
+- `mkswap`，596
+
+- `/mnt` 目录，573
+
+- 调制解调器
+
+    - 配置，73-74
+
+    - 安装和管理，621-622
+
+- 模块，626-631
+
+    - 文件和目录，627
+
+    - 为内核安装新模块，630-631
+
+    - 管理，626-630
+
+    - `RAM` 磁盘，649-650
+
+- 监视器，信息需求，24
+
+- `more`，187，188
+
+- `mount` 命令，586-587
+
+- 挂载 `CD-ROM`，589-590
+
+- 挂载文件系统，569，577-578
+
+    - 自动挂载，580-586
+
+    - 直接挂载，586-590
+
+    - `mount` 选项，582-583
+
+- 挂载软盘，588-589
+
+- 挂载硬盘分区，590
+
+- 挂载点，24
+
+- 鼠标，信息需求，23-24
+
+- `Mozilla`，241-242，256-258，263
+
+- `mtools`，199-202
+
+    - 命令，200
+
+    - 配置，201
+
+- `MULTICS`，10
+
+- 多媒体，231
+
+    - 应用程序，235-236
+
+    - `CD` 刻录机，235-236
+
+    - 声音应用程序，234-235
+
+    - 视频应用程序，236
+
+    - 网站，231-232
+
+- 多任务系统，10
+
+- 多用户系统，10
+
+- `Mutt`，242-243
+
+- `mv`，195-196
+
+- `MX` 记录，147
+
+## N
+
+- 名称服务器地址，764-765
+
+- 名称服务器记录，671
+
+- `named.conf`，662-665
+
+- `NAT`，328-329，338-340
+
+    - 添加规则，338
+
+    - 重定向，340
+
+    - 目标和链，339-340
+
+- `Nautilus`，96，258，264
+
+    - 目录，104-105
+
+    - 文件和目录属性，106-107
+
+    - 文件菜单，106
+
+    - 管理文件，105-106
+
+    - 菜单，104
+
+    - 首选项，107
+
+    - 侧边栏，103
+
+    - 视图，103-104
+
+    - 作为 `Web` 浏览器，107-108
+
+    - 窗口，102，103
+
+- `NcFTP`，265-268
+
+    - 书签和宏，269-270
+
+    - 命令，266-267
+
+    - 下载功能，268-269
+
+    - `get` 选项，268
+
+    - `open` 选项，265
+
+- `Netatalk`，707
+
+- `Netfilter`
+
+    - 内置链，330
+
+    - 规则，714
+
+- `netgroups`，721
+
+- `netmask`，758-759
+
+- `netstat`，781-782
+
+- 网络地址转换。参见 `NAT`
+
+- 网络卡，安装，624-625
+
+- 网络文件系统。参见 `NFS`
+
+- 网络信息服务。参见 `NIS`
+
+- 网络
+
+    - 配置，30-31
+
+    - 配置信息，25
+
+    - 配置工具，67
+
+    - 动态和静态，68-69
+
+    - 接口配置脚本，75-76
+
+    - 接口和路由，774-779
+
+    - `Internet` 配置向导，73-75
+
+    - 监控，779-782
+
+    - 网络设备控制工具，73
+
+    - 私有，84
+
+    - `redhat-config-network`，69-72
+
+    - 子网，702-703
+
+    - 工具，280
+
+    - 虚拟专用网络 `VPN`，75
+
+- 新消息处理实用程序 `nmh`，244-245
+
+- 新闻服务器，485-487
+
+- 新闻传输代理，250
+
+- 新闻组，247-252
+
+    - `usenet`，250
+
+- 新闻阅读器，249，251-252
+
+- `NFS`，707
+
+    - 分析工具，708
+
+    - 应用更改，712-713
+
+    - 配置，710-713
+
+    - 使用 `Red Hat NFS` 配置工具配置，708-710
+
+    - 守护进程，707-708
+
+    - `/etc/exports` 示例，712
+
+    - `/etc/exports` 选项，711
+
+    - 主机条目，710
+
+    - 手动导出文件系统，713
+
+    - 挂载文件系统，714-717
+
+    - 选项，710-711
+
+    - `portmapper` 服务，713-714
+
+    - 安全，713-714
+
+    - 启动和停止，708
+
+    - 用户级访问，712
+
+- `NIS`，717，722-723
+
+- `nmh`，244-245
+
+- `noauto`，585-586
+
+- `nsupdate`，687
+
+办公套件，213
+
+在线信息来源，18-19
+
+开放软件基金会，11
+
+开源软件，3，13-14
+
+`OpenOffice`，13，214-215
+
+`OpenSSH`，313-322
+
+`OpenSSL`，433-434
+
+操作系统与 `Linux`，10
+
+选项，54
+
+`options` 语句，565-668
+
+`Oracle`，222
+
+软件包
+
+安装，54-60
+
+安全检查，58-59
+
+数据包过滤，60，328，329-338
+
+数据包篡改，340
+
+数据包状态，337-338
+
+`PAM`，546-547
+
+父/子结构，184
+
+另见 文件结构
+
+`parted`，594
+
+分区，28-29
+
+标签，584
+
+推荐，29
+
+根分区，29
+
+交换分区，29
+
+`Windows`，585
+
+`PATH`，565-566
+
+`PCMCIA` 设备，623-624
+
+`PDF`，219-220
+
+性能分析工具和进程，512-514
+
+个人区域网络（`PANs`），65-66
+
+`PHP`，431
+
+`ping`，277-278
+
+可插拔认证模块（`PAM`），546-547
+
+`POP` 服务器，467-469
+
+端口转发，321-322
+
+`portmapper` 服务，713-714
+
+`POSIX`，12
+
+`Postfix`，446，448-452
+
+`PostgreSQL`，221
+
+`PostScript`，219-220
+
+`PPP` 连接，`wv dial`，76-78
+
+打印服务器
+
+`CUPS`，471，472，480
+
+`LPRng`，471，480-483
+
+打印机
+
+配置，50-52
+
+设备文件，472
+
+设备和配置，471-472
+
+`spool` 目录，472
+
+优先级，510
+
+私有网络，84
+
+`IPv4`，656-657
+
+`IPv6`，658
+
+`/proc` 设备信息文件，620-621
+
+`/proc` 文件系统，574
+
+`Procmail` 系统管理器，513-514
+
+`Professional FTP Daemon`。另见 `ProFTPD`
+
+`profile` 脚本，176-177
+
+配置文件，72
+
+`ProFTPD`，378
+
+匿名访问，392-395
+
+认证，392
+
+配置，390-392
+
+
+
+配置指令，396-398
+`ftpconfig`，400
+`ftpshut`，399
+`ftpwho`，400
+安装和启动，389-390
+虚拟 FTP 服务器，395-398
+程序目录，505，572
+代理，61
+Squid 代理服务器，86
+透明，340
+代理服务器，437-438
+另见 Squid 代理服务器
+`ps`命令，512
+PTR 记录，673-674
+公钥加密，289-290
+检查 RPM 软件包，300
+导入公钥，299
+验证公钥，299
+`pwd`，189
+Qmail，446
+Qpopper，468-469
+Qt 库，117
+配额，542-544
+`raccoon`，309-310
+RAID
+  自动检测，605-606
+  从 RAID 设备启动，604-605
+  配置 RAID 设备，601-611
+  对应的硬盘分区，604，605
+  创建和安装 RAID 设备，606-610
+  设备和分区，604
+  磁盘，30
+  在内核中启用，601
+  示例，610-611
+  Linux 软件 RAID 级别，602-603
+  持久超级块，605-606
+  工具，606
+RAM 磁盘，649-650
+`rcp`，283，284-285
+Red Hat Enterprise Linux，6-7
+Red Hat Linux
+  管理工具，9，504
+  文档，7-8
+  Fedora Core，8-9
+  Fedora 项目，6
+  硬盘配置，23
+  硬件要求，22-23
+  信息要求，23-25
+  安装，21-22
+  概述，5-6
+  Red Hat Enterprise Linux，6-7
+  更新，52-54
+  用户管理器，48-49
+Red Hat Network，34，52-54
+Red Hat Package Manager（RPM），551
+  命令行安装，553-559
+  安装示例，557-558
+  使用 `rpm` 安装和更新软件包，556-557
+  从桌面安装，552
+  选项，553-555
+  软件包，552
+  打包软件，567
+  查询 RPM 软件包和已安装软件，555-556
+  重建 RPM 数据库，559
+  移除 RPM 软件包，558
+  `rpm`命令，553-555
+  工具，551
+  更新软件，552-553
+  验证 RPM 安装，558-559
+Red Hat Update Agent，34
+`redhat-config-bind`
+  添加记录，90-91
+  使用其配置 DNS 服务器，88-92
+  主区域，89-90
+  反向主区域，91-92
+`redhat-config-date`，494
+`redhat-config-network`，69-72，305-306
+  配置已替换或不受支持的以太网卡，72
+  配置文件，72
+`redhat-config-packages`，55-56
+`redhat-config-printer`，50-52
+`redhat-config-securitylevel`，81
+`redhat-config-services`，360-362，503
+`redhat-config-users`，48-50
+`redhat-config-xfree86`，52
+`redhat-logviewer`，508，509
+重定向
+  NAT，340
+  标准错误，149-150
+  标准输入/输出，145-148
+参考，7
+帮助，44-45
+在线，18-19
+正则表达式，162-164
+特殊字符，163
+ReiserFS，580
+远程访问命令，283-286
+资源记录，669-674
+资源，7
+帮助，44-45
+在线，18-19
+恢复，519-521
+反向映射，678-681
+反向主区域，91-92
+反向代理缓存，443-444
+RHN。另见 Red Hat Network
+`.rhosts`，284
+Ritchie，Dennis，11
+登录，283，284
+`rm`，196
+`rndc`，189，190
+根目录，570-571
+root 用户，491-493
+密码，492
+`su`命令，492-493
+路由，777-779
+`rpm`命令，57，58，553-555
+`rsh`，285
+运行级别，358，499-500
+使用 `telinit` 更改，501
+`initab`，501
+`runlevel`命令，501
+关机，501-503
+`ruptime`，284
+`rwho`，283
+Samba
+  使用客户端访问服务，747-752
+  访问 SWAT，736
+  激活 SWAT，735
+  应用程序，726-727
+  使用 `redhat-config-samba` 配置，731-732
+  使用 SWAT 创建新共享，737-738
+  文档，725-726
+  域登录，746-747
+  Global 部分，739-742
+  Homes 部分，742
+  密码，742
+  密码，729-731
+  Printers 部分，742-743，744-745
+  共享，743-744
+  共享 Windows 目录和打印机，750-752
+  `smbclient`，747-749
+  `smb.conf` 配置文件，732-733
+  `smbmount`，748-750
+  启动，728-729
+  SWAT 和 `smb.conf`，734-746
+  SWAT 配置页面，736-737，738
+  SWAT 生成的 `smb.conf` 示例，738-739
+  测试配置，746
+  变量替换，745-746
+  Windows 客户端，752
+- `sar`，513
+- `scambus`，992
+- 任务调度，495–499
+- `scp`，284–285
+- 搜索服务器，487–488
+- 搜索文件，162–163
+- 密钥，688–689
+- 安全外壳。参见 SSH
+- 安全套接层（SSL），433–435
+- 安全
+  - 应用程序，61
+  - 关联，307
+  - 结合加密和签名，290，291
+  - 配置，60–63
+  - 数字签名，290，298–300
+  - GNU Privacy Guard（GPG），291–296
+  - 完整性检查，290
+  - 网络安全应用程序，328
+  - NFS，713–714
+  - 软件包安全检查，58–59
+  - 策略，307–308
+  - 公钥加密，289–290
+  - Sendmail，464–467
+  - 服务，60–62
+  - Squid 代理服务器，440–442
+  - Tripwire，301
+  - Web 服务器，433–435
+- Sendmail，446，457–467
+  - 集中式邮件服务器，463
+  - 配置，446–460
+  - 配置具有直接 ISP 连接的工作站，463–464
+  - 配置邮件服务器和客户端，462
+  - 功能，457–458
+  - 文件和目录，454–455
+  - 邮件程序表，464
+  - 伪装，460–462
+  - 安全，464–467
+  - 简单网络配置，462–463
+- 串行端口，621
+- 服务器：
+  - 独立，360
+  - 使用启动脚本启动和停止，359
+  - 自动启动，359–360
+  - 直接启动，359
+  - `xinetd`，360
+- 服务器端包含（SSIs），430–431
+- `service`命令，503
+- 服务脚本，365
+  - 示例，367–368
+  - 函数，365–366
+  - Init 脚本函数，366
+  - 安装，368
+  - System V init 脚本标签，366
+  - 标签，366–367
+- `set`，154
+- `setkey`，306–309
+- Setup Agent，33
+- shell 脚本
+  - 参数，155–156
+  - 执行，155
+  - 用户定义命令，155–156
+- shell，136
+  - 别名，165–167
+  - 命令行界面，135–137
+  - 配置，165
+  - 配置文件，179
+  - 控制操作，167–168
+  - 历史记录，137–141
+  - 操作，146
+  - 提示符，135
+  - 子 shell，169
+  - 符号，141–142，144
+  - 系统 shell 变量，169–179
+  - 变量，153–154
+- `shutdown`，38，39
+  - 从命令行界面，40
+- 从属服务器，682–684
+- `slogin`，284
+- 软件
+  - 编译，562–565
+  - 解压缩，561
+  - 一步解压缩和提取，560–561
+  - 提取，562
+  - 安装，31–32，54–60
+  - 从压缩归档安装，560–566
+  - 从 RPM 源代码文件安装，559–560
+  - Linux，14–17
+  - 开源，3，13–14
+  - 软件包类型，550–551
+  - 使用 RPM 打包，567
+  - 仓库，549–550
+  - 选择安装目录，561–562
+- 声音
+  - 应用程序，234–235
+  - 配置，34
+  - 设备，625
+
+
+
+### U
+- UCM，451-452
+- `umount` 命令，587-588
+- 卸载软件包，56
+- Unix，4
+  - 历史，10-11
+- `unset`，154
+- 未经请求的商业邮件，451-452
+- 不受支持的驱动程序，63-64
+- 更新，52-54
+- URL 地址，254-256
+- usenet 新闻组，20，247-252
+- 用户账户，34，37-38
+  - 配置，48-50
+- 用户界面，10
+- 用户定义链，334
+- 用户
+  - 绝对权限，538-539
+  - 添加和删除，529-530
+  - 配置文件，523-524
+  - 控制密码，527-528
+  - 目录权限，539-540
+  - `/etc/login.access`，527
+  - `/etc/login.defs`，527
+  - `/etc/skel`，526-527
+  - 管理组，531-533
+  - 所有权，534-536
+  - 所有权权限，540-541
+  - 密码文件，524-526
+  - 权限默认值，541-542
+  - 权限符号，537
+  - 权限，533-534，535
+  - 配置文件脚本，526
+  - 粘滞位权限，540-541
+- `/usr` 目录，572
+
+### V
+- `/var` 目录，573-574
+- `/var/log`，508-512
+- 视频应用，236
+- 视频卡，信息需求，24
+- 视频设备，626
+- Vim，223，226-230
+- 虚拟桌面，122
+- 虚拟域，684-685
+- 虚拟主机
+  - 在 Apache Web 服务器上，425-430
+  - 动态，427-430
+  - 基于 IP 地址，425-426
+  - 基于名称，426-427
+- 虚拟专用网络（VPN），75
+  - Crypto IP Encapsulation（CIPE），312
+  - 隧道模式，310-312
+- `vmstat`，513
+- `vsftpd`，378，379-380
+  - 访问控制，386-387
+  - 匿名用户权限，385
+  - 配置，383-386
+  - 连接时间限制，385-386
+  - 启用登录访问，384
+  - 启用独立访问，384
+  - 本地用户权限，384-385
+  - 日志记录，386
+  - 消息，386
+  - 运行，382-383
+  - 虚拟主机，388
+  - 虚拟用户，388-389
+
+### W
+- Washington POP 服务器，468
+- Washington University FTP Daemon，398-399
+- Washington University FTP Daemon（WU-FTPD）
+  - `ftpconfig`，400
+  - `ftpshut`，399
+  - `ftpwho`，400
+- Web 浏览器，256-259
+- Web 客户端，254-259
+- Web 文件类型，256
+- Web 协议，255
+- Web 站点，创建自己的，259
+- Webalizer，422
+- `who`，278
+- 窗口管理器，43
+  - GNOME，102
+- 无线连接
+  - 配置，74-75
+- `iwconfig`，78-79
+- `iwlist`，80
+- `iwpriv`，79-80
+- `iwspy`，80
+- `linux-wlan`，80
+  - 工具，78-80
+- WU-FTPD，398-399
+  - `ftpconfig`，400
+  - `ftpshut`，399
+  - `ftpwho`，400
+- `wvdial`，76-78
+  - 变量，76-77
+
+### X
+- X Window System
+  - 配置，32-33，52
+  - 图形工具，233
+  - 邮件客户端，241-242
+- Xbase 数据库，223
+- `xconfig`，94-98，399
+- Ximian，217-219
+- Ximian Desktop，96
+- `xinetd`，368-369
+  - 属性，369-372
+  - 配置，369
+  - 默认和内部服务，374
+  - 禁用和启用服务，372-373
+  - 日志服务，373
+  - 网络安全，374
+  - `xinetd.d` 目录中的服务文件，374-375
+  - 使用其启动和停止服务，369
+- TCP wrappers，375-376
+- `xload`，515
+
+### Y
+- Yum 仓库，53
+
+### Z
+- Zip，209-210
+- 区域文件，674-682
+- 区域密钥，689
+- 区域语句，663
+
+## MORE OSBORNE/McGRAW-HILL REPRINTS
+
+### BASIC MANUALS
+
+| ISBN | Author | Title | Price |
+|------|--------|-------|-------|
+| 463521-2 | BRADLEY | Programming in Visual Basic 6.0 (With CD) | 395.00 |
+| 463557-3 | CORNELL | Visual Basic 6: From the Ground Up | 325.00 |
+
+- 安装声卡，624–625
+- 源代码应用程序安装，59–60
+- 分裂 DNS，692–694
+- SQL 数据库，220–223
+- Squid 代理服务器，86，437–438
+  - ACL 选项，442
+  - 缓存，443
+  - 配置客户端浏览器，438–439
+  - 日志，443
+  - 反向代理缓存，443–444
+  - 安全，440–442
+  - `squid.conf`，439
+- SRPMs，559–560
+- `ssh`，285–286
+- SSH，61
+  - 客户端，318–321
+  - 配置，322
+  - 配置文件，319
+  - 使用 `ssh-keygen` 创建 SSH 密钥，317-318
+  - 加密和身份验证，314-315
+  - OpenSSH，313-322
+  - 端口转发，321-322
+  - `scp`，320-321
+  - 设置，316-318
+  - `sftp` 和 `sftp-server`，321
+  - `ssh`，320
+  - `ssh`，315-316
+  - 隧道，321-322
+- SSL，433-435
+- 标准错误，重定向和管道，149-150
+- 标准输入/输出，149-150
+- 起始授权记录（SOA），670-671
+- 启动，38-39
+- 启动文件，355-357
+- 启动脚本，357-358
+  - 使用其启动和停止服务器，359
+- `su`，492-493
+- 子域，682-684
+- 子网，702-703
+- 子 shell，169
+- 监督控制，491-493
+- Sybase，222
+- `syslog.conf`，508
+  - 条目，508-509，510-511
+- `syslogd`，508-512
+- 系统
+  - 配置，31
+  - 配置工具，48
+  - 系统管理工具，493
+  - 系统目录，504-509，571-572
+  - 系统日志，508-512
+  - 系统变量，169-179
+    - `BASH_ENV`，172
+    - 导出，174
+    - `HOME`，171
+    - 初始化文件，170-171
+    - 关键字，170
+    - `NNTPSERVER`，173
+    - `PATH`，171-172
+    - `PS1` 和 `PS2`，172-173
+    - 变量赋值，174
+- SysV Init，357-358
+- Talk，280-281
+- Tanenbaum，Andrew，11
+- `tar` 工具，203-207
+- 目标，330
+  - NAT，339-340
+- `tar.gz`，560-566
+- TCP wrappers，375-376
+- `tcpdump`，781
+- TCP/IP，753-755
+  - 配置文件，768-769，770
+  - 网络地址，756-765
+- Telnet，282-283
+- `termcap` 文件，622
+- 安装和管理终端，621-622
+- 测试操作，157-158
+- Thompson，Ken，10，11
+- 时间，494-495
+  - 配置，33
+- `top`，513
+- `traceroute`，277，279
+- 树结构，184
+  - 另见文件结构
+- Trigview，301
+- `tset`，622
+- TSIG 密钥，691-692
+- TSIG 签名，686-687
+- 隧道，321-322
+- Tux，401-402
+- TV，626
+
+
+
+| 460142-3 | GOTTFRIED | Programming with BASIC, 3/e (Schaum Outline Series) | 195.00 |
+| 463666-9 | JERKE | Visual Basic 6: The Complete Reference (With CD) | 395.00 |
+| 463667-7 | JUNG & KENT | Visual Basic: Annotated Archives | 375.00 |
+| 048679-4 | KANT | Visual Basic.Net: A Beginner's Guide | 275.00 |
+| 047418-4 | SHAPIRO | Visual Basic.Net: Developer's Headstart | 250.00 |
+| 048678-6 | SMILEY | Learn to Program with Visual Basic.Net | 295.00 |
+| 463961-7 | WARNER | Teach Yourself Visual Basic 6 | 235.00 |
+
+### C & C++ PROGRAMMING
+
+| ISBN | Author | Title | Price |
+|------|--------|-------|-------|
+| 463985-4 | COHOON | C++ Program Design, 2/e (With CD) | 350.00 |
+| 463607-3 | FRIEDMAN | C/C++: Annotated Archives | 425.00 |
+| 463491-7 | GOTTFRIED | Programming with C, 2/e (Schaum Outline Series) | 245.00 |
+| 047377-3 | HUBBARD | Schaum's Outline Series: Programming with C++, 2/e | 175.00 |
+| 047427-3 | KAMIN | Programming with Class: A C++ Introduction to Computer Science | 275.00 |
+| 044779-9 | MICHAELIS | C# Developer's Headstart | 195.00 |
+| 463283-3 | MUELLER | Visual C++ 5 From the Ground Up | 325.00 |
+| 463729-0 | MUELLER | Visual C++ 6 From the Ground Up, 2/e | 345.00 |
+| 463261-2 | MURRAY & PAPPAS | The Visual C++ Handbook | 325.00 |
+| 041239-1 | PAPPAS | Debugging C++: Troubleshooting for Programmers | 375.00 |
+| 463810-6 | PAPPAS | Visual C++ 6: The Complete Reference | 395.00 |
+| 044720-9 | SCHILDT | Borland C++ Builder: The Complete Reference | 485.00 |
+| 047384-6 | SCHILDT | C#: A Beginner's Guide | 350.00 |
+| 048675-1 | SCHILDT | C#: The Complete Reference | 495.00 |
+| 041183-2 | SCHILDT | C: The Complete Reference, 4/e | 425.00 |
+| 048673-5 | SCHILDT | C++: A Beginner's Guide | 295.00 |
+| 463870-X | SCHILDT | Teach Yourself C++ | 295.00 |
+| 463868-8 | SCHILDT | Windows 95 Programming in C and C++ | 225.00 |
+| 040209-4 | SYNGRESS | MCSD Visual C++ 6 Distributed Applications Study Guide | 425.00 |
+
+### CERTIFICATION GUIDES
+
+| ISBN | Author | Title | Price |
+|------|--------|-------|-------|
+| 041169-7 | ALLEN/THOMAS | Oracle Certified Professional Financial Applications Consultant Exam Guide | 650.00 |
+| 044737-3 | BIGELOW | All-in-One Server+ Certification Exam Guide (With CD) | 450.00 |
+| 463522-0 | BOONE | All-in-One Java 2 Exam Guide (With CD) | 395.00 |
+| 047240-8 | BRELSFORD | All-in-One MCSE Windows 2000 Designing Exam Guide (With CD) | 550.00 |
+| 463573-5 | CADY | Accelerated NetWare 5: CNA Study Guide | 150.00 |
+| 463572-7 | CADY | Accelerated NetWare 5: CNE Study Guide | 150.00 |
+| 463603-0 | CADY | Network+ Certification Success Guide | 195.00 |
+| 463556-5 | COUCHMAN | Oracle Certified Professional DBA Certification Exam Guide (With CD) | 525.00 |
+| 463601-4 | COUCHMAN | Oracle Certified Professional: Application Dev. Exam Guide (With CD) | 585.00 |
+| 044735-7 | HUTNIK | All-in-One Cisco CCIE Lab Study Guide, 2/e (With CD) | 695.00 |
+
+## 800
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 463690-1 | KINNAMAN | Accelerated MCSE 学习指南：Microsoft Windows NT Server 4.0 | 295.00 |
+| 463689-8 | KINNAMAN | Accelerated MCSE 学习指南：Networking Essentials | 275.00 |
+| 463692-8 | KINNAMAN | Accelerated MCSE 学习指南：Windows NT Server 4.0 in the Enterprise | 295.00 |
+| 463688-X | KINNAMAN | Accelerated MCSE 学习指南：Windows NT Workstation 4.0 | 275.00 |
+| 463687-1 | KINNAMAN | TCP/IP (Exam 70-059) Accelerated MCSE 学习指南 | 195.00 |
+| 463737-1 | MILLER | SAP R/3 Certification Exam Guide (With CD) | 495.00 |
+| 463755-X | SCHILDT | Windows 2000: Programming from the Ground Up | 450.00 |
+| 047267-X | SIMMONS | MCSE Internet Security and Acceleration Server 2000 Study Guide | 495.00 |
+| 463673-1 | SYNGRESS | A+ Certification Study Guide (With CD), 2/e | 450.00 |
+| 040208-6 | SYNGRESS | A+ Certification Study Guide Practice Exam, 2/e | 425.00 |
+| 463976-5 | SYNGRESS | A+ Test Yourself Practice Exams | 350.00 |
+
+
+
+| 043533-2 | SYNGRESS | CCA Citrix Certified Administrative for MetaFrame 1.8 (With CD) | 495.00 |
+| 042054-8 | SYNGRESS | CCNP: Remote Access Study Guide (With CD) | 495.00 |
+| 463987-0 | SYNGRESS | CNE: NetWare 5 Study Guide (With CD) | 625.00 |
+| 041302-9 | SYNGRESS | JAVA: Sun Certified Programmer for Java 2 (With CD) | 395.00 |
+| 047269-6 | SYNGRESS | MCDBA Administering SQL Server 2000 Study Guide | 485.00 |
+| 463720-7 | SYNGRESS | MCDBA SQL Server 7: Test Yourself Practice Exams | 350.00 |
+| 463986-2 | SYNGRESS | MCDBA: SQL Server 7 Administration Study Guide (With CD) | 450.00 |
+| 463980-0 | SYNGRESS | MCDBA: SQL Server 7 Database Design (With CD) | 450.00 |
+| 463655-3 | SYNGRESS | MCSD Visual C++6 Desktop Applications Study Guide (With CD) | 435.00 |
+| 463822-X | SYNGRESS | MCSD: Analyzing Requirements (With CD) | 495.00 |
+| 463898-6 | SYNGRESS | MCSD: Visual Basic 6 Desktop Application (CD) | 495.00 |
+| 463899-8 | SYNGRESS | MCSD: Visual Basic 6 Distributed Applications | 475.00 |
+| 463464-X | SYNGRESS | MCSE Microsoft TCP/IP Study Guide (EXAM 70-59) (Book Only) | 295.00 |
+| 463465-8 | SYNGRESS | MCSE Microsoft TCP/IP Study Guide (EXAM 70-59) (With CD) | 425.00 |
+| 463251-5 | SYNGRESS | MCSE NT Server 4.0 (Book Only) | 295.00 |
+| 463124-1 | SYNGRESS | MCSE NT Workstation 4.0 Study Guide (EXAM 70-73) | 295.00 |
+| 047285-8 | SYNGRESS | MCSE Supporting and Maintaining a Windows NT Server 4.0 Network Study Guide | 495.00 |
+| 463886-6 | SYNGRESS | MCSE Test Yourself, MCSE Practice Certification Exams | 350.00 |
+| 041289-8 | SYNGRESS | MCSE Windows 2000 Certification Headstart | 475.00 |
+| 043531-6 | SYNGRESS | MCSE Windows 2000 Directory Services Administration Study Guide (With CD) | 550.00 |
+| 043532-4 | SYNGRESS | MCSE Windows 2000 Professional Study Guide (With CD) | 550.00 |
+| 043530-8 | SYNGRESS | MCSE Windows 2000 Server Study Guide (With CD) | 550.00 |
+| 043573-1 | SYNGRESS | MCSE: Designing Security for Windows 2000, Study Guide (With CD) | 495.00 |
+| 043529-4 | SYNGRESS | MCSE: Windows 2000 Network Administration Study Guide (With CD) | 575.00 |
+| 043600-2 | SYNGRESS | MCSE: Windows 2000: Accelerated Study Guide (With CD) | 650.00 |
+| 463979-X | SYNGRESS | Network + Certification Study Guide (With CD) | 450.00 |
+| 463969-2 | SYNGRESS | Network+ Test Yourself Practice Exams | 395.00 |
+| 463929-3 | TULLOCH | Accelerated MCSE 学习指南：Exchange Server 5.5 | 275.00 |
+
+## COMPUTER GRAPHICS
+
+计算机图形学
+
+- 463563-8 COHN AutoCad 14: The Complete Reference (With CD) 495.00
+- 469866-8 COHN AutoCad 2000: The Complete Reference 595.00
+- 047249-1 FULLER Dreamweaver 4 Virtual Classroom (With CD) 495.00
+- 047439-7 GOTTFRIED Schaum's Outlines Theory and Problems of Programming with Visual Basic 215.00
+- 044739-X KETTELL Dreamweaver 4: The Complete Reference 595.00
+- 047253-X MEADHRA How to Do Everything with Dreamweaver 4 395.00
+- 463293-0 NEWMAN Principles of Interactive Computer Graphics, 2/e 225.00
+- 048677-8 ROGERS Mathematical Elements for Computer Graphics, 2/e 250.00
+- 047371-4 ROGERS Procedural Elements for Computer Graphics, 2/e 295.00
+- 044504-4 SAHLIN FLASH 5: Virtual Classroom (With CD) 425.00
+- 044741-1 WOODS Macromedia Flash 5 Developer's Guide (With CD) 495.00
+- 463991-9 ZEID CAD/CAM Theory and Practice (Soft Cover) 315.00
+
+## COMPUTER ORGANIZATION & ARCHITECTURE
+
+计算机组织与体系结构
+
+- 460400-7 BARTEE Digital Computer Fundamentals, 6/e 250.00
+- 048334-5 CARTER Computer Architecture (Schaum's Outlines) 195.00
+- 044733-0 GOFF Get Your IT Career in Gear: Practical Advice for Building a Career in IT 295.00
+- 044722-5 WOOTEN Building and Managing a World Class IT Help Desk 395.00
+
+## COMPUTER SCIENCE - ADVANCED
+
+计算机科学 - 高级
+
+- 047369-2 ERBSCHLOE Information Warfare: How to Survive Cyber Attacks 395.00
+- 047424-9 FREEDMAN Computer Desktop Encyclopedia, 9/e (With CD) 850.00
+- 047370-6 KEEN The Freedom Economy 295.00
+
+
+
+- 041300-2 MANN I Want my MP3! How to Download, Rip and Play Digital Music (With CD) 475.00
+
+- 041189-1 PLOTNICK The IT Professional's Guide to Managing Systems, Vendors & End Users 350.00
+
+- 463847-5 ROTHSTEIN ACE The Technical Interview 295.00
+
+## COMPUTER SCIENCE - INTRODUCTORY
+
+计算机科学 - 入门
+
+- 043746-7 BEAR Get Your IT Degree & Get Ahead 325.00
+
+- 044535-4 HUTCHINSON Computer, Communication, Information: A User's Introduction 295.00
+
+- 044496-X KEYS How to Be a Successful Technical Trainer 295.00
+
+- 463300-7 NORTON Introduction to Computers, 2/e (Book Only) 275.00
+
+## CUSTOMER RELATIONSHIP MANAGEMENT (CRM)
+
+客户关系管理
+
+## DATA BASE MANAGEMENT SYSTEMS (DBMS)
+
+数据库管理系统
+
+## 数据处理
+
+044745-4 FARLEY 构建存储网络，第二版 395.00
+
+## 数据结构
+
+048708-1 COLLINS 数据结构与标准模板库 295.00
+
+048641-7 HEILEMAN 数据结构、算法与面向对象编程 * 175.00
+
+048354-X LIPSCHUTZ 数据结构，Schaums 概要系列 195.00
+
+462471-7 TREMBLAY 数据结构导论与应用，第二版 255.00
+
+## 数据仓库/知识管理
+
+463740-1 MATTISON Web 仓储与知识管理 350.00
+
+## 桌面出版
+
+044584-2 GREENBERG Photoshop 6：完整参考手册（附 CD） 595.00
+
+044512-5 HUSS 官方指南 COREL PHOTO PAINT 10 425.00
+
+## 电子商务
+
+044474-9 ELSEMPETER 电子商务：初学者指南 325.00
+
+042141-2 GREENSTEIN 电子商务 295.00
+
+042043-2 KEEN eProcess 优势：在互联网时代创造客户价值与商业财富 275.00
+
+463742-8 MINOLI Web 商务技术手册 285.00
+
+043953-2 MOON 火种：在互联网时代建立品牌忠诚度 375.00
+
+## 企业资源规划
+
+## 硬件维护
+
+## HTML
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 044730-6 | PENCE | 如何使用 HTML 做一切 | 375.00 |
+| 044486-2 | POWELL | HTML：程序员参考手册，第二版 | 295.00 |
+| 044487-0 | WILLARD | HTML：初学者指南 | 275.00 |
+
+## 互联网与网络目录
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 465500-X | AMBEGAONKAR | Intranet 资源工具包（附 CD） | 425.00 |
+| 042031-9 | GREENLAW | Inline Online 互联网与万维网基础 | 250.00 |
+| 463162-4 | HAHN | 互联网完全参考手册 | 395.00 |
+| 043718-1 | JONES | 如何使用互联网做一切 | 325.00 |
+| 463681-2 | KIRK | 互联网电话连接（附 CD） | 325.00 |
+| 463743-6 | MINOLI | 互联网与内联网工程 | 250.00 |
+| 042042-4 | NEIBAUER | 如何使用 Yahoo! 做一切 | 295.00 |
+| 048669-9 | YOUNG | 互联网：完全参考手册 | 395.00 |
+| 463981-1 | YOUNG | 互联网：完全参考手册：千禧版 | 395.00 |
+
+## JAVA
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 044531-1 | BAILEY | JAVA 元素：JAVA 编程原理 | 275.00 |
+| 047389-7 | BOLLINGER | JSP：初学者指南 | 395.00 |
+| 463612-X | FRENTZEN | JAVA SCRIPT：注释档案（书 + CD） | 475.00 |
+| 041168-9 | HANNA | 即时 Java Servlets（附 CD） | 395.00 |
+| 044527-3 | HANNA | JSP：完整参考手册 | 425.00 |
+| 047286-6 | HOUSER | 即时 Cold Fusion 5（附 CD） | 650.00 |
+| 463663-4 | JENSEN | J Builder 精要 | 395.00 |
+| 047388-9 | MacAULEY | JavaScript：程序员参考手册 | 325.00 |
+| 463279-5 | MASO | Visual J++ 手册 | 250.00 |
+| 463727-4 | MASO | Visual J++ 6 从零开始 | 395.00 |
+| 042047-5 | MITCHELL | DeBugging JAVA | 275.00 |
+| 463739-8 | MOSS | JAVA Servlets，第二版 | 375.00 |
+| 463290-8 | NAUGHTON | JAVA 手册 | 300.00 |
+| 463774-6 | NELSON | JAVA 基础类（附 CD） | 495.00 |
+| 463786-X | O'NEIL | JAVA Beans 从零开始 | 360.00 |
+| 463789-4 | O'NEIL | 自学 JAVA | 325.00 |
+| 044579-6 | POLLOCK | JAVA Script：初学者指南 | 375.00 |
+| 047452-9 | POWELL | Java Script：完整参考手册 | 550.00 |
+| 463831-9 | RINEHART | JAVA 数据库开发（附 CD） | 450.00 |
+| 463880-7 | SCHILDT | C++ 完整参考手册，第三版 | 375.00 |
+| 043592-8 | SCHILDT | JAVA 2：完整参考手册，第四版 | 395.00 |
+| 463867-X | SIPLE | JAVA 完整指南：数据库编程（附 CD） | 435.00 |
+| 047284-X | SYNGRESS | JAVA 2 Sun 认证编程 Java 2 学习指南（考试 310-025），第二版 | 485.00 |
+| 044472-2 | TREMBLETT | 即时企业 JavaBeans（附 CD） | 395.00 |
+| 041188-3 | TREMBLETT | 即时 Java 服务器页面（附 CD） | 395.00 |
+
+## MACINTOSH
+
+041182-4 JOHNSON 如何使用你的 Palm 手持设备做一切 375.00
+
+041287-1 STAUFFER 如何使用你的 iBook 做一切 375.00
+
+041237-5 STAUFFER 如何使用你的 iMac 做一切，第二版 450.00
+
+044577-X STEINBERG Office 2001 for Mac：完整参考手册 395.00
+
+## 微处理器与微型计算机
+
+463153-5 GILMORE 微处理器：原理与应用，第二版 245.00
+
+463639-1 HALL 微处理器与接口，第二版 * 275.00
+
+042140-4 PREDKO 编程与定制 8051 微控制器（附 CD） 315.00
+
+## 多媒体
+
+043621-5 BUCZEK 即时 ASP 脚本，第二版（附 CD） 425.00
+
+040203-5 COBURN Corel Draw 9：官方指南（附 CD） 595.00
+
+463616-2 GREENBERG 数字图像：实用指南 295.00
+
+463158-6 GREENBERG 基础 Photoshop 4 425.00
+
+041288-X GREENBERG 基础 Photoshop 5.5，第五版（附 CD） 575.00
+
+043623-1 MERCER ASP 3.0：初学者指南 295.00
+
+040264-7 MILBURN Photoshop 5.5：获得专业效果 425.00
+
+
+
+463731-2 MUELLER Visual Studio 6：完整参考手册（附 CD） 450.00
+
+040272-8 PARKER Publisher 2000：获得专业效果 595.00
+
+047276-9 VAUGHAN 多媒体：使其发挥作用，第五版（附 CD） 375.00
+
+## 网络与局域网及数据通信
+
+## 805
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 042142-0 | LEWIS | CISCO TCP/IP Routing Professional Reference, 3/e | 350.00 |
+| 044523-0 | LONG | IP Network Design | 295.00 |
+| 043719-X | MAHALINGAM | Nortel Networks Troubleshooting & Optimization | 395.00 |
+| 043948-6 | MILLER | Analyzing Broadband Networks, 3/e (With CD) | 475.00 |
+| 463281-7 | MORIMOTO | Deploying Microsoft Exchange Server 5: The Authoritative Guide to Planning, Running and Fine Tuning Your Exchange Rollout | 295.00 |
+| 463721-5 | MUELLER | Microsoft Internet Information Server 4 Complete Reference | 350.00 |
+| 463811-4 | PARKHURST | CISCO Router OSPF: Design & Implementation | 275.00 |
+| 463804-1 | PARNELL | Building High-Speed Networks | 275.00 |
+| 463333-3 | PARNELL | LAN Times : Guide To Wide Area Networks | 295.00 |
+| 463807-6 | PARNELL | Network Administrator's Reference | 395.00 |
+| 463808-4 | PAYNE | NetWare 5 : The Complete Reference | 425.00 |
+| 463852-1 | REED | Implementing Directory Services | 375.00 |
+| 463844-0 | ROSSI | CISCO and IP Addressing | 295.00 |
+| 044494-3 | SACKETT | CISCO Router Handbook, 2/e | 550.00 |
+| 044511-7 | SATTERLEE | CISCO: CCIE Lab Practice Kit (With CD) | 495.00 |
+| 044481-1 | SCAMBRAY | Hacking Exposed: Network Security Secrets & Solutions, 2/e | 395.00 |
+| 044742-X | SHELDON | Encyclopedia of Networking and Telecommunications (With CD) | 750.00 |
+| 463375-9 | SHELDON | Netware 4.1 : The Complete Reference | 375.00 |
+| 463823-8 | SIMONEAU | SNMP Network Management | 395.00 |
+| 463893-9 | SYNGRESS | CCNP: ACRC Advanced CISCO Router Configuration (With CD) | 450.00 |
+| 463891-2 | SYNGRESS | CCNP: CISCO Internetwork Troubleshooting 4.0 (With CD) | 395.00 |
+| 463827-0 | SYNGRESS | CCNP: CLSC Cisco LAN Switch Configuration (With CD) | 450.00 |
+| 463882-3 | SYNGRESS | CISCO Certified Network Associate: Study Guide (Exam 640-407) | 425.00 |
+| 040262-0 | TAYLER | Administering Groupwise 5.5 | 475.00 |
+| 040234-5 | TAYLOR | Networking Handbook (With CD) | 495.00 |
+| 043900-1 | THOMAS | ICND: Interconnecting Cisco Network Devices (With CD) | 595.00 |
+| 047283-1 | TRENT | IIS 5.0: A Beginner's Guide | 365.00 |
+| 041266-9 | TULLOCH | Administering IIS 5.0 | 375.00 |
+| 044585-0 | VACCA | Wireless Broadband Networks Handbook: 3G, LMDS & Wireless Internet | 495.00 |
+| 463964-1 | VELTE | CISCO Internetworking with Windows NT & 2000 | 395.00 |
+| 047416-8 | ZACKER | Networking: The Complete Reference | 550.00 |
+| 041267-7 | ZACKER | Upgrading & Troubleshooting Networks: The Complete Reference | 495.00 |
+
+## 操作系统
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 463545-X | BAILES | Maximizing Windows 98: The Practical Guide to Optimizing & Tuning Windows 98 | 375.00 |
+| 043619-3 | BARICH | Outlook 2000: The Complete Reference (With CD) | 495.00 |
+| 040263-9 | CASAD | Windows 2000: Active Directory | 350.00 |
+| 463551-4 | CROWLEY | Operating System: A Design-Oriented Approach | 290.00 |
+| 044738-1 | GARDINIER | Windows 2000 Performance Tuning and Optimization (With CD) | 495.00 |
+| 463628-6 | GARDINIER | Windows NT Performance Tuning & Optimization | 350.00 |
+| 048332-9 | HARRIS | Schaum's Outlines Operating Systems | 175.00 |
+| 040204-3 | IVENS | Windows 2000: The Complete Reference | 395.00 |
+
+## 其他语言
+
+- 463025-3 MASO The Visual Inter Development Handbook 275.00
+- 463275-2 MUELLER Active X : From Ground Up 330.00
+- 043949-4 MULLER Bluetooth Demystified 375.00
+- 042131-5 PESCHKO Perl Developer's Guide (With CD) 495.00
+- 463794-0 PETROVSKY Dynamic HTML in Action 375.00
+- 463866-1 SCHILDT JAVA Programmers Reference 275.00
+
+## POWER BUILDER 5
+
+- 463546-8 BLOCK PowerBuilder Foundation Class Library (With CD) 375.00
+
+## 编程主题/编程语言
+
+- 463501-8 APPLEBY Programming Languages : Paradigm and Practice 195.00
+
+
+
+# 书目列表
+
+## 未分类
+- 043745-9 BROWN Active Perl Developer's Guide (With CD) 575.00
+- 044480-3 BROWN PERL: The Complete Reference, 2/e 625.00
+- 047270-X CHINNATHAMBI FrontPage 2002: A Beginner's Guide 325.00
+- 044788-8 JENNETT FrontPage 2002 Developer's Guide (With CD) 495.00
+- 463719-3 LONDON Frontpage 2000: Get Professional Results 425.00
+- 044729-2 MATTHEWS Front Page 2002: The Complete Reference (With CD) 595.00
+- 463730-4 MATTHEWS Front Page 98: The Complete Reference (With CD) 475.00
+- 042056-4 MICHAELIS COM+ Programming from the Ground Up 350.00
+- 465993-X PECK Crystal Reports 7: The Complete Reference (With CD) 550.00
+- 043537-5 PECK Seagate Crystal Reports 8: The Complete Reference 575.00
+- 044787-X PLOTKIN How to Do Everthing with FrontPage 2002 395.00
+- 463222-1 KADNIER Windows NT 4 : The Complete Reference 395.00
+- 463711-8 LEE Windows NT Microsoft Cluster Server 325.00
+- 463248-5 LEVINE Windows 98 : The Complete Reference (Book & CD) 450.00
+- 463244-2 LEVINE Windows 98 : The Complete Reference (Book Only) 375.00
+- 044482-X LEVINE Windows Millennium Edition: The Complete Reference (With CD) 625.00
+- 047423-0 LEVINE Windows XP: The Complete Reference (With CD) 650.00
+- 463273-6 MADNICK Operating Systems 375.00
+- 463207-8 MANSFIELD Windows 98 for Busy People 175.00
+- 042044-0 MATTHEWS Windows 2000: A Beginners Guide 350.00
+- 463230-2 McMAINS Windows NT Backup and Recovery 395.00
+- 463272-8 MILENKOVIC Operating Systems : Concepts & Design, 2/e 245.00
+- 463754-1 MORIMOTO Windows 2000: Design & Migration 395.00
+- 041180-8 MYKLAND PALM OS Programming from the Ground Up (With CD) 425.00
+- 463988-9 SCHILDT Windows 98 Programming From the Ground Up 375.00
+- 463096-2 SCHILDT Windows NT 4 Programming From the Ground Up 395.00
+- 463373-2 SHELDON Windows 95 Made Easy 225.00
+- 463978-1 SHELDON Windows 98 Made Easy: The Basics and Beyond 325.00
+- 463981-5 SHIMMIN Windows 98, Networking 325.00
+- 044488-9 SIMMONS How to Do Everything With Windows ME: Millennium Edition 325.00
+- 047268-8 SINGHAL Advanced Concepts in Operating Systems 250.00
+- 463883-1 SYNGRESS MCSE Windows 98: Study Guide (Exam 70-98) (With CD) 425.00
+- 042057-2 VELTE Windows 2000: Enterprise Networking 450.00
+- 044510-9 WATTERS Solaris Administration: A Beginner's Guide 325.00
+- 043568-5 WONG Windows 2000, DNS Server 395.00
+
+## 807
+- 041195-6 普洛特金 如何用 Frontpage 2000 完成一切 350.00
+- 463992-7 席尔德 MFC 编程从入门到精通，第2版 325.00
+- 044747-0 索尔·塞莱娜 即时 CGI/PERL（附光盘） 595.00
+- 044525-7 斯帕林 即时 Perl 模块（附光盘） 455.00
+- 048704-9 塔克 编程语言：原理与范式 195.00
+- 044490-0 怀克 PERL：初学者指南 300.00
+
+## 安全
+- 044616-4 伯内特 RSA Security 官方密码学指南（附光盘） 475.00
+- 043618-5 考克斯 Windows 2000 安全手册 450.00
+- 044706-3 戴维斯 IP Sec 保护 VPN 395.00
+- 463972-2 贡萨尔维斯 防火墙：完全指南 435.00
+- 047272-6 金 安全架构设计、部署与运维 395.00
+- 047250-5 曼迪亚与普罗西斯 事件响应：调查计算机犯罪 395.00
+- 044615-6 纳什 PKI：实现与管理电子安全 395.00
+- 463869-6 谢尔顿 Window NT 安全手册 350.00
+
+## 软件工程
+- 463121-7 费尔利 软件工程概念 255.00
+- 047385-4 休斯 软件项目管理，第2版 300.00
+- 048707-3 沙赫 面向对象与经典软件工程，第5版 275.00
+- 463871-8 沙赫 用 JAVA 进行软件工程 285.00
+
+## 软件包
+- 463511-5 安德森 ACCESS 2000：完全参考手册（书+光盘） 525.00
+- 044526-5 英格利希 Exchange 2000 Server 管理：初学者指南 325.00
+- 041194-8 凯利 如何用 Outlook 2000 完成一切 325.00
+- 463705-3 劳登 交互式软件技能：Access 95/97 215.00
+- 463704-5 劳登 交互式软件技能：Excel 95/97 215.00
+- 463703-7 劳登 交互式软件技能：MS Word 97 215.00
+- 463706-1 劳登 交互式软件技能：PowerPoint 95/97 215.00
+- 463707-X 劳登 交互式软件技能：测试系统 215.00
+- 463702-9 劳登 交互式软件技能：Windows 95 215.00
+- 463267-1 曼斯菲尔德 Microsoft Office 工作应用 315.00
+- 463733-9 马修斯 Outlook 98 轻松入门：基础与进阶 275.00
+- 040206-X 奈鲍尔 Office 2000 轻松入门：基础与进阶 275.00
+- 463762-2 纳尔逊 Microsoft Office 97 295.00
+- 463763-0 纳尔逊 Microsoft Office 97（附光盘） 395.00
+- 463768-1 纳尔逊 OFFICE 2000：完全参考手册（附光盘） 495.00
+- 463761-4 纳尔逊 忙人 Office 97 195.00
+- 044723-3 纳尔逊 Office XP：完全参考手册（附光盘） 595.00
+- 044748-9 施诺尔 Exchange 2000 Server：完全参考手册 475.00
+- 463973-0 西蒙 最大化 Outlook 2000 375.00
+- 047278-5 乌尔里希 如何用 Office XP 完成一切 375.00
+
+## 电子表格软件
+- 463041-5 博林 Lotus Notes：完全参考手册 295.00
+
+## 电子表格手册
+- 044707-1 艾文斯 Excel 2002：完全参考手册 395.00
+
+
+
+044536-2 奥利里 Microsoft Excel 2000：入门版 195.00
+
+## SQL、Oracle、Sybase、Ingres、Unify及其他关系数据库管理系统
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 465674-X | 阿比 | Oracle 8i：初学者指南 | 350.00 |
+| 463003-2 | 阿比 | Oracle：初学者指南 | 195.00 |
+| 463009-1 | 阿比与科里 | Oracle 8：初学者指南 | 350.00 |
+| 463508-5 | 阿德科利与维尔普里 | Oracle：NT 手册：在 Windows NT 上管理 Oracle 8 的实用指南 | 295.00 |
+| 047417-6 | 艾伦 | Oracle：OCP 构建 Internet 应用程序 I 与 II 考试指南（附光盘） | 425.00 |
+| 043899-4 | 阿姆斯特朗-史密斯 | Oracle：Discoverer 手册 | 395.00 |
+| 463513-1 | 阿罗诺夫 | Oracle 8：高级调优与管理（附光盘） | 375.00 |
+| 463510-7 | 阿特金斯 | Oracle Designer 生成工具（附光盘） | 495.00 |
+| 046687-5 | 本杰明 | OCP Oracle 9i 数据库：管理员新特性考试指南 | 325.00 |
+| 463309-0 | 博布罗夫斯基 | Oracle 6：体系结构：理解、规划并迁移到 Oracle 的革命性数据库 | 285.00 |
+| 043575-8 | 博布罗夫斯基 | 用于 Linux 的 Oracle8i 入门套件（附光盘） | 395.00 |
+| 041185-9 | 布朗 | Oracle 8i：Web 开发 | 475.00 |
+| 046683-2 | 布朗 | Oracle 9i Web 开发 | 395.00 |
+| 463547-6 | 布朗 | Oracle：应用服务器 Web 工具包参考 | 475.00 |
+| 044719-5 | 伯利森 | 使用 Statspack 进行 Oracle 高性能调优 | 395.00 |
+| 047386-2 | 张 | Oracle 9i：XML 手册（附光盘） | 425.00 |
+| 463560-3 | 科夫曼 | SQL Server 7：完全参考手册 | 395.00 |
+| 463602-2 | 科里 | Oracle 8：数据仓库 | 375.00 |
+| 463193-4 | 科里 | Oracle 8：调优 | 325.00 |
+| 044479-X | 科里 | Oracle 8i：数据仓库 | 425.00 |
+| 463089-5 | 科里 | Oracle：数据仓库 | 275.00 |
+| 463584-6 | 科里 | SQL Server 7：数据仓库（附光盘） | 395.00 |
+| 046862-4 | 库奇曼 | OCP Oracle 9i 数据库：基础 I 考试指南 | 395.00 |
+| 043620-7 | 库奇曼 | Oracle 8：认证专家 DBA 模拟考试（附光盘） | 425.00 |
+| 044475-7 | 库奇曼 | Oracle 8i 认证专家 DBA 认证考试指南 | 595.00 |
+| 047275-0 | 库奇曼 | Oracle 8i 认证专家 DBA 模拟考试（附光盘） | 475.00 |
+| 047259-9 | 库奇曼 | Oracle 8i：认证专家 SQL 与 PL/SQL 考试指南（附光盘） | 395.00 |
+| 047420-6 | 库奇曼 | Oracle OCP Oracle8i 导论：SQL 考试指南 1Z0-007 | 395.00 |
+| 463590-5 | 德夫拉杰 | Oracle 24x7 提示与技巧 | 475.00 |
+| 463582-4 | 多尔西 | Oracle 8：使用对象建模进行设计 | 275.00 |
+| 463085-7 | 多尔西 | Oracle Developer/2000 手册 | 350.00 |
+| 044613-X | 多尔西 | Oracle JDeveloper 3 手册 | 425.00 |
+| 463106-3 | 动态信息系统 | Oracle Web 应用服务器手册（附光盘） | 450.00 |
+| 463758-4 | 福捷 | SQL 3：实现 SQL 基础标准 | 275.00 |
+| 046861-6 | 弗里曼 | Oracle 9i 新特性 | 295.00 |
+| 463155-1 | 格罗夫 | LAN Times：SQL 指南，涵盖 SQL2 | 315.00 |
+| 463625-1 | 格罗夫 | SQL：完全参考手册（附光盘） | 450.00 |
+| 463668-5 | 詹姆斯 | Oracle 财务应用程序手册 | 395.00 |
+| 463665-0 | 詹森 | Oracle：JDeveloper | 325.00 |
+| 046836-0 | 影山 | CICS 手册 | 375.00 |
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 463214-0 | KOCH | Oracle：完整参考，第三版 | 350.00 |
+| 463229-9 | KOCH | Oracle 8：完整参考（图书+光盘） | 575.00 |
+| 463778-9 | KOLETZKE | Oracle Developer 高级 Forms 与 Reports | 450.00 |
+| 463239-6 | LONEY | 高级 Oracle，调优与管理 | 395.00 |
+| 463250-7 | LONEY | Oracle 8 DBA 手册 | 375.00 |
+| 041167-0 | LONEY | Oracle 8i：完整参考（附光盘），第10版 | 495.00 |
+| 048674-3 | LONEY | Oracle 9i：DBA 手册 | 395.00 |
+| 463237-X | LONEY | Oracle DBA 手册 | 325.00 |
+| 463709-6 | LONEY | Oracle SQL 与 PL/SQL 注释档案（附光盘） | 425.00 |
+| 047419-2 | LONEY | Oracle9i 即时 PL/SQL 脚本（附光盘） | 425.00 |
+| 043622-3 | MORISSEAU-LEROY | Oracle 8i：使用 EJB、CORBA 与 JSP 的 Java 组件编程 | 375.00 |
+| 047261-0 | MORISSEAU-LEROY | Oracle 9i：SQLJ 编程（附光盘） | 395.00 |
+| 463274-4 | MULLER | Oracle Developer 2000 手册，第二版 | 350.00 |
+| 463018-X | MULLER | Oracle Developer 2000 手册，第二版（附光盘） | 475.00 |
+| 042048-3 | MULLER | Oracle Developer 入门套件（附光盘） | 495.00 |
+| 463775-4 | NIEMIC | Oracle：性能调优技巧与技术 | 425.00 |
+| 463788-6 | OTEY | SQL Server 7 开发者指南（图书+光盘） | 450.00 |
+| 463803-3 | PETCOVIC | SQL Server 7：初学者指南 | 275.00 |
+| 463809-9 | PYEFINCH | 从零开始的 SQL | 275.00 |
+| 041184-0 | SARIN | Oracle DBA：技巧与技术 | 425.00 |
+| 463135-7 | TOLEDO | Oracle 网络 | 195.00 |
+| 043576-6 | TREMAYNE | Oracle：应用性能调优手册（附光盘） | 495.00 |
+| 463955-6 | TREZZO | Oracle PL/SQL：技巧与技术 | 450.00 |
+| 463941-2 | URMAN | Oracle 8 PL/SQL 编程（附光盘） | 395.00 |
+| 463942-0 | URMAN | Oracle 8：PL/SQL 编程 | 325.00 |
+| 041181-6 | URMAN | Oracle 8i：高级 PL/SQL 编程（附光盘） | 485.00 |
+| 048680-8 | URMAN | Oracle 9i PL/SQL 编程 附光盘 | 395.00 |
+| 047241-6 | VAIDYANATHA | Oracle 性能调优 101 | 295.00 |
+| 463955-2 | VELPURI | Oracle 8：故障排除（附光盘） | 395.00 |
+
+
+
+| 044485-4 | VELPURI | Oracle 8i：备份与恢复手册 | 395.00 |
+| 463450-X | VELPURI | Oracle 备份与恢复手册 | 350.00 |
+| 463453-4 | VELPURI | Oracle 故障排除：预防性维护与 Oracle 问题解决的终极指南 | 325.00 |
+| 044721-7 | VESTERLI | Oracle Web 应用 101 | 395.00 |
+
+## SQL、SYBASE、INGRES、UNIFY 及其他 RDBMS
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 044483-8 | ARCINIEGAS | SQL Server 2000 备份与恢复 | 395.00 |
+| 044507-9 | BUCZEK | 即时访问数据库（附光盘） | 475.00 |
+| 044746-2 | BUCZEK | 即时 SQL Server 2000 应用（附光盘） | 575.00 |
+| 044477-3 | HOULETTE | SQL：初学者指南 | 295.00 |
+| 047383-8 | HOULETTE | SQL 故障排除 | 295.00 |
+| 040207-8 | LINSEMBARDT | SQL Server 7：管理 | 375.00 |
+| 044476-5 | OTEY | SQL Server 2000：开发者指南（附光盘） | 595.00 |
+| 043720-3 | SUNDERIC | SQL Server 2000 存储过程编程 | 375.00 |
+| 047375-7 | TOLEDO | Schaum's Outline 系列：SQL 编程基础 | 185.00 |
+
+## 系统分析
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 047251-3 | KNOTTINGHAM | 如何使用 Microsoft Visio 2002 做一切 | 375.00 |
+
+## UNIX
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 044668-3 | DAS | 你的 Unix：终极指南 | 295.00 |
+| 040205-1 | FISHER | Red Hat Linux：管理工具 | 275.00 |
+| 044614-8 | HATCH | 揭秘 Linux 攻击：Linux 安全秘诀与解决方案 | 425.00 |
+| 044473-0 | MILLER | 面向 Windows 爱好者的 LINUX | 325.00 |
+| 463271-X | MORGAN | 介绍 UNIX System V | 255.00 |
+| 043567-7 | PETERSEN | LINUX：程序员参考，第二版 | 275.00 |
+| 044489-7 | PETERSEN | LINUX：完整参考（附 2 张光盘），第四版 | 595.00 |
+| 041187-5 | PETERSEN | Red Hat Linux：完整参考（附光盘） | 495.00 |
+| 463760-6 | ROSEN | UNIX：完整参考 | 450.00 |
+| 044495-1 | SHAH | LINUX 管理：初学者指南，第二版（附光盘） | 495.00 |
+| 463115-2 | THOMAS | UNIX 系统用户指南，第二版 | 295.00 |
+
+## WEB PUBLISHING（网页设计、ASP）
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 041238-3 | BEN-NATAN | IBM：WebSphere 入门套件（附光盘） | 495.00 |
+| 044586-2 | BLAKE | 如何使用 Macromedia Flash 5 做一切 | 295.00 |
+| 463525-5 | BUCZEK | ASP：开发者指南（附光盘） | 395.00 |
+| 043574-X | FERGUSON | 调试 ASP：程序员的故障排除 | 295.00 |
+| 463759-2 | FINKELSTEIN | 使用 XML 构建企业门户 | 375.00 |
+| 041290-1 | HEFLIN | Windows Web 脚本开发者指南 | 450.00 |
+| 041193-1 | HONEYMAN | 脚本化 Windows 2000 | 350.00 |
+| 047271-8 | MUCK | 构建 Dreamweaver 4 与 Dreamweaver UltraDev 4 扩展 | 230.00 |
+| 048652-2 | POWELL | HTML：完整参考，第三版 | 450.00 |
+| 041186-7 | POWELL | 网页设计：完整参考 | 425.00 |
+
+## WML
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 047265-3 | JAMSA | WML 与 WML Script：初学者指南 | 295.00 |
+
+## 文字处理
+
+| ISBN | 作者 | 书名 | 价格 |
+|---|---|---|---|
+| 463288-4 | NEIBAUBER | Microsoft Word for Windows 95 | 175.00 |
+
+## XML
+
+## Red Hat® Enterprise Linux 与 Fedora™ 版
+
+### 完全参考
+
+终极深度 Linux 资源！
+
+利用这本全面且最新的参考手册，充分发挥 Red Hat Enterprise 和 Fedora Linux 的强大功能。你将获得从安装、配置到 Enterprise Linux 系统管理与服务器管理的全部细节——并包含 Linux 内核 2.6 的详细信息。全面的安全覆盖包括 GPG、IPSec、SSH、Kerberos 和防火墙。
+
+学习部署和管理 Web、代理、邮件和打印服务器，以及管理用户、软件和文件系统。DVD 包含 1,500 多个应用程序以及整个 Red Hat Fedora Core 发行版对应的源代码——通常需要多张 CD-ROM 才能容纳。这是你掌握最安全、最先进的 Linux 发行版的一站式指南。
+
+- 安装、管理、保护和管理 Enterprise Linux 3.0 与 Fedora
+- 掌握 Bluecurve、KDE、GNOME、办公和多媒体应用、shell、文件系统和 Internet 客户端
+- 部署和管理服务器——vsftpd 和 ProFTP（FTP）、Apache（Web）、Sendmail 和 Postfix（邮件）、Squid（代理）、CUPS（打印）和 HTDig（搜索）、SAMBA 和 NFS（文件）、NIS 和 BIND（DNS）以及 DHCP
+- 掌握 Red Hat 系统与网络管理工具的完整套件
+- 管理用户、服务、日志文件系统、RAID 设备、LVM 卷和打印机
+- 重新配置 2.6 内核及其模块
+- 使用数据包过滤、身份验证、数字签名、VPN、IPSEC 和加密确保系统和网络安全
+- 部署强大的桌面、办公、数据库、图形、编辑和 Internet 应用程序
+
+Richard Petersen，MLS，在加州大学伯克利分校教授 UNIX 和 C/C++ 课程。他是《Linux：完全参考》（全部四版）、《Linux 编程：初学者指南》以及许多其他著作的作者。
+
+技术审校
+
+Ibrahim Haddad 是爱立信加拿大的研究员，从事 3G 无线 IP 网络的系统架构工作。他是《Linux Journal》和《LinuxWorld》的特约编辑，并为《Linux User & Developer》担任技术作者。
