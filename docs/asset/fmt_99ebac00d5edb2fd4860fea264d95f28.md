@@ -1,0 +1,92 @@
+
+> TIP 你会注意到 `/dev` 文件中没有以太网设备的条目，例如 `eth0` 或 `eth1`。那是因为这些实际上是 `/etc/modules.conf` 文件中定义的内核模块的别名，或由内核直接处理的设备。它们不是设备文件。
+
+## 硬件设备安装：Kudzu
+
+硬件设备由 Red Hat 硬件探测工具 Kudzu 自动检测。Kudzu 是一种检测和配置系统上新硬件或更改硬件的工具。Kudzu 在启动时运行以配置新硬件设备并检测已移除的设备。你也可以手动运行 Kudzu。当你启动 Kudzu 时，它会检测当前硬件并将其与存储在 `/etc/sysconfig/hwconf` 中的数据库进行比较。然后它确定是否有任何硬件被添加到系统或从系统中移除。当它检测到新硬件或添加的硬件时，Kudzu 会在需要时调用该设备的适当配置工具，例如视频卡的 `redhat-config-xfree86`，或键盘的 `redhat-config-keyboard`。对于像 CD-ROM 这样简单的硬件配置，Kudzu 只是将 `cdrom` 设备符号链接到新设备，`/dev/cdrom`。
+
+Kudzu 然后更新其位于 `/etc/sysconfig/hwconf` 的数据库。如果检测到已移除的设备，`hwconf` 文件会相应更新。如果设备只是通过设备链接安装，例如 `/dev/cdrom` 或 `/dev/mouse`，则该链接将被移除。对于网卡，像 `eth0` 这样的别名条目将被移除。
+
+## 表 32-1
+
+设备链接
+
+| Link | Description |
+|---|---|
+| `/dev/mouse` | Current mouse device |
+| `/dev/tape` | Current tape device |
+| `/dev/cdrom` | Current CD-ROM device |
+| `/dev/cdwriter` | Current CD-writer device |
+| `/dev/scanner` | Current scanner device |
+| `/dev/modem` | Current dial-out device, modem port |
+| `/dev/root` | Current root file system |
+| `/dev/swap` | Current swap |
+
+## 手动创建设备文件
+
+Linux 实现两种类型的设备：块设备和字符设备。块设备，例如硬盘，一次传输一个数据块。字符设备，例如打印机或调制解调器，一次传输一个字符，或者更确切地说作为连续的数据流传输，而不是作为单独的块。字符设备的设备驱动文件在 `ls` 命令显示的权限段中第一个字符为 `c`。块设备的设备驱动文件为 `b`。在下一个示例中，`lp0`（打印机）是字符设备，而 `hda1`（硬盘）是块设备：
+
+```
+# ls -l hda1 lp0
+brw-rw---- 1 root disk 3, 1 Jan 30 02:04 hda1
+crw-rw---- 1 root lp 6, 0 Jan 30 02:04 lp0
+```
+
+## 设备类型
+
+设备类型可以是 `b`、`c`、`p` 或 `u`。如前所述，`b` 表示块设备，`c` 表示字符设备。`u` 表示非缓冲字符设备，`p` 表示 FIFO（先进先出）设备。相同类型的设备通常具有相同的名称；例如，所有串行接口都具有名称：`ttyS`。相同类型的设备然后通过附加到名称的数字唯一标识。该数字有两个组成部分：主设备号和次设备号。设备可能具有相同的主设备号，但如果是这样，次设备号始终不同。这种主次结构旨在处理多个设备可能依赖于一个较大设备的情况，例如连接到同一 I/O 卡的多个调制解调器。所有调制解调器都将具有引用该卡的相同主设备号，但每个调制解调器将具有唯一的次设备号。主设备号和次设备号对于块设备和字符设备（`b`、`c` 和 `u`）都是必需的。然而，它们不用于 FIFO 设备。
+
+有效设备名称及其主设备号和次设备号列在内核源代码的 `/Documentation` 目录中的 `devices.txt` 文件中，`/usr/src/linux-/Documentation`。当你创建设备时，你使用主设备号和次设备号以及特定种类设备的设备名称前缀。大多数这些设备已经为你创建，并列在 `/etc/dev` 目录中。
+
+## mknod
+
+尽管大多数发行版已为你设置了广泛的设备文件集，但你可以创建自己的设备。你使用 `mknod` 命令创建设备文件，字符或块类型。`mknod` 命令具有以下语法：
+
+```
+mknod options device device-type major-num minor-num
+```
+
+例如，Linux 系统通常提供三个并行端口的设备文件（`lp0-2`）。如果需要更多，你可以使用 `mknod` 命令创建新的一个。打印机设备是字符设备，必须由 `root` 和 `daemon` 拥有。打印机权限
+
+设备对所有者和组具有读写权限，`660`（有关文件权限的讨论请参见第28章）。主设备号设为 `6`，而次设备号设为打印机的端口号，例如 LPT1 为 `0`，LPT2 为 `1`。创建设备后，你使用 `chown` 将其所有权更改为 `root` 用户，因为只有管理员才应控制它。使用 `chgrp` 命令将组更改为 `lp`。
+
+大多数设备属于各自的组，例如磁盘用于硬盘分区，`lp` 用于打印机，`floppy` 用于软盘，`tty` 用于终端。在下一个示例中，在第四个并行端口上创建了一个并行打印机设备，`/dev/lp3`。`-m` 选项指定权限——本例中为 `660`。设备是一个字符设备，由设备名后的 `c` 参数表示。主号为 `6`，次号为 `3`。如果你在 `/dev/lp4` 上创建设备，主号仍为 `6`，但次号将为 `4`。创建设备后，`chown` 命令随后将并行打印机设备的所有权更改为 `root`。对于打印机，请确保已为你的设备创建了 spool 目录。如果没有，你需要创建一个。Spool 目录包含根据设备输出或输入而变化的数据文件，如打印机或扫描仪。
+
+```
+# mknod -m 660 /dev/lp3 c 6 3
+# chown root /dev/lp3
+# chgrp lp /dev/lp3
+```
+
+## 设备信息：/proc 和 /etc/sysconfig/hwconf
+
+在 Red Hat 中，Kudzu 在 `/etc/sysconfig/hwconf` 文件中维护所有已安装硬件设备的完整配置档案（`/etc/sysconfig` 在第30章中讨论）。如前所述，该文件由 Kudzu（`kudzu`）更新；新硬件会被添加，旧设备会被移除。条目定义配置变量，如设备的类别（视频、CD-ROM、硬盘驱动器等）、它使用的总线（PCI、IDE 等）、其设备名称（如 `hdd` 或 `st0`）、它使用的驱动程序以及设备的描述。以下是鼠标条目的示例：
+
+```
+class: MOUSE
+bus: PS AUX
+detached: 0
+device: psaux
+driver: generic3ps/2
+desc: "Generic 3 Button Mouse (PS/2)"
+```
+
+`/proc` 文件系统（参见第30章）为你的设备维护特殊的信息文件。`/proc/devices` 文件列出所有已安装的字符设备和块设备以及它们的主号。当前用于设备的 IRQ、DMA 和 I/O 端口分别列在 `interrupts`、`dma` 和 `ioports` 文件中。某些文件列出涵盖多个设备的信息，如 `pci`，它列出所有 PCI 设备，`sound`，它列出所有声音设备。`sound` 文件列出有关你的声卡的详细信息。几个子目录，如 `net`、`ide` 和 `scsi`，包含不同设备的信息文件。某些文件保存可动态更改的配置信息，如 IP 分包转发功能和最大文件数。你可以使用 `redhat-config-proc` 工具（系统工具菜单中的内核调优）更改这些值，或通过手动编辑某些文件进行更改。表 32-2 列出了几个与设备相关的 `/proc` 文件（有关其他条目，请参见第30章）。
+
+## 表 32-2
+
+Proc 设备信息文件
+
+| File | Description |
+|---|---|
+| `/proc/devices` | Lists the device drivers configured for the currently running kernel |
+| `/proc/dma` | Displays the DMA channels currently used |
+| `/proc/interrupts` | Displays the IRQs (interrupts) in use |
+| `/proc/ioports` | Shows the I/O ports in use |
+| `/proc/pci` | Lists PCI devices |
+| `/proc/sound` | Lists sound devices |
+| `/proc/scsi` | Directory for SCSI devices |
+| `/proc/ide` | Directory for IDE devices |
+| `/proc/net` | Directory for network devices |
+
+## 安装和管理终端和调制解调器
