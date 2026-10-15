@@ -2363,6 +2363,7 @@
 +   [UNIX：完全参考，第二版（完全参考系列）](docs/unix-the-complete-reference-second-edition-complete-referenc/README.md)
 +   [Unix 第三版：视觉快速启动指南](docs/unix-third-edition-visual-quickstart-guide/README.md)
 +   [UNIX 到 Linux(R) 迁移：全面参考 (Prentice Hall 开源软件开发系列)](docs/unix-to-linuxr-porting-a-comprehensive-reference-prentice-ha/README.md)
++   [Unix 工具箱 修订版 14.2](docs/unix-toolbox-revision-142/README.md)
 +   [UNIX 入门指南：入门方法](docs/unix-unbounded-a-beginning-approach/README.md)
 +   [UNIX Unbounded：入门指南 (第5版)](docs/unix-unbounded-a-beginning-approach-5th-edition/README.md)
 +   [Unix 实战 (第4版)](docs/unix-unleashed-4th-edition/README.md)

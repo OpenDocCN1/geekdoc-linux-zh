@@ -1,0 +1,150 @@
+
+## 4.10 DHCP
+
+### Linux
+
+Some distributions (SuSE) use dhcpc d as client. The default interface is eth0.
+
+```
+# dhcpc d -n eth0          # Trigger a renew (does not always work)
+# dhcpc d -k eth0          # release and shutdown
+```
+
+The lease with the full information is stored in:
+
+```
+/var/lib/dhcpc d/dhcpc d-eth0.info
+```
+
+### FreeBSD
+
+FreeBSD (and Debian) uses dhclient. To configure an interface (for example bge0) run:
+
+```
+# dhclient bge0
+```
+
+The lease with the full information is stored in:
+
+```
+/var/db/dhclient.leases.bge0
+```
+
+### Use
+
+```
+/etc/dhclient.conf
+```
+
+to prepend options or force different options:
+
+```
+# cat /etc/dhclient.conf
+interface "rl0" {
+    prepend domain-name-servers 127.0.0.1;
+    default domain-name "sleepyowl.net";
+    supersede domain-name "sleepyowl.net";
+}
+```
+
+### Windows
+
+The dhcp lease can be renewed with ipconfig:
+
+```
+# ipconfig /renew       # renew all adapters
+# ipconfig /renew LAN    # renew the adapter named "LAN"
+# ipconfig /release WLAN # release the adapter named "WLAN"
+```
+
+Yes it is a good idea to rename you adapter with simple names!
+
+## 4.11 Traffic analysis
+
+Bmon⁶ is a small console bandwidth monitor and can display the flow on different interfaces.
+
+### Sniff with tcpdump
+
+```
+# tcpdump -n l -i bge0 not port ssh and src \(192.168.16.121 or 192.168.16.54\)
+# tcpdump -n -i eth1 net 192.168.16.121          # select to/from a single IP
+# tcpdump -n -i eth1 net 192.168.16.0/24          # select traffic to/from a network
+# tcpdump -l > dump && tail -f dump               # Buffered output
+# tcpdump -i r10 -w traffic.r10                   # Write traffic headers in binary file
+# tcpdump -i r10 -s 0 -w traffic.r10              # Write traffic + payload in binary file
+# tcpdump -r traffic.r10                          # Read from file (also for ethereal)
+# tcpdump port 80                                 # The two classic commands
+# tcpdump host google.com
+# tcpdump -i eth0 -X port \(110 or 143\)          # Check if pop or imap is secure
+# tcpdump -n -i eth0 icmp                         # Only catch pings
+# tcpdump -i eth0 -s 0 -A port 80 | grep GET      # -s 0 for full packet -A for ASCII
+```
+
+Additional important options:
+
+- -A  Print each packets in clear text (without header)
+- -X  Print packets in hex and ASCII
+- -l  Make stdout line buffered
+- -D  Print all interfaces available
+
+On Windows use windump from www.winpcap.org. Use windump -D to list the interfaces.
+
+### Scan with nmap
+
+Nmap⁷ is a port scanner with OS detection, it is usually installed on most distributions and is also available for Windows. If you don’t scan your servers, hackers do it for you...
+
+```
+# nmap cb.vu          # scans all reserved TCP ports on the host
+# nmap -sP 192.168.16.0/24  # Find out which IP are used and by which host on 0/24
+# nmap -sS -sV -O cb.vu   # Do a stealth SYN scan with version and OS detection
+PORT     STATE SERVICE            VERSION
+22/tcp   open  ssh                OpenSSH 3.8.1p1 FreeBSD-20060930 (protocol 2.0)
+25/tcp   open  smtp               Sendmail smtpd 8.13.6/8.13.6
+80/tcp   open  http               Apache httpd 2.0.59 ((FreeBSD) DAV/2 PHP/4.
+[...]
+Running: FreeBSD 5.X
+Uptime 33.120 days (since Fri Aug 31 11:41:04 2007)
+```
+
+Other non standard but useful tools are hping (www.hping.org) an IP packet assembler/analyzer and fping (fping.sourceforge.net). fping can check multiple hosts in a round-robin fashion.
+
+## 4.12 Traffic control (QoS)
+
+Traffic control manages the queuing, policing, scheduling, and other traffic parameters for a network. The following examples are simple practical uses of the Linux and FreeBSD capabilities to better use the available bandwidth.
+
+### Limit upload
+
+DSL or cable modems have a long queue to improve the upload throughput. However filling the queue with a fast device (e.g. ethernet) will dramatically decrease the interactivity. It is therefore useful to limit the device upload rate to match the physical capacity of the modem, this should greatly improve the interactivity. Set to about 90% of the modem maximal (cable) speed.
+
+### Linux
+
+For a 512 Kbit upload modem.
+
+```
+# tc qdisc add dev eth0 root tbf rate 480kbit latency 50ms burst 1540
+# tc -s qdisc ls dev eth0                 # Status
+# tc qdisc del dev eth0 root              # Delete the queue
+# tc qdisc change dev eth0 root tbf rate 220kbit latency 50ms burst 1540
+```
+
+### FreeBSD
+
+FreeBSD uses the dummynet traffic shaper which is configured with ipfw. Pipes are used to set limits the bandwidth in units of [K|M]{bit/s|Byte/s}, 0 means unlimited bandwidth. Using the same pipe number will reconfigure it. For example limit the upload bandwidth to 500 Kbit.
+
+```
+# kldload dummynet          # load the module if necessary
+# ipfw pipe 1 config bw 500Kbit/s      # create a pipe with limited bandwidth
+# ipfw add pipe 1 ip from me to any   # divert the full upload into the pipe
+```
+
+### Quality of service
+
+### Linux
+
+Priority queuing with tc to optimize VoIP. See the full example on voip-info.org or www.howtoforge.com. Suppose VoIP uses udp on ports 10000:11024 and device eth0 (could also be ppp0 or so). The following commands define the QoS to three queues and force the VoIP traffic to queue 1 with QoS 0x1e (all bits set). The default traffic flows into queue 3 and QoS Minimize-Delay flows into queue 2.
+
+```
+# tc qdisc add dev eth0 root handle 1: prio priomap 2 2 2 2 2 2 2 2 1 1 1 1 1 1 0
+# tc qdisc add dev eth0 parent 1:1 handle 10: sfq
+# tc qdisc add dev eth0 parent 1:2 handle 20: sfq
+```
