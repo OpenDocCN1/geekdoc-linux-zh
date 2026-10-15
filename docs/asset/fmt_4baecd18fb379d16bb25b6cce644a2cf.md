@@ -1,0 +1,179 @@
+
+在 SUSE Linux 10 中，每当当前 `/var/log/messages` 文件达到 4 MB 大小时，就会创建一个新的日志文件；日志文件在被删除前会轮转 99 次。`logrotate` 和 `syslog` 配置文件可在 `/etc/logrotate.*` 和 `/etc/syslog.conf` 位置找到。
+
+有关 `logrotate` 和 `syslog` 配置的更多信息，请参阅相应的手册页。
+
+根据您的安全和审计策略，可能需要对 `syslog` 和 `logrotate` 进程进行微调，以保持正确的日志文件数量。
+
+## 集中式远程日志
+
+`syslog` 的最后一个值得注意的功能是其完整的远程日志记录能力；`syslogd` 能够向运行 `syslogd` 的远程主机发送消息并从远程主机接收消息。远程主机不会再次转发消息，而是将消息本地记录。
+
+使用此功能，您可以在一台主机上控制所有 `syslog` 消息，如果所有其他机器都远程记录到该主机。这降低了管理需求。
+
+请参阅 `syslogd` 手册页以获取更多详细信息。
+
+## 8.3.2 错误分析工具
+
+本节讨论用作错误分析工具的转储和跟踪。
+
+### 转储，作为错误分析工具
+
+有时在日志文件中找不到足够的相关信息。为了分析在 z/VM 分区中运行的 Linux 客户机之一出现异常行为的原因，请在其中一台虚拟机上运行转储工具以进行进一步分析。根据环境，可以使用多种工具：
+
+- DASD 转储工具在 3390 或 3380 磁盘上生成转储。
+- SCSI 转储工具在 FCP/SCSI 设备上生成转储。
+- 磁带转储工具在磁带上生成转储。
+- `VMDUMP` 创建来宾虚拟内存的转储。
+
+请参阅第 373 页的表 8-2 以获取可用工具列表。
+
+| Tool | Stand-alone tools | | | VMDUMP |
+| --- | --- | --- | --- | --- |
+| | DASD | SCSI | Tape | |
+| Environment | VM and LPAR | LPAR only | VM and LPAR | VM only |
+| Speed | Fast | Fast | Slow | Medium |
+| Medium | ECKD or FBA DASD | Linux file system on a SCSI disk | tape cartridges | VM reader |
+| Compression possible | no | yes | yes | no |
+| Disruptive | yes | yes | yes | no |
+
+描述如何使用所有这些工具超出了本书的范围。有关使用转储工具的详细流程，请参阅 Linux on System z: Using the Dump Tools, SC33-8412，您可以从 developerWorks 网站下载：
+
+`http://www.ibm.com/developerworks/linux/linux390/development_documentation.html#3`
+
+### 跟踪，作为错误分析工具
+
+识别程序执行中失败步骤的另一种有用方法是跟踪程序。Linux 提供了许多用于跟踪程序执行的工具。其中一种工具称为 `strace`。
+
+在最简单的情况下，`strace` 运行指定的命令直到其退出。它拦截并记录进程调用的系统调用以及进程收到的信号。每个系统调用的名称、其参数和返回值会打印到标准错误或使用 `-o` 选项指定的文件中。`strace` 工具可用作诊断、教学和调试工具。系统管理员、诊断人员和故障排除人员发现它对于解决源代码不易获得的程序问题非常宝贵，因为他们无需重新编译即可跟踪它们。而程序员发现，由于系统调用和信号是在用户/内核接口发生的事件，因此对该边界的仔细检查对于错误隔离、合理性检查以及尝试捕获竞争条件非常有用。
+
+第 374 页的示例 8-17 显示了对 `ls` 命令进行 `strace` 时 `strace` 输出的开头。所有系统调用都详细列出，其参数和发送的返回代码。这可用于识别程序的哪个步骤失败。
+
+### 示例 8-17 使用 stracing 与 ls 命令
+
+```
+lnxguill:/mnt/backup # strace ls
+
+execve("/bin/ls", ["ls"], [* 55 vars *]) = 0
+
+brk(0)                               = 0x80018000
+
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2000001f000
+
+uname({sys="Linux", node="lnxguill", ...}) = 0
+
+access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+
+open("/etc/ld.so.cache", O_RDONLY) = 3
+
+fstat(3, {st_mode=S_IFREG|0644, st_size=33471, ...}) = 0
+
+mmap(NULL, 33471, PROT_READ, MAP_PRIVATE, 3, 0) = 0x200000020000
+
+close(3)                             = 0
+
+open("/lib64/librt.so.1", O_RDONLY) = 3
+```
+
+> 注意：分析 `strace` 程序的输出需要与应用程序的开发团队密切合作。
+
+本节提供了 z/VM 和 Linux 工具如何处理错误的简要概述，并详细介绍了在分析应用程序导致问题的原因时可使用的几种工具。
+
+有时，程序异常终止可能导致数据损坏，例如，如果应用程序在崩溃时正在向磁盘写入某些数据。在这种情况下，唯一的选择可能是从已存在的备份中恢复数据，以返回到数据一致的状态。备份和恢复工具在下一章部分中进行了描述。
+
+## 8.4 备份和恢复
+
+备份是指制作数据的副本，以便在数据丢失事件后可以使用这些副本恢复原始数据。这些额外的副本通常称为备份，主要用于两个目的：
+
+- 在灾难后恢复状态（称为灾难恢复）
+- 在文件被意外删除或损坏后恢复少量文件
+
+备份可以根据创建方式进行分类：
+
+- 离线备份具有破坏性，需要规划。
+- 在线备份不会中断操作。
+
+本章介绍了用于备份和恢复 z/VM 和 Linux 数据的可用工具。
+
+## 8.4.1 z/VM 离线备份
+
+离线备份是具有破坏性的操作，因为它们需要停止系统。使用这些操作需要适当的规划，因为生产必须停止。
+
+### 将 z/VM 系统复制到磁盘
+
+将 z/VM 系统备份到磁盘需要两个 z/VM 分区：一个用于备份，另一个用于发出命令。第二个分区必须能够访问正在备份的 z/VM 分区的磁盘。
+
+该过程涉及以下步骤：
+
+- 1. 关闭要备份的 z/VM 系统（系统 A）。
+- 2. 在另一个系统（系统 B）上，将系统 A 磁盘联机。
+- 3. 从系统 B，使用 `DDR`（z/VM DASD Dump/Restore 程序）或 `Flashcopy`（如果已启用）复制系统 A 磁盘。
+- 4. 将系统 A 磁盘脱机。
+- 5. 重新 IPL 系统 A。
+
+这无疑是一个具有破坏性的过程，因为在备份系统之前必须停止所有操作。
+
+> 注意：使用此方法可以同时将 z/VM 和 Linux 保存到磁盘。
+
+### 将 z/VM 系统备份到磁带
+
+如前一章所述，此备份也需要两个 z/VM 分区，第二个分区访问第一个分区的系统磁盘。第二个分区还必须能够访问磁带驱动器。
+
+该过程涉及以下步骤：
+
+- 1. 将磁带驱动器连接到 z/VM 系统 B。
+- 2. 倒带。
+- 3. 将系统 A 磁盘联机。
+- 4. 逐个将系统 A 磁盘复制到磁带上。
+- 5. 完成后，分离磁带驱动器，并将系统 A 磁盘脱机。
+
+> 注意：使用此方法可以同时将 Linux 和 z/VM 磁盘保存到磁带。
+
+```
+fnl ftl fml,
+
+' | STEM VOLUMES.'
+
+return
+```
+
+### 从磁带恢复到 DASD
+
+要求是 z/VM 上连接有 181 设备类型的磁带驱动器，以及一个包含要恢复到的目标 DASD 列表的 `RESTAPE VOLUMES A` 文件（参见示例 8-20）。可以通过在输入文件中指定 `skip` 来跳过恢复过程中的某些 DASD。
+
+示例 8-21 是用于从磁带恢复到 DASD 的脚本。
+
+**示例 8-20 输入文件 RESTAPE VOLUMES A**
+
+```text
+1800
+
+1801
+
+1802
+
+1803
+
+1804
+
+skip
+
+1806
+
+1807
+
+1808
+
+1809
+```
+
+**示例 8-21 从磁带到磁盘恢复环境的示例脚本**
+
+```text
+/* DDR volumes must be defined in file restape volumes a */
+Parse upper arg fnl ftl fml
+
+If fml = '' then fml='A'
+
+If fnl = '' then do
+```
