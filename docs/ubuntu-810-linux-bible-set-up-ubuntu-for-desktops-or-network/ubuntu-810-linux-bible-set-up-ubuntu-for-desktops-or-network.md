@@ -10732,7 +10732,7 @@ info [OPTIONS] [FILE...]
 DESCRIPTION
 info 命令提供了 GNU info 手册的用户界面。
 
-```
+
 info(1)
 Usage: info [OPTIONS] [FILE...]
 ```
