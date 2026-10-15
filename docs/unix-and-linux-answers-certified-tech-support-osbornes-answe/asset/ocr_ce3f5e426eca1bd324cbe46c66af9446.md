@@ -1,0 +1,11 @@
+heard the term before. Well, to make a long story short, there's really no magic involved with the meta key. It's just another modifier key like the CTRL key. However, most PC keyboards don't have a key labeled META. Most well-written UNIX applications take this into account and allow you to simulate a meta sequence by pressing and releasing the ESC key to simulate pressing a META key. If you want a real live permanent META key, though, you'll have to edit your keytables and swap around some key functions.
+
+Personally, we find the CAPS LOCK key rather annoying, so we usually end up mapping it to CTRL and mapping the left-hand CTRL key to a META key. We do this in console mode by editing the keytables. We have to do it again in a different way when we're in graphical mode, since key mappings don't get carried over automatically. In graphical mode there's nothing magic about Linux, though, and you can use any of the standard UNIX hacks to map your keyboard around enough to confuse anyone in your workgroup. We'll revisit this issue again when we talk about X Windows, just to keep it fresh in your mind.
+
+# PASSWORD SECURITY
+
+What can you tell me about Linux and password security?
+
+One place where Linux differs noticeably from some of the commercial versions of UNIX is in the area of password security. Out of the box, Linux does not come configured with so-called shadow passwords. Shadow passwords are something you really shouldn't have to worry about unless you're a system administrator, but if you do happen to be your own system administrator and you want to increase the security of your system, you might want to consider upgrading. Most of the common FTP sites will have suites of precompiled programs to enable shadow passwords, and if you're a Redhat user you can download rpm packages and upgrade on the fly.
+
+Even though most of the distributions don't come with shadow passwords enabled by default, the Redhat distribution has definitely beaten several of the commercial UNIX variants to the punch by including a little add-on called

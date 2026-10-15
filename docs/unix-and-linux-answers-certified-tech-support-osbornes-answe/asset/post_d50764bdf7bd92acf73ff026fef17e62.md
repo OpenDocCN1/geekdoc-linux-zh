@@ -1,0 +1,53 @@
+
+- **kill character** The character that when typed causes the current line to be deleted.
+- **kludge** Rhymes with "huge." A program or a feature that doesn't work as well as it should or gives the impression of being jerry-rigged. Not something the programmer is especially proud of.
+- **Korn shell** An enhanced version of the Bourne shell written by David Korn. Its program name is **ksh** and it prompts with a **$**.
+- **library** A set of commonly used C-language functions.
+- **link** An entry in a directory, consisting of a file identifier that names a file in the directory and an **inode** number.
+- **Linux** A freely available version of UNIX.
+- **logging in** The process of making a connection to a UNIX machine.
+- **.login file** See **dot (.) files**.
+- **login name** The name you use when logging into a UNIX system.
+- **login shell** The shell that's called on your behalf when you log in.
+- **mailbox** A file where messages are stored by a mailer.
+- **mailer** A program for sending and receiving email.
+
+than standing for itself. For example, `>` is a metacharacter in a shell command that stands for output redirection.
+
+- **Motif** A graphical user interface created by the Open Software Foundation and based on the X Window System.
+- **mount** Make a filesystem available to users either locally or remotely.
+- **NFS** Network File System. Software that allows UNIX and many non-UNIX systems to share files and printers via a TCP/IP network in a way that makes them appear local to the user.
+- **named pipe** A kind of file that behaves like a pipe and exists independently of any process. Many different processes can read from it and write to it.
+- **newline** The character that marks the end of a line in most UNIX files. You can usually produce a newline at your terminal by pressing either the ENTER key or CTRL-J.
+- **null character** The character whose binary representation is all zeros. By convention, it's used to mark the end of a string.
+- **option** An indicator that can be attached to a command to modify what the command does. Options usually begin with a dash (-). The terms option and switch are more or less interchangeable. An option can have several settings while a switch usually has two: on or off, enabled or disabled.
+- **ordinary file** A text or data file with no special characteristics. The most common type of file in the UNIX system.
+- **orphan** A process that keeps running even when its parent process has been killed.
+- **packet** A portion of a message that's transmitted as a unit over a network.
+- **pager** A program that breaks its input into screen-size chunks and sends these pieces to your terminal, waiting for confirmation after each one.
+- **parameter** A variable in the shell script that corresponds to an argument passed to the script.
+- **parent process** A process that generates another process.
+- **parse** To split into pieces to interpret.
+- **perl** Another programming language geared toward text manipulation.
+- **permissions** A security tool that controls who can access or change a file.
+- **pipe** A connection between two processes that passes the output of the first to the input of the second. Signified by the pipe (`|`) character.
+- **pipeline** A sequence of processes connected by *pipes*.
+- **prime** Another name for the accent *grave*.
+- **process** A single stream of computer instructions. One *job* may be built from several different *processes*.
+- **.profile** See dot (.) files.
+- **prompt** A character used by the shell to show that it’s waiting for input. In addition, some programs provide their own unique prompts.
+- **queue** A waiting line, the most common variety of which is the printing *queue*.
+- **quote** See **double quote, grave, single quote**.
+- **real-time** Right now as opposed to whenever the computer gets around to it.
+- **recursive** A program or routine that repeats an action over and over. For example, the find program moves through a directory tree recursively, doing something in every directory.
+- **redirection** Taking the output of a command and sending it somewhere other than the default location.
+- **regular expression** An expression used to specify a set of strings being searched for. Regular expressions use metacharacters to specify variables.
+- **reset string** A string that can be sent to a crazy mixed-up terminal to restore it to sanity.
+- **root** Another name for the superuser.
+- **root directory** The main, top-level directory of a filesystem. All the files in the system are either in the root directory or in a subdirectory of the root directory (or a subdirectory of a subdirectory and so on).
+- **SCO** A version of UNIX made by The Santa Cruz Operation.
+- **sed** Yet another programming language geared toward text manipulation.
+- **server** In a distributed filesystem, a computer that supplies files and services to other computers.
+- **shell** A program that reads and interprets commands from the user into instructions the computer can understand. Popular shells include the Bourne, Korn, and C shells.
+- **shell script** A file that contains a list of UNIX shell commands. When you run a shell script, you're telling UNIX to execute every command in the list.
+- **single quote** The ' character. This is not the same as the grave (\`). The single quote is used around the part of the command line where the shell should do no interpretation.

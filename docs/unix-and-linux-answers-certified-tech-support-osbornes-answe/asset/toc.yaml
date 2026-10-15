@@ -1,0 +1,1454 @@
+- - '#'
+  - Unix 和 Linux 答案！：认证技术支持（Osborne's 答案！：认证技术支持）
+- - '##'
+  - About the Authors
+- - '##'
+  - Getting a Grip on UNIX — 6
+- - '###'
+  - FIRST THINGS FIRST — 8
+- - '###'
+  - TERMINAL SETTINGS — 10
+- - '##'
+  - SHELLS, PASSWORDS, AND HELP
+- - '##'
+  - 3 Files and Directories
+- - '###'
+  - FILES AND FILENAMES
+- - '###'
+  - CHARACTERS
+- - '###'
+  - WILDCARDS
+- - '###'
+  - FILE PERMISSIONS AND PROTECTION
+- - '###'
+  - UNIX FILESYSTEMS AND DIRECTORY STRUCTURES
+- - '###'
+  - FINDING LOST FILES
+- - '###'
+  - SHORTCUTS TO WHERE YOU WANT TO BE
+- - '##'
+  - 4 vi
+- - '###'
+  - THE MANY MODES OF VI
+- - '###'
+  - THE BASICS OF USING VI
+- - '###'
+  - MOVING AROUND
+- - '###'
+  - 宏
+- - '###'
+  - 其他必要命令
+- - '##'
+  - 5 自定义与配置文件
+- - '###'
+  - 启动脚本基础
+- - '###'
+  - 设置和使用变量
+- - '##'
+  - 6 打印
+- - '###'
+  - 立即打印
+- - '###'
+  - 稍后打印
+- - '##'
+  - 其他有用的打印技巧
+- - '##'
+  - 7 运行程序
+- - '###'
+  - 运行单个程序
+- - '###'
+  - 多任务处理
+- - '###'
+  - 鼠标命令
+- - '###'
+  - 让生活更轻松的 Xterm 技巧
+- - '###'
+  - 较不令人印象深刻的 X 程序
+- - '###'
+  - 自定义 X
+- - '##'
+  - 9 UNIX 工具箱
+- - '###'
+  - 比较工具
+- - '###'
+  - 连接到更大的世界
+- - '##'
+  - 11 Windows NT 与 UNIX 互操作性
+- - '###'
+  - 基础 TCP/IP 连接
+- - '###'
+  - 高级网络仿真
+- - '###'
+  - Shell 仿真：让 NT 感觉像 UNIX，让 UNIX 感觉像 NT
+- - '##'
+  - 12 灾难避免与恢复
+- - '###'
+  - 风险规避
+- - '###'
+  - 备份，备份，再备份！
+- - '##'
+  - 13 Korn Shell
+- - '###'
+  - 变量和参数
+- - '###'
+  - Korn Shell 数学运算
+- - '###'
+  - 字符串运算符
+- - '###'
+  - Korn Shell 中的预定义变量
+- - '###'
+  - 流程控制
+- - '##'
+  - 14 Linux
+- - '###'
+  - Linux 基础
+- - '###'
+  - 键盘问题
+- - '##'
+  - PASSWORD SECURITY
+- - '##'
+  - SHELLS
+- - '##'
+  - TEXT EDITORS
+- - '##'
+  - LINUX AND X WINDOWS
+- - '##'
+  - OTHER TOOLS THAT ARE DIFFERENT UNDER LINUX
+- - '##'
+  - 15 awk, perl, and sed
+- - '###'
+  - THE AWK PROGRAMMING LANGUAGE
+- - '###'
+  - THE PERL PROGRAMMING LANGUAGE
+- - '###'
+  - THE SED PROGRAMMING LANGUAGE
+- - '##'
+  - 标准约定
+- - '##'
+  - 特殊功能
+- - '##'
+  - 您最喜欢的技巧
+- - '##'
+  - 第 1 章
+- - '##'
+  - Top 10 Frequently
+- - '##'
+  - Answer Topics!
+- - '##'
+  - Top 10 FAQS @ a Glance
+- - '###'
+  - 1. How do I log on and get going?
+- - '###'
+  - 2. How long can a UNIX filename be and what characters can it include?
+- - '###'
+  - 3. What is a good UNIX filename?
+- - '###'
+  - 4. How can I change a file's mode or permissions?
+- - '###'
+  - 5. 如何在经常使用的目录之间快速移动？
+- - '###'
+  - 6. 有没有命令可以让我快速返回到我的 home 目录？
+- - '###'
+  - 7. 有没有办法取消打印作业？
+- - '###'
+  - 8. more 命令能为我做什么？
+- - '###'
+  - 9. 为 rm 命令创建别名明智吗？
+- - '###'
+  - 10. 保护数据免受意外擦除的最佳方法是什么？
+- - '##'
+  - 第2章
+- - '##'
+  - 掌握 UNIX
+- - '##'
+  - 答案主题！
+- - '##'
+  - 一目了然掌握 UNIX
+- - '##'
+  - FIRST THINGS FIRST
+- - '###'
+  - 为什么 UNIX 有着晦涩、困难且彻底的书呆子操作系统的声誉，这种声誉是否合理？
+- - '###'
+  - 即使其声誉经常被夸大，为什么任何明智的人会想使用 UNIX？
+- - '###'
+  - 谁开发了 UNIX 以及何时？
+- - '##'
+  - 第2章 掌握UNIX
+- - '###'
+  - 如何登录并开始使用？
+- - '###'
+  - 终端设置
+- - '###'
+  - 登录时如何设置终端类型？
+- - '###'
+  - 如何检查我的终端设置？
+- - '###'
+  - 我能把擦除功能设置为DEL键而不是CTRL-H吗？
+- - '###'
+  - 从PC登录时如何修复我的键盘问题？
+- - '###'
+  - 当终端出现混乱时，如何恢复一些正常状态？
+- - '##'
+  - SHELLS，密码和帮助
+- - '##'
+  - 什么是 shell？
+- - '##'
+  - 第 2 章 掌握 UNIX
+- - '##'
+  - 我如何知道我使用的是哪个 shell？
+- - '##'
+  - 我如何找出我的默认 shell 是什么？
+- - '##'
+  - 为什么 UNIX 要使用密码？
+- - '##'
+  - 有哪些坏密码的例子？
+- - '##'
+  - 好密码有什么规则吗？
+- - '##'
+  - 我如何更改密码？
+- - '##'
+  - 如果我需要 UNIX 帮助怎么办？
+- - '##'
+  - 第 3 章
+- - '###'
+  - 文件与目录
+- - '###'
+  - 问题解答主题！
+- - '###'
+  - 文件与目录速览
+- - '###'
+  - 文件与文件名
+- - '###'
+  - UNIX 文件名可以有多长？可以包含哪些字符？
+- - '###'
+  - 什么是良好的 UNIX 文件名？
+- - '###'
+  - 我可以显示隐藏的文件和目录吗？
+- - '##'
+  - 如果我想知道文件的类型除了名称之外？
+- - '##'
+  - 所有 UNIX 文件名和命令都区分大小写吗？
+- - '##'
+  - CHARACTERS
+- - '##'
+  - UNIX 允许我做一些我真的不应该做的事情吗？
+- - '##'
+  - 我怎样才能从文件名中删除嵌入的空格？
+- - '##'
+  - 但是如果有人在文件名中插入了一个奇怪的字符，它不是空格但看起来像空格给我怎么办？
+- - '##'
+  - 有没有办法我可以更改一系列文件名的名称？
+- - '###'
+  - Bourne shell script to rename files, interactively
+- - '##'
+  - 通配符
+- - '###'
+  - UNIX 的基本通配符有哪些？
+- - '###'
+  - 我可以在单个命令中使用多个通配符吗？
+- - '###'
+  - 如何利用通配符让命令行更智能？
+- - '###'
+  - 使用 rm 命令处理关键文件时，我该如何保护自己？
+- - '##'
+  - 文件权限与保护
+- - '###'
+  - 关于 UNIX 文件权限，你能告诉我什么？
+- - '##'
+  - 如何更改文件模式或权限？
+- - '##'
+  - 我可以使用别名来简化设置权限吗？
+- - '##'
+  - 我可以隐藏我的文件和目录不被超级用户看到吗？
+- - '##'
+  - 那么我需要了解 UNIX 目录保护的哪些内容？
+- - '##'
+  - UNIX 文件系统和目录结构
+- - '###'
+  - 什么是 UNIX 目录以及它与其他（子）目录的关系？
+- - '###'
+  - 什么是 .（点）和 ..（点点）？
+- - '###'
+  - 我真的需要理解 inode 吗？
+- - '###'
+  - UNIX 文件系统是如何工作的？
+- - '###'
+  - 什么是主目录？
+- - '###'
+  - 典型用户的主目录包含哪些子目录，这些子目录中有哪些文件？
+- - '##'
+  - How can I keep my home directory clean?
+- - '##'
+  - FINDING LOST FILES
+- - '##'
+  - How can I find a file I’ve changed recently?
+- - '##'
+  - Can I find a file when I know what kind it is but not where it is?
+- - '##'
+  - Can I find a file even if I don’t know whether its name begins with an upper-
+    or lowercase letter?
+- - '##'
+  - Why does find keep complaining about a missing conjunction?
+- - '##'
+  - 我可以用什么命令快速返回到我的 home 目录？
+- - '##'
+  - 我可以用 ~ 作为 home 目录的快捷方式吗？
+- - '##'
+  - 我可以用 ~ 作为其他人 home 目录的快捷方式吗？
+- - '##'
+  - 我可以定义一个变量来描述我经常使用的任何目录或文件名吗？
+- - '##'
+  - 第 4 章
+- - '##'
+  - vi
+- - '##'
+  - 回答主题！
+- - '##'
+  - vi @ 一览
+- - '###'
+  - 如何在 vi 中在模式之间切换？
+- - '###'
+  - 如果我发现自己突然进入了 ex 而不是 vi，该怎么办？
+- - '##'
+  - 使用 VI 的基础知识
+- - '###'
+  - 什么是 vi，我可以使用不同的版本吗？
+- - '###'
+  - 我在使用 vi 时可以编辑一系列文件吗？
+- - '###'
+  - 如何完成当前文件的编辑，保存更改并移动到文件列表中的下一个文件？
+- - '###'
+  - 有没有办法返回并编辑文件列表中的上一个文件？
+- - '###'
+  - 我可以重新加载当前文件并从头开始吗？
+- - '###'
+  - '! 怎么读？'
+- - '###'
+  - 有没有办法查看还剩下哪些文件可编辑？
+- - '###'
+  - 如果我发现自己犯了可怕的错误，我可以从同一份文件列表重新开始吗？
+- - '##'
+  - 移动
+- - '###'
+  - vi 中基本的光标移动键是什么？
+- - '##'
+  - vi 中还有其他移动命令吗？
+- - '##'
+  - 在 vi 中可以依赖键盘上的“光标”键安全吗？
+- - '##'
+  - 我可以在当前文件中看到自己的位置吗？
+- - '##'
+  - 如何交换两个字符？
+- - '##'
+  - 我可以更改已输入字符的大小写吗？
+- - '##'
+  - 插入和替换文本
+- - '##'
+  - vi 中基本的文本插入命令有哪些？
+- - '##'
+  - 如果我不喜欢刚输入的单词，可以做什么？
+- - '##'
+  - 如果我想重新开始文本插入怎么办？
+- - '##'
+  - 如何撤销我对当前行所做的所有更改？
+- - '##'
+  - 我可以替换当前字符然后插入更多文本而不覆盖已有内容吗？
+- - '##'
+  - 那替换整个当前行呢？
+- - '##'
+  - c 命令到底能为我做什么？
+- - '##'
+  - 有没有办法重复我上一次的文本更改？
+- - '##'
+  - SEARCHING FOR (AND REPLACING) TEXT
+- - '##'
+  - 找到某些文本最简单的方法是什么？
+- - '##'
+  - 我可以搜索并替换文本吗？
+- - '##'
+  - c 命令到底能为我做什么？
+- - '##'
+  - 有没有办法重复我上一次的文本更改？
+- - '##'
+  - SEARCHING FOR (AND REPLACING) TEXT
+- - '##'
+  - 找到某些文本最简单的方法是什么？
+- - '##'
+  - 我可以搜索并替换文本吗？
+- - '##'
+  - 我必须知道自己在第几行才能对接下来的十行运行 substitute 吗？
+- - '##'
+  - 如何对整个文件执行一个命令？
+- - '##'
+  - CUTTING AND PASTING
+- - '##'
+  - What’s the command for cutting a line into the paste buffer?
+- - '##'
+  - Can I copy a line into the paste buffer?
+- - '##'
+  - How can I cut a character into the paste buffer?
+- - '##'
+  - I've heard that using the dd command is better than yanking. Is this true, and
+    if so, why?
+- - '##'
+  - Can I use the named buffers to make editing easier?
+- - '##'
+  - What's the smartest way to use named buffers for my paste operation?
+- - '##'
+  - Is there a way I can put the contents of the paste buffer after the current line?
+- - '##'
+  - How can I cut a word into the buffer?
+- - '##'
+  - How can I give my text the right look?
+- - '##'
+  - 如何自动化从命令模式开始的常用序列？
+- - '##'
+  - 是否有办法自动化在文本插入模式下开始的频繁任务？
+- - '###'
+  - 我能否使用 map! 命令创建一个文本插入模式命令，使其表现类似于命令模式下的 CTRL-G，用来查看我在当前文件中的位置？
+- - '###'
+  - 如何减少输入常用短语所需的按键次数？
+- - '##'
+  - 其他基本命令
+- - '###'
+  - 如何保存更改并退出 vi？
+- - '###'
+  - 我可以在当前文件中包含另一个文件吗？
+- - '###'
+  - 是否可以将当前文件的一部分写入“临时”文件？
+- - '###'
+  - 救命！我确定我对文件做了什么糟糕的事情，该怎么办？
+- - '###'
+  - 什么是“智能”退出命令？
+- - '###'
+  - 如何查看文件中有多少个单词或行？
+- - '##'
+  - 另一个编辑器——emacs
+- - '##'
+  - 如果我的系统在写下更改之前崩溃了会怎样？
+- - '##'
+  - 第 5 章
+- - '###'
+  - 自定义和配置文件
+- - '####'
+  - 回答主题！
+- - '###'
+  - 自定义和配置文件 @ 一览
+- - '##'
+  - 启动脚本基础
+- - '##'
+  - 启动脚本
+- - '##'
+  - 什么是启动脚本，它们能为我做什么？
+- - '##'
+  - 如何编辑启动脚本？
+- - '##'
+  - 如果我是 Korn shell 用户，如何定制 UNIX？
+- - '##'
+  - 如何告诉 Korn 或 Posix shell 检查是否存在辅助启动文件并使用它？
+- - '##'
+  - 给 Korn shell 用户的一些建议
+- - '##'
+  - 如果我是 C shell 用户，如何定制 UNIX？
+- - '##'
+  - 启动脚本基础
+- - '###'
+  - 我能去掉那个无聊的老 $ 提示符吗？
+- - '###'
+  - 提示：在你的提示符中包含主机名，这样你就知道自己在哪里。如果你在一个分布式环境中工作，经常从你的“正常”机器登录到不同的机器上，跟踪你所在的机器可能会很痛苦。所以把它包含在你的提示符中！
+- - '###'
+  - 哪种引号是哪种，为什么我应该关心？
+- - '##'
+  - 'Tip: PATH too long for a prompt? Strip off the extra. Use the # pattern-matching
+    operator to strip out your home directory as shown here:'
+- - '##'
+  - SETTING AND USING VARIABLES
+- - '###'
+  - Can I use a variable to describe a frequently used working directory?
+- - '###'
+  - Shell Script to edit the functional spec
+- - '###'
+  - for the current project
+- - '###'
+  - Script stays the same as the projects change.
+- - '###'
+  - Is there a way I can spruce up a boring text terminal a little?
+- - '##'
+  - 我需要导出一次性变量吗？
+- - '##'
+  - 但是我应该导出我期望重复使用的变量吗？
+- - '##'
+  - 我应该删除变量吗？
+- - '##'
+  - 我如何查看变量的值？
+- - '##'
+  - UNIX 中的 DOS 命令
+- - '###'
+  - DOS aliases, only available from an interactive shell so we
+- - '###'
+  - don't slow down scripts.
+- - '##'
+  - Shell 脚本快捷方式
+- - '###'
+  - 'Filename: db_exp.ksh'
+- - '###'
+  - 'Author: Charlie Russel'
+- - '###'
+  - 'Description: Script to create an automatic export of the database.'
+- - '###'
+  - 'Last Modification: 8/15/97-Modified to compress file on creation - cpr'
+- - '###'
+  - 'Prev. Modification: Added absolute path to exp - 7/14/97'
+- - '###'
+  - Run Script
+- - '###'
+  - Put command into variable
+- - '###'
+  - Execute the compression on the created file to reduce space.
+- - '###'
+  - This could simply be piped from the export, but is separate for historical reasons.
+- - '##'
+  - 第 6 章
+- - '##'
+  - 打印
+- - '##'
+  - 答案主题！
+- - '###'
+  - 立即打印
+- - '###'
+  - 稍后打印
+- - '###'
+  - 格式设置
+- - '###'
+  - 其他有用的打印技巧
+- - '##'
+  - 我如何控制要打印的文件份数？
+- - '##'
+  - UNIX 打印的特殊性
+- - '##'
+  - 有没有办法让 UNIX 在我的打印作业完成后通知我？
+- - '##'
+  - 我可以控制我的打印作业的外观吗？
+- - '##'
+  - 当前打印与稍后打印
+- - '##'
+  - 稍后打印
+- - '###'
+  - 有没有命令可以让我稍后再打印作业？
+- - '###'
+  - 我如何查看打印作业的状态？
+- - '###'
+  - 我可以安排稍后打印作业吗？
+- - '##'
+  - 格式化
+- - '###'
+  - UNIX 为我提供了哪些基本格式化选项？
+- - '###'
+  - 使用 UNIX 进行格式化
+- - '##'
+  - 如何让我的文件变成双倍行距？
+- - '##'
+  - 我可以为我的文件添加左边距吗？
+- - '##'
+  - 有没有办法去除硬制表符并重新对齐制表位？
+- - '###'
+  - File ~/bin/detab -- removes tabs from a file and
+- - '###'
+  - File name remains the same.
+- - '##'
+  - 但如果我需要把空格恢复成制表符该怎么办？
+- - '##'
+  - 我可以把列表转换成多列格式吗？
+- - '##'
+  - 其他有用的打印技巧
+- - '###'
+  - 有什么办法可以取消打印作业吗？
+- - '###'
+  - 我可以使用 lpstat 命令获取我的打印请求的当前状态吗？
+- - '###'
+  - 我如何找到我的作业在哪里打印？
+- - '##'
+  - 第 7 章
+- - '##'
+  - 运行程序
+- - '##'
+  - 回答主题！
+- - '##'
+  - 运行单个程序
+- - '##'
+  - 多任务处理
+- - '##'
+  - 调度作业
+- - '##'
+  - 运行程序 @ 一览
+- - '##'
+  - 运行单个程序
+- - '###'
+  - 执行文件
+- - '###'
+  - 我怎样才能使程序可执行？
+- - '###'
+  - 我可以自动使我的 shell 脚本可执行吗？
+- - '###'
+  - 我可以在不更改脚本的情况下控制我的脚本由哪个 shell 执行吗？
+- - '##'
+  - 如何重新发出命令？
+- - '##'
+  - 循环浏览和编辑我之前的命令最简单的方法是什么？
+- - '##'
+  - 即使我是一个坚定的 emacs 用户，我也可以编辑我之前的命令吗？
+- - '##'
+  - 管道和 I/O 重定向
+- - '##'
+  - 多任务处理
+- - '###'
+  - 在 UNIX 中运行多个程序
+- - '###'
+  - 如何将作业发送到后台？
+- - '###'
+  - 有没有命令可以检查我的后台作业？
+- - '###'
+  - 我可以把后台作业带回前台吗？
+- - '###'
+  - 还有其他方法可以将作业发送到后台吗？
+- - '###'
+  - 警告：
+- - '###'
+  - 我可以使用重定向将正常程序输出和错误信息都发送到一个文件吗？
+- - '###'
+  - tee 命令能为我做什么？
+- - '##'
+  - SCHEDULING JOBS
+- - '###'
+  - 如何让作业休眠？
+- - '###'
+  - 设置优先级
+- - '###'
+  - 图 7-4 将 sleep 命令用作防止灾难的保障
+- - '###'
+  - 我可以使用 cron 来自动化任务吗？如果是，如何使用？
+- - '##'
+  - Chapter 8
+- - '##'
+  - X Windows
+- - '##'
+  - Answer Topics!
+- - '##'
+  - X Windows @ a Glance
+- - '##'
+  - 第8章 X Windows
+- - '###'
+  - MOUSE COMMANDS 鼠标命令
+- - '###'
+  - Can I use the mouse to copy text between windows? 我可以用鼠标在窗口之间复制文本吗？
+- - '###'
+  - Display Manager vs. Window Manager 显示管理器与窗口管理器
+- - '###'
+  - How can I select an entire word? 如何选择整个单词？
+- - '###'
+  - Is there a way to select an entire line? 有没有办法选择整行？
+- - '###'
+  - X Programs You May Already Have 你可能已经拥有的 X 程序
+- - '###'
+  - How can I pop up a menu? 如何弹出菜单？
+- - '##'
+  - 让生活更轻松的 XTERM 技巧
+- - '###'
+  - Xterm 增强
+- - '###'
+  - 我可以更改 Xterm 的颜色以使其更护眼吗？
+- - '###'
+  - 我如何获取颜色可能性的列表？
+- - '###'
+  - 我可以更改我的 Xterm 上的标题吗？
+- - '###'
+  - 有没有办法我可以更改 Xterm 中的字体以使其更易于阅读？
+- - '###'
+  - 我如何查看有哪些字体可用？
+- - '###'
+  - 我可以提前看到字体的外观以及它有哪些可用字符吗？
+- - '###'
+  - 有没有办法我可以在 Xterm 中添加滚动条以便轻松向上滚动文本？
+- - '##'
+  - Can I make a bigger scroll buffer to use for man pages?
+- - '##'
+  - XTERM TRICKS THAT MAKE LIFE EASIER
+- - '##'
+  - LESS IMPRESSIVE X PROGRAMS
+- - '###'
+  - xcalc
+- - '##'
+  - Can xcalc handle scientific calculations?
+- - '##'
+  - What can xload do for me?
+- - '##'
+  - Is there a way to control the size and placement of an X program?
+- - '##'
+  - How can xman help me browse for help?
+- - '###'
+  - Less Useful X Programs
+- - '##'
+  - CUSTOMIZING X
+- - '###'
+  - What are some of the things I can do to customize X Windows and what files do
+    I need to change in order to do this?
+- - '###'
+  - How can I customize the X Server?
+- - '###'
+  - Is there a way I can change the default background color for all my Xterms?
+- - '###'
+  - 'Warning:'
+- - '###'
+  - How can I customize my desktop?
+- - '##'
+  - 我可以使用 Motif 资源文件为 X 添加功能吗？
+- - '##'
+  - 如何使用 Motif 资源文件来获取帮助？
+- - '##'
+  - 有没有办法在根菜单中添加分隔线？
+- - '##'
+  - 第9章
+- - '##'
+  - UNIX 工具箱
+- - '##'
+  - 答案主题！
+- - '###'
+  - 比较工具
+- - '###'
+  - 文本处理工具
+- - '###'
+  - 杂项工具
+- - '##'
+  - 一目了然的 Unix 工具箱
+- - '##'
+  - 比较工具
+- - '##'
+  - 什么是 grep 以及它能为我做什么？
+- - '##'
+  - 那么我该如何使用 grep 呢？
+- - '##'
+  - 我可以使用 grep -v 来查找不属于我的文件吗？
+- - '##'
+  - 是否可以使用 grep -i 进行不区分大小写的搜索？
+- - '###'
+  - 提示：
+- - '##'
+  - 什么是“正则表达式”？
+- - '##'
+  - 我应该使用什么命令来比较两个文本文件？
+- - '##'
+  - 有没有办法比较三个相似的文件以找出它们之间的差异？
+- - '##'
+  - 比较二进制文件的最佳方法是什么？
+- - '##'
+  - 文本处理工具
+- - '###'
+  - more 命令能为我做什么？
+- - '###'
+  - 我可以将长目录列表的输出通过管道传递给 more 以防止它们从屏幕上滚动掉吗？
+- - '###'
+  - 如何只查看文件的开头？
+- - '###'
+  - 是否有办法使用 head 来查找最近更改过的文件？
+- - '###'
+  - 如何只查看文件的末尾？
+- - '###'
+  - 是否可以将输出同时发送到文件和我的终端？
+- - '###'
+  - UNIX 能为我检查文件的拼写吗？
+- - '###'
+  - 是否有办法让 spell 为我创建自定义词典？
+- - '##'
+  - 如何创建排序文件？
+- - '##'
+  - 是否可能清理混合大小写的文件？
+- - '##'
+  - 杂项工具
+- - '##'
+  - 如何压缩文件？
+- - '##'
+  - 加密重要文件的最简单方法是什么？
+- - '##'
+  - 有没有办法用 cal 程序快速打印日历？
+- - '##'
+  - 我能用 calendar 程序创建提醒文件吗？
+- - '##'
+  - 第10章
+- - '##'
+  - 连接世界
+- - '##'
+  - 回答主题！
+- - '##'
+  - 一目了然的连接
+- - '##'
+  - 工作组和工作组关系
+- - '##'
+  - UNIX 与工作组
+- - '##'
+  - 在本地网络环境中，单一最常见需求是什么？
+- - '##'
+  - 处理文件共享的最佳方式是什么？
+- - '##'
+  - 如何让我的工作组的目录本地化？
+- - '##'
+  - UNIX 为我提供了哪些可以促进工作组沟通的工具？
+- - '##'
+  - ping 能为我做什么？
+- - '##'
+  - 向登录到我的机器的另一个用户发送快速消息的最佳方式是什么？
+- - '##'
+  - 我可以关闭对我终端的写权限吗？
+- - '##'
+  - 是否有可能允许其他人向我发送消息而不干扰我的工作？
+- - '##'
+  - 我如何与另一台机器上的其他用户聊天？
+- - '##'
+  - 我可以向登录到我的计算机上的每个人发送消息吗？
+- - '##'
+  - 我的工作站突然变慢了，我怀疑有人占用了超过其份额的内存和 CPU 时间。我如何找出罪魁祸首？
+- - '##'
+  - 我如何解决身份危机？
+- - '##'
+  - Is there a command I can use to get just the real logins of people using my machine?
+- - '##'
+  - How can I find out more about the people on my machine?
+- - '##'
+  - How can I find out where I am?
+- - '##'
+  - What's the best way to communicate with my workgroup?
+- - '###'
+  - What are the r commands and what can they do for me?
+- - '###'
+  - Can you give me an example of how to use rlogin?
+- - '##'
+  - rlogin 还有其他巧妙的用途吗？
+- - '##'
+  - rcmd 或 rsh 到底有什么用？
+- - '##'
+  - 我应该如何使用 rcp 命令？
+- - '##'
+  - 即使我的 cp 版本不支持递归复制，rcp 仍能帮我吗？
+- - '##'
+  - CONNECTING TO THE LARGER WORLD
+- - '##'
+  - 什么是 ftp 以及我该如何使用它？
+- - '##'
+  - 如何使用 telnet 连接到远程计算机？
+- - '##'
+  - NT 和 UNIX 互操作性概览
+- - '##'
+  - 基本 TCP/IP 连接性
+- - '##'
+  - 如何从我的 UNIX 服务器复制文件到 Windows NT 机器？
+- - '##'
+  - 我可以使用 ftp 从我的 Windows NT 机器复制文件到 UNIX 或 Linux 机器吗？
+- - '##'
+  - 是否有比 Windows NT 包含的命令行版本更容易使用的 ftp 客户端？
+- - '##'
+  - 我可以在Windows NT机器上运行UNIX程序吗？
+- - '##'
+  - 如何启动Microsoft telnet应用程序？
+- - '##'
+  - 有没有比Microsoft基本终端模拟器更好的终端模拟器？
+- - '##'
+  - 我可以通过telnet从UNIX连接到Windows NT吗？
+- - '##'
+  - 图形应用程序呢？
+- - '##'
+  - 我可以使用Web浏览器从Windows NT机器访问UNIX吗？
+- - '##'
+  - 高级网络模拟
+- - '##'
+  - 什么是SMB，为什么我需要关心它？
+- - '##'
+  - 什么是NFS？
+- - '##'
+  - 如何让我的UNIX服务器对Windows和Windows NT用户可见？
+- - '##'
+  - SMB 相对于 NFS 有哪些优势？
+- - '##'
+  - NFS 有哪些优势？
+- - '##'
+  - 我可以让我的 UNIX 服务器作为 NT 域的一部分运行吗？
+- - '##'
+  - UNIX 服务器可以作为 Windows 工作组的一部分运行吗？
+- - '##'
+  - 使用 NT 域有哪些优势？
+- - '##'
+  - 使用工作组解决方案有哪些优势？
+- - '##'
+  - 是否有免费的方式与 Windows 客户端共享 UNIX 文件系统？
+- - '##'
+  - 是否有 samba 的预编译版本可用？
+- - '##'
+  - 我如何让我的 UNIX 用户共享 Windows NT 文件系统？
+- - '##'
+  - 我可以不在Windows NT上加载NFS客户端包，而使用NFS导出的文件系统吗？
+- - '##'
+  - 打印呢？我可以在UNIX和Windows NT之间共享打印机吗？
+- - '##'
+  - 如何向Windows NT添加TCP/IP打印服务？
+- - '##'
+  - 如何向Windows NT添加TCP/IP打印机？
+- - '##'
+  - 如何让我的UNIX用户使用我的Windows NT打印机？
+- - '##'
+  - 'SHELL EMULATIONS: MAKING NT FEEL LIKE UNIX, AND UNIX FEEL LIKE NT'
+- - '##'
+  - What is the "standard" UNIX shell?
+- - '##'
+  - How can I make NT behave like UNIX?
+- - '##'
+  - How can I make NT behave like UNIX without spending any money?
+- - '##'
+  - Can I make UNIX behave like the NT command line?
+- - '##'
+  - 第12章
+- - '##'
+  - 灾害避免与恢复
+- - '###'
+  - 回答主题！
+- - '###'
+  - 灾害避免与恢复一览
+- - '###'
+  - RISK AVOIDANCE
+- - '###'
+  - 防止灾难
+- - '###'
+  - 创建 rm 命令的别名明智吗？
+- - '###'
+  - 如何创建将我的文件移动到安全位置的 rm 别名？
+- - '##'
+  - Figure 12-2 A safe way to purge unneeded files in your tmp directory
+- - '##'
+  - Can I add purge! to my crontab?
+- - '##'
+  - What’s the very best way to protect crucial files against accidental erasure?
+- - '##'
+  - BACKUP, BACKUP, BACKUP!
+- - '##'
+  - UNIX and Backups
+- - '##'
+  - 为什么我会考虑制作硬盘备份？
+- - '##'
+  - 制作硬盘备份最简单的方法是什么？
+- - '##'
+  - 在什么情况下我应该考虑制作磁带或软盘备份？
+- - '##'
+  - 制作磁带或软盘备份最简单的方法是什么？
+- - '##'
+  - 我可以使用 tar 将文件复制到不同的机器或文件系统吗？
+- - '##'
+  - 我可以使用 tar 将文件备份到软盘或磁带驱动器吗？
+- - '##'
+  - 第 13 章
+- - '##'
+  - Korn Shell
+- - '##'
+  - 回答主题！
+- - '##'
+  - Korn Shell 一览
+- - '##'
+  - 变量与参数
+- - '###'
+  - Korn shell 如何使用变量和参数？
+- - '###'
+  - 如何为变量赋值？
+- - '##'
+  - Korn Shell 与 POSIX Shell
+- - '##'
+  - KORN SHELL 数学运算
+- - '###'
+  - 关于 Korn shell 进行数学运算的方式，有什么需要特别了解的吗？
+- - '##'
+  - 表13-2 Korn shell中的逻辑或关系运算符
+- - '##'
+  - 字符串运算符
+- - '##'
+  - Korn shell是否提供了有用的字符串替换运算符？
+- - '##'
+  - KORN SHELL 中的预定义变量
+- - '###'
+  - 如何重新定义一个预定义变量？
+- - '##'
+  - 流程控制
+- - '###'
+  - Korn shell 为我提供了哪些流程控制结构？
+- - '###'
+  - 在 Korn shell 中使用 if/then/else 语句有什么棘手之处？
+- - '##'
+  - 你能展示如何在 Korn shell 中使用 for 循环吗？
+- - '##'
+  - 在 Korn shell 中使用 while 和 until 循环我需要知道什么？
+- - '##'
+  - 我应该如何使用 select 语句？
+- - '##'
+  - 第 14 章
+- - '##'
+  - Linux
+- - '##'
+  - 回答主题！
+- - '##'
+  - Linux 一览
+- - '##'
+  - LINUX 基础
+- - '###'
+  - 我可以在哪里获取 Linux？
+- - '###'
+  - 你最喜欢的 Linux 发行版是什么？
+- - '###'
+  - 为什么 Linux 是免费的？
+- - '##'
+  - KEYBOARD ISSUES
+- - '###'
+  - What’s wrong with my keyboard?
+- - '###'
+  - What are keytables and how can I go about editing them?
+- - '##'
+  - 你能给我一个例子说明“高级用户”如何编辑默认的键表吗？
+- - '##'
+  - 键表到底是如何工作的？
+- - '##'
+  - 什么是“meta”键？
+- - '##'
+  - 密码安全
+- - '##'
+  - 各类 Shell
+- - '###'
+  - Linux 为我提供了哪些 Shell？
+- - '###'
+  - 关于 bash 的启动文件，你能告诉我什么？
+- - '###'
+  - 我能在 shell 提示符中显示当前目录吗？
+- - '##'
+  - 文本编辑器
+- - '###'
+  - 标准 Linux 系统为我提供了哪些文本编辑器？
+- - '##'
+  - Linux 与 X Windows
+- - '###'
+  - 我可以在 Linux 上拥有图形用户界面吗？
+- - '##'
+  - 我的图形登录界面在哪里？
+- - '##'
+  - 如何配置 XDM？
+- - '##'
+  - 如何永久以 X Windows 启动？
+- - '##'
+  - 什么是控件？
+- - '##'
+  - 我能让 FVWM 看起来像 Motif 窗口管理器 mwm 吗？
+- - '##'
+  - 如何更改 FVWM 中的颜色？
+- - '##'
+  - 关于 FVWM，我还应该了解哪些其他有用的设置？
+- - '##'
+  - Linux 还有其他窗口管理器吗？
+- - '##'
+  - 其他在 Linux 下有所不同的工具
+- - '##'
+  - 第 15 章
+- - '##'
+  - awk、perl 与 sed
+- - '##'
+  - 问答主题！
+- - '##'
+  - awk、perl 与 sed 一览
+- - '##'
+  - awk 是三个熟悉的 UNIX 名字的产物
+- - '##'
+  - 如何调用 awk？它提供了哪些选项？
+- - '##'
+  - 你能给我一个稍微更有用的 awk 使用示例吗？
+- - '##'
+  - PERL 编程语言
+- - '##'
+  - perl 是一颗兼收并蓄的宝石
+- - '##'
+  - 你能指出 awk 和 perl 之间有哪些区别吗？
+- - '##'
+  - THE SED PROGRAMMING LANGUAGE
+- - '##'
+  - 自动化更轻松
+- - '##'
+  - 什么是 sed？
+- - '##'
+  - 为什么还要学习另一种工具？
+- - '##'
+  - 它是如何工作的？
+- - '##'
+  - 你能给我一些使用 sed 的例子吗？
+- - '##'
+  - 附录 A
+- - '##'
+  - 命令参考
+- - '###'
+  - alias [options] name[=‘cmd’]
+- - '####'
+  - 'OBJECTIVE:'
+- - '####'
+  - OPTIONS AND VARIABLES
+- - '###'
+  - at options time [date] [+increment]
+- - '####'
+  - 'OBJECTIVE:'
+- - '####'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - 附录 A 命令参考
+- - '###'
+  - '`bg [jobids]`'
+- - '###'
+  - '`cal month year`'
+- - '###'
+  - '`cancel requestIDs` or `cancel printer`'
+- - '###'
+  - '`cat [options] filelist`'
+- - '###'
+  - '`cd directoryname`'
+- - '###'
+  - '`chmod mode files`'
+- - '###'
+  - '`cp [options] file1 file2`'
+- - '###'
+  - '`date MMDDhhmmyy` or `date +format`'
+- - '###'
+  - '`diff [options] oldfile newfile`'
+- - '###'
+  - '`echo -n string`'
+- - '###'
+  - '`fg [jobIDs]`'
+- - '###'
+  - '`find pathname condition`'
+- - '###'
+  - '`finger [options] users`'
+- - '##'
+  - grep [options] regexp [files]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - head [-lines files]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - jobs [options] [jobIDs]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - lp [options] [files]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - lprint - file
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - lpstat [options]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - ls [options] [directories]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - mail [options] [usernames]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - make [options] [targets] [macro definitions]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - man [options] [section] [title]
+- - '###'
+  - 'OBJECTIVE:'
+- - '###'
+  - OPTIONS AND VARIABLES
+- - '##'
+  - mesg n y
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - mkdir [options] dirname
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - more [options] [files]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '###'
+  - 选项和变量
+- - '##'
+  - openwin [options]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - pack [option] files
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - passwd [options]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - pg [options] files
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - ping [options] host
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - pr [options] files
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - purge [options] files
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - pwd
+- - '###'
+  - 目标：
+- - '##'
+  - rcp [options] hostname:file1 hostname:file2
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - rlogin [options] system
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - rm files
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - rmdir [options] directoryname
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - sdiff [options] file1 file2
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - set
+- - '###'
+  - 目的
+- - '##'
+  - setcolor [options] [argument]
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - sleep seconds
+- - '###'
+  - 目的
+- - '##'
+  - sort [options] [files]
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - spell [options] +userdict files
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - strings [options] files
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - stty [options] [settings]
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - tail [options] [file]
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - tar [options] [files]
+- - '###'
+  - 目的
+- - '###'
+  - 选项和变量
+- - '##'
+  - 函数选项
+- - '##'
+  - 选项
+- - '##'
+  - tee [options] files
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - time command
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - tr [options] [string1] [string2]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - unmask [value]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - unpack files
+- - '###'
+  - 目标：
+- - '##'
+  - unset [-f] names
+- - '###'
+  - 目标：
+- - '##'
+  - wall [file]
+- - '###'
+  - 目标：
+- - '##'
+  - who [options]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - whodo
+- - '###'
+  - 目标：
+- - '##'
+  - write user [tty]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - xsetroot [options]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - xterm [options]
+- - '###'
+  - 目标：
+- - '###'
+  - 选项和变量
+- - '##'
+  - zcat file
+- - '###'
+  - 目标：
+- - '##'
+  - 附录 C
+- - '###'
+  - 术语表
+- - '##'
+  - 附录 C：术语表
+- - '##'
+  - 附录 D：资源指南
+- - '###'
+  - BOOKS
+- - '##'
+  - UNIX 架构/设计/历史/文化
+- - '##'
+  - The Korn Shell
+- - '##'
+  - UNIX Text Editors
+- - '##'
+  - X Window System
+- - '##'
+  - Miscellaneous Useful Books
+- - '##'
+  - Other Books
+- - '##'
+  - ONLINE RESOURCES
+- - '##'
+  - Index
+- - '#'
+  - (pound sign), 46
+- - '#'
+  - (pound sign) pattern-matching operator, 76
+- - '##'
+  - P
+- - '##'
+  - Q
+- - '##'
+  - R
+- - '##'
+  - S
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - Y
+- - '##'
+  - Z
+- - '#'
+  - UNIX 和 Linux 解答！
+- - '#'
+  - 认证技术支持
+- - '#'
+  - 关于作者：

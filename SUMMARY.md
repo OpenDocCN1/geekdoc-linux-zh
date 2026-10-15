@@ -2306,6 +2306,7 @@
 +   [Unicode 揭秘：程序员编码标准实用指南](docs/unicode-demystified-a-practical-programmers-guide-to-the-enc/README.md)
 +   [Unix：历史与回忆录](docs/unix-a-history-and-a-memoir/README.md)
 +   [UNIX 系统管理：高效系统与网络管理的全面指南](docs/unix-administration-a-comprehensive-sourcebook-for-effective/README.md)
++   [Unix 和 Linux 答案！：认证技术支持（Osborne's 答案！：认证技术支持）](docs/unix-and-linux-answers-certified-tech-support-osbornes-answe/README.md)
 +   [UNIX and Linux 取证分析 DVD 工具包](docs/unix-and-linux-forensic-analysis-dvd-toolkit/README.md)
 +   [UNIX and Linux 系统管理手册](docs/unix-and-linux-system-administration-handbook/README.md)
 +   [UNIX and Linux 系统管理手册，第4版](docs/unix-and-linux-system-administration-handbook-4e/README.md)
