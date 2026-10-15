@@ -1,0 +1,135 @@
+
+# 索引
+
+![](img/65730abed590e4cfe60_285_0.png)
+
+- loading on Windows, 50–51
+- in frames, 199–200
+- with phpBB board, 53
+- phpMyAdmin database creation, 151–152
+- for phpMyAdmin table, 152–154
+- Mersenne, 73
+- `META` tags, 95, 100
+- instructions for, 145–150
+- numeric data types in, 142–143
+- for, 144–145
+- PHP engine and, 49, 50
+- phpMyAdmin and, 51
+- queries to, 160–162
+- distributions of, 243–245
+- string data types, 144
+- syntax for, 141–142
+- using, 140–141
+- when to use, 235
+- `mysql_data_seek_function`, 163
+- `mysql_db_query_function`, 160
+- `mysql_drop_function`, 163
+- `mysql_error_function`, 161
+- `mysql_fetch_field_function`, 163
+- `mysql_fetch_lengths_function`, 163
+- `mysql_fetch_row_function`, 161, 163
+- `mysql_free_result_function`, 163
+- `mysql_insert_id_function`, 163
+- `mysql_list_dbs_function`, 163
+- `mysql_num_fields_function`, 164
+- `mysql_num_rows_function`, 161–162
+- MySQL queries, 160–162
+- `MySQL_query_function`, 164
+- `MySQL_select_db_function`, 160–161
+- MySQL server, connection to, 159–160
+- name setting, for `session` command, 120
+- National Center of Supercomputer Applications (NCSA), 7
+- National Security Agency (NSA), 5–6
+- Netplanet, 13
+- Nested lists, in HTML, 35–36
+- NET languages, 8. 另见 ASP.NET
+- C# and, 24
+- Netscape browser, 7
+- cookies with, 118
+- programming tools for, 12–13
+- Netscape mail, 14
+- Netscape Navigator, document object and, 188
+- Network access layer, TCP/IP, 9
+- Network address, 9–10
+- Network layer, OSI, 8
+- Networks, addressing with, 9–10
+- `db_function`, in database class, 164
+- New lines, HTML code and, 95–96
+- `next` array function, in PHP, 75
+- `next_row_function`, in database class, 164, 167
+- name attribute for `<A>` tag, 32–33
+- for frames, 197–198
+- for `<INPUT>` tag, 142
+- for `<SELECT>` tag, 114–115
+- for `setcookie` command, 118–199
+- for `<TEXTAREA>` tag, 113–114, 115
+- `Name` command, for phpMyAdmin tables, 152
+- NAME parameter in `<IFRAME>` tag, 40, 41
+- in `<IFRAME>` tag, 42
+- Names, MySQL, 142. 另见 Nicknames
+- Nicknames, with phpBB board, 95–96
+- `<NOFRAMS>` tag, 41
+- Nonunderlined links, with Cascading Style Sheets, 134
+- NORESIZE parameter, in `<FRAME>` tag, 40, 41
+- NOSHADE attribute, in `<HR>` tags, 31
+- Notation, for MySQL, 141–142
+- Notepad, with HTML, 27
+- SNFNET, 6
+- `number_function`, in PHP, 62
+- Numbers, in JavaScript, 173–174
+- Numeric data types, MySQL, 142–143
+- Object data type, in PHP, 58, 63
+- Object interfaces, 106–107
+- object `mysql_fetch_field_function`, 163
+- Object-oriented programming for PHP5, 101–110
+- for programming browsers, 185–195
+- comparing, 108–109
+- copying and cloning, 107
+- destroying, 103
+- with `Template`, 129–131
+- in JavaScript, 178–183
+- in object-oriented programming, 101–102
+- static keyword, 105
+- visibility of, 109
+- `oct` function, in PHP, 62
+- `<OL>` tag, 35
+- Abort event, in JavaScript, 192
+- Blur event, in JavaScript, 192
+- OnChange event, in JavaScript, 192
+- OnClick event, in JavaScript, 192
+- Focus event, in JavaScript, 192
+- KeyDown event, in JavaScript, 207–208
+- KeyUp event, in JavaScript, 192
+- Load event, in JavaScript, 192
+- MouseDown event, in JavaScript, 192
+- MouseOut event, in JavaScript, 192
+- MouseOver event, in JavaScript, 191, 192
+- MouseUp event, in JavaScript, 192
+- Move event, in JavaScript, 192
+- Reset event, in JavaScript, 192
+- Resize event, in JavaScript, 192
+- Select event, in JavaScript, 192
+- Unload event, in JavaScript, 192
+- popup window creation, 201
+- `opendir` method, in PHP, 89
+- opener object, 203
+- Opening files, in PHP, 86–87
+- Opening tags, 28
+- `open` method, in popup window, 201–203
+- Open-source programs, 7
+- Perl language as, 23–24
+- PHP as, 22
+- Open Systems Interconnection (OSI), layers in, 8–9
+- Opera browser, 7
+- Operations in JavaScript, 173–174
+- in PHP, 60–66
+- Operations command, for phpMyAdmin tables, 152–154
+- Operators, MySQL, 144–145
+- `<OPTION>` tag, 114–115
+- for dynamic creation, 116–117
+- `ORDER BY` clause, in MySQL `SELECT` instruction, 149–150
+- Ordered lists, in HTML, 35
+- Ordered, for videogame website, 230
+- `ord` function, in PHP, 93
+- `outerHeight` method, for `Window` objects, 206
+- `outerHTML` property, with, 219–220
