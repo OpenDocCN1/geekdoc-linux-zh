@@ -1,0 +1,138 @@
+
+- `h_name` 成员, 241–242, 248–249, 256
+- `h_serv` 成员, 797
+- hacker, 15, 644, 702, 964
+- half-close, 171, 166, 776, 990
+- half-open, 186, 207
+- Handley, M., 504, 963
+- Hanson, D. E., x
+- hard error, 89
+- `HAVE_HDR_MSG_SA_LEIN` 常数, 386, 920
+- `HAVE_SOCKET_SA_LEIN` 常数, 59, 920
+- `hdr_structure`, 546–548, 593
+- `head_stream`, 801
+- 校验和, IPv4, 885
+- 扩展字段, 645, 650
+- IPv4, 883, 914
+- 客户端-服务器, 581–585
+- `heartbeat_cli` 函数, 582, 584
+- 源代码, 583
+- `heartbeat_serv` 函数, 584
+- 源代码, 585
+- 惠
+- IANA (互联网分配数字机构), 42–43, 282–329
+- IBM, 962
+- ICMP (互联网控制消息协议), 31, 52
+- 版本 4, 31, 635, 660, 685, 885–898
+- 校验和, 675, 670–671, 719, 896
+- 头部, 663
+- 地址_request, 659, 802
+- 代码字段, 896
+- 目的不可达, 99–130, 185, 221, 185, 222, 225, 668, 669, 673, 823–825, 913, 934, 94, 937
+- 目的不可达_分片, 667, 889
+- 必须, 687
+- 回显, 653, 661, 887–898, 952
+- 回显_请求, 659, 661, 887–898, 952
+- 消息守护进程, 分片, 622
+- 数据包_到, 47, 688, 897–898
+- 问题网络, 469, 897–898
+- 端口不可达, 221, 225, 228, 236, 473, 679, 681, 688, 708, 726, 824–825, 829, 897, 957, 960
+- `HOST_PORT` 常数, 207, 243
+- `HOST_SERV` 常数, 800
+- `host_serv` 函数, 284–285, 417, 639, 643, 665, 677, 713
+- 定义的, 284
+- `host` 结构, 241–242, 245–250, 255–256, 303–304, 910
+- `h_addr` 成员, 241
+- `h_addr_list` 成员, 241–242, 250, 314, 940
+- `h_addr_type` 成员, 241–242, 249, 943
+- `h_aliases` 成员, 241
+- `h_errno` 变量, 243, 303–304, 312
+- `host_data` 结构, 304
+- `host_UX`, 21, 67, 98–99, 228–233, 240, 302, 304–305, 765, 781, 815–816
+- `htr` 函数, 233–244
+- `htonl` 函数, 68, 141, 930
+- `htons` 函数, 835, 281
+- `I_POST` 常数, 256, 94
+- `I_RECV_data`, 381
+- `I_SEND_data`, 382
+- `I_SETSIG` 常数, 856, 874–876
+- `I_258` 常数, 904
+
+# UNIX 网络编程
+
+索引 983
+
+- `if_nam_index` struct, 463, 466–467, 918
+  - 定义, 463
+- `if_max_index` function, 446, 463–467, 500–501
+  - 定义, 463
+  - 源代码, 464
+- `if_amsble` struct, 447
+- `if_ams_addr` member, 448, 452
+- `if_buf` member, 429–430
+- `if_len` member, 66, 428–430
+- `if_reg` member, 420
+- `if_construct`, 462–437
+- `if_progen`, 22–23, 95, 205–432
+- `if_BROADCAST` constant, 439
+- `if_POINT` constant, 439
+- `if_PROMISC` constant, 707
+- `if_UT` constant, 439
+- `if_AL2` constant, 518
+- `if_hien` member, 433, 437–461
+- `if_info` struct, 429, 431, 435, 435–438, 433, 439, 461, 522, 553
+- `if_ams_addr` member, 448
+- `if_type` member, 461
+- `if_PROMISC` constant, 707
+- `if_addr` member, 429, 439–440
+- `if_broadaddr` member, 429, 440–443
+- `if_data` member, 429
+- `if_name` struct, 429, 440–443
+- `if_flags` member, 429, 439
+- `if_metric` member, 429
+- `if_name` struct, 430, 439
+- `if_restruct`, 427, 430, 435, 437, 439–453
+- `ifFT_NONE` constant, 535
+- IGMP (组管理协议), 31, 493, 495, 569–588
+  - 校验和, 671
+- IP32, 编程, 267
+- `imperfect_filtering`, 492
+  - 实现
+- ICMP 消息守护进程, 685–702
+- `ip_programming`, 662–672
+- `tracerouteproc`, 672–685
+- `imr_interface` member, 496, 500
+- `imr_multiaddr` member, 496
+- `IN6_IS_ADD_LINKLOCAL` macro, 定义, 267
+- `IN6_IS_ADD_LOOPBACK` macro, 定义, 267
+- `IN6_IS_ADD_MC_GLOBAL` macro, 定义, 267
+- `IN6_IS_ADD_MC_LINKLOCAL` macro, 定义, 267
+- `IN6_IS_ADD_MC_NODELOCAL` macro, 定义, 267
+- `IN6_IS_ADD_MC_ORGLOCAL` macro, 定义, 267
+- `IN6_IS_ADD_MC_SITELOCAL` macro, 定义, 267
+- `IN6_IS_ADDR_MULTICAST` macro, 定义, 267
+- `IN6_IS_ADDR_SITELOCAL` macro, 定义, 267
+- `IN6_IS_ADD_UNSPECIFIED` macro, 定义, 267
+- `IN6_IS_ADD_V4COMPAT` macro, 定义, 267
+- `IN6_IS_ADD_V6` macro, 定义, 267, 268, 268, 271, 665
+- `inet6_addr` struct, 61, 179, 242–248
+- `inet6_pkaddr` struct, 532, 560–563, 定义, 561
+- `inet6_ANY` constant, 22, 227, 280, 308, 324, 351
+- `inet6_LOOPBACK` constant, 885
+- `inet6_addr` constant, 895
+- `inet6_loop` constant, 895
+- `inet_addr` struct, 60, 179, 242, 248, 266, 496–497, 定义, 58
+- `inet_addr_t`, 数据类型, 59
+- `inet_sum` struct, 670–671
+  - 源代码, 672
+- `inet6_pbd` struct, 130
+- `inet6_ptaddr` struct, 532, 534, 538, 定义, 532
+- `inet6_ANY` constant, 144, 92, 222, 112, 316, 214, 274, 280, 308, 378, 404, 497–501, 777, 851, 922
+- `inet6_ADDR_LOCAL_GROUP` constant, 927, 71, 916
+- `inet_addr_domain`, 238, 248–249
+- `band_data`, 267
+- arnation, 94
+- `incomplete_connection`, 201, 444, 457, 461, 463–467, 496–497, 499–501, 509, 551
+- `INET_ADDRESS`, 72, 275, 243, 917, 定义, 648
+- `inet6_option_alloc` function, 649, 定义, 648
+- `inet6_option_append` function, 649, 定义, 648
