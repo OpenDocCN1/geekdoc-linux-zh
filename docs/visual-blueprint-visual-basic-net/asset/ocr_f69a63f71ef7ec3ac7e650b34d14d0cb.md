@@ -1,0 +1,44 @@
+# # CREATE A CONTROL FROM SCRATCH
+
+Typically you can simply make a customized version of an existing control to ease development. But in cases where the standard controls do not offer the functionality you want for a control, you can create a control completely from scratch. For example, you can create a highly stylized button control that a standard control cannot provide.
+
+To create a control from scratch, you must rely heavily on the graphics command layer to draw the image of your control on the surface of the UserControl. For more information on drawing on a surface using graphics primitives, see Chapter 6.
+
+Providing interactivity is essential to the usefulness of your control. The UserControl provides a number of properties to monitor mouse and keyboard actions and movement. For example, to create a customized button, you may want to draw one style for the inactive button, one code to paint the button, and third for the active button. Add code to paint the surface of the control in the Paint event handler. Make sure the Paint event uses the dimensions specified by the UserControl.
+
+All of the drawing code in the control should exist in the Paint event. Placing painting code for interactivity, such as mouse clicks in the mouse events, can cause the control to draw improperly when the control repaints. To avoid this, call the Invalidate method the control to fire the Paint event and let the control redraw. Make sure to handle the Resize event to enable your control to redraw with the new dimensions.
+
+The UserControl provides the Click event when the user clicks its surface, and the MouseDown and MouseUp events for the user pressing and releasing the mouse on your control, respectively. You can use KeyPress, KeyDown, and KeyUp events to monitor for key presses.
+
+```
+```vb
+Public Class UserControl1
+Inherits System.Windows.Forms.UserControl
+
+Private disptext As String = "Standard text"
+
+End Class
+```
+```
+
+```
+```vb
+Private Sub UserControl_MouseUp(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.MouseUp
+    pressed = True
+End Sub
+
+Private Sub UserControl_MouseDown(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.MouseDown
+    pressed = False
+End Sub
+```
+```
+
++   1. In the Code Editor of an existing user control class, add necessary member variables to the control.
++   
++   Note: To create a UserControl, see Chapter 7 to add member variables.
++   
++   2. Type code to respond to any necessary events raised by the UserControl.
++   
++   The example adds code to respond to mouse clicks.
++   
++   3. In any method that changes the appearance of the control, type Me.Invalidate().
