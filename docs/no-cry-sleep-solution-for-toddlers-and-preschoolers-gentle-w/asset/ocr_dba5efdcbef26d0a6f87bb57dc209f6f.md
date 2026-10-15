@@ -1,0 +1,31 @@
+Hosts within the local network connected to the Internet by a gateway need to know the identity of the relay host, the mail server. You set this with the relayhost parameter. Also, myorigin should be set to just mydomain. If there is a DNS server identifying the gateway as the mail server, you can just set relayhost to the value of mydomain. If not, then relayhost should be set to the specific hostname of the gateway/mail server. If your local network is not running a DNS server, be sure to set disable_dns_lookups to yes.
+
+```
+relay_host=$mydomain
+```
+
+# Direct Connections
+
+If your system is directly connected to the Internet and you use an ISP for receiving mail, you can configure Postfix as a null client to just send mail. Set the relay_host parameter to just your own domain name. Also, in the master.cf file, comment out the SMTP server and local delivery agent entries.
+
+```
+relayhost = $mydomain
+```
+
+# Masquerading
+
+If your mail server is operating on a gateway for a local network and you want to hide the hosts in that network, you can opt to masquerade the local hosts, letting it appear that all mail is coming from the domain in general, instead of a particular host. To set this option, you use the masquerade_domains parameter. In the following example, all mail sent by a local host such as rabbit.mytrek.com will be addressed as just coming from mytrek.com. Thus a message sent by the user chris@rabbit.mytrek.com is sent out as coming from chris@mytrek.com.
+
+```
+masquerade_domains = $mydomain
+```
+
+Received mail is not masqueraded by default. This allows Postfix to still deliver received mail to particular hosts. If you want received mail to also be masqueraded, you have to add the envelope_recipients parameter to the list of values assigned to the masquerade_class parameter. In that case, Postfix will no longer be able to deliver received mail.
+
+# Virtual Domains
+
+If your network has implemented virtual domains, you will need to set up a virtual domain table and then specify that table with the virtual_maps option. Setting up a table is a simple matter of listing virtual names and their real addresses in a text file such as /etc/postfix/virtual. Then use the postmap command to create a Postfix table:
+
+```
+postmap /etc/postfix/virtual
+```

@@ -1,0 +1,112 @@
+
+
+time, and data_connection_timeouts will cut off failed data connections. The defaults are shown here:
+
+```
+idle_session_timeout=600
+data_connection_timeout=120
+```
+
+## Messages
+
+The dirmessage_enable option will allow a message held in a directory's .message file to be displayed whenever a user accesses that directory. ftpd_banner lets you set up your own FTP login message. The default is shown here.
+
+```
+ftpd_banner=Welcome to blah FTP service.
+```
+
+## Logging
+
+A set of xferlog options control logging. You can enable logging, as well as specify the format and the location of the file.
+
+```
+xferlog_enable=YES
+```
+
+Use xferlog_file option to specify the log file you want to use. The default is shown here:
+
+```
+xferlog_file=/var/log/vsftpd.log
+```
+
+## vsftpd Access Controls
+
+Certain options control access to the FTP site. As previously noted, the anonymous_enable options allows anonymous users access, and local_enable permits local users to log in to their accounts.
+
+### Denying Access
+
+The deny_email_enable option lets you deny access by anonymous users, and the banned_email_file option designates the file (usually vsftpd.banned) that holds the e-mail addresses of those users. The vsftpd.ftusers file lists those users that can never be accessed. These are usually system users like root, mail, and nobody. See Table 21-3 for a list of vsftpd files.
+
+chroot_list_file will have an inverse meaning, listing those users not allowed access. In the following example, access by local users is limited to those listed in vsftpd.chroot.
+
+```
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+```
+
+## User Authentication
+
+The vsftpd server makes use of the PAM service to authenticate local users that are remotely accessing their accounts through FTP. In the vsftpd.conf file, the PAM script used for the server is specified with the pam_service_name option.
+
+```
+pam_service_name=vsftpd
+```
+
+In the /etc/pam.d directory, you will find a PAM file named vsftpd with entries for controlling access to the vsftpd server. PAM is currently set up to authenticate users with valid accounts, as well as deny access to users in the /etc/vsftpd.ftpusers file. The default /etc/pam.d/vsftpd file is shown here:
+
+```
+##$PAM-1.0
+auth    required    pam_listfile.so item=user sense=deny
+                file=/etc/vsftpd.ftpusers onerr=succeed
+auth    required    pam_stack.so service=system-auth
+auth    required    pam_shells.so
+account required    pam_stack.so service=system-auth
+session required    pam_stack.so service=system-auth
+```
+
+## Command Access
+
+Command usage is highly restricted by vsftpd. Most options for the ls command that lists files are not allowed. Only the asterisk file-matching operation is supported (see Chapter 8). To enable recursive listing of files in subdirectories, you have to enable the use of the -R option by setting the ls_recurse_enable option to YES. Some clients, such as ncftp (see Chapter 14), will assume that the recursive option is enabled.
+
+| File | Description |
+|---|---|
+| vsftpd.ftpusers | Users always denied access |
+| vsftpd.user_list | Specified users denied access (allowed access if userlist_deny is NO) |
+| vsftpd.chroot_list | Local users allowed access (denied access if chroot_local_user is on) |
+| /etc/vsftpd/vsftpd.conf | vsftpd configuration file |
+| /etc/pam.d/vsftpd | PAM vsftpd script |
+| /etc/rc.d/init.d/vsftpd | Service vsftpd server script, standalone (Red Hat default) |
+| /etc/xinetd.d/vsftpd | Xinetd vsftpd server script |
+
+TABLE 21-3 Files for vsftpd
+
+## vsftpd Virtual Hosts
+
+Though the capability is not inherently built in to vsftpd, you can configure and set up the vsftpd server to support virtual hosts. Virtual hosting is where a single FTP server operates as if it has two or more IP addresses. Several IP addresses can then be used to access the same server. The server will then use a separate FTP user directory and files for each host. With vsftpd, this involves manually creating separate FTP users and directories for each virtual host, along with separate vsftpd configuration files for each virtual host in the /etc/vsftpd directory. On Red Hat, vsftpd is configured to run as a standalone service. Its /etc/rc.d/init.d/vsftpd start-up script will automatically search for and read any configuration files listed in the /etc/vsftpd directory.
+
+If, on the other hand, you wish to run vsftpd as a xinetd service, you would have to create a separate xinetd service script for each host in the /etc/xinetd.d directory. In effect, you have several vsftpd services running in parallel for each separate virtual host. The following example uses two IP addresses for an FTP server.
+
+- First, create an FTP user for each host. Create directories for each host. (You could use the one already set up for one of the users.) For example, for the first virtual host you could use FTP-host1. Be sure to set root ownership and the appropriate permissions.
+  
+  useradd -d /var/ftp-host1 FTP-host1
+  chown root.root /var/ftp-host1
+  chmod a+rx /var/ftp-host1
+  umask 022
+  mkdir /var/ftp-host1/pub
+
+- Set up two corresponding vsftpd service scripts in the /etc/xinetd.d directory. On Red Hat, the vsftpd directory in /usr/share/doc has an xinetd example script, vsftpd.xinetd. Within each, enter a bind command to specify the IP address the server will respond to.
+  
+  bind 192.168.0.34
+
+- Within the same scripts, enter a server_args entry specifying the name of the configuration file to use.
+  
+  server_args = vsftpd-host1.conf
+
+- Within the /etc/vsftpd directory, create separate configuration files for each virtual host. Within each, specify the FTP user you created for each, using the ftp_username entry.
+  
+  ftp_username = FTP-host1
+
+## vsftpd Virtual Users
+
+Virtual users can be implemented by making use of PAM to authenticate authorized users. In effect, you are allowing access to certain users, while not having to actually set up accounts for them on the FTP server system. First create a PAM login database file to use along with a PAM file in the /etc/pam.d directory that will access the database. Then create a virtual FTP user along with corresponding directories that the virtual users will access
+

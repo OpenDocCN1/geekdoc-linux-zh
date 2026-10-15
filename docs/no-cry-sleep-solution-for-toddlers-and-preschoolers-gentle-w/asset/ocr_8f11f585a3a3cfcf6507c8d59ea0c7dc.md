@@ -1,0 +1,28 @@
+in Chapter 30. You can use the redhat-config-proc tool to assign values to these parameters. redhat-config-proc is accessible from the More System Tools menu as Kernel Tuning. redhat-config-proc lists headings for Networking, File System, Virtual Memory, Kernel, and Hardware. Networking lets you control features such as IP forwarding, ICMP broadcast messages, and TCP time stamping. The File Systems option lets you set the maximum number of files. The Kernel option enables you to control logging, shared memory, and certain security features such as disabling debugging. The Hardware option lets you control RAID speeds.
+
+Parameters that you set are saved in the /etc/sysctl.conf file. Red Hat installs this file with basic configuration entries such as those for IP forwarding and debugging control. The redhat-config-proc tool overwrites this file, replacing it with entries for assigning values to different /proc/sys files. Changes to the /proc/sys file are not made until you click the Activate Saved Configuration button. For example, if you turn on IP forwarding in the Networking IP panel, the content of /proc/sys/net/ipv4/ip_forward is set to 1, once you save and activate the proc values.
+
+Instead of using redhat-config-proc, you could use the sysctl command directly. The -p option causes sysctl to read parameters from the /etc/sysctl.conf file (you can specify a different file). You can use the -w option to change specific parameters. You reference a parameter with its key. A key is the parameter name prefixed with its proc system categories (directories), such as net.ipv4.ip_forward for the ip_forward parameter located in /proc/sys/net/ipv4/. To display the value of a particular parameter, just use its key. The -a option lists all available changeable parameters. In the next example, the user changes the domain name parameter, referencing it with the kernel.domainname key (the domainname command also sets the kernel.domainname parameter):
+
+```
+# sysctl -w kernel.domainname="mytrek.com"
+```
+
+The following example turns on IP forwarding:
+
+```
+# sysctl -w net.ipv4_ip_forward=1
+```
+
+If you use just the key, you display the parameter’s current value:
+
+```
+# sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+```
+
+# Installing a New Kernel Version
+
+To install a new kernel, you need to download the software packages for that kernel to your system. You can install a new kernel either by downloading a binary version from your distribution’s Web site and installing it or by downloading the source code, compiling the kernel, and then installing the resulting binary file along with the modules. For Red Hat, the binary version of the kernel is provided in an RPM package. You can install a new kernel, just as you would any other RPM software package.
+
+The easiest way to install a new kernel on Red Hat is to use the Red Hat Network update agent (the Red Hat Network is now a subscription service you need to pay for). The update agent automatically downloads, updates, and installs a new kernel. The Red Hat Network does not automatically select kernel files for download. Although they are listed, you have to explicitly select them to be downloaded and installed.

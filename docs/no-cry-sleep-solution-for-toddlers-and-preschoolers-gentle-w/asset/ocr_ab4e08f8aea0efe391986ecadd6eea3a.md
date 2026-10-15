@@ -1,0 +1,16 @@
+Once the installation program begins, you simply follow the instructions, screen by screen. Most of the time, you only need to make simple selections or provide yes and no answers. The installation program progresses through several phases. First, you create Linux partitions on your hard drive, and then you install the software packages. After that, you can configure your network connection and then your X Window System for graphical user interface support. Both the X Window System and network configurations can be performed independently at a later time.
+
+Once your system is installed, you are ready to start it and log in. Normally, you will log in using a graphical login, selecting the desktop you want and entering your username and password. Alternatively, you can log in to a simple command line interface. From the command line, you can then invoke a desktop such as GNOME or KDE that provides you with a full graphical user interface
+
+# Hardware, Software, and Information Requirements
+
+Before installing Linux, you must ensure that your computer meets certain minimum hardware requirements. You also need to have certain specific information ready concerning your monitor, video card, mouse, and CD-ROM drive. All the requirements are presented in detail in the following sections. Be sure to read them carefully before you begin installation. During the installation program, you need to provide responses that reflect the configuration of your computer.
+
+# Hardware Requirements
+
+Listed here are the minimum hardware requirements for installing a standard installation of the Linux system on an Intel-based PC:
+
++   - A 32-bit Intel-based personal computer. At least an Intel or compatible 80386, 80486, or Pentium-class microprocessor is required. A 400 MHz Pentium is recommended for a graphical interface and 200 MHz for text.
++   - A CD-ROM or DVD-ROM drive (if you are using the DVD-ROM included with this book, you will need a DVD-ROM drive).
++   - A 3 1/2-inch floppy disk drive and floppy disk, if your PC is not capable of booting from CD-ROM or DVD-ROM. A 3 1/2-inch, DOS high-density (HD) floppy disk drive is used to create an install disk (if you are installing from a floppy). If you install directly from a CD-ROM, you will not need it. A boot floppy can be created using either the Linux or Windows operating system.
++   - Normally, at least 64MB RAM for text, and 192MB RAM for graphical. (Linux can run on as little as 12MB RAM.) At least 2GB free hard disk space for a standard installation, including applications (keep in mind that Linux can run on far less on a minimum installation, as little as 100MB and 16MB swap); 3GB to 6GB or more is recommended for a full installation (all applications). You need about 5GB to install all the software packages on most distribution CD-ROMs. The standard installation of basic software packages normally takes 3GB, plus 64MB to 512MB for swap space, depending on the amount of RAM memory you have. If you have less than 1GB of

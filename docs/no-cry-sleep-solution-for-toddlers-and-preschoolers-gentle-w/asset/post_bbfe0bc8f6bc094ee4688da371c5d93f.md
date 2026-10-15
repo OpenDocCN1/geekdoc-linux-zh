@@ -1,0 +1,35 @@
+
+## FIGURE 6-3
+File properties
+on Nautilus
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_140_0.png)
+
+execute permissions for user, group, and other, as set for this file. You can change any of the permissions here, provided the file belongs to you. The panel will also show the file's owner and its group. The group name expands to a pop-up menu listing different groups, allowing you to select one to change the file's group. The Notes panel will list any notes you want to make for the file or directory. It is an editable text window, so you can change or add to your notes, directly.
+
+Certain kinds of files will have added panels, providing information about the item. For example, an audio file will have an Audio panel listing the type of audio file and any other information like the song title or compressions method used. An image file will have an Image panel listing the resolution and type of image. A video file will contain a Video panel showing the type of video file along with compression and resolution information.
+
+## Nautilus Preferences
+
+You can set preferences for your Nautilus file manager in the Preferences dialog box. Access this dialog box by selecting the Preferences item in the Edit menu. The Preferences dialog box shows a main panel with a sidebar with several configuration entries, including Appearance, Windows, Desktop & Trash, Icon & List Views, Icon Captions, Side Panes, and Performance. You use these dialog boxes to set the default display properties for your Nautilus file manager. For example, Windows allows you to select which bars to display by default, such as the sidebar or the toolbar. Appearance lets you select the style you want to use. On Side Panes, you can select which tab to display, such as history or tree. On Icon & List Views, you can select display and executable options such as showing hidden files or activating items with single or double clicks.
+
+## Nautilus as a Web Browser
+
+Nautilus is also an operational Web browser. You can use the Location box to access any Web or FTP site. Just enter the URL for the Web site in the Location box and press ENTER (you do not need to specify www or http://). However, Nautilus is not a fully functional Web browser. When you access a page, it will display buttons in the sidebar to open the
+page using one of several Web browsers installed on your system, such as Mozilla and Lynx. The Go menu and History tab in the sidebar maintain a history list of Web sites you have previously accessed. You can also right-click the Back or Forward button to display this history list. To clear the history list, select Forget History in the Go menu. Nautilus also supports bookmarks, which can be displayed and edited using the Bookmarks menu. Clicking the Web Search icon will open the page of your specified favorite Web search engine, such as Yahoo or Google.
+
+> TIP Nautilus is also Internet-aware. You can use the Location box to access an FTP site and display the directories on that remote site, and then drag and drop files to another file manager window to download them to your system. Be sure to include the FTP protocol specification, ftp://.
+
+## The GNOME Panel
+
+The panel is the center of the GNOME interface (see Figure 6-4). Through it you can start your applications, run applets, and access desktop areas. You can think of the GNOME panel as a type of tool you can use on your desktop. You can have several GNOME panels displayed on your desktop, each with applets and menus you have placed in them. In this respect, GNOME is flexible, enabling you to configure your panels any way you want. You can customize a panel to fit your own needs, holding applets and menus of your own selection. You may add new panels, add applications to the panel, and add various applets.
+
+Panel configuration tasks such as adding applications, selecting applets, setting up menus, and creating new panels are handled from the Panel pop-up menu. Just right-click anywhere on your panel to display a menu with entries for Properties, New Panel, Add To Panel, and Delete This Panel, along with help and about entries. New Panel lets you create other panels; Add To Panel lets you add items to the panel such as application launchers, applets for simple tasks like the Workspace Switcher, and menus like the main applications menu. The Properties entry will display a dialog for configuring the features for that panel, like the position of the panel and its hiding capabilities.
+
+> NOTE You open the main menu by clicking its button on the panel. On Red Hat, the Main Menu button is a stylized picture of a red hat. It is initially located on the left side of your panel, the lower-left corner of your screen. You only need to single-click the Main Menu button.
+
+## Panel Properties
+
+To configure individual panels, you use the Panel Properties dialog box. To display this dialog box, you right-click the particular panel and select the Properties entry in the pop-up menu. For individual panels, you can set features for edge panel configuration and the background. The Panel Properties dialog box includes a tabbed panel for each. On the edge panel, you can choose options for positioning an edge panel and for minimizing it, including the Auto-Hide feature. The Hide Buttons feature enables you to hide the panel yourself.
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_141_0.png)

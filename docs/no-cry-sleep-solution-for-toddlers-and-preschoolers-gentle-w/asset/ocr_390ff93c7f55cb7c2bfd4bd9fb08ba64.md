@@ -1,0 +1,34 @@
+| Command | Description |
+|---|---|
+| Option |  |
+| -t sec | Tells init to wait sec seconds between sending processes the warning and the kill signals, before changing to another runlevel. |
+| -k | Doesn't actually shut down; only sends the warning messages to everybody. |
+| -r | Reboots after shutdown, runlevel state 6. |
+| -h | Halts after shutdown, runlevel state 0. |
+| -n | Doesn't call init to do the shutdown; you do it yourself. |
+| -f | Skips file system checking (fsck) on reboot |
+| -c | Cancels an already running shutdown; no time argument. |
+
+# Managing Services
+
+As noted previously for the crond service, you can select certain services to run and the runlevel at which to run them. Most services are servers like a Web server or proxy server. Other services provide security, such as SSH or Kerberos. You can decide which services to use with the chkconfig, service, or redhat-config-services tools. These are described here briefly, and in more detail in Chapter 20.
+
+# chkconfig
+
+To configure a service to start up automatically, you can use the redhat-config-services tool available on the desktop or the chkconfig tool, which is run on a command line. redhat-config-services will display a list of available services, letting you choose the ones you want to start and deselect. The chkconfig command uses the on and off options to select and deselect services for startup (see Chapter 20 for more details).
+
+```
+chkconfig httpd on
+```
+
+# service Command
+
+To start and stop services manually, you can user either redhat-config-services or the service command. With the service command, you list the service with the stop argument to stop it, the start argument to start it, and the restart argument to restart it.
+
+```
+service httpd start
+```
+
+# redhat-config-services
+
+Most administration tools provide interfaces displaying a simple list of services from which you can select the ones you want to start up. On the redhat-config-services tool, the main panel lists different daemons and servers that you can have start by just clicking a check box.

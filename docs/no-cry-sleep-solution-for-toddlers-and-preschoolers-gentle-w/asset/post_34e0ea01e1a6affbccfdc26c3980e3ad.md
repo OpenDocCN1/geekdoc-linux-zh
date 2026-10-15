@@ -1,0 +1,61 @@
+
+Apache configuration directives. With the directives, you can enter basic configuration information, such as your server name, or perform more complex operations, such as implementing virtual FTP hosts. The design is flexible enough to enable you to define configuration features for particular directories, users, or groups.
+
+To configure a particular directory, you can use an .ftpaccess file with configuration options placed within that directory. These .ftpaccess options take precedence over those in the proftpd.conf directory. .ftpaccess files are designed to operate like .htaccess files in the Apache Web server that configure particular Web site directories. You can find a complete listing of ProFTPD configuration parameters at the ProFTPD Web site (www.proftpd.net) and in the ProFTPD documentation installed in /usr/doc as part of the ProFTPD software package. Several of the more commonly used parameters are listed in Table 21-4. When creating a new configuration, you should make a copy of the proftpd.conf configuration file and modify it. Then you can test its syntax using the proftpd command with the -c option and the name of the file.
+
+```
+proftpd -c newfile.conf
+```
+
+Different kinds of directives exist. Many set values, such as MaxClients, which sets the maximum number of clients, or NameServer, which sets the name of the FTP server. Others create blocks that can hold directives that apply to specific FTP server components. Block directives are entered in pairs: a beginning directive and a terminating directive. The terminating directive defines the end of the block and consists of the same name, beginning with a slash. Block directives take an argument that specifies the particular object to which the directives will apply. For the Directory block directive, you must specify a directory name to which it will apply. The <Directory mydir> block directive creates a block whose directives within it apply to the mydir directory. The block is terminated by a </Directory> directive. <Anonymous ftp-dir> configures the anonymous service for your FTP server. You need to specify the directory on your system used for your anonymous FTP service, such as /var/ftp. The block is terminated with the </Anonymous> directive. The <VirtualHost hostaddress> block directive is used to configure a specific virtual FTP server and must include the IP or the domain name address used for that server. </VirtualHost> is its terminating directive. Any directives you place within this block are applied to that virtual FTP server. The <Limit permission> directive specifies the kind of access you want to limit. It takes its argument one of several keywords indicating the kind of permission to be controlled: WRITE for write access, READ for read access, STOR for transfer access (uploading), and LOGIN to control user login.
+
+A sample of the standard proftpd.conf file installed as part of the ProFTPD software package is shown here. It establishes a single server and a single anonymous login. Notice the default ServerType is standalone. If you want to use xinetd to run your server, you must change this entry to inetd. Detailed examples of proftpd.conf files, showing various anonymous FTP and virtual host configurations, can be found with the ProFTPD documentation, located in /usr/share/doc, and on the ProFTPD Web site at www.proftpd.net.
+
+```
+ServerName      "ProFTPD Default Installation"
+ServerType      standalone
+DefaultServer   on
+Port            21
+```
+
+```
+Umask            022
+MaxInstances     30
+User             nobody
+Group            nobody
+<Directory />
+    AllowOverwrite     on
+</Directory>
+# A basic anonymous configuration, with one incoming directory.
+<Anonymous ~ftp>
+    User               ftp
+    Group              ftp
+    RequireValidShell  off
+    MaxClients         10
+    UserAlias          anonymous ftp
+    DisplayLogin       welcome.msg
+    DisplayFirstChdir  .message
+    # Limit WRITE everywhere in the anonymous chroot except incoming
+    <Directory *>
+        <Limit WRITE>
+            DenyAll
+        </Limit>
+    </Directory>
+    <Directory incoming>
+        <Limit WRITE>
+            AllowAll
+        </Limit>
+        <Limit READ>
+            DenyAll
+        </Limit>
+    </Directory>
+</Anonymous>
+```
+
+## Authentication
+
+Authentication of users in ProFTPD can be implemented either in PAM, LDAP, or SQL. For LDAP or SQL, you need to load the corresponding ProFTPD module. PAM authentication is the default (see Chapter 28 for more information on LDAP and PAM). Be sure that a /etc/pam.d/ftp file has been installed to provide PAM FTP support. ProFTPD also supports both standard passwords and shadow passwords. The default PAM authentication can be turned off by setting the AuthPAMAuthoritative directive to off, allowing other authentication methods such as LDAP to be used. If your server is further hidden in a local network by IP Masquerading techniques, you can use the MasqueradeAddress directive to specify its public host name, allowing its real host name to remain hidden.
+
+## Anonymous Access
+
+You use the Anonymous configuration directive to create an anonymous configuration block in which you can place directives that configure your anonymous FTP service. The directive includes the directory on your system used for the anonymous FTP service. The ProFTPD daemon executes a chroot operation on this directory, making it the root directory for the remote user accessing the service. By default, anonymous logins are supported, expecting users to enter their e-mail address as a password. You can

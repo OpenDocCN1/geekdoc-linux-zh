@@ -1,0 +1,60 @@
+
+| Service | Port Number | Port Label |
+|---|---|---|
+| Telnet | 23 | telnet |
+| Web server | 80 | www |
+| XFree86 | 6000:6009 | x11:6009 |
+
+## Packet States: Connection Tracking
+
+One of the more useful extensions is the state extension, which can easily detect tracking information for a packet. Connection tracking maintains information about a connection such as its source, destination, and port. It provides an effective means for determining which packets belong to an established or related connection. To use connection tracking, you specify the state module first with -m state. Then you can use the --state option. Here you can specify any of the following states:
+
+| State | Description |
+|---|---|
+| NEW | A packet that creates a new connection |
+| ESTABLISHED | A packet that belongs to an existing connection |
+| RELATED | A packet that is related to, but not part of, an existing connection, such as an ICMP error or a packet establishing an FTP data connection |
+| INVALID | A packet that could not be identified for some reason |
+| RELATED+REPLY | A packet that is related to an established connection, but not part of one directly |
+
+If you are designing a firewall that is meant to protect your local network from any attempts to penetrate it from an outside network, you may want to restrict packets coming in. Simply denying access by all packets is unfeasible because users connected to outside servers—say, on the Internet—must receive information from them. You can, instead, deny access by a particular kind of packet used to initiate a connection. The idea is that an attacker must initiate a connection from the outside. The headers of these kinds of packets have their SYN bit set on and their FIN and ACK bits empty. The state module's NEW state matches on any such SYN packet. By specifying a DROP target for such packets, you deny access by any packet that is part of an attempt to make a connection with your system. Anyone trying to connect to your system from the outside is unable to do so. Users on your local system who have initiated connections with outside hosts can still communicate with them. The following example will drop any packets trying to create a new connection on the eth0 interface, though they will be accepted on any other interface:
+
+```
+iptables -A INPUT -m state --state NEW -i eth0 -j DROP
+```
+
+You can use the ! operator on the eth0 device combined with an ACCEPT target to compose a rule that will accept any new packets except those on the eth0 device. If the eth0 device is the only one that connects to the Internet, this still effectively blocks outside access. At the same time, input operation for other devices such as your localhost are free to make new connections.
+
+This kind of conditional INPUT rule is used to allow access overall with exceptions. It usually assumes that a later rule such as a chain policy will drop remaining packets.
+
+```
+iptables -A INPUT -m state --state NEW ! -i eth0 -j ACCEPT
+```
+
+The next example will accept any packets that are part of an established connection or related to such a connection on the eth0 interface:
+
+```
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
+
+## Network Address Translation (NAT)
+
+Network address translation (NAT) is the process whereby a system will change the destination or source of packets as they pass through the system. A packet will traverse several linked systems on a network before it reaches its final destination. Normally, they will simply pass the packet on. However, if one of these systems performs a NAT on a packet, it can change the source or destination. A packet sent to a particular destination could have its destination address changed. To make this work, the system also needs to remember such changes so that the source and destination for any reply packets are altered back to the original addresses of the packet being replied to.
+
+NAT is often used to provide access to systems that may be connected to the Internet through only one IP address. Such is the case with networking features such as IP masquerading, support for multiple servers, and transparent proxying. With IP masquerading, NAT operations will change the destination or source of a packet moving through a firewall/gateway linking the Internet to computers on a local network. The gateway has a single IP address that the other local computers can use through NAT operations. If you have multiple servers but only one IP address, you can use NAT operations to send packets to the alternate servers. You can also use NAT operations to have your IP address reference a particular server application such as a Web server (transparent proxy).
+
+## Adding NAT Rules
+
+Packet selection rules for NAT operations are added to the NAT table managed by the iptables command. To add rules to the NAT table, you have to specify the NAT table with the -t option. Thus to add a rule to the NAT table, you would have to specify the NAT table with the -t nat option as shown here:
+
+```
+iptables -t nat
+```
+
+With the -L option, you can list the rules you have added to the NAT table:
+
+```
+iptables -t nat -L -n
+```
+
+Adding the -n option will list IP addresses and ports in numeric form. This will speed up the listing as iptables will not attempt to do a DNS lookup to determine the hostname for the IP address.

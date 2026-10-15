@@ -1,0 +1,31 @@
+# History Events
+
+In the BASH shell, the history utility keeps a record of the most recent commands you have executed. The commands are numbered starting at 1, and a limit exists to the number of commands remembered—the default is 500. The history utility is a kind of short-term memory, keeping track of the most recent commands you have executed. To see the set of your most recent commands, type history on the command line and press ENTER. A list of your most recent commands is then displayed, preceded by a number.
+
+```
+$ history
+1 cp mydata today
+2 vi mydata
+3 mv mydata reports
+4 cd reports
+5 ls
+```
+
+Each of these commands is technically referred to as an event. An event describes an action that has been taken—a command that has been executed. The events are numbered according to their sequence of execution. The most recent event has the highest number. Each of these events can be identified by its number or beginning characters in the command.
+
+The history utility enables you to reference a former event, placing it on your command line and enabling you to execute it. The easiest way to do this is to use the UP ARROW and DOWN ARROW keys to place history events on your command line, one at a time. You needn't display the list first with history. Pressing the UP ARROW key once places the last history event on your command line. Pressing it again places the next history event on your command. Pressing the DOWN ARROW key places the previous event on the command line.
+
+You can use certain control and meta keys to perform other history operations like searching the history list. A meta key is the ALT key, and the ESC key on keyboards that have no ALT key. The ALT key is used here. ALT-~ will move you to the beginning of the history list; ALT-N will search it. CTRL-S and CTRL-R will perform incremental searches, display matching commands as you type in a search string. Table 8-2 lists the different commands for referencing the history list.
+
+> Tip If more than one history event matches what you have entered, you will hear a beep, and you can then enter more characters to help uniquely identify the event.
+
+You can also reference and execute history events using the ! history command. The ! is followed by a reference that identifies the command. The reference can be either the number of the event or a beginning set of characters in the event. In the next example, the third command in the history list is referenced first by number and then by the beginning characters:
+
+```
+$ !3
+mv mydata reports
+$ !mv
+mv mydata reports
+```
+
+You can also reference an event using an offset from the end of the list. A negative number will offset from the end of the list to that event, thereby referencing it. In the next

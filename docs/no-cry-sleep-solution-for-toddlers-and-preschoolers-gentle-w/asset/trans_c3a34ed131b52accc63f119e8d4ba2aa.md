@@ -1,0 +1,53 @@
+
+
+| File | Description |
+|---|---|
+| $HOME/.ssh/known_hosts | 记录用户已登录的所有主机的主机密钥（不在 /etc/ssh/ssh_known_hosts 中的）。 |
+| $HOME/.ssh/random_seed | 用于为随机数生成器播种。 |
+| $HOME/.ssh/id_rsa | 包含用户的 RSA 身份验证密钥。 |
+| $HOME/.ssh/id_dsa | 包含用户的 DSA 身份验证密钥。 |
+| $HOME/.ssh/id_rsa.pub | 包含用于身份验证的 RSA 公钥。此文件的内容应添加到所有希望使用 RSA 身份验证登录的机器上的 $HOME/.ssh/authorized_keys 中。 |
+| $HOME/.ssh/id_dsa.pub | 包含用于身份验证的 DSA 公钥。此文件的内容应添加到所有希望使用 DSA 身份验证登录的机器上的 $HOME/.ssh/authorized_keys 中。 |
+| $HOME/.ssh/config | 每个用户的配置文件。 |
+| $HOME/.ssh/authorized_keys | 列出可用于作为此用户登录的 RSA 或 DSA 密钥。 |
+| /etc/ssh/ssh_known_hosts | 系统范围的已知主机密钥列表。 |
+| /etc/ssh/ssh_config | 系统范围的配置文件。此文件为用户配置文件中未指定的值提供默认值。 |
+| /etc/ssh/sshd_config | SSH 服务器配置文件。 |
+| /etc/ssh/sshrc | 系统默认值。当用户登录时，ssh 在启动用户 shell（或命令）之前执行此文件中的命令。 |
+| $HOME/.ssh/rc | 当用户登录时，ssh 在启动用户 shell（或命令）之前执行此文件中的命令。 |
+
+## 表 18-2 SSH 配置文件
+
+用 slogin 或 ssh 替换这些应用程序。你可以从远程主机登录以执行命令和运行应用程序，就像使用 rlogin 和 rsh 一样。使用 scp，你可以在远程主机和网络主机之间复制文件，就像使用 rcp 一样。使用 sftp，你可以传输通过加密保护的 FTP 文件。
+
+## ssh
+
+使用 ssh，你可以从本地客户端远程登录到作为 SSH 服务器运行的网络上的远程系统。这里的本地客户端指的是网络外部的系统，例如你的家庭电脑，而远程指的是你连接到的网络上的主机系统。实际上，你从本地系统连接到远程网络主机。它旨在取代执行远程登录的 rlogin 和执行远程命令的 rsh。使用 ssh，你可以从本地站点登录到网络上的远程主机，然后发送要在该主机上执行的命令。ssh 还能够支持 X Window System 连接。如果你在 X Window System 环境（如 GNOME 或 KDE）中建立 ssh 连接，此功能会自动启用。为你设置了本地 X 服务器与远程 X 服务器之间的连接。远程主机设置一个虚拟 X 服务器，并将任何 X Window System 数据通过它发送到你的本地系统，由你的本地 X 服务器处理。
+
+ssh 登录操作的功能与 rlogin 命令非常相似。你输入 ssh 命令，后跟远程主机的地址，再加上 -l 选项和你要登录的远程账户的登录名（用户名）。以下示例登录到 rabbit.mytrek.com 主机上的 aleina 用户账户：
+
+```
+ssh rabbit.mytrek.com -l aleina
+```
+
+你也可以使用用户名以地址格式使用 ssh，如
+
+```
+ssh aleina@rabbit.mytrek.com
+```
+
+下面的列表显示了用户 george 如何访问 turtle.mytrek.com 上的 cecelia 账户：
+
+```
+[george@turtle george]$ ssh turtle.mytrek.com -l cecelia
+[cecelia@turtle.mytrek.com's password:
+Last login: Fri Sep 19 15:13:05 2003 from turtle.mytrek.com
+[cecelia@turtle cecelia]$
+```
+
+有多种选项可供你配置连接。大多数选项在配置文件中都有对应的配置选项。例如，使用 -c 选项，你可以指定要使用的加密方法，例如 idea、des、blowfish 或 arcfour。使用 -i 选项，你可以选择要使用的特定私钥。-C 选项可让你在指定级别压缩传输（请参阅 ssh 手册页以获取完整选项列表）。
+
+## scp
+
+你使用 scp 在网络上的主机之间复制文件。scp 设计用于取代 rcp，实际上使用 ssh 传输数据并采用相同的身份验证和加密方法。如果身份验证需要，scp 会请求密码或密码短语。scp 的操作方式与 rcp 非常相似。远程主机上的目录和文件使用用户名和主机地址在文件名或目录前指定。用户名指定 scp 访问的远程用户账户，主机是该账户所在的远程系统。你用 @ 将用户与主机地址分隔开，用冒号将主机地址与文件或目录名分隔开。以下示例复制文件 party
+

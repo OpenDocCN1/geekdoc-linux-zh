@@ -1,0 +1,95 @@
+
+In the DHCP server, you place a corresponding TSIG key declaration and allow-update entries in the server’s dhcpd.conf file, as shown in this example. The key declaration has the same syntax as the DNS server. DHCP zone statements are then used to specify the IP address of the domain and the TSIG key to use. The domain names and IP addresses need to match exactly in the configuration files for both the DNS and DHCP servers. Unlike in the named.conf file, there are no quotes around the domain name or IP addresses in the dhcpd.conf file. In the dhcpd.conf file, the domain names and IP addresses used in the zone statement also need to end with a period, as they do in the DNS zone files. The key statement lists the key to use. Though the DHCP will try to determine the DNS servers to update, it is recommended that you explicitly identify them with a primary statement in a zone entry.
+
+```
+key mydhcpserver {
+    algorithm HMAC-MD5;
+    secret "ONQAfBbLnvWU9H8hRqq/WA==";
+};
+```
+
+```
+zone mytrek.com. {
+    primary 192.168.0.1;    #DNS domain zone to update
+    #address of DNS server
+    key mydhcpserver;       #TSIG signature key
+};
+```
+
+```
+zone 1.168.192.IN-ADDR.ARPA. {
+    primary 192.168.0.1;    #domain PTR zone to update
+    #address of DNS server
+    key mydhcpserver;       # TSIG signature key
+};
+```
+
+To generate a fully qualified hostname to use in a DNS update, the DHCP server will normally use its own domain name and the hostname provided by a DHCP client (see the dhcpd.conf Man page for exceptions). Should you want to assign a specific hostname to a host, you can use the ddns-hostname statement to specify it in the host’s hardware section. The domain name is specified in the domain-name option:
+
+```
+option domain-name "mytrek.com"
+```
+
+The DNS update capability can be turned on or off for all domains with the ddns-update-style statement. It is on by default. To turn off DNS updates for particular domains, you can use the ddns-updates statement. This is also on by default.
+A simple DNS update configuration for a DHCP server in the dhcpd.conf file is shown here.
+
+```
+/etc/dhcpd.conf
+option routers 192.168.0.1;
+option subnet-mask 255.255.255.0;
+option domain-name "mytrek.com";
+option domain-name-servers 192.168.0.1;
+key mydhcpserver {
+    algorithm HMAC-MD5;
+    secret "ONQAfBbLnvWU9H8hRqq/WA==";
+};
+```
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.128;
+  default-lease-time 21600;
+  max-lease-time 43200;
+  zone mytrek.com. {
+    primary 192.168.0.1;
+    key mydhcpserver;
+  }
+  zone 1.168.192.IN-ADDR.ARPA. {
+    primary 192.168.0.1;
+    key mydhcpserver;
+  }
+}
+```
+
+## Subnetworks
+
+If you are dividing your network space into several subnetworks, you could use a single DHCP server to manage them. In that case, you would have a subnet declaration for each subnetwork. If you are setting up your own small network, you would use a network address beginning with 192.168. The range would specify possible IP addresses within that network. So for a network with the address 192.168.0.0, you would create a subnet declaration with the netmask 255.255.255.0. Within this declaration, you would place a range declaration along with any other information you want to give to your client hosts. In the following example, a range of IP addresses beginning from 192.168.0.1 to 192.168.0.75 can be allocated to the hosts on that network:
+
+```
+subnet 192.168.0.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.75;
+}
+```
+
+You may want to specify different policies for each subnetwork, such as different lease times. Any entries in a subnet declaration will override global settings. So if you already have a global lease time set, a lease setting in a subnet declaration will override it for that subnet. The next example sets different lease times for different subnets, as well as different address allocations. The lease times for the first subnet are taken from the global lease time settings, whereas the second subnet defines its own lease times:
+
+```
+default-lease-time 21600;
+max-lease-time 43200;
+```
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.0.5 192.168.0.75;
+}
+```
+
+```
+subnet 192.168.1.128 netmask 255.255.255.252 {
+  range 192.168.0.129 192.168.0.215;
+  default-lease-time 56000;
+  max-lease-time 62000;
+}
+```
+
+If your subnetworks are part of the same physical network, then you need to inform the server of this fact by declaring them as shared networks. You do this by placing subnet

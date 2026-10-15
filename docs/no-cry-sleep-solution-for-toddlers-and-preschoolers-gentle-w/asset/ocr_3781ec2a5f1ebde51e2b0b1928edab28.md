@@ -1,0 +1,35 @@
+# Configuring mtools: /etc/mtools.conf
+
+Access to MS-DOS or Windows 95, 98, or ME partitions by mtools is configured by the /etc/mtools.conf file. This file lists several different default MS-DOS or Windows partitions and disk drives. Each drive or partition is identified with a particular device name. Entries for your floppy drives are already entered, using the device names /dev/fd0 and /dev/fd1 for the first and second floppy drives. An entry in the /etc/mtools.conf file takes the form of the drive label followed by the term file and the equal sign, and then the device name of the drive or partition you want identified with this label. The device name is encased in quotes. For example, assuming the first hard disk partition is an MS-DOS partition and has the device name of /dev/hda1, the following entry would identify this as the C drive on an MS-DOS system:
+
+```
+drive c: file="/dev/hda1"
+```
+
+You must have the correct device name for your partition. These device names are listed in the /etc/fstab file and can also be viewed with the Linuxconf local drive access panel on your root user desktop. If you have a SCSI hard disk, the hard disk partition has the form of sd, followed by a character for the hard drive and a number for the partition in it. For example, sda1 refers to the first partition on the SCSI hard drive. IDE hard drives have the form of hd, also followed by a character and a partition number—hda1 refers to the first partition on an IDE hard drive.
+
+On most distributions, a default /etc/mtools.conf file is installed for you (see the following /etc/mtools.conf example). This file has commented entries for the C drive: one for a SCSI hard disk partition and one for an IDE partition. Both are commented out with a preceding #. If you have an IDE hard drive (as most users do), you need to remove the preceding # symbol from the entry for the IDE hard disks partition and leave the preceding # symbol in front of the entry for the SCSI partition. Also, if your MS-DOS partition on your IDE hard drive is not the first partition, you must change the device name. For example, if the MS-DOS partition is the second partition, the device name will be /dev/hda2. If you have several MS-DOS partitions, you can add entries for each one, assigning a different label to each. The following example assigns the d: label to the fourth hard disk partition on an IDE drive:
+
+```
+drive d: file="/dev/hda4"
+```
+
+# /etc/mtools.conf
+
+```
+# Linux floppy drives
+drive a: file="/dev/fd0" exclusive mformat_only
+drive b: file="/dev/fd1" exclusive mformat_only
+# First SCSI hard disk partition
+#drive c: file="/dev/sda1"
+# First IDE hard disk partition
+drive c: file="/dev/hda1"
+drive d: file="/dev/hda5"
+#dosemu floppy image
+drive m: file="/var/lib/dosemu/diskimage"
+#dosemu hdimage
+drive n: file="/var/lib/dosemu/diskimage" offset=8832
+#Atari ramdisk image
+drive o: file="/tmp/atari_rd" offset=136
+mtools_lower_case=1
+```

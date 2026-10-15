@@ -1,0 +1,42 @@
+
+the printer in a printer configuration file that defines the kind of printer it is, along with other features such as the device file and spool directory it uses. On CUPS, the printer configuration file is /etc/cups/printers.conf. Installing a printer is fairly simple: determine which device file to use for the printer and the configuration entries for it. On Red Hat, you can use the redhat-config-printer configuration tool to enable you to set up and configure your printer easily. Depending on the interface you are using, redhat-config-printer will invoke either redhat-config-printer-gui, a GUI GNOME printer configuration tool, or redhat-config-printer-tui, the same tool with a screen-based cursor-driven interface.
+
+> Tip If you cannot find the drivers for your printer, you may be able to download them from www.linuxprinting.org. The site maintains an extensive listing of drivers.
+
+## Printer Device Files
+
+Linux creates three device names for parallel printers automatically during installation: lp0, lp1, and lp2. (Most systems currently use lp1.) The number used in these names corresponds to a parallel port on your PC. lp0 references the LPT1 parallel port, lp1 references the LPT2 parallel port, and lp2 references LPT3. Serial printers use the serial ports, referenced by the device files ttyS0, ttyS1, ttyS2, and so on.
+
+## Spool Directories
+
+When your system prints a file, it makes use of special directories called spool directories. A print job is a file to be printed. When you send a file to a printer, a copy of it is made and placed in a spool directory set up for that printer. The location of the spool directory is obtained from the printer’s entry in its configuration file. On Linux, the spool directory is located at /var/spool/cups under a directory with the name of the printer. For example, the spool directory for the myepson printer would be located at /var/spool/cups/myepson. The spool directory contains several files for managing print jobs. Some files use the name of the printer as their extension. For example, the myepson printer has the files control.myepson, which provides printer queue control, and active.myepson for the active print job, as well as log.myepson, which is the log file.
+
+## Managing Printers with CUPS
+
+The Common Unix Printing System (CUPS) is an alternative to LPRng that provides printing services. It is freely available under the GNU Public License. Though it is now included with most distributions, you can also download the most recent source-code version of CUPS from www.cups.org. The site also provides detailed documentation on installing and managing printers. Whereas LPRng is derived from the old Berkeley line printer daemon (LPD), CUPS is based on the newer Internet Printing Protocol (IPP). The Internet Printing Protocol is designed to establish a printing standard for the Internet (for more information, see www.pwg.org/ipp). Whereas the older LPD-based printing systems focused primarily on line printers, an IPP-based system provides networking, PostScript, and Web support. CUPS works like an Internet server and employs a configuration setup much like that of the Apache Web server. Its network support lets clients directly access printers on remote servers, without having to configure the printers themselves. Configuration needs to be maintained only on the print servers.
+
+With the RPM version used by Red Hat, a cups startup script is installed in the /etc/rc.d/init.d directory. You can start, stop, and restart CUPS using the service command and the cups script. When you make changes or install printers, be sure to restart CUPS to have your changes take effect. On Red Hat, you can use the following command:
+
+```
+service cups restart
+```
+
+## Installing Printers with CUPS
+
+The easiest way to configure and install printers with CUPS is to use redhat-config-printer, as described in Chapter 4. You can also use the CUPS configuration tool, which is a Web browser-based configuration tool. To ensure browser access, be sure to first select CUPS with the Printer System Switcher, or if you are using xinetd for CUPS, turn on cups with the chkconfig command.
+
+```
+chkconfig cups on
+```
+
+To start the Web interface on Red Hat, enter the following URL into your Web browser.
+
+```
+http://localhost:631
+```
+
+This opens an administration screen where you can manage and add printers. You will first be asked to enter the administrator’s username (usually root) and password (usually the root user’s password).
+
+You install a printer on CUPS through a series of Web pages, each of which requests different information. To install a printer, click the Add Printer button to display a page where you enter the printer name and location (see Figure 25-1). The location is the host to which the printer is connected.
+
+![](img/6c226e8ba1efd427dec3bf582418d33f_506_0.png)

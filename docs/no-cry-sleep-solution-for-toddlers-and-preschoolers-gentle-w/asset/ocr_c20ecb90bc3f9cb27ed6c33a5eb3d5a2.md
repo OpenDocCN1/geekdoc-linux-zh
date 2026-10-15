@@ -1,0 +1,29 @@
+| Directive | Description |
+|---|---|
+| AllowFilter
+regular-expression | Allows the configuration of a regular expression that must be matched for all commands sent to ProFTPD. |
+| AllowUser
+user-expression | Users allowed access. |
+| <Anonymous
+root-directory> | Creates an anonymous FTP login, terminated by a matching </Anonymous> directive. The root directory parameter is the directory proftpd first moves to and then chroot to, hiding the rest of the file system. |
+| Bind address | Allows additional IP addresses to be bound to a main or VirtualHost configuration. Multiple Bind directives can be used to bind multiple addresses. |
+| DefaultRoot directory
+[group-expression] | Default root directory assigned to user on login. The group-expression argument restricts the DefaultRoot directive to a group or set of groups. Default: DefaultRoot / |
+| Deny ["from"]
+"all"/"none"/host/network
+[,host/network[...]] | List of hosts and networks explicitly denied access to a given <Limit> context block. all indicates all hosts are denied access, and none indicates no hosts are explicitly denied. |
+| DenyAll | Denies access to a directory, anonymous FTP, or Limit block. |
+| DenyFilter
+regular-expression | Specifies a regular expression, which must not match any command. |
+| DenyUser user-expression | Users denied access within a Limit block. |
+| <Directory pathname> | Directory-specific configuration. Used to create a block of directives that apply to the specified directory and its subdirectories. |
+| DisplayLogin filename | Specifies the text file displayed to a user who logs in. |
+| <Global> | Global configuration block |
+| <Limit
+command/command-group
+[command2...]> | Access restrictions on FTP commands, within a given context. The command-group refers to groupings of commands as defined in the ProFTPD documentation. |
+| LsDefaultOptions
+"options string" | Default options for directory listings (as in the ls command). |
+| MasqueradeAddress host | Specifies public host name for FTP server. Used for FTP servers masqueraded by NAT tables (packet filtering). See Chapter 19. |
+| MaxClients number/none
+message | Maximum number of connected clients allowed. The message specified is displayed when a client is refused connection. |

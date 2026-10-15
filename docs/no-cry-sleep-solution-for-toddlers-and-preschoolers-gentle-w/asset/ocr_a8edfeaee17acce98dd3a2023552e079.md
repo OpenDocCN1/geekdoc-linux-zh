@@ -1,0 +1,37 @@
+Refresh specifies the time interval for refreshing SOA information. Retry is the frequency for trying to contact an authoritative server. Expire is the length of time a secondary name server keeps information about a zone without updating it. Minimum is the length of time records in a zone live. The times are specified in the number of seconds.
+
+The following example shows an SOA record. The machine running the name server is turtle.mytrek.com, and the e-mail address of the person responsible for the server is hostmaster.turtle.mytrek.com. Notice the periods at the ends of these names. For names with no periods, the domain name is appended. turtle would be the same as turtle.mytrek.com. When entering full hostnames, be sure to add the period so that the domain is not appended.
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    1997022700 ; Serial
+    28800 ; Refresh
+    14400 ; Retry
+    3600000 ; Expire
+    86400 ) ; Minimum
+```
+
+# Name Server: NS
+
+The name server record specifies the name of the name server for this zone. These have a resource record type of NS. If you have more than one name server, list them in NS records. These records usually follow the SOA record. As they usually apply to the same domain as the SOA record, their name field is often left blank or inherit the server's domain name specified by the @ symbol in the previous SOA record.
+
+```
+IN NS turtle.mytrek.com.
+```
+
+You can, if you wish, enter the domain name explicitly as shown here:
+
+```
+mytrek.com. IN NS turtle.mytrek.com.
+```
+
+# Address Record: A and A6
+
+Resource records of type A are address records that associate a fully qualified domain name with an IP address. Often, only their hostname is specified. Any domain names without a terminating period automatically have the domain appended to them. Given the domain mytrek.com, the turtle name in the following example is expanded to turtle.mytrek.com:
+
+```
+rabbit.mytrek.com. IN A 192.168.0.2
+turtle IN A 192.168.0.1
+```
+
+BIND versions 8.2.2 and 9.1 support IPv6 addresses. IPv6 IP addresses have a very different format from that of the IPv4 addresses commonly used (see Chapter 38). Instead of the numerals arranged in four segments, IPv6 uses hexadecimal numbers arranged in seven segments. In the following example, turtle.mytrek.com is associated with a site-local IPv6 address: fec0::. Recall that there are only three fields in a site-local address: format prefix, sub-net identifier, and interface identifier. The empty segments of the sub-net identifier can be represented by an empty colon pair (::). The interface identifier 8:800:200C:417A follows

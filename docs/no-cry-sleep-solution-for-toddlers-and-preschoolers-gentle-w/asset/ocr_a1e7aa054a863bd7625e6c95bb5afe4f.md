@@ -1,0 +1,5 @@
+their mail. This interactive connection requires more connect time than the POP protocol and is best suited to an Ethernet LAN where users are always connected, rather than dial-up access through a modem.
+
+Unlike POP, IMAP allows users to set up multiple folders on their mail server in which they can organize their mail. IMAP also supports the use of shared folders to which several users can access mail on a given topic.
+
+The University of Washington IMAP server is included with the Red Hat distributions. Other IMAP servers are also available such as Courier-IMAP server (www.courier-mta.org) and the Cyrus IMAP server (asg.web.cmu.edu/cyrus). Courier-IMAP is a small, fast IMAP server that provides extensive authentication support including LDAP and PAM. Cyrus IMAP servers feature security controls and authentication. The Washington IMAP, Courier-IMAP, and Cyrus IMAP servers all support SSL, as described earlier for the POP server. The name of the University of Washington IMAP server daemon is imapd. On Red Hat, there is a file called imap in the /etc/xinetd.d directory. You turn it on or off with the chkconfig command.

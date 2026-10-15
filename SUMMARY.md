@@ -1516,6 +1516,7 @@
 +   [鸟哥的 Linux 私房菜：基础学习篇 第四版](docs/niaoge-linux-basic-4e/README.md)
 +   [鸟哥的 Linux 私房菜：服务器架设篇 第三版](docs/niaoge-linux-svr-3e/README.md)
 +   [生产环境中的 NixOS 专业人士指南](docs/nixos-in-production-a-handbook-for-professional/README.md)
++   [                                                                                                         ](docs/no-cry-sleep-solution-for-toddlers-and-preschoolers-gentle-w/README.md)
 +   [告别 Windows！Linux 来了！](docs/no-more-windows-now-comes-linux/README.md)
 +   [Novell 认证 Linux 工程师 9 (CLE 9) 学习指南](docs/novell-certified-linux-engineer-9-cle-9-study-guide/README.md)
 +   [Novell 认证 Linux 工程师 (Novell CLE) 学习指南 (Novell Press)](docs/novell-certified-linux-engineer-novell-cle-study-guide-novel/README.md)

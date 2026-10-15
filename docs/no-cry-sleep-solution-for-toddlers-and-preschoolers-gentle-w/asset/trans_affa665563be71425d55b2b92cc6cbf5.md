@@ -1,0 +1,40 @@
+
+server daemon，启动系统时调用它。在 Red Hat 上，Web 服务器的启动脚本 httpd 位于 /etc/rc.d/init.d 目录中。通过该脚本运行的符号链接位于相应的运行级别目录中。你通常会在运行级别 3 和 5 目录 /etc/rc.d/rc3.d 和 /etc/rc.d/rc5.d 中找到指向 /etc/rc.d/init.d/httpd 的 S85httpd 链接。你可以使用 chkconfig 命令或 System V Init 编辑器来设置 httpd 服务器启动的运行级别，在适当的运行级别目录中创建链接。以下命令将设置 Web 服务器（httpd）在运行级别 3 和 5 启动（有关运行级别的更多详细信息，请参阅第 20 章和第 27 章）。
+
+```
+chkconfig --level 35 httpd on
+```
+
+在 Red Hat 上，你也可以使用 service 命令手动启动和停止 httpd 服务器。这在你测试或修改服务器时可能很有帮助。带有 start 选项的 httpd 脚本启动服务器，stop 选项停止它，而 restart 将重新启动它。直接杀死 Web 进程是不明智的。
+
+```
+service httpd restart
+```
+
+Apache 还提供了一个名为 apachectl（Apache 控制）的控制工具，用于管理你的 Web 服务器。使用 apachectl，你可以从命令行启动、停止和重新启动服务器。apachectl 接受多个参数：start 启动服务器，stop 停止它，restart 关闭并重新启动服务器，graceful 则优雅地关闭并重新启动。此外，你还可以使用 apachectl 通过 config 参数检查配置文件语法。你也可以将 apachectl 用作 /etc/rc.d 目录中服务器的系统启动文件。
+
+记住，httpd 是一个调用实际 httpd 守护进程的脚本。你也可以使用其完整路径名直接调用该守护进程。该守护进程有几个选项。-d 选项使你能够为 httpd 程序指定一个目录，如果它与默认目录不同。使用 -f 选项，你可以指定一个不同于 httpd.conf 的配置文件。-v 选项显示版本。
+
+```
+/usr/sbin/httpd -v
+```
+
+> 注意 目前不支持在 xinetd 下运行 Apache。在 Apache 2.0 中，此类支持由选择设计为在 xinetd 上运行的 MPM 模块决定。
+
+## Apache 配置文件
+
+配置指令放在 httpd.conf 配置文件中。一个有文档记录的 httpd.conf 配置文件会自动安装在 /etc/httpd 中。强烈建议你查阅系统上的此文件。它包含 Apache 指令的详细文档和默认条目。
+
+主配置文件中的任何指令都可以使用位于目录内的 .htaccess 文件按目录覆盖。虽然 .htaccess 文件最初仅设计用于访问指令，但它也可以保存任何资源指令，使你能够定制特定目录中网页的显示方式。你可以在 httpd.conf 文件中配置对 .htaccess 文件的访问。
+
+> 注意 在 Apache 版本 1.3.4 和 2.0 中，所有配置指令都放在一个文件中，即 httpd.conf 文件。旧版本使用了另外两个文件，srm.conf 和 access.conf 文件。
+
+## Apache 配置和指令
+
+Apache 配置操作以输入到 Apache 配置文件中的指令形式出现。通过这些指令，你可以输入基本配置信息，例如服务器名称，或执行更复杂的操作，例如实现虚拟主机。其设计足够灵活，可以让你为特定目录和不同的虚拟主机定义配置功能。Apache 有各种不同的指令，执行的操作多种多样，如控制目录访问、分配文件图标格式和创建日志文件。大多数指令设置诸如 DocumentRoot 的值，该值保存服务器网页的根目录，或 Port，该值保存服务器在系统上侦听请求的端口。表 23-4 提供了更常用的 Apache 指令的列表。简单指令的语法如下所示：
+
+```
+directive option option ...
+```
+
+某些指令创建能够容纳适用于特定服务器组件的指令的块，也称为区段指令。例如，Directory 指令用于定义一个块，在该块中放置仅适用于特定目录的指令。块指令成对输入：开始指令和结束指令。结束指令定义块的结束，其名称与开始指令相同，但以斜杠开头。块指令采用一个参数，指定指令适用的特定对象。对于 Directory 块指令，你必须指定它将适用的目录名。<Directory mydir> 块指令创建一个块，其内部的指令适用于 mydir 目录。该块由 </Directory> 指令终止。<VirtualHost hostaddress> 块指令用于配置特定的虚拟 Web 服务器，必须包含用于该服务器的 IP 或域名地址。

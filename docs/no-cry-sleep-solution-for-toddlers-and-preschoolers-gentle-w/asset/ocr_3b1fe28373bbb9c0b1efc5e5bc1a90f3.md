@@ -1,0 +1,40 @@
+startup link in rc5.d S85httpd, and then turns off the Web service on runlevel 3, creating a shutdown link in rc3.d K15httpd.
+
+```
+chkconfig -level 5 httpd on
+ls /etc/rc.d/rc5.d/httpd
+/etc/rc.d/rc5.d/S85httpd
+chkconfig -level 3 httpd off
+ls /etc/rc.d/rc3.d/httpd
+/etc/rc.d/rc3.d/K15httpd
+```
+
+# Service Scripts: /etc/init.d
+
+Most server software using RPM Red Hat packages will automatically install the startup scripts and create the needed links in the appropriate rcN.d directories, where N is the runlevel number. Startup scripts, though, can be used for any program you may want run when your system starts up. To have such a program start automatically, you first create a startup script for it in the /etc/rc.d/init.d directory, and then create symbolic links to that script in the /etc/rc.d/rc3.d and /etc/rc.d/rc5.d directories. A shutdown link (K) should also be placed in the rc6.d directory used for runlevel 6 (reboot).
+
+# Service Script Functions
+
+A simplified version of the startup script httpd uses on Red Hat systems is shown in a later section. You can see the different options, listed in the /etc/rc.d/init.d/httpd example, under the case statement: start, stop, status, restart, and reload. If no option is provided (*), the script use syntax is displayed. The httpd script first executes a script to define functions used in these startup scripts. The daemon function with httpd actually executes the /usr/sbin/httpd server program.
+
+```
+echo -n "Starting httpd: "
+daemon httpd
+echo
+touch /var/lock/subsys/httpd
+```
+
+The killproc function shuts down the daemon. The lock file and the process ID file (httpd.pid) are then deleted:
+
+```
+killproc httpd
+echo
+rm -f /var/lock/subsys/httpd
+rm -f /var/run/httpd.pid
+```
+
+The daemon, killproc, and status functions are shell scripts defined in the functions script, also located in the inet.d directory. The functions script is executed at the beginning of each startup script to activate these functions. A list of these functions is provided in Table 20-4.
+
+```
+./etc/rc.d/init.d/functions
+```

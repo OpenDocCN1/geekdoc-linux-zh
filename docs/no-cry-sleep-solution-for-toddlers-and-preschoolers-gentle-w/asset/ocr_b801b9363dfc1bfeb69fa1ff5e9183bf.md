@@ -1,0 +1,17 @@
+# RAID Devices and Partitions: md and fd
+
+A RAID device is named an md, and uses the MD driver. These devices are already defined on your Linux system in the /etc/dev directory, starting with md0. /dev/md0 is the first RAID device, and /dev/md1 is the second, and so on. Each RAID device, in turn, uses hard disk partitions, where each partition contains an entire hard disk. These partitions are usually referred to as RAID disks, whereas a RAID device is an array of the RAID disks it uses.
+
+When creating a RAID partition, you should set the partition type to be fd, instead of the 83 for the standard Linux partition. The fd type is that used by RAID for automatic detection.
+
+# Corresponding Hard Disk Partitions
+
+The term device can be confusing, because it is also used to refer to the particular hard disk partitions that make up a RAID device. In fact, a software RAID device is an array of hard disk partitions, where each partition could, but not necessarily, take up an entire hard disk. In that case, you can think of a RAID device as consisting of a set (array) of hard disks (devices). In practice, the hard disks in your RAID configuration would normally contain several corresponding hard disk partitions, each set having the same size. Each set of corresponding partitions would make up a RAID device. So you could have several RAID devices using the same set of hard disks. This is particularly true for Linux partition configurations, where different system directories are placed in their own partitions. For example, /boot could be in one partition, /home in another, and / (the root) in yet another partition. To set up RAID devices so that you have separate partitions for /boot, /home, and / (root), you need to create three different RAID devices, say md0 for /boot, md1 for /home, and md2 for the root. If you have two hard disks, for example hda and hdb, each would have three partitions, /boot, /home, and /. The first RAID device, md0, would consist of the two /boot partitions, the one on hda and the one on hdb. Similarly, the second raid device, md1, would be made up of the two root partitions, /, the one on hda and the one on hdb. md3 would consist of the /home partitions on hda and hdb (see Figure 31-1).
+
+When you create the partitions for a particular RAID device, it is important to make sure that each partition has the same size. For example, the / partition used for the md0 device on the hda disk must have the same size as the corresponding md0 partition on the hdb disk. So if the md1 partition on hda is 20GB, then its corresponding partition on hdb must also be 20GB. If md2 is 100GB on one drive, its corresponding partitions on all other drives must also be 100GB.
+
+> Tip During installation, Red Hat Disk Druid supports the Clone tool that let you automatically create the corresponding partitions on other hard disks based on one already set up. In effect, you set up the RAID partitions for each RAID device on one hard disk, and then use the Clone tool to create their corresponding partitions on your other hard disks.
+
+# Booting from a RAID Device
+
+As part of the installation process, Red Hat lets you create RAID devices from which you can also boot your system. Your Linux system will be configured to load RAID kernel support and automatically detect your RAID devices. The boot loader will be installed on your RAID device, meaning on all the hard disks making up that device.

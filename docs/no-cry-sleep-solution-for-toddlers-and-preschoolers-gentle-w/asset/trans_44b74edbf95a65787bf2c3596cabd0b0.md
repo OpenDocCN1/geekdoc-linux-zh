@@ -1,0 +1,37 @@
+
+
+## Samba 应用
+
+来自 Red Hat 和 RPM 仓库（参见第 1 章）。Samba 也包含在大多数 Linux 发行版中。其他信息可以从 SMB 新闻组 comp.protocols.smb 获得。软件包中提供了大量文档，并在您的系统上安装，通常位于 /usr/share/doc 目录下，子目录以 Samba 版本命名。在这里，您可以找到以 HTML 和文本格式编写的详尽文档，以及众多示例和当前常见问题解答。Samba HOW-TO 文档也可在 www.tldp.org 上获得。示例包括针对不同类型配置的示例 smb.conf 文件。SWAT 配置实用程序的主页还提供基于网页的 Samba 文档，以及不同功能的上下文级帮助。
+
+Samba 软件包由两个服务器守护进程和多个实用程序组成（参见表 37-1）。其中一个守护进程 smbd，为 SMB 客户端和其他支持 SMB 的系统（如 Windows）提供文件和打印机服务。nmbd 实用程序是一个守护进程，提供 NetBIOS 名称解析和服务浏览器支持。smbclient 实用程序为 Linux 客户端提供类似 FTP 的 Samba 服务访问方式。smbmount 和 smbumount 使 Linux 客户端能够挂载和卸载 Samba 共享目录。smbstatus 实用程序显示 SMB 服务器的当前状态以及正在使用它的用户。您使用 testparm 来测试 Samba 配置。smbtar 是一个 shell 脚本，可直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器。您使用 nmblookup 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址。随包还包括 Samba Web 管理工具（SWAT）和 redhat-config-samba。这使您可以使用网页或 GUI 界面创建和维护 Samba 配置文件 /etc/samba/smb.conf。Samba 配置文件保存在 /etc/samba 目录中。
+
+> 注意：要使用 redhat-config-packages 安装 Samba，请选择 Windows 文件服务器条目。
+
+Samba 提供四项主要服务：文件和打印机服务、身份验证和授权、名称解析以及服务公告。SMB 守护进程 smbd 提供文件和打印机服务，以及这些服务的身份验证和授权。这意味着网络上的用户可以共享文件和打印机。您可以通过要求用户提供密码来控制对这些服务的访问。当用户尝试访问共享目录时，会提示输入密码。控制可以以共享模式或用户模式实现。共享模式为共享资源设置一个密码，然后允许任何拥有该密码的用户访问它。用户模式为每个用户提供不同的密码。为此目的，Samba 维护自己的密码文件：/etc/samba/smbpasswd。
+
+名称解析和服务公告由 nmbd 服务器处理。名称解析本质上是将 NetBIOS 名称解析为 IP 地址。服务公告，也称为浏览，是将网络上可用的服务列表告知已连接的 Windows PC（以及通过 Samba 连接的 Linux PC）的方式。
+
+Samba 还包括 winbind 守护进程，它允许 Samba 服务器使用 Windows 域提供的身份验证服务。Samba 服务器无需维护自己的用户集来允许访问，而是可以使用 Windows 域身份验证服务对用户进行身份验证。
+
+> 注意：如果您想从 www.samba.org 下载压缩归档（.tar.gz）中的源代码或二进制文件，归档将解压到其自己的 samba 子目录中。要使用它，请将归档解压到 /usr/local 等软件目录中。确保将 /usr/local/samba/bin 添加到您的 PATH 中。或者，您也可以将 samba/bin 文件复制到 /usr/bin 中，但 nmbd 和 smbd 应复制到 /usr/sbin。
+
+| 应用 | 描述 |
+|---|---|
+| smbd | Samba 服务器守护进程，为 SMB 客户端提供文件和打印机服务 |
+| nmbd | Samba 守护进程，提供 NetBIOS 名称解析和服务浏览器支持 |
+| smbclient | 为 Linux 客户端提供类似 FTP 的 Samba 服务访问方式 |
+| smbmount | 在 Linux 客户端上挂载 Samba 共享目录 |
+| smbumount | 卸载 Linux 客户端上挂载的 Samba 共享目录 |
+| smbpasswd | 在 Samba 服务器上更改 SMB 加密密码 |
+| smbstatus | 显示 SMB 网络连接的当前状态 |
+| smbrun | smbd 与外部程序之间的接口程序 |
+| testparm | 测试 Samba 配置文件 smb.conf |
+| smbtar | 直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器 |
+| nmblookup | 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址 |
+| redhat-config-samba | Samba GUI 配置工具（系统设置：服务器设置：Samba 服务器） |
+| SWAT | Samba Web 管理工具，用于通过 Web 浏览器配置 smb.conf；使您能够使用网页界面创建和维护 Samba 配置文件 smb.conf |
+| winbind | 使用 Windows 域提供的身份验证服务 |
+
+表 37-1 Samba 应用
+

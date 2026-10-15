@@ -1,0 +1,58 @@
+
+
+以下示例在每个工作日的凌晨 2:00 备份 projects 目录：
+
+```
+0 2 * * 1-5  tar cf /home/backp /home/projects
+```
+
+使用月份和星期几的前缀再次在此列出了相同的条目：
+
+```
+0 2 * * Mon-Fri tar cf /home/backp /home/projects
+```
+
+要指定特定的月份、天、周或小时，可以单独列出它们，用逗号分隔。例如，要在星期日、星期三和星期五执行之前的任务，可以在星期几字段中使用 0,3,5，或使用其前缀等价物 Sun,Wed,Fri。
+
+```
+0 2 * * 0,3,5  tar cf /home/backp /home/projects
+```
+
+Cron 还支持注释。注释是以 # 符号开头的任何行。
+
+```
+# Weekly backup for Chris's projects
+0 2 * * Mon-Fri tar cf /home/backp /home/projects
+```
+
+## cron 环境变量
+
+cron 服务还允许您为执行的任务定义环境变量。Red Hat 为 SHELL、PATH、HOME 和 MAILTO 定义了变量。SHELL 指定用于任务的 shell，在本例中为 bash shell。PATH 列出了程序和脚本可以找到的目录。此示例列出了标准目录 /usr/bin 和 /bin，以及为系统应用程序保留的系统目录 /usr/sbin 和 /sbin。MAILTO 指定任务结果发送给谁。默认情况下，这些结果发送给安排它的用户，但您可以将结果发送给特定用户，例如管理员的电子邮件地址，或网络中另一系统的账户。HOME 是任务的主目录，在本例中为顶级目录。
+
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+```
+
+## cron.d 目录
+
+在 heavily 使用的系统上，/etc/crontab 文件很容易变得拥挤。也可能存在某些条目需要不同变量的情况。例如，您可能需要在不同的 shell 下运行某个任务。为了更好地组织您的 crontab 任务，您可以将 crontab 条目放在 cron.d 目录中的文件中。cron.d 目录中的文件都包含与 /etc/crontab 格式相同的 crontab 条目。它们可以取任何名称。它们被视为添加的 crontab 文件，cron 会检查它们以运行任务。例如，Red Hat 在 cron.d 中安装了一个 sysstat 文件，其中包含 crontab 条目以运行收集系统统计信息的工具。
+
+## crontab 命令
+
+您使用 crontab 命令将条目安装到 crontab 文件中。为此，首先创建一个文本文件并输入您的 crontab 条目。将此文件保存为任意名称，例如 mycronfile。然后，要安装这些条目，输入 crontab 和文本文件的名称。crontab 命令获取文本文件的内容并在 /var/spool/cron 目录中创建一个 crontab 文件，同时添加发出命令的用户的名称。在以下示例中，root 用户将 mycronfile 的内容安装为 root 的 crontab 文件。这会创建一个名为 /var/spool/cron/root 的文件。如果名为 justin 的用户安装了 crontab 文件，它将创建一个名为 /var/spool/cron/justin 的文件。您可以使用 /etc/cron.allow 文件控制普通用户对 crontab 命令的使用。只有在此文件中列出其名称的用户才能创建自己的 crontab 文件。相反，/etc/cron.deny 文件列出了被拒绝使用 cron 工具的用户，阻止他们安排任务。如果两个文件都不存在，则拒绝所有用户访问。如果用户不在 /etc/cron.allow 文件中，则拒绝访问。但是，如果 /etc/cron.allow 文件不存在，而 /etc/cron.deny 文件存在，则未列在 /etc/cron.deny 中的所有用户都会自动获得访问权限。
+
+```
+# crontab mycronfile
+```
+
+## cron 编辑
+
+切勿尝试直接编辑您的 crontab 文件。相反，使用带有 -e 选项的 crontab 命令。这会在 /var/spool/cron 目录中以标准文本编辑器（如 Vi）打开您的 crontab 文件。crontab 使用 EDITOR shell 环境变量指定的默认编辑器。要为 crontab 使用不同的编辑器，请通过将编辑器的程序名称分配给 EDITOR 变量并导出该变量来更改默认编辑器。通常，编辑器变量在 /etc/profile 脚本中设置。使用 -l 选项运行 crontab 会显示您的 crontab 文件的内容，而 -r 选项会删除整个文件。使用另一个 crontab 条目文本文件调用 crontab 会覆盖您的当前 crontab 文件，用文本文件的内容替换它。
+
+## 组织计划任务
+
+您可以将管理 cron 任务组织为两个大类：可以定期运行的常见管理任务，或需要在唯一时间运行的专用任务。唯一任务可以作为 /etc/crontab 文件中的条目运行，如下一节所述。常见管理任务虽然可以从 /etc/crontab 文件运行，但最好组织到专门的 cron 目录中。在此类目录中，每个任务都放在自己的 shell 脚本中，该脚本在运行时会调用任务。例如，可能有几个管理任务都需要每周同一天运行，例如系统维护安排在星期日早上。对于这类任务，cron 提供了几个专门的目录，用于自动执行每日、每周、每月和每年的任务。每个目录都包含 cron 前缀和时间间隔后缀。/etc/cron.daily 目录用于需要每天执行的任务，而每周任务可以放在 /etc/cron.weekly 目录中。cron 目录列在表 27-2 中。
+

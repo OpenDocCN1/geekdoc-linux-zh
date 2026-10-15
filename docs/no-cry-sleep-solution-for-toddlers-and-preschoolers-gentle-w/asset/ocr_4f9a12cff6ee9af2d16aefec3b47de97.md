@@ -1,0 +1,25 @@
+# TABLE 30-11
+Commonly Used fdisk Commands
+
+| Command | Action |
+|---|---|
+| a | Toggle a bootable flag |
+| l | List known partition types |
+| m | List commands |
+| n | Add a new partition |
+| p | Print the partition table |
+| q | Quit without saving changes |
+| t | Change a partition's system ID |
+| w | Write table to disk and exit |
+
+different type of partition, such as a swap partition, press T to indicate the type you want. Enter the partition number, such as 82 for a swap partition. When you are finished, press W to write out the changes to the hard disk, and then press ENTER to continue.
+
+# parted
+
+As an alternative to fdisk, you can use parted (www.gnu.org/software/parted). parted lets you manage hard disk partitions, create new ones, and delete old ones. Unlike fdisk, it also lets you resize partitions. For you to use parted on the partitions in a given hard drive, none of the partitions on that drive can be in use. This means that if you wish to use parted on partitions located on that same hard drive as your kernel, you have to boot your system in rescue mode and choose not to mount your system files. For any other hard drives, you only need to unmount their partitions and turn your swap space off with the swapoff command. You can then start parted with the parted command and the device name of the hard disk you want to work on. The following example starts parted for the hard disk /dev/hda.
+
+```
+parted /dev/hda
+```
+
+You use the print command to list all your partitions. The partition number for each partition will be listed in the first column under the Minor heading. The Start and End columns list the beginning and end positions that the partition uses on the hard drive. The numbers are in megabytes, starting from the first megabyte to the total available. To create a new partition, use the mkpart command with either primary or extended, the file system type, and the beginning and end positions. You can create up to three primary partitions and one extended partition (or four primary partitions if there is no extended partition). The extended partition can, in turn, have several logical partitions. Once you have created the partition, you can later use mkfs to format it with a file system. To remove a partition, use the rm command and the partition number. To resize a partition, use the resize command with the partition number and the beginning and end positions. You can even move a partition using the move command. The help command lists all commands.
