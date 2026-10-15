@@ -1,0 +1,5 @@
+We won’t go into the details of how this works—we’re just getting started, after all! But at a high level, it extracts the page count information for each document, strings the page counts together with addition operators, and pipes the arithmetic to a command line calculator that generates the sum. All that, in basically a single line. You’ll find more cool shell scripts like this one throughout the book, and, after you’ve gotten some practice, this script should make perfect sense and seem very simple!
+
+# Let’s Get Cracking
+
+You should have a general idea of what shell scripting is now, if you didn’t have one already. Creating bite-sized scripts to accomplish specific tasks is at the heart of Unix philosophy. Understanding how to make your own scripts and expand your own Unix systems to better fit your needs will make you a power user. This chapter is just a taste of what is to come in the book: some really wicked cool shell scripts!

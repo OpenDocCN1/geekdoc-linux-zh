@@ -2409,6 +2409,7 @@
 +   [韦伯士英语词典](docs/websters-dictionary-of-the-english-language/README.md)
 +   [精英阶层对美国做了什么以及如何修复](docs/what-the-elite-have-done-to-america-and-how-to-fix-it/README.md)
 +   [White J. 黑客手册 2024](docs/white-j-hackers-manual-2024/README.md)
++   [超酷Shell脚本](docs/wicked-cool-shell-scripts/README.md)
 +   [酷炫的 Shell 脚本：Linux、Mac OS X 和 Unix 系统的 101 个脚本](docs/wicked-cool-shell-scripts-101-scripts-for-linux-mac-os-x-and/README.md)
 +   [酷炫的 Shell 脚本：Linux、OS X 和 UNIX 系统的 101 个脚本，第 2 版](docs/wicked-cool-shell-scripts-101-scripts-for-linux-os-x-and-uni/README.md)
 +   [酷炫 Shell 脚本（第 2 版）：Linux、OS X 和 UNIX 系统 101 个脚本示例](docs/wicked-cool-shell-scripts-2nd-edition-101-scripts-for-linux-/README.md)

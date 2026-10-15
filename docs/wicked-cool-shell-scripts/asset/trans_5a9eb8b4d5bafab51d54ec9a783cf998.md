@@ -1,0 +1,95 @@
+
+
+## 改进用户命令
+
+![](img/4ffb1cc24a1b24b49254839643abedb2_82_0.png)
+
+一个典型的 Unix 或 Linux 系统默认包含数百个命令，当你考虑到标志以及使用管道组合命令的各种可能方式时，就产生了数百万种在命令行上工作的方式。
+
+在我们继续之前，列表 2-1 显示了一个奖励脚本，它会告诉你你的 PATH 中有多少个命令。
+
+```
+#!/bin/bash
+
+# How many commands: a simple script to count how many executable
+#  commands are in your current PATH
+
+IFS=":"
+count=0 ; nonex=0
+for directory in $PATH ; do
+if [ -d "$directory" ] ; then
+```
+
+本章中探讨的脚本都与列表 2-1 中的脚本类似，它们在不增加高复杂度度的情况下增加了有趣或有用的功能和能力。其中一些脚本接受不同的命令标志以允许其使用更大的灵活性，其中一些还演示了 shell 脚本如何用作包装器，一个介入的程序，允许用户以通用记法指定命令或命令标志，然后将这些标志翻译成实际 Unix 命令所需的正确格式和语法。
+
+## 14 格式化长行
+
+如果你很幸运，你的 Unix 系统已经包含了 fmt 命令，这是一个如果你经常处理文本会非常有用的程序。从重新格式化电子邮件到使文档中的行使用全部可用宽度，fmt 都是一个值得了解的有用工具。
+
+然而，一些 Unix 系统不包含 fmt。这在遗留系统上尤其如此，这些系统通常具有相当简约的实现。
+
+事实证明，nroff 命令，自 Unix 最初开始就成为其一部分，并且本身就是一个 shell 脚本包装器，可以在简短的 shell 脚本中用于换行长行并填充短行以使行长均匀，如列表 2-2 所示。
+
+### 代码
+
+```
+#!/bin/bash
+
+# fmt --Text formatting utility that acts as a wrapper for nroff
+# Adds two useful flags: -w X for line width
+# and -h to enable hyphenation for better fills
+while getopts "hwi:" opt; do
+  case $opt in
+    h ) hyph=1        ;;
+    w ) width="$OPTARG" ;;
+  esac
+done
+shift $(( $OPTIND - 1 ))
+
+nroff << EOF
+.ll ${width:-72}
+.na
+.hy ${hyph:-0}
+.pl 1
+$(cat "$@")
+EOF
+
+exit 0
+```
+
+列表 2-2：用于美观格式化长文本的 fmt shell 脚本
+
+将列表 2-3 与使用默认宽度且无连字符生成的列表 2-4 中的输出进行比较。
+
+```
+$ fmt 014-ragged.txt
+So she sat on, with closed eyes, and half believed herself in Wonderland, though she knew she had but to open them again, and all would change to dull reality--the grass would be only rustling in the wind, and the pool rippling to the waving of the reeds--the rattling teacups would change to tinkling sheep-bells, and the Queen's shrill cries to the voice of the shepherd boy--and the sneeze of the baby, the shriek of the Gryphon, and all the other queer noises, would change (she knew) to the confused clamour of the busy farm-yard--while the lowing of the cattle in the distance would take the place of the Mock Turtle's heavy sobs.
+```
+
+列表 2-4：fmt 脚本的默认格式化，无连字符
+
+## 15 在文件被删除时备份文件
+
+Unix 用户最常见的问题之一是，一旦文件或文件夹被意外删除，就没有简单的方法来恢复它。没有像 Undelete 360、WinUndelete 或 OS X 实用程序这样用户友好的应用程序，允许你一键轻松浏览和恢复已删除的文件。一旦你在输入 rm filename 后按下 ENTER，文件就成为历史。
+
+解决这个问题的办法是秘密地自动将文件和目录归档到 .deleted-files 归档中。通过在列表 2-5 所示的脚本中进行一些巧妙的操作，这个过程可以对用户几乎完全不可见。
+
+### 代码
+
+```
+#!/bin/bash
+
+# newrm--A replacement for the existing rm command.
+# This script provides a rudimentary unremove capability by creating and
+# utilizing a new directory within the user's home directory. It can handle
+# directories of content as well as individual files. If the user specifies
+# the -f flag, files are removed and NOT archived.
+
+# Big Important Warning: You'll want a cron job or something similar to keep
+# the trash directories tamed. Otherwise, nothing will ever actually
+# be deleted from the system, and you'll run out of disk space!
+
+archivedir="$HOME/.deleted-files"
+realrm="$ (which rm)"
+copy="$ (which cp) -R"
+```

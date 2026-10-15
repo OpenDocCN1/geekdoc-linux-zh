@@ -1,0 +1,150 @@
+
+
+## 代码
+
+```bash
+#!/bin/bash
+# renicename--Renices the job that matches the specified name
+
+user=""; tty=""; showpid=0; niceval="1"      # Initialize
+
+while getopts "n:u:t:p" opt; do
+  case $opt in
+    n ) niceval="$OPTARG"                 ;;
+    u ) if [ ! -z "$tty" ] ; then
+          echo "$0: error: -u and -t are mutually exclusive." >&2
+          exit 1
+        fi
+        user=$OPTARG                        ;;
+    t ) if [ ! -z "$user" ] ; then
+          echo "$0: error: -u and -t are mutually exclusive." >&2
+          exit 1
+        fi
+        tty=$OPTARG                         ;;
+    p ) showpid=1                           ;;
+    ? ) echo "Usage: $0 [-n niceval] [-u user|-t tty] [-p] pattern" >&2
+        echo "Default niceval change is \"$niceval\" (plus is lower" >&2
+        echo "priority, minus is higher, but only root can go below 0)" >&2
+        exit 1
+  esac
+done
+shift $(($OPTIND - 1))  # Eat all the parsed arguments.
+
+if [ $# -eq 0 ] ; then
+  echo "Usage: $0 [-n niceval] [-u user|-t tty] [-p] pattern" >&2
+  exit 1
+fi
+
+if [ ! -z "$tty" ] ; then
+  pid=$(ps cu -t $tty | awk "/ $1/ { print \$2 }")
+elif [ ! -z "$user" ] ; then
+  pid=$(ps cu -U $user | awk "/ $1/ { print \$2 }")
+else
+  pid=$(ps cu -U ${USER:-LOGNAME} | awk "/ $1/ { print \$2 }")
+fi
+
+if [ -z "$pid" ] ; then
+  echo "$0: no processes match pattern $1" >&2
+  exit 1
+elif [ ! -z "$(echo $pid | grep ' ')" ] ; then
+  echo "$0: more than one process matches pattern ${1}:"
+  if [ ! -z "$tty" ] ; then
+    runme="ps cu -t $tty"
+  elif [ ! -z "$user" ] ; then
+    runme="ps cu -U $user"
+  else
+    runme="ps cu -U ${USER:-LOGNAME}"
+  fi
+  eval $runme |
+    awk "/ $1/ { printf \"\nuser %-8s pid %-6s job %s\n\", \$1, \$2, \$11 }"
+  echo "Use -u user or -t tty to narrow down your selection criteria."
+elif [ $showpid -eq 1 ] ; then
+  echo $pid
+else
+  # Ready to go. Let's do it!
+  /bin/echo -n "Renicing job \""
+  /bin/echo -n $(ps cp $pid | sed 's/ [ ]*/ /g' | tail -1 | cut -d\ -f6-)
+  echo "\" ($pid)"
+  renice $niceval $pid
+fi
+exit 0
+```
+
+第 10-15 条清单：renicename 脚本
+
+### 它是如何工作的
+
+此脚本大量借鉴了第 150 页的第 47 号脚本，该脚本执行了类似的进程名到进程 ID 的映射——但该脚本会终止作业，而不是仅仅降低其优先级。
+
+在这种情况下，你不希望意外地为多个匹配的进程进行 renice（例如 `renicename -n 10 "*"`），因此如果匹配的进程多于一个，脚本会失败。否则，它会进行指定的更改，并让实际的 renice 程序报告可能遇到的任何错误。
+
+### 运行脚本
+
+运行此脚本时你有多种可能的选择：
+
+- `-n val` 允许你指定期望的 nice（作业优先级）值。默认指定为 `niceval+1`。
+- `-u user` 允许通过用户来限制匹配的进程。
+- `-t tty` 允许通过终端名称进行类似的过滤。
+- 若要仅查看匹配的进程 ID 而不实际 renice 应用程序，请使用 `-p` 标志。
+
+除了一个或多个标志外，`renicename` 还需要一个命令模式，该模式将与系统上运行的进程名称进行比较，以确定哪些进程匹配。
+
+### 结果
+
+首先，第 10-16 条清单显示了当存在多个匹配进程时会发生什么。
+
+```
+$ renicename "vi"
+renicename: more than one process matches pattern vi:
+    user taylor    pid 6584    job vi
+    user taylor    pid 10949   job vi
+Use -u user or -t tty to narrow down your selection criteria.
+```
+
+第 10-16 条清单：使用具有多个进程 ID 的进程名称运行 renicename 脚本
+
+随后我们退出了其中一个进程并运行了相同的命令。
+
+```
+$ renicename "vi"
+Renicing job "vi" (6584)
+```
+
+我们可以通过使用 `-l` 标志对 `ps` 指定进程 ID 来确认这是否有效，如第 10-17 条清单所示。
+
+```
+$ ps -l 6584
+UID   PID  PPID  F CPU PRI NI   SZ  RSS WCHAN  S ADDR TTY          TIME CMD
+501 6584 1139 4006  0 30 10 1 2453832 1732  - SN+ 0 ttys000  0:00.01 vi wasting.time
+```
+
+第 10-17 条清单：确认进程已适当 niced
+
+`ps` 命令的这种超宽输出格式很难阅读，但请注意第 7 个字段是 NI，并且对于此进程其值为 1。检查你运行的任何其他进程，你会看到它们的优先级都是 0，这是标准用户优先级级别。
+
+### 脚本的修改
+
+对该脚本的一个有趣补充是另一个脚本，该脚本监视任何时间关键程序的启动并自动将其 renice 到设定的优先级。如果某些互联网服务或应用程序往往会消耗大量 CPU 资源，这将很有帮助。例如，第 10-18 条清单使用 `renicename` 将进程名映射到进程 ID，然后检查进程当前的 nice 级别。如果作为命令参数指定的 nice 级别高于当前级别（优先级较低），它会发出 renice。
+
+```bash
+#!/bin/bash
+# watch_and_nice--Watches for the specified process name and renices it
+# to the desired value when seen.
+
+if [ $# -ne 2 ] ; then
+  echo "Usage: $(basename $0) desirednice jobname" >&2
+  exit 1
+fi
+
+pid="$(renicename -p "$2")"
+
+if [ "$pid" == "" ] ; then
+  echo "No process found for $2"
+  exit 1
+fi
+
+if [ ! -z "$(echo $pid | sed 's/[0-9]*//g')" ] ; then
+  echo "Failed to make a unique match in the process table for $2" >&2
+  exit 1
+fi
+```

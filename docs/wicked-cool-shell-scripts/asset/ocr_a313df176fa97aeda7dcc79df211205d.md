@@ -1,0 +1,5 @@
+# INTRODUCTION
+
+![](bbox=[0.35, 0.18, 0.65, 0.35])
+
+A lot has changed in the world of Unix system administration since the first publication of this book in 2004. At that time, few casual computer users ran Unix-like operating systems—but as beginner-friendly desktop Linux distributions like Ubuntu gained popularity, that began to change. Then came OS X, the next iteration of Apple's Unix-based operating system, as well as a slew of technologies based on iOS. Today, Unix-like operating systems are more widely adopted than ever. Indeed, they are perhaps the most ubiquitous operating systems in the world, if we take Android smartphones into account. Needles to say, much has changed, but one thing that has persisted is the Bourne-again shell, as the prevailing system shell available to Unix users. Utilizing the full power of bash scripting has never been a more needed skill in a system admin's, engineer's, or hobbyist's toolbox.
