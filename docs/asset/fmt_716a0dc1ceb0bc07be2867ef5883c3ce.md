@@ -1,0 +1,151 @@
+
+## 理由
+
+每个人都有能力在 `vi` 中配置设置，以提供人们在应用程序中所需的易用性，而且，你总是寻找让你的日常操作更简单的方法。
+
+## 实战经验
+
+从任何角度来看，`vi` 都是一个多功能的编辑器。当你用它创建源代码时，编辑器可以对每行进行自动缩进和编号，通常情况下，这比纯文本编辑器更容易创建源代码。如果你决定用它创建文本文件、文档或 Web 页面，可以配置 `vi` 在新行处换行并在文本间切换时显示不同的模式。这些功能有助于加快编辑和修改时间。
+
+## 其他资源
+
+手册页 `Man pages`:
+
+`set`, `vi`
+
+世界维网:
+
+Sven's VI Setup File--http://www.math.fu-berlin.de/~guckes/vi/exrc
+
+Vi 设置选项--http://www.linuxbox.com/~taylor/4ltwrd/VRoptions.html
+
+## UNIX 提示与技巧
+
+第 8 章：编辑器
+
+上一章 | 下一章
+
+本章章节：
+
+| 8.1 ed & vi 的内部构造 | 8.5 缩写命令 | 8.9 编辑多个文件 |
+| 8.2 ed 的六个步骤 | 8.6 创建宏 | 8.10 编辑、运行并再次编辑 |
+| 8.3 vi 的简单步骤 | 8.7 搜索与替换 | 8.11 读取 |
+| | | 将 STDOUT 输入 vi |
+| | | 8.12 当内存满时使用 vi |
+
+8.4 配置 vi
+
+目录索引 | 上一节 | 下一节
+
+© Copyright Macmillan USA. 版权所有。
+
+## UNIX 提示与技巧
+
+| 编辑器 8: 8.5 缩写 vi 命令 | 内容 | 索引 |
+|---|---|---|
+| 本章章节: | | 上一章 | 下一章 |
+| 8.1 ed & vi 的内部构造 | 8.5 缩写 vi 命令 | 8.9 多文件文件 |
+| 8.2 编辑步骤 | 8.6 创建宏 | 8.10 编辑、运行并再次编辑 |
+| 8.3 vi 的简单步骤 | 8.7 搜索与替换 | 8.11 读取 |
+| 8.4 配置参数 | 8.8 使用 vi 的其他地方 | 8.12 当内存满时使用 vi |
+| | | 上一节 | 下一节 |
+
+## 8.5 缩写 vi 命令
+
+### 8.5.1 描述
+
+就像你可以为工作 shell 设置的个人缩写命令别名列表一样，`vi` 允许通过 `.xrc` 文件或命令行模式实现类似的功能。
+
+### 示例一：如何缩写
+
+变体：AT&T, BSD
+
+Shell：全部
+
+语法：
+
+```
+ab name definition
+```
+
+当你在 `vi` 编辑器的插入模式下工作时，`vi` 允许通过 `.xrc` 文件或命令行模式实现类似的功能。当值确认无误后，进入 `vi` 编辑器并在命令行中执行 `:set`，你应该能看到在启动文件中设置的更改。
+
+```
+:set
+autointend wrapmargin=40
+```
+
+当在 `.exrc` 文件中输入条目后，它们会在你要编辑的文件中生效。`:set` 命令显示 `.exrc` 配置的设置已被接纳。
+
+```vi
+% vi /tmp/foobar
+set
+autointent showmode  wrapmargin=10
+number
+```
+
+对于你登录的系统，通过将每个参数的设置传递给变量来声明 `EXINIT` 变量。根据你使用的版本，用空格或竖线 `|` 分隔每个命令。如果一种不起作用，请尝试另一种。
+
+如果你使用的是 Bourne 或 Korn shell，请将必要的参数放在主目录中：
+
+```
+EXINIT='autointend wrapmargin=5 showmode'
+export EXINIT
+```
+
+如果你使用 `csh` 或 `tcsh`，则将这些内容添加到你的 `.cshrc` 或 `login` 文件中。
+
+```
+setenv EXINIT 'autointend|wrapmargin=5|showmode'
+```
+
+你必须重新引用启动文件，`EXINIT` 变量才能生效。完成后，验证变量是否设置正确：
+
+```
+% set
+TERM=vt100
+SHELL=/bin/csh
+MAIL=/var/mail/ugu
+PWD=/local/home/user/ugu
+EXINIT=set autointend list wrapmargin=40
+```
+
+当值确认无误后，进入 `vi` 编辑器并在命令行中执行 `:set`，你应该能看到在启动文件中设置的更改。
+
+```
+:set
+autointend wrapmargin=40 showmode
+```
+
+## 示例三：.execrc
+
+`vi` 编辑器还支持一个名为 `.execrc` 的配置文件，它在执行 `vi` 时会被读取。当 `vi` 启动时，它会在启动 `vi` 的当前目录中查找 `.execrc` 文件。如果该目录下没有 `.execrc` 文件，它会检查登录账户主目录下是否存在 `.execrc` 文件。
+
+使用此文件设置你希望 `vi` 启动时的任何参数。`.execrc` 文件接受单行多个设置或每行一个。
+
+```
+vi .execrc
+```
+
+```vi
+" 缩进行并显示模式
+set autointend showmode
+"
+```
+
+```vi
+" 在末尾 10 个字符处换行
+set wrapmargin=10
+"
+```
+
+> 注意 - 双引号 `"` 符号是唯一可以注释行的字符。正如你可能猜到的，注释行并没有统一标准。配置文件使用井号 `#`、分号 `;` 或冒号 `:`；`.execrc` 也不例外。
+
+当在 `.exrc` 文件中输入条目后，它们会在你要编辑的文件中生效。`:set` 命令显示 `.exrc` 配置的设置已被接纳。
+
+```vi
+% vi /tmp/foobar
+set
+autointent showmode  wrapmargin=10
+number
+```
