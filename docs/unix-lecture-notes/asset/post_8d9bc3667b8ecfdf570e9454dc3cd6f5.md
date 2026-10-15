@@ -1,0 +1,166 @@
+
+## Listing 6.18: setup_aio_buffer()
+
+```
+void setup_aio_buffer(struct aiocb *aio_buf)
+{
+    static char input[1];                /* 1 char of input */
+
+    /* describe what to read */
+    aio_buf->aio_fildes   = 0;           /* file descriptor for I/O */
+    aio_buf->aio_buf      = input;       /* address of buffer for I/O */
+    aio_buf->aio_nbytes   = 1;           /* number of bytes to read each time */
+    aio_buf->aio_offset   = 0;           /* offset in file to start reads */
+
+    /* describe what to do when read is ready */
+    aio_buf->aio_sigevent.sigev_notify = SIGEV_SIGNAL;
+    aio_buf->aio_sigevent.sigev_signo  = SIGIO;          /* send SIGIO */
+}
+```
+
+The main program should declare the aiocb structure so that it is visible to the various functions that must access it. The program follows.
+
+## Listing 6.19: bouncestr_aio.c
+
+```
+#include <unistd.h>
+#include <stdio.h>
+#include <curses.h>
+#include <signal.h>
+#include <string.h>
+#include <aio.h>
+#include "timers.h"
+
+#define INITIAL_SPEED 30
+#define RIGHT 1
+#define LEFT -1
+#define ROW 12
+#define MESSAGE "ooooooo=>"
+#define REVMSGE "<=ooooooo"
+#define BLANK "        "
+
+int dir;                /* Global variable to store direction of movement */
+int speed;              /* Current speed in chars/second */
+volatile sig_atomic_t input_ready;
+
+struct aiocb kbcbuf;    /* an aio control buf */
+void setup_aio_buffer(struct aiocb *aio_buf);
+
+void move_msg(int signum);  /* handler for alarm */
+int update_from_input( int *speed, int *dir );
+
+/********************************************************************************/
+/*               Signal Handler Prototypes                                      */
+/********************************************************************************/
+
+/* SIGALRM signal handler — it is responsible for animating the string */
+void move_msg(int);
+
+/* SIGIO signal handler — it is responsible for retrieving user input */
+void on_input(int);          /* handler for keybd          */
+
+/********************************************************************************/
+/*
+ *                              Main                                           *
+ */
+/********************************************************************************/
+
+int main(int argc, char* argv[])
+{
+    struct sigaction newhandler;        /* new settings        */
+    sigset_t            blocked;        /* set of blocked sigs */
+    int                 finished;
+
+    newhandler.sa_handler = on_input;   /* handler function    */
+    newhandler.sa_flags = SA_RESTART;   /* options             */
+
+    /* then build the list of blocked signals */
+    sigemptyset(&blocked);              /* clear all bits      */
+    newhandler.sa_mask = blocked;       /* store blockmask     */
+    if ( sigaction(SIGIO, &newhandler, NULL) == -1 )
+        perror("sigaction");
+
+    newhandler.sa_handler = move_msg;   /* handler function    */
+    if ( sigaction(SIGALRM, &newhandler, NULL) == -1 )
+        perror("sigaction");
+
+    /* prepare the terminal for the animation */
+    initscr();      /* initialize the library and screen */
+    cbreak();       /* put terminal into non-blocking input mode */
+    noecho();       /* turn off echo */
+    clear();        /* clear the screen */
+    curs_set(0);    /* hide the cursor */
+
+    /* Initialize the parameters of the program */
+    dir        = RIGHT;
+    finished   = 0;
+    speed      = INITIAL_SPEED ;
+
+    /* initialize aio buffer for the first read and place call */
+    setup_aio_buffer(&kbcbuf);
+    aio_read(&kbcbuf);
+
+    /* Start the real time interval timer with delay interval size */
+    set_timer( ITIMER_REAL, 1000/speed, 1000/speed );
+
+    mvaddstr(LINES-1, 0, "Current speed:");
+    refresh();
+
+    /* Put the message into the first position and start */
+    mvaddstr(ROW, 0, MESSAGE);
+
+    while( !finished )
+        if ( input_ready ) {
+            finished = update_from_input(&speed, &dir);
+            input_ready = 0;
+        }
+        else
+            pause();
+    clear();
+    endwin();
+    return 0;
+}
+
+/********************************************************************************/
+/*                              SIGIO Signal Handler                           */
+/********************************************************************************/
+
+/* Handler called when aio_read() has stuff to read */
+void on_input(int signo)
+{
+    input_ready = 1;
+}
+
+/* First check for any error codes, and if ok, then get the return code */
+int update_from_input( int *speed, int *dir )
+{
+    int c;
+    int is_changed = 0;
+    char *cp = (char *) kbcbuf.aio_buf;      /* cast to char * */
+    char msg[40];
+    int finished=0;
+
+    /* check for errors */
+    if ( aio_error(&kbcbuf) != 0 )
+        perror("reading failed");
+    else
+        /* get number of chars read */
+        if ( aio_return(&kbcbuf) == 1 ) {
+            c = *cp;
+            /*nodelay = 0; */
+            switch (c) {
+                case 'Q':
+                case 'q':
+                    finished = 1;                      /* quit program */
+                    break;
+                case ',':
+                    *dir = (*dir == LEFT)? RIGHT:LEFT;  /* reverse direction */
+                    break;
+                case 'f':
+                    if ( 1000/( *speed ) > 2 ) {        /* if interval > 2 */
+                        *speed = *speed + 2;           /* increase */
+                        is_changed = 1;
+                    }
+                    break;
+                case 's':
+```

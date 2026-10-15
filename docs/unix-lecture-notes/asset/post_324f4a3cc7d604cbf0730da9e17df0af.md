@@ -1,0 +1,39 @@
+
+Linux systems.
+
+Although there are many different UNIX file systems, most current implementations are built upon ideas from Dennis Ritchie’s original implementation. Therefore, the implementations described in these notes should be thought of as generic implementations, meaning they do not actually exist in any one system but approximate many actual implementations. I will, as much as possible, describe how some Linux variant does things, since that is the most prevalent UNIX system that students use, and that is the one running on our host computer.
+
+![](img/edd55012c780b4e999320d08ab27959e_120_0.png)
+
+Figure 3.2: The Linux Second Extended File System (Ext2)
+
+## 3.6 The Principal Components of a UNIX File System
+
+Every file system has (at least) one superblock located at the beginning of its allocated storage. The superblock contains all of the information about how the file system is configured, such as block size, block address range, and mount status. Copies of the superblock are almost always stored in several other places within a partition.
+
+Each file system in UNIX has at least one table that identifies the files in it. The entries in this table are called i-nodes (pronounced “eye-nodes”), and the indices of the i-nodes in this i-node table are called i-numbers. The i-nodes contain the file attributes and a map indicating where the blocks of the file are located on the disk. Attributes include properties such as
+
+- the owner,
+- the group,
+- the permissions allowed on the file and the file type,
+- the number of links to the file
+- the time of last modification,
+- the time of last access,
+- the time the attributes were last changed,
+- the size in bytes of the file,
+- the number of blocks used by the file, and
+- the id of the device on which the file resides.
+
+I-nodes and the tables that use them are important components of the UNIX file system. Modern file systems usually have multiple i-node tables, as described below.
+
+Every file system separates the i-node tables from the data blocks. The data blocks are where file contents are stored.
+
+Figure 3.1 depicts the structure and layout of a modern UNIX disk device with several file systems on it. Each successively lower layer of the figure is an enlargement of a structure in the preceding layer. You can see that in a modern file system, not only are there multiple superblocks in a single file system, but multiple i-node tables as well. This is an enhancement added for performance reasons. As disks grew in size, files whose blocks were on the outer edge of the disk became further away from the i-nodes that contained the block addresses and file status. Disk accesses to read or write the file required ever increasing latency caused by the disk seeks. By making several smaller tables, each in its own cylinder group, no file became too far away from the i-node table. The figure shows that the i-node in position 2 of the table usually points to the entry for the root directory file in the file system. We will return to this issue below.
+
+### 3.6.1 Defining and Creating File Systems
+
+Partitioning a disk divides the disk into logically distinct regions, often named with letters from the beginning of the alphabet, i.e., a, b, c, and so on. In UNIX, partitions are not necessarily disjoint. The "c" partition is almost always the entire disk⁶ and typically does not have a file system. It is used by utilities that access the disk block by block. The "b" partition traditionally was reserved as the swapping store, i.e., the partition used for swapping; it did not have a file system written onto it. The innermost partition, "a", is where the kernel is installed and it is typically very small, since little else should be put in it. If a disk has a 100 GB storage capacity, you might make the first 1 GB partition a, the next 10 GB, b, the next 50GB d, the remainder, e, and the whole disk, c.
+
+In order to create files in a partition, a file system must be created in that partition. Creating a file system includes doing the following:
+
+⁶On Solaris hosts, it referred to the entire disk. In FreeBSD, it refers to entire "slices", which can be thought of as collections of partitions.

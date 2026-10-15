@@ -1,0 +1,68 @@
+
+
+```
+void mode2str( int mode, char str[] )
+{
+    strcpy( str, "----------" );
+
+    if ( S_ISDIR(mode) )      str[0] = 'd';  // directory?
+    else if ( S_ISCHR(mode) ) str[0] = 'c';  // char devices
+    else if ( S_ISBLK(mode) ) str[0] = 'b';  // block device
+    else if ( S_ISLNK(mode) ) str[0] = 'l';  // symbolic link
+    else if ( S_ISFIFO(mode)) str[0] = 'p';  // Named pipe (FIFO)
+    else if ( S_ISSOCK(mode)) str[0] = 's';  // socket
+
+    if ( mode & S_IRUSR ) str[1] = 'r';  // 3 bits for user
+    if ( mode & S_IWUSR ) str[2] = 'w';
+    if ( mode & S_IXUSR ) str[3] = 'x';
+
+    if ( mode & S_IRGRP ) str[4] = 'r';  // 3 bits for group
+    if ( mode & S_IWGRP ) str[5] = 'w';
+    if ( mode & S_IXGRP ) str[6] = 'x';
+
+    if ( mode & S_IROTH ) str[7] = 'r';  // 3 bits for other
+    if ( mode & S_IWOTH ) str[8] = 'w';
+    if ( mode & S_IXOTH ) str[9] = 'x';
+}
+```
+
+### 3.10.3 将用户/组 ID 转换为字符串
+
+下一步是将用户ID和组ID转换为名称。我们需要一个函数，它接收一个用户ID并返回具有该用户ID的人的名称，还需要一个函数，它接收一个组ID并返回组的名称。我们如何找到这样的函数？我们可以尝试使用诸如 username、name、user 等关键词进行手册页搜索。经过几次这样的尝试，你可以将其缩小到类似以下命令：
+
+```
+$ man -k name | grep user
+```
+
+你会得到一个不算太长的列表，其中包含以下候选条目：
+
+```
+getpwnam (3p) - search user database for a name
+```
+
+如果我们查看这个手册页，就会发现 getpwnam() 不是我们想要的，而 getpwuid() 才是。这两个函数都会访问密码数据库，无论实际文件位于何处，也就是说，即使是网络数据库，它们也会返回一个 passwd 结构体。getpwuid() 函数通过用户ID访问密码数据库，而 getpwnam() 通过用户名访问。我们有用户ID，但需要名称，所以我们需要 getpwuid() 函数。它接收一个用户ID作为参数，并返回一个指向 passwd 结构体的指针，该结构体在 /usr/include/pwd.h 中定义如下：
+
+```
+struct passwd {
+    char *pw_name;      /* Username */
+    char *pw_passwd;    /* Password */
+    uid_t pw_uid;       /* User ID */
+    gid_t pw_gid;       /* Group ID */
+    char *pw_gecos;     /* Real name */
+    char *pw_dir;       /* Home directory */
+    char *pw_shell;     /* Shell program */
+};
+```
+
+只要指针不为 NULL，就可以对 getpwuid() 返回的指针进行解引用，以访问 passwd 结构体的各个成员。getpwuid() 的手册页指出，如果密码数据库中没有匹配的条目，返回的指针将为 NULL。应用程序必须对此进行检查。
+
+你可能想知道为什么可能没有匹配的名称。有时会发生这样的情况：一个用户账户从 UNIX 系统中被删除，但该用户创建的一些文件被遗留下来。例如，/tmp 目录通常是全局可写的，任何人都可以把文件放在那里。如果被删除的用户账户曾在那里创建过文件，系统管理员可能不会删除这些文件，因为在整个文件系统中搜索用户文件的踪迹非常耗费资源。如果 ls 试图列出 /tmp 的内容，它将无法显示该用户名。
+
+事情并不止于此。假设其他人有指向已删除用户文件的硬链接。即使管理员删除了该用户创建的“原始”文件，实际文件仍然存在，因为它们的链接计数不为零。文件所有者的用户ID存储在文件的 i-node 中，而不是目录条目中。因此，例如，如果 George 链接到了 Sherry 拥有的文件，而 Sherry 的账户被删除了，那么 George 的链接仍然归 Sherry 所有。如果 George 需要这些链接，管理员不能冒然删除它们，而列出 George 的文件时也将无法显示用户名。
+
+还有一种可能是，用户ID确实对应一个合法的用户名，但用户名和用户ID是在与主机所属域不同的 NIS 映射中定义的。例如，如果文件系统是从不同的 NIS 域远程挂载的，那么文件所有者将拥有来自该域的用户ID和名称，而 getpwuid() 函数将无法找到该用户名。举一个具体的例子，假设一台名为 earth 的主机位于 geography 域，我在该域的 earth 上有一个账户（比如 sweiss@geography），并且有一段时间，我将 earth 的文件系统远程挂载到了我的台式机上，而该台式机位于 csci 域。我看到的所有文件都属于我，sweiss，但那不是我认识的我；那是 sweiss@geography，所以用户ID与 csci NIS 映射中的不同。结果，getpwuid() 在 csci 映射中找不到该用户ID。所以你看，getpwuid() 也可能因为那个原因而失败。
+
+由于给定用户可能在 passwd 文件中没有条目，因此文件可能没有关联的用户名。仍然有用户ID，但没有用户名。在这种情况下，ls 最多只能打印用户ID。
+
+这还不是全部。有可能 ls 找到了一个名称，但该名称是错误的。假设管理员将已删除的用户ID重新用于一个新用户，而不知道旧用户仍有文件存在。发生这种情况时，getpwuid() 会在密码数据库中找到该用户ID，但它是错误的。现在它将关联到一个不同的人，如果你愿意，可以说是一个冒名顶替者，来冒充旧所有者。ls 将显示新用户名作为文件的所有者，随着旧账户的...
+

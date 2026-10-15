@@ -1,0 +1,126 @@
+
+
+```c
+{
+    struct stat buf;
+    time_t temp_t;
+    time_t access_t, mod_t;
+
+    struct utimbuf utbuf;
+
+    if (4 != size) {
+        fprintf(stderr, "wrong number of parameters to backdate.\n");
+        exit(1);
+    }
+
+    if (-1 == stat(fn, &buf)) {
+        perror("Could not stat file.\n");
+        exit(1);
+    }
+
+    time(&access_t);
+    if (mode & CH_ACCESS) {
+        temp_t = setclockback(access_t, times[0], times[1],
+                              times[2], times[3]);
+        access_t = temp_t;
+    }
+    time(&mod_t);
+    if (mode & CH_MOD) {
+        temp_t = setclockback(mod_t, times[0], times[1],
+                              times[2], times[3]);
+        mod_t = temp_t;
+    }
+    utbuf.actime = access_t;
+    utbuf.modtime = mod_t;
+
+    if (-1 == utime(fn, &utbuf)) {
+        perror("Error changing times");
+        exit(1);
+    }
+}
+
+int main(int argc, char* argv[])
+{
+    int i = 0;
+    time_t now;
+    char* timestr;
+    char filename[255];
+    int times[4] = {0, 0, 0, 0};
+
+    if (argc < 2)
+        printf("usage: %s filename days hours minutes seconds\n",
+               argv[0]);
+    exit(1);
+}
+
+strcpy(filename, argv[1]);
+while ((--argc >= 2) && (i < 4)) {
+    times[i] = atoi(argv[i + 2]);
+    i++;
+}
+
+time(&now);
+timestr = ctime(&now);
+backdate(filename, CH_ACCESS|CH_MOD, times, 4);
+return 0;
+}
+```
+
+## 3.13.7 文件名
+
+重命名文件的系统调用是 `rename()`：
+
+```c
+#include <stdio.h>
+int rename(const char *oldname, const char *newname);
+```
+
+它在失败时返回 -1，成功时返回 0。`oldname` 是要重命名的文件或目录的路径名，`newname` 是新的路径名。其行为较为复杂，取决于 `oldname` 是否指向文件、目录或符号链接，以及 `newname` 是否已存在且是否在同一文件系统上。为说明其中部分复杂性：
+
+- 如果 `oldname` 指定的是非目录的文件，则如果 `newname` 存在，它不得指向目录。如果 `newname` 存在且不是目录，则将其删除，并将 `oldname` 重命名为 `newname`。进程必须对包含 `oldname` 的目录和包含 `newname` 的目录具有写权限，因为两者都将被更改。
+- 如果 `oldname` 指定的是目录，且 `newname` 存在，则它必须指向一个空目录。如果是这样，则将其删除，并将 `oldname` 重命名为 `newname`。此外，`newname` 不能包含包含 `oldname` 的路径前缀。例如，不能将 `/class_stuff/notes` 重命名为 `/class_stuff/notes/systemcalls`，因为旧名称 `/class_stuff/notes` 是新名称的前缀路径，不能被移除。
+- 作为特例，如果 `oldname` 和 `newname` 指向同一文件，函数将成功返回且不做任何更改。
+
+调用 `rename()` 的进程在所有情况下都必须具有适当的权限。简化的描述是 `rename()` 重命名一个文件，如果这涉及从一个目录删除名称并在另一个目录创建名称，那就是它所做的。完整细节请参阅手册页。
+
+## 3.14 遍历树，上行与下行
+
+我们对树进行的两个常见操作是上行遍历和下行遍历。所谓“上行”，是指从给定节点向上到父节点、祖父节点，依此类推，直到到达根。所谓“下行”，则更为广泛，因为以给定节点为根的子树中包含许多节点——我们指的是以某种指定顺序访问该子树中的所有节点。这是对树的下行遍历。
+
+第一种遍历类型就是 `pwd` 命令所做的；它从当前工作目录向上遍历树，以便显示从根到当前工作目录的路径。经过一点研究你会发现，有一个系统调用 `getcwd()` 正好执行此操作。第二种遍历类型是诸如 `ls`、`grep`、`chown`、`chmod` 等命令的递归版本所做的，也是 `find` 命令必须做的。它们从给定目录开始，访问该目录为根的子树中的所有文件。
+
+这两个问题都提出了有趣的编程挑战，并且需要我们对文件系统和文件层次结构有更深入的了解。我们将首先解决查找当前工作目录路径的问题。之后我们将查看 API 中提供的两种用于“遍历”文件树的函数。
+
+## 3.15 pwd 命令
+
+回想一下，`pwd` 命令会打印当前工作目录的绝对路径名。作为热身，我们将练习我们对目录和 i-节点的知识，以确保我们理解即将面临的任务。具体来说，我们将尝试根据一组目录中 i-号码的有限信息，重建文件层次结构的一部分。
+
+假设我们有一个名为 `scratch` 的目录，它包含子目录，而这些子目录也包含子目录，等等。这些子目录中可能还包含普通文件。命令
+
+```sh
+$ ls -iaR scratch
+```
+
+将递归显示这些目录内所有文件的文件 i-号码和文件名，包括“.”和“..”的条目。下面显示的是该命令在名为 `scratch` 的假设目录上的输出，除了目录名称在输出中通常出现的位置外，这里只是将其与其中包含的文件并列显示。从此列表中，可以重建以 `scratch` 为根的文件层次结构。
+
+```
+725 .
+449 ..
+753 temp
+727 test1
+728 test2
+
+731 .
+728 ..
+733 junk
+
+732 stuff
+727 .
+725 ..
+729 file1
+730 file2
+733 garbage
+
+728 .
+```
+

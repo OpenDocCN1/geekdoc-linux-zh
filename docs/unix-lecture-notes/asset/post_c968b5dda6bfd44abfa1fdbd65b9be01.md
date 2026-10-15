@@ -1,0 +1,175 @@
+
+# UNIX Lecture Notes
+Chapter 8 Interprocess Communication, Part I
+
+```c
+void on_sigpipe( int signo );
+
+/** on_signal()
+ * This handles the interrupt signals. It closes open FIFOs and files,
+ * removes the public FIFO and exits.
+ */
+void on_signal( int sig );
+
+/** on_sigchild()
+ * Because this is a concurrent server, the parent process has to collect the
+ * exit status of each child. The SIGCHLD handler issues waits and writes to
+ * the log file.
+ */
+void on_sigchild( int signo );
+
+/***********************************************************************/
+/*                         Main Program                               */
+/***********************************************************************/
+
+int main( int argc, char *argv[] )
+{
+    int             tries;       /* num tries to open private FIFO */
+    int             nbytes;      /* number of bytes read from private FIFO */
+    int             i;
+    struct message  msg;         /* message structure with FIFO names */
+    struct sigaction handler;    /* sigaction for registering handlers */
+    char            buffer[PIPE_BUF];
+    char            logfilepath[PATH_MAX];
+    char            *homepath;   /* path to home directory */
+    pid_t           child_pid;   /* pid of each spawned child */
+    /* Open the log file in the user's home directory for appending. */
+    homepath = getenv("HOME");
+    sprintf(logfilepath, "%s/.upcase_log", homepath);
+
+    if ( NULL == (upcaselog_fp = fopen(logfilepath, "a")) ) {
+        perror(logfilepath);
+        exit(1);
+    }
+
+    /* Register the interrupt signal handler */
+    handler.sa_handler = on_signal;
+    handler.sa_flags = SA_RESTART;
+    if ( ((sigaction(SIGINT, &handler, NULL)) == -1) ||
+         ((sigaction(SIGHUP, &handler, NULL)) == -1) ||
+         ((sigaction(SIGQUIT, &handler, NULL)) == -1) ||
+         ((sigaction(SIGTERM, &handler, NULL)) == -1) )
+    {
+        perror("sigaction");
+        exit(1);
+    }
+
+    handler.sa_handler = on_sigpipe;
+    if ( sigaction(SIGPIPE, &handler, NULL) == -1 ) {
+        perror("sigaction");
+        exit(1);
+    }
+```
+
+```
+exit(1);
+}
+
+handler.sa_handler = on_sigchld;
+if ( sigaction(SIGCHLD, &handler, NULL) == -1 ) {
+    perror("sigaction");
+    exit(1);
+}
+
+/* Create public FIFO */
+if ( mkfifo(PUBLIC, 0666) < 0 ) {
+    if ( errno != EEXIST )
+        perror(PUBLIC);
+    else {
+        fprintf(stderr, "%s already exists. Delete it and restart.\n", PUBLIC);
+    }
+    exit(1);
+}
+
+/* Open public FIFO for reading and writing so that it does not get */
+/* EOF on the read-end while waiting for a client to send data. */
+/* To prevent it from hanging on the open, the write-end is opened */
+/* in non-blocking mode. It never writes to it. */
+if ( (publicfifo = open(PUBLIC, O_RDONLY)) == -1 ||
+     ( dummyfifo = open(PUBLIC, O_WRONLY | O_NDELAY)) == -1 ) {
+    perror(PUBLIC);
+    exit(1);
+}
+
+server_pid = getpid();
+
+/* Block waiting for a msg structure from a client */
+while ( read( publicfifo, (char*)&msg, sizeof(msg)) > 0 ) {
+
+    /* spawn child process to handle this client */
+    if ( 0 == fork() ) {
+
+        /* We get the pid for message identification. */
+        child_pid = getpid();
+
+        /* We use the value of client_rawtext_fd to detect errors */
+        client_rawtext_fd = -1;
+
+        /* Client should have opened rawtext_fd for writing before */
+        /* sending the message structure, so the following open should */
+        /* succeed immediately. If not it blocks until the client opens */
+        /* it. */
+        if ( (client_rawtext_fd = open(msg.raw_text_fifo, O_RDONLY))
+             == -1 ) {
+            fprintf(upcaselog_fp,
+                "Client did not have pipe open for writing\n");
+            exit(1);
+        }
+    }
+```
+
+```
+/* Clear the buffer used for reading the client's text */
+memset(buffer, 0x0, PIPE_BUF);
+
+/*
+    Attempt to read from client's raw_text_fifo. This read will
+    block until either input is available or it receives an EOF.
+    An EOF is delivered only when the client closes the write-end
+    of its raw_text_fifo.
+*/
+while ( (nbytes = read(client_rawtext_fd, buffer,
+    PIPE_BUF)) > 0 ) {
+    /* Convert the text to uppercase */
+    for ( i = 0; i < nbytes; i++ )
+        if ( islower(buffer[i]) )
+            buffer[i] = toupper(buffer[i]);
+
+    /* Open client's convertedtext FIFO for writing. To allow for
+       delays, we try 5 times. Here it is critical that the
+       O_NONBLOCK flag is set, otherwise it will hang in the loop
+       and we will not be able to abandon the attempt if the client
+       has died. */
+    tries = 0;
+    while ( ((client_convertedtext_fd = open(msg.converted_text_fifo,
+        O_WRONLY | O_NDELAY)) == -1 ) && (tries < MAXTRIES) )
+    {
+        sleep(2);
+        tries++;
+    }
+    if ( tries == MAXTRIES ) {
+        /* Failed to open client convertedtext FIFO for writing */
+        fprintf(upcaselog_fp, "%d: " WARNING, child_pid);
+        exit(1);
+    }
+
+    /* Send converted text to client in its readfifo */
+    if ( -1 == write(client_convertedtext_fd, buffer,
+        nbytes) ) {
+        if ( errno == EPIPE )
+            exit(1);
+    }
+    /* See the notes below. */
+    close(client_convertedtext_fd);
+    client_convertedtext_fd = -1;
+
+    /* Clear the buffer used for reading the client's text */
+    memset(buffer, 0x0, PIPE_BUF);
+}
+    exit(0);
+}
+return 0;
+}
+```
+
+The signal handlers for the server are below. The SIGCHLD handler uses waitpid() to wait for all

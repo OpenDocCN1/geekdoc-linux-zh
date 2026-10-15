@@ -1,0 +1,56 @@
+
+the O_CREAT flag. Instead it is opened with the current position pointer pointing to the start of the file. The current position pointer is a member of the open file structure, the data structure that is created by the kernel when a file is opened. It points to the position of the next byte to read or write in the file.
+
+For example, to open the file whose path is stored in the C-string file_to_open, one could write:
+
+```c
+if ((fd = open(file_to_open, O_RDWR)) == -1) {
+    perror(file_to_open);
+    // handle error here
+}
+```
+
+## 2.7.2 Logout Records
+
+When a user logs out of a UNIX system, the kernel does some bookkeeping tasks. One of the tasks is to update the utmp file to indicate that the user logged out. In particular, it has to change the utmp record for the login session by changing the ut_type member from USER_PROCESS to DEAD_PROCESS. It also has to change the ut_time member to the current time and zero out the ut_user and ut_host members.
+
+In short, the logout process has to do the following:
+
+- 1. Open the utmp file for reading and writing.
+- 2. Read the utmp file until it finds the record for the terminal from which the logout took place.
+- 3. Modify a copy of the utmp record in the process's memory, and replace the utmp record in the file with the modified one, i.e., modify the utmp file.
+- 4. Close the utmp file.
+
+The first and last steps need no discussion. The second step requires being able to identify which utmp record in the file corresponds to the one logout is trying to modify. It cannot use the ut_user member because a single user might have several lines open at a time. The piece of information that is unique is stored in the ut_line. The ut_line member stores the name of the pseudo-terminal as a string such as "pts/4". Only one person can be using a given terminal at the same time, so it is sufficient to match the line.
+
+The more interesting part of this task is how to replace the utmp record in the file. The record may be in the middle of the file, so this operation involves replacing a fixed-size sequence of bytes starting at some specific position in a file with a sequence of the exact same size.
+
+## 2.7.3 Using lseek to Move the File Pointer
+
+As noted above, when a file is opened and a file descriptor is returned for it, a data structure is created by the kernel. This data structure represents the connection to the file. The current position pointer of the data structure is the position of the next byte to read or write in the file. If the file is open for reading, a read of N bytes starts at this position, and then the current position pointer is advanced N bytes. If it is open for writing and writes N bytes, it writes starting at the current position and then advances it N bytes. Usually when a file is open for writing the current position pointer is at the end of the file.
+
+The lseek() system call changes the current position pointer in an open file.
+
+```c
+#include <sys/types.h>
+#include <unistd.h>
+off_t lseek(int fd, off_t dist, int base);
+```
+
+lseek() is given a file descriptor, fd, a distance in bytes, dist, and an integer flag, base. base can be one of three values. The distance, dist, is used by lseek() to move the current position pointer. If dist is positive, it moves forward; if it is negative, it moves backwards. The value of base determines the starting position of the current position pointer from which it is to be moved. The three values are:
+
+- SEEK_SET: the distance dist is forwards relative to the start of the file.
+- SEEK_CUR: the distance dist is relative to the current position pointer and may be positive or negative.
+- SEEK_END: the distance dist is relative to the end of the file and may be positive or negative.
+
+If lseek() is successful, its return value is the resulting offset location as measured in bytes from the beginning of the file; otherwise, it returns −1.
+
+When the value of the offset is positive and the base is SEEK_END, the file pointer is moved beyond the end of the file. Data can be written to this position, and this in effect creates a "hole" in the file. For example, if a file is currently open and has the contents "123456789", and a seek is performed that moves the file pointer 5000 bytes past the end, after which the characters "abcde" are written to the file, then the file size will be 5014 bytes, even though there is a hole of 5000 bytes within it. More will be said about this in Chapter 3.
+
+The lseek() call can be used to code the third step of the logout procedure.
+
+## 2.7.4 Updating the utmp File on Logout
+
+The problem with updating the utmp file is the following. We have to find the record that corresponds to the login record on the line on which the logout occurred. Therefore, we need to repeatedly read a utmp record and check whether the ut_line member matches the line. When we find the record, which has been read into a local variable in our function, we modify it and then have to write it back. But at this point, the current position pointer has already been advanced to point to the record immediately following the one we just read. Figure 2.1 illustrates this.
+
+In the figure, the matching record is numbered k. After it is found, the pointer has been advanced to the start of record k+1. In order to write the modified record where the original was, we need to move the current position pointer back with lseek(). The following program demonstrates the key ideas.

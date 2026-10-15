@@ -1,0 +1,22 @@
+
+Terminal or console logins in the predominant UNIX systems are usually based upon the method used by the early BSD UNIX system. We will examine how the BSD method worked. Modern UNIX systems have the option to use a very different method known as PAM, discussed below.
+
+When a UNIX system is started, after the kernel initializes the data structures that it needs and enables interrupts, it creates a new process with process-id 1, named init. init is the first process created at start-up, and it is also the ancestor of all user-level processes in a UNIX system, even though it runs with root's privileges. init monitors the activities of all processes in the outer layers of the operating system, and also manages what takes place when the computer is shutdown.
+
+The init process does a number of interesting things, but of interest to us now is that init uses information about available terminal devices on the system (i.e., consoles, modems, etc.) to create, for each available terminal, a process to listen for activity on that terminal. These processes are the getty processes. The name getty stands for "get tty". The getty process configures the terminal device, displays a prompt such as "login:" in the terminal, and waits for the user to enter a user-name.
+
+The "tty" in "getty" is short for Teletype. For those who do not know the history, a Teletype is the precursor to the modern computer terminal. Teletype machines came into existence as early as 1906, but it was not until around 1930 that their design stabilized. Teletype machines were essentially typewriters that converted the typed characters into electronic codes that could be transmitted across electrical wires. Modern computer terminals inherit many of their characteristics from Teletype machines.
+
+When the user enters a user-name on the terminal, the getty process runs the login program passing it the entered user-name. login performs a number of tasks and prompts the user for the password and tries to validate it. If it is valid, login sets the current working directory (PWD) to the user's home directory, sets the process's user-id to that of the user, initializes the user's environment, adjusts permissions and ownership of various files, and then starts up the user's login shell. If the password is invalid, the login program will exit, and init will notice this and start up a new getty for that terminal, which will repeat the above procedure.
+
+Systems that use PAM do not work this way. PAM, which is short for Pluggable Authentication Modules, is a library of dynamically configurable authentication routines that can be selected at runtime to do various authentication tasks, not just logins. We will not cover PAM here.
+
+Network logins, which are usually based upon the BSD network login mechanism, must work differently. For one, there are no physical terminals, and so there is no way in advance how many terminals must be initialized. For another, the connection between the terminal and the computer is not point-to-point, but is a network service, such as SSH or SFTP.
+
+BSD took the approach of trying to make the login code independent of the source of the login. The result is that it uses the idea of a pseudo-terminal. These will be covered in depth later. With network logins, rather than creating a getty process for each terminal, init creates the process
+
+25 This is not quite accurate but it is good enough for now. If you want to know the actual steps, it is best to wait until you understand how processes are created and what the difference is between creating a process and running a program.
+
+26 Actually, the getty process replaces itself with the login program using a system call named execve(). This topic is covered in a later chapter.
+
+27 In bash, the environment variable PWD stores the absolute pathname of the current working directory. Bash inherits this name from the Bourne shell, in which it stood for "present working directory." In the C-shell, it is still cwd. Even though it is PWD in bash, no one calls it the present working directory anymore; it is the current working directory.

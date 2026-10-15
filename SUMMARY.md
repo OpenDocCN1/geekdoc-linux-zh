@@ -2337,6 +2337,7 @@
 +   [Unix 入门指南](docs/unix-for-the-beginning-mage/README.md)
 +   [UNIX 全攻略：从基础任务到系统管理](docs/unix-from-soup-to-nuts-from-basic-tasks-to-system-administra/README.md)
 +   [UNIX 技巧与门道](docs/unix-hints-and-hacks/README.md)
++   [Unix 讲义](docs/unix-lecture-notes/README.md)
 +   [Unix & Linux shell 脚本入门指南](docs/unix-linux-shell-scripting-turorial/README.md)
 +   [UNIX 网络管理工具](docs/unix-network-management-tools/README.md)
 +   [UNIX 网络编程：进程间通信第 2 （第 2 版）](docs/unix-network-programming-interprocess-communications-vol-2-2/README.md)
