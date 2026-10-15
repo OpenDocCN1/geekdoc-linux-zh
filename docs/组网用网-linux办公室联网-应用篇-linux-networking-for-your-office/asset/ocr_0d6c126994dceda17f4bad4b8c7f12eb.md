@@ -1,0 +1,13 @@
+Today, when you transfer data using UUCP, chances are the machine with which you exchange information is connected to the Internet via some TCP/IP-based network. Therefore, although the UUCP link doesn't use TCP/IP, sooner or later it will be processed and handled by TCP/IP. You needn't be concerned with the details of this conversion; I mention this fact simply to point out that UUCP networks and the Internet as a whole need not be entirely separate. You can send email via a UUCP link that's destined for any site on the Internet. Similarly, UUCP can be used in conjunction with a local TCP/IP-based network. You could use a UUCP connection as a link between several machines on your local network and the rest of the world.
+
+If your need for Internet access isn't very time-critical (for instance, if you need to occasionally send or receive email and don't particularly care about a few hours' delay in delivery), you might consider using a UUCP link for this access. Most ISPs, however, don't support UUCP, so you'll need to shop and ask about this. Also, be aware that there are different UUCP variants, the most common of which on Linux is called Taylor UUCP. You'll need to be sure that your ISP supports this version of UUCP.
+
+For more information is on UUCP, see the UUCP HOWTO, which comes with most Linux distributions, and also on the CD-ROM that accompanies this book, in the doc/HOWTO directory.
+
+# IPX
+
+Internet Packet Exchange (IPX) is the networking protocol used by Novell in their NetWare product. Technically, IPX is roughly equivalent to IP in TCP/IP; additional protocols, such as Sequenced Packet Exchange (SPX; equivalent to TCP) round out the Novell network stack. The NetWare Core Protocol (NCP) is NetWare's file sharing mechanism. It is one of the primary tools in the equivalent of the application layer of the Novell networking stack.
+
+If you want your Linux box to interact with Novell NetWare clients or servers, you'll need to include support for at least IPX, and probably SPX and/or NCP, in your kernel. IPX and SPX options are found in the Networking Options portion of your kernel configuration, while NCP is listed under the Network File Systems area. SPX is experimental in the 2.2.x series kernels, and so won't be a visible option unless you elect to include experimental kernel features.
+
+Because Novell's networking system and NetBIOS can be used in most of the same situations, this book doesn't cover IPX and its related technologies. If you want more information on this topic, you can read the IPX HOWTO, which is included with most Linux distributions, and also in the doc/HOWTO directory of this book's CD-ROM.

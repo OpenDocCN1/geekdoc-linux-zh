@@ -2457,5 +2457,6 @@
 +   [操作系统与中间件：支持受控交互](docs/操作系统与中间件——支持控制交互/README.md)
 +   [理解 Linux 进程](docs/理解linux进程/README.md)
 +   [Linux 办公室联网：Linux 办公室解决方案 示例篇](docs/组网用网-linux办公室联网-linux-a-network-solution-for-your-office-实例篇/README.md)
++   [Linux：办公室网络](docs/组网用网-linux办公室联网-应用篇-linux-networking-for-your-office/README.md)
 +   [网络服务器配置与管理项目化教程](docs/网络服务器配置与管理项目化教程/README.md)
 +   [逆向工程初学者指南（下）](docs/逆向工程权威指南-reverse-engineering-for-beginners-下册/README.md)

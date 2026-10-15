@@ -1,0 +1,15 @@
+# Note
+
+The same comments apply to using any computer as a firewall, router, or bridge of any type. Typically, bandwidth is limited by the slowest networking link in a configuration, be that a 56kbps PPP link, a 640kbps DSL link, a 10Mbps Ethernet link, or something else. This limited bandwidth must be divided among all the computers that use it. If your hardware is particularly high-speed, the bottleneck may become an oversubscribed ISP or even the Internet backbone. At busy times of busy days, this becomes true even of 56kbps dialup lines, as you’ve probably experienced when browsing the Web at such times.
+
+# Being a Good Netizen
+
+IP masquerading’s limitations apply not only to the technical side, but also socially. In particular, many ISPs object to the use of IP masquerading. This is because a typical ISP expects users to consume a certain amount of bandwidth and, in the case of dial-up technologies, a certain number of hours of online time. When you subscribe with an ISP for, say, 640kbps DSL service, your ISP expects that you will not be using the full 640kbps of bandwidth 24 hours a day, 7 days a week. Instead, the ISP expects that you’ll consume brief bursts of 640kbps and average some fraction of that amount. Ten, twenty, or a hundred subscribers together may consume 640kbps of bandwidth for an extended period of time at peak hours. If you use more bandwidth than the ISP expects, that drives up the ISP’s costs. Hence, many ISPs impose limits of various sorts on the use of services.
+
+# Always-On and On-demand Connections
+
+Some connection technologies, such as DSL and cable modems, are always-on technologies, meaning that you’re always connected to the Internet, assuming the hardware is always powered up. You might not be using the bandwidth at any given time, however.
+
+An ISP providing always-on service expects to provide the basic connectivity 24 hours a day, but does not expect you to transfer data continuously during that period. Other technologies, like PPP, are generally used in an on-demand fashion, in which the physical connection is formed and broken as the need for transfers arises. An ISP providing on-demand services may have more subscribers than hardware to connect the subscribers because chances are not everybody using the service will want to use it at once. Even when connected, subscribers probably won’t use 100% of their bandwidth.
+
+In an always-on environment, ISPs tend to sell services without temporal usage limits, but sometimes forbid the running of certain servers, or meter the service by the megabyte transferred. On-demand ISPs often limit access by time because the number of connection ports (such as modems) is an important limiting factor to the service. On-demand ISPs also often forbid certain activities, although this is more often to prevent undesirable behavior, such as spamming, than to control costs.

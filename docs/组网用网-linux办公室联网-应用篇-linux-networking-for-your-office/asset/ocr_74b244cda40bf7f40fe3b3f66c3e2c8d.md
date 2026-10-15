@@ -1,0 +1,5 @@
+password and tries again. More sophisticated variants of this scheme can be run on computers that have been partially or completely compromised already, by replacing the actual login programs. One defense against this practice is to advise your users to change their passwords if they ever mistype them at login. Users should also use different passwords on different systems because crackers often use the passwords stolen from one system in an effort to gain entry to another one.
+
+# Summary
+
+A Linux computer's capacity to be used from remote locations is one of its greatest strengths. Protocols such as Telnet and SSH are extremely useful in giving your users access to a single Linux computer from across the room or from across the world. Remote access is, however, also a potential entry point for unwanted visitors, so you should be aware of the security implications of running sshd or, especially, telnetd on your Linux computer. Using SSH rather than Telnet for remote logins and following sensible password procedures can go a long way toward keeping your system from falling into the wrong hands.

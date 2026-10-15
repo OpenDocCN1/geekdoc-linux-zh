@@ -1,0 +1,13 @@
+Finally, if you're running a network with several Linux or UNIX computers, you can configure them to pass log files to a central computer. You do this by editing the computers' /etc/syslog.conf files and specifying @machinename as one of the locations for the log file you want to maintain centrally. You must then configure that target machine to accept remote logs by launching syslogd with the -r option. You'll need to edit the /etc/rc.d/init.d/syslog file to add this option, and then restart the logger by typing:
+
+```
+/etc/rc.d/init.d/syslog restart
+```
+
+When you restart swatch using the -t parameter, it checks the last few lines of the monitored file and sends you a report on what it finds there. You can therefore expect a few repeat entries, particularly if you configure swatch to send you reports on relatively routine matters, if your system is under attack, or if you restart swatch frequently. If you use swatch to periodically scan the entire log file, of course, you'll get repeat entries whenever you scan without performing a rotation.
+
+# Summary
+
+Installing programs and monitoring system logs are two very important system administration topics not covered elsewhere in this book. By far the easiest way to install software on a Red Hat or other RPM-based Linux system is to install binary RPMs, which contain pre-built binary code, often customized for best operation with a Red Hat or similar Linux system. Source RPMs are also usually fairly easy to install, although this approach is more time-consuming and may require more expertise if you encounter problems. Raw source code in a tarball can also be installed on any Linux system. When installing a program from source code, you'll need to read the instructions to learn how the programmer intended the software be installed. If you encounter problems, you'll need to know enough about programming to track the problem down yourself, or ask for help from somebody who has such knowledge. Source code installs do give you something, though, because you can then customize the program in ways that aren't possible with binary files.
+
+Linux generates a large number of system log messages, and it's easy to overlook these log files. Particularly if your system is on the Internet, however, you shouldn't do so because the log files may indicate an attack by a cracker or other important problems with the system. Fortunately, the swatch program can help by sifting through the log files, locating messages that are important, and discarding the rest. swatch can then send important messages to you via email (preferably on another computer), a printer, or some other means. Setting up a log file monitoring system can go a long ways towards keeping your system running smoothly.

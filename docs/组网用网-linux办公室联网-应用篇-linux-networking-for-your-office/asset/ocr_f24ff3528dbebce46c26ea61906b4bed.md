@@ -1,0 +1,13 @@
++   - Product Web sites—You can check the Web sites for major packages, such as Samba, for security-related updates. It’s particularly important that you check such sites routinely if the package in question isn’t part of a standard installation of your Linux distribution, such as xinetd.
++   - The comp.security newsgroup hierarchy—There are several Usenet newsgroups with names beginning comp.security. These groups can be an important source of information on computer security issues.
++   - Mailing lists—There are numerous security-related mailing lists, mostly concerned with fairly specific topics. If you’re interested in locating a mailing list related to a specific topic, try starting at an appropriate Web site and skim for information on mailing lists. You could also try posting a query for information on an appropriate newsgroup. Both CERT and CIAC maintain mailing lists. To subscribe to the former, send a message to cert-advisory-request@cert.org with a Subject line of subscribe. To subscribe to the CIAC mailing list, send a message to majordomo@tholia.llnl.gov with subscribe ciac-bulletin as the text of the message.
+
+In addition, there are a plethora of security-related Web sites, including sites concerned with the security of specific products and protocols. Any Web search engine should turn up sites on specific topics in which you’re interested.
+
+# Summary
+
+Keeping your system from being used or abused by unauthorized individuals is a difficult task, and there’s no way to be 100% secure. Even if you had extraordinary knowledge of computer security, you could become the victim of a bug in a program you trust, such as inetd, xinetd, sendmail, or some other server, or even potentially of a client program. For this reason, you should monitor Web sites and other online resources for security update information.
+
+You should close down services that aren’t needed on specific interfaces or by sites other than those that do need them. If your FTP server, to name one example, is online only so that your colleagues at a specific institution can exchange data with you, you can use TCP Wrappers, xinetd, or ipchains to block that server to everybody but your colleagues.
+
+You should pay attention to passwords, as well, even when you believe those passwords are only usable on your internal network. Passwords are your first and, sometimes, last line of defense against crackers. Because a Linux server is likely to have many users, it’s also likely to have many passwords, and this fact means that your users need to understand the importance of password security, more so than they need to understand the workings of inetd or similar administrative details.

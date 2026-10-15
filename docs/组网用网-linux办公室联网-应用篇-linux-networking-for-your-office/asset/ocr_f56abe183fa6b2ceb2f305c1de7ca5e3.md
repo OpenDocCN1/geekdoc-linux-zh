@@ -1,0 +1,13 @@
++   Parallel port tape—Some parallel port tape drives are supported by ftape, and others are supported by the parallel port AT attachment packet interface (ATAPI) drivers, which you can activate from the Block devices kernel configuration menu. Select Parallel port IDE device support and Parallel port ATAPI tapes. There are also a few unusual devices supported in the Parallel port generic ATAPI devices section, and you might need one of these. In all cases, you also need the Parallel port support item from the General setup configuration menu.
+
+# NOTE
+
+> Basic tape drive functionality is fairly well standardized, so to use the tools described in this chapter, you don’t need specialized drivers for the specific model of tape drive you own, just for the general type of tape drive. Some commercial packages provide special options to use unusual features of specific drives, though, so you might want to check on support for those features before buying hardware or software.
+
+In general, I recommend using SCSI tape backup hardware for large workstations and servers, including network backup servers. SCSI tape drives tend to be the most reliable. EIDE devices are acceptable in some situations, particularly in small and low-performance networks. Floppy- and parallel port-based hardware tends to be slow and unreliable—two characteristics that are anathema to a network backup server.
+
+After compiling a kernel with tape support, you need to reboot and then use an appropriate device file. For SCSI tapes, the most likely devices to use are /dev/st0 and /dev/nst0. For EIDE tape devices, including those interfaced via the parallel port, you generally use /dev/ht0 or /dev/nht0. For ftape devices, you use any of several device files that contain ft in their filenames, such as /dev/nft0 or /dev/zqft0. See http://www.math1.rwth-aachen.de/~heine/ftape/ for details on what these devices do. For all interfaces, the device names that begin with n, such as /dev/nst0, do not rewind the tape after an operation completes. This feature lets you place more than one backup on a tape, if there’s room. The devices that don’t begin with n automatically rewind the tape after every operation, which is convenient when you want to perform a single backup on a tape.
+
+# TIP
+
+> You might want to create a link from /dev/tape to the tape device used on your system. Doing so can be particularly convenient if you administer several Linux computers, each of which has a different type of tape drive; you can create one set of backup scripts that access /dev/tape and use the same scripts on all the computers.

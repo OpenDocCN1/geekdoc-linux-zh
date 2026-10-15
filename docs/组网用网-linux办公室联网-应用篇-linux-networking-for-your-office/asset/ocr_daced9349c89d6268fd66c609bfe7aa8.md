@@ -1,0 +1,12 @@
+You should be aware of several points when configuring two or more NICs for use on a single system:
+
++   - Your computer can have two or more names, one for each network (each name can have several aliases, as well).
++   - Assuming you’re linking a private intranet to the Internet as a whole, one machine name should be the computer’s valid Internet name. The other can, and probably should, be a made-up name for a nonexistent top-level domain. Figure 20.2 shows a machine name of speaker.ringworld.smithrod, for instance. This naming practice, and giving machines on your private intranet names in the same fictitious domain, will prevent inadvertent name collisions because nobody else will choose the same as you use for one of your systems. Even if such repetition did occur, each network will remain invisible to the other because these names won’t be propagated through the Internet’s DNS system. Thus, creating a fictitious top-level domain serves much the same purpose as does using a reserved private IP address.
++   - You must specify a different Net device for each interface. On a two-Ethernet-adapter system, these devices will be eth0 and eth1.
++   - In theory, you can mix-and-match Manual, Dhcp, and Bootp configurations for your NICs. In practice, you may need to use a particular configuration method on one interface or another.
+
+# Tip
+
+You can configure either Adapter 1 or Adapter 2 to be the one that’s linked to the Internet as a whole. If you have problems getting a configuration working with one assignment, try swapping them. Likewise, you can assign either Ethernet device to either Adapter number tab. Remember to swap the Ethernet cables around, if necessary, to bind the correct set of Linux options to a given physical network cable! Sometimes a specific Ethernet board doesn’t work well with one configuration or with a specific physical network, so juggling assignments can occasionally fix problems.
+
+When it comes time to define the default route using the Default gateway option on the Config, Networking, Client tasks, Routing and gateways, Defaults linuxconf page (Figure 20.3), you should enter the gateway IP address provided by your ISP or network manager. Linux can normally determine to which interface this gateway is connected. For IP masquerading to work, you’ll also want to be sure the Enable routing option is enabled.

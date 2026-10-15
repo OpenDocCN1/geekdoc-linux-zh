@@ -1,0 +1,42 @@
+
+
+linking networks in this section, however, and two more (Internet Protocol [IP] masquerading and firewalls) make appearances toward the end of this chapter, and in detail in Part VI, “Linking Your Intranet to the Internet.”
+
+![](img/5d4d3092919d1d16884788127447cc6d_106_0.png)
+
+## FIGURE 4.5
+
+The ring topology is like a bus topology closed in on itself.
+
+## NOTE
+
+Switches and hubs connect individual computers. Routers and bridges, by contrast, connect entire networks, or at least network segments.
+
+## Bridges
+
+A network bridge is used to combine two similar networks into one logical whole. In a small office environment, bridging is likely to be used to link two otherwise separate Ethernet networks. A bridge can be a specialized hardware device, or it can be a computer that could conceivably function as a node on one or both of the networks it links. Once bridged, the previously separate networks are often referred to as segments of a larger network.
+
+## Note
+
+Many software protocols also break networks up into groups. In the built-in networking in Microsoft Windows, for instance, you can define separate workgroups. Details differ from one software product to another, but in general, the software groupings are separate from the hardware segments created by bridging or routing. Hardware segmentation can, however, make it difficult or impossible to create a single group that easily spans the two segments, depending on the protocols used. The segments created by using bridges or routers are distinct from the subnets created by particular uses of IP address assignments, but the two can have similar consequences for software.
+
+A bridge takes the Ethernet traffic from one of its two Ethernet ports and copies it directly to the other port. This makes a bridge a very simple device in principle, much like an Ethernet switch. A bridge typically doesn’t care what type of networking protocols it’s transferring—TCP/IP, AppleTalk, NetBIOS, or whatever. A bridge can, however, recognize what traffic belongs on each side of the network. The bridge can therefore pass only packets destined for the opposite side, thus reducing overall network traffic. For instance, if Segment A contains a Linux computer that functions as a print server, then when a computer on Segment A submits a print job, Segment B won’t see any activity from that job. This characteristic can be particularly handy if you have a network with two easily defined groups, such as Macintosh and Windows computers or workstations that use two different servers.
+
+Bridges can be useful for extending the range of an existing Ethernet network. For instance, if you’re using 10Base2 cabling but find you need to expand your network past the 607-foot limit of this technology, you can use a bridge to expand the limit. You can also use a bridge to connect a coaxial Ethernet network to a twisted-pair Ethernet network. Finally, and often most importantly, a bridge’s filtering features allow it to reduce overall network traffic and improve performance.
+
+You can configure the Linux kernel to support bridge functions, so that a Linux computer can function as a bridge. (In the Linux 2.2.x kernel series, this support is considered experimental, however, so you should use it with caution.) You can also purchase standalone bridges of various types. Some more complex bridges permit linking networks over some intermediary device, such as linking two Ethernet networks via modem. This practice is known as tunneling. Such a use creates what’s often referred to as a virtual network. A bridge doesn’t need an IP address of its own, but if you configure a Linux computer to serve as a bridge, it can have its own IP address, and can participate in normal networking activities.
+
+## Routers
+
+A router is a more complicated method of linking two networks than a bridge. Whereas a bridge merely copies Ethernet packets from one network to another, a router interprets the IP addressing of the packets and sends them to the appropriate destination. Note that a bridge also checks the destination of packets, but a bridge uses the Ethernet address for its filtering, whereas a router uses the IP address for this function (you'll learn more on these shortly). Because Ethernet addresses are specific to Ethernet cards, whereas IP addresses are a higher-level construct, a router can link networks that are more dissimilar than can a bridge. For example, you can use a router to link Ethernet and Token Ring networks.
+
+Routers can also serve more complex functions, particularly in an environment in which they're connected to more than two networks. For instance, suppose you've subscribed to both digital subscriber line (DSL) and cable modem service. You could configure a router for your home network to send data to the Internet over either or both of those services. For most sites, it probably won't make much difference which interface you use, but for some it might. If downloads from speedy.cable.com are faster over the cable modem, and if downloads from speedy.dsl.com are faster over the DSL link, then the router can send data over the most efficient link.
+
+Routing can quickly become a very complex topic, but fortunately, most small networks have only modest routing needs. In fact, all Linux computers have a routing configuration, but for a typical computer with only a single network connection, it will just route all outgoing traffic over that connection. Such a simple routing configuration is set up more-or-less automatically when you install Linux or configure networking as a whole, as described in Chapters 5, "Basic Linux Configuration," and 7, "Setting Ethernet Options." If you need to set up a more complex router, you should consult the Linux NET-3 HOWTO, which comes with most Linux distributions, and is also on the CD-ROM that accompanies this book in the doc/HOWTO directory.
+
+In general, routing is more complex and more flexible than bridging, but there are exceptions. A bridge, for instance, can easily handle raw AppleTalk and NetBIOS packets. A TCP/IP router, on the other hand, cannot do so because these aren't TCP/IP packets. A router can process these packets when they're encapsulated in TCP/IP, however.
+
+## NOTE
+
+> It's possible to link two incompatible network types in a variety of ways. For instance, if you have a Macintosh LocalTalk network and a separate PC Ethernet network, you can set up a Linux box with interfaces to both networks. Using the Samba and Netatalk packages, you can attach to printers and filesystems exported from one network and then re-export them to the other. This adds several layers of overhead, however, so a more efficient configuration in such a situation is to use the Linux computer as a server for the resources needed by both networks.
+

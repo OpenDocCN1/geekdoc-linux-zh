@@ -1,0 +1,13 @@
+You might have other reasons to use X's networking features. The flexibility of X's design allows you to use remote access in ways that might be important to you but that might not be easy for others (such as X's designers) to predict.
+
+# Using an X Server
+
+In X parlance, the server handles the display of information for the client, which is an application program of some variety. When you aren't sitting at the console, this results in some potentially confusing terminology because the server is the system at which you're sitting, whereas the client is the computer whose resources you want to access. This terminology is exactly backward from what most people expect because the server is usually the distant machine with the resources you want to use. To understand this terminology, though, you should look at it from the point of view of the application program. When you use a word processor on a Macintosh and want to save a file to a distant system, the word processor must access the resources on that distant system. When you use an X-based Linux word processor in a networked environment, though, the word processor must make requests of distant resources merely to display your document—from the program's point of view, the display at which you're staring really is a server. The same is true when you use a standalone Linux system, except that X runs on the same system as the application program. In this case, you still run an X server program, but it happens to run on the same computer as the applications.
+
+# Examples of X Server Software
+
+Many programs exist for handling X displays on various operating systems. The following are some examples:
+
++   - XFree86—XFree86 comes with all major Linux distributions, and is capable of handling the display of applications from a distant system. You can therefore use one Linux computer as a remote X display for another Linux computer. XFree86 is also available on assorted non-Linux platforms, including many UNIX flavors and OS/2. You can find out more from the XFree86 Web site, http://www.xfree86.org.
++   - Metro-X—This is a commercial X server for Linux and various UNIX flavors. It replaces the server component of XFree86. In some cases Metro-X may run faster than XFree86 or support hardware that XFree86 doesn't support. In other cases XFree86 is the superior product. For more information, check out http://www.metrolink.com.
++   - Accelerated-X—Accelerated-X is another commercial X server for Linux, FreeBSD, and Solaris. Similar comments apply to Accelerated-X as apply to Metro-X. You can find more information at http://www.xig.com.

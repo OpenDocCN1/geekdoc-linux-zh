@@ -1,0 +1,14 @@
++   - /proc—/proc is a special directory and filesystem that contains information about your system.
++   - /tmp—The /tmp directory stores files that are intended to last for a short period of time.
++   - /var—The /var directory stores frequently changed spool and log files. A system that serves as a mail or news server is likely to require a large amount of space in /var (either on its own partition or as part of /). The same is true of a system that runs as a print server if it's common for several large print jobs to collect, as might happen near a major deadline in a graphics art department.
++   - /boot—As mentioned earlier, a /boot partition can be useful if you have a particularly large hard disk, to ensure that the kernel falls below the 1024-cylinder limit.
+
+In addition to these partitions, you might create mount points for any non-Linux operating systems you have on the computer, such as /windows or /c for a Windows C: drive. If your system has a very large number of users creating many large files, you might need more than one physical disk to store all the files, in which case you might create a /home2 mount point and a separate partition on a second disk for some users' home directories.
+
+# Modifying an Existing Partition Scheme
+
+If you've previously installed Linux and find that your partitioning scheme is suboptimal, you can recover it in several ways:
+
++   - Back up, repartition, and restore—This is a time-tested method that provides maximum flexibility because you can completely redesign the layout of your Linux partitions, without regard to the current layout. It requires that you have adequate backup hardware and software, but you should have such facilities in any event.
++   - Use Partition Magic to repartition the system dynamically—Although it's written for DOS and Windows, Partition Magic 4.0 can be invaluable if you find that one partition is too large, but an adjoining partition is too small. You can boot a DOS floppy with the DOS version of Partition Magic and use the program to shrink the too-large partition and enlarge the too-small one to fill the space, thus providing a superior partitioning scheme. You can also copy partitions from one hard disk to another. I strongly advise that you back up your system before using Partition Magic, though; it's usually reliable, but the types of operations it performs are inherently dangerous, so any error or problem along the way (such as a power failure) can result in disaster. Also, be sure you get version 4.0 or above, since prior versions didn't support operations on Linux ext2 partitions.
++   - Add new partitions to an existing setup—If your system has two or more OSs, you might decide to convert space from use in one OS for use in Linux. If the space you want to devote to Linux is contained in a single partition, you can do this by using Linux's fdisk to change the type of the partition, creating a Linux filesystem on the partition with

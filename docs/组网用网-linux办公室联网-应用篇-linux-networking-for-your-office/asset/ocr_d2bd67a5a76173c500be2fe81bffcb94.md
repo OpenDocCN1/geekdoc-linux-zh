@@ -1,0 +1,13 @@
+# NetBIOS and NetBEUI
+
+In the 1980s, before the Internet or TCP/IP networking were common in businesses, IBM wanted to sell small intranets to businesses. It chose to design its own networking protocol, which it called the Network Basic Input/Output System (NetBIOS). Microsoft eventually licensed NetBIOS from IBM, and now NetBIOS is the basis of Windows’ native file and printer sharing protocols. An extension to NetBIOS is called NetBIOS Extended User Interface (NetBEUI), and serves to encapsulate NetBIOS data on a network.
+
+A NetBIOS network is organized quite differently from a TCP/IP network. Rather than TCP/IP’s 32-bit numeric IP addresses, subnets, and DNS system, NetBIOS and NetBEUI organize a network in two ways. First, the network is broken into one or more workgroups, each of which is given a unique name. For instance, a college might have workgroups for each department, with appropriate names such as PSYCH, RUSSIAN, and MATH. Within each workgroup, each computer has its own name (perhaps named after the computers’ users, such as JAMES and WUNDT). Computers talk to each other using their names, and they know each other’s names because they periodically announce them to the entire workgroup.
+
+On the surface, this organization seems similar to the TCP/IP organization, at least from the user’s point of view. It’s important to recognize, however, that NetBIOS and NetBEUI use the human-readable names to identify computers (not numbers, as in TCP/IP’s IP addresses), and there’s no provision for an organizational layer above the workgroup.
+
+The NetBIOS and NetBEUI systems don’t scale up very well; they generate a lot more traffic than TCP/IP when the network size increases. The naming and limited organizational features of NetBIOS/NetBEUI also limit its expandability. In addition, with the advent of the Internet, Microsoft found it desirable to shift its networking emphasis to TCP/IP. Completely abandoning NetBIOS was undesirable for legacy reasons, however. One approach to this competing set of needs is to transmit NetBIOS over TCP/IP, and Microsoft and IBM have both chosen to support this approach. Linux doesn’t support “raw” NetBIOS, but it does support it when it’s encapsulated in TCP/IP. This is the basis for Samba, Linux’s approach to file sharing with Windows.
+
+# NOTE
+
+The NetBIOS/NetBEUI name for a computer need not bear any resemblance to that computer’s Internet identifier. For instance, a computer called frank.nephridior.com on the Internet could be called EAGER on a NetBIOS network. It’s generally simpler to use the Internet machine name (frank, in this case) for the computer’s NetBIOS name, however.
