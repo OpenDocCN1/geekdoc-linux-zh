@@ -1,0 +1,102 @@
+
+If you have a very large filesystem, it’s possible that this approach will consume a nontrivial amount of space. One way to address this issue is to make sure that the individual `.slocatedb` database files don’t contain entries that also appear in the central database. This requires a bit more processing up front (`sort` both and then use `diff`, or simply skip `/usr` and `/bin` when searching for individual user files), but it could pay off in terms of saved space.
+
+最后，另一种节省空间的简单方法是保持 `.slocatedb` 文件处于压缩状态，并在使用 `slocate` 搜索时即时解压缩。有关如何执行此操作的灵感，请参阅第 109 页脚本 #33 中的 `zgrep` 命令。
+
+## 40 将用户添加到系统
+
+如果你负责管理 Unix 或 Linux 系统网络，你已经体验过由不同操作系统之间细微不兼容性造成的挫败感。一些最基本的管理任务在不同 Unix 版本之间证明是最不兼容的，而其中首要的任务就是用户账户管理。与其提供一个在所有 Linux 版本中 100% 一致的命令行界面，每个厂商都开发了自己的图形界面来处理其系统特有的情况。
+
+简单网络管理协议（SNMP）本应帮助规范这类问题，但管理用户账户现在与十年前一样困难，尤其是在异构计算环境中。因此，对于系统管理员来说，一组非常有用的脚本包括可以为你的特定需求定制然后轻松移植到所有 Unix 系统的 `adduser`、`suspenduser` 和 `deleteuser` 版本。我们将在此处展示 `adduser`，并在接下来的两个脚本中介绍 `suspenduser` 和 `deleteuser`。
+
+> NOTE
+>
+> OS X 是此规则的例外，它依赖于单独的用户账户数据库。为了保持你的理智，只需使用 Mac 版本的这些命令，不要尝试弄清楚它们为管理员用户提供的那种繁琐的命令行访问。
+
+在 Linux 系统上，账户是通过向 `/etc/passwd` 文件添加唯一条目来创建的，该条目由一个到八个字符的账户名、唯一的 user ID、group ID、主目录以及该用户的登录 shell 组成。现代系统将加密的密码值存储在 `/etc/shadow` 中，因此新用户条目也必须添加到该文件中。最后，账户需要在 `/etc/group` 文件中列出，用户要么作为自己的组（本脚本中实现的策略），要么作为现有组的一部分。清单 5-14 显示了我们如何完成所有这些步骤。
+
+### The Code
+
+```
+#!/bin/bash
+
+# adduser--Adds a new user to the system, including building their
+# home directory, copying in default config data, etc.
+# For a standard Unix/Linux system, not OS X.
+
+pwfile="/etc/passwd"
+shadowfile="/etc/shadow"
+gfile=/etc/group
+hdir=/home
+if [ "${id(un)}" != "root" ]; then
+echo "Error: You must be root to run this command." >&2
+exit 1
+fi
+echo "Add new user account $(hostname)"
+/bin/echo -n "login: " ; read login
+
+# The next line sets the highest possible user ID value at 5000,
+# but you should adjust this number to match the top end
+# of your user ID range.
+uid="$(awk -F: '{ if (big < $3 && $3 < 5000) big=$3 } END { print big + 1 }' /etc/passwd)"
+
+# We are giving each user their own group.
+gid=$uid
+
+/bin/echo -n "full name: " ; read fullname
+/bin/echo -n "shell: " ; read shell
+
+echo "Setting up account $login for $fullname..."
+echo "$(awk -F: '{if ($1==$id) {print $1}; {print $2}; {print $3}; {print $4}; {print $5}; {print $6}; {print $7}' /etc/passwd)" >> $pwfile
+echo "$(awk -F: '{if ($1==$id) {print $1}; {print $2}; {print $3}; {print $4}; {print $5}; {print $6}; {print $7}' /etc/passwd)" >> $shadowfile
+echo "$(awk -F: '{if ($1==$id) {print $1}; {print $2}; {print $3}; {print $4}; {print $5}; {print $6}; {print $7}' /etc/passwd)" >> $pwfile
+
+mkdir $homedir
+cp -r /etc/skel/. [a-zA-Z]* $homedir
+chmod 755 $homedir
+chown -R $id:$id $homedir
+
+# Setting an initial password
+exec passwd $login
+```
+
+### Listing 5-14: The adduser script
+
+### How It Works
+
+本脚本中最酷的单行是在 ① 处。此行扫描 `/etc/passwd` 文件以确定当前使用的最大 user ID，即小于最高允许用户账户值（5000）的 ID，但你应根据自己的配置进行调整，然后为新账户 user ID 加 1。这可以节省管理员记住下一个可用 user ID 的麻烦，并且随着用户社区的发展和变化，还能在账户信息中提供高度一致性。脚本创建账户的主目录并将 `/etc/skel` 目录的内容复制到其中。按照惯例，`/etc/skel` 目录是存放主 `.cshrc` 等文件的地方。
+
+`.login`、`.bashrc` 和 `.profile` 会被保留，并且在提供“账户服务”的 Web 服务器站点上，像 `/etc/skel/public_html` 这样的目录也会被复制到新的主目录中。这在你的组织为工程师或开发者配置 Linux 工作站或带有特殊 bash 配置的账户时非常有用。
+
+## 运行脚本
+
+此脚本必须由 `root` 运行，且没有启动参数。
+
+## 结果
+
+我们的系统已经有一个名为 `tintin` 的账户，因此我们也会确保 `snowy` 拥有自己的账户（见清单 5-15）。
+
+```
+$ sudo adduser
+Add new user account to aurora
+login: snowy
+full name: Snowy the Dog
+shell: /bin/bash
+Setting up account snowy for Snowy the Dog...
+Changing password for user snowy.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+```
+
+清单 5-15：测试 `adduser` 脚本
+
+## 修改脚本
+
+使用自己的 `adduser` 脚本的一个显著优势是，你可以在不担心操作系统升级会覆盖修改的情况下添加代码并更改某些操作的逻辑。可能的修改包括自动发送一封欢迎邮件，概述使用指南和在线帮助选项，自动打印可转交给用户的账户信息表，向邮件别名文件添加 `firstname_lastname` 或 `firstname.lastname` 别名，甚至将一组文件复制到账户中，以便所有者可以立即开始团队项目。
+
+## 41 挂起用户账户
+
+无论是用户因工业间谍被护送离开现场，还是学生放暑假，或是承包商休假，都有很多时候需要禁用账户而不实际从系统中删除它。
+
+1. 想知道我们在这里到底在说什么吗？这是 Hergé 的《丁丁历险记》，是一部 20 世纪中期的精彩连环画冒险系列。参见 http://www.tintin.com/。

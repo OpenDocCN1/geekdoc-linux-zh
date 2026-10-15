@@ -1,0 +1,193 @@
+
+```
+#!/bin/ksh
+# Program opts2
+# Using getopts -- Second try --
+1 while getopts :xy options
+do
+2 case $options in
+x) print "you entered -x as an option";;
+y) print "you entered -y as an option";;
+3 *) print $OPTARG is not a valid option 1-$2;;
+esac
+done
+```
+
+### (The Command Line)
+
+```
+$ opts2 -x
+
+you entered -x as an option
+
+$ opts2 -y
+
+you entered -y as an option
+```
+
+# 示例 12.70（续）
+
+```
+$ opts2 xy
+$ opts2 -xy
+you entered -x as an option
+you entered -y as an option
+4 $ opts2 -g
+g is not a valid option
+5 $ opts2 -c
+c is not a valid option
+```
+
+# 解释
+
+- 1 在选项列表前加上冒号可防止 Korn shell 对无效选项打印错误信息。然而，如果选项是无效选项，则问号将被赋给 `options` 变量。
+- 2 `case` 命令可用于测试问号，从而允许你向标准错误打印自己的错误信息。
+- 3 如果 `options` 变量被赋予问号，则执行此 `case` 语句。问号用反斜杠保护，这样 Korn shell 就不会将其视为通配符并尝试执行文件名替换。
+- 4 `g` 不是合法选项。问号被赋给 `options` 变量，且 `OPTARG` 被赋给非法选项 `g`。
+- 5 `c` 不是合法选项。问号被赋给 `options` 变量，且 `OPTARG` 被赋给非法选项 `c`。
+
+# 示例 12.71
+
+（脚本）
+
+```
+#!/bin/ksh
+# Program opts3
+# Using getopts -- Third try --
+1 while getopts :d options
+do
+  case $options in
+2   d) print -R "-d is the ON switch";;
+3   +d) print -R "+d is the OFF switch";;
+    \?) print $OPTARG is not a valid option;;
+  esac
+done
+# Need the -R option with print or the shell tries to use -d as a print option
+```
+
+# 示例 12.71（续）
+
+（命令行）
+
+```
+4 $ opts3 -d
+
+-d is the ON switch
+
+5 $ opts3 +d
+
++d is the OFF switch
+
+6 $ opts3 -e
+
+e is not a valid option
+
+7 $ opts3 e
+```
+
+# 解释
+
+1 `while` 命令测试 `getopts` 的退出状态；如果 `getopts` 能成功处理一个参数，则返回 0 退出状态，并进入 `while` 循环体。加在 `d` 选项前面的冒号告诉 `getopts` 如果用户输入无效选项则不要打印错误信息。
+2 合法选项之一是 `-d`。如果输入 `-d` 作为选项，则 `d`（不带连字符）存储在 `options` 变量中。（`print` 命令的 `-x` 选项允许 `print` 字符串中的第一个字符为连字符。）
+3 合法选项之一是 `+d`。如果输入 `+d` 作为选项，则 `d`（带加号）存储在 `options` 变量中。
+4 `-d` 选项是 `opts3` 的合法选项。
+5 `+d` 选项也是 `opts3` 的合法选项。
+6 `-e` 选项无效。如果选项非法，则在 `options` 中存储问号。非法参数存储在 `OPTARG` 中。
+7 选项前面既没有加连字符也没有加加号。`getopts` 命令不会将其处理为选项并返回非零退出状态。`while` 循环终止。
+
+# 示例 12.72
+
+（脚本）
+
+```
+#!/bin/ksh
+# Program opts4
+# Using getopts -- Fourth try --
+1 alias USAGE='print "usage: opts4 [-x] filename " >&2'
+2 while getopts :x: arguments
+do
+case $arguments in
+3 x) print "$OPTARG is the name of the argument ";;
+4 :) print "Please enter an argument after the -x option" >&2
+USAGE ;;
+```
+
+# 示例 12.72（续）
+
+```
+5 \?) print "$OPTARG is not a valid option." >&2
+USAGE;
+esac
+```
+
+```
+6 print "$OPTIND" # The number of the next argument to be processed
+done
+```
+
+（命令行）
+
+```
+7 $ opts4 -x
+Please enter an argument after the -x option
+usage: opts4 [-x] filename
+2
+```
+
+```
+8 $ opts4 -x filex
+filex is the name of the argument
+3
+```
+
+```
+9 $ opts4 -d
+d is not a valid option.
+usage: opts4 [-x] filename
+1
+```
+
+# 解释
+
+- 1 `alias` `USAGE` 被赋值为当 `getopts` 失败时将要打印的诊断错误信息。
+- 2 `while` 命令测试 `getopts` 的退出状态；如果 `getopts` 能成功处理一个参数，则返回零退出状态，并进入 `while` 循环体。加在 `x` 选项前面的冒号告诉 `getopts` 如果用户输入无效选项则不要打印错误信息。加在 `x` 选项后面的冒号告诉 `getopts` `x` 选项后面应跟一个参数。如果选项需要参数，则参数存储在 `getopts` 内建变量 `OPTARG` 中。
+- 3 如果 `x` 选项被赋予了参数，则参数存储在 `OPTARG` 变量中并将被打印。
+- 4 如果在 `x` 选项后未提供参数，则冒号存储在变量 `arguments` 中。显示相应的错误信息。
+
+## 12.13 安全性
+
+### 12.13.1 特权脚本
+
+如果 Korn shell 使用 `-p` 选项调用，则该脚本具有特权。当使用特权选项且真实 UID 和/或真实 GID 与有效 UID 或有效 GID 不相同时，`.profile` 将不会执行，系统文件 `etc/suid_profile` 将代替 `ENV` 文件执行。
+
+### 12.13.2 受限 Shell
+
+当 Korn shell 使用 `-r` 选项调用时，shell 处于受限状态。在受限 shell 中，`cd` 命令无法使用，`SHELL`、`ENV` 和 `PATH` 变量不能被修改或取消设置；如果命令的第一个字符是反斜杠，则无法执行；重定向运算符（`<`、`>`、`|`、`>>`）是非法的。此选项不能通过 `set` 命令取消设置或设置。命令 `rksh` 将调用一个受限 shell。
+
+## 12.14 内建命令
+
+Korn shell 有许多内建命令，如表 12.15 所示。
+
+### 表 12.15 内建命令及其功能
+
+| 命令 | 功能 |
+|---|---|
+| `:` | 空操作命令；返回退出状态 0。 |
+| `. file` | 点命令从 `file` 中读取并执行命令。 |
+| `break` | 参见第 699 页的“`break` 命令”。 |
+| `continue` | 参见第 700 页的“`continue` 命令”。 |
+| `cd` | 更改目录。 |
+| `echo [ args ]` | 显示参数。 |
+| `eval command` | Shell 在执行前对命令行进行两次扫描。 |
+| `exec command` | 在当前 shell 中运行命令以替换该 shell。 |
+| `exit [ n ]` | 以状态 `n` 退出 shell。 |
+| `export [ var ]` | 使 `var` 对子 shell 可见。 |
+
+### 表 12.15 内建命令及其功能（续）
+
+| 命令 | 功能 |
+|---|---|
+| `fc -e [ editor ] [ lnr ] first last` | 用于编辑历史列表中的命令。如果未指定编辑器，则使用 `FCEDIT` 的值；如果未设置 `FCEDIT`，则使用 `/bin/ed`。通常 `history` 是 `fc -l` 的别名。 |
+|  | **示例** |
+|  | `fc -l` 列出历史列表中最后 16 条命令。 |
+|  | `fc -e emacs grep` 将最后一条 `grep` 命令读入 `emacs` 编辑器。 |
