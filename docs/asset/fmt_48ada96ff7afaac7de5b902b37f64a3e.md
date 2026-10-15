@@ -1,0 +1,141 @@
+
+# 984 UNIX 网络编程
+
+## 索引
+
+- `Shah, H.`, 285, 953
+- 浅拷贝, 321
+- `Sharp, C.`, 266, 270, 952, 954
+- `SHUT_RD`, 173, 189, 213, 279, 405
+- `SHUT_RDWR`, 173, 175, 205, 270, 901, 919
+- `shutdown`, 119, 120, 171, 173–178, 188–209, 206–213, 267, 278–279, 341, 401, 439, 464, 485, 681, 819, 938
+- `shutdown` 的, 173
+- `shutdown` 服务器主机, 145
+- `SHUTDOWN-ACK-state`, 48
+- `SHUTDOWN-PENDING` 状态, 47–48
+- `SHUTDOWN-RECEIVED` 状态, 47–48
+- `SHUTDOWN-ERROR` 状态, 48
+- `SIG_DPL`, 129–130, 935
+- `SIG_IBG`, 129–130, 133
+- `sig_alarm`, 601, 752, 795, 803
+- `sig_child`, 133, 138, 263, 823
+- `sig_function`, 129–132, 158
+- `sig_structure`, 131
+- `sig_addpacket`, 541, 669
+- `SIGALRM`, 131, 342, 381–384, 409, 536, 539, 541, 545, 547, 601, 603, 620, 742, 745, 774, 775, 789, 796, 802, 846
+- `SIGIBO`, 128, 129, 132, 135, 137–139, 141, 152, 266, 377–386, 614, 824, 893
+- `siggettype` 函数, 541
+- `sigfault` 类型, 131
+- `SIGHUP`, 364, 370, 379, 669, 671–672
+- `SIGUSR1`, 181–182, 257, 370, 823, 880, 837, 872, 846
+- `SIGIO`, 129, 157–158, 200, 234–235, 467–468, 633–666, 679, 895
+- TCP, 264–665
+- UDP 和, 664
+- `SIGKILL`, 129, 145
+- `siglongjmp` 函数, 383, 543–545, 601, 603–604, 620, 802–803
+- `signal`, 129–132
+- 动作, 129
+- 阻塞, 131–132, 539, 541, 543, 545, 669–671
+- 捕获,
+- `signal` 的, 129
+- 传递, 131–133, 137, 539, 541, 545, 669–671, 946
+- 处置, 129, 130, 143, 676,
+- 产生, 541
+- 处理程序, 126
+- 掩码, 131, 181–182, 543, 669, 672, 802
+- 队列, 132, 138, 670–671
+- 信号函数, 130
+- `signal` 函数, 130–131, 134–137, 383, 664, 935
+- 定义的, 131
+- 源代码, 130
+- `signal-O`, 200, 234–235, 663,
+- 模型, 157–158
+- `SIGPIPE`, 142, 145, 206, 916–917, 958
+- `SIGPOLL`, 129, 663–664
+- `sigprocmask` 函数, 132, 541, 669–670
+- `sigsetjmp` 函数, 383, 543–545, 601–604, 620, 802–803
+- `SIGSTOP`, 129
+- `siguid-handler` 函数, 669
+- `SIGTERM`, 145, 146–447, 827, 938
+- `SIGURG`, 129–130, 234–235, 647–649, 651, 655, 657, 668–661
+- `SIGWINCH`, 320
+- SIT
+- 简单邮件传输协议, SMTP
+- 简单网络管理协议, SNMP
+- 简单网络时间协议, SMTP
+- 同时关闭, 40–41
+- 连接, 452–461
+- 打开, 40–41
+- `sock_len`, 69, 71–72
+- `sock_addr` 成员, 71–72, 102, 480
+- `sock_family` 成员, 71, 254
+- `sock_flowinfo` 成员, 71–72, 872
+- `sock_len` 成员, 71
+- `sock_port` 成员, 71, 102
+- `sock_scope` 成员, 71, 772
+- `sock_add` 成员, 68–70, 102, 480
+- `sock_family_member`, 68–69, 254
+- `sock_len_member`, 68
+- `sock_port_member`, 68, 69, 102
+- `sock_zero_member`, 68–70
+- `sock_info_id` 成员, 224–225
+- `sock_info_member`, 224
+- `info_ctam` 成员, 224
+- `info_flags` 成员, 224, 300
+- `info_pid` 成员, 224
+- `info_ppid` 成员, 224
+- `info_ssn` 成员, 224
+- `info_stream` 成员, 224, 292
+- `info_olive` 成员, 224, 642
+- `info_max_attempts` 成员, 228, 639–640
+- `info_max_init_time` 成员, 228, 639–640
+- `info_max_outstreams` 成员, 228
+- `info_out_streams` 成员, 228
+- `SIOCARD` 常量, 467, 485
+- `SIOCAM` 常量, 235, 465
+- `SIOCARP` 常量, 467, 482
+- `SIOCELDR` 常量, 467, 483
+- `SIOCGAR` 常量, 467, 482
+- `SIOCFFADR` 常量, 467, 480, 566, 568
+- `SIOCFFBDADDR` 常量, 467, 481, 484
+- `SIOCFFIST` 常量, 467, 469, 474, 475, 480, 500, 799
+- `SIOCFFSTADR` 常量, 467, 480, 792
+- `SIOCFFLAGS` 常量, 467, 480, 792
+- `SIOCFFSMETRIC` 常量, 467, 481
+- `SIOCFFMTU` 常量, 467, 538
+- `SIOCFFNETMASK` 常量, 467, 481
+- `SIOCFFGIUNM` 常量, 475, 484
+- `SIOCFFGRP` 常量, 234, 467, 468
+- `SIOCSTAMP` 常量, 467
+- `SIOCFSARP` 常量, 467, 481
+- `SIOCFSISSADR` 常量, 467, 481
+- `SIOCFSSTADR` 常量, 467, 481
+- `SIOCFFFFLAGS` 常量, 467, 481, 792
+- `SIOCFFSMETRIC` 常量, 467, 481
+- `SIOCFFNETMASK` 常量, 467, 481
+- `SIOCFFGRP` 常量, 234, 467, 468
+- `local-address`
+- multicast 范围, 552–553
+- unicast 范围, 881
+- `size_t_datatype`, 8
+- `sizeof`, 9, 412, 862
+- `sleep` 函数, 156, 162, 432, 533, 579, 577, 660, 916, 935
+- slow clock, 461, 496, 950
+- Smith., 325
+- `header_member`, 281
+- `sn_type`, 281
+- `snoop` 程序, 896
+- `ntp_proto` 函数, 58, 223
+- `SO_ACCEPTCONN` socket, 924
+- `SO_ACCEPTCONN` socket, 928
+- `SO_ATTACH_FILTER` socket, 792
+- `SO_BROADCAST` socket, 193, 198, 199, 236, 532, 536, 785, 895
+- `SO_BIND` socket, 249
+- `SO_DEBUG` socket, 193, 198, 199, 237, 825, 888, 925
+- `SO_DROUTE` socket, 193, 198, 199, 388, 617
+- `SO_ERROR` socket, 165, 193, 199, 200, 236, 451
+- `SO_KEEIVE` socket, 144, 145, 151, 193, 198, 200–202, 236, 288
+- `SO_LINGINGER` socket, 58, 117, 120, 143, 193, 198, 202–207, 236–237, 282, 462, 895
+- `SO_OUTLINE` socket, 193, 198, 207–647–648, 654, 662
+- `SO_RECTY` socket, 193, 198, 207–236, 240, 623, 895, 952
+- `SO_RCVL` socket, 164, 193, 198, 209–210
