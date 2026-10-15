@@ -1,0 +1,206 @@
+
+```
+# ifconfig ${USR_ALIAS_INTERFACE} alias ${USR_ALIAS_IP}
+```
+
+在“stop”入口点：
+
+```
+# ifconfig ${USR_ALIAS_INTERFACE} -alias ${USR_ALIAS_IP} abort
+```
+
+### 注意：
+
+你也可以使用 `ifconfig` 命令来绑定虚拟 MAC 地址。
+
+- 在 `application.tdf` 文件中添加一个`name_string`属性（命名为 `USR_ALIAS_VMAC`），如下所示：
+
+```
+#!===========================
+attribute: USR_ALIAS_VMAC
+type: name_string
+switch: -o av
+default:
+required: no
+```
+
+在 “start” 入口点中：
+
+```
+$ ifconfig ${USR_ALIAS_INTERFACE} alias ${USR_ALIAS_IP} \
+> physaddr ${USR_ALIAS_VMAC}
+```
+
+在 “stop” 入口点中：
+
+```
+$ ifconfig ${USR_ALIAS_INTERFACE} -alias ${USR_ALIAS_IP} \
+> -physaddr ${USR_ALIAS_VMAC} abort
+```
+
+## 24.7 受限资源的自动重启
+
+许多客户使用 CAA 不仅仅是为了让应用程序高度可用。既然 CAA 能够定期轮询应用程序的状态，并在出现（或当出现）这种情况时采取措施，为什么不利用这一功能来自动重启那些可能是多实例甚至具有集群感知能力的应用程序呢？
+
+实现方法很简单，关键在于 “check” 入口点。遗憾的是，我们无法详细说明如何实现 “check” 入口点，因为判断应用程序的健康状况具有高度主观性和应用特定性。不过，我们可以提供一些指导原则。
+
+- 如果你有一个多实例或分布式应用程序，请为每个实例创建资源。
+
+- 将 `PLACEMENT` 设置为 `"restricted"`。
+
+- 将 `HOSTING_MEMBERS` 属性设置为要限制资源所在的成员。
+
+  - 如果你正在为多实例或分布式应用程序设置多个资源，请将 `HOSTING_MEMBERS` 属性设置为每个资源对应一个成员，且不要重复。
+
+- 如果你希望在集群启动时重启资源，无论集群关闭时资源处于何种状态，请将 `AUTO_START` 属性设置为 `"1"`。
+
+- 将 `ACTIVE_PLACEMENT` 设置为 `"1"`。
+
+## 24.8 互斥资源
+
+如果你有一个应用程序必须一直运行，但又不能与另一个应用程序同时运行在同一成员上，该怎么办？
+
+在本节中，我们将介绍处理这种情况的一种可行方案。
+
+对于必须始终运行的应用程序，我们将创建一个名为 `prodAPP` 的应用资源。我们的另一个应用程序（不能与 `prodAPP` 运行在同一成员上）将称为 `devAPP`。
+
+`prodAPP` 资源将被“优先（favored）”放置在 member1（`molari`）上，而 `devAPP` 应用程序将被“限制（restricted）”在 member2（`sheridan`）上。在这种场景下，如果两个成员都处于运行状态，那么两个资源将分别运行在相反的成员上。当 member1 变得不可用时，有趣的事情就开始了。
+
+如果 member1 不可用，`prodAPP` 将迁移到 member2，但 `prodAPP` 和 `devAPP` 不能同时运行在同一成员上！
+
+### 24.8.1 创建 `USR_MUTEX` 属性
+
+为了让 `prodAPP` 和 `devAPP` 知道哪个资源是它们的“互斥资源（anti-resource）”，我们将创建一个用户定义的应用资源属性，用于此目的。该属性将是名为 `USR_MUTEX` 的`name_list`类型。
+
+- 保存一份原始 `application.tdf` 文件的副本。
+
+- 将以下条目添加到 `application.tdf` 文件中。
+
+```
+#!===========================
+attribute: USR_MUTEX
+type: name_list
+switch: -o mx
+default:
+required: no
+```
+
+### 24.8.2 创建 `prodAPP` 应用资源
+
+`prodAPP` 应用资源将使用以下属性来定义：
+
+- `-B` — 我们的 `prodAPP` 应用程序。
+
+- `-h` — 宿主成员。在本例中为 `molari`。
+
+- `-p` — 放置策略。在本例中为 `favored`。
+
+- `-o as` — 设置 `AUTO_START`。
+
+- `-o mx` — 互斥资源列表。在本例中为 `devAPP`。
+
+使用 `caa_profile` 命令创建 `prodAPP` 应用资源。
+
+```
+# caa_profile -create prodAPP -t application -B /code/caa/prodAPP \
+> -o mx=devAPP,ass1 -h molari -p favored
+```
+
+在 `prodAPP` 操作脚本的 “start” 入口点中，我们需要添加逻辑来检查 `devAPP` 的状态和位置。如果 `devAPP` 正在同一成员上运行，则停止它。如果 `devAPP` 未运行，并且 `prodAPP` 正在其优先成员之一上运行，则启动 `devAPP`。
+
+下面这段代码（使用 Korn shell 编写）是处理停止和启动 `devAPP` 的一种方法。
+
+```
+host=$(hostname -s)
+ memb=$NO_MEMB
+
+ for i in $USR_MUTEX
+ do
+   caa_stat -a $i -r
+   if (( $? == 0 )); then
+     memb=$(caa_stat -t $i \
+       | tail -1 \
+       | awk '{ print $5 }')
+     if [[ $memb == $host ]]; then
+       caa_stop $i
+     fi
+   else
+     start_mutex=0
+     for j in $CAA_HOSTING_MEMBERS
+     do
+       if [[ $host = $j ]]; then
+         start_mutex=1
+         break
+       fi
+     done
+     if (( $start_mutex )); then
+       for k in $USR_MUTEX
+       do
+         caa_start $k
+       done
+     fi
+   fi
+done
+```
+
+- 遍历互斥资源列表。
+
+- 检查资源是否正在运行。
+
+- 如果资源正在运行...
+
+- 运行 `caa_stat ($i)` 命令。
+
+- 获取最后一行。
+
+- 返回资源正在运行的成员名称。
+
+- 如果该成员与此成员相同...
+
+- 停止互斥资源。
+
+- 遍历宿主成员列表。
+
+- 如果我们运行在应该运行的位置...
+
+- 设置一个变量。
+
+- 停止循环。
+
+- 如果我们运行在应该运行的位置...
+
+- 遍历互斥资源列表。
+
+- 启动互斥资源。
+
+### 24.8.3 创建 `devAPP` 应用资源
+
+`devAPP` 应用资源将使用以下属性来定义：
+
+- `-B` — 我们的 `devAPP` 应用程序。
+
+- `-h` — 宿主成员。在本例中为 `sheridan`。
+
+- `-p` — 放置策略。在本例中为 `"restricted"`。
+
+- `-o mx` — 互斥资源列表。在本例中为 `prodAPP`。
+
+```
+# caa_stat -t devAPP prodAPP
+Name      Type        Target  State   Host
+---------- ---------- -------- ------- --------
+devAPP    application ONLINE   ONLINE  sheridan
+prodAPP   application ONLINE   ONLINE  molari
+```
+
+`prodAPP` 的 action script "start" 入口点的逻辑是否生效？让我们通过将 `prodAPP` 迁移到 `sheridan` 来查看。
+
+```
+# caa_relocate prodAPP
+Attempting to stop 'prodAPP' on member 'molari'
+Stop of 'prodAPP' on member 'molari' succeeded.
+Attempting to start 'prodAPP' on member 'sheridan'
+Start of 'prodAPP' on member 'sheridan' succeeded.
+```
+
+如果逻辑生效，`devAPP` 应该被停止。
