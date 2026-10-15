@@ -1,0 +1,42 @@
+
+VMware provides formal, official support for these editions of Linux as a guest operating system:
+
+- Red Hat Linux 5.x to 6.x
+- Caldera OpenLinux 1.3 to 2.x
+- SuSE Linux 5.3 to 6.x
+- TurboLinux 6.0
+- Corel Linux OS 1.0
+
+(In general, it's safe to assume that newer versions than those listed will work as well.)
+
+If you're extremely clever, knowledgeable, and patient, you might be able to make other distributions work, but you do so on your own, because VMware does not officially support those configurations. You may have difficulty installing VMware tools or getting certain virtual device drivers to work properly.
+
+> VMware can be coaxed to run on some Slackware Linux and Linux-Mandrake hosts, despite the fact that VMware does not support these distributions as host operating systems. But the techniques required to make VMware run on these hosts don't carry over to running them as guests. Unless you know what you're doing and you have a lot of time to kill, stick with the approved list.
+
+![](img/b2b6702758c230ce537468351fc8af15_187_0.png)
+
+In this chapter, I demonstrate Linux on Linux by installing Corel Linux OS. Because it's the newest major Linux distribution, many people have not yet had a chance to try it. Plus, it is a unique case, being the only Linux distribution currently supported as a guest OS, but not as a host OS.
+
+If Corel Linux isn't your cup of tea, keep reading. Although each Linux distribution has its own particular installation engine, the techniques are similar for any supported version of Linux, and I note some special exceptions for other distributions.
+
+> Read everything that follows in this chapter very carefully. It might get confusing, because both your host and guest operating systems are Linux. Wherever there might be confusion, I am sure to distinguish between the host (which is your PC and the Linux operating system you boot into every time you turn on your computer) and the guest (the VMware virtual machine that will be running Corel Linux OS in my examples). Be sure you understand which Linux I am referring to before you follow any of the steps.
+
+![](img/b2b6702758c230ce537468351fc8af15_187_1.png)
+
+If you want to skip installing your favorite Linux distribution and start using a Linux virtual machine right away, look on the enclosed CD-ROM in the /ReadyToRun directory. You will find two compressed files: SuSE6.3.tar.gz and TurboLinuxWS6.0.tar.gz. Each contains a pre-loaded virtual disk with SuSE Linux and TurboLinux Workstation, respectively. Inside each archive is a virtual disk image that can be immediately attached to VMware. The files SuSE-readme.txt and Turbo-readme.txt will guide you through the brief installation. Log in to the Ready To Run virtual machines with userid: vmware, password: vmware, or userid: root, password: root.
+
+## Preparing the Installation
+
+If you're reading the book cover-to-cover, by now you should be intimately familiar with the VMware Configuration Wizard, but I still spell it out step by step for clarity.
+
+### Running the Configuration Wizard
+
+Even VMware experts can benefit from the convenience of the VMware Configuration Wizard.
+
+1. If you're not already in VMware, start the main program by typing /usr/bin/vmware at a command prompt.
+2. Launch the VMware Configuration Wizard by clicking Wizard in the File menu.
+3. Click Next to clear the first greeting screen.
+4. Select Linux from the list of guest operating system choices (shown in Figure 10.2), and then click Next to proceed.
+5. Enter a path to the new directory that will house the VMware configuration files as well as the virtual disk. By default, VMware asks to create a new directory called /vmware/linux off your home directory. If you plan to install multiple Linux virtual machines, you might want to use a more descriptive name.
+6. VMware now asks whether you want to create a new virtual disk or use an existing physical disk. Unless you are familiar with the advanced disk and configuration modes described in Appendix A, "Advanced VMware Configuration," it is best to accept VMware's offer to create a new virtual disk. Click Next.
+7. Enter a size for the new virtual disk on the screen shown in Figure 10.3. Although 2,000MB is the default, you can go as high as 2,047MB. Remember that the disk grows as data is added, but you cannot change its maximum size later. Click Next to proceed.

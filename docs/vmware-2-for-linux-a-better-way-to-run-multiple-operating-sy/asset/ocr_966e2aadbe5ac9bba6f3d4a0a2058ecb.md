@@ -1,0 +1,5 @@
+VMware is your portal to a world of cross-compatibility with a range of operating systems designed for the x86 CPU family. And although Intel's designs have set the standard for personal computing over the past two decades, the PC hardware platform is not the only game in town. For nearly as long, the Apple Macintosh has inhabited a comfortable niche, largely in desktop publishing and education.
+
+If you were a part of the Macintosh community before moving to the PC and Linux, or you're simply curious about the Mac but don't want to invest any desktop space to investigate, there are emulators that allow you to re-create the Macintosh environment on your current computer. And strange though this may sound, you might wind up running a Macintosh emulator inside a VMware session, as shown in Figure 17.1!
+
+![](bbox=[0.22, 0.55, 0.78, 0.82])

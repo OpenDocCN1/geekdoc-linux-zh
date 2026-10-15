@@ -2400,6 +2400,7 @@
 +   [System P 和 Linux 基础设施虚拟化指南](docs/virtualizing-an-infrastructure-with-system-p-and-linux/README.md)
 +   [Visual Basic .NET：在 .NET 框架上构建多功能程序的视觉蓝图](docs/visual-basic-net-your-visual-blueprint-for-building-versatil/README.md)
 +   [Visual Basic .NET 视觉蓝图](docs/visual-blueprint-visual-basic-net/README.md)
++   [Linux 的 VMware 2：在 Linux 上运行多个操作系统的更好方法](docs/vmware-2-for-linux-a-better-way-to-run-multiple-operating-sy/README.md)
 +   [VMware vSphere 入学者指南（第2版）](docs/vmware-vsphere-for-dummies-2nd-edition/README.md)
 +   [VMware vSphere powerCLI 参考指南：[vSphere 管理自动化]](docs/vmware-vsphere-powercli-reference-automating-vsphere-adminis/README.md)
 +   [VoiceXML：让网站支持语音的 10 个项目](docs/voicexml-10-projects-to-voice-enable-your-web-site-gearhead-/README.md)
