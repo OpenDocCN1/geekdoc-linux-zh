@@ -1,0 +1,216 @@
+
+# 词汇表
+
+`actual adj`：真实存在的 — `actuality n` 现实 — `actuality n` — `actualize vb`
+
+`adieu n`：告别
+
+`actually adj` 实际上
+
+`actuary n`：计算保险风险和保费的人 — `actuarial adj` 精算的的
+
+`adjacent adj`：位于……附近的
+
+`adjective n`：作为名词修饰的词 — `adjective ly adj` — `adjective n`
+
+`acquaint vb 1`：告知：使熟悉 — `acquaintance n` 认识 — `acquaintance n` 认识
+
+`acquiesce vb`：同意或提交 — `acquiescence n` 顺从 — `quiescent adj` — `acquiesly adj`
+
+`adaptation n` — `adapter n`
+
+`adapt vb 1`：加入其他事物以增加 2： 昨天 3：找到总和 — `addition n` 增加 — `additional adj`
+
+`acquire vb 1`：获得 — `acquisition n` 获得 — `affective adj`
+
+`ad n 1`：欧洲平方 2：美国平方
+
+`acquit vb 1`：不宣判 2：表现良好 — `acquaint` 熟悉
+
+`acre n 1`：土地 2：4840 平方码
+
+`addict n`：在心理上或生物上依赖（药物）的人 — `vb`：导致成瘾 — `addiction n` 成瘾
+
+`addictive adj`
+
+`acree`
+
+`acrid adj`：尖锐刺鼻的 — `acidity n` 酸度 — `acidity adj` — `acidity n`
+
+`acrimony n`：语言的严厉 — `harmonious adj` 和谐的
+
+`additive n`：加入到其他事物中的物质
+
+`addle vb`：混淆
+
+`acrobat n`：杂技表演者 — `acrobatic adj` 杂技的
+
+`across adj`：在另一侧 — `prep 1`：在另一侧 2：在……上以
+
+`cross`
+
+`address vb 1`：将言语引向…… 2：标记 `address on 1`：正式演讲 2：人可以联系或邮寄的地方
+
+`acrylic n 1`：用于模制零件或合成纤维的材料
+
+`act n 1`：做 2：法律：剧的分幕 — `vb`：执行 1：在一个世纪内 2：执行对象 3：产生 4：产生活跃的 `adj n` 积极的 — `actively adv` — `across`
+
+`adept adj`：高度熟练的 — `expertly adj` 熟练地
+
+`deptness n` 熟练
+
+`adequate adj`：良好的或足够的 — `adequacy n` 充足 — `adequately adj`
+
+`action n 1`：法律程序 2：执行方式 3：活动 4：一段时间内的或分阶段的 5：战斗 6：文学情节 7：运作机制
+
+`adhere vb 1`：坚持 2：紧固
+
+`adherence n` 附着 — `adherent adj` 附着的的
+
+`ad n n n` 附行为行为或
+
+`adhesive adj`：倾向于附着的 `n` 帮助
+
+`activate vb`：使活跃或反应的 — `activity n 1`：活跃的性质或状态 2：一个人正在积极做的
+
+`actual adj`：真实存在的 — `actuality n` 现实 — `actuality n` — `actualize vb`
+
+`adieu n`：告别
+
+`actually adj` 实际上
+
+`actuary n`：计算保险风险和保费的人 — `actuarial adj` 精算的
+
+`adjacent adj`：位于……附近的
+
+`adjective n`：作为名词修饰的词 — `adjective ly adj` — `adjective n`
+
+`acquaint vb 1`：告知：使熟悉 — `acquaintance n` 认识 — `acquaintance n` 认识
+
+`acquiesce vb`：同意或提交 — `acquiescence n` 顺从 — `quiescent adj` — `acquiesly adj`
+
+`adaptation n` — `adapter n`
+
+`adapt vb 1`：加入其他事物以增加 2：昨天 3：找到总和 — `addition n` 增加 — `additional adj`
+
+`acquire vb 1`：获得 — `acquisition n` 获得 — `affective adj`
+
+`ad n 1`：欧洲平方 2：美国平方
+
+`acquit vb 1`：不宣判 2：表现良好 — `acquaint` 熟悉
+
+`acre n 1`：土地 2：4840 平方码
+
+`addict n`：在心理上或生物上依赖（药物）的人 — `vb`：导致成瘾 — `addiction n` 成瘾
+
+`addictive adj`
+
+`acree`
+
+`acrid adj`：尖锐刺鼻的 — `acidity n` 酸度 — `acidity adj` — `acidity n`
+
+`acrimony n`：语言的严厉 — `harmonious adj` 和谐的
+
+`additive n`：加入到其他事物中的物质
+
+`addle vb`：混淆
+
+`acrobat n`：杂技表演者 — `acrobatic adj` 杂技的
+
+`across adj`：在另一侧 — `prep 1`：在另一侧 2：在……上以至于
+
+`cross`
+
+`address vb 1`：将言语引向…… 2：标记 `address on 1`：正式演讲 2：人可以联系或邮寄的地方
+
+`acrylic n 1`：用于模制零件或合成纤维的材料
+
+`actact n 1`：做 2：法律：剧的分幕 — `vb`：执行 1：在一个世纪内 2：执行对象 3：产生 4： 活跃的 `adj n` 积极的 — — `adv` — `across`
+
+`adept adj`：高度熟练的 — `expertly adj` 熟练地
+
+`deptness n` 熟练
+
+`adequate adj`：良好的或足够的 — — `n` — — `adequately`
+
+`action n 1`：法律程序 2：执行方式 3：活动 4：一段时间内的或分阶段的 5：战斗 6：文学情节 7：运作
+
+`herehere 1`： 2：紧
+
+`adherence n` 附 — — — `adj` 附着的的
+
+`adhesion n`： 行为或或
+
+`adhesive adj`：倾向于附着的 `n` 帮助
+
+`activate vb`：使活跃或反应的 — `activity n 1`：活跃的性质或状态 2：一个人正在积极做的
+
+`actual adj`：真实存在的 — `actuality n` 现实 — `actuality n` — `actualize vb`
+
+`adieu n`：告别
+
+`actually adj` 实际上
+
+`actuary n`：计算保险风险和保费的人 — — `ialial` 精算的的
+
+`adjacent adj`：位于……附近的
+
+`adjective n`：作为名词修饰的词 — `adjective ly adj` — `adjective n`
+
+`acquaint vb 1`：告知：使熟悉 — `acquaintance n` 认识 — `acquaintance n` 认识
+
+`acquiesce vb`：同意或提交 — `acquiescence n` — `quiescent adj` — `acquiesly adj`
+
+`adaptation n` — `adapter n`
+
+`adapt vb 1`：加入其他事物以增加 2：昨天 3：找到总和 — `addition n` 增加 — `additional adj`
+
+`acquire vb 1`：获得 — `acquisition n` 获得 — `affective adj`
+
+`ad n 1`：欧洲平方 2：美国平方
+
+`acquit vb 1`：不宣判 2：表现良好 — `acquaint` 熟悉
+
+`acre n 1`：土地 2：
+
+`addict n`：在心理上或生物上依赖（药物）的人 — `vb`：导致成瘾 — `addiction n` 成瘾
+
+`addictive adj`
+
+`acree`
+
+`acrid adj`：尖锐刺鼻的 — `acidity n` 酸度 — `acidity adj` — `acidity n`
+
+`acrimony n`：语言的严厉 — `harmonious adj` 和谐的
+
+`additive n`：加入到其他事物中的物质
+
+`addle vb`：混淆
+
+`acrobat n`：杂技表演者 — `acrobatic adj` 技的
+
+`adj`：：在另一侧 — 1：在另一侧 2：在……上以
+
+`cross`
+
+`address vb 1`：将言语引向…… 2：标记 `address on 1`：正式演讲 2：人可以联系或邮寄的地方
+
+`acrylic n 1`：用于模制零件或合成纤维的材料
+
+`act n 1`：做 2：法律：剧的分幕 — `vb`：执行 1：在一个世纪内 2：执行对象 3：产生 4：的活跃的 `adj n` 积极的 — — `adv` — — —
+
+`adept adj`：高度熟练的 — `expertly adj` 熟练地
+
+`deptness n` 练
+
+`adequate adj`：良好的或足够的 — — `n` — `adequately`
+
+`action n 1`：法律程序 2：执行方式 3：：活动 4：一段时间内的或分的的 5：战斗 6：文学情节 7：运作机制
+
+`adhere vb 1`：坚持 2：紧固
+
+`adherence n` 附着 — — `adj` 附着的的
+
+`adhesion n`：： 行为
+
+：
