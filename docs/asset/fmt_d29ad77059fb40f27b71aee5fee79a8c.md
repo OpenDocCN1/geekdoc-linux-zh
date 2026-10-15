@@ -1,0 +1,180 @@
+
+- 打印文件内容到屏幕，4
+- 使用读取用户数据，81
+- 摄氏单位，在华氏或开尔文和之间转换，85–87
+- CentOS，`/cgi-bin` 目录，201
+- CGI（通用网关接口）
+  - 脚本，199
+  - 运行，201
+  - 查看环境，202–203
+- `grep` 脚本，107–109
+- `change mode`（`chmod`）命令，7，57
+- `changetrack` 脚本，194–197
+- `chattr` 命令，64
+- `checkexternal` 脚本，220–222
+- `checklinks` 脚本，217–220
+- `chmod`（change mode）命令，7，57
+- Chrome 操作系统（Google），299
+- 城市，检查时间，76
+- 清理访客用户后，141–143
+- 云存储，299
+  - 从照片流创建幻灯片，304–306
+  - 发送邮件或复制归档文件到，166
+  - 保持 Dropbox 运行，300–301
+  - 同步 Dropbox，301–304
+  - 使用 Google Drive 同步文件，307–309
+- 颜色序列，ANSI，40–42
+  - 用于区域高亮，107–109
+- 命令行界面，shell 作为，2
+- 命令
+  - PATH 中数量，51–52
+  - 运行，3–4
+  - 批量运行，348–351
+- 通用网关接口。参见 CGI
+- （通用网关接口）脚本
+- 通用日志格式，235
+- `composite` 实用程序，317
+- 压缩文件，109–112，113–115
+- `convertdate` 脚本，85–87
+- `convertcurrency` 脚本，190–192
+- 协调世界时（UTC），73
+- 版权
+  - `bc` 程序中的头，静音，36
+  - 问题，207
+- `cron`
+  - `archivedir` 在，171
+  - 确保作业运行，159–162
+  - 使用调度作业，154
+- `crontab`
+  - `netstat` 日志生成的条目，254
+  - 用于与 Google Drive 同步的办公文档，308
+  - 验证用户条目，154–159
+- `curl` 工具，173–174，182–183
+- 货币，计算值，190–192
+- `cut` 命令，19，89
+
+### D
+- `daemons`，119，301
+- Darwin（Unix 核心），261
+- 数据库
+  - 检查大小，70
+  - 使用 `locate` 搜索，68–71
+  - 安全搜索，127–131
+- 数据存储。参见云存储；磁盘使用
+- `date formats`
+  - 规范化，17–20
+  - 验证，29–32
+  - 操作系统中的差异，95，149
+- `dates`
+  - 计算两日期之间的天数，332–335
+  - 计算距指定日期的天数，335–339
+  - 查找特定过去日期的星期几，330–332
+  - 查找日期的月相，351–353
+  - 在系统上设置日期，148–150
+- `date` 实用程序，95，329–330，334
+- `dayinpast` 脚本，330–332
+- `daysago` 脚本，332–335
+- `daysuntil` 脚本，335–339
+- Debian，`cgi-bin` 目录，201
+- `debugging`
+  - shell 脚本，45–49
+  - 使用 shell 脚本进行调试，199
+- `decimal separator`，小数分隔符，22–23
+- `deleted files`，恢复已删除文件，55
+- `_deleted_files` 归档，55，57
+- `displaying content`，显示内容，60，62
+  - `pruning by timestamp`，按时间戳修剪，62
+- `deleteuser` 脚本，136–138
+- `deleting user accounts`，删除用户账户，136–138
+- `development folder`，创建开发文件夹，4–5
+- `df utility`
+  - 提高输出可读性，123–125
+  - 磁盘使用报告，125
+- `dice`，骰子，287–290
+- `diff` 命令，`diff` 命令，196–197
+- `directories`
+  - Apache 对密码保护的支持，223
+  - 备份目录，169–171
+  - bash 搜索目录，3
+  - 显示目录内容，65–68
+  - 将名称用作终端窗口标题，266–267
+  - 用于缩略图图像，322
+- `DIR` 脚本，71–73
+- `disabling user account`，禁用用户账户，133–136
+- `disklogs` 脚本，121–123
+- `diskspace` 脚本，125–127
+- `disk usage`
+  - 磁盘使用分析，119–120
+  - 可用空间，125–127
+  - 管理配额，121–123
+- `docru` 脚本，159–162
+- `domain names`，从网站请求域名列表，179
+- `dot (.) notation`，点号（.）表示法，参见 .（句点）
+- `double quotes`，嵌套双引号，61
+- `downloading files with FTP`，使用 FTP 下载文件，174–177
+- Dropbox
+  - 保持运行，300–301
+  - 同步，301–304
+- `d u` 命令，`d u` 命令，119
+
+## E
+- `echo` 命令，`echo` 命令，3
+  - `-n` 标志，`-n` 标志，10，33–34
+- `echon` 命令，`echon` 命令，33–34
+- `email`
+  - 将归档文件通过邮件发送到云存储，166
+  - 磁盘空间消耗警告，121–123
+  - 将网页作为邮件发送，209–211
+- `emulating`
+  - 使用 `quota` 模拟 GNU 风格标志，103–104
+  - 模拟 MS-DOS 环境，71–73
+- `encoded strings`，传输编码字符串，201
+- `end of file (EOF)`，意外的文件结束，47
+- `end-of-line character`，OS X 文件中的换行字符，262–263
+- `env` 命令，`env` 命令，202
+- `environment variables`，环境变量，11，47。另见 PATH 环境变量
+- `EOF (end of file)`，意外的文件结束，47
+- `epoch time`，纪元时间，255，330
+- `Eratosthenes`，埃拉托斯特尼筛法，287
+- `error_log` 文件，`error_log` 文件，235，242–246
+- `error messages`
+  - 防止“404 Not Found”错误，220
+  - 来自 `date --version` 的错误信息，329
+  - File does not exist，文件不存在，243
+  - 来自 ImageMagick 的错误信息，321
+  - permission denied，权限被拒绝，129
+  - unable to read font，无法读取字体，318
+- `esc` 变量，`esc` 变量，42
+- `/etc/crontab` 文件，`/etc/crontab` 文件，160
+- `/etc/daily` 目录，`/etc/daily` 目录，160，161
+- `/etc/group` 文件，`/etc/group` 文件，131
+- `/etc/monthly` 目录，`/etc/monthly` 目录，160，161
+- `/etc/passwd` 文件，`/etc/passwd` 文件，119，131
+- `/etc/shadow` 文件，`/etc/shadow` 文件，131
+- `/etc/skel` 目录，`/etc/skel` 目录，132–133
+- `/etc/weekly` 目录，`/etc/weekly` 目录，160，161
+- `eval` 命令，`eval` 命令，111，149，179
+- `events`
+  - 跟踪日历事件，90–95
+  - 记录网络事件，203–206
+- `exec call`，`exec` 调用，105
+- `executable file`，使文件可执行，6–7
+- `EXIF (exchangeable image file format)`
+  - 交换图像文件格式，EXIF
+  - 删除信息，324
+- `EXIT (SIGEXIT) signal`，`EXIT (SIGEXIT)` 信号，109
+- `exit 0` 命令，`exit 0` 命令，43
+- `Extensible Markup Language (XML)`，可扩展标记语言，174
+- `external links`，损坏外部链接报告，220–222
+- `extracting URL from web page`，从网页中提取 URL，177–180
+
+## F
+- `Fahrenheit units`，华氏单位，在摄氏或开尔文与华氏之间转换，85–87
+- `file` 命令，`file` 命令，314
+- `file does not exist error`，文件不存在错误，243
+- `file extension`，脚本的文件扩展名，5
+- `filelock` 脚本，`filelock` 脚本，37–40
+- `filenames`，用户特定的数据库文件名，129
+- `file permissions`，执行脚本的文件权限，6–7
+- `files`
+  - `files`
