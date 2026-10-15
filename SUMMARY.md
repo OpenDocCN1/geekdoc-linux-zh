@@ -2429,6 +2429,7 @@
 +   [无线网络管理入门指南 (Network Pro Library)](docs/wireless-network-administration-a-beginners-guide-network-pr/README.md)
 +   [无线网络安全初学者指南：设置并维护安全无线网络；了解黑客如何入侵以及如何阻止；避免攻击并防止漏洞](docs/wireless-network-security-a-beginners-guide-set-up-and-maint/README.md)
 +   [木工手工具：必备指南](docs/woodworkers-hand-tools-an-essential-guide/README.md)
++   [Linux 的 WordPerfect 8：Visual 快速启动指南](docs/wordperfect-8-for-linux-visual-quick-start-guide/README.md)
 +   [Wordperfect Linux 入门指南](docs/wordperfect-for-linux-bible/README.md)
 +   [Wordperfect？Linux 版？初学者指南？](docs/wordperfect-for-linux-for-dummies/README.md)
 +   [WordPerfect Office 2000 for Linux 快速上手指南](docs/wordperfect-office-2000-for-linux-fast-easy-psr-fast-easy/README.md)

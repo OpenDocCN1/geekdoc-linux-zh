@@ -1,0 +1,69 @@
+
+
+## QuickCorrect
+
+除了自动替换拼写错误、打字错误单词和缩写外，QuickCorrect 还可用于插入 SmartQuotes——即用排版引号替换直线的单引号和双引号，并修正诸如单词之间有两个空格以及句子开头有两个大写字母等问题。
+
+另一个 QuickCorrect 选项称为 Format-As-You-Go。Format-As-You-Go 可帮助你在打字时插入格式元素，例如项目符号和编号列表、序数词和换行符。
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_171_0.png)
+
+## To turn QuickCorrect on or off:
+
+- 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
+- 2. To turn QuickCorrect on, make sure the check boxes next to Replace words as you type and Correct other mis-typed words when possible are selected. To turn QuickCorrect off, deselect the check boxes.
+- 3. Click OK. The QuickCorrect dialog box will close and will be on or off depending upon whether you selected the check boxes or not.
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_171_1.png)
+
+Tip
+
+- By default, QuickCorrect is turned on when you launch WordPerfect for the first time.
+
+## To add a new entry to QuickCorrect:
+
+- 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
+- 2. In the Replace text box, enter the incorrect spelling of a word you usually misspell, or type an abbreviation for a word or several words that you would like replaced as you type (Figure 3).
+- 3. In the With text box, enter the correct spelling for the word or the word(s) you would like replaced by the abbreviation (Figure 4).
+- 4. Click Add Entry.
+- 5. Continue adding as many words or abbreviations as you would like in the Replace and With text boxes, following the steps 2-4 above.
+- 6. When you are finished entering words, click OK. The QuickCorrect dialog box will close. The next time you type one of the misspelled words or abbreviations you entered, QuickCorrect will replace the text after you press the space bar on the keyboard.
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_0.png)
+
+Figure 3. Type the misspelled word or abbreviation in the Replace text box.
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_1.png)
+
+Figure 4. Type the correctly spelled word or the word(s) that will replace the abbreviation.
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_2.png)
+
+Figure 5. Make sure the check box next to Replace words as you type is selected, otherwise, QuickCorrect will be turned off.
+
+## Tip
+
+- Make sure the check box next to Replace words as you type is selected in the QuickCorrect dialog box (Figure 5). Otherwise, QuickCorrect will be turned off.
+
+## To turn on SmartQuotes:
+
+- 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
+- 2. Select the SmartQuotes radio button. The QuickCorrect dialog box will change to display SmartQuote options (Figure 6).
+- 3. In the Select quotation marks area, select the check boxes next to the options you would like to turn on:
+- Use double quotation marks as you type replaces straight double quotation marks with typographer’s double quotes.
+- Use single quotation marks as you type replaces straight single quotation marks with typographer’s single quotes.
+- Use straight quotation marks after numbers. This is handy if you are typing measurements and don’t want to have to turn SmartQuotes off every time you need a straight quote to indicate inches or feet.
+- 4. Click OK. The QuickCorrect dialog box will close. The next time you type a single or double quote, it will automatically be replaced with a typographer’s quote.
+
+## Tip
+
+- You can set the type of typographer’s quotes that are used by clicking the drop-down list button next to the Open and Close text boxes in the Select quotation marks area (Figure 7).
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_173_0.png)
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_173_1.png)
+
+## WordPerfect’s Proofreading Tools are Good, but...
+
+...there’s no substitute for reading a document carefully to manually check for mistakes. While WordPerfect’s Spell Check and Grammar tools are a great way to help you quickly find and fix errors, they aren’t perfect. Computers help us do many things, but they are still tools and no substitute for humans!
+

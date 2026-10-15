@@ -1,0 +1,86 @@
+
+
+## THE BASICS
+
+## 1
+
+欢迎来到 WordPerfect 8 for Linux 的世界！我是一名长期使用 WordPerfect 的忠实用户，很高兴看到它在 Linux 平台上运行。
+
+我写这本书的目的是展示使用 WordPerfect 8 提供的工具创建专业文档是多么容易。遵循 Visual QuickStart Guide 的格式，我的目标是通过配有插图的简单分步说明，让即使是最复杂的文字处理程序也变得易于理解。
+
+WordPerfect 8 for Linux 提供了完整、专业的工具集，可用于创建各种文档，从生日卡片、宣传册和通讯，到报告、备忘录以及包含图表和表格的信息密集型文档。该程序功能强大、特性丰富，所有功能都集成在一个对使用过其他文字处理程序的人来说很熟悉的用户界面中。WordPerfect 8 功能如此强大，同时也易于使用。你可以尽情使用它。
+
+WordPerfect 功能丰富。如果你一步一步来，很快就能创建专业文档。对于熟悉之前 WordPerfect DOS 和 Windows 版本的读者，请将本书用作新功能和技巧的指南，以及方便的参考资料。
+
+让我们开始吧！
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_12_0.png)
+
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_12_1.png)
+
+## Why Linux?
+
+为什么要在 Linux 上运行 WordPerfect？这个问题有很多很好的答案，正如 Linux 成为当今增长最快的操作系统所证明的那样。也许你选择 Linux 是因为：
+
+- 它是 Web 服务器的主流操作系统。
+- 它比任何版本的 Microsoft Windows 都更稳定。（我已经运行了几个月，还没有一次崩溃！）
+- 它价格极其实惠。
+- 你相信开源运动的理念。
+
+另一方面，也许你听说过很多关于 Linux 的事情，只是开始尝试它。
+
+无论你选择 Linux 的原因是什么，WordPerfect 8 for Linux 都是你专业文字处理需求的优秀工具。
+
+你会很高兴知道 WordPerfect 8 for Linux 与在 Microsoft Windows 上运行的任何文字处理器一样易于使用。换句话说，你不必是技术天才就能让 WordPerfect 运行起来。最好的消息是：你可以在 WordPerfect 8 for Linux 中保存和打开与许多 Microsoft Windows 文件格式兼容的文件，包括 Microsoft Word for Windows。（请翻到第 44 页了解如何操作的详细说明。）
+
+### Learning More About Linux
+
+如果你想了解更多关于 Linux 的信息，我丈夫的精彩书籍将帮助你更快地入门（不，我不是偏心的！）。他的书：《Red Hat Linux 6: Visual QuickPro Guide》作者 Harold Davis（Peachpit Press）。这本书随附 CD-ROM 上的完整可用的 Linux 副本。
+
+一些你可以访问以获取更多关于 Linux 和 Linux 社区信息的网站：
+非常有用的 Linux 链接：http://www.bearhome.com/linux/links.html
+Red Hat 主页：http://www.redhat.com/
+Linux Links，Linux 信息门户：http://www.linuxlinks.com/
+
+### Companion Web Sites
+
+Peachpit Press 为其 Linux 系列图书创建了配套网站。这些配套网站包括书籍的文本摘录、其他资源的链接、讨论线程和聊天区。
+
+《WordPerfect 8 for Linux: Visual QuickStart Guide》的配套网站可在以下地址找到：http://www.peachpit.com/vqs/linuxwp8/
+
+《Red Hat Linux 6: Visual Quick Pro Guide》的配套网站可在以下地址找到：http://www.peachpit.com/vqp/linux
+
+## The Way WordPerfect Works
+
+WordPerfect 8 是一个功能齐全的文字处理程序，可用于创建各种基于文本的文档——信件、报告、备忘录、信封和网页。
+
+WordPerfect 8 文档在文档窗口中创建。程序窗口在启动 WordPerfect 时出现。使用程序窗口进行的任何更改都会影响 WordPerfect 中创建的所有文档。
+
+文档以 WordPerfect 8 .wpd 文件格式保存。它们可以从其他文件格式导入或导出到其他文件格式。
+
+插入点用于在页面上定位文本、图形、表格和图表。插入点还显示你在文档中的位置。阴影光标让你可以在文档中的任何位置定位文本，即使之前那里没有输入任何内容。
+
+WordPerfect 中的格式处理在字符和段落级别进行。字符格式涉及更改单个字符或字符。段落格式涉及整个段落。
+
+WordPerfect 让你可以自由发挥字符格式。你可以更改字体、字号和其他字体属性，如粗体、斜体、下划线和颜色。你可以设置文本行之间的间距。
+
+使用段落格式，你可以使用制表符设置缩进段落的第一行。或者你可以使用缩进缩进整个段落的左侧。双缩进会将段落的左右两侧都向页面中心移动。你还可以设置段落之间的间距。
+
+文本可以放置在垂直或水平分割页面的列中。主要有两种列类型——报纸式和并列式。
+
+页面设置涉及页面整体的外观。你可以调整顶部、底部、左侧和右侧边距，并设置页眉和页脚的大小和外观。可以添加和删除页面。子文档可以插入到主文档中。
+
+随 WordPerfect 提供的图形以及存储在其他剪贴画库中的图形可以插入到文档中以增加特色和趣味。图像可以水平、垂直或按比例调整大小。可以为图形添加边框和填充。文本可以设置为环绕、置于图形后面或置于图形前面。
+
+图表和表格可以创建以以有用的图形方式组织和显示信息。使用 WPD 的图表模式，你可以创建饼图、条形图、折线图、高低图、面积图和散点图。可以将几乎任何尺寸的表格插入到文档中。使用 Speed Format，你可以快速制作具有自定义外观的表格。
+
+合并可以帮助你快速将地址列表与表单信件或其他文档合并，以创建个性化副本。信封也可以使用合并字段代码创建。
+
+使用 WordPerfect，你可以使用宏记录器创建宏。宏是自动执行击键和命令的小程序。
+
+你可以更改文档的视图以使编辑更轻松。你可以放大以近距离查看并处理细节，或缩小以查看整个文档。
+
+你可以使用精确工具，如指南、制表符设置、边距设置和标尺来对齐文本、表格、图表和图像，使你的文档精确。
+
+完成文档后，文件可以打印。如果创建了 Web 文档，它可以以 HTML 格式保存到互联网。
+
