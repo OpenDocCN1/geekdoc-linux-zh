@@ -1,0 +1,116 @@
+
+# 说明
+
+- 1 定义了名为 `increment` 的函数。
+- 2 当函数被调用时，第一个参数 `$1` 的值将加 1，结果赋给 `sum`。
+- 3 内建 `return` 命令在给定参数时，会返回到调用函数的那一行之后的脚本处。它将其参数存储在 `$?` 变量中。
+- 4 字符串被回显到屏幕。
+- 5 以参数 5 调用 `increment` 函数。
+- 6 当函数返回时，其退出状态存储在 `$?` 变量中。退出状态是函数中最后一条已执行命令的退出值，除非在 `return` 语句中使用了显式参数。`return` 的参数必须是介于 0 和 255 之间的整数。
+- 7 虽然 `sum` 是在 `increment` 函数中定义的，但它的作用域是全局的，因此在调用该函数的脚本中也可使用。其值被打印出来。
+
+# 8.7 函数
+
+## 示例 8.49
+
+（使用命令替换）
+（脚本）
+
+```sh
+#!/bin/sh
+
+# Scriptname: do_square
+
+1 function square() {
+    sq=`expr $1 \* $1`
+    echo "Number to be squared is $1."
+2   echo "The result is $sq "
+}
+
+3 echo "Give me a number to square. "
+read number
+
+4 value_returned=`square $number`    # Command substitution
+
+5 echo  $value_returned
+```
+
+（输出）
+
+```
+3    Give me a number to square.
+     10
+5    Number to be squared is 10. The result is 100
+```
+
+# 说明
+
+- 1. 定义了名为 `square` 的函数。当被调用时，其功能是将参数 `$1` 乘以自身。
+- 2. 打印数字平方后的结果。
+- 3. 提示用户输入。这是程序开始执行的地方。
+- 4. 以用户输入的数字作为参数调用 `square` 函数。由于函数被反引号括起来，因此执行了命令替换。函数的输出（两条 `echo` 语句）被赋值给变量 `value_returned`。
+- 5. 命令替换会移除字符串 "Number to be squared is 10." 和 "The result is 100" 之间的换行符。
+
+### 8.7.3 函数与 dot 命令
+
+**存储函数。** 函数通常定义在 `.profile` 文件中，这样当你登录时，它们就会被定义。函数不能被导出，但可以存储在文件中。然后，当你需要该函数时，使用 dot 命令加上文件名来激活文件中函数的定义。
+
+#### 示例 8.50
+
+```sh
+1    $ cat myfunctions
+2    go() {    # This file contains two functions
+       cd $HOME/bin/prog
+       PS1='$PWD > '
+       }
+3    greetings() { echo "Hi $1! Welcome to my world."; }
+4    $ . myfunctions
+5    $ greetings george
+   Hi george! Welcome to my world.
+```
+
+# 说明
+
+- 1 显示文件 `myfunctions`。它包含两个函数定义。
+- 2 定义的第一个函数名为 `go`。它将主提示符设置为当前工作目录。
+- 3 定义的第二个函数名为 `greetings`。它会向作为参数传入的用户名打招呼。
+- 4 `dot` 命令将 `myfunctions` 文件的内容加载到 shell 内存中。现在这两个函数都在该 shell 中定义好了。
+- 5 调用并执行 `greetings` 函数。
+
+#### 示例 8.51
+
+（下面显示的 `.dbfunctions` 文件包含主程序要使用的函数。）
+
+```sh
+1 $ cat .dbfunctions
+2 addon () {  # Function is named and defined in file .dbfunctions
+3 while true
+do
+echo "Adding information "
+echo "Type the full name of employee "
+read name
+echo "Type address for employee "
+read address
+echo "Type start date for employee (4/10/88) :"
+read startdate
+echo $name:$address:$startdate
+echo -n "Is this correct? "
+read ans
+case "$ans" in
+[Yy]*)
+echo "Adding info..."
+echo $name:$address:$startdate>>datafile
+sort -u datafile -o datafile
+echo -n "Do you want to go back to the main menu? "
+read ans
+if [ $ans = Y -o $ans = y ]
+then
+return      # Return to calling program
+else
+continue    # Go to the top of the loop
+fi
+;;
+*)
+echo "Do you want to try again? "
+read answer
+```
