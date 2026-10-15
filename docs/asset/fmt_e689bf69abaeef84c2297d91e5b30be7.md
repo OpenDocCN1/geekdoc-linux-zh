@@ -1,0 +1,150 @@
+
+```
+227 Entering Passive Mode (216,155,202,100,128)
+150 ASCII data connection for /bin/ls (216.155.202.163,1049) (0 bytes).
+SUNWebfs:
+total 524
+drwxr-xr-x 6 root bin       512 Nov 11 16:37 .
+drwxr-xr-x 7 root sys       512 Feb 2 13:37 ..
+drwxr-xr-x 4 root sys       512 Nov 11 16:37
+drwxr-xr-x 3 root sys       512 Nov 21 16:37
+drwxr-xr-x 2 root root 5512  11 16:11
+drwxr-xr-x 20 root sys       512 Jan 24 23:20
+-r--r--r-- 1 root       916 Apr 20 17:09
+-r--r--r-- 1 root       1016 Apr 20 15:10
+226 ASCII Transfer complete.
+ftp>
+```
+
+由 `/bin/ls` 命令生成的输出；读者此时对这应当是熟悉的。`ftp` 客户端程序支持通配符匹配和其它的正则表达式字符，如 `"[ ].*" `。`dir` 命令可以与 UNIX 表达式组合使用，以仅列出某些文件和/或目录。因此，命令
+
+```
+ftp> dir SUN*
+```
+
+将产生以下输出，基于上面的目录列表：
+
+```
+227 Entering Passive Mode (216,155,202,100,128)
+150 ASCII data connection for /bin/ls (216.155.202.163,1049) (0 bytes).
+SUNWebfs:
+total 524
+drwxr-xr-x 6 root bin       512 Nov 11 16:37 .
+drwxr-xr-x 7 root sys       512 Feb 2 13:37 ..
+drwxr-xr-x 4 root sys       512 Nov 11 16:37
+drwxr-xr-x 3 root sys       512 Nov 21 16:37
+drwxr-xr-x 2 root root 5512  11 16:11
+drwxr-xr-x 20 root sys       512 Jan 24 23:20
+-r--r--r-- 1 root       916 Apr 20 17:09
+-r--r--r-- 1 root       1016 Apr 20 15:10
+226 ASCII Transfer complete.
+ftp>
+```
+
+# 540 UNIX 系统管理：初学者指南
+
+## 模块 18：文件传输协议 537
+
+### 注意
+
+默认情况下，许多 UNIX 系统允许用户在没有额外配置或设置的情况下访问 FTP 服务。本模块将讨论如何配置 FTP 匿名访问。
+
+一旦用户通过 FTP 服务器的身份验证，它将回显显示用户已登录的消息，如下所示：
+
+`230 User root logged in.`
+
+此时，FTP 服务器指示服务器所运行的系统类型（`Remote system type is UNIX.`），并提供有关连接的额外信息（`Using binary mode to transfer files`）。“二进制模式”消息表示任何文件传输都将以这种方式进行，以确保二进制数据的准确传输。最后，提供标准的 FTP 服务器提示符：`ftp>`，这表示 FTP 客户端 shell。这通知用户服务器已准备好接受 FTP 命令。在提示符处，用户可以列出可用的 FTP 命令、获取远程或本地当前目录的目录列表、从服务器获取远程文件，或将本地文件上传到服务器。这些活动某些取决于 FTP 服务器端是否设置了某些权限或配置参数。
+
+## 获取目录列表
+
+FTP 服务提供了使用 `dir` FTP 命令在远程 FTP 服务器上导航目录的能力。例如，以下输出显示了该命令：
+
+```
+ftp> dir
+227 Entering Passive Mode (216,155,202,100,128,164)
+150 ASCII data connection for /bin/ls (216.155,202.163,1048) (0 bytes).
+total 28
+drwxr-xr-x 7 root sys 512 Feb 23:37 .
+drwxr-xr-x 32 root root 1024 Apr 19 12:39 .
+drwxr-xr-x 6 root sys 512 Nov 11 16:37 SUNwebfs
+```
+
+`drwxr-xr-x 3 bin  bin       512 Nov 11 16:11 SUNwits`
+
+`drwxr-xr-x 3 root 1        512 Feb 2 13:37 answerbooks`
+
+`drwx------ 2 root root      8192 Nov 11 16:00 lost-found`
+
+`drwxr-xr-x 20 root sys       512 Jan 24 23:20 sftp`
+
+`-r--r--r-- 1 root       916 Apr 20 17:09 xtrace`
+
+`-r--r--r-- 1 root       1016 Apr 20 15:10 yellow`
+
+`226 ASCII Transfer complete.`
+
+`ftp>`
+
+```
+
+由 `/bin/ls` 命令生成的输出；读者此时对这应当是熟悉的。`ftp` 客户端程序支持通配符匹配和其它的正则表达式字符，如 `"[ ].*" `。`dir` 命令可以与 UNIX 表达式组合使用，以仅列出某些文件和/或目录。因此，命令
+
+```
+ftp> dir SUN*
+```
+
+将产生以下输出，基于上面的目录列表：
+
+```
+227 Entering Passive Mode (216,155,202,100,128)
+150 ASCII data connection for /bin/ls (216.155.202.163,1049) (0 bytes).
+SUNWebfs:
+total 524
+drwxr-xr-x 6 root bin       512 Nov 11 16:37 .
+drwxr-xr-x 7 root sys       512 Feb 2 13:37 ..
+drwxr-xr-x 4 root sys       512 Nov 11 16:37
+drwxr-xr-x 3 root sys       512 Nov 21 16:37
+drwxr-xr-x 2 root root 5512  11 16:11
+drwxr-xr-x 20 root sys       512 Jan 24 23:20
+-r--r--r-- 1 root       916 Apr 20 17:09
+-r--r--r-- 1 root       1016 Apr 20 15:10
+226 ASCII Transfer complete.
+ftp>
+```
+
+## 获取文件
+
+当从服务器获取或检索文件时，将服务器视为“远程”端，而客户端侧是“本地”端。在我们的示例中，远程端是 `bedrock`，而本地端是 `didymus`。通过 FTP，从远程端传输文件到本地端，将使用 `get` 命令。因此，要从服务器传输文件 `yellow` 到本地系统，在 FTP shell 中使用以下命令：
+
+```
+ftp> get yellow
+```
+
+客户端会话将显示如下：
+
+```
+227 Entering Passive Mode (216,155,202,100,128,206)
+150 ASCII data connection for yellow (216.155.202.163,1047) (916 bytes).
+226 ASCII Transfer complete.
+938 bytes received in 0.00418 secs (2.2e+03 Kbytes/sec)
+ft>
+```
+
+## 发送文件
+
+要将本地文件发送到远程主机，使用 `put` FTP 命令。因此，要将名为 `steve.dat` 的新文件放入 `bedrock` 系统，使用以下命令：
+
+```
+ftp> put steve.dat
+```
+
+当执行命令时，客户端程序将显示以下内容：
+
+```
+local: steve.dat remote: steve.dat
+227 Entering Passive Mode (216,155,202,100,128,210)
+150 ASCII data connection for steve.dat (216.155.202.163,1050)
+226 Transfer complete.
+18396 bytes sent in 0.0124 secs (1.5e+03 Kbytes)
+ftp>
+```
