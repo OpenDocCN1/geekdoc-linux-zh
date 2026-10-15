@@ -1,0 +1,264 @@
+
+- `lpq` 708–709
+- `lpr` 707–710
+- `lpr` 780
+- LPrng 735–739, 809
+- `lpsched` 719–722, 827
+- LISA 会议 793, 816
+- `LastPrc`, 560
+- LISTVERY Lite, 550
+- `.login`: 88
+- `login` 39, 105,
+- `login`: 新通知 815
+- 在内, 68
+- 负载平均值 759
+- 负载均衡（磁盘）756, 764
+- 负载均衡（网络）409, 445, 688, 755
+- 分组文件 80
+- 登录名
+  - 添加 – 85–89
+  - bin, 44, 79
+  - daemon 44, 79
+  - 禁用 90–91
+- `iptsh` 721
+- `lptat` 724
+- `lptcontrol` 708
+- `lptunlock` 708
+- 可加载驱动 229, 255–236
+- 危险 253
+- FreeBSD 256
+- Linux 254–256
+- `lpusers` 729
+- Solaris 253–254
+- Is Mi 38, 71–87
+- `Ismod` 254
+- `lisof` 64
+- `loader.conf` 21
+- `local_intmp` 586
+- `local_procmail` 587
+- `vestend` 146
+- Lucent Mercier 295–194
+- LVM 3
+- Moor's Lee 123, 674
+- Morning Star 321
+- Morris, Jr. 651
+- MOOSPF 协议 151
+- `mod` 62, 133–142, 147, 500
+- 挂载点 62
+- 挂载 493, 829
+- 挂载文件系统
+- `mpage` 740, 809
+- `mpquery` 目录 565, 568
+- `MPTG` 程序 647–648
+- `mt` 186
+- `MAKEDEV` 627
+- `make` 516, 523
+- `makeynmp` 579–580
+- `man` 5
+- MIBs 查看 SNMP
+- Microsoft Windows Windows
+- dini D-IN 连接 97–98
+- `dmkdir` 66
+- `mk2fs` 151–152
+- `mkfs` 132, 151
+- `mklost+found` 134
+- `knod` 67, 252
+- `mkswap` 152
+- Mockapestry, Paul 394
+- 模型 113–115
+- `modinfo` 229, 253–254
+- `modload` 254, 256
+- `modprobe` 255–256
+- `modstat` 256
+- `/mod/local` 目录 256
+- `modunlad` 254, 256
+- 显示器 170, 691, 747
+
+# 845
+
+## 索引
+
+- 会计 208
+- 归档 206
+- Amanda 196
+- BIND 403, 423
+- `bin/mail` 538
+- 组 79–89
+- 主目录 65, 81, 87
+- `local-host-name` 文件 578, 590
+- 本地化 805–809
+- 媒体 169–175
+- 锁定 490, 778
+- 全网络 218
+- 日志文件 745
+- 日志
+- 日志到 `/dev/console` 220
+- 不管理 208–209
+- `lpd.perms` 文件 737
+- `lpd-errs` 文件 2015
+- `LPDEST` 环境变量 721
+- `ilo.conf` 文件 291
+- Link Control Protocol 291
+- Red Hat 209
+- 单次使用
+- 旋转 205–216
+- `lpf` 716
+- `lfpter` 729
+- `lptforms` 729
+- 符号化 68–89
+- `sendmail` 617
+- Solaris 209
+- 位置表 208
+- `lpmove` 726
+- `lpq` 708–709
+- `lpr` 707–710
+- `lpr` 780
+- LPrng 735–739, 809
+- `lpsched` 719–722, 827
+- LISA 会议 793, 816
+- `LastPrc`, 560
+- LISTVERY Lite, 550
+- `.login`: 88
+- `login` 39, 105,
+- `login`: 新通知 815
+- 在内, 68
+- 负载平均值 759
+- 负载均衡（磁盘）756, 764
+- 负载均衡（网络）409, 445, 688, 755
+- 分组文件 80
+- 登录名
+  - 添加 – 85–89
+  - bin, 44, 79
+  - daemon 44, 79
+  - 禁用 90–91
+- ...
+- man pages 5
+- Manbihner, Ken 559
+- `master.cf` file 619
+- MBR（主引导记录）179
+- McGreary, Sean 719
+- McSuss, Kirk 312
+- MCSE 认证 815
+- MD-基于密码 78
+- `mediantolib` 130, 144
+- `/dev/mem` 文件 44, 69
+- memory 14
+- effect of performance 757
+- installing 747–748
+- management 760–763
+- merit-based files 765
+- Merit Gart Consortium 352
+- message of the day 105, 790
+- `messages` 537, 540
+- `messages` file 208, 215
+- metcalfe, Bob 373
+- `mfs` 763
+- h 538, 809
+
+# UNIX 行政管理手册
+
+- `named` 续接
+  - 处理 `ndc` 415, 427-428, 473–475
+  - `zone` 序列 439, 457
+  - `zone` 语句 424–427
+  - `zone` 传输 405, 419-420, 458–439
+  - `named` 管道 68
+  - `named.boot` 415
+  - `named.conf` 415–436
+  - `named.run` 473
+  - `named.stata` 474
+  - `named_dump.db` 415
+- Npter 777
+- NAT 279–281
+- FreeBSD 336–337
+- Red Hat 327–330
+- nat 334
+- `nable` 138
+- `dc` 415, 427, 458, 473–475
+- `ndd` 311, 319–320, 692
+- `dndconf` 229
+- Nevith, Emi 560
+- Nessus 665
+- `netconf` 214, 315–316
+- `netconf.fig` 967
+- netdemons 29
+- `netgroup` 514, 522
+- `netgroups` 522
+- `netmasks` 272–275
+- `netmaks` form 308
+- Netscape Commander 808
+- `netat` 317, 324, 331, 636-
+- 检查接口 305
+- 检查路由表 238-284
+- dp pier 溢 505
+- `nettl` 638
+- network Associates 661
+- `netfile` 322
+- Network Solutions, Inc. 399
+- 网络不可达 302, 631
+- 网络 271, 297
+  - 添加新机器 298, 305-392–394
+  - 地址编码 269–283
+  - 守护进程 315, 521–534
+  - ARF 协议 265, 275–287
+  - ATM 381–382
+  - 广播地址 301
+  - ncIDR 276–278
+  - 按系统分类文件 307
+- 网络 续接
+  - 拥塞 389
+  - 默认路由 283–284, 302, 304, 316, 339, 342, 357, 635
+  - DHCP 287–291
+  - 丢包 628
+  - DSL 383–384
+  - 错误与冲突 633
+  - FDI 380–381
+  - 防火墙 296, 327–329, 333-675–678
+  - 分段 269
+  - 帧中继 382–383
+  - FreeBSD 330–340
+  - 硬件 372–391
+  - hHP-UX 315–332
+  - 接口连接 300–302
+  - IP 地址 271
+  - IPv6 275–276, 281–283
+  - ISDN 363
+  - 内核选项 230, 233, 239-240, 244–266
+  - 加载公平性 409, 468 755
+  - 环回 271, 289, 291, 343
+  - 针对 SNMP MTUs 管理 268–269, 380, 628
+  - NAT 279, 327–329
+  - 网络设计 387–389
+  - 网络接口 633
+  - 网络打印机 706, 728
+  - 数据包嗅探器 385, 638–639
+  - packet TIA 630
+  - pacle 266–267-
+  - 性能 631
+  - 端口扫描 566, 663
+  - 端口 270–271
+  - PPP 291–295
+  - 协议类 256–267
+  - 协议统计 635–636
+  - RAFS 287
+  - Red Hat 322–330
+  - 冗余连接 348, 787
+  - 轮转计时 628
+  - 路由查看
+  - 安全查看安全
+  - solaris 307–315
+  - 子集化 272–275
+  - 故障排除 385, 625–636
+  - 查看上下文 632
+  - 虚拟接口 691–694
+  - 虚拟网络 296-297
+- 网络 续接
+  - VLANs 379
+  - 无线 268
+  - 布线 386–387
+- 网络 303, 514
+- `network-scripts` 目录 32
+- 新别名 162, 557
+- `newfs` 595, 132, 142–146
+- `ngrep` 80
+- 新闻 参见 Usernet
