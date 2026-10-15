@@ -1,0 +1,9 @@
+These scripts have a wide variety of uses. For example, the LOGIN_SCRIPT can be used to display system messages to users, and the LOGOUT_SCRIPT can be used to clean temporary and scratch directories upon logout. These scripts are not called when rma starts a subshell. Thus, the opening and closing of windows on a workstation, for example, would not cause the login or logout scripts to be executed.
+
+# Limitations and Concerns
+
+rma does a good job restricting console logins, telnets, rlogins, and rsns. Unfortunately, rma provides no facilities for restricting ftp access. The ftp daemon never attempts to execute the user's login shell. Contrary to ftp, su executes the shell of the user being sued. As a result, suing an account that is prohibited from accessing a given machine generates an access violation. The rma code includes a section to deal with an oddity of the SunOS su program. su on SunOS does not reset argv[0] to the name of the shell being executed, so a special check is performed in the Login() function. If su was the calling program, the name of the shell is extracted from the SHELL environment variable.
+
+# Conclusion
+
+rma may look like a security tool, but it is only intended to enforce access policies. A clever user may be able to bypass rma's function. This problem has not arisen in any of the variants of rma I use. These include versions running on workstations and servers running SunOS v4.1.x and Solaris v2.x. The version of rma discussed in this chapter has been tested under SunOS v4.1.4 and Solaris v2.5. Although I have not tested them all, rma should compile on almost any UNIX variant having an ANSI C compiler with very minimal modifications.

@@ -1,0 +1,21 @@
+- - '##'
+  - UNIX 各种安全提示
+- - '###'
+  - 提示 1：了解你的网络
+- - '###'
+  - 提示 2：密切监视你的网络
+- - '###'
+  - 提示 3：决定你想要保护什么
+- - '###'
+  - 提示 4：建立可行的安全策略
+- - '###'
+  - 技巧 5：了解你的 TCP/IP
+- - '###'
+  - IP Spoofing
+- - '####'
+  - Figure 1.2 An illustration of a client-server TCP connection shows how the sequence
+    numbers are incremented.
+- - '####'
+  - IP Spoofing — continued
+- - '###'
+  - 'Tip 6:'

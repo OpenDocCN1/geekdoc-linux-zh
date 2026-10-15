@@ -1,0 +1,11 @@
+The disadvantage is that the development of these proxy gateway services is not trivial, and can be a serious stalling point. However, many of the software vendors who offer firewalls can provide application-level and proxy gateway services.
+
+# The Hybrid Gateway
+
+The hybrid gateway falls into a category other than those already mentioned. An example would be a serial connection to the Internet with a terminal server on the private network side. The more difficult the access to the internal network, the less likely that an attacker will spend the time necessary to break in. The hybrid gateway allows for the introduction of some rather esoteric ideas, such as tunneling one protocol over another, or using custom-designed software to monitor and examine the connections that are in place. An example is a site where the firewall consists of a hybrid gateway combined with a bastion host.
+
+Hybrid gateways come in different shapes and sizes, and tend to be somewhat specific to the organization; thus, it isn't possible to describe exactly what such a gateway would look like. The obvious advantage to a hybrid gateway is that, if the security approach is nonstandard, then it becomes harder for an attacker to figure it out and more likely that the attacker will be discovered.
+
+The trade-off here is security through obscurity versus the benefits of a well-documented and thoroughly understood security configuration. The more esoteric the scheme, the more difficult it becomes for the administrator to remember how it works and how the pieces fit together. The danger increases when the administrator is replaced by someone who was not involved in the process of designing the obscure gateway. It may ultimately be better to take a security approach that is easy to understand, document, and control.
+
+Since hybrids are by definition eclectic, it isn't possible to generalize about their vulnerability to attack or about the risk involved in running this type of firewall. One obvious requirement is that the organization have the internal resources to design, build, and maintain the system without having to rely upon outside resources. It seems likely that with the continued expansion of the Internet, methods for developing hybrid gateways will become better known and will allow more security options for the administrator.
