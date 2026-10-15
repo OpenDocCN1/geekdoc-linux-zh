@@ -1,0 +1,86 @@
+
+`vfork()`系统调用是`fork()`调用的一种不同版本，设计为更高效。`fork()`调用会完整复制旧进程的地址空间，而`vfork()`调用创建新进程时不会复制父进程的数据段和栈段，而是允许子进程共享这些段。这节省了时间和内存，但也增加了子进程可能无意中破坏父进程状态的可能性。它并非用于允许子进程和父进程共享数据；相反，其目的是避免在子进程将使用`exec()`替换其代码的情况下进行大量的内存复制。
+
+Linux 系统中还有`clone()`系统调用。`clone()`函数在技术上是包装系统调用的库例程，允许子进程与其父进程共享地址空间，并且还允许程序员为子进程执行传递一个函数和参数。我们稍后会详细讨论它。
+
+## 7.7.2 Synchronizing Processes with Signals
+
+下一个程序`synchdemo1.c`演示了如何使用`fork()`和信号来同步子进程和其父进程。
+
+### Listing 7.5: `synchdemo1.c`
+
+```
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+void c_action(int signum)
+{
+    /* nothing to do here */
+}
+/**************************************************************/
+int main(int argc, char* argv[])
+{
+    pid_t pid;
+    int status;
+    static struct sigaction childAct;
+
+    switch (pid = fork()) {
+    case -1:
+        /* fork failed! */
+        perror("fork() failed!");
+        exit(1);
+
+    case 0: {
+        /* child executes this branch */
+        /* set SIGUSR1 action for child */
+        int i, x=1;
+        childAct.sa_handler = c_action;
+        sigaction(SIGUSR1, &childAct, NULL);
+        pause();
+        printf("Child process: starting computation...\n");
+        for ( i = 0; i < 10; i++ ) {
+            printf("%2%d = %d\n", i, x);
+            x = 2*x;
+        }
+        exit(0);
+    }
+    default:
+        /* parent code */
+        printf("Parent process: "
+        "Will wait 2 seconds to prove child waits.\n");
+        sleep(2); /* to prove that child waits for signal */
+        printf("Parent process: "
+        "Sending child notice to start computation.\n");
+        kill(pid,SIGUSR1);
+
+        /* parent waits for child to return here */
+        if (wait(&status) == -1)
+        {
+            perror("wait failed");
+            exit(2);
+        }
+        printf("Parent process: child terminated.\n");
+        exit(0);
+    }
+}
+```
+
+## Comments.
+
+- 首先请注意此程序的风格略有不同。它使用`switch`语句来区分失败的`fork()`、子进程和父进程。
+
+- `SIGUSR1`信号是为用户程序保留的信号值，可供其自行使用。
+
+在这个程序中，我们可以用它来同步两个进程。一个进程使用`pause()`让自己延迟，并等待信号到来。第二个进程发送信号唤醒第一个进程。在这种情况下，信号处理程序不需要做任何特殊的事情。
+
+- 父进程调用`wait()`，这是一个我们稍后会探讨的函数。`wait()`调用会使父进程等待，直到子进程终止或被杀死。
+
+- 该程序在终端上显示输出，只是为了演示信号是如何工作的。
+
+下一个演示程序`synchdemo2.c`比前一个更有趣一些。它演示了父进程和子进程如何使用`SIGUSR1`信号协同工作。它还表明子进程继承了父进程打开的文件，并且子进程和父进程对同一描述符的写入会推进共享的文件位置指针。
+
+### Listing 7.6: `synchdemo2.c`
