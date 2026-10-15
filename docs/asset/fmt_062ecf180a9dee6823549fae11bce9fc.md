@@ -1,0 +1,228 @@
+
+bash 的版权所有 © 1989、1991 由自由软件基金会，Inc. `bash` 是一个与 `sh` 兼容的命令语言解释器，执行从标准输入或文件读取的命令。`bash` 还包含了 Korn 和 C shell（`ksh` 和 `csh`）的有用特性。
+
+### bc—处理精密算术
+
+```
+bc [ -c ] [ -l ] [ filename... ]
+```
+
+`bc` 是一个交互式处理器，用于一种类似于 C 的语言，但提供无限精度算术。它先读取给定的任何文件，然后读取标准输入。
+
+**EXAMPLE A.7**
+
+```
+1 bc << EOF
+
+scale=3
+
+4.5 + 5.6 / 3
+
+EOF
+
+Output : 6.366
+
+--------------------------
+
+2 bc
+
+ibase=2
+
+5
+
+101 (Output)
+
+20
+
+10100 (Output)
+
+^D
+```
+
+**EXPLANATION**
+
+- 1 这是一个 here 文档。从第一个 `EOF` 到最后一个 `EOF`，输入都提供给 `bc` 命令。`scale` 指定小数点右侧的位数。计算结果显示在屏幕上。
+- 2 数字基数为 2。数字被转换为二进制（仅 AT&T）。
+
+### bdiff—比较两个大文件
+
+`bdiff` 比较两个对于 `diff` 来说太大而无法处理的文件。
+
+### cal—显示日历
+
+```
+cal [ month ] year
+```
+
+`cal` 打印指定年份的日历。如果还指定了月份，则仅打印该月份的日历。如果两者均未指定，则打印当前月份的日历。
+
+**EXAMPLE A.8**
+
+- 1. `cal 1997`
+- 2. `cal 5 1978`
+
+**EXPLANATION**
+
+- 1. 打印 1997 年的日历。
+- 2. 打印 1978 年 5 月。
+
+### cat—连接并显示文件
+
+```
+cat [ -bnsuvet ] filename...
+```
+
+`cat` 按顺序读取每个文件名并将其写入标准输出。如果没有给出输入文件，或者遇到参数 `-`，`cat` 从标准输入文件读取。
+
+### EXAMPLE A.9
+
+```
+1  cat /etc/passwd
+
+2  cat -n file1 file2 >> file3
+```
+
+### EXPLANATION
+
+- 1 显示 `/etc/passwd` 文件的内容。
+- 2 连接 `file1` 和 `file2` 并将输出追加到 `file3`。`-n` 开关会导致每一行都被编号。
+
+## chfn—changes the finger information
+
+```
+chfn [ -f full-name ] [ -o office ] [ -p office-phone ]
+     [ -h home-phone ] [ -u ] [ -v ] [ username ]
+```
+
+`chfn` 用于更改你的 finger 信息。此信息存储在 `/etc/passwd` 文件中，并由 `finger` 程序显示。Linux `finger` 命令将显示四项可由 `chfn` 更改的信息：你的真实姓名、工作房间和电话，以及家庭电话。
+
+## chmod—changes the permissions mode of a file
+
+```
+chmod [ -fR ] mode filename...
+chmod [ugoa] [ { + | - | = } [rwxXstugo] ] filename...
+```
+
+`chmod` 更改或分配文件的模式。文件的模式指定其权限和其他属性。模式可以是绝对的或符号的。
+
+### EXAMPLE A.10
+
+## chown—changes owner of file
+
+```
+chown [ -fHR ] owner filename ...
+```
+
+`chown` 将文件的拥有者更改为 `owner`。`owner` 可以是 `/etc/passwd` 文件中查找到的十进制用户 ID 或登录名。只有文件的拥有者（或超级用户）可以更改该文件的拥有者。
+
+### EXAMPLE A.11
+
+- 1. `chown john filex`
+- 2. `chown -R ellie ellie`
+
+### EXPLANATION
+
+- 1. 将 `filex` 的用户 ID 更改为 `john`。
+- 2. 递归地将 `ellie` 目录下所有文件的拥有权更改为 `ellie`。
+
+## chsh—changes your login shell
+
+```
+chsh [ -s shell ] [ -l ] [ -u ] [ -v ] [ username ]
+```
+
+`chsh` 用于更改你的登录 shell。如果在命令行上未给出 `shell`，`chsh` 会提示输入。所有有效 shell 都列在 `/etc/shells` 文件中。
+
+- `-s`, `--shell` 指定你的登录 shell。
+- `-l`, `--list-shells` 打印 `/etc/shells` 中列出的 shell 列表并退出。
+- `-u`, `--help` 打印用法消息并退出。
+- `-v`, `--version` 打印版本信息并退出。
+
+### EXAMPLE A.12
+
+```
+1 $ chsh -l
+/bin/bash
+/bin/sh
+/bin/ash
+/bin/bash
+/bin/tcsh
+/bin/csh
+/bin/ksh
+/bin/zsh
+
+2 $ chsh
+Changing shell for ellie.
+New shell [/bin/sh] tcsh
+chsh: shell must be a full pathname.
+```
+
+### EXPLANATION
+
+- 1 列出此 Linux 系统上所有可用的 shell。
+- 2 要求用户输入新登录 shell 的完整路径名。除非给出完整路径名，例如 `/bin/tcsh`，否则会失败。
+
+## clear—clears the terminal screen
+
+## cmp—compares two files
+
+```
+cmp [ -l ] [ -s ] filename1 filename2
+```
+
+比较两个文件。`cmp` 如果文件相同则不作评论；如果不同，它会宣布首次出现差异的字节和行号。
+
+### EXAMPLE A.13
+
+```
+cmp file.new file.old
+```
+
+### EXPLANATION
+
+如果文件不同，则会显示字符号和行号。
+
+## compress, uncompress, zcat—compress, uncompress files, or display expanded files
+
+```
+compress [ -cfv ] [ -b bits ] [ filename... ]
+uncompress [ -cv ] [ filename... ]
+zcat [ filename... ]
+```
+
+`compress` 使用自适应 Lempel-Ziv 编码减小命名文件的大小。每当可能时，每个文件都会被替换为带有 `.Z` 扩展名的文件。所有权模式、访问时间和修改时间将保持不变。如果未指定文件，则标准输入将被压缩到标准输出。
+
+### EXAMPLE A.14
+
+- 1 `compress -v book`
+- `book: Compression: 35.07% -- replaced with book.Z`
+- 2 `ls`
+- `book.Z`
+
+### EXPLANATION
+
+## cp—copies files
+
+```
+cp [ -i ] [ -p ] [ -r ] [ filename ... ] target
+```
+
+`cp` 命令将 `filename` 复制到另一个目标，该目标可以是文件或目录。`filename` 和 `target` 不能同名。如果目标不是目录，则在其之前只能指定一个文件；如果是目录，则可以指定多个文件。如果 `target` 不存在，`cp` 会创建一个名为 `target` 的文件。如果 `target` 已存在且不是目录，其内容将被覆盖。如果 `target` 是目录，则文件将被复制到该目录。
+
+### EXAMPLE A.15
+
+- 1. `cp file1 file2`
+- 2. `cp chapter1 book`
+- 3. `cp -r desktop /usr/bin/tester`
+
+### EXPLANATION
+
+- 1. 将 `file1` 的内容复制到 `file2`。
+- 2. 将 `chapter1` 的内容复制到 `book` 目录。在 `book` 目录中，`chapter1` 保持其原始名称。
+- 3. 递归地将整个 `desktop` 目录复制到 `/usr/bin/tester`。
+
+## cpio—copies file archives in and out
+
+```
+cpio -i [ bBcdkmrStuvV6 ] [ -C bufsize ] [ -E filename ] [ -H header ] [ -I filename ] [ -M message ] [ -R id ] [ pattern ... ]
+```
