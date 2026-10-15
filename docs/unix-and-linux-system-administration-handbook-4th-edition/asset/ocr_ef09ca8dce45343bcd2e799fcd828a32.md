@@ -1,0 +1,23 @@
+only run level 2 is meaningful in the default configuration. Levels 0 and 1 are reserved for the operating system, and levels 3–9 are open for use by admins.
+
+The /etc/inittab file tells init what to do at each run level. Its format varies from system to system, but the basic idea is that inittab defines commands that are to be run (or kept running) when the system enters each level.
+
+As the machine boots, init ratchets its way up from run level 0 to the default run level, which is also set in /etc/inittab. To accomplish the transition between each pair of adjacent run levels, init runs the actions spelled out for that transition in /etc/inittab. The same progression is made in reverse order when the machine is shut down.
+
+The telinit command changes init’s run level once the system is up. For example, telinit 3 forces init to go to run level 3. telinit’s most useful argument is -q, which causes init to reread the /etc/inittab file.
+
+Unfortunately, the semantics of the inittab file are fairly crude, and they don’t mesh well with the way that services are actually started and stopped on UNIX systems. To map the facilities of the inittab file into something a bit more usable, init implements another layer of abstraction. This layer usually takes the form of a “change run levels” command that’s run out of inittab. This command in turn executes scripts from a run-level-dependent directory to bring the system to its new state.
+
+This second layer is not well developed in AIX. Instead, AIX systems rely heavily on the inittab file itself to manage services. AIX’s startup scripts are also slightly different from those of other systems.
+
+These days, most Linux distributions boot to run level 5 by default, which may not be appropriate for systems that don’t need to run a window server. The default run level is easy to change. This line from a SUSE machine’s inittab defaults to run level 5:
+
+```
+id:5:initdefault:
+```
+
+System administrators usually don’t have to deal directly with /etc/inittab because the script-based interface is adequate for most applications. In the following discussion, we mostly ignore the inittab file and the other glue that attaches init to the execution of startup scripts. Just keep in mind that when we say that init runs such-and-such a script, the connection may not be quite so direct.
+
+# Overview of startup scripts
+
+The master copies of the startup scripts live in the /etc/init.d directory. Each script is responsible for one daemon or one particular aspect of the system. The scripts understand the arguments start and stop to mean that the service they deal with should be initialized or halted. Most also understand restart, which is typically the same as a stop followed by a start. As a system administrator, you

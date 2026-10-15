@@ -1,0 +1,35 @@
+After the no-such-login count reaches the limit set in the `BAD_RCPT_THROTTLE` option, `sendmail` sleeps for one second after each rejected RCPT command, slowing a spammer’s address harvesting to a crawl. To set that threshold to 3, use
+
+```
+define(`confBAD_RCPT_THROTTLE', `3')
+```
+
+Setting the `MAX_RCPTS_PER_MESSAGE` option causes the sender to queue extra recipients for later. This is a cheap form of greylisting for messages that have a suspiciously large number of recipients.
+
+The ratecontrol and conncontrol features allow per-host or per-net limits on the rate at which incoming connections are accepted and the number of simultaneous connections, respectively. Both use the `/etc/mail/access` file to specify the limits and the domains to which they should apply, the first with the tag `ClientRate:` in the key field and the second with tag `ClientConn:`. To enable rate controls, insert lines like these in your `.mc` file:
+
+```
+FEATURE(`ratecontrol', `nodelay', `terminate')
+FEATURE(`conncontrol', `nodelay', `terminate')
+```
+
+Then, add to your `/etc/mail/access` file the list of hosts or nets to be controlled and their restriction thresholds. For example, the lines
+
+```
+ClientRate:192.168.6.17    2
+ClientRate:170.65.3.4     10
+```
+
+limit the hosts 192.168.6.17 and 170.65.3.4 to two new connections per minute and ten new connections per minute, respectively. The lines
+
+```
+ClientConn:192.168.2.8    2
+ClientConn:175.14.4.1      7
+ClientConn:                     10
+```
+
+set limits of two simultaneous connections for 192.168.2.8, seven for 175.14.4.1, and ten simultaneous connections for all other hosts.
+
+Another nifty feature is `greet_pause`. When a remote MTA connects to your **sendmail** server, the SMTP protocol mandates that it wait for your server’s welcome greeting before speaking. However, it’s common for spam mailers to blurt out an EHLO/HELO command immediately. This behavior is partially explainable as poor implementation of the SMTP protocol in spam-sending tools, but it may also be a feature that aims to save time on the spammer’s behalf. Whatever the cause, this behavior is suspicious and is known as “slamming.”
+
+The `greet_pause` feature makes **sendmail** wait for a specified period of time at the beginning of the connection before greeting its newfound friend. If the remote MTA does not wait to be properly greeted and proceeds with an EHLO or HELO command during the planned awkward moment, **sendmail** logs an error and refuses subsequent commands from the remote MTA.

@@ -1,0 +1,15 @@
+Access to NFS volumes is granted by a file called /etc/exports that enumerates the hostnames (or IP addresses) of systems that should have access to the server's shared filesystems. Unfortunately, this too is a weak form of security because the server trusts the clients to tell it who they are. It's easy to make clients lie about their identities and IP addresses, so this mechanism cannot be fully trusted. Nevertheless, you should export filesystems only to clients that you trust, and you should always check that you have not accidentally exported filesystems to the whole world.
+
+NFS version 4 uses only TCP as a transport protocol and typically communicates over port 2049. Since V4 does not rely on any other ports, opening access through a firewall is as simple as opening TCP port 2049. As with all access list configurations, be sure to specify source and destination addresses in addition to the port. If your site doesn't need to provide NFS services to hosts on the Internet, block access through the firewall or use a local packet filter.
+
+File service over wide area networks with NFSv2 and V3 is not recommended because of the long history of bugs in the RPC protocols and the lack of strong security mechanisms. Administrators of NFS version 3 servers should block access to TCP and UDP ports 2049 and also the portmap port, 111.
+
+# Identity mapping in version 4
+
+As discussed in Chapter 7, UNIX operating systems identify users through a collection of UIDs and GIDs in the local passwd file or administrative database. NFS version 4, on the other hand, represents users and groups as string identifiers of the form user@nfs-domain and group@nfs-domain. Both NFS clients and servers run an identity mapping daemon that maps UNIX identifier values to strings.
+
+When a version 4 client performs an operation that returns identities, such as a file listing with ls -l (the underlying operation is a series of stat calls), the server's identity mapping daemon uses its local passwd file to convert the UID and GID of each file object to a string such as ben@atrust.com. The client's identity mapper then reverses the process, converting ben@atrust.com into local UID and GID values, which may or may not be the same as the server's. If the string value does not match any local identity, the nobody user account is used.
+
+At this point, the remote filesystem call (stat) has completed and returned UID and GID values to its caller (here, the ls command). But since ls was called with the -l option, it needs to display text names instead of numbers. So, ls in turn retranslates the IDs back to textual names using the getpwuid and getgrgid library routines. These routines once again consult the passwd file or its network database equivalent. What a long, strange trip it's been.
+
+Confusingly, the identity mapper is only used when retrieving and setting file attributes, typically ownerships. Identity mapping plays no role in authentication or access control, all of which is handled in the traditional form by RPC. Ergo, consistent passwd files are still essential for users of AUTH_SYS "security."

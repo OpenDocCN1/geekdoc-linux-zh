@@ -1,0 +1,3136 @@
+- - '#'
+  - 第 20 章 电子邮件 742
+- - '#'
+  - CHAPTER 21  NETWORK MANAGEMENT AND DEBUGGING
+- - '#'
+  - CHAPTER 22  SECURITY
+- - '#'
+  - CHAPTER 23 WEB HOSTING 956
+- - '#'
+  - 第三部分：杂项
+- - '#'
+  - 第24章 虚拟化 ....................................983
+- - '#'
+  - HP-UX 中的 Integrity 虚拟机
+- - '#'
+  - 第25章 X 窗口系统 ........................................1011
+- - '#'
+  - 第26章 打印 ...................................................1032
+- - '#'
+  - 第27章 数据中心基础 1085
+- - '#'
+  - 第28章 绿色IT 1097
+- - '#'
+  - 第29章 性能分析 1112
+- - '#'
+  - 第30章 与Windows协作 1135
+- - '#'
+  - 第31章 串行设备与终端 1162
+- - '#'
+  - 第32章 管理、政策与政治 1183
+- - '#'
+  - 第一部分
+- - '#'
+  - 基础管理
+- - '#'
+  - 1 从哪里开始
+- - '##'
+  - 1.1 系统管理员的基本职责
+- - '###'
+  - 账户配置
+- - '###'
+  - 添加和移除硬件
+- - '###'
+  - 执行备份
+- - '###'
+  - 安装和升级软件
+- - '###'
+  - 监控系统
+- - '###'
+  - 故障排除
+- - '###'
+  - 维护本地文档
+- - '###'
+  - 严密监控安全
+- - '###'
+  - 救火
+- - '##'
+  - 1.2 建议背景
+- - '##'
+  - 1.3 UNIX 与 LINUX 之间的摩擦
+- - '##'
+  - 1.4 LINUX DISTRIBUTIONS
+- - '##'
+  - 1.5  本书中使用的示例系统
+- - '###'
+  - 示例 UNIX 发行版
+- - '##'
+  - 1.6 系统特定管理工具
+- - '##'
+  - 1.7 记号和排版惯例
+- - '##'
+  - 1.8 单位
+- - '###'
+  - 表 1.2 单位解读示例
+- - '##'
+  - 1.9 手册页与其他在线文档
+- - '###'
+  - 手册页的组织结构
+- - '###'
+  - 表 1.3 手册页的章节
+- - '###'
+  - 'man: 阅读手册页'
+- - '###'
+  - 手册页的存储
+- - '###'
+  - GNU Texinfo
+- - '##'
+  - 1.10 其他权威文档
+- - '###'
+  - 系统特定指南
+- - '###'
+  - 软件包专项文档
+- - '###'
+  - 图书
+- - '###'
+  - RFC 及其他互联网文档
+- - '###'
+  - Linux 文档计划
+- - '##'
+  - 1.11 其他信息来源
+- - '##'
+  - 1.12  查找和安装软件的方法
+- - '###'
+  - 确定软件是否已安装
+- - '###'
+  - 添加新软件
+- - '###'
+  - 添加新软件
+- - '###'
+  - Ubuntu 使用 APT，即 Debian 高级软件包工具：
+- - '###'
+  - SUSE 版本为
+- - '###'
+  - Red Hat 版本为
+- - '###'
+  - 从源代码构建软件
+- - '##'
+  - 1.13 被迫承担的系统管理
+- - '##'
+  - 1.14 推荐阅读
+- - '###'
+  - 系统管理
+- - '###'
+  - 核心工具
+- - '##'
+  - 1.15 练习
+- - '#'
+  - 2 脚本编写与 Shell
+- - '##'
+  - 2.1 SHELL 基础
+- - '###'
+  - 命令编辑
+- - '###'
+  - 管道和重定向
+- - '###'
+  - 变量和引用
+- - '###'
+  - 常用过滤命令
+- - '###'
+  - 'cut: 将行分隔为字段'
+- - '###'
+  - 'sort: 排序行'
+- - '###'
+  - 表 2.1 sort 选项
+- - '###'
+  - 'uniq: 打印唯一行'
+- - '###'
+  - 'wc: 统计行数、词数和字符数'
+- - '###'
+  - 'tee: 将输入复制到两个位置'
+- - '###'
+  - 'head 和 tail: 读取文件的开头或结尾'
+- - '###'
+  - 'grep: 搜索文本'
+- - '##'
+  - 2.2 BASH 脚本编写
+- - '###'
+  - 从命令到脚本
+- - '###'
+  - 输入与输出
+- - '###'
+  - 命令行参数和函数
+- - '###'
+  - Main program starts here
+- - '###'
+  - 变量作用域
+- - '###'
+  - 控制流
+- - '###'
+  - 表 2.2 基本 bash 比较运算符
+- - '###'
+  - 表 2.3 bash 文件评估运算符
+- - '###'
+  - 日志级别设置在全局变量 LOG_LEVEL 中。选项从最严重到最不严重依次为 Error、Warning、Info 和 Debug。
+- - '###'
+  - 循环
+- - '###'
+  - 数组与算术
+- - '##'
+  - 2.3 正则表达式
+- - '###'
+  - 匹配过程
+- - '###'
+  - 字面字符
+- - '###'
+  - 特殊字符
+- - '####'
+  - 表 2.4 正则表达式中的特殊字符（常见）
+- - '###'
+  - 示例正则表达式
+- - '###'
+  - 捕获
+- - '###'
+  - 贪婪、懒惰和灾难性回溯
+- - '##'
+  - 2.4 PERL 编程
+- - '###'
+  - 变量和数组
+- - '###'
+  - 数组和字符串字面量
+- - '###'
+  - 函数调用
+- - '###'
+  - Type conversions in expressions
+- - '###'
+  - String expansions and disambiguation of variable references
+- - '###'
+  - Hashes
+- - '###'
+  - References and autovivification
+- - '###'
+  - Input and output
+- - '###'
+  - Control flow
+- - '###'
+  - 表 2.5 基本 Perl 比较运算符
+- - '###'
+  - 接受和验证输入
+- - '###'
+  - 使用 get_string 获取名称并转换为大写
+- - '###'
+  - Perl 作为过滤器
+- - '###'
+  - Perl 的附加模块
+- - '##'
+  - 2.5 PYTHON 脚本
+- - '###'
+  - Python 快速入门
+- - '###'
+  - 对象、字符串、数字、列表、字典、元组和文件
+- - '###'
+  - 输入验证示例
+- - '###'
+  - 循环
+- - '##'
+  - 2.7 RECOMMENDED READING
+- - '###'
+  - Shell basics and bash scripting
+- - '###'
+  - Regular expressions
+- - '###'
+  - Perl scripting
+- - '###'
+  - Python scripting
+- - '#'
+  - 3 Booting and Shutting Down
+- - '##'
+  - 3.1 自举
+- - '###'
+  - 恢复启动到 shell
+- - '###'
+  - 启动过程中的步骤
+- - '###'
+  - 内核初始化
+- - '###'
+  - 硬件配置
+- - '###'
+  - 创建内核进程
+- - '###'
+  - 操作员干预（仅恢复模式）
+- - '###'
+  - mount -o rw,remount /
+- - '###'
+  - 启动脚本的执行
+- - '###'
+  - 引导过程完成
+- - '##'
+  - 3.2 启动 PC
+- - '##'
+  - 3.3 GRUB：大一统引导加载程序
+- - '###'
+  - 内核选项
+- - '###'
+  - 多重启动
+- - '##'
+  - 3.4 进入单用户模式启动
+- - '###'
+  - 使用 GRUB 进入单用户模式
+- - '###'
+  - 在 SPARC 上进入单用户模式
+- - '###'
+  - init 及其运行级别
+- - '###'
+  - Overview of startup scripts
+- - '###'
+  - ln -s /etc/init.d/cups /etc/rc2.d/S80cups
+- - '###'
+  - ln -s /etc/init.d/cups /etc/rc0.d/K80cups
+- - '##'
+  - Red Hat 启动脚本
+- - '###'
+  - 表 3.5 Red Hat 的 /etc/sysconfig 目录中的文件和子目录
+- - '##'
+  - SUSE 启动脚本
+- - '###'
+  - 'Path:          Desktop/Window manager'
+- - '###'
+  - 'Type:          string(gnome,startkde,startkde3,startxfce4,twm)'
+- - '###'
+  - 'Default:       kde'
+- - '###'
+  - 'Config:        profiles,kde,susewm'
+- - '###'
+  - Here you can set the default window manager (kde, fvwm, ...)
+- - '###'
+  - changes here require at least a re-login
+- - '###'
+  - 'Type:           yesno'
+- - '###'
+  - 'Default:        yes'
+- - '###'
+  - install the SuSE extension for new users
+- - '###'
+  - (theme and additional functions)
+- - '###'
+  - 'Path:           Desktop'
+- - '###'
+  - 'Description:    default mouse cursor theme'
+- - '###'
+  - 'Type:           string'
+- - '###'
+  - 'Default:'
+- - '###'
+  - Name of mouse cursor theme for X11. Possible themes can be found
+- - '###'
+  - in /usr/share/icons/
+- - '##'
+  - Ubuntu 启动脚本和 Upstart 守护进程
+- - '##'
+  - HP-UX 启动脚本
+- - '##'
+  - AIX 启动
+- - '###'
+  - 表 3.6 /etc/rc.config.d 中常见修改的 HP-UX 配置文件
+- - '##'
+  - 3.6 启动 Solaris
+- - '###'
+  - Solaris 服务管理设施
+- - '###'
+  - 一个大胆的新世界：使用 SMF 启动
+- - '##'
+  - 3.7 重启和关闭
+- - '###'
+  - shutdown：优雅地停止系统的方式
+- - '###'
+  - 表3.7 shutdown 的多种面貌
+- - '###'
+  - halt 和 reboot：更简单的关闭方式
+- - '##'
+  - 3.8 练习题
+- - '#'
+  - 4 访问控制与 root 权限
+- - '##'
+  - 4.1 传统 UNIX 访问控制
+- - '###'
+  - 文件系统访问控制
+- - '###'
+  - 进程所有权
+- - '###'
+  - root 账户
+- - '###'
+  - Setuid 和 setgid 执行
+- - '##'
+  - 4.2 现代访问控制
+- - '###'
+  - SELinux：安全增强型 Linux
+- - '###'
+  - POSIX capabilities（Linux）
+- - '###'
+  - PAM：可插拔认证模块
+- - '###'
+  - Kerberos：第三方加密认证
+- - '###'
+  - 访问控制列表
+- - '##'
+  - 4.3 实际访问控制
+- - '###'
+  - 选择 root 密码
+- - '###'
+  - 更改 root 密码
+- - '###'
+  - 登录 root 账户
+- - '###'
+  - su：替换用户身份
+- - '###'
+  - sudo：受限的 su
+- - '###'
+  - Define aliases for machines in CS & Physics departments
+- - '###'
+  - Define collections of commands
+- - '###'
+  - Permissions
+- - '##'
+  - 密码库和密码托管
+- - '##'
+  - 4.5 练习
+- - '#'
+  - 5 控制进程
+- - '##'
+  - 5.1 进程的组成部分
+- - '###'
+  - PID：进程 ID 号
+- - '###'
+  - PPID：父 PID
+- - '###'
+  - UID 和 EUID：实际和有效用户 ID
+- - '###'
+  - GID 和 EGID：实际和有效组 ID
+- - '###'
+  - 友好度
+- - '###'
+  - 控制终端
+- - '##'
+  - 5.2 进程的生命周期
+- - '##'
+  - 5.3 信号
+- - '###'
+  - 表 5.1 所有管理员都应了解的信号ᵃ
+- - '##'
+  - 5.4 KILL：发送信号
+- - '##'
+  - 5.5 进程状态
+- - '##'
+  - 5.6 NICE AND RENICE：影响调度优先级
+- - '###'
+  - 表 5.3 如何为各种版本的 nice 和 renice 表示优先级
+- - '##'
+  - 5.7 PS：监控进程
+- - '###'
+  - 表 5.4 ps aux 输出说明
+- - '##'
+  - 5.8 使用 top、prstat 和 topas 进行动态监控
+- - '###'
+  - 表 5.6 ps -elf 输出说明
+- - '##'
+  - 5.9 /proc 文件系统
+- - '###'
+  - 表 5.8 在 AIX 和 Solaris 中读取 /proc 信息的命令
+- - '##'
+  - 5.10 STRACE、TRUSS 和 TUSC：追踪信号和系统调用
+- - '##'
+  - 5.11 失控进程
+- - '##'
+  - 5.12 推荐阅读
+- - '##'
+  - 5.13 习题
+- - '#'
+  - 6 文件系统
+- - '##'
+  - 6.1 路径名
+- - '##'
+  - 6.2 文件系统挂载与卸载
+- - '##'
+  - 6.3 文件树的组织
+- - '###'
+  - 表 6.2 标准目录及其内容
+- - '##'
+  - 6.4 文件类型
+- - '###'
+  - 普通文件
+- - '###'
+  - 目录
+- - '###'
+  - 本地域套接字
+- - '###'
+  - 命名管道
+- - '###'
+  - 符号链接
+- - '###'
+  - setuid 和 setgid 位
+- - '###'
+  - 粘滞位
+- - '###'
+  - 'ls: 列出和检查文件'
+- - '###'
+  - chmod：更改权限
+- - '###'
+  - chown 和 chgrp：更改所有权和组
+- - '###'
+  - umask：分配默认权限
+- - '###'
+  - Linux 奖励标志
+- - '####'
+  - 表 6.7 Ext2 和 ext3 奖励标志
+- - '##'
+  - 6.6 访问控制列表
+- - '###'
+  - ACL 实现
+- - '###'
+  - 表 6.8  可出现在访问控制列表中的条目
+- - '###'
+  - 传统模式与 ACL 之间的交互
+- - '###'
+  - 'file: tmp/example'
+- - '###'
+  - 'owner: garth'
+- - '###'
+  - 'group: garth'
+- - '###'
+  - Access determination
+- - '###'
+  - Access determination
+- - '###'
+  - 可为其指定权限的 NFSv4 实体
+- - '###'
+  - 访问判定
+- - '###'
+  - ACL 继承
+- - '####'
+  - 表 6.10 NFSv4 ACE 继承标志
+- - '###'
+  - Solaris 中的 NFSv4 ACL 查看
+- - '##'
+  - 6.7 练习
+- - '#'
+  - 7 添加新用户
+- - '##'
+  - 7.1 /etc/passwd 文件
+- - '###'
+  - 登录名
+- - '###'
+  - 表 7.1 形成登录名的规则
+- - '###'
+  - 加密密码
+- - '####'
+  - 表 7.2 密码加密算法和长度限制
+- - '###'
+  - UID（用户 ID）号码
+- - '###'
+  - 默认 GID 号码
+- - '###'
+  - GECOS 字段
+- - '###'
+  - 主目录
+- - '###'
+  - 登录 shell
+- - '##'
+  - 7.2 /etc/shadow 和 /etc/security/passwd 文件
+- - '##'
+  - 7.4 添加用户：基本步骤
+- - '###'
+  - 编辑 passwd 和 group 文件
+- - '###'
+  - 设置密码
+- - '###'
+  - 创建主目录并安装启动文件
+- - '####'
+  - 表 7.3 常见启动文件及其用途
+- - '###'
+  - Setting permissions and ownerships
+- - '###'
+  - Setting a mail home
+- - '###'
+  - Configuring roles and administrative privileges
+- - '###'
+  - Final steps
+- - '##'
+  - 7.5 ADDING USERS WITH USERADD
+- - '###'
+  - Ubuntu 上的 useradd
+- - '###'
+  - SUSE 上的 useradd
+- - '###'
+  - Red Hat 上的 useradd
+- - '###'
+  - Solaris 上的 useradd
+- - '###'
+  - HP-UX 上的 useradd
+- - '###'
+  - AIX 上的 useradd
+- - '###'
+  - 表 7.5 /etc/security/user 中的用户账户选项（AIX）
+- - '###'
+  - useradd 在 AIX 上不提供 -D 选项来显示新用户的默认值。
+- - '###'
+  - useradd 示例
+- - '###'
+  - useradd 通过在密码字段中放置一个 x 来禁用账户。你必须分配一个真实密码才能使账户可用。
+- - '##'
+  - 7.6 使用 NEWUSERS 批量添加用户（LINUX）
+- - '##'
+  - 7.7 删除用户
+- - '##'
+  - 7.8 禁用登录
+- - '##'
+  - 7.9 使用系统特定工具管理用户
+- - '##'
+  - 7.10 使用 PAM 降低风险
+- - '##'
+  - 7.11 集中式账户管理
+- - '###'
+  - LDAP 和 Active Directory
+- - '###'
+  - 单点登录系统
+- - '###'
+  - 身份管理系统
+- - '##'
+  - 7.12 RECOMMENDED READING
+- - '##'
+  - 7.13 EXERCISES
+- - '#'
+  - 8 Storage
+- - '##'
+  - 8.1 | 我只想添加一块磁盘！
+- - '###'
+  - Linux 配方
+- - '###'
+  - Solaris 配方
+- - '###'
+  - HP-UX 配方
+- - '###'
+  - AIX 食谱
+- - '##'
+  - 8.2 存储硬件
+- - '###'
+  - 表 8.1 硬盘与 SSD 技术比较
+- - '###'
+  - 硬盘
+- - '###'
+  - Solid State Disks
+- - '##'
+  - 8.3 存储硬件接口
+- - '###'
+  - PATA 接口
+- - '###'
+  - SATA 接口
+- - '###'
+  - 并行 SCSI
+- - '###'
+  - Exhibit A Parallel SCSI connectors (front view, male except where noted)
+- - '###'
+  - 串行 SCSI
+- - '###'
+  - 哪种更好，SCSI 还是 SATA？
+- - '##'
+  - 8.4 剥洋葱：存储的软件层面
+- - '###'
+  - 展品 B 存储管理层
+- - '###'
+  - 附件 C 传统数据磁盘分区方案（Linux 设备名称）
+- - '##'
+  - 8.5 驱动器的连接与低级管理
+- - '###'
+  - 硬件级别的安装验证
+- - '###'
+  - 磁盘设备文件
+- - '###'
+  - '*Linux 的磁盘设备*'
+- - '###'
+  - Solaris 的磁盘设备
+- - '###'
+  - HP-UX 的磁盘设备
+- - '###'
+  - AIX 的磁盘设备
+- - '###'
+  - 格式化和坏块管理
+- - '###'
+  - ATA 安全擦除
+- - '###'
+  - 硬盘监控与 SMART
+- - '##'
+  - 8.6 磁盘分区
+- - '###'
+  - 传统分区
+- - '###'
+  - Windows 风格分区
+- - '###'
+  - GPT：GUID 分区表
+- - '###'
+  - Linux 分区
+- - '###'
+  - Solaris 分区
+- - '###'
+  - HP-UX 分区
+- - '##'
+  - 8.7 RAID：廉价磁盘冗余阵列
+- - '###'
+  - 软件与硬件 RAID
+- - '###'
+  - RAID 级别
+- - '###'
+  - 磁盘故障恢复
+- - '###'
+  - RAID 5 的缺点
+- - '###'
+  - mdadm：Linux 软件 RAID
+- - '##'
+  - 8.8 逻辑卷管理
+- - '###'
+  - LVM 实现
+- - '###'
+  - 表 8.4 LVM 命令比较
+- - '###'
+  - Linux 逻辑卷管理
+- - '###'
+  - 卷快照
+- - '###'
+  - 调整文件系统大小
+- - '###'
+  - HP-UX 逻辑卷管理
+- - '###'
+  - lvcreate -C -y -r -L 1500 -n root vg01
+- - '###'
+  - lvcreate -C -y -r -L 500 -n swap vg01
+- - '###'
+  - AIX 逻辑卷管理
+- - '###'
+  - Linux 文件系统：ext 家族
+- - '###'
+  - tune2fs -j /dev/hda4
+- - '###'
+  - HP-UX 文件系统：VxFS 和 HFS
+- - '###'
+  - AIX 的 JFS2
+- - '###'
+  - 文件系统术语
+- - '###'
+  - 文件系统多态性
+- - '###'
+  - mkfs：格式化文件系统
+- - '###'
+  - fsck：检查和修复文件系统
+- - '###'
+  - 文件系统挂载
+- - '###'
+  - 自动挂载设置
+- - '###'
+  - 自动挂载设置
+- - '###'
+  - USB 驱动器挂载
+- - '###'
+  - 启用交换空间
+- - '##'
+  - 8.10 ZFS：解决所有存储问题
+- - '###'
+  - ZFS 架构
+- - '####'
+  - 展品 D ZFS 架构
+- - '###'
+  - 示例：Solaris 磁盘添加
+- - '###'
+  - 文件系统和属性
+- - '###'
+  - Property inheritance
+- - '###'
+  - 每个用户一个文件系统
+- - '###'
+  - 快照与克隆
+- - '###'
+  - 原始卷
+- - '###'
+  - 通过 NFS、CIFS 和 iSCSI 共享文件系统
+- - '###'
+  - 存储池管理
+- - '##'
+  - 8.11 存储区域网络
+- - '###'
+  - SAN 网络
+- - '###'
+  - iSCSI：基于 IP 的 SCSI
+- - '###'
+  - 从 iSCSI 卷启动
+- - '###'
+  - iSCSI 发起程序的厂商特定信息
+- - '##'
+  - 8.12 练习
+- - '#'
+  - 9 周期性进程
+- - '##'
+  - 9.1 CRON：调度命令
+- - '##'
+  - 9.2 CRONTAB 文件的格式
+- - '##'
+  - 9.3 CRONTAB 管理
+- - '###'
+  - 表 9.2 cron 权限和日志文件的位置
+- - '##'
+  - 9.4 LINUX 和 VIXIE-CRON 扩展
+- - '###'
+  - 文件系统清理
+- - '###'
+  - 配置文件的网络分发
+- - '###'
+  - 日志文件轮转
+- - '##'
+  - 9.6 EXERCISES
+- - '#'
+  - 10 备份与恢复
+- - '##'
+  - 10.1 MOTHERHOOD AND APPLE PIE
+- - '###'
+  - Perform all backups from a central location
+- - '###'
+  - Label your media
+- - '###'
+  - 选择合理的备份间隔
+- - '###'
+  - 仔细选择文件系统
+- - '###'
+  - 使每日转储适配在一块介质上
+- - '###'
+  - 将介质保存在异地
+- - '###'
+  - 保护你的备份
+- - '###'
+  - 备份期间限制活动
+- - '###'
+  - 验证你的介质
+- - '###'
+  - 建立介质生命周期
+- - '###'
+  - 为备份设计数据存储方式
+- - '###'
+  - 为最坏情况做好准备
+- - '##'
+  - 10.2 备份设备和介质
+- - '###'
+  - 光学介质：CD-R/RW、DVD±R/RW、DVD-RAM 和 Blu-ray
+- - '###'
+  - 磁带概述
+- - '###'
+  - 小型磁带驱动器：8mm 和 DDS/DAT
+- - '###'
+  - DLT/S-DLT
+- - '###'
+  - AIT 和 SAIT
+- - '###'
+  - VXA/VXA-X
+- - '###'
+  - LTO
+- - '###'
+  - 自动换带机、堆叠机和磁带库
+- - '###'
+  - 硬盘
+- - '###'
+  - 互联网和云备份服务
+- - '###'
+  - 介质类型总结
+- - '####'
+  - 表 10.1 备份介质比较
+- - '###'
+  - 购买建议
+- - '##'
+  - 10.3 通过增量备份节省空间和时间
+- - '###'
+  - 一个简单的计划
+- - '###'
+  - 一个适中的计划
+- - '##'
+  - 10.4 使用 DUMP 建立备份机制
+- - '###'
+  - 转储文件系统
+- - '###'
+  - 表 10.2 默认 SCSI 磁带驱动器的设备文件
+- - '###'
+  - dump -5u -s 60000 -d 6250 -f /dev/nst0 /work
+- - '###'
+  - 使用 restore 从转储中恢复
+- - '###'
+  - 恢复整个文件系统
+- - '##'
+  - 10.6 使用其他归档程序
+- - '###'
+  - tar：打包文件
+- - '###'
+  - 'dd: twiddle bits'
+- - '###'
+  - Change tapes.
+- - '###'
+  - ZFS backups
+- - '##'
+  - 10.7 USING MULTIPLE FILES ON A SINGLE TAPE
+- - '##'
+  - 10.8 BACULA
+- - '###'
+  - Bacula 模型
+- - '####'
+  - 展览 A Bacula 组件及其关系
+- - '###'
+  - 设置 Bacula
+- - '###'
+  - 安装数据库和 Bacula 守护进程
+- - '###'
+  - 配置 Bacula 守护进程
+- - '###'
+  - 常见配置部分
+- - '###'
+  - Sample Bacula director configuration file, /etc/bacula-dir.conf
+- - '####'
+  - Exhibit B — Passwords in the Bacula configuration files
+- - '###'
+  - 'bacula-dir.conf: director configuration'
+- - '####'
+  - Catalog resources
+- - '####'
+  - Storage resources
+- - '###'
+  - 池资源
+- - '###'
+  - 调度资源
+- - '###'
+  - 客户端资源
+- - '###'
+  - 文件集资源
+- - '###'
+  - 作业资源
+- - '###'
+  - bacula-sd.conf：存储守护进程配置
+- - '####'
+  - Director 资源
+- - '####'
+  - Storage 资源
+- - '####'
+  - 设备资源
+- - '###'
+  - Aut changer resources
+- - '###'
+  - 'bconsole.conf: console configuration'
+- - '###'
+  - Console configuration file, bconsole.conf
+- - '###'
+  - Installing and configuring the client file daemon
+- - '###'
+  - Starting the Bacula daemons
+- - '###'
+  - Adding media to pools
+- - '###'
+  - 运行手动备份
+- - '###'
+  - 运行恢复作业
+- - '###'
+  - 备份 Windows 客户端
+- - '###'
+  - 监控 Bacula 配置
+- - '###'
+  - Bacula 技巧和窍门
+- - '###'
+  - Bacula 的替代方案
+- - '##'
+  - 10.9 商业备份产品
+- - '###'
+  - ADSM/TSM
+- - '###'
+  - Veritas NetBackup
+- - '###'
+  - EMC NetWorker
+- - '###'
+  - 其他替代方案
+- - '##'
+  - 10.10 推荐阅读
+- - '##'
+  - 10.11 练习
+- - '#'
+  - 11 Syslog 和日志文件
+- - '##'
+  - 11.1 查找日志文件
+- - '###'
+  - 不需要管理的日志文件
+- - '###'
+  - 表 11.1 巡游的日志文件
+- - '###'
+  - 厂商特定
+- - '##'
+  - 11.2 SYSLOG：系统事件记录器
+- - '###'
+  - Syslog 架构
+- - '###'
+  - 配置 syslogd
+- - '###'
+  - 表 11.2 Syslog 设施名称
+- - '###'
+  - 表 11.3 Syslog 严重级别（按严重程度降序）
+- - '###'
+  - 表 11.4 syslog.conf 中 Linux 优先级级别限定符示例
+- - '###'
+  - 配置文件示例
+- - '####'
+  - '*独立机器*'
+- - '###'
+  - syslog.conf file for small network or stand-alone machines
+- - '###'
+  - 'emergencies: tell everyone who is logged on'
+- - '###'
+  - important messages
+- - '###'
+  - printer errors
+- - '####'
+  - '*网络日志客户端*'
+- - '###'
+  - syslog.conf file for nonmaster machines
+- - '###'
+  - 'Emergencies: tell everyone who is logged on'
+- - '###'
+  - Forward important messages to the central logger
+- - '###'
+  - Send some local stuff to the central logger too
+- - '###'
+  - Keep printer errors local
+- - '###'
+  - sudo logs to local2 - keep a copy here too
+- - '###'
+  - Keep kernel messages local
+- - '####'
+  - 中央日志主机
+- - '###'
+  - syslog.conf file for master logging host
+- - '###'
+  - Emergencies to the console and log file, with timing marks
+- - '###'
+  - Send non-emergency messages to the usual log files
+- - '###'
+  - 本地授权消息，例如 sudo 和 npasswd
+- - '###'
+  - 其他本地内容
+- - '###'
+  - 本地消息（如果未指定设施时的默认值）
+- - '###'
+  - Syslog 调试
+- - '###'
+  - Syslog 的替代方案
+- - '###'
+  - Linux 内核和启动时日志记录
+- - '##'
+  - 11.3 AIX 日志记录和错误处理
+- - '###'
+  - AIX 下的 Syslog 配置
+- - '###'
+  - 表 11.6 syslog.conf 中的 AIX 日志轮转选项
+- - '###'
+  - Rotate at 500MB, keep 4 files
+- - '###'
+  - Rotate after 1 week, keep 10 files, compress the file
+- - '###'
+  - Rotate after 100KB or 2 months, whichever occurs first, keeping 4 files
+- - '###'
+  - Keep 1 year of weekly logs, compress the file, move the file to /logs
+- - '##'
+  - 11.4 LOGROTATE：管理日志文件
+- - '###'
+  - 日志文件轮转定义和选项
+- - '###'
+  - 表 11.7 logrotate 选项
+- - '##'
+  - 11.5 将日志文件压缩为有用信息
+- - '##'
+  - 11.6 日志策略
+- - '##'
+  - 11.7 练习
+- - '#'
+  - 12 安装与软件包管理
+- - '##'
+  - 12.1 安装 Linux 和 OpenSolaris
+- - '###'
+  - 表 12.1 Linux 和 OpenSolaris 的安装文档
+- - '###'
+  - 通过网络启动 PC
+- - '###'
+  - 为 Linux 设置 PXE
+- - '###'
+  - 引导非 PC 设备
+- - '###'
+  - 使用 Kickstart：Red Hat Enterprise Linux 的自动化安装程序
+- - '###'
+  - 设置 Kickstart 配置文件
+- - '###'
+  - 构建 Kickstart 服务器
+- - '###'
+  - 指向 Kickstart 配置文件
+- - '###'
+  - 使用 AutoYaST：SUSE 的自动化安装工具
+- - '###'
+  - 使用 Ubuntu 安装程序自动化安装
+- - '##'
+  - 12.2 安装 SOLARIS
+- - '###'
+  - 使用 JumpStart 进行网络安装
+- - '###'
+  - 配置文件也非常简单。关键字（有很多）指定文件系统和安装类型。示例配置文件可能如下所示：
+- - '###'
+  - 表 12.2 JumpStart sysidcfg 文件的独立关键字
+- - '###'
+  - 使用 Automated Installer 进行网络安装
+- - '##'
+  - 12.3 安装 HP-UX
+- - '###'
+  - Ignite-UX
+- - '###'
+  - 表12.3 Ignite-UX 使用的重要二进制文件、目录和配置文件
+- - '###'
+  - 自动化 Ignite-UX 安装
+- - '##'
+  - 12.4 使用网络安装管理器安装 AIX
+- - '##'
+  - 12.6 管理 Linux 软件包
+- - '###'
+  - 'rpm: 管理 RPM 软件包'
+- - '###'
+  - 'dpkg: 在 Ubuntu 中管理 .deb 包'
+- - '##'
+  - 12.7 使用高级 Linux 包管理系统
+- - '###'
+  - 软件仓库
+- - '###'
+  - RHN：Red Hat Network
+- - '###'
+  - APT：高级打包工具
+- - '####'
+  - apt-get 配置
+- - '###'
+  - 一个示例 /etc/apt/sources.list 文件
+- - '###'
+  - 'General format: type uri distribution [components]'
+- - '###'
+  - 创建本地仓库镜像
+- - '###'
+  - apt-get 自动化
+- - '###'
+  - apt-get dist-upgrade
+- - '###'
+  - 'yum: release management for RPM'
+- - '###'
+  - 'Zypper package management for SUSE: now with more ZYpp!'
+- - '##'
+  - 12.8 为 UNIX 管理软件包
+- - '###'
+  - Solaris 打包
+- - '###'
+  - HP-UX 打包
+- - '###'
+  - 表 12.6 软件分发器命令列表
+- - '###'
+  - Initializing...
+- - '###'
+  - Contacting target "hpux11"...
+- - '###'
+  - 'Target: hpux11:/'
+- - '###'
+  - Java15JDK      1.5.0.11.00  Java 1.5 JDK for HP-UX
+- - '###'
+  - Java15JRE      1.5.0.11.00  Java 1.5 JRE for HP-UX
+- - '###'
+  - AIX 中的软件管理
+- - '##'
+  - 12.9 REVISION CONTROL
+- - '###'
+  - Backup file creation
+- - '###'
+  - Formal revision control systems
+- - '###'
+  - Subversion
+- - '###'
+  - cd /home/svn
+- - '###'
+  - mkdir repositories
+- - '###'
+  - cd repositories
+- - '###'
+  - svnadmin create admin
+- - '###'
+  - chmod 700 admin
+- - '###'
+  - svnserve --daemon --root /home/svn/repositories
+- - '###'
+  - Git
+- - '###'
+  - On branch master
+- - '###'
+  - 'Changed but not updated:'
+- - '###'
+  - (use "git add <file>..." to update what will be committed)
+- - '###'
+  - 'modified:   mdadm/mdadm.conf'
+- - '###'
+  - 'modified:   mtab'
+- - '###'
+  - 'modified:   passwd'
+- - '###'
+  - 'Untracked files:'
+- - '###'
+  - (use "git add <file>..." to include in what will be committed)
+- - '###'
+  - foobar/
+- - '##'
+  - 12.10 软件本地化与配置
+- - '###'
+  - 组织你的本地化
+- - '###'
+  - 测试
+- - '###'
+  - 本地编译
+- - '###'
+  - 分发本地化
+- - '##'
+  - 12.11 使用配置管理工具
+- - '###'
+  - cfengine：计算机免疫系统
+- - '###'
+  - LCFG：大规模配置系统
+- - '###'
+  - 'Template Tree 2: cfengine helper'
+- - '###'
+  - 'DMTF/CIM: the Common Information Model'
+- - '##'
+  - 12.12 SHARING SOFTWARE OVER NFS
+- - '###'
+  - Package namespaces
+- - '###'
+  - Wrapper scripts
+- - '###'
+  - make even the program finds any files co-packaged with it
+- - '###'
+  - first even if it does not use an explicit path.
+- - '##'
+  - 12.13 RECOMMENDED READING
+- - '##'
+  - 12.14 EXERCISES
+- - '#'
+  - 13 Drivers and the Kernel
+- - '##'
+  - 13.1 内核适配
+- - '###'
+  - 表 13.1 各系统的内核构建目录和位置
+- - '##'
+  - 13.2 驱动程序和设备文件
+- - '###'
+  - 设备文件和设备号
+- - '###'
+  - 设备文件创建
+- - '###'
+  - Naming conventions for devices
+- - '###'
+  - Custom kernels versus loadable modules
+- - '##'
+  - 13.3 LINUX KERNEL CONFIGURATION
+- - '###'
+  - Tuning Linux kernel parameters
+- - '###'
+  - 构建 Linux 内核
+- - '###'
+  - 如果它没有坏，就不要修它
+- - '###'
+  - 配置内核选项
+- - '###'
+  - 'Automatically generated make config: don''t edit'
+- - '###'
+  - Code maturity level options
+- - '###'
+  - Processor type and features
+- - '###'
+  - CONFIG_M386 is not set
+- - '###'
+  - CONFIG_M486 is not set
+- - '###'
+  - CONFIG_M586 is not set
+- - '###'
+  - CONFIG_M586TSC is not set
+- - '###'
+  - Building the kernel binary
+- - '###'
+  - Adding a Linux device driver
+- - '##'
+  - 13.4 SOLARIS KERNEL CONFIGURATION
+- - '###'
+  - The Solaris kernel area
+- - '###'
+  - Configuring the kernel with /etc/system
+- - '###'
+  - 表 13.4 /etc/system 中使用的指令和变量
+- - '###'
+  - 添加 Solaris 设备驱动程序
+- - '###'
+  - 调试 Solaris 配置
+- - '##'
+  - 13.5 HP-UX 内核配置
+- - '##'
+  - 13.6 AIX 内核的管理
+- - '###'
+  - 对象数据管理器
+- - '###'
+  - Kernel tuning
+- - '##'
+  - 13.7 LOADABLE KERNEL MODULES
+- - '###'
+  - Linux 中的可加载内核模块
+- - '###'
+  - Aliases
+- - '###'
+  - Solaris 中的可加载内核模块
+- - '##'
+  - 13.8 LINUX UDEV FOR FUN AND PROFIT
+- - '###'
+  - 'Linux sysfs: a window into the souls of devices'
+- - '####'
+  - Table 13.7 Subdirectories of /sys
+- - '###'
+  - 使用 udevadm 探索设备
+- - '###'
+  - 构造规则和持久名称
+- - '####'
+  - 表 13.8 Udev 匹配键
+- - '##'
+  - 13.9 推荐阅读
+- - '##'
+  - 13.10 练习
+- - '#'
+  - 第二部分
+- - '#'
+  - 14 TCP/IP网络
+- - '##'
+  - 14.1 TCP/IP及其与互联网的关系
+- - '###'
+  - 谁在运营互联网？
+- - '###'
+  - 网络标准和文档
+- - '###'
+  - 展品 A TCP/IP 分层模型
+- - '###'
+  - IPv4 和 IPv6
+- - '###'
+  - 数据包和封装
+- - '###'
+  - 展品 B 一个典型的网络数据包⁴
+- - '###'
+  - Ethernet 帧封装
+- - '###'
+  - 最大传输单元
+- - '##'
+  - 14.3 数据包寻址
+- - '###'
+  - 硬件（MAC）寻址
+- - '###'
+  - IP 地址
+- - '###'
+  - 主机名“寻址”
+- - '###'
+  - 端口
+- - '###'
+  - 地址类型
+- - '##'
+  - 14.4 IP 地址：血腥细节
+- - '###'
+  - IPv4 地址类
+- - '####'
+  - Table 14.2 Historical Internet address classes
+- - '###'
+  - 子网划分
+- - '###'
+  - 附件 C 网掩码进制转换
+- - '###'
+  - 子网算术的技巧和工具
+- - '###'
+  - CIDR：无类域间路由
+- - '###'
+  - 表 14.3 示例 IPv4 地址解码
+- - '###'
+  - 地址分配
+- - '###'
+  - 表 14.4 区域互联网注册机构
+- - '###'
+  - 私有地址和网络地址转换（NAT）
+- - '###'
+  - 表 14.5 保留用于私有用途的 IP 地址
+- - '###'
+  - IPv6 地址
+- - '##'
+  - 14.5 路由
+- - '###'
+  - 路由表
+- - '###'
+  - route add -net 132.236.220.64 netmask 255.255.255.192
+- - '###'
+  - route add default gw 132.236.227.1 eth0
+- - '####'
+  - ICMP 重定向
+- - '##'
+  - 14.6 ARP：地址解析协议
+- - '##'
+  - 14.7 DHCP：动态主机配置协议
+- - '###'
+  - DHCP 软件
+- - '###'
+  - DHCP 如何工作
+- - '###'
+  - ISC 的 DHCP 软件
+- - '###'
+  - global options
+- - '##'
+  - 14.8 安全问题
+- - '###'
+  - IP 转发
+- - '###'
+  - ICMP redirects
+- - '###'
+  - Source routing
+- - '###'
+  - Broadcast pings and other directed broadcasts
+- - '###'
+  - IP spoofing
+- - '###'
+  - Host-based firewalls
+- - '###'
+  - 虚拟专用网络
+- - '##'
+  - 14.9 PPP：点对点协议
+- - '##'
+  - 14.10 基本网络配置
+- - '###'
+  - 主机名和 IP 地址分配
+- - '###'
+  - ifconfig：配置网络接口
+- - '###'
+  - Network hardware options
+- - '###'
+  - 'route: configure static routes'
+- - '###'
+  - route add -net 192.168.45.128/25 zulu-gw.atrust.net
+- - '###'
+  - DNS 配置
+- - '##'
+  - 14.11 系统特定的网络配置
+- - '##'
+  - 14.12 Linux 网络
+- - '###'
+  - NetworkManager
+- - '###'
+  - Ubuntu network configuration
+- - '###'
+  - SUSE network configuration
+- - '###'
+  - 表 14.7  /etc/sysconfig/network 中的 SUSE 网络配置文件
+- - '###'
+  - Red Hat 网络配置
+- - '###'
+  - 表 14.8  /etc/sysconfig 中的 Red Hat 网络配置文件
+- - '###'
+  - Linux 网络硬件选项
+- - '###'
+  - Linux TCP/IP 选项
+- - '###'
+  - 安全相关的内核变量
+- - '####'
+  - 表 14.9 Linux 中默认的安全相关网络行为
+- - '###'
+  - Linux NAT 和数据包过滤
+- - '##'
+  - 14.13 SOLARIS 网络
+- - '###'
+  - Solaris 基础网络配置
+- - '###'
+  - CS Department network masks database
+- - '###'
+  - Network                 netmask
+- - '###'
+  - ====================    =============
+- - '###'
+  - Solaris 配置示例
+- - '###'
+  - Solaris DHCP 配置
+- - '###'
+  - ndd：用于 Solaris 的 TCP/IP 和接口调优
+- - '####'
+  - 表 14.10 可以使用 Solaris 的 ndd 命令探测的设备
+- - '###'
+  - Solaris 安全性
+- - '####'
+  - 表 14.11 Solaris 中与安全相关的网络行为
+- - '###'
+  - Solaris 防火墙和过滤
+- - '##'
+  - HP-UX 配置示例
+- - '##'
+  - HP-UX DHCP 配置
+- - '##'
+  - HP-UX 动态重配置和调优
+- - '##'
+  - HP-UX 安全、防火墙、过滤和 NAT
+- - '###'
+  - 表 14.12 HP-UX 中的安全相关网络行为
+- - '##'
+  - 14.15 AIX 网络
+- - '###'
+  - 表 14.13 在 AIX 中设置接口 IP 地址的八种方法
+- - '###'
+  - 'no: 管理 AIX 网络调优参数'
+- - '###'
+  - 表 14.14 AIX 的安全相关 TCP/IP 调优变量
+- - '##'
+  - 14.16 推荐阅读
+- - '##'
+  - 14.17 练习
+- - '#'
+  - 15 路由
+- - '##'
+  - 15.1 分组转发：深入探讨
+- - '###'
+  - 展品A 示例网络
+- - '##'
+  - 15.2 路由守护进程和路由协议
+- - '###'
+  - 距离向量协议
+- - '###'
+  - 表 15.1 常见的距离向量路由协议
+- - '###'
+  - 链路状态协议
+- - '###'
+  - 成本度量
+- - '###'
+  - 内部和外部协议
+- - '##'
+  - 15.3 协议巡游
+- - '###'
+  - RIP 和 RIPng：路由信息协议
+- - '###'
+  - 'OSPF: Open Shortest Path First'
+- - '###'
+  - 'EIGRP: Enhanced Interior Gateway Routing Protocol'
+- - '###'
+  - 'IS-IS: the ISO “standard”'
+- - '###'
+  - Router Discovery Protocol and Neighbor Discovery Protocol
+- - '###'
+  - 'BGP: the Border Gateway Protocol'
+- - '##'
+  - 15.4 路由策略选择标准
+- - '##'
+  - 15.5 路由守护进程
+- - '###'
+  - routed：过时的 RIP 实现
+- - '###'
+  - gated：第一代多协议路由守护进程
+- - '###'
+  - Quagga：主流路由守护进程
+- - '###'
+  - ramd：适用于 HP-UX 的多协议路由系统
+- - '###'
+  - XORP：盒中路由器
+- - '###'
+  - 厂商具体信息
+- - '##'
+  - 15.6 CISCO 路由器
+- - '###'
+  - 表 15.2 与路由相关的 RFC
+- - '##'
+  - 15.8 练习
+- - '#'
+  - 16 网络硬件
+- - '##'
+  - 16.1 以太网：网络的瑞士军刀
+- - '###'
+  - 以太网的工作原理
+- - '###'
+  - 表 16.1 以太网的演进
+- - '###'
+  - 以太网拓扑
+- - '###'
+  - 非屏蔽双绞线布线
+- - '####'
+  - Exhibit A A UTP installation
+- - '####'
+  - Table 16.2 UTP cable characteristics
+- - '###'
+  - 光纤
+- - '###'
+  - 连接和扩展以太网
+- - '####'
+  - 集线器
+- - '###'
+  - 交换机
+- - '###'
+  - 支持 VLAN 的交换机
+- - '###'
+  - 路由器
+- - '###'
+  - 自动协商
+- - '###'
+  - Power over Ethernet
+- - '###'
+  - Jumbo frames
+- - '##'
+  - '16.2 WIRELESS: ETHERNET FOR NOMADS'
+- - '###'
+  - 无线安全
+- - '###'
+  - 无线交换机和轻量级接入点
+- - '##'
+  - 16.3 DSL和线缆调制解调器：最后一英里
+- - '##'
+  - 16.4 网络测试与调试
+- - '##'
+  - 16.5 建筑布线
+- - '###'
+  - UTP 布线选项
+- - '###'
+  - 连接到办公室
+- - '###'
+  - 布线标准
+- - '####'
+  - 表 16.5 EIA-606 颜色表
+- - '##'
+  - 16.6 网络设计问题
+- - '###'
+  - 网络架构 vs. 建筑架构
+- - '###'
+  - 扩展
+- - '###'
+  - 拥塞
+- - '###'
+  - 维护和文档
+- - '##'
+  - 16.7 管理问题
+- - '##'
+  - 16.8 RECOMMENDED VENDORS
+- - '###'
+  - Cables and connectors
+- - '###'
+  - Test equipment
+- - '###'
+  - Routers/switches
+- - '##'
+  - 16.9 RECOMMENDED READING
+- - '##'
+  - 16.10 EXERCISES
+- - '#'
+  - '17 DNS: The Domain Name System'
+- - '###'
+  - 表 17.1 一些流行的 DNS 实现
+- - '##'
+  - 17.1 谁需要 DNS？
+- - '###'
+  - 管理你的 DNS
+- - '##'
+  - 17.2 DNS 如何工作
+- - '###'
+  - 资源记录
+- - '###'
+  - 委派
+- - '###'
+  - 缓存与效率
+- - '###'
+  - 多个答案
+- - '##'
+  - 17.3 DNS FOR THE IMPATIENT
+- - '###'
+  - 向 DNS 添加新机器
+- - '####'
+  - 步骤 4a，适用于运行 BIND 服务器的站点：
+- - '####'
+  - 第 4b 步，针对运行 NSD 的站点：
+- - '####'
+  - 第 5 步：进入区域文件目录并编辑正向区域文件。找到您之前识别的模板主机的记录。它们看起来像这样：
+- - '####'
+  - 第 6 步：复制这些记录并相应地更改为您的新主机。
+- - '####'
+  - 第 7 步：在文件开头的 SOA 记录中更改序列号——它是 SOA 记录中五个数字中的第一个。序列号应仅增加。如果您的站点使用任意序列号，则加 1；如果您的站点使用该约定，则将字段设置为当前日期。
+- - '####'
+  - 第 8 步：编辑反向区域文件并查找如下记录：
+- - '####'
+  - 第 9 步：如第 7 步所述，更新反向区域文件 SOA 记录中的序列号。
+- - '####'
+  - 第 10a 步：如果您使用 BIND 且比较懒惰，运行 rndc reload。如果服务器很繁忙，您只能重新加载您更改的域（或视图）：
+- - '####'
+  - 第 10b 步：如果您使用 NSD，运行 nsdc rebuild 然后 nsdc restart。
+- - '####'
+  - 第 11 步：使用 dig 或 drill 检查配置；参见第 677 页。您也可以尝试 ping 或 traceroute 到您新主机的名称，即使新主机尚未设置。“主机未知”消息意味着您搞错了；“主机无响应”意味着一切可能正常。
+- - '###'
+  - 配置 DNS 客户端
+- - '##'
+  - 17.4 名称服务器
+- - '###'
+  - 权威服务器和仅缓存服务器
+- - '###'
+  - 表 17.3 名称服务器分类
+- - '###'
+  - 递归和非递归服务器
+- - '##'
+  - 17.5 DNS 命名空间
+- - '###'
+  - 注册二级域名
+- - '###'
+  - 创建自己的子域
+- - '##'
+  - 17.6 设计你的 DNS 环境
+- - '###'
+  - 命名空间管理
+- - '###'
+  - 权威服务器
+- - '###'
+  - 缓存服务器
+- - '###'
+  - 硬件要求
+- - '###'
+  - 安全
+- - '###'
+  - 总结
+- - '###'
+  - 展品 B DNS 服务器架构
+- - '##'
+  - 17.7 DNS 中的新内容
+- - '###'
+  - Table 17.4 Recent developments in DNS and BIND
+- - '##'
+  - 17.8 THE DNS DATABASE
+- - '###'
+  - Commands in zone files
+- - '###'
+  - 资源记录
+- - '###'
+  - 表 17.5 资源记录中使用的特殊字符
+- - '###'
+  - The SOA record
+- - '###'
+  - NS 记录
+- - '###'
+  - A 记录
+- - '###'
+  - PTR 记录
+- - '###'
+  - MX 记录
+- - '###'
+  - CNAME 记录
+- - '###'
+  - CNAME 技巧
+- - '###'
+  - SRV 记录
+- - '###'
+  - TXT 记录
+- - '###'
+  - IPv6 资源记录
+- - '###'
+  - IPv6 正向记录 – AAAA
+- - '###'
+  - IPv6 反向记录 – PTR
+- - '###'
+  - SPF 记录
+- - '###'
+  - DKIM 和 ADSP 记录
+- - '###'
+  - 表 17.7 DKIM-Signature 邮件头部中的标签
+- - '###'
+  - SSHFP 资源记录
+- - '###'
+  - DNSSEC 资源记录
+- - '###'
+  - 胶水记录：区域之间的链接
+- - '##'
+  - 17.9 BIND 软件
+- - '###'
+  - 版本确定
+- - '###'
+  - 表 17.8 我们示例系统中随附的 BIND 版本
+- - '###'
+  - BIND 的组件
+- - '###'
+  - 配置文件
+- - '###'
+  - Everything to the end of the line is a comment.
+- - '####'
+  - Table 17.9 Statements used in named.conf
+- - '###'
+  - The include statement
+- - '###'
+  - The options statement
+- - '####'
+  - File locations
+- - '####'
+  - Name server identity
+- - '####'
+  - Zone synchronization
+- - '###'
+  - IP 端口利用
+- - '###'
+  - 转发的使用
+- - '###'
+  - 权限
+- - '###'
+  - 数据包大小
+- - '###'
+  - DNSSEC
+- - '###'
+  - 统计
+- - '###'
+  - 性能调优
+- - '###'
+  - acl 语句
+- - '###'
+  - (TSIG) key 语句
+- - '###'
+  - The trusted-keys statement
+- - '###'
+  - The server statement
+- - '###'
+  - The masters statement
+- - '###'
+  - 为区域配置主服务器
+- - '###'
+  - 为区域配置从服务器
+- - '###'
+  - 设置根服务器提示
+- - '###'
+  - 设置转发区
+- - '###'
+  - rndc 的 controls 语句
+- - '###'
+  - Start of rndc.conf
+- - '###'
+  - End of rndc.conf
+- - '###'
+  - 在 named.conf 中使用以下内容，根据需要调整 allow 列表：
+- - '###'
+  - key "rndc-key" {
+- - '###'
+  - algorithm hmac-md5;
+- - '###'
+  - secret "orZuz5amkUnEp52zIHxD6cd5hACl dOGsG/elP/dv2IY=";
+- - '###'
+  - '};'
+- - '###'
+  - controls {
+- - '###'
+  - inet 127.0.0.1 port 953
+- - '###'
+  - allow { 127.0.0.1; } keys { "rndc-key"; };
+- - '###'
+  - '};'
+- - '###'
+  - named.conf 结束
+- - '###'
+  - 分割 DNS 和 view 语句
+- - '##'
+  - 17.10 BIND 配置示例
+- - '###'
+  - localhost 区域
+- - '####'
+  - 相应的正向区域文件 localhost 包含以下内容：
+- - '###'
+  - 一家小型安全公司
+- - '###'
+  - The Internet Systems Consortium, isc.org
+- - '##'
+  - 17.11 NSD/UNBOUND 软件
+- - '###'
+  - 安装和配置 NSD
+- - '###'
+  - 与 BIND 的根本区别
+- - '###'
+  - NSD 配置示例
+- - '###'
+  - NSD 密钥定义
+- - '###'
+  - NSD 全局配置选项
+- - '####'
+  - Include a file
+- - '####'
+  - IP addresses and port
+- - '####'
+  - ID variables
+- - '####'
+  - Logging statistics
+- - '####'
+  - Filenames
+- - '####'
+  - Tuning
+- - '###'
+  - NSD zone-specific configuration options
+- - '###'
+  - Running nsd
+- - '###'
+  - Installing and configuring Unbound
+- - '###'
+  - Table 17.11 Unbound installation directories
+- - '###'
+  - 位置
+- - '###'
+  - 日志
+- - '###'
+  - 统计
+- - '###'
+  - 查询访问
+- - '###'
+  - 安全
+- - '###'
+  - ID 变量
+- - '###'
+  - IP 地址
+- - '###'
+  - DNSSEC
+- - '###'
+  - 签名
+- - '###'
+  - 调优
+- - '###'
+  - 私有地址
+- - '###'
+  - 控制 unbound
+- - '###'
+  - stub 区域
+- - '####'
+  - Forwarding
+- - '##'
+  - 17.12 UPDATING ZONE FILES
+- - '###'
+  - Zone transfers
+- - '###'
+  - BIND 动态更新
+- - '##'
+  - 17.13 安全问题
+- - '###'
+  - 表 17.12 BIND、NSD 和 Unbound 中的安全功能
+- - '###'
+  - BIND 中访问控制列表的回顾
+- - '###'
+  - 开放解析器
+- - '###'
+  - 在 chroot jail 中运行
+- - '###'
+  - 使用 TSIG 和 TKEY 进行安全的服务器到服务器通信
+- - '###'
+  - 为 BIND 设置 TSIG
+- - '###'
+  - NSD 中的 TSIG
+- - '###'
+  - DNSSEC
+- - '###'
+  - DNSSEC 策略
+- - '###'
+  - DNSSEC 资源记录
+- - '###'
+  - DNSSEC 资源记录
+- - '###'
+  - 开启 DNSSEC
+- - '###'
+  - 密钥对生成
+- - '###'
+  - Zone signing
+- - '###'
+  - 区域签名
+- - '###'
+  - DNSSEC 信任链
+- - '###'
+  - DLV：域旁路验证
+- - '###'
+  - DNSSEC 密钥轮换
+- - '###'
+  - DNSSEC 工具
+- - '###'
+  - RIPE 工具，ripe.net
+- - '###'
+  - Vantages 工具，vantage-points.org
+- - '###'
+  - 调试 DNSSEC
+- - '##'
+  - 17.14 MICROSOFT AND DNS
+- - '##'
+  - 17.15 TESTING AND DEBUGGING
+- - '###'
+  - Logging in BIND
+- - '###'
+  - Channels
+- - '###'
+  - 表 17.14 BIND 中预定义的日志通道
+- - '###'
+  - 类别
+- - '###'
+  - 日志消息
+- - '###'
+  - 表 17.15 BIND 日志类别
+- - '###'
+  - 示例 BIND 日志配置
+- - '###'
+  - BIND 中的调试级别
+- - '###'
+  - NSD/Unbound 中的日志记录
+- - '###'
+  - 名称服务器控制程序
+- - '###'
+  - 使用 NSD 的 nsdc
+- - '###'
+  - 使用 unbound-control
+- - '###'
+  - 表 17.17 nsdc 命令
+- - '###'
+  - 名称服务器统计信息
+- - '###'
+  - Debugging with dig
+- - '###'
+  - DNS sanity checking tools
+- - '###'
+  - Performance issues
+- - '##'
+  - 17.16 VENDOR SPECIFICS
+- - '###'
+  - Specifics for Linux
+- - '###'
+  - Table 17.18 BIND files in Linux
+- - '###'
+  - Solaris 的特别说明
+- - '####'
+  - 表 17.19 Solaris 中的 BIND 9 文件
+- - '###'
+  - HP-UX 的特别说明
+- - '####'
+  - HP 推荐
+- - '####'
+  - 但我们更倾向于
+- - '####'
+  - 表 17.20 HP-UX 中的 BIND 文件
+- - '###'
+  - AIX 的特别说明
+- - '##'
+  - 17.17 推荐阅读
+- - '###'
+  - 邮件列表和新闻组
+- - '###'
+  - 书籍和其他文档
+- - '###'
+  - 在线资源
+- - '###'
+  - RFC 文档
+- - '##'
+  - 17.18 练习
+- - '#'
+  - 18 网络文件系统
+- - '##'
+  - 18.1 网络文件服务的介绍
+- - '###'
+  - 状态问题
+- - '###'
+  - 性能问题
+- - '###'
+  - 安全
+- - '##'
+  - 18.2 NFS 方法
+- - '###'
+  - 协议版本和历史
+- - '###'
+  - 传输协议
+- - '###'
+  - 状态
+- - '###'
+  - 文件系统导出
+- - '###'
+  - 文件锁定
+- - '###'
+  - 安全问题
+- - '###'
+  - 版本 4 中的身份映射
+- - '###'
+  - root 访问和 nobody 帐户
+- - '###'
+  - 版本 4 中的性能考虑
+- - '###'
+  - 磁盘配额
+- - '##'
+  - 18.3 服务器端 NFS
+- - '###'
+  - 表 18.1 NFS 服务器启动脚本
+- - '###'
+  - 表 18.2 在何处设置导出的目录
+- - '###'
+  - share 命令和 dfstab 文件（Solaris、HP-UX）
+- - '###'
+  - 表 18.3 share 命令的选项（Solaris、HP-UX）
+- - '###'
+  - 表 18.4 share 命令的客户端规范
+- - '###'
+  - The exportfs command and the exports file (Linux, AIX)
+- - '####'
+  - Exports in AIX
+- - '####'
+  - Exports in Linux
+- - '###'
+  - 表 18.7 Linux 中常见的导出选项
+- - '###'
+  - 'nfsd: 提供文件服务'
+- - '###'
+  - 表 18.8 如何指定 nfsd 守护进程的数量
+- - '##'
+  - 18.4 客户端 NFS
+- - '###'
+  - 表 18.9 NFS 挂载标志和选项
+- - '###'
+  - 启动时挂载远程文件系统
+- - '###'
+  - filesystem mountpoint fstype flags dump fsck
+- - '###'
+  - 限制导出到特权端口
+- - '##'
+  - 18.5 NFS 版本 4 的身份映射
+- - '##'
+  - 18.6 NFSSTAT：转储 NFS 统计信息
+- - '##'
+  - 18.7 专用 NFS 文件服务器
+- - '##'
+  - 18.8 自动挂载
+- - '###'
+  - 间接映射
+- - '###'
+  - 直接映射
+- - '###'
+  - 主映射
+- - '###'
+  - Directory Map
+- - '###'
+  - 可执行映射
+- - '###'
+  - Automount 可见性
+- - '###'
+  - 复制文件系统和 automount
+- - '###'
+  - 自动 automount（V3；除 Linux 外）
+- - '###'
+  - Linux 的具体说明
+- - '##'
+  - 18.9 推荐阅读
+- - '###'
+  - 表 18.11 NFS 相关 RFC
+- - '##'
+  - 18.10 练习
+- - '#'
+  - 19 共享系统文件
+- - '##'
+  - 19.1 要共享什么
+- - '##'
+  - 19.2 文件复制
+- - '###'
+  - NFS选项
+- - '###'
+  - 推送系统与拉取系统
+- - '###'
+  - rdist：推送文件
+- - '###'
+  - 'rsync: transfer files more securely'
+- - '###'
+  - rsync -gpot --password-file=/etc/rsync.pwd /etc/passwd lollipop::sysfiles
+- - '###'
+  - sysfiles is just an arbitrary title for the particular module.
+- - '###'
+  - This is the path you allow files to be pushed to. It could be just /.
+- - '###'
+  - This is the file specifying the user/password pair to authenticate the module
+- - '###'
+  - Can be read only if you are pulling files
+- - '###'
+  - UID and GID under which the transfer will be done
+- - '###'
+  - List of hosts that are allowed to connect
+- - '###'
+  - Pulling files
+- - '##'
+  - '19.3 LDAP: THE LIGHTWEIGHT DIRECTORY ACCESS PROTOCOL'
+- - '###'
+  - The structure of LDAP data
+- - '###'
+  - LDAP 的要点
+- - '###'
+  - LDAP 文档和规范
+- - '####'
+  - 表 19.3 重要的 LDAP 相关 RFC
+- - '###'
+  - OpenLDAP：传统的开源 LDAP 服务器
+- - '###'
+  - 389 目录服务器：另一款开源 LDAP 服务器
+- - '###'
+  - 用 LDAP 替代 /etc/passwd 和 /etc/group
+- - '###'
+  - LDAP 与安全
+- - '###'
+  - 表 19.4 NIS 命令和守护进程
+- - '###'
+  - NIS 安全
+- - '##'
+  - 19.5 优先排序管理信息来源
+- - '###'
+  - 表 19.5 /etc/nsswitch.conf 中识别的失败模式
+- - '###'
+  - nscd：缓存查找结果
+- - '##'
+  - 19.6 **推荐阅读**
+- - '##'
+  - 19.7 **练习**
+- - '#'
+  - 20 电子邮件
+- - '##'
+  - 20.1 邮件系统
+- - '###'
+  - 用户代理
+- - '###'
+  - 提交代理
+- - '###'
+  - 传输代理
+- - '###'
+  - 本地交付代理
+- - '###'
+  - 消息存储
+- - '###'
+  - 访问代理
+- - '###'
+  - 如此多组件，时间如此有限
+- - '##'
+  - 20.2 THE ANATOMY OF A MAIL MESSAGE
+- - '###'
+  - Reading mail headers
+- - '##'
+  - 20.3 SMTP 协议
+- - '###'
+  - 表 20.2 SMTP 命令
+- - '###'
+  - You had me at EHLO
+- - '###'
+  - SMTP 错误代码
+- - '###'
+  - 表 20.3 RFC3463 投递状态通知
+- - '###'
+  - SMTP 身份验证
+- - '##'
+  - 20.4 邮件系统设计
+- - '###'
+  - 使用邮件服务器
+- - '###'
+  - 展品 B 邮件系统架构
+- - '##'
+  - 20.5 MAIL ALIASES
+- - '###'
+  - Basic system aliases -- these MUST be present.
+- - '###'
+  - Basic system aliases -- these MUST be present.
+- - '###'
+  - 从文件获取别名
+- - '###'
+  - 邮件发送到文件
+- - '###'
+  - 邮件发送到程序
+- - '###'
+  - 通过示例理解别名
+- - '###'
+  - General redirections for pseudo-accounts.
+- - '###'
+  - Pager aliases
+- - '###'
+  - Sysadmin conveniences
+- - '###'
+  - Class aliases that change every semester
+- - '###'
+  - 构建哈希别名数据库
+- - '###'
+  - 使用邮件列表和列表管理软件
+- - '###'
+  - 垃圾邮件
+- - '###'
+  - 伪造
+- - '###'
+  - 邮件隐私
+- - '###'
+  - 垃圾邮件过滤
+- - '###'
+  - 何时过滤
+- - '###'
+  - Greylisting/DCC
+- - '###'
+  - SpamAssassin
+- - '###'
+  - Blacklists
+- - '###'
+  - Whitelists
+- - '###'
+  - 'Miltering: mail filtering'
+- - '###'
+  - SPF and Sender ID
+- - '###'
+  - DomainKeys, DKIM, and ADSP
+- - '###'
+  - MTA-specific antispam features
+- - '###'
+  - MailScanner
+- - '###'
+  - amavisd-new
+- - '###'
+  - Exhibit C MRTG graph of mail traffic
+- - '####'
+  - How amavisd works
+- - '###'
+  - amavisd 安装
+- - '###'
+  - 基本 amavisd 配置
+- - '###'
+  - amavisd-new 工具
+- - '###'
+  - 测试你的MTA的扫描有效性
+- - '##'
+  - 20.7 电子邮件配置
+- - '###'
+  - 表20.4 邮件传输代理市场份额
+- - '##'
+  - 20.8 SENDMAIL
+- - '###'
+  - The switch file
+- - '###'
+  - Starting sendmail
+- - '###'
+  - 表 20.6 sendmail 主要模式的命令行标志
+- - '###'
+  - 邮件队列
+- - '##'
+  - 20.9 SENDMAIL 配置
+- - '###'
+  - The m4 preprocessor
+- - '###'
+  - The sendmail configuration pieces
+- - '###'
+  - Table 20.8 m4 macros commonly used with sendmail
+- - '###'
+  - Table 20.9 sendmail configuration subdirectories
+- - '###'
+  - 从示例 .mc 文件构建的配置文件
+- - '####'
+  - basic .mc file for example.com
+- - '##'
+  - 20.10 SENDMAIL 配置原语
+- - '###'
+  - 表和数据库
+- - '###'
+  - 通用宏和特性
+- - '####'
+  - OSTYPE macro
+- - '####'
+  - DOMAIN macro
+- - '####'
+  - MAILER macro
+- - '####'
+  - FEATURE macro
+- - '####'
+  - use_cw_file feature
+- - '###'
+  - virtusertable 功能
+- - '###'
+  - ldap_routing 功能
+- - '###'
+  - Masquerading 功能
+- - '###'
+  - MAIL_HUB 和 SMART_HOST 宏
+- - '###'
+  - 客户端配置
+- - '###'
+  - 配置选项
+- - '###'
+  - sendmail中与垃圾邮件相关的特性
+- - '###'
+  - 表 20.11 基本 sendmail 配置选项
+- - '###'
+  - 中继控制
+- - '###'
+  - 用户或站点黑名单
+- - '###'
+  - 节流、速率和连接限制
+- - '###'
+  - 在 sendmail 中配置 Milter
+- - '###'
+  - amavisd 与 sendmail 的连接
+- - '##'
+  - 20.11 安全性与 sendmail
+- - '###'
+  - 所有权
+- - '###'
+  - 权限
+- - '####'
+  - 表 20.13 sendmail 相关目录的所有者和权限
+- - '###'
+  - 隐私选项
+- - '####'
+  - Table 20.15 Values of the PrivacyOption variable
+- - '###'
+  - 我们推荐保守做法；在你的 `.mc` 文件中，使用
+- - '###'
+  - 运行 chrooted sendmail（给真正偏执的人）
+- - '###'
+  - 拒绝服务攻击
+- - '###'
+  - SASL：简单认证和安全层
+- - '###'
+  - TLS：传输层安全
+- - '##'
+  - 20.12 SENDMAIL 性能
+- - '###'
+  - 交付模式
+- - '###'
+  - 队列组和信封拆分
+- - '###'
+  - 队列运行器
+- - '###'
+  - 负载平均值控制
+- - '###'
+  - 队列中无法投递的消息
+- - '###'
+  - 内核调优
+- - '###'
+  - 队列监控
+- - '###'
+  - 日志记录
+- - '###'
+  - 表 20.17 sendmail 日志级别 vs. syslog 级别
+- - '###'
+  - 表 20.18 厂商的 sendmail 日志记录位置
+- - '##'
+  - 20.14 Exim
+- - '###'
+  - Exim 安装
+- - '###'
+  - Exim 启动
+- - '###'
+  - 表 20.19 常见的 exim 命令行标志
+- - '###'
+  - Exim 实用工具
+- - '###'
+  - Exim 配置语言
+- - '###'
+  - Exim 配置文件
+- - '###'
+  - 全局选项
+- - '###'
+  - 选项
+- - '###'
+  - 列表
+- - '###'
+  - 宏
+- - '###'
+  - ACL（访问控制列表）
+- - '###'
+  - ACL 阶段的内容扫描
+- - '###'
+  - 扫描病毒
+- - '###'
+  - 表 20.20 Exim 已知的防病毒扫描程序
+- - '###'
+  - 垃圾邮件扫描
+- - '###'
+  - 认证器
+- - '###'
+  - 路由器
+- - '####'
+  - accept 路由器
+- - '####'
+  - manualroute 路由器
+- - '####'
+  - redirect 路由器
+- - '####'
+  - 通过 .forward 文件进行按用户过滤
+- - '###'
+  - Transports
+- - '####'
+  - The appendfile transport
+- - '####'
+  - The smtp transport
+- - '###'
+  - Retry configuration
+- - '###'
+  - Rewriting configuration
+- - '###'
+  - Local scan function
+- - '###'
+  - amavisd 与 Exim 连接
+- - '###'
+  - 日志
+- - '###'
+  - 调试
+- - '##'
+  - 20.15 POSTFIX
+- - '###'
+  - Postfix 架构
+- - '###'
+  - 展品 D Postfix 服务器程序
+- - '###'
+  - 接收邮件
+- - '###'
+  - 管理等待投递队列
+- - '###'
+  - 发送邮件
+- - '###'
+  - 安全
+- - '###'
+  - Postfix 命令和文档
+- - '###'
+  - Postfix 配置
+- - '###'
+  - main.cf 中应放入什么
+- - '###'
+  - 基本设置
+- - '###'
+  - 使用 postconf
+- - '###'
+  - 查找表
+- - '####'
+  - 表 20.21 Postfix 查找表的信息源
+- - '###'
+  - 本地投递
+- - '###'
+  - 表 20.22 本地邮箱投递的参数（在 main.cf 中设置）
+- - '###'
+  - 虚拟域
+- - '###'
+  - 虚拟别名域
+- - '###'
+  - 虚拟邮箱域
+- - '###'
+  - 访问控制
+- - '####'
+  - 表 20.23 Postfix 参数用于 SMTP 访问限制
+- - '####'
+  - 表 20.24 常见的 Postfix 后缀访问限制
+- - '###'
+  - 访问表
+- - '###'
+  - 表 20.25 访问表的操作
+- - '###'
+  - 客户端认证和加密
+- - '###'
+  - 抵御垃圾邮件与病毒
+- - '###'
+  - 黑名单
+- - '###'
+  - 内容过滤
+- - '###'
+  - 使用 amavisd 进行内容过滤
+- - '###'
+  - Debugging
+- - '###'
+  - Looking at the queue
+- - '###'
+  - Soft-bouncing
+- - '###'
+  - Testing access control
+- - '##'
+  - 20.16 DKIM CONFIGURATION
+- - '###'
+  - 'DKIM: DomainKeys Identified Mail'
+- - '###'
+  - DKIM miltering
+- - '###'
+  - amavisd-new 中的 DKIM 配置
+- - '###'
+  - sendmail 中的 DKIM
+- - '###'
+  - Exim 中的 DKIM
+- - '####'
+  - 签名传出消息
+- - '###'
+  - 表 20.26 Exim 中的 DKIM 签名选项
+- - '###'
+  - 验证收到的已签名消息
+- - '###'
+  - 完整示例
+- - '####'
+  - macros to define the directories for databases and keys
+- - '####'
+  - 'main section: define the domains to sign and required DKIM acl'
+- - '####'
+  - 'ACL section: verify signature on incoming mail, add a header'
+- - '####'
+  - 'Router section: put just before "dnslookup" router, sign nonlocal'
+- - '####'
+  - 'Transport section: does the actual signing'
+- - '###'
+  - Postfix 中的 DKIM
+- - '##'
+  - 20.17 集成式邮件解决方案
+- - '##'
+  - 20.18 推荐阅读
+- - '###'
+  - 通用垃圾邮件参考资料
+- - '###'
+  - sendmail 参考资料
+- - '###'
+  - Exim 参考资料
+- - '##'
+  - Postfix 参考
+- - '##'
+  - RFCs
+- - '##'
+  - 20.19 练习
+- - '##'
+  - E20.5 比较使用 /etc/mail/aliases 与使用 LDAP 服务器或 MySQL 数据库来存储邮件别名。各自的优点和缺点是什么？
+- - '##'
+  - ★ E20.6 写一份关于以下电子邮件头的简要描述。电子邮件走了什么路径？它被发送给了谁，又被投递给了谁？它在传输中花费了多长时间？
+- - '##'
+  - sendmail-specific exercises
+- - '##'
+  - Exim-specific exercises
+- - '##'
+  - Postfix-specific exercises
+- - '#'
+  - 21 Network Management and Debugging
+- - '##'
+  - 21.1 网络故障排除
+- - '##'
+  - 21.2 PING：检查主机是否在线
+- - '###'
+  - 这里有一个示例：
+- - '##'
+  - 21.3 SMOKEPING：随时间收集 Ping 统计信息
+- - '###'
+  - 展品 A SmokePing 示例图
+- - '##'
+  - 21.4 TRACEROUTE：跟踪 IP 数据包
+- - '##'
+  - 21.5 NETSTAT：获取网络统计信息
+- - '###'
+  - 检查接口配置信息
+- - '###'
+  - 监控网络连接的状态
+- - '###'
+  - 识别监听的网络服务
+- - '###'
+  - 检查路由表
+- - '###'
+  - 查看网络协议的操作统计
+- - '##'
+  - 21.6 实时接口活动检查
+- - '##'
+  - tcpdump：工业标准数据包嗅探器
+- - '##'
+  - Wireshark 和 TShark：功能强大的 tcpdump
+- - '##'
+  - 附录 B
+- - '##'
+  - 21.8 THE iCSI NETALYZR
+- - '###'
+  - 展品 C Netalyzr 报告
+- - '##'
+  - 21.9 网络管理协议
+- - '###'
+  - 展品 C Netalyzr 报告
+- - '##'
+  - 21.9 网络管理协议
+- - '##'
+  - 21.10 SNMP：简单网络管理协议
+- - '###'
+  - SNMP 组织
+- - '###'
+  - 表 21.1 MIB-II 中选定的 OID
+- - '###'
+  - SNMP 协议操作
+- - '###'
+  - NET-SNMP 工具
+- - '###'
+  - SNMP 数据采集和绘图
+- - '###'
+  - 展品 D Cacti 图表示例
+- - '###'
+  - Nagios：基于事件的服务监控
+- - '###'
+  - 附件 E：Nagios 显示的服务器可用性
+- - '###'
+  - 终极网络监控软件包：仍在寻找
+- - '###'
+  - 商业管理平台
+- - '####'
+  - 数据收集灵活性
+- - '####'
+  - 用户界面质量
+- - '####'
+  - 价值
+- - '####'
+  - 自动发现
+- - '####'
+  - 报告功能
+- - '####'
+  - 配置管理
+- - '##'
+  - 21.13 NETFLOW：面向连接的监控
+- - '###'
+  - 使用 nfdump 和 NfSen 监控 NetFlow 数据
+- - '###'
+  - Exhibit F A “SYN flood” profile for NfSen
+- - '###'
+  - Setting up NetFlow on a Cisco router
+- - '##'
+  - 21.14 RECOMMENDED READING
+- - '##'
+  - 21.15 EXERCISES
+- - '##'
+  - E21.8
+- - '#'
+  - 22 安全
+- - '##'
+  - 22.1 UNIX安全吗？
+- - '##'
+  - 22.2 安全是如何被攻破的
+- - '###'
+  - 社会工程学
+- - '###'
+  - 软件漏洞
+- - '###'
+  - Example user input validation error
+- - '###'
+  - 配置错误
+- - '##'
+  - 22.3 安全提示和哲学
+- - '###'
+  - 补丁
+- - '###'
+  - 不必要的服务
+- - '###'
+  - 远程事件日志
+- - '###'
+  - 备份
+- - '###'
+  - 病毒和蠕虫
+- - '###'
+  - 特洛伊木马
+- - '###'
+  - Rootkits
+- - '###'
+  - Packet filtering
+- - '###'
+  - Passwords
+- - '###'
+  - Vigilance
+- - '###'
+  - General philosophy
+- - '##'
+  - 22.4 密码和用户账户
+- - '###'
+  - 密码老化
+- - '###'
+  - 组登录和共享登录
+- - '###'
+  - 用户 shell
+- - '###'
+  - Root 条目
+- - '##'
+  - 22.5 PAM：烹饪喷雾还是认证奇迹？
+- - '###'
+  - 系统对 PAM 的支持
+- - '###'
+  - PAM 配置
+- - '###'
+  - login service
+- - '###'
+  - 表 22.1 PAM 控制标志
+- - '###'
+  - login service
+- - '###'
+  - 详细的 Linux 配置示例
+- - '##'
+  - 22.6 SETUID 程序
+- - '##'
+  - 22.7 CHROOT 的有效使用
+- - '##'
+  - 22.8 安全强力工具
+- - '###'
+  - Nmap：网络端口扫描器
+- - '###'
+  - Nessus：下一代网络扫描器
+- - '###'
+  - John the Ripper：不安全密码的查找器
+- - '###'
+  - hosts_access：主机访问控制
+- - '###'
+  - 'Bro: the programmable network intrusion detection system'
+- - '###'
+  - 'Snort: the popular network intrusion detection system'
+- - '###'
+  - 'OSSEC: host-based intrusion detection'
+- - '###'
+  - OSSEC 基本概念
+- - '###'
+  - OSSEC 安装
+- - '###'
+  - OSSEC 配置
+- - '##'
+  - 22.9 强制访问控制（MAC）
+- - '###'
+  - 安全增强型 Linux（SELinux）
+- - '##'
+  - 22.10 CRYPTOGRAPHIC SECURITY TOOLS
+- - '###'
+  - 'Kerberos: a unified approach to network security'
+- - '###'
+  - 'PGP: Pretty Good Privacy'
+- - '###'
+  - SSH：安全外壳
+- - '###'
+  - 表 22.2 /etc/sshd_config 中与认证相关的选项
+- - '###'
+  - 展品 A 用于 RDP 的 SSH 隧道
+- - '###'
+  - Stunnel
+- - '##'
+  - 22.11 防火墙
+- - '###'
+  - 包过滤防火墙
+- - '###'
+  - 服务如何被过滤
+- - '###'
+  - Stateful inspection firewalls
+- - '###'
+  - Rule targets
+- - '###'
+  - iptables 防火墙设置
+- - '####'
+  - 一个完整示例
+- - '##'
+  - 22.13 IPFILTER FOR UNIX SYSTEMS
+- - '###'
+  - Table 22.4 Commonly used ipf conditions
+- - '##'
+  - 22.14 虚拟专用网络（VPN）
+- - '###'
+  - IPsec隧道
+- - '###'
+  - 我只需要VPN，对吗？
+- - '##'
+  - 22.15 认证与标准
+- - '###'
+  - 认证
+- - '###'
+  - 安全标准
+- - '####'
+  - ISO 27002
+- - '####'
+  - PCI DSS
+- - '####'
+  - NIST 800 系列
+- - '####'
+  - 通用标准
+- - '####'
+  - OWASP
+- - '##'
+  - 22.16 安全信息来源
+- - '###'
+  - CERT：卡内基梅隆大学的注册服务商标
+- - '###'
+  - SecurityFocus.com 和 BugTraq 邮件列表
+- - '###'
+  - Schneier on Security
+- - '###'
+  - SANS：系统管理、网络和安全研究所
+- - '###'
+  - 厂商特定的安全资源
+- - '###'
+  - 其他邮件列表和网站
+- - '##'
+  - 22.17 当你的站点遭到攻击时该怎么办
+- - '###'
+  - 'Step 1: Don’t panic.'
+- - '###'
+  - 'Step 2: Decide on an appropriate level of response.'
+- - '###'
+  - 'Step 3: Hoard all available tracking information.'
+- - '###'
+  - 'Step 4: Assess your degree of exposure.'
+- - '###'
+  - 'Step 5: Pull the plug.'
+- - '###'
+  - 'Step 6: Devise a recovery plan.'
+- - '###'
+  - 'Step 7: Communicate the recovery plan.'
+- - '###'
+  - 'Step 8: Implement the recovery plan.'
+- - '###'
+  - 'Step 9: Report the incident to authorities.'
+- - '##'
+  - 22.18 RECOMMENDED READING
+- - '##'
+  - 22.19 练习
+- - '###'
+  - E22.7
+- - '###'
+  - E22.8
+- - '###'
+  - E22.9
+- - '###'
+  - E22.10
+- - '###'
+  - E22.11
+- - '#'
+  - 23 Web 托管
+- - '##'
+  - 23.1 Web 托管基础
+- - '###'
+  - Web 上的资源位置
+- - '###'
+  - 附件 A 统一资源分类
+- - '###'
+  - 统一资源定位符
+- - '###'
+  - 表 23.1 URL 协议
+- - '###'
+  - HTTP 的工作原理
+- - '###'
+  - Content generation on the fly
+- - '###'
+  - Embedded interpreters
+- - '###'
+  - FastCGI
+- - '###'
+  - Table 23.2 Embedded scripting modules for the Apache web server
+- - '###'
+  - Script security
+- - '###'
+  - Application servers
+- - '###'
+  - 表 23.3 应用服务器
+- - '###'
+  - 负载均衡
+- - '##'
+  - 23.2 HTTP 服务器安装
+- - '###'
+  - 选择服务器
+- - '###'
+  - 表 23.4 Apache 二进制文件的位置
+- - '###'
+  - 安装 Apache
+- - '###'
+  - 配置 Apache
+- - '###'
+  - 运行 Apache
+- - '###'
+  - 分析日志文件
+- - '###'
+  - 使用基于名称的虚拟主机
+- - '###'
+  - 配置虚拟接口
+- - '###'
+  - Linux 虚拟接口
+- - '###'
+  - Solaris 虚拟接口
+- - '###'
+  - HP-UX 虚拟接口
+- - '###'
+  - AIX 虚拟接口
+- - '###'
+  - 告知 Apache 关于虚拟接口
+- - '##'
+  - 23.4 安全套接字层（SSL）
+- - '###'
+  - 生成证书签名请求
+- - '##'
+  - 23.5 缓存和代理服务器
+- - '###'
+  - 使用 Squid 缓存和代理服务器
+- - '###'
+  - 设置 Squid
+- - '##'
+  - 23.6 超越你的极限进行扩展
+- - '###'
+  - 云计算
+- - '###'
+  - 主机托管
+- - '###'
+  - 内容分发网络
+- - '##'
+  - 23.7 练习
+- - '#'
+  - 第三部分
+- - '#'
+  - 24 虚拟化
+- - '##'
+  - 24.1 虚拟化术语
+- - '###'
+  - 完全虚拟化
+- - '####'
+  - 图 A 完全虚拟化架构
+- - '###'
+  - 准虚拟化
+- - '####'
+  - 图 B 准虚拟化架构
+- - '###'
+  - 操作系统虚拟化
+- - '###'
+  - Exhibit C  OS-level virtualization architecture
+- - '###'
+  - Native virtualization
+- - '###'
+  - Cloud computing
+- - '###'
+  - Live migration
+- - '###'
+  - Comparison of virtualization technologies
+- - '##'
+  - 24.2 BENEFITS OF VIRTUALIZATION
+- - '##'
+  - 24.3 实用方法
+- - '##'
+  - 24.4 使用 Linux 进行虚拟化
+- - '###'
+  - Xen 简介
+- - '###'
+  - Xen 核心要素
+- - '####'
+  - 表 24.1 Xen 组件
+- - '###'
+  - 使用 virt-install 进行 Xen 来宾安装
+- - '###'
+  - Xen 在线迁移
+- - '###'
+  - KVM
+- - '###'
+  - KVM 的安装与使用
+- - '##'
+  - 24.5 Solaris 区域和容器
+- - '###'
+  - Exhibit D Solaris containers example
+- - '##'
+  - 24.6 AIX WORKLOAD PARTITIONS
+- - '##'
+  - 24.7 HP-UX 中的 Integrity 虚拟机
+- - '###'
+  - 创建和安装虚拟机
+- - '##'
+  - '24.8 VMWARE: 一个独立的操作系统'
+- - '##'
+  - 24.9 AMAZON WEB SERVICES
+- - '##'
+  - 24.10 推荐阅读
+- - '##'
+  - 24.11 练习
+- - '#'
+  - 25 X Window System
+- - '###'
+  - 展品 A X 客户端/服务器模型
+- - '##'
+  - 25.1 显示管理器
+- - '##'
+  - 25.2 运行 X 应用程序的过程
+- - '###'
+  - 客户端认证
+- - '###'
+  - 使用 SSH 进行 X 连接转发
+- - '###'
+  - 附件 B 使用 SSH 进行 X 转发
+- - '##'
+  - 25.3 X 服务器配置
+- - '###'
+  - Device sections
+- - '###'
+  - Monitor sections
+- - '###'
+  - Screen sections
+- - '###'
+  - InputDevice sections
+- - '###'
+  - 表 25.2 常见鼠标设备文件
+- - '###'
+  - ServerLayout 部分
+- - '###'
+  - xrandr：不是你父亲的 X 服务器配置器
+- - '###'
+  - 内核模式设置
+- - '##'
+  - 25.4 X 服务器故障排除和调试
+- - '###'
+  - X 的特殊键盘组合
+- - '###'
+  - 当 X 服务器发动攻击
+- - '##'
+  - 25.5 关于桌面环境的简短说明
+- - '###'
+  - KDE
+- - '###'
+  - GNOME
+- - '###'
+  - 哪个更好，GNOME 还是 KDE？
+- - '##'
+  - 25.6 RECOMMENDED READING
+- - '##'
+  - 25.7 练习
+- - '#'
+  - 26 打印
+- - '##'
+  - 26.1 打印系统架构
+- - '###'
+  - 主要打印系统
+- - '###'
+  - 打印假脱机程序
+- - '##'
+  - 26.2 CUPS 打印
+- - '###'
+  - 打印系统的接口
+- - '###'
+  - 打印队列
+- - '###'
+  - 多个打印机和队列
+- - '###'
+  - 打印机实例
+- - '###'
+  - 网络打印
+- - '###'
+  - 多个打印机和队列
+- - '###'
+  - 打印机实例
+- - '###'
+  - 网络打印
+- - '###'
+  - CUPS 服务器管理
+- - '###'
+  - 打印机自动配置
+- - '###'
+  - 网络打印机配置
+- - '###'
+  - 打印机配置示例
+- - '###'
+  - 打印机类设置
+- - '###'
+  - 服务停用
+- - '###'
+  - 其他配置任务
+- - '###'
+  - 表26.1 CUPS的命令行工具及其来源
+- - '##'
+  - 26.3 从桌面环境打印
+- - '###'
+  - 打印
+- - '###'
+  - kprinter：打印文档
+- - '###'
+  - Konqueror 与打印
+- - '##'
+  - 26.4 SYSTEM V 打印
+- - '###'
+  - 概述
+- - '###'
+  - 表 26.2 System V 打印命令
+- - '###'
+  - 目标和类
+- - '###'
+  - lp 的简要说明
+- - '###'
+  - lpsched 和 lpshut：启动和停止打印
+- - '####'
+  - 日志文件看起来像这样：
+- - '###'
+  - lpadmin：配置打印环境
+- - '###'
+  - 表 26.3 lpadmin 标志
+- - '###'
+  - lp

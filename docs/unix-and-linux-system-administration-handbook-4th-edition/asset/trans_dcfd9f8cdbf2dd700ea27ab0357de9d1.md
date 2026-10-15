@@ -1,0 +1,69 @@
+
+
+The image name typically has a brief description to help you understand its purpose and configuration, but details are available in an on-line directory. To spin up the PHP quick start AMI from the list above, use the following command:
+
+```
+ubuntu$ ec2-run-instances ami-ba4eaad3 -k my-keypair
+ubuntu$ ec2-describe-instances
+RESERVATION  r-56aa053f  default
+INSTANCE     i-1343fb7a  ami-ba4eaad3        pending   my-keypair  0
+             m1.small    2008-12-22T01:43:27+0000  us-east-1c
+```
+
+The **ec2-describe-instances** output reflects that the instance is still booting (status “pending”) and that it’s using the key pair set with the name **my-keypair**.
+
+Importantly, the output shows that the instance is running in the us-east-1c availability zone. Amazon has segmented its systems into separate availability zones, so that a user who wants to guarantee that several instances will run in physically separate data centers can request this on the command line. This value will also be needed to attach an EBS volume.
+
+Finally, the command shows that the instance type is m1.small. This code tells you the amount of resources available to the system. Amazon has defined several standard profiles; m1.small is the default and includes a single 32-bit EC2 CPU, 1.7GB memory, and 160GB of (nonpersistent) disk. Of course, the actual hardware your server runs on probably looks nothing like this; it’s just a way of describing your allocation.
+
+Once the instance is running, any network ports you need to access must be authorized through another EC2 command, **ec2-authorize**:
+
+```
+ubuntu$ ec2-authorize default -p 22
+```
+
+In this case, port 22 (for SSH) is authorized for all hosts in the default group. (Groups are a mechanism for managing collections of instances. New instances are provisioned in the default group unless otherwise specified.) After you’ve been authorized on port 22, you can finally connect to your new instance. To do so, first find the hostname, then SSH to it just as if it were another node on the Internet (because it is!).
+
+```
+ubuntu$ ec2-describe-instances
+RESERVATION  r-56aa053f  default
+INSTANCE     i-1343fb7a  ami-ba4eaad3  ec2-67-202-24-235.compute-1.amazonaws.com  domU-12-31-39-02-5E-55.compute-1.internal
+             running my-keypair  0  m1.small  2008-12-22T01:43:27+0000
+             us-east-1c
+ubuntu$ ssh -i ~/.ec2/id_rsa-my-keypair
+      root@ec2-67-202-24-235.compute-1.amazonaws.com
+```
+
+This command uses the key pair saved above to connect to the new instance’s root account. For security reasons, we recommend disabling root SSH access.
+
+The only remaining problem is that instances are not persistent. That is, when this instance terminates, any changes to its disk or memory state are not captured. EBS provisions storage volumes just as new instances are provisioned. Here, we create a volume and attach it to the running host.
+
+```
+ubuntu$ ec2-create-volume -s 1 -z us-east-1c
+VOLUME vol-5de80c34 1 us-east-1c creating 2008-12-22T02:02:53+0000
+ubuntu$ ec2-attach-volume vol-5de80c34 -i i-1343fb7a -d /dev/sdf
+ATTACHMENT vol-5de80c34 i-1343fb7a /dev/sdf attaching 2008-12-22T02:04:01+0000
+ubuntu$ ec2-describe-volumes
+VOLUME vol-5de80c34 1 us-east-1c in-use 2008-12-22T02:02:53+0000
+ATTACHMENT vol-5de80c34 i-1343fb7a /dev/sdf attached 2008-12-22T02:04:01+0000
+```
+
+> See the Adding a Disk chapter for more information about creating filesystems.
+
+These commands create a new EBS storage volume in the us-east-1c availability zone and attach it as the device /dev/sdf to the instance created above. To create a filesystem and begin using the volume, log in to the instance and proceed as if you were creating a filesystem on a physical disk.
+
+Remember that AWS charges by the hour for instances, so unused instances and volumes should be cleaned up. Before terminating an unneeded instance, be sure to detach any EBS volumes and gracefully shut down the system, just as you would a physical host.
+
+```
+ubuntu$ ec2-detach-volume vol-5de80c34
+ATTACHMENT vol-5de80c34 i-1343fb7a /dev/sdf detaching 2008-12-22T02:04:01+0000
+ubuntu$ ec2-terminate-instances i-1343fb7a
+INSTANCE i-1343fb7a running shutting-down
+ubuntu$ ec2-delete-volume vol-5de80c34
+VOLUME vol-5de80c34
+```
+
+In addition to the command-line interface, Amazon offers a web management interface that can initiate the same operations as the command-line tools, such as starting and stopping instances, attaching storage volumes, and allocating IP addresses. A Firefox web browser plug-in called ElasticFox provides similar functionality from within the browser itself.
+
+Amazon regularly introduces new features and products to its web services product line. Auto-scaling of EC2 instances automatically spins up new servers to prevent outages when the load is high. The CloudWatch feature monitors metrics such as CPU usage and disk I/O for quick response to changing conditions. Keep an eye on the AWS blog at aws.typepad.com for feature enhancements and product announcements.
+

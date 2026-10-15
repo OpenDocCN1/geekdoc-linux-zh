@@ -1,0 +1,37 @@
+Some important questions to ask are
+
++   - Is this distribution going to be around in five years?
++   - Is this distribution going to stay on top of the latest security patches?
++   - Is this distribution going to release updated software promptly?
++   - If I have problems, will the vendor talk to me?
+
+Viewed in this light, some of the more interesting, offbeat distributions don’t sound quite so appealing. But don’t count them out: E*Trade, for example, runs on Gentoo Linux.
+
+The most viable distributions are not necessarily the most corporate. For example, we expect Debian Linux (OK, OK, Debian GNU/Linux) to remain viable for a long time despite the fact that Debian is not a company, doesn’t sell anything, and offers no formal, on-demand support. Debian itself isn’t one of the most widely used distributions, but it benefits from a committed group of contributors and from the enormous popularity of the Ubuntu distribution, which is based on it.
+
+Table 1.1 lists some of the most popular mainstream distributions.
+
+**Table 1.1  Most popular general-purpose Linux distributions**
+
+| Distribution | Web site | Comments |
+|---|---|---|
+| CentOS | centos.org | Free analog of Red Hat Enterprise |
+| Debian | debian.org | Closest to GNU |
+| Fedora | fedoraproject.org | De-corporatized Red Hat Linux |
+| Gentoo | gentoo.org | Compile-it-yourself, optimized |
+| Linux Mint | linuxmint.com | Ubuntu-based, elegant apps |
+| Mandriva | mandriva.com | Long history, “easy to try” |
+| openSUSE | opensuse.org | Free analog of SUSE Linux Enterprise |
+| Oracle Enterprise Linux | oracle.com | Oracle-supported version of RHEL |
+| PCLinuxOS | pclinuxos.com | Fork of Mandriva, KDE-oriented |
+| Red Flag | redflag-linux.com | Chinese distro, similar to Red Hat |
+| Red Hat Enterprise | redhat.com | Reliable, slow-changing, commercial |
+| Slackware | slackware.com | Grizzled, long-surviving distro |
+| SUSE Linux Enterprise | novell.com/linux | Strong in Europe, multilingual |
+| Ubuntu | ubuntu.com | Cleaned-up version of Debian |
+
+A comprehensive list of distributions, including many non-English distributions, can be found at linux.org/dist, lwn.net/Distributions, or distrowatch.com.
+
+# 1.5  EXAMPLE SYSTEMS USED IN THIS BOOK
+
+We have chosen three popular Linux distributions and three UNIX variants as our examples to discuss throughout this book: Ubuntu Linux, openSUSE, Red Hat Enterprise Linux, Solaris, HP-UX, and AIX. These systems are representative of

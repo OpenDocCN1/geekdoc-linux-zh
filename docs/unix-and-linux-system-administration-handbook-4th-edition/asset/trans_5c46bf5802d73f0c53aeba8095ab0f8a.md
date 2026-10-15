@@ -1,0 +1,73 @@
+
+
+## The exportfs command and the exports file (Linux, AIX)
+
+exports 文件由最左列的已导出目录列表组成，后跟相关选项的列表。例如，AIX exports 行
+
+```
+/home -vers=4,sec=sys,access=harp.atrust.com
+```
+
+允许机器 harp.atrust.com 使用 NFS 协议版本 4 和 UNIX 认证（sec=sys）挂载 /home。
+
+在 exports 文件中列出而没有特定主机集的文件系统通常可由所有机器挂载。这是一个相当大的安全漏洞。
+
+exports 文件中使用的确切选项和语法在各系统之间有所不同，尽管存在一定的主题相似性。以下各节描述了 Linux 和 AIX 的通用格式。像往常一样，请务必查看您系统的 man 手册。
+
+### Exports in AIX
+
+AIX 具有我们示例系统中最“经典”的 exports 格式。可选选项如表 18.5 所示。
+
+**Table 18.5 Common export options for AIX**
+
+| Option | Description |
+|---|---|
+| access=list | 列出可以挂载文件系统的主机。 |
+| ro | 对所有人只读导出；客户端不得在文件系统上写入。 |
+| rw | 对所有人可读可写导出（默认）。 |
+| rw=list | 主要只读导出。列表枚举允许以写方式挂载的主机；所有其他主机必须只读挂载。 |
+| root=list | 列出可以作为 root 访问文件系统的主机。没有此选项时，来自客户端的 root 访问等同于用户 nobody 的访问。 |
+| vers=n | 以版本 n 将目录导出到客户端。有效值为 2、3 和 4。指定 2 或 3 时同时包含 2 和 3。 |
+| sec=flavor | 指定导出目录的安全方法列表。值包括 sys（UNIX 认证）、dh（DES）、krb5（Kerberos 认证）、krb5i（Kerberos 认证和完整性）、krb5p（Kerberos 认证、完整性和隐私），以及 none（匿名访问，不推荐）。 |
+| anon=n | 指定远程 root 映射到的 UID。默认为 -2（nobody）。将此值设为 -1 则完全拒绝 root 访问。 |
+
+在表 18.5 中，列表由以冒号分隔的主机名和 netgroup 名称的序列组成。表 18.5 中的选项与 share 命令理解的选项相似。然而存在一些细微差异。例如，share 语法中的选项 `rw=leopard.atrust.com:ross.atrust.com` 表示仅由列出的主机以读写方式导出目录。在 AIX 下，此选项允许全世界以只读方式挂载目录。Gotcha！在 AIX 下，您必须使用 access 子句将挂载限制为指定的客户端列表：
+
+`rw,access=leopard.atrust.com,ross.atrust.com`
+
+读写导出是默认的，因此 rw 子句实际上可以省略。但是明确包含它也无妨。
+
+AIX exports 文件中的每一行应由目录路径、空白字符，然后是破折号后跟以逗号分隔的选项列表组成。例如，以下示例将 /home 目录以 AUTH_SYS 安全性和协议版本 4 共享给主机 leopard.atrust.com：
+
+```
+/home -vers=4,sec=sys,rw,access=leopard.atrust.com
+```
+
+修改 /etc/exports 文件后请记得运行 `exportfs -a`。
+
+### Exports in Linux
+
+与 AIX 类似，Linux 的 /etc/exports 文件枚举通过 NFS 导出的文件系统以及可以访问每个文件系统的客户端。空白字符将文件系统与客户端列表分隔开，每个客户端后跟一个带括号的以逗号分隔的选项列表。行可以用反斜杠续行。
+
+格式如下所示：
+
+/home      harp(rw,no_root_squash) monk(rw)
+/usr/share/man  *.atrust.com(ro)
+
+无法为单个选项集列出多个客户端规范，尽管某些客户端规范引用多个主机。表 18.6 列出了可在 exports 文件中出现的四种类型的规范。
+
+**Table 18.6 Client specifications in the Linux /etc/exports file**
+
+| Type | Syntax | Meaning |
+|---|---|---|
+| Hostname | hostname | 单个主机 |
+| Netgroup | @groupname | NIS netgroups（不常用） |
+| Wild cards | * and ? | 带有通配符的 FQDN*；'*' 不会匹配点 |
+| IP networks | ipaddr/mask | CIDR 风格的规范（例如，128.138.92.128/25） |
+
+a. 完全限定域名
+
+下一页的表 18.7 显示了 Linux 理解的最常用的导出选项。
+
+Linux 的 NFS 服务器具有一个不寻常的功能，允许导出的目录的子目录以不同的选项导出。使用 `noaccess` 选项取消导出您不想共享的子目录。
+

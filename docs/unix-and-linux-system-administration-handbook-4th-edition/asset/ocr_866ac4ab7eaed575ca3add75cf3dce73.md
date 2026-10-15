@@ -1,0 +1,28 @@
++   - Work as a team. Years of experience show that people make fewer stupid mistakes if they have a peer helping out. If the problem has any visibility, management will also want to be involved. Take advantage of managers’ interest to get technical people from other groups on board and to cut through red tape where necessary.
++   - Use the layers of the network to negotiate the problem. Start at the “top” or “bottom” and work your way through the protocol stack.
+
+This last point deserves a bit more discussion. As described on page 450, the architecture of TCP/IP defines several layers of abstraction at which components of the network can function. For example, HTTP depends on TCP, TCP depends on IP, IP depends on the Ethernet protocol, and the Ethernet protocol depends on the integrity of the network cable. You can dramatically reduce the amount of time spent debugging a problem if you first figure out which layer is misbehaving.
+
+Ask yourself questions like these as you work up or down the stack:
+
++   - Do you have physical connectivity and a link light?
++   - Is your interface configured properly?
++   - Do your ARP tables show other hosts?
++   - Is there a firewall on your local machine?
++   - Is there a firewall anywhere between you and the destination?
++   - If firewalls are involved, do they pass ICMP ping packets and responses?
++   - Can you ping the localhost address (127.0.0.1)?
++   - Can you ping other local hosts by IP address?
++   - Is DNS working properly?¹
++   - Can you ping other local hosts by hostname?
++   - Can you ping hosts on another network?
++   - Do high-level services such as web and SSH servers work?
++   - Did you really check the firewalls?
+
+Once you’ve identified where the problem lies and have a fix in mind, take a step back to consider the effect that your subsequent tests and prospective fixes will have on other services and hosts.
+
+# 21.2 PING: CHECK TO SEE IF A HOST IS ALIVE
+
+The ping command is embarrassingly simple, but in many situations it is the only command you need for network debugging. It sends an ICMP ECHO_REQUEST packet to a target host and waits to see if the host answers back.
+
+1. If a machine hangs at boot time, boots very slowly, or hangs on inbound SSH connections, DNS should be a prime suspect. Solaris and Linux use a sophisticated approach to name resolution that’s configurable in /etc/nsswitch.conf. On these systems, the name service caching daemon (nscd) is of particular interest. If it crashes or is misconfigured, name lookups are affected. With the transition to IPv6 progressing, we find that many DSL routers provide DNS forwarding services that simply drop requests for IPv6 (AAAA) DNS records. This “optimization” causes long timeouts on all name resolution requests. Use the getent command to check whether your resolver and name servers are working properly (e.g., getent hosts google.com).

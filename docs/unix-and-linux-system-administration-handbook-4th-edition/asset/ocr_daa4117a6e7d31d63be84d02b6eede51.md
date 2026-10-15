@@ -1,0 +1,37 @@
+source-routed packets. These should be the defaults on current distributions except for accept_redirects and sometimes accept_source_route.
+
+# Table 14.9 Default security-related network behaviors in Linux
+
+| Feature | Host | Gateway | Control file (in /proc/sys/net/ipv4) |
+|---|---|---|---|
+| IP forwarding | off | on | ip_forward for the whole system
+conf/interface/forwarding per interface* |
+| ICMP redirects | obeys | ignores | conf/interface/accept_redirects |
+| Source routing | varies | varies | conf/interface/accept_source_route |
+| Broadcast ping | ignores | ignores | icmp_echo_ignore_broadcasts |
+
+a. The interface can be either a specific interface name or all.
+
+# Linux NAT and packet filtering
+
+Linux traditionally implements only a limited form of Network Address Translation (NAT) that is more properly called Port Address Translation, or PAT. Instead of using a range of IP addresses as a true NAT implementation would, PAT multiplexes all connections onto a single address. The details and differences aren’t of much practical importance, though.
+
+iptables implements not only NAT but also packet filtering. In earlier versions of Linux this functionality was a bit of a mess, but iptables makes a much cleaner separation between the NAT and filtering features.
+
+Packet filtering features are covered in more detail in the Security chapter starting on page 932. If you use NAT to let local hosts access the Internet, you must use a full complement of firewall filters when running NAT. The fact that NAT “isn’t really IP routing” doesn’t make a Linux NAT gateway any more secure than a Linux router. For brevity, we describe only the actual NAT configuration here; however, this is but a small part of a full configuration.
+
+To make NAT work, you must enable IP forwarding in the kernel by setting the /proc/sys/net/ipv4/ip_forward kernel variable to 1. Additionally, you must insert the appropriate kernel modules:
+
+```
+ubuntu$ sudo /sbin/modprobe iptable_nat
+ubuntu$ sudo /sbin/modprobe ip_conntrack
+ubuntu$ sudo /sbin/modprobe ip_conntrack_ftp
+```
+
+Many other connection-tracking modules exist; see the net/netfilter subdirectory underneath /lib/modules for a more complete list and enable the ones you need.
+
+The iptables command to route packets using NAT is of the form
+
+```
+sudo iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to 63.173.189.1
+```

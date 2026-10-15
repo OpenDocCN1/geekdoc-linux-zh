@@ -1,0 +1,77 @@
+
+2003)，它也可以作为 live CD 直接在 PC 硬件上运行。该 live CD 秘密基于 Linux，但它在很大程度上将一台通用 PC 转变为专用的路由设备。
+
+## 厂商具体信息
+
+Quagga 是 Linux 的首选路由软件。我们的所有示例发行版要么默认安装它，要么可以从发行商的仓库中轻松获取。Quagga 已根深蒂固，以至于大多数发行版不再包含 routed。即使包含，也是没有 RIPV2 支持的残余版本。
+
+Solaris 包含一个功能正常的 routed（实际称为 in.routed），它理解 RIPV2。它也包含 Quagga；你可以任选其一。对于任何 IPv6 路由，你都需要使用 Quagga。
+
+in.routed 是默认的路由解决方案，如果你没有在 /etc/defaultrouter 文件中指定默认网络网关，它会在启动时自动启动。Solaris 仍提供 in.rdisc 路由器发现守护进程，这很奇怪，因为其功能现已包含在 in.routed 中。
+
+HP-UX 的主要路由系统 routed 已在上文讨论过（见第 524 页）。HP 还提供了一个 gated 3.5.9 的副本，它相当老旧且不支持 IPv6。如果你想在 HP-UX 下管理 IPv4 和 IPv6 路由，你必须对前者使用 gated，对后者使用 routed。不幸的是，Quagga 目前不能在 HP-UX 上运行。
+
+AIX 提供三个路由守护进程：gated v6.0、一个仅会说 RIPV1 的 routed，以及 ndpd-router，即 RIPng 和 NDP 的实现。AIX 的 gated 也会说 RIPng；然而，如果你想使用 gated 进行 IPv6 路由，你可能需要同时运行 gated 和 ndpd-router。详情请参阅文档。
+
+## 15.6 CISCO 路由器
+
+Cisco Systems, Inc. 生产的路由器是当今互联网路由的事实标准。占据了超过 60% 的路由器市场，Cisco 的产品广为人知，并且懂得如何操作它们的人员相对容易找到。在 Cisco 之前，带有多个网络接口的 UNIX 机器经常被用作路由器。今天，专用路由器是放置在数据通信机柜和天花板上方网络电缆汇聚处的最受欢迎的设备。
+
+Cisco 大多数路由器产品运行一种名为 Cisco IOS 的操作系统，它是专有的，与 UNIX 无关。其命令集相当庞大；完整的文档集占据约 4.5 英尺的书架空间。我们不可能在此全面涵盖 Cisco IOS，但了解一些基础知识就能让你走得很远。
+
+默认情况下，IOS 定义了两个访问级别（用户和特权），两者都受密码保护。默认情况下，你只需 telnet 到 Cisco 路由器即可进入用户模式。
+
+系统会提示你输入用户级访问密码：
+
+```
+$ telnet acme-gw.acme.com³
+Connected to acme-gw.acme.com.
+Escape character is '^]'.
+User Access Verification
+Password:
+```
+
+输入正确的密码后，你会收到来自 Cisco EXEC 命令解释器的提示。
+
+```
+acme-gw.acme.com>
+```
+
+在此提示下，你可以输入诸如 show interfaces 查看路由器的网络接口，或 show ? 列出你可以看到的其他内容。
+
+要进入特权模式，输入 enable 并在提示时输入特权密码。一旦达到特权级别，你的提示符以 # 结尾：
+
+```
+acme-gw.acme.com#
+```
+
+要小心——从此提示符你可以做任何事情，包括擦除路由器的配置信息和操作系统。如有疑问，请查阅 Cisco 的手册或 Cisco Press 出版的综合书籍。
+
+你可以输入 show running 查看路由器的当前运行配置，以及 show config 查看当前的非易失性配置。大多数情况下，两者是相同的。
+
+这是一个典型的配置：
+
+```
+acme-gw.acme.com# show running
+Current configuration:
+version 12.1
+hostname acme-gw
+enable secret xxxxxxxx
+ip subnet-zero
+
+interface Ethernet0
+description Acme internal network
+ip address 192.108.21.254 255.255.255.0
+no ip directed-broadcast
+interface Ethernet1
+description Acme backbone network
+ip address 192.225.33.254 255.255.255.0
+no ip directed-broadcast
+
+ip classless
+line con 0
+transport input none
+```
+
+3. 现代版本的 IOS 支持多种访问方法，包括 SSH。telnet 当然是完全不安全的。如果你的站点已使用 Cisco 路由器，请联系你的网络管理员以了解已启用了哪些方法。
+

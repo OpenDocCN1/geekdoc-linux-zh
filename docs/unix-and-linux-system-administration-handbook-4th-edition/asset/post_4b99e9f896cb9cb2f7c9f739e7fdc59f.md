@@ -1,0 +1,46 @@
+
+The package depot on the swinstall command line must be specified as a full path starting with /; otherwise, swinstall tries to find the file on the network. The wget at the end tells swinstall which package to install from within the depot file.
+
+Unfortunately, the installation is not really as easy as it first appears. The installed version of wget won't actually run because several of the libraries on which it depends have not been installed:
+
+```
+hpux3 wget http://samba.org/samba/docs/Samba3-HOWTO.pdf
+/usr/lib/dld.sl: Can't open shared library: /usr/local/lib/libcrypto.sl
+/usr/lib/dld.sl: No such file or directory
+[HP ARIES32]: Core file for 32 bit PA-RISC application
+[HP ARIES32]: /usr/local/bin/wget saved to /tmp/core.wget
+```
+
+swinstall does have some dependency management built in, but its abilities unfortunately do not extend to Internet repositories. You'll have to read the fine print and install all the appropriate prerequisite packages (in this case, six more) to make things right.
+
+## Building software from source code
+
+There is in fact at least one binary wget package available for AIX in RPM format. A Google search for "aix wget rpm" should turn up some good leads. After downloading, the installation command would be a simple
+
+```
+aix# rpm --install wget-1.11.4-1.aix5.1.ppc.rpm
+```
+
+But just for illustration, let's build the AIX version of wget from the original source code.
+
+Our first chore is to find the code, but that's easy: the first Google result for "wget" takes us right to the project page at GNU, and the source tarball is just a link away. After downloading the current version into the /tmp directory, we unpack, configure, build, and install it:
+
+This **configure/make/make install** sequence is common to the majority of UNIX and Linux software and works on all systems as long as you have the development environment and any package-specific prerequisites installed. However, it’s always a good idea to check the package’s **INSTALL** or **README** file for specifics.
+
+In this case, the **--disable-ssl** and **--disable-nls** options to **configure** omit some **wget** features that depend on other libraries that haven’t been installed. In real life, you’d probably want to install the prerequisites. Use **configure --help** to see all the configuration options. Another useful configure option is **--prefix=directory**, which lets you put the software somewhere other than **/usr/local**.
+
+## 1.13 SYSTEM ADMINISTRATION UNDER DURESS
+
+System administrators wear many hats. In the real world, they are often people with other jobs who have been asked to look after a few computers on the side. If this is your situation, treat carefully and be aware of how this scenario tends to play out over the long term.
+
+The more experienced you become at system management, the more the user community comes to depend on you. Networks invariably grow, and administrative work tends to accumulate over time as your administration system becomes more sophisticated and you add additional layers. You will soon find that you are the only person in your organization who knows how to perform a variety of important tasks.
+
+Once coworkers come to think of you as the local system administrator, it is difficult to extricate yourself from this role. That is not necessarily a bad thing, but we know several people who have changed jobs to escape it. Since many administrative tasks are intangible, you may also find that you’re expected to be both a full-time administrator and a full-time engineer, writer, or analyst.
+
+There is a common tendency for unwilling administrators to fend off requests by adopting a surly attitude and providing poor service.¹⁰ This approach usually backfires; it makes you look bad and creates additional problems.
+
+Instead, consider keeping detailed records of the time you spend on system administration. Your goal should be to keep the work at a manageable level and to assemble evidence that you can use when you ask to be relieved of administrative duties. In most organizations, you will need to lobby the management from six months to a year to get yourself replaced, so plan ahead.
+
+On the other hand, you may find that you enjoy system administration and that you prefer it to real work. Employment prospects remain good. Unfortunately, your political problems will probably intensify. See Chapter 32, *Management, Policy,* and *Politics*, for a preview of the delights in store.
+
+10. A tendency lovingly and sadistically documented in Simon Travaglia’s Bastard Operator from Hell stories; see bofh.nkt.net for the archive. (Look under BOFH.)

@@ -1,0 +1,29 @@
+The null statement is acceptable, so you can place two colons side by side. It is helpful to begin and end each line with a colon to make subsequent modifications easier. Comments in **/etc/printcap** start with a pound sign (#). Entries can span several lines if intermediate lines are terminated with a backslash. Continuation lines are, by convention, indented.
+
+The syntax of the **printcap** file is illustrated in the following example, which defines a remote printer attached to the machine anchor:
+
+```
+anchor-lj|cl1|56-LaserJet 5M in lab:\
+    :lp=/var/spool/lpd/anchor-lj:\
+    :sd=/var/spool/lpd/anchor-lj:\
+    :lf=/var/adm/lpd-errs:\
+    :rw:mx#0:rm=anchor:rp=anchor-lj:
+```
+
+From the first line, we can see that “anchor-lj”, “cer”, “cl-56”, and “LaserJet 5M in lab” are all equivalent names for the same printer. These names are the printer’s given name, a well-known abbreviation, the room number of the printer’s location, and a full description.
+
+You can give your printers as many names as you like, but you should include at least three forms of the primary name:
+
++   - Full name – hostname and type of printer (e.g., “anchor-lj”)
++   - Short name – three or four characters, easy to type (e.g., “cer”)
++   - Descriptive name – other information (e.g., “LaserJet 5M in lab”)
+
+The next two lines in our example contain configuration settings for device name (lp), spool directory (sd), and error log file (lf). The last line specifies a read-write connection with the printer (rw), the maximum file size (mx, unlimited in this case), the remote machine name (rm), and the remote printer name (rp).
+
+Jobs submitted to the printing system without a specific destination are routed to the first printer that has “lp” as one of its aliases. Don’t use lp as a printer’s primary name since that makes it difficult to change the default printer. If no printer has the name lp, the first printer in the **printcap** file is the system-wide default printer.
+
+# printcap variables
+
+The flexibility of the **printcap** file is largely responsible for the BSD printing system’s adaptability. The details are documented in the **printcap** man page, so we discuss only the most common variables here. They’re shown in Table 26.6.
+
+All **printcap** entries should include at least a specification of the spool directory (sd), the error log file (lf), and the printing device (lp). Modern printers should generally be opened for reading and writing (rw) so that the printer can send error and status messages back to the host.

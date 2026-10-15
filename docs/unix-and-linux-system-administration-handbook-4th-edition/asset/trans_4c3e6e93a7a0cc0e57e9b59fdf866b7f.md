@@ -1,0 +1,51 @@
+
+
+points than traditional UNIX, and the interactions among the components aren’t always obvious. Here’s an outline of the various layers:
+
+- The Object Data Manager is a configuration repository that’s analogous to the registry in Microsoft Windows. It’s actually a bit more sophisticated than the Windows registry in that it has the concept of object schemas and instances rather than just arbitrary property lists.
+- Programs access ODM through library routines, but you can also work with the ODM database through the odmadd, odmcreate, odmdrop, odmshow, odmget, odmchange, and odmdelete commands.²
+- The command family chdev, lsdev, lsattr, mkdev, rmdev, lsconn, and lsparent maps ODM configuration information to specific devices. AIX’s chdev is actually quite similar to the Solaris and HP-UX ndd command (see page 498), but by default chdev writes your changes both to the active driver and to the ODM configuration database. Even common parameters such as the system hostname and the details of static routes are stored as device attributes (the device in this case being an instance of the “inet” driver).
+- Several administration utilities provide front ends to the chdev family. For example, mktcpip is sort of like a persistent ifconfig that converts its arguments into a series of chdev calls on network interfaces, affecting both the active and saved configurations. (Would you guess that its syntax mirrors that of ifconfig? You guessed wrong.)
+- ODM is a user-level facility, so drivers don’t access it directly. Just as with traditional text-file configuration, some software must read the ODM configurations at boot time and poke the appropriate values into the running drivers.
+
+Fortunately, most administrators need not touch the complexities of ODM thanks to SMIT and to higher-level tools such as mktcpip.
+
+One indispensable utility for managing AIX devices is the cfgmgr command. Run it as root with no arguments after adding new hardware to the system; the new hardware will miraculously be recognized and become available for use. Well, usually. If the device drivers haven’t already been loaded into the ODM database, cfgmgr will helpfully suggest a package for you to install from the AIX installation media. See the cfgmgr man page for further details.
+
+> 2. Dan Foster, one of our technical reviewers, commented, “Direct manipulation of the ODM with the odm* tools is not recommended if you don’t know exactly what you’re doing. These commands do no error checking on the data you modify, whereas the normal ch/mk/rm* tools validate data prior to making changes. The odm* tools are like a loaded AK-47 with no safety mechanism: one quick touch, and you’ve discharged several rounds into an eviscerated target.”
+
+## Kernel tuning
+
+AIX has six categories of tunable values and supplies six corresponding commands for tweaking them. Most of the values relate to performance optimization. Table 13.6 captures each command and its purpose. Breaking from standard AIX convention, the commands share a common syntax. The parameters can also be managed through the SMIT interface with the incantation **smit tuning**. See the man page for each command for detailed information.
+
+**Table 13.6**  Commands for setting tunable kernel parameters in AIX
+
+| Command | Domain | Examples of things you can configure |
+| --- | --- | --- |
+| vmo | Virtual memory | Minimum number of free pages |
+| ioo | Input/Output | Asynchronous I/O behavior; JFS2 configuration |
+| schedo | Process scheduling | Process time slices and priorities; Virtual processor management |
+| no | Network | IP forwarding; TCP and UDP socket buffer sizes; Packet time-to-live values |
+| nfso | NFS | UTF-8 support; Delegation support; Maximum number of NFS connections |
+| raso | Reliability | Only a few tunables, none of which are particularly valuable to administrators |
+
+The commands are simple to use. To enable IP forwarding, for example, run
+
+```
+aix$ sudo no -o ipforwarding=1
+```
+
+To list all available tunables for the I/O subsystem, type
+
+```
+aix$ sudo ioo -a
+```
+
+You can add the **-r** flag to any of the commands to ensure that your changes persist after a reboot.
+
+## 13.7 LOADABLE KERNEL MODULES
+
+Loadable kernel modules (LKMs) are now common to nearly all flavors of UNIX. Each of our example systems implements some form of dynamic loading facility, although the exact implementations vary.
+
+Loadable kernel modules support allows a device driver—or any other kernel service—to be linked into and removed from the kernel while it is running. This facility makes the installation of drivers much easier since the kernel binary does not need to be changed. It also allows the kernel to be smaller because drivers are not loaded unless they are needed.
+
