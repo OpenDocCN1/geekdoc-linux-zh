@@ -1,0 +1,158 @@
+
+# UNIX.网络编程
+
+- `_SC_RTID_MAX`, 102
+- `_SC_SEM_MAX`, 257
+- `_SC_VALVE_MAX`, 257, 265
+- `_SC_SEEK`, 200, 217, 523
+- `_SC_END`, 200, 217, 525
+- `_SC_SELECT`, 200, 217, 527
+- `select` 函数, 74, 96, 131, 135, 152, 157, 323, 339, 454, 519, 528
+- Posix 消息队列, 566
+- `select` 封装, 521
+- `sem` 结构, 274, 282, 283
+- `_SEM_A_constant`, 323
+- `_SEM_FAILED`, 525
+- `_SEM_OTIC_constant`, 282
+- `_SEM_NSEMAX`, 257
+- `sem` 封装, 111
+- `_SEM_UNDO_constant`, 274, 286, 287, 294, 496
+- `_SEM_VALUE_MAX`, 257
+- `sem_base_member`, 282, 283
+- `sem_clses` 函数, 224, 226, 228, 225, 260, 277
+- 结构, 228
+- 源码, 266, 267
+- `sem_ctime` member, 273–284, 282, 285
+- `sem_destroy` 函数, 224, 226–238, 244
+- 结构, 239
+- `sem_ftid` member, 276, 285–286, 292
+- `sem_getvalue` 函数, 224, 225–227, 226, 269, 277
+- 结构, 227
+- 源码, 270, 278
+- `sem_init` 函数, 224, 228–234, 256, 315, 339, 493, 496
+- 结构, 239
+- `sem_magic` member, 258, 282
+- `sem_run_member`, 285–286, 289
+- `sem_cp_member`, 286–287
+- `sem_setopt` 函数, 19, 25, 26, 224–226, 228–229, 232, 235, 239–240, 242, 256, 258, 260, 263, 268, 271, 273, 274, 279, 285
+- 结构, 225
+- 源码, 258, 264, 271
+- `sem_ctime` member, 273–274, 282, 285
+- `semqid` 结构, 283, 288–289
+- 结构, 282
+- `sem_get` 函数, 11, 90–91, 221, 225, 228, 242–256, 260, 271, 275, 279, 287, 456
+- 结构, 227
+- 源码, 210, 268
+- `sem_t_type`, 8, 225–238, 240, 242, 244, 256, 258, 262, 263, 265, 266, 271, 275, 326
+- `sem_wait` 函数, 224, 225, 242, 260
+- 结构, 229
+- 源码, 270, 277
+- `sem_unlink` 函数, 224–226, 245, 242, 260
+- 结构, 267
+- 源码, 261, 268
+- `sem_wait` 函数, 221–227, 230, 232, 236, 242, 246, 256, 268, 269, 275, 276, 279, 287, 339, 524
+- 结构, 225
+- 源码, 262, 269
+- `sem_id` member, 10, 266–287, 294
+- `sem` 结构, 37, 38, 269
+- `sem_h` header, 236, 262, 271
+- 进程间, Posix, 256–257
+- 二进制, 219, 281
+- 锁函数, 201
+- 锁系统, System V, 214–296
+- ID, 273, 290, 301
+- 使用 FIFOs, Posix, 257–262
+- 内存映射I/O, 252, 277
+- 使用 System V 信号量, Posix, 257
+- Posix, 219–277
+- System V, 281–300
+- `sembuf` 结构, 258, 286, 290
+- 结构, 285
+- `sem_unct` 函数, 273, 275, 277, 283, 284, 279, 290, 314
+- 结构, 287
+- `semget` 函数, 34, 38, 257, 273, 275, 282, 286, 294
+- 结构, 282
+- `sem_id` 结构, 262, 284, 288, 290
+- 结构, 282
+- `semmap` 变量, 37
+- `semnl` 变量, 37–38, 296
+- `sms` 变量, 37, 296
+- `semmu` 变量, 37, 296
+- `semt` 变量, 37–38, 296
+- `semt` member, 282–283, 286–288
+- `semop` 函数, 273, 275–276–283, 287–290, 294, 296, 399, 326
+- 结构, 285
+- `semop`, 37–38
+- `sempid` member, 282–283, 288
+- `sema` 变量, 37–38, 296
+- `sem` 结构, 506
+- 结构, 208
+- `semVMX` 常量, 273
+- `semVMX` 变量, 37–38, 296
+- `sndmsg` member, 282–283, 286
+- `sndmsg` 函数, 384
+- `sndbuf` 函数, 405
+- `seq` member, 34, 35, 36
+- 序号, 使用, 34
+- nbinding, RPC, 411–414
+- 并发, 66, 67, 147, 357, 372, 407
+- 创建进程, 384
+- 破坏请求, RPC, 421–424, 451, 532–533
+- 网络, 66, 67, 141, 372, 407–408
+- 桩, 405
+- 服务函数, 48–49, 54–55, 63, 72, 141–142, 144, 149
+- 会话, 4
+- `set_currency` 函数, 163, 165–168
+- `SETALL` 常量, 283–284, 288, 290
+- `setgid` 函数, 91
+- 设置组ID, 26, 198, 205
+- `setpgid` 函数, 91
+- `setlist` 函数, 72
+- `setid` 函数, 91
+- `setsockopt` 函数, 418
+- 设置用户-ID, 26, 205, 369
+- SEIVAL, 273, 283–284, 288
+- `setvbuf` 函数, 522
+- 共享, 303–351
+- Shar, D., 180, 536
+- 共享内存, 303–351
+- 限制, System V, 349–351
+- 对象, 325
+- sets, 325–342
+- System V., 343–351
+- 共享排斥锁, 177
+- `SHM_R` 常量, 33
+- `SHM_RDONLY` 常量, 345
+- `SHM_RBIND` 常量, 344
+- `SHM_IPC` 常量, 33
+- `shm_atime` member, 343
+- `shm_cratch` member, 343
+- `shm_pid` member, 343
+- `shm_ftime` member, 343
+- `shm_dtime` member, 343
+- `shm_ctl` member, 343
+- `shm_perm` member, 343
+- `shm_size` member, 343
+- `shm_uid` member, 343
+- `shm_gid` member, 343
+- `shm_nblock` member, 343
+- `shm_flock` member, 343
+- `shm_seq` member, 343
+- `shm_npid` member, 343
+- `shm_dpid` member, 343
+- `shm_cpid` member, 343
+- `shm_atime` member, 343
+- `shm_atime` member, 343
+- `shm_atime` member, 343
+
+- Stevens, D. A., xvi
+- Stevens, E. M., xvi
+- Stevens, S. H., xvi
+- Stevens, W. R., 536–537
+- Stevens, W. R., xvi
+- `stop_time` 函数, 469–470
+- `source_code`, 427
+- `struct cheduck`, 63
+- `struct sterano` 消息, 67–72
+- `struct trerror` 函数, 49,511
+- `struct datetime_type`, 429,438,451
