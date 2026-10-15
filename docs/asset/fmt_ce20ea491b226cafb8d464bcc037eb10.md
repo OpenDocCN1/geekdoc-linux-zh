@@ -1,0 +1,46 @@
+
+The same packages that provide file sharing capabilities often provide printer sharing features, as well. In many ways, printer sharing is just like file sharing, except that instead of going to a disk file, the data goes to a printer. On the client OS, a remote printer is generally configured very much like a local one, and the user might not notice much difference in actual use, especially if the printer is physically nearby, as might be the case in a home office setup. Configuring printer sharing in Linux is covered in Part IV, "Printer Sharing."
+
+## Serving Up Web Pages
+
+When you use a Web browser to cruise the World Wide Web, you can easily interact with dozens of computers in a minute or two. Each of these computers runs a Web server program, such as `Apache`. If you want to set up a Web server on your Linux computer, you can do so using `Apache` or any of several other programs. The details of such configuration are, however, beyond the scope of this book.
+
+A few other programs use Web server protocols in their operation, as well. For instance, the `linuxconf` utility used by the Red Hat and Mandrake Linux distributions has an option to run as a special sort of server to permit remote administration of a Linux computer. This feature can be quite handy, but I advise caution in using it if your computer has a direct connection to the Internet because if an outsider ever gained access to this server, he or she could wreak havoc with your Linux computer. (`linuxconf` does require an appropriate password, of course, but as with all network services, if it's present, there's a chance that somebody could gain access through a bug or an ill-gotten password.)
+
+## Delivering the Mail
+
+Email is one of the oldest and most useful features of the Internet, and there are several protocols, not to mention mail transport agents (`MTA`—mail daemons, in effect) devoted to it. Two of the most common email protocols are
+
+- 简单邮件传输协议（`SMTP`）—这是 UNIX 到 UNIX 邮件传输中最常用的协议。许多 Linux 系统（包括 Red Hat）在配置时使用 `sendmail` 作为其 `MTA`，但也有一些使用其他软件，如 `exim`。`qmail` 程序是一种流行的替代 `MTA`。
+
+- 邮局协议（`POP`）—`POP` 通常被终端用户用来从其互联网服务提供商（`ISP`）下载邮件，但对于其他邮件投递任务并不常见。在 Linux 上，你可以运行各种 `POP` 守护进程，但你只有在希望将 Linux 机器用作期望使用 `POP` 的客户端的邮件中继站时才应这样做。你也可以在 Linux 上使用 `POP` 客户端从你的 `ISP` 检索邮件。
+
+> CAUTION
+>
+> `SMTP` 邮件程序有时会被所谓的垃圾邮件发送者滥用，他们向大量人发送未经请求的电子邮件。因此，大多数 Linux 发行版都会将其 `SMTP` 程序配置为拒绝转发外部邮件，尽管它们仍可以接收外部邮件并向其他系统发送本地邮件。
+
+你通常希望在系统上运行某种 `SMTP` 守护进程，即使只是为了投递本地邮件。（各种 Linux 程序会不时向 `root` 账户发送电子邮件，以告知你它们遇到的各种问题，或它们已自动进行的例行维护。）你可能还希望能够向远程系统发送 `SMTP` 邮件，并且可能从外部接收邮件。大多数 Linux 发行版在安装时会为此类功能自动配置自己。如果你想更深入地了解这个主题，你应该查阅你的发行版或 `SMTP` 代理的文档，因为这个主题超出了本书的范围。
+
+## 投递新闻
+
+网络新闻传输协议（`NNTP`）用于投递 Usenet 新闻（互联网新闻组）文章。如果你阅读过新闻组，你就使用过客户端模式的 `NNTP` 程序——新闻阅读器。这种关系的服务器端被称为新闻服务器，与大多数其他服务器一样，Linux 上有多个新闻服务器可供选择。
+
+除非你是 `ISP`，否则你可能不需要在 Linux 服务器上维护一套完整的新闻组。如果你这样做，你会发现你需要投入相当多的千兆字节的磁盘空间来存储仅几天的新内容。在 SOHO 环境中，新闻服务器也有几种更适度的用途：
+
+- 有限新闻镜像—你可以将几个新闻组的完整内容从你的 `ISP` 的新闻服务器复制到你的本地系统。这与直接从 `ISP` 的新闻服务器读取邮件相比有几个优势。其中之一是速度：一旦新闻帖子在你的本地系统上，你就不需要连接或忍受与远程获取新闻相关的任何延迟。你也可以经常下载大量消息并更快地断开连接，比你阅读想要阅读的消息更快，从而节省在线时间。如果你在小型本地网络中，有多个用户想要阅读少数几个新闻组，这些优势可以成倍增加。如果你想维护几个全球新闻组的镜像，你通常会将系统配置为连接到远程新闻服务器并每天一两次交换消息。
+
+- 本地新闻组—你可以开发和维护本地的新闻组。例如，你可以有一个用于内部办公通信的新闻组，以便向员工发布重要公告。如果你直接连接到互联网，你可以使这些新闻组可供你的客户或公众访问。
+
+你可以在单个新闻服务器中结合这两种功能，同时维护全球新闻组的镜像和你自己的本地组。混合方案也是可能的。例如，可以配置本地新闻服务器接受来自互联网邮件列表的电子邮件。如果你订阅了多个邮件列表，这可以帮助你跟踪这些列表的动态，而不会过度占用你的邮箱。
+
+与电子邮件投递一样，`NNTP` 配置的细节超出了本书的范围。你可能会发现 Linux News HOWTO 有帮助，不过截至本文撰写时，它已多年未更新，因此未涵盖最新软件。
+
+## 远程登录
+
+Linux（或任何类 UNIX 操作系统）的一大优势是你可以远程访问计算机，包括几乎全部功能。（只有需要特定本地硬件的功能，例如 CD-ROM 或无 X 的 VGA 图形，无法从远程登录中使用。）自然地，Linux 运行守护进程来帮助此远程登录过程。
+
+### 文本模式登录
+
+Linux 支持多种文本模式登录工具——仅提供文本信息访问的登录。其中最常用的是 `Telnet` 协议，其由 `/etc/inetd.conf` 中的 `telnet` 行控制。`Telnet` 客户端可在支持 `TCP/IP` 的每个平台上使用，这对 Linux 中的 `telnet` 守护进程来说是一个巨大的优势，因为它提供了近乎通用的访问。
+
+另一种远程登录方法是 `rlogin` 协议。与 `Telnet` 类似，`rlogin` 允许你登录并使用 Linux 文本模式程序；不过 `rlogin` 是一种主要由 UNIX 和类 UNIX 系统使用的协议；在随机挑选的 Windows 计算机上找到 `rlogin` 客户端的可能性不大，而在这样的机器上找到 `Telnet` 的可能性则相当高。

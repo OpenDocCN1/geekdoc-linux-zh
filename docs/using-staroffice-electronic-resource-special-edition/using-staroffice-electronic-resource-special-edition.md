@@ -8931,9 +8931,6 @@ Michael & Sarah
 <PREFIX> <FIRSTNAME>
 ```
 
->
-> 结尾。
-```
 
 # 定义条件文本
 
