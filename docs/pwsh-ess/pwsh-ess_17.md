@@ -20,7 +20,25 @@
 
 代码清单 14.1　Heater 和 Cooler 事件订阅者的实现
 
-![](img/image01122.jpeg)![](img/image01123.jpeg)
+```powershell
+class Cooler {
+    [float]$Temperature
+    Cooler([float]$temperature) { $this.Temperature = $temperature }
+    [void] OnTemperatureChanged([float]$newTemperature) {
+        if ($newTemperature -gt $this.Temperature) { Write-Output 'Cooler: On' }
+        else { Write-Output 'Cooler: Off' }
+    }
+}
+
+class Heater {
+    [float]$Temperature
+    Heater([float]$temperature) { $this.Temperature = $temperature }
+    [void] OnTemperatureChanged([float]$newTemperature) {
+        if ($newTemperature -lt $this.Temperature) { Write-Output 'Heater: On' }
+        else { Write-Output 'Heater: Off' }
+    }
+}
+```
 
 除了温度比较，两个类几乎完全一样（事实上，在 OnTemperatureChanged 方法中使用一个比较方法委托，两个类还能再减少一个）。每个类都存储了启动设备所需的温度。此外，两个类都提供了 OnTemperatureChanged()方法。调用 OnTemperatureChanged()方法的目的是向 Heater 和 Cooler 类指出温度已发生改变。在方法的实现中，用 newTemperature 同存储好的触发温度进行比较，从而决定是否让设备启动。
 
@@ -32,7 +50,12 @@ Thermostat 类负责向 heater 和 cooler 对象实例报告温度变化。代�
 
 代码清单 14.2　定义事件发布者 Thermostat
 
-![](img/image01124.jpeg)
+```powershell
+class Thermostat {
+    [scriptblock[]]$OnTemperatureChange
+    [float]$CurrentTemperature
+}
+```
 
 Thermostat 包含一个名为 OnTemperatureChange 的属性，它属于 Action<float>委托类型。OnTemperatureChange 存储了订阅者列表。注意，只需一个委托字段即可存储所有订阅者。换言之，来自一个发布者的温度变化通知会同时被 Cooler 和 Heater 实例接收。
 
@@ -44,7 +67,15 @@ Thermostat 的最后一个成员是 CurrentTemperature 属性。它负责设置�
 
 代码清单 14.3　连接发布者和订阅者
 
-![](img/image01125.jpeg)
+```powershell
+$thermostat = [Thermostat]::new()
+$heater = [Heater]::new(60)
+$cooler = [Cooler]::new(80)
+$thermostat.OnTemperatureChange += { param($temperature) $heater.OnTemperatureChanged($temperature) }
+$thermostat.OnTemperatureChange += { param($temperature) $cooler.OnTemperatureChanged($temperature) }
+$temperature = Read-Host 'Enter temperature'
+$thermostat.CurrentTemperature = [float]$temperature
+```
 
 代码通过+=操作符直接赋值向 OnTemperatureChange 委托注册了两个订阅者，即 heater.OnTemperatureChanged 和 cooler.OnTemperatureChanged。
 
@@ -56,7 +87,20 @@ Thermostat 类的 CurrentTemperature 属性每次发生变化，你都希望调�
 
 代码清单 14.4　调用委托（尚未检查 null 值）
 
-![](img/image01126.jpeg)![](img/image01127.jpeg)
+```powershell
+class Thermostat {
+    [float]$CurrentTemperature
+    Thermostat() { $this._CurrentTemperature = 0 }
+    hidden [float]$_CurrentTemperature
+    [void] SetTemperature([float]$value) {
+        if ($value -ne $this._CurrentTemperature) {
+            $this._CurrentTemperature = $value
+            # Incomplete: invoke subscribers after checking for null.
+            foreach ($subscriber in $this.OnTemperatureChange) { & $subscriber $value }
+        }
+    }
+}
+```
 
 对 CurrentTemperature 的赋值包含向订阅者通知 CurrentTemperature 变化的特殊逻辑。只需执行 C#语句 OnTemperatureChange(value);即可向所有订阅者发出通知。该语句将温度的变化发布给 cooler 和 heater 对象。执行一个调用，即可向多个订阅者发出通知——这正是“多播委托”的由来。
 
@@ -68,7 +112,12 @@ Thermostat 类的 CurrentTemperature 属性每次发生变化，你都希望调�
 
 代码清单 14.5　调用委托
 
-![](img/image01128.jpeg)
+```powershell
+# Invoke subscribers only when the list is non-empty.
+if ($null -ne $thermostat.OnTemperatureChange) {
+    foreach ($subscriber in $thermostat.OnTemperatureChange) { & $subscriber $value }
+}
+```
 
 注意是在空条件检测后再调用 Invoke()。虽然可以拿掉问号，只用点操作符来调用该方法，但意义不大，因为那样相当于直接调用委托（参考代码清单 14.4 的 On-TemperatureChange(value)）。空条件操作符的优点在于，它采用特殊逻辑防范在执行空检查后订阅者调用一个过时处理程序（空检查后有变）导致委托再度为空。
 
@@ -78,7 +127,13 @@ Thermostat 类的 CurrentTemperature 属性每次发生变化，你都希望调�
 
 代码清单 14.6　C# 6.0 之前先执行空检查再调用委托
 
-![](img/image01129.jpeg)
+```powershell
+# Copy the subscriber list before checking it, avoiding a race with removal.
+$localOnChange = $thermostat.OnTemperatureChange
+if ($null -ne $localOnChange) {
+    foreach ($subscriber in $localOnChange) { & $subscriber $value }
+}
+```
 
 不是一上来就检查空值，而是先将 OnTemperatureChange 赋给第二个委托局部变量 localOnChange。这个简单的修改可确保在检查空值和发送通知之间，如一个不同的线程移除了所有 OnTemperatureChange 订阅者，将不会引发 NullReferenceException 异常。
 
@@ -106,7 +161,16 @@ Thermostat 类的 CurrentTemperature 属性每次发生变化，你都希望调�
 
 代码清单 14.7　使用+=和-=委托操作符
 
-![](img/image01130.jpeg)
+```powershell
+$delegate1 = { param($t) $heater.OnTemperatureChanged($t) }
+$delegate2 = { param($t) $cooler.OnTemperatureChanged($t) }
+$delegates = @($delegate1, $delegate2)
+Write-Output 'Invoke both delegates:'
+foreach ($delegate in $delegates) { & $delegate 90 }
+Write-Output 'Invoke only delegate2'
+$delegates = @($delegate2)
+& $delegates[0] 30
+```
 
 代码清单 14.7 的结果如输出 14.1 所示。
 
@@ -118,7 +182,16 @@ Thermostat 类的 CurrentTemperature 属性每次发生变化，你都希望调�
 
 代码清单 14.8　使用+和-委托操作符
 
-![](img/image01133.jpeg)
+```powershell
+$delegate1 = { param($t) $heater.OnTemperatureChanged($t) }
+$delegate2 = { param($t) $cooler.OnTemperatureChanged($t) }
+Write-Output 'Combine delegates using + equivalent:'
+$delegates = @($delegate1, $delegate2)
+foreach ($delegate in $delegates) { & $delegate 60 }
+Write-Output 'Uncombine delegates using - equivalent:'
+$delegates = @($delegate1)
+foreach ($delegate in $delegates) { & $delegate 60 }
+```
 
 使用赋值操作符会清除之前的所有订阅者，并允许用新订阅者替换。这是委托很容易让人犯错的一个设计，因为在本来应该使用“+=”操作符的时候，很容易就会错误地写成“=”。解决方案是使用本章稍后要讲述的事件。
 
@@ -156,7 +229,11 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 代码清单 14.9　OnTemperatureChanged()抛出异常
 
-![](img/image01136.jpeg)
+```powershell
+$thermostat.OnTemperatureChange += { throw [InvalidOperationException]::new() }
+# A terminating exception stops subsequent subscribers unless handled.
+$thermostat.CurrentTemperature = [float](Read-Host 'Enter temperature')
+```
 
 图 14.3 是更新过的顺序图。虽然 cooler 和 heater 已订阅接收消息，但 Lambda 表达式异常中止了链，造成 cooler 对象收不到通知。
 
@@ -168,7 +245,16 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 代码清单 14.10　处理来自订阅者的异常
 
-![](img/image01138.jpeg)
+```powershell
+$exceptions = [System.Collections.Generic.List[Exception]]::new()
+foreach ($subscriber in $thermostat.OnTemperatureChange) {
+    try { & $subscriber $value }
+    catch [Exception] { $exceptions.Add($_.Exception) }
+}
+if ($exceptions.Count -gt 0) {
+    throw [AggregateException]::new('Subscriber errors occurred.', $exceptions)
+}
+```
 
 输出 14.2
 
@@ -198,7 +284,11 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 代码清单 14.11　错误使用赋值操作符“=”而不是“+=”
 
-![](img/image01140.jpeg)
+```powershell
+# Assignment replaces all existing subscribers (the bug that += avoids).
+$thermostat.OnTemperatureChange = @({ param($t) $heater.OnTemperatureChanged($t) })
+$thermostat.OnTemperatureChange = @({ param($t) $cooler.OnTemperatureChanged($t) })
+```
 
 代码清单 14.11 和代码清单 14.7 如出一辙，只是不是使用“+=”操作符，而是使用简单赋值操作符=。其结果就是，当代码将 cooler.OnTemperatureChanged 赋给 On-TemperatureChange 时，heater.OnTemperatureChanged 会被清除，因为一个全新的委托链替代了之前的链。在本该使用“+=”操作符的地方使用了赋值操作符“=”，由于这是一个十分容易犯的错误，所以最好的解决方案是根本不要为包容类外部的对象提供对赋值操作符的支持。event 关键字的作用就是提供额外的封装，因此要避免不小心取消其他订阅者。
 
@@ -208,7 +298,12 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 代码清单 14.12　从事件包容者的外部触发事件
 
-![](img/image01141.jpeg)![](img/image01142.jpeg)
+```powershell
+# External callers should not be able to raise the event.
+$thermostat.OnTemperatureChange += { param($t) $heater.OnTemperatureChanged($t) }
+$thermostat.OnTemperatureChange += { param($t) $cooler.OnTemperatureChanged($t) }
+# Raising belongs inside Thermostat, not outside it.
+```
 
 代码清单 14.12 的问题在于，即使 thermostat 的 CurrentTemperature 没有变化，Program 也能调用 OnTemperatureChange 委托。所以 Program 触发了对所有 thermostat 订阅者的一个通知，告诉它们温度发生变化，而事实上 thermostat 的温度没有变化。和之前一样，委托的问题在于封装不充分。Thermostat 应禁止其他任何类调用 OnTemperatureChange 委托。
 
@@ -218,7 +313,17 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 
 代码清单 14.13　为 Event-Coding（事件编码）模式使用 event 关键字
 
-![](img/image01143.jpeg)
+```powershell
+class TemperatureArgs {
+    [float]$NewTemperature
+    TemperatureArgs([float]$newTemperature) { $this.NewTemperature = $newTemperature }
+}
+
+class Thermostat {
+    [scriptblock[]]$OnTemperatureChange = @()
+    [float]$CurrentTemperature
+}
+```
 
 新的 Thermostat 类进行了 4 处修改。首先，OnTemperatureChange 属性被移除了。相反，OnTemperatureChange 被声明为公共字段。表面上似乎并不是在解决早先描述的封装问题。因为现在需要的是增强封装，而不是让字段变成公共来削弱封装。但我们进行的第二处修改是在字段声明前添加 event 关键字。这一处简单的修改提供了所需的全部封装。添加 event 关键字后，会禁止为公共委托字段使用赋值操作符（比如 thermostat.OnTemperatureChange=cooler.OnTemperatureChanged）。此外，只有包容类才能调用向所有订阅者发出通知的委托（例如，不允许在类的外部执行 thermostat.OnTemperature-Change (42)）。换言之，event 关键字提供了必要的封装来防止任何外部类发布一个事件或删除之前不是由其添加的订阅者。这样就完美解决了普通委托存在的两个问题，这是在 C#中提供 event 关键字的关键原因之一。
 
@@ -230,7 +335,10 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 
 代码清单 14.14　泛型 EventHandler 类型
 
-![](img/image01144.jpeg)
+```powershell
+# EventHandler-style callback: sender plus event arguments.
+$handler = { param([object]$sender, [TemperatureArgs]$eventArgs) ... }
+```
 
 结果是 Action<TEventArgs>委托类型中的单个温度参数被替换成两个新参数，一个代表发送者（发布者），一个代表事件数据。这一处修改并不是 C#编译器强制的。但声明准备作为事件使用的委托时，约定就是传递这些类型的两个参数。
 
@@ -242,7 +350,11 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 
 代码清单 14.15　触发事件通知
 
-![](img/image01145.jpeg)
+```powershell
+# Pass the publisher as sender and include event data.
+$eventArgs = [TemperatureArgs]::new($value)
+foreach ($subscriber in $this.OnTemperatureChange) { & $subscriber $this $eventArgs }
+```
 
 通常将 sender 指定为容器类（this），因其是唯一能为事件调用委托的类。
 
@@ -268,7 +380,13 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 
 代码清单 14.16　使用自定义委托类型
 
-![](img/image01146.jpeg)
+```powershell
+# A custom callback can use a descriptive event-argument parameter.
+$thermostat.OnTemperatureChange += {
+    param($sender, [TemperatureArgs]$newTemperature)
+    Write-Output $newTemperature.NewTemperature
+}
+```
 
 虽然通常应优先使用 EventHandler<TEventArgs>，而非创建 TemperatureChange-Handler 这样的自定义委托类型，但后者也是有一些优点的。具体地说，使用自定义类型，可以使用事件特有的参数名。例如代码清单 14.16 调用委托来引发事件时，第二个参数名是 newTemperature，而非一个让人摸不着头脑的 e。
 
@@ -284,13 +402,20 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 
 代码清单 14.17　声明 OnTemperatureChange 事件
 
-![](img/image01147.jpeg)
+```powershell
+# Public subscription list; only Thermostat should invoke it.
+[scriptblock[]]$OnTemperatureChange = @()
+```
 
 C#编译器遇到 event 关键字后生成的 CIL 代码等价于代码清单 14.18 的 C#代码。
 
 代码清单 14.18　与编译器生成的事件 CIL 代码对应的 C#代码
 
-![](img/image01148.jpeg)![](img/image01149.jpeg)
+```powershell
+# The event's add/remove accessors maintain the private subscriber list.
+$thermostat.OnTemperatureChange += $handler
+$thermostat.OnTemperatureChange -= $handler
+```
 
 换言之，代码清单 14.17 的代码会导致编译器自动对代码进行扩展，生成大致如代码清单 14.18 所示的代码。（“大致”一词不可或缺，因为为了简化问题，和线程同步有关的细节从代码清单中拿掉了。）
 
@@ -310,7 +435,14 @@ C#编译器获取原始事件定义，原地定义一个私有委托变量。结
 
 代码清单 14.19　自定义 add 和 remove 处理程序
 
-![](img/image01150.jpeg)
+```powershell
+# Custom add/remove behavior can control subscriber ordering.
+class CustomThermostat {
+    hidden [scriptblock[]]$Subscribers = @()
+    [void] AddSubscriber([scriptblock]$handler) { $this.Subscribers = @($handler) + $this.Subscribers }
+    [void] RemoveSubscriber([scriptblock]$handler) { $this.Subscribers = @($this.Subscribers | Where-Object { $_ -ne $handler }) }
+}
+```
 
 在本例中，存储每个订阅者的委托\_OnTemperatureChange 变成了 protected。此外，add 块的实现交换了两个委托存储的位置，使添加到链中的最后一个委托是接收通知的第一个委托。不过由于 C#不保证同一个事件对象中所有接收者接收事件的顺序，因此开发者不能依赖 Combine()方法中参数的顺序来断定事件实际接收的顺序。
 
