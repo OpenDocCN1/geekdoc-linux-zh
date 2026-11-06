@@ -22,7 +22,12 @@
 
 代码清单 8.1　定义接口
 
-![](img/image00841.jpeg)
+```powershell
+interface IFileCompression {
+    [void] Compress([string]$targetFileName, [string[]]$fileList)
+    [void] Uncompress([string]$compressedFileName, [string]$expandDirectoryName)
+}
+```
 
 IFileCompression 定义了一个类为了同其他压缩类协作而必须实现的方法。接口的强大之处在于，调用者可随便切换不同的实现而不需要修改调用代码。
 
@@ -42,7 +47,31 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.2　实现和使用接口
 
-![](img/image00842.jpeg)![](img/image00843.jpeg)![](img/image00844.jpeg)![](img/image00845.jpeg)
+```powershell
+interface IListable {
+    [string[]]$CellValues
+}
+
+class Contact {
+    [string]$FirstName; [string]$LastName; [string]$Address; [string]$Phone
+    Contact([string]$firstName,[string]$lastName,[string]$address,[string]$phone) {
+        $this.FirstName=$firstName; $this.LastName=$lastName; $this.Address=$address; $this.Phone=$phone
+    }
+    [string[]]$CellValues
+    [string] ToString() { return "$($this.FirstName) $($this.LastName)" }
+}
+
+class Publication {
+    [string]$Title; [string]$Author; [int]$Year
+    Publication([string]$title,[string]$author,[int]$year) { $this.Title=$title; $this.Author=$author; $this.Year=$year }
+    [string[]]$CellValues
+}
+
+$contacts = @([Contact]::new('Dick','Traci','123 Main St., Spokane, WA 99037','123-123-1234'), [Contact]::new('Andrew','Littman','1417 Palmary St., Dallas, TX 55555','555-123-4567'))
+$publications = @([Publication]::new('The End of Poverty: Economic Possibilities for Our Time','Jeffrey Sachs',2006), [Publication]::new('Orthodoxy','G.K. Chesterton',1908))
+$contacts | ForEach-Object { $_.CellValues }
+$publications | ForEach-Object { $_.CellValues }
+```
 
 代码清单 8.2 的结果如输出 8.1 所示。
 
@@ -58,19 +87,42 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.3　实现接口
 
-![](img/image00848.jpeg)![](img/image00849.jpeg)
+```powershell
+class Contact : IListable {
+    [string]$FirstName; [string]$LastName; [string]$Phone; [string]$Address
+    Contact([string]$firstName,[string]$lastName,[string]$phone,[string]$address) { $this.FirstName=$firstName; $this.LastName=$lastName; $this.Phone=$phone; $this.Address=$address }
+    [int] CompareTo([object]$obj) {
+        if ($null -eq $obj) { return 1 }
+        if ($obj -is [Contact]) { return $this.LastName.CompareTo($obj.LastName) }
+        throw [ArgumentException]::new('The parameter is not a Contact')
+    }
+    [string[]]$CellValues
+}
+```
 
 实现接口时，接口的所有抽象成员都必须实现。抽象类既可以将接口方法映射为抽象方法，也可以将它实现为非抽象方法并在方法中抛出 NotImplementedException 异常，但无论如何都要提供接口成员的一个“实现”。例如，给定以下接口定义：
 
-![](img/image00850.jpeg)
+```powershell
+class IFoo {
+    [void] Bar()
+}
+```
 
 在抽象类中可将接口方法映射成自己的抽象方法，将真正的实现留给子类去完成：
 
-![](img/image00851.jpeg)
+```powershell
+class Foo {
+    [void] Bar() { throw [NotImplementedException]::new() }
+}
+```
 
 也可拿掉 abstract 关键字并添加方法主体：
 
-![](img/image00852.jpeg)
+```powershell
+class Foo {
+    [void] Bar() { throw [NotImplementedException]::new() }
+}
+```
 
 接口的重点在于永远不能实例化，即不能用 new 创建接口。因此接口没有构造函数或终结器。只有实例化实现了接口的类型，才能使用接口实例。此外，接口不能包含静态成员。接口为多态性而生，而假如没有实现接口的那个类型的实例，多态性就没什么价值了。
 
@@ -84,7 +136,11 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.4　调用显式接口成员实现
 
-![](img/image00853.jpeg)
+```powershell
+$contact = [Contact]::new('Inigo','Montoya','','')
+# Access an interface-shaped member through the interface contract.
+$values = $contact.CellValues
+```
 
 本例是在同一个语句中执行强制类型转换和调用 CellValues。也可在调用 CellValues 之前将 contact2 赋给一个 IListable 变量。
 
@@ -92,7 +148,13 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.5　显式接口实现
 
-![](img/image00854.jpeg)
+```powershell
+class Contact {
+    hidden [string[]]$IListable_CellValues
+    Contact([string]$firstName,[string]$lastName,[string]$phone,[string]$address) { $this.IListable_CellValues=@($firstName,$lastName,$phone,$address) }
+    [string[]] GetCellValues() { return $this.IListable_CellValues }
+}
+```
 
 代码清单 8.5 通过为属性名附加 IListable 前缀来显式实现 CellValues。此外，由于显式接口实现直接和接口关联，所以没必要使用 virtual、override 或者 public 来修饰它们。事实上，这些修饰符是不被允许的。这些成员不被视为类的公共成员，标注 public 有误导之嫌。
 
@@ -102,7 +164,9 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.5 的 CompareTo()没有附加 IComparable 前缀，所以是隐式实现的。要隐式实现成员，只要求成员是公共的，且签名与接口成员签名相符。接口成员实现不需要 override 关键字或者其他任何表明该成员与接口关联的指示符。此外，由于成员像其他类成员那样声明，所以可像调用其他类成员那样直接调用隐式实现的成员：
 
-![](img/image00855.jpeg)
+```powershell
+$result = $contact1.CompareTo($contact2)
+```
 
 换言之，隐式成员实现不要求执行转型，因为成员可直接调用，没有在实现它的类型中被隐藏起来。
 
@@ -148,7 +212,18 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.6　从一个接口派生出另一个接口
 
-![](img/image00856.jpeg)![](img/image00857.jpeg)
+```powershell
+interface IReadableSettingsProvider {
+    [string] GetSetting([string]$name,[string]$defaultValue)
+}
+interface ISettingsProvider : IReadableSettingsProvider {
+    [void] SetSetting([string]$name,[string]$value)
+}
+class FileSettingsProvider : ISettingsProvider {
+    [void] SetSetting([string]$name,[string]$value) { }
+    [string] GetSetting([string]$name,[string]$defaultValue) { return $defaultValue }
+}
+```
 
 本例的 ISettingsProvider 从 IReadableSettingsProvider 派生，所以会继承其成员。如后者还有一个显式基接口，ISettingsProvider 也将继承其成员。派生层次结构中的完整接口集只是基本接口的累积。
 
@@ -156,7 +231,12 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.7　未提供正确的包容接口
 
-![](img/image00858.jpeg)
+```powershell
+# The inherited interface declares GetSetting; implement the base contract directly.
+class FileSettingsProvider : ISettingsProvider {
+    [string] GetSetting([string]$name,[string]$defaultValue) { return $defaultValue }
+}
+```
 
 编译代码清单 8.7，会获得如输出 8.2 所示的错误信息。
 
@@ -170,7 +250,12 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.8　在类声明中使用基接口
 
-![](img/image00860.jpeg)![](img/image00861.jpeg)
+```powershell
+class FileSettingsProvider : ISettingsProvider, IReadableSettingsProvider {
+    [void] SetSetting([string]$name,[string]$value) { }
+    [string] GetSetting([string]$name,[string]$defaultValue) { return $defaultValue }
+}
+```
 
 在这个代码清单中，类的接口实现并没有改变。虽然突出显示的接口实现声明纯属多余，但它提供了更好的可读性。
 
@@ -186,7 +271,11 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.9　多接口继承
 
-![](img/image00862.jpeg)
+```powershell
+interface IReadableSettingsProvider { [string] GetSetting([string]$name,[string]$defaultValue) }
+interface IWriteableSettingsProvider { [void] SetSetting([string]$name,[string]$value) }
+interface ISettingsProvider : IReadableSettingsProvider, IWriteableSettingsProvider { }
+```
 
 很少有接口没有成员。但如果要求同时实现两个接口，这种情况就很正常。代码清单 8.9 和代码清单 8.6 的区别在于，现在可以在不提供任何读取功能的前提下实现 IWriteableSettingsProvider。代码清单 8.6 的 FileSettingsProvider 不受影响，但假如它使用的是显式成员实现，就要以稍微不同的方式指定成员从属于哪个接口。
 
@@ -196,7 +285,15 @@ IFileCompression 定义了一个类为了同其他压缩类协作而必须实现
 
 代码清单 8.10　接口扩展方法
 
-![](img/image00863.jpeg)![](img/image00864.jpeg)
+```powershell
+class Listable {
+    static [void] List([object[]]$items,[string[]]$headers) {
+        foreach ($item in $items) { $item.CellValues }
+    }
+}
+$contacts | ForEach-Object { $_.CellValues }
+$publications | ForEach-Object { $_.CellValues }
+```
 
 注意本例被扩展的不是 IListable（虽然也可以）而是 IListable\[\]。这证明 C#不仅能为特定类型的实例添加扩展方法，还允许为该类型的对象集合添加。对扩展方法的支持是实现 LINQ 的基础。IEnumerable 是所有集合都要实现的基本接口。通过为 IEnumerable 定义扩展方法，所有集合都能享受 LINQ 支持。这显著改变了对象集合的编程方式，该主题将在第十五章详细讨论。
 
@@ -230,7 +327,12 @@ UML 图中^( [\[1\]](part0084.xhtml#ch1_back) ) 的接口可能有两种形式�
 
 代码清单 8.11　一个接口从另一个派生
 
-![](img/image00866.jpeg)![](img/image00867.jpeg)
+```powershell
+interface IDistributedSettingsProvider : ISettingsProvider {
+    [string] GetSetting([string]$uri,[string]$name,[string]$defaultValue)
+    [void] SetSetting([string]$uri,[string]$name,[string]$value)
+}
+```
 
 该设计的重点在于，其他实现了 ISettingsProvider 的程序员可选择升级实现来包含 IDistributedSettingsProvider，也可选择忽略它。
 
@@ -246,7 +348,20 @@ UML 图中^( [\[1\]](part0084.xhtml#ch1_back) ) 的接口可能有两种形式�
 
 代码清单 8.12　用默认接口方法来升级接口
 
-![](img/image00868.jpeg)![](img/image00869.jpeg)![](img/image00870.jpeg)
+```powershell
+interface IListable {
+    [string[]]$CellValues
+    [ConsoleColor[]]$CellColors
+}
+class Contact : IListable {
+    [string[]]$CellValues
+    # Uses IListable's default color behavior when no override is supplied.
+}
+class Publication : IListable {
+    [string[]]$CellValues
+    [ConsoleColor[]]$CellColors
+}
+```
 
 观察上面的代码会发现，CellColors 属性的取值方法拥有实现代码。即便该方法出现在接口中，这样做依然可行。这个特性被称为默认接口方法，它允许为现有接口增加新方法时，同时提供默认实现代码。因此所有基于该接口编写的老程序，可以不做相应的修改，也仍然能够编译和运行。上面示例中，Contact 类实现了 IListable 接口，却并没有实现 CellColors 属性的取值方法，而是依赖于 IListable 接口方法的默认实现。
 
@@ -272,7 +387,17 @@ UML 图中^( [\[1\]](part0084.xhtml#ch1_back) ) 的接口可能有两种形式�
 
 代码清单 8.13　鲁莽地依赖虚方法实现
 
-![](img/image00876.jpeg)
+```powershell
+class WorkflowActivity {
+    hidden [void] Start() { 'Start' }
+    [void] Run() {
+        $this.Start()
+        # Do something...
+        $this.Stop()
+    }
+    hidden [void] Stop() { 'Stop' }
+}
+```
 
 如果 Run()方法在某个派生类中被重写，则关键的 Start()和 Stop()方法有可能没有被调用。
 
@@ -292,7 +417,24 @@ UML 图中^( [\[1\]](part0084.xhtml#ch1_back) ) 的接口可能有两种形式�
 
 代码清单 8.14　强制对 Run()封装
 
-![](img/image00877.jpeg)![](img/image00878.jpeg)![](img/image00879.jpeg)
+```powershell
+class WorkflowActivity {
+    hidden [void] Start() { 'IWorkflowActivity.Start()...' }
+    [void] Run() {
+        try { $this.Start(); $this.InternalRun() }
+        finally { $this.Stop() }
+    }
+    hidden [void] InternalRun() { }
+    hidden [void] Stop() { 'IWorkflowActivity.Stop()...' }
+}
+class ExecuteProcessActivity : WorkflowActivity {
+    [string]$ExecutableName
+    ExecuteProcessActivity([string]$executablePath) { $this.ExecutableName=$executablePath }
+    [void] Run() { "Executing non-polymorphic Run() with process '$($this.ExecutableName)'." }
+}
+$activity = [ExecuteProcessActivity]::new('dotnet')
+$activity.Run()
+```
 
 输出 8.3
 
