@@ -314,7 +314,7 @@ C#用 event 关键字解决上述两个问题。虽然看起来像是一个字�
 代码清单 14.13　为 Event-Coding（事件编码）模式使用 event 关键字
 
 ```powershell
-class TemperatureArgs {
+class TemperatureArgs : System.EventArgs {
     [float]$NewTemperature
     TemperatureArgs([float]$newTemperature) { $this.NewTemperature = $newTemperature }
 }
@@ -337,7 +337,10 @@ class Thermostat {
 
 ```powershell
 # EventHandler-style callback: sender plus event arguments.
-$handler = { param([object]$sender, [TemperatureArgs]$eventArgs) ... }
+$handler = {
+    param([object]$sender, [TemperatureArgs]$eventArgs)
+    # Handle the event here.
+}
 ```
 
 结果是 Action<TEventArgs>委托类型中的单个温度参数被替换成两个新参数，一个代表发送者（发布者），一个代表事件数据。这一处修改并不是 C#编译器强制的。但声明准备作为事件使用的委托时，约定就是传递这些类型的两个参数。
