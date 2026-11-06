@@ -12,7 +12,17 @@
 
 代码清单 11.1　抛出异常
 
-![](img/image00981.jpeg)![](img/image00982.jpeg)
+```powershell
+class TextNumberParser {
+    static [int] Parse([string] $textDigit) {
+        if ($null -eq $textDigit) { throw [ArgumentNullException]::new('textDigit') }
+        $digitTexts = @('zero','one','two','three','four','five','six','seven','eight','nine')
+        $result = [Array]::IndexOf($digitTexts, $textDigit.ToLower())
+        if ($result -lt 0) { throw [ArgumentException]::new('The argument did not represent a digit', 'textDigit') }
+        return $result
+    }
+}
+```
 
 以代码清单 11.1 的 TextNumberParser.Parse()方法为例。调用 Array.IndexOf()时，在 textDigit 为空的前提下利用了 C# 7.0 的 throw 表达式功能。C# 7.0 之前不支持 throw 表达式，只支持 throw 语句，所以需要两个单独的语句：一个进行空检查，另一个抛出异常。但这样就无法在同一个语句中嵌入 throw 和空合并操作符(??)。
 
@@ -42,7 +52,31 @@ ArgumentNullException 和 NullReferenceException 这两个异常很相似。前�
 
 代码清单 11.2　捕捉不同的异常类型
 
-![](img/image00983.jpeg)![](img/image00984.jpeg)
+```powershell
+try {
+    throw [InvalidOperationException]::new('Arbitrary exception')
+}
+catch [System.ComponentModel.Win32Exception] {
+    if ($_.Exception.NativeErrorCode -eq 42) {
+        # Handle Win32Exception where ErrorCode is 42
+    }
+    else { throw }
+}
+catch [ArgumentException] {
+    # Handle ArgumentException
+}
+catch [InvalidOperationException] {
+    $exceptionHandled = $false
+    # Handle InvalidOperationException
+    if (-not $exceptionHandled) { throw }
+}
+catch [Exception] {
+    # Handle Exception
+}
+finally {
+    # Handle any cleanup code here as it runs regardless of whether there is an exception
+}
+```
 
 代码清单 11.2 总共有 5 个 catch 块，每个处理一种异常类型。发生异常时，会跳转到与异常类型最匹配的 catch 块执行。匹配度由继承链决定。例如，即使抛出的是 System.Exception 类型的异常，由于 System.InvalidOperationException 派生自 System.Exception，因此 InvalidOperationException 与抛出的异常匹配度最高。最终，将由 catch(InvalidOperationException...)捕捉到异常，而不是由 catch(Exception ...)块捕捉。
 
@@ -70,7 +104,19 @@ C# 5.0 新增了一个机制，允许抛出之前抛出的异常而不丢失原�
 
 代码清单 11.3　使用 ExceptionDispatchInfo 重新抛出异常
 
-![](img/image00985.jpeg)![](img/image00986.jpeg)
+```powershell
+$task = WriteWebRequestSizeAsync($url)
+try {
+    while (-not $task.Wait(100)) {
+        Write-Host -NoNewline '.'
+    }
+}
+catch [System.AggregateException] {
+    $exception = $_.Exception.Flatten()
+    [System.Runtime.ExceptionServices.ExceptionDispatchInfo]::Capture(
+        $exception.InnerException ?? $exception).Throw()
+}
+```
 
 ExceptionDispatchInfo.Throw()值得注意的一个地方是，编译器不认为它是像普通 throw 语句那样的一个返回语句。例如，如方法签名返回一个值，但没有值从 ExceptionDispatchInfo.Throw()所在的代码路径返回，编译器就会报错，指出没有返回值。所以，开发者有时不得不在 ExceptionDispatchInfo.Throw()后面跟随一个 return 语句，即使该语句在运行时永远不会执行（相反是抛出异常）。
 
@@ -170,7 +216,22 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 代码清单 11.4　创建自定义异常
 
-![](img/image00987.jpeg)![](img/image00988.jpeg)
+```powershell
+class DatabaseException : System.Exception {
+    DatabaseException([string] $message, [System.Data.SqlClient.SqlException] $exception)
+        : base($message, $exception) { ... }
+
+    DatabaseException([string] $message, [System.Data.OracleClient.OracleException] $exception)
+        : base($message, $exception) { ... }
+
+    DatabaseException() { ... }
+
+    DatabaseException([string] $message) { ... }
+
+    DatabaseException([string] $message, [Exception] $exception)
+        : base($message, $exception) { ... }
+}
+```
 
 可用该自定义异常包装多个专有的数据库异常。例如，由于 Oracle 和 SQL Server 会为类似的错误抛出不同的异常，所以可创建自定义异常，将数据库专有异常标准化到一个通用异常包装器中，使应用程序能以标准方式处理。这样不管应用程序的后端数据库是 Oracle 还是 SQL Server，都可在调用栈较高的位置用同一个 catch 块处理。
 
@@ -206,7 +267,15 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 代码清单 11.5　定义可序列化异常
 
-![](img/image00989.jpeg)
+```powershell
+class DatabaseException : System.Exception {
+    # Used for deserialization of exceptions
+    DatabaseException(
+        [System.Runtime.Serialization.SerializationInfo] $serializationInfo,
+        [System.Runtime.Serialization.StreamingContext] $context)
+        : base($serializationInfo, $context) { ... }
+}
+```
 
 这个 DatabaseException 例子演示了可序列化异常对特性和构造函数的要求。
 
@@ -236,7 +305,12 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 代码清单 11.6　溢出一个整数值
 
-![](img/image00990.jpeg)
+```powershell
+# int.MaxValue equals 2147483647
+$n = [int]::MaxValue
+$n = $n + 1
+Write-Output $n
+```
 
 输出 11.1 展示了结果。
 
@@ -248,7 +322,17 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 代码清单 11.7　checked 块示例
 
-![](img/image00992.jpeg)
+```powershell
+try {
+    # int.MaxValue equals 2147483647
+    $n = [int]::MaxValue
+    $n = [int]($n + 1)
+    Write-Output $n
+}
+catch [System.OverflowException] {
+    throw
+}
+```
 
 如计算只涉及常量，那么计算默认就是 checked 的。输出 11.2 展示了代码清单 11.7 的结果。
 
@@ -266,7 +350,12 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 代码清单 11.8　unchecked 块示例
 
-![](img/image00995.jpeg)
+```powershell
+# int.MaxValue equals 2147483647
+$n = [int]::MaxValue
+$n = $n + 1
+Write-Output $n
+```
 
 输出 11.3 展示了代码清单 11.8 的结果。
 
@@ -278,7 +367,9 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 
 如果不允许使用语句（比如在初始化字段的时候），那么可以使用 checked 和 unchecked 表达式，如下例所示：
 
-![](img/image00997.jpeg)
+```powershell
+$number = [int]::MaxValue + 1
+```
 
 ## 11.8　小结
 
