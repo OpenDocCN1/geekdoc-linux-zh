@@ -150,7 +150,13 @@ Write-Output ("The palindrome `"$palindrome`" is $($palindrome.Length) character
 
 输出 1.7
 
-![](img/image00308.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+
+Your full name is Inigo Montoya.
+```
 
 虽然我也可以在书中提供完整代码以方便复制，但这样会分散大家的注意力。因此，你需要在自己的程序中修改示例代码。书中的代码主要省略了错误检查，比如异常处理。另外，代码没有显式包含 using System 语句，所有例子都需要该语句。
 

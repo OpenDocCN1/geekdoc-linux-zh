@@ -52,7 +52,19 @@ List<T>类的性质和数组相似。关键区别是随着元素增多，这种�
 
 代码清单 17.1　使用 List<T>
 
-![](img/image01253.jpeg)
+```powershell
+$list = [System.Collections.Generic.List[string]]@(
+    'Sneezy', 'Happy', 'Dopey', 'Doc', 'Sleepy', 'Bashful', 'Grumpy'
+)
+
+$list.Sort()
+Write-Output ("In alphabetical order {0} is the first dwarf while {1} is the last." -f `
+    $list[0], $list[6])
+
+$list.Remove('Grumpy')
+```
+
+原图代码已改写为 PowerShell 脚本。
 
 输出 17.1
 
@@ -76,7 +88,42 @@ IComparable<T>和 IComparer<T>的区别很细微，却很重要。前者说“�
 
 代码清单 17.2　实现 IComparer<T>
 
-![](img/image01255.jpeg)![](img/image01256.jpeg)
+```powershell
+using namespace System.Collections.Generic
+
+class Contact {
+    [string] $FirstName
+    [string] $LastName
+
+    Contact([string] $firstName, [string] $lastName) {
+        $this.FirstName = $firstName
+        $this.LastName  = $lastName
+    }
+}
+
+class NameComparison : IComparer[Contact] {
+    [int] Compare([Contact] $x, [Contact] $y) {
+        if ([object]::ReferenceEquals($x, $y)) { return 0 }
+        if ($null -eq $x) { return 1 }
+        if ($null -eq $y) { return -1 }
+
+        $result = [NameComparison]::StringCompare($x.LastName, $y.LastName)
+        if ($result -eq 0) {
+            $result = [NameComparison]::StringCompare($x.FirstName, $y.FirstName)
+        }
+        return $result
+    }
+
+    static [int] StringCompare([string] $x, [string] $y) {
+        if ([object]::ReferenceEquals($x, $y)) { return 0 }
+        if ($null -eq $x) { return 1 }
+        if ($null -eq $y) { return -1 }
+        return $x.CompareTo($y)
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。PowerShell 使用 `IComparer[Contact]` 实现自定义比较器。
 
 要先按 LastName 排序，再按 FirstName 排序，调用 contactList.Sort(new Name-Comparer())即可。
 
@@ -98,7 +145,25 @@ BinarySearch()采用快得多的二叉搜索算法，但要求元素已排好序
 
 代码清单 17.3　对 BinarySearch()的结果进行按位取反
 
-![](img/image01257.jpeg)![](img/image01258.jpeg)
+```powershell
+$list = [System.Collections.Generic.List[string]]::new()
+$list.Add('public')
+$list.Add('protected')
+$list.Add('private')
+$list.Sort()
+
+$search = $list.BinarySearch('protected internal')
+if ($search -lt 0) {
+    # 按位取反得到应插入的位置
+    $list.Insert(-bnot $search, 'protected internal')
+}
+
+foreach ($accessModifier in $list) {
+    Write-Output $accessModifier
+}
+```
+
+原图代码已改写为 PowerShell 脚本。
 
 要注意的是，假如列表事先没有排好序，那么不一定能找到指定元素，即使它确实在列表中。代码清单 17.3 的结果如输出 17.2 所示。
 
@@ -112,7 +177,24 @@ BinarySearch()采用快得多的二叉搜索算法，但要求元素已排好序
 
 代码清单 17.4　演示 FindAll()及其谓词参数
 
-![](img/image01260.jpeg)![](img/image01261.jpeg)
+```powershell
+$list = [System.Collections.Generic.List[int]]::new()
+$list.Add(1)
+$list.Add(2)
+$list.Add(3)
+$list.Add(2)
+
+$results = $list.FindAll({
+    param($value)
+    ($value % 2) -eq 0
+})
+
+foreach ($number in $results) {
+    Write-Output $number
+}
+```
+
+原图代码已改写为 PowerShell 脚本。
 
 调用 FindAll()时传递了一个委托实例 Even()，后者在整数实参是偶数的前提下返回 true。FindAll()获取委托实例，并为列表中的每一项调用 Even()（此时利用了 C# 2.0 的委托类型推断）。每次返回值为 true 时，相应的项就添加到一个新的 List<T>实例中。检查完列表中的每一项之后就返回该实例。第十三章已详细讨论了委托。
 
@@ -124,7 +206,20 @@ BinarySearch()采用快得多的二叉搜索算法，但要求元素已排好序
 
 代码清单 17.5　向 Dictionary<TKey, TValue>添加项
 
-![](img/image01262.jpeg)![](img/image01263.jpeg)![](img/image01264.jpeg)
+```powershell
+# C# 6.0 之前使用 {"Error", ConsoleColor.Red} 这种初始化语法
+$colorMap = [System.Collections.Generic.Dictionary[string, System.ConsoleColor]]::new()
+# 利用索引器（键作为索引）插入初始项
+$colorMap['Error']       = [System.ConsoleColor]::Red
+$colorMap['warning']     = [System.ConsoleColor]::Yellow
+$colorMap['Information'] = [System.ConsoleColor]::Green
+
+$colorMap.Add('Verbose', [System.ConsoleColor]::White)
+```
+
+原图代码已改写为 PowerShell 脚本。
+
+![](img/image01264.jpeg)
 
 图 17.3　Dictionary 类关系图
 
@@ -132,7 +227,19 @@ BinarySearch()采用快得多的二叉搜索算法，但要求元素已排好序
 
 代码清单 17.6　使用索引器在 Dictionary<TKey, TValue>中插入项
 
-![](img/image01265.jpeg)
+```powershell
+$colorMap = [System.Collections.Generic.Dictionary[string, System.ConsoleColor]]::new()
+$colorMap['Error']       = [System.ConsoleColor]::Red
+$colorMap['warning']     = [System.ConsoleColor]::Yellow
+$colorMap['Information'] = [System.ConsoleColor]::Green
+
+# 键不存在时插入新项
+$colorMap['Verbose'] = [System.ConsoleColor]::White
+# 键已存在时替换原有的值
+$colorMap['Error']   = [System.ConsoleColor]::Cyan
+```
+
+原图代码已改写为 PowerShell 脚本。PowerShell 的索引器赋值与 C# 语义一致：键不存在则插入，键已存在则覆盖。
 
 在代码清单 17.6 中，要注意的第一件事情是索引器不要求整数。相反，索引器的操作数的类型由第一个类型实参（string）指定。索引器设置或获取的值的类型由第二个类型实参（ConsoleColor）指定。
 
@@ -148,7 +255,19 @@ Dictionary<TKey, TValue>作为“哈希表”实现：这种数据结构在根�
 
 代码清单 17.7　使用 foreach 遍历 Dictionary<TKey, TValue>
 
-![](img/image01266.jpeg)
+```powershell
+$colorMap = [System.Collections.Generic.Dictionary[string, System.ConsoleColor]]::new()
+$colorMap['Error']       = [System.ConsoleColor]::Red
+$colorMap['warning']     = [System.ConsoleColor]::Yellow
+$colorMap['Information'] = [System.ConsoleColor]::Green
+$colorMap['Verbose']     = [System.ConsoleColor]::White
+
+foreach ($item in $colorMap.GetEnumerator()) {
+    Write-Host -ForegroundColor $item.Value $item.Key
+}
+```
+
+原图代码已改写为 PowerShell 脚本。字典的每一项都是 `KeyValuePair<TKey, TValue>`，分别用 `Key` 和 `Value` 属性访问键和值。
 
 输出 17.3
 
@@ -170,7 +289,37 @@ Dictionary<TKey, TValue>作为“哈希表”实现：这种数据结构在根�
 
 代码清单 17.8　实现 IEqualityComparer<T>
 
-![](img/image01268.jpeg)
+```powershell
+using namespace System.Collections.Generic
+
+class Contact {
+    [string] $FirstName
+    [string] $LastName
+
+    Contact([string] $firstName, [string] $lastName) {
+        $this.FirstName = $firstName
+        $this.LastName  = $lastName
+    }
+}
+
+class ContactEquality : IEqualityComparer[object] {
+    [bool] Equals([object] $x, [object] $y) {
+        if ([object]::ReferenceEquals($x, $y)) { return $true }
+        if ($null -eq $x -or $null -eq $y) { return $false }
+        return ($x.LastName -eq $y.LastName) -and ($x.FirstName -eq $y.FirstName)
+    }
+
+    [int] GetHashCode([object] $x) {
+        if ($null -eq $x) { return 0 }
+        $h1 = if ($null -eq $x.FirstName) { 0 } else { $x.FirstName.GetHashCode() }
+        $h2 = if ($null -eq $x.LastName)  { 0 } else { $x.LastName.GetHashCode() }
+        # 压缩为 32 位正数，避免溢出
+        return [int](($h1 * 23 + $h2) -band 0x7FFFFFFF)
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。此处以 `IEqualityComparer[object]` 实现，这样比较器可直接用于 `Dictionary[Contact, string]`。
 
 调用构造函数 new Dictionary<Contact, string>(new ContactEquality)，即可创建使用了该相等性比较器的字典。
 
@@ -250,7 +399,34 @@ System.Collections.Generic 还支持一个链表集合，允许正向和反向�
 
 代码清单 17.9　定义索引器
 
-![](img/image01274.jpeg)![](img/image01275.jpeg)
+```powershell
+enum PairItem {
+    First
+    Second
+}
+
+class Pair {
+    [object] $First
+    [object] $Second
+
+    Pair($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    # PowerShell 类不支持自定义索引器，改用按索引枚举取值的方法
+    [object] GetItem([PairItem] $index) {
+        switch ($index) {
+            ([PairItem]::First)  { return $this.First }
+            ([PairItem]::Second) { return $this.Second }
+        }
+        throw [System.NotImplementedException]::new(
+            "The enum $($index.ToString()) has not been implemented")
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。PowerShell 类不支持 C# 的 `this[...]` 索引器声明，故以 `GetItem()` 方法表达同一语义，参数类型用枚举约束以避免传入不存在的项。
 
 索引器的声明和属性很相似，但不是使用属性名，而是使用关键字 this，后跟方括号中的参数列表。主体也像属性，也有 get 和 set 块。如代码清单 17.9 所示，参数不一定是 int。事实上，索引可获取多个参数，甚至可以重载。本例使用 enum 防止调用者为不存在的项提供索引。
 
@@ -262,7 +438,17 @@ C#编译器为索引器创建的 CIL 代码是名为 Item 的特殊属性，它�
 
 代码清单 17.10　更改索引器的默认名称
 
-![](img/image01276.jpeg)
+```powershell
+# 原 C# 代码用 IndexerName("Entry") 特性为索引器换名
+# PowerShell 类没有索引器，故以具名方法替代，方法名即等价于该名称
+class Pair {
+    [object] GetEntry([PairItem[]] $branches) {
+        # ...
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。PowerShell 中不存在索引器及其 CIL 名称，`IndexerName` 特性无对应物，故仅以方法名表达“入口”的语义。
 
 这个更改对于索引的 C#调用者来说没有任何区别，它只是为不直接支持索引器的语言指定了名称。
 
@@ -274,11 +460,42 @@ C#编译器为索引器创建的 CIL 代码是名为 Item 的特殊属性，它�
 
 代码清单 17.11　定义接受可变参数的索引器
 
-![](img/image01277.jpeg)![](img/image01278.jpeg)
+```powershell
+class BinaryTree {
+    [object] $Value
+    [object[]] $SubItems = @()
+
+    BinaryTree($value) {
+        $this.Value = $value
+    }
+
+    # 对应原索引器 this[params PairItem[] branches]
+    [BinaryTree] GetItem([PairItem[]] $branches) {
+        $currentNode = $this
+        # 空数组或 null 都指代根节点
+        $totalLevels  = if ($null -eq $branches) { 0 } else { $branches.Length }
+        $currentLevel = 0
+
+        while ($currentLevel -lt $totalLevels) {
+            $currentNode = $currentNode.SubItems[[int] $branches[$currentLevel]]
+            if ($null -eq $currentNode) {
+                # 该位置上的二叉树为 null
+                throw [System.IndexOutOfRangeException]::new()
+            }
+            $currentLevel++
+        }
+        return $currentNode
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。PowerShell 以数组参数 `[PairItem[]]` 表达 C# 的 `params` 可变参数。
 
 branches 中的每一项都是一个 PairItem，指出二叉树中向下导航到哪个分支。例如：
 
-![](img/image01279.jpeg)
+```powershell
+$tree.GetItem([PairItem[]]@([PairItem]::Second, [PairItem]::First)).Value
+```
 
 将检索位于第一个分支中第二个项的值，然后是该分支中的第一个分支。
 
@@ -318,7 +535,41 @@ branches 中的每一项都是一个 PairItem，指出二叉树中向下导航�
 
 代码清单 17.12　迭代器接口模式
 
-![](img/image01280.jpeg)![](img/image01281.jpeg)
+```powershell
+class BinaryTree : System.Collections.IEnumerable {
+    [object] $Value
+    [object[]] $SubItems = @()
+
+    BinaryTree($value) {
+        $this.Value = $value
+    }
+
+    #region IEnumerable
+    [System.Collections.IEnumerator] GetEnumerator() {
+        # 迭代器实现见 17.5.6 的代码清单 17.16
+        return @(Get-TreeItems -Tree $this).GetEnumerator()
+    }
+    #endregion IEnumerable
+
+    [object] GetValue() { return $this.Value }
+    [object[]] GetSubItems() { return $this.SubItems }
+
+    # 对应 C# 的 getter-only 自动属性 SubItems
+    [void] SetSubItems([object[]] $items) {
+        $this.SubItems = $items
+    }
+}
+
+function Get-TreeItems {
+    param([BinaryTree] $Tree)
+    $Tree.GetValue()
+    foreach ($item in $Tree.GetSubItems()) {
+        if ($null -ne $item) { Get-TreeItems -Tree $item }
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。由于 PowerShell 类不支持 C# 的属性声明，这里以存取方法表达 `Value` 与 `SubItems`。
 
 如代码清单 17.12 所示，还要为 GetEnumerator()方法提供一个实现。
 
@@ -332,7 +583,25 @@ branches 中的每一项都是一个 PairItem，指出二叉树中向下导航�
 
 代码清单 17.13　顺序生成(yield)一些 C#关键字
 
-![](img/image01282.jpeg)![](img/image01283.jpeg)
+```powershell
+class CSharpBuiltInTypes : System.Collections.IEnumerable {
+    [System.Collections.IEnumerator] GetEnumerator() {
+        # 原图用一系列 yield return 逐个生成
+        return @(
+            'object', 'byte', 'uint', 'ulong', 'float',
+            'char', 'bool', 'ushort', 'decimal', 'int',
+            'sbyte', 'short', 'long', 'void', 'double', 'string'
+        ).GetEnumerator()
+    }
+}
+
+$keywords = [CSharpBuiltInTypes]::new()
+foreach ($keyword in $keywords) {
+    Write-Output $keyword
+}
+```
+
+原图代码已改写为 PowerShell 脚本。PowerShell 没有 `yield return` 语句，等价写法是返回一个可枚举序列；`foreach` 的遍历语义与 C# 完全一致。
 
 代码清单 17.13 的结果如输出 17.5 所示。
 
@@ -362,7 +631,26 @@ GetEnumerator()在 foreach 语句（比如代码清单 17.13 的 foreach (string
 
 代码清单 17.14　使用 yield 来实现 BinaryTree<T>
 
-![](img/image01286.jpeg)
+```powershell
+class Pair : System.Collections.IEnumerable {
+    [object] $First
+    [object] $Second
+
+    Pair($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    #region IEnumerable
+    [System.Collections.IEnumerator] GetEnumerator() {
+        # 等价于两个 yield return 语句
+        return @($this.First, $this.Second).GetEnumerator()
+    }
+    #endregion IEnumerable
+}
+```
+
+原图代码已改写为 PowerShell 类定义。原图中的两个 `yield return` 由返回含两个元素的序列的枚举器表达。
 
 在代码清单 17.14 中，遍历 Pair<T>数据类型将循环迭代两次。第一次是通过 yield return First，第二次是通过 yield return Second。在 GetEnumerator()中每次遇到 yield return 语句，状态都会保存，而且执行似乎“跳出”GetEnumerator()方法的上下文并回到循环主体。第二次循环迭代开始时，GetEnumerator()从 yield return Second 语句恢复执行。
 
@@ -372,7 +660,14 @@ System.Collections.Generic.IEnumerable<T>从 System.Collections.IEnumerable 继�
 
 代码清单 17.15　通过 foreach 来使用 Pair<T>.GetEnumerator()
 
-![](img/image01287.jpeg)
+```powershell
+$fullName = [Pair]::new('Inigo', 'Montoya')
+foreach ($name in $fullName) {
+    Write-Output $name
+}
+```
+
+原图代码已改写为 PowerShell 脚本。关于 GetEnumerator()的调用在 foreach 循环中也是隐式进行的，与 C#相同。
 
 注意对 GetEnumerator()的调用在 foreach 循环中是隐式进行的。
 
@@ -382,7 +677,41 @@ System.Collections.Generic.IEnumerable<T>从 System.Collections.IEnumerable 继�
 
 代码清单 17.16　将 yield return 语句放到循环中
 
-![](img/image01288.jpeg)![](img/image01289.jpeg)
+```powershell
+class BinaryTree : System.Collections.IEnumerable {
+    [object] $Value
+    [object[]] $SubItems = @()
+
+    BinaryTree($value) {
+        $this.Value = $value
+    }
+
+    #region IEnumerable
+    [System.Collections.IEnumerator] GetEnumerator() {
+        return @(Get-TreeItems -Tree $this).GetEnumerator()
+    }
+    #endregion IEnumerable
+}
+
+function Get-TreeItems {
+    param([BinaryTree] $Tree)
+
+    # 返回本节点的元素
+    $Tree.Value
+
+    # 遍历 pair 中的每个元素
+    foreach ($subTree in $Tree.SubItems) {
+        if ($null -ne $subTree) {
+            # pair 中的每个元素也是树，故递归遍历
+            foreach ($item in Get-TreeItems -Tree $subTree) {
+                $item
+            }
+        }
+    }
+}
+```
+
+原图代码已改写为 PowerShell 脚本。PowerShell 没有 `yield return`，改为把序列写入管道；递归调用 `Get-TreeItems` 的效果等同于原图中 `foreach (T item in tree) yield return item;`。
 
 在代码清单 17.16 中，第一次循环迭代会返回二叉树的根元素。第二次循环迭代时，将遍历由两个子元素构成的一个 pair。假如子元素 pair 包含非空的值，就进入子节点并生成它的元素。注意 foreach(T item in tree)是对子节点的递归调用。
 
@@ -390,7 +719,28 @@ System.Collections.Generic.IEnumerable<T>从 System.Collections.IEnumerable 继�
 
 代码清单 17.17　将 foreach 用于 BinaryTree<string>
 
-![](img/image01290.jpeg)
+```powershell
+# JFK
+$jfkFamilyTree = [BinaryTree]::new('John Fitzgerald Kennedy')
+$jfkFamilyTree.SubItems = @(
+    [BinaryTree]::new('Joseph Patrick Kennedy'),   # 祖父（父系）
+    [BinaryTree]::new('Rose Elizabeth Fitzgerald') # 祖母（母系）
+)
+$jfkFamilyTree.SubItems[0].SubItems = @(
+    [BinaryTree]::new('Patrick Joseph Kennedy'),
+    [BinaryTree]::new('Mary Augusta Hickey')
+)
+$jfkFamilyTree.SubItems[1].SubItems = @(
+    [BinaryTree]::new('John Francis Fitzgerald'),
+    [BinaryTree]::new('Mary Josephine Hannon')
+)
+
+foreach ($name in $jfkFamilyTree) {
+    Write-Output $name
+}
+```
+
+原图代码已改写为 PowerShell 脚本。
 
 输出 17.6
 
@@ -408,7 +758,13 @@ System.Collections.Generic.IEnumerable<T>从 System.Collections.IEnumerable 继�
 
 将 Pair<T>定义成一个 struct 而不是 class，会造成一个有趣的副作用：SubItems.First 和 SubItems.Second 不能被直接赋值——即使赋值方法是 public 的。若将赋值方法修改为 public，以下代码会造成编译错误，指出 SubItems 不能被修改，“因为它不是变量”。
 
-![](img/image01293.jpeg)
+```powershell
+# 原 C# 代码（演示 struct 语义，此处会报编译错误）：
+#   jfkFamilyTree.SubItems.First =
+#       new BinaryTree<string>("Joseph Patrick Kennedy");
+# PowerShell 中没有值类型的 struct，Pair 是引用类型，
+# 因此 SubItems.First 可直接赋值，不存在"因为它不是变量"的编译错误。
+```
 
 上述代码的问题在于，SubItems 是 Pair<T>类型的属性，是一个 struct。因此，当属性返回值时，会生成 SubItems 的一个拷贝，该拷贝在语句执行完毕之后就会丢失。所以，对一个马上就要丢失的拷贝上的 First 进行赋值，显然会引起误解。幸好，C#编译器禁止这样做。
 
@@ -420,7 +776,32 @@ System.Collections.Generic.IEnumerable<T>从 System.Collections.IEnumerable 继�
 
 代码清单 17.18　用 yield break 取消迭代
 
-![](img/image01294.jpeg)
+```powershell
+class Pair : System.Collections.IEnumerable {
+    [object] $First
+    [object] $Second
+
+    Pair($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    # 对应原 GetNotNullEnumerator()：任一元素为 null 即取消迭代
+    [System.Collections.IEnumerable] GetNotNullEnumerator() {
+        if ($null -eq $this.First -or $null -eq $this.Second) {
+            # 等价于 yield break：立即终止，不产生值
+            return [object[]]@()
+        }
+        return [object[]]@($this.Second, $this.First)
+    }
+
+    [System.Collections.IEnumerator] GetEnumerator() {
+        return @($this.First, $this.Second).GetEnumerator()
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。`yield break` 以返回空序列表达，两个元素任一为 null 时迭代器立即取消。
 
 上述代码中，Pair<T>类中的任何一个元素为 null，都会取消迭代。
 
@@ -432,7 +813,55 @@ C#编译器遇到一个迭代器时，会根据枚举数模式将代码展开成
 
 代码清单 17.19　与迭代器的 CIL 代码等价的 C#代码
 
-![](img/image01295.jpeg)![](img/image01296.jpeg)
+```powershell
+enum PairItem {
+    First
+    Second
+}
+
+# 展开后的迭代器：手动实现枚举数模式（Current + MoveNext）
+class PairEnumerator : System.Collections.IEnumerator {
+    [object] $First
+    [object] $Second
+    [int]    $state = 0
+    [object] $Current
+
+    PairEnumerator($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    [bool] MoveNext() {
+        switch ($this.state) {
+            0 { $this.Current = $this.First;  $this.state = 1; return $true }
+            1 { $this.Current = $this.Second; $this.state = 2; return $true }
+        }
+        $this.state = -1
+        return $false
+    }
+
+    [void] Reset() {
+        throw [System.NotSupportedException]::new()
+    }
+}
+
+class Pair : System.Collections.IEnumerable {
+    [object] $First
+    [object] $Second
+
+    Pair($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    [System.Collections.IEnumerator] GetEnumerator() {
+        # 相当于 C# 编译器生成的嵌套枚举数类的实例化
+        return [PairEnumerator]::new($this.First, $this.Second)
+    }
+}
+```
+
+原图代码已改写为 PowerShell 类定义。原图展示了 C# 编译器把 `yield return` 展开成状态机后的等价代码（含 `Current` 属性和 `MoveNext()` 方法、`yield break` 对应返回 `$false`）；此处以手写枚举数类 `PairEnumerator` 表达同一结构。
 
 因为编译器拿掉了 yield return 语句，而且生成的类和手工编写的类基本一致，所以 C#迭代器的性能与手工实现枚举数模式一致。虽然性能没有提升，但开发效率显著提高了。
 
@@ -450,7 +879,33 @@ C#编译器遇到一个迭代器时，会根据枚举数模式将代码展开成
 
 代码清单 17.20　在返回 IEnumerable<T>的方法中使用 yield return
 
-![](img/image01297.jpeg)
+```powershell
+class Pair : System.Collections.IEnumerable {
+    [object] $First
+    [object] $Second
+
+    Pair($first, $second) {
+        $this.First  = $first
+        $this.Second = $second
+    }
+
+    # 返回的是可枚举序列，而不是枚举数
+    [System.Collections.IEnumerable] GetReverseEnumerator() {
+        return [object[]]@($this.Second, $this.First)
+    }
+
+    [System.Collections.IEnumerator] GetEnumerator() {
+        return @($this.First, $this.Second).GetEnumerator()
+    }
+}
+
+$game = [Pair]::new('Redskins', 'Eagles')
+foreach ($name in $game.GetReverseEnumerator()) {
+    Write-Output $name
+}
+```
+
+原图代码已改写为 PowerShell 脚本。注意返回的是可枚举集合（等同于 `IEnumerable<T>`），而不是枚举数（`IEnumerator<T>`）。
 
 注意返回的是 IEnumerable<T>，而不是 IEnumerator<T>。这有别于 IEnumerable<T>.GetEnumerator()，后者返回的是 IEnumerator<T>。Main()中的代码演示了如何使用 foreach 循环来调用 GetReverseEnumerator()。
 

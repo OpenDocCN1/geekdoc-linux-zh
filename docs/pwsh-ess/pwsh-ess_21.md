@@ -104,18 +104,19 @@ class CommandLineInfo {
 # 将命令行选项与属性名匹配，并在运行时动态赋值
 class CommandLineHandler {
 
-    static [void] Parse([string[]] $args, [object] $commandLine) {
+    static [void] Parse([string[]] $commandLineArgs, [object] $commandLine) {
         $errorMessage = $null
-        if (-not [CommandLineHandler]::TryParse($args, $commandLine, [ref] $errorMessage)) {
+        if (-not [CommandLineHandler]::TryParse(
+            $commandLineArgs, $commandLine, [ref] $errorMessage)) {
             throw [System.InvalidOperationException]::new($errorMessage)
         }
     }
 
-    static [bool] TryParse([string[]] $args, [object] $commandLine,
-        [ref] [string] $errorMessage) {
+    static [bool] TryParse([string[]] $commandLineArgs, [object] $commandLine,
+        [ref] $errorMessage) {
         $success = $false
         $errorMessage.Value = $null
-        foreach ($arg in $args) {
+        foreach ($arg in $commandLineArgs) {
             if ($arg[0] -eq '/' -or $arg[0] -eq '-') {
                 # 去除选项前的斜杠/短横线
                 $optionParts = $arg -split ':', 2
@@ -176,8 +177,10 @@ Compress.exe /Out:<filename> /Help
 }
 
 $commandLine = [CommandLineInfo]::new()
+$commandLineArgs = [string[]]@('/Out:foo.txt', '/Help', '/Priority:High')
 $errorMessage = $null
-if (-not [CommandLineHandler]::TryParse($args, $commandLine, [ref] $errorMessage)) {
+if (-not [CommandLineHandler]::TryParse(
+    $commandLineArgs, $commandLine, [ref] $errorMessage)) {
     Write-Host $errorMessage
     [CommandLineHandler]::DisplayHelp()
 }
@@ -190,7 +193,7 @@ elseif ($commandLine.Priority -ne [ProcessPriorityClass]::Normal) {
 }
 ```
 
-PowerShell 类中的成员在脚本内可见，可近似对应原例中嵌套在 `Program` 中的 private 类。反射的 `GetProperty()`/`SetValue()` 依然可以访问它，这正是本节要演示的行为。
+注：PowerShell 类方法中不能使用名为 `$args` 的参数——它会被解析为自动变量，导致实参数组“丢失”。因此这里将形参命名为 `$commandLineArgs`，并在调用侧显式赋值。
 
 虽然程序很长，但代码结构是相当简单的。Main()首先实例化一个 CommandLineInfo 类。这个类型专门用来包含当前程序的命令行数据。每个属性都对应程序的一个命令行选项，具体的命令行如输出 18.2 所示。
 
@@ -219,13 +222,17 @@ CLR 2.0 引入泛型类型后也带来了更多的反射功能。在泛型类型
 代码清单 18.4　声明 Stack<T>类
 
 ```powershell
-class Stack<T> {
-    [void] Add([T] $i) {
-        $t = [T]     # 等价于 C# 中的 typeof(T)
+class Stack {
+    [void] Add([object] $i) {
+        # PowerShell 脚本类不支持泛型类型参数（class Stack<T>），
+        # 因此改为在运行时获取实参的 Type 对象
+        $t = $i.GetType()
         # ...
     }
 }
 ```
+
+PowerShell 的脚本类不能声明泛型类型参数；这里的 `$i.GetType()` 对应原例中的 `typeof(T)`，二者都得到运行时的 `System.Type` 实例。
 
 获得类型参数的 Type 对象实例以后，就可在类型参数上执行反射，从而判断它的行为，并针对具体类型来调整 Add 方法，使其能更有效地支持这种类型。
 
@@ -302,26 +309,30 @@ using namespace System.ComponentModel
 class Person : System.ComponentModel.INotifyPropertyChanged {
     [System.ComponentModel.PropertyChangedEventHandler] $PropertyChanged
 
-    Person([string] $name) { $this.Name = $name }
+    Person([string] $name) { $this.SetName($name) }
 
     hidden [string] $_Name = [string]::Empty
 
-    [string] Name {
-        get { return $this._Name }
-        set {
-            if ($this._Name -ne $value) {
-                $this._Name = $value
-                # 使用 C# 6.0 的条件空引用等价写法
-                if ($null -ne $this.PropertyChanged) {
-                    $this.PropertyChanged.Invoke(
-                        $this,
-                        [System.ComponentModel.PropertyChangedEventArgs]::new('Name'))
-                }
+    # PowerShell 脚本类不支持 get/set 访问器语法，
+    # 因此用一对方法表达原来的 Name 属性
+    [string] GetName() {
+        return $this._Name
+    }
+
+    [void] SetName([string] $value) {
+        if ($this._Name -ne $value) {
+            $this._Name = $value
+            if ($null -ne $this.PropertyChanged) {
+                $this.PropertyChanged.Invoke(
+                    $this,
+                    [System.ComponentModel.PropertyChangedEventArgs]::new('Name'))
             }
         }
     }
 }
 ```
+
+PowerShell 的脚本类不支持 C# 风格的属性访问器（`get`/`set` 块），所以这里改用 `GetName()`/`SetName()` 方法对；条件空引用 `?.` 也改写为显式空值判断。
 
 PowerShell 没有 `nameof` 运算符，原代码 `nameof(Name)` 生成常量字符串 `"Name"`，此处直接传入同一字符串。
 
@@ -339,16 +350,18 @@ PowerShell 没有 `nameof` 运算符，原代码 `nameof(Name)` 生成常量字�
 
 ```powershell
 class CommandLineInfo {
-    [CommandLineSwitchAlias('?')]
+    # [CommandLineSwitchAlias("?")]
     [bool] $Help
 
-    [CommandLineSwitchRequired]
+    # [CommandLineSwitchRequired]
     [string] $Out
 
     [System.Diagnostics.ProcessPriorityClass] $Priority =
         [System.Diagnostics.ProcessPriorityClass]::Normal
 }
 ```
+
+PowerShell 的脚本类只支持编译期已知的 .NET 特性（如 `[System.Obsolete('...')]`），且每个成员最多一个，无法像 C# 那样自由地给成员加自定义特性。这里保留 C# 的原始写法作为注释，用来说明特性要加在哪个成员上。下文讲到“查找特性”时，特征查找代码仍按 C# 语义给出，便于对照。
 
 在代码清单 18.8 中，Help 和 Out 属性均用特性进行了修饰。这些特性的目的是允许使用别名/?来取代/Help，以及指出/Out 是必需的参数。思路是从 CommandLineHandler.TryParse()方法中启用对选项别名的支持。另外，如解析成功，可检查是否指定了所有必需的开关。
 
@@ -357,15 +370,22 @@ class CommandLineInfo {
 代码清单 18.9　用多个特性来修饰一个属性
 
 ```powershell
-# 每个特性各占一对方括号
-[CommandLineSwitchRequired]
-[CommandLineSwitchAlias('FileName')]
-[string] $Out
+# C# 语法（两个特性修饰同一个属性）：
+#   [CommandLineSwitchRequired]
+#   [CommandLineSwitchAlias("FileName")]
+#   public string? Out { get; set; }
+#
+# 或写在同一对方括号中：
+#   [CommandLineSwitchRequired, CommandLineSwitchAlias("FileName")]
+#   public string? Out { get; set; }
 
-# 多个特性放在同一对方括号中，以逗号分隔
-[CommandLineSwitchRequired, CommandLineSwitchAlias('FileName')]
+# PowerShell 脚本类的每个成员最多只能带一个 .NET 特性，
+# 无法复现一个成员挂多个自定义特性的写法。
+[System.ComponentModel.DataAnnotations.Required]
 [string] $Out
 ```
+
+上例用编译期已知的 `RequiredAttribute` 演示“用特性标记成员”；PowerShell 不支持给同一成员叠加多个特性，这一点与原书示例不同。
 
 除了修饰属性，特性还可修饰程序集、类、构造函数、委托、枚举、事件、字段、泛型参数、接口、方法、模块、参数、返回值和结构。大多数构造都可以像代码清单 18.9 那样使用方括号语法来应用特性。但该语法不适用于返回值、程序集和模块。
 
@@ -374,42 +394,26 @@ class CommandLineInfo {
 代码清单 18.10　AssemblyInfo.cs 中保存的程序集特性
 
 ```powershell
-using namespace System.Reflection
-using namespace System.Runtime.CompilerServices
-using namespace System.Runtime.InteropServices
-
-# 程序集的常规信息由以下特性控制。
-# 修改这些特性值即可修改与程序集关联的信息。
-[assembly: AssemblyTitle('CompressionLibrary')]
-[assembly: AssemblyDescription('')]
-[assembly: AssemblyConfiguration('')]
-[assembly: AssemblyCompany('IntelliTect')]
-[assembly: AssemblyProduct('CompressionLibrary')]
-[assembly: AssemblyCopyright('Copyright © IntelliTect 2020')]
-[assembly: AssemblyTrademark('')]
-[assembly: AssemblyCulture('')]
-
-# 将 ComVisible 设为 false 可使此程序集中的类型对 COM 组件不可见。
-# 如需从 COM 访问此程序集中的某个类型，请将该类型上的
-# ComVisible 特性设为 true。
-[assembly: ComVisible($false)]
-
-# 以下 GUID 用于类型库的 ID（如果此项目对 COM 公开）。
-[assembly: Guid('417a9609-24ae-4323-b1d6-cef0f87a42c3')]
-
-# 程序集的版本信息由以下四个值构成：
-#
-#       主版本
-#       次版本
-#       生成号
-#       修订号
-#
-# 可以指定所有值，也可以使用 '*' 默认生成号和修订号：
-# [assembly: AssemblyVersion('1.0.*')]
-[assembly: AssemblyFileVersion('1.0.0.0')]
+# 在 PowerShell 中，程序集级特性的等价物是模块清单（.psd1）。
+# 下面取自 .psd1 清单文件，提供与 AssemblyInfo.cs 相同的信息。
+@{
+    RootModule          = 'CompressionLibrary.psm1'
+    ModuleVersion       = '1.0.0.0'
+    GUID                = '417a9609-24ae-4323-b1d6-cef0f87a42c3'
+    Author              = 'IntelliTect'
+    CompanyName         = 'IntelliTect'
+    Copyright           = 'Copyright © IntelliTect 2020'
+    Description         = 'Compression library'
+    # 二进制文件的版本信息
+    PrivateData         = @{
+        PSData = @{
+            # 如果不指定外部版本，项目文件中的 Version 也会用到它
+        }
+    }
+}
 ```
 
-PowerShell 脚本编译为程序集的方式与 C# 项目不同，`[assembly: ...]` 特性在 C# 的 AssemblyInfo.cs 中使用；在 PowerShell 中同样的元数据通常通过模块清单（`.psd1`）指定。此处保留原代码结构以说明程序集特性的写法。
+C# 的 `[assembly: ...]` 特性是编译器指令，PowerShell 中没有对应语法。PowerShell 模块用 `.psd1` 清单文件承载同样的元数据（作者、公司、版本、GUID 等）。
 
 assembly 特性定义类似公司、产品和程序集版本号的事物。类似地，作用于模块的特性需使用 module:前缀。assembly 和 module 特性的限制是它们必须位于 using 指令之后，任何命名空间或类声明之前。代码清单 18.10 的特性由 Visual Studio 项目向导生成，所有项目都应包括，以便使用与可执行文件或 DLL 的内容有关的信息来标记生成的二进制文件。
 
@@ -418,13 +422,19 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 代码清单 18.11　指定 return 特性
 
 ```powershell
-[return: System.ComponentModel.Description(
-    'Returns true if the object is in a valid state.')]
-[bool] IsValid() {
-    # ...
-    return $true
+class Program {
+    # PowerShell 脚本类不支持 return: 目标前缀，
+    # 特性只能加在方法本身（而非返回值）上
+    [System.ComponentModel.Description(
+        'Returns true if the object is in a valid state.')]
+    [bool] IsValid() {
+        # ...
+        return $true
+    }
 }
 ```
+
+`[return: ...]` 这种指定特性目标的前缀在 PowerShell 中不可用；需要描述返回值时，这里把 `DescriptionAttribute` 施加在方法上作为近似表达。
 
 除了 assembly:和 return:，C#还允许显式指定 module:、class:和 method:等目标，分别对应于修饰模块、类和方法的特性。但正如前面展示的那样，class:和 method:是可选的。
 
@@ -528,10 +538,14 @@ class CommandLineSwitchAliasAttribute : System.Attribute {
 
 ```powershell
 class CommandLineInfo {
-    [CommandLineSwitchAlias('?')]
+    # PowerShell 无法在同一脚本中把自定义脚本类作为成员特性使用。
+    # C# 原例的等价意图是：
+    # [CommandLineSwitchAlias('?')]
     [bool] $Help
 }
 ```
+
+自定义特性类本身仍可用反射实例化；但要在 PowerShell 类定义中使用它，必须先从已编译程序集加载特性类型，再在解析类定义前使用。
 
 支持该功能需为特性提供一个构造函数。具体地说，针对别名，需提供构造函数来获取一个 string 参数。类似地，如希望允许多个别名，构造函数要获取 params string 数组作为参数。
 
@@ -592,16 +606,20 @@ class CommandLineSwitchAliasAttribute : System.Attribute {
 ```powershell
 using namespace System.Reflection
 
+# 说明：CommandLineSwitchAliasAttribute 是 PowerShell 脚本类，
+# 无法在另一脚本类的方法体里作为类型字面量引用，
+# 这里按 C# 语义给出等价实现，实际使用时需先把特性类放入已编译程序集。
+
 class CommandLineHandler {
 
-    static [bool] TryParse([string[]] $args, [object] $commandLine,
-        [ref] [string] $errorMessage) {
+    static [bool] TryParse([string[]] $commandLineArgs, [object] $commandLine,
+        [ref] $errorMessage) {
 
         $success = $false
         $errorMessage.Value = $null
-        $options = [CommandLineSwitchAliasAttribute]::GetSwitches($commandLine)
+        $options = GetSwitches($commandLine)
 
-        foreach ($arg in $args) {
+        foreach ($arg in $commandLineArgs) {
             if ($arg[0] -eq '/' -or $arg[0] -eq '-') {
                 $optionParts = $arg -split ':', 2
                 $option = $optionParts[0].Remove(0, 1).ToLower()
@@ -621,7 +639,7 @@ class CommandLineHandler {
     }
 
     static [bool] SetOption([object] $commandLine, [PropertyInfo] $property,
-        [string[]] $optionParts, [ref] [string] $errorMessage) {
+        [string[]] $optionParts, [ref] $errorMessage) {
 
         $success = $false
         if ($property.PropertyType -eq [bool]) {
@@ -680,7 +698,18 @@ class CommandLineSwitchAliasAttribute : System.Attribute {
 
 代码清单 18.20　AttributeUsageAttribute 限制了能应用特性的目标
 
-![](img/image01335.jpeg)
+```powershell
+# 错误示例：AttributeUsage 将特性限制为只能修饰属性。
+# C# 原例会在编译期产生错误 CS0592：
+#   [CommandLineSwitchAlias('?')]
+#   class CommandLineInfo { }
+#
+# PowerShell 不会像 Roslyn 那样在编译期校验特性目标；
+# 而且脚本类无法直接把尚未编译的自定义特性作为目标使用，
+# 下文输出 18.6 展示的是 C# 编译器的行为。
+```
+
+PowerShell 不会像 Roslyn 那样在编译期校验特性目标，同样的“误用”在这里不会报错；`AttributeUsageAttribute` 中的限制仍会作为元数据保留。
 
 输出 18.6
 
@@ -690,7 +719,12 @@ AttributeUsageAttribute 的构造函数获取一个 AttributesTargets 标志（f
 
 代码清单 18.21　使用 AttributeUsageAttribute 限制特性的使用
 
-![](img/image01337.jpeg)
+```powershell
+[System.AttributeUsage([System.AttributeTargets]::Field -bor
+    [System.AttributeTargets]::Property)]
+class CommandLineSwitchAliasAttribute : System.Attribute {
+}
+```
 
 ![](img/image00300.jpeg)设计规范
 
@@ -702,7 +736,11 @@ AttributeUsageAttribute 除了能限制特性所修饰的目标，还可指定�
 
 代码清单 18.22　使用具名参数
 
-![](img/image01338.jpeg)
+```powershell
+[System.AttributeUsage([System.AttributeTargets]::Property, AllowMultiple = $true)]
+class CommandLineSwitchAliasAttribute : System.Attribute {
+}
+```
 
 该语法有别于之前讨论的构造函数初始化语法。AllowMultiple 是具名参数 （named parameter），它类似于 C# 4.0 为可选方法参数引入的“具名参数”语法。具名参数在特性构造函数调用中设置特定的公共属性和字段——即使构造函数不包括对应参数。具名参数虽然可选，但它允许设置特性的额外实例数据，同时无须提供对应的构造函数参数。在本例中，AttributeUsageAttribute 包含一个名为 AllowMultiple 的公共成员。所以在使用特性时，可通过一次具名参数赋值来设置该成员。对具名参数的赋值只能放到构造函数的最后一部分进行。任何显式声明的构造函数参数都必须在它之前完成赋值。
 
@@ -714,7 +752,27 @@ AttributeUsageAttribute 除了能限制特性所修饰的目标，还可指定�
 
 代码清单 18.23　使用 FlagsAttribute
 
-![](img/image01339.jpeg)![](img/image01340.jpeg)
+```powershell
+# FileAttributes 在 System.IO 中定义
+[System.Flags()]     # 用 FlagsAttribute 修饰枚举
+enum FileAttributes {
+    ReadOnly = 1     # 000000000000001
+    Hidden   = 2     # 000000000000010
+    # ...
+}
+
+$fileName = 'enumtest.txt'
+$file = [System.IO.FileInfo]::new($fileName)
+$file.Attributes = [System.IO.FileAttributes]'Hidden, ReadOnly'
+
+Write-Host ('"{0}" outputs as "{1}"' -f
+    $file.Attributes.ToString().Replace(', ', ' | '),
+    $file.Attributes)
+
+$attributes = [System.IO.FileAttributes][Enum]::Parse(
+    [System.IO.FileAttributes], $file.Attributes.ToString())
+Write-Host $attributes
+```
 
 输出 18.7 展示了代码清单 18.23 的结果。
 
@@ -740,7 +798,34 @@ AttributeUsageAttribute 是预定义特性。这种特性不仅提供了与它�
 
 代码清单 18.24　使用 System.ConditionalAttribute 清除调用
 
-![](img/image01342.jpeg)![](img/image01343.jpeg)
+```powershell
+# C# 中的 #define CONDITION_A 在 PowerShell 中没有等价物：
+# 仅 CONDITION_A 被定义，CONDITION_B 未定义。
+using namespace System.Diagnostics
+
+class Program {
+    static [void] Main() {
+        Write-Host 'Begin...'
+        [Program]::MethodA()
+        [Program]::MethodB()
+        Write-Host 'End...'
+    }
+
+    [Conditional('CONDITION_A')]
+    static [void] MethodA() {
+        Write-Host 'MethodA() executing...'
+    }
+
+    [Conditional('CONDITION_B')]
+    static [void] MethodB() {
+        Write-Host 'MethodB() executing...'
+    }
+}
+
+[Program]::Main()
+```
+
+PowerShell 不是 C# 编译器，`ConditionalAttribute` 在这里只会作为元数据被记录，不会像 Roslyn 那样在调用点移除调用；上面的代码仍会执行 `MethodB()`。原例所展示的“依预处理器标识符清除调用”的行为是 C# 编译器特有的。
 
 输出 18.8
 
@@ -762,7 +847,19 @@ C#编译器在编译时会注意到被调用方法上的特性设置，假定预
 
 代码清单 18.25　使用 ObsoleteAttribute
 
-![](img/image01345.jpeg)
+```powershell
+class Program {
+    static [void] Main() {
+        [Program]::ObsoleteMethod()
+    }
+
+    [System.Obsolete('Use NewMethod instead')]
+    static [void] ObsoleteMethod() {
+    }
+}
+```
+
+PowerShell 允许在脚本类成员上使用 `ObsoleteAttribute`（必须写成带参数的 `[System.Obsolete('...')]`），但它只作为元数据保存；PowerShell 不会像 Roslyn 那样在调用点产生编译警告。
 
 输出 18.9
 
@@ -794,7 +891,22 @@ ObsoleteAttribute 允许第三方向开发者通知已过时的 API。警告（�
 
 代码清单 18.26　使用“反射”的动态编程
 
-![](img/image01347.jpeg)![](img/image01348.jpeg)
+```powershell
+$data = 'Hello! My name is Inigo Montoya'
+Write-Host $data
+$data = [double]$data.Length
+$data = $data * 3.5 + 28.6
+if ($data -eq 2.4 + 112 + 26.2) {
+    Write-Host "$data makes for a long triathlon."
+}
+else {
+    # $data.NonExistentMethodCallStillCompiles()  -- 语法上始终可以写，
+    # 失败会在执行时才发生
+}
+# ...
+```
+
+PowerShell 的变量天然是动态类型，等价于 C# 的 `dynamic`。成员是否存在同样要到运行时才验证，调用不存在的方法会抛出 `MethodNotFound` 错误。
 
 注①：铁人三项赛游泳、自行车和跑步部分的距离（以英里为单位）。
 
@@ -864,13 +976,37 @@ ILDASM 揭示出在 CIL 中，dynamic 类型实际是一个 System.Object。事�
 
 代码清单 18.27　不用 dynamic 在运行时绑定到 XML 元素
 
-![](img/image01350.jpeg)
+```powershell
+using namespace System.Xml.Linq
+
+# ...
+$person = [System.Xml.Linq.XElement]::Parse(@'
+<Person>
+  <FirstName>Inigo</FirstName>
+  <LastName>Montoya</LastName>
+</Person>
+'@)
+
+Write-Host ('{0} {1}' -f
+    $person.Descendants('FirstName').FirstOrDefault().Value,
+    $person.Descendants('LastName').FirstOrDefault().Value)
+```
 
 虽然代码清单 18.27 的代码看起来并不复杂，但和代码清单 18.28 相比就显得比较“难看”了。代码清单 18.28 使用动态类型的对象来达到和代码清单 18.27 一样的目的。
 
 代码清单 18.28　使用 dynamic 在运行时绑定到 XML 元素
 
-![](img/image01351.jpeg)
+```powershell
+# 使用下文代码清单 18.29 的 DynamicXml（对应原书 Listing 13.32）：
+$person = [DynamicXml]::Parse(@'
+<Person>
+  <FirstName>Inigo</FirstName>
+  <LastName>Montoya</LastName>
+</Person>
+'@)
+
+Write-Host "$($person.FirstName) $($person.LastName)"
+```
 
 优势是明显的，但这是不是说动态编程优于静态编译呢？
 
@@ -898,7 +1034,60 @@ ILDASM 揭示出在 CIL 中，dynamic 类型实际是一个 System.Object。事�
 
 代码清单 18.29　实现自定义动态对象
 
-![](img/image01352.jpeg)![](img/image01353.jpeg)
+```powershell
+using namespace System.Dynamic
+using namespace System.Xml.Linq
+
+class DynamicXml : System.Dynamic.DynamicObject {
+
+    hidden [System.Xml.Linq.XElement] $Element
+
+    DynamicXml([System.Xml.Linq.XElement] $element) {
+        $this.Element = $element
+    }
+
+    static [DynamicXml] Parse([string] $text) {
+        return [DynamicXml]::new([System.Xml.Linq.XElement]::Parse($text))
+    }
+
+    [bool] TryGetMember([System.Dynamic.GetMemberBinder] $binder,
+        [ref] $result) {
+
+        $success = $false
+        $result.Value = $null
+
+        $firstDescendant = $this.Element.Descendants($binder.Name).FirstOrDefault()
+        if ($null -ne $firstDescendant) {
+            if ($firstDescendant.Descendants().Any()) {
+                $result.Value = [DynamicXml]::new($firstDescendant)
+            }
+            else {
+                $result.Value = $firstDescendant.Value
+            }
+            $success = $true
+        }
+        return $success
+    }
+
+    [bool] TrySetMember([System.Dynamic.SetMemberBinder] $binder, [object] $value) {
+        $success = $false
+
+        $firstDescendant = $this.Element.Descendants($binder.Name).FirstOrDefault()
+        if ($null -ne $firstDescendant) {
+            if ($value -is [System.Xml.Linq.XElement]) {
+                $firstDescendant.ReplaceWith($value)
+            }
+            else {
+                $firstDescendant.Value = $value.ToString()
+            }
+            $success = $true
+        }
+        return $success
+    }
+}
+```
+
+`TryGetMember()`/`TrySetMember()` 的 `out` 参数在 PowerShell 中写作 `[ref]` 参数，通过 `$result.Value` 赋值；返回 `$false` 时“运行时”在调用点抛出与 C# 相同的绑定异常。
 
 本例要实现的核心动态方法是 TryGetMember()和 TrySetMember()（假定还要对元素进行赋值）。实现这两个方法就可支持对动态取值和赋值属性的调用。实现起来还相当简单。首先检查包含的 XElement，查找和 binder.Name（要调用的成员名称）同名的一个元素。如存在一个对应的 XML 元素，就取回（或设置）值。如果元素存在，则返回值设为 true，否则设为 false。如返回值为 false，会立即导致“运行时”在进行动态成员调用的调用点处抛出一个 Microsoft.CSharp.RuntimeBinder.RuntimeBinderException。
 
@@ -906,7 +1095,81 @@ ILDASM 揭示出在 CIL 中，dynamic 类型实际是一个 System.Object。事�
 
 代码清单 18.30　System.Dynamic.DynamicObject 的可重写成员
 
-![](img/image01354.jpeg)![](img/image01355.jpeg)
+```powershell
+using namespace System.Dynamic
+
+class DynamicObject : System.Dynamic.IDynamicMetaObjectProvider {
+
+    DynamicObject() { }
+
+    [System.Collections.Generic.IEnumerable[string]] GetDynamicMemberNames() {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [System.Dynamic.DynamicMetaObject] GetMetaObject(
+        [System.Linq.Expressions.Expression] $parameter) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryBinaryOperation([System.Dynamic.BinaryOperationBinder] $binder,
+        [object] $arg, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryConvert([System.Dynamic.ConvertBinder] $binder, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryCreateInstance([System.Dynamic.CreateInstanceBinder] $binder,
+        [object[]] $arguments, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryDeleteIndex([System.Dynamic.DeleteIndexBinder] $binder,
+        [object[]] $indexes) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryDeleteMember([System.Dynamic.DeleteMemberBinder] $binder) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryGetIndex([System.Dynamic.GetIndexBinder] $binder,
+        [object[]] $indexes, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryGetMember([System.Dynamic.GetMemberBinder] $binder, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryInvoke([System.Dynamic.InvokeBinder] $binder,
+        [object[]] $arguments, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryInvokeMember([System.Dynamic.InvokeMemberBinder] $binder,
+        [object[]] $arguments, [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TrySetIndex([System.Dynamic.SetIndexBinder] $binder,
+        [object[]] $indexes, [object] $value) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TrySetMember([System.Dynamic.SetMemberBinder] $binder, [object] $value) {
+        throw [System.NotImplementedException]::new()
+    }
+
+    [bool] TryUnaryOperation([System.Dynamic.UnaryOperationBinder] $binder,
+        [ref] $result) {
+        throw [System.NotImplementedException]::new()
+    }
+}
+```
+
+上述签名对应 `System.Dynamic.DynamicObject` 的全部可重写虚成员。在实际使用中，自定义类型直接从 `System.Dynamic.DynamicObject` 派生并只重写需要的方法即可，无须自己声明这些成员。
 
 如代码清单 18.30 所示，几乎一切都有对应的成员实现——从转型和各种运算，一直到索引调用。此外，还有一个 GetDynamicMemberNames()方法用于获取所有可能的成员名。
 

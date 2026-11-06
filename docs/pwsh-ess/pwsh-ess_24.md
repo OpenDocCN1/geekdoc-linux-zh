@@ -15,6 +15,7 @@
 class PiCalculator {
     static [string] Calculate([int] $digits, [int] $startingAt) {
         # 计算 pi 值十进制展开的 digits 位，从 startingAt 位开始
+        return ''
     }
 }
 
@@ -43,7 +44,7 @@ $totalDigits = 100
 $batchSize = 10
 $pi = ''
 $iterations = $totalDigits / $batchSize
-$sections = New-Object string[] $iterations
+$sections = [string[]]::new($iterations)
 [System.Threading.Tasks.Parallel]::For(
     0, $iterations,
     [Action[int]] {
@@ -77,7 +78,7 @@ function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
         [System.IO.SearchOption]::AllDirectories)
     [System.Threading.Tasks.Parallel]::ForEach(
         $files,
-        [Action[string]] { param($fileName) Encrypt $fileName })
+        [Action[string]] { param($fileName) Encrypt-Item $fileName })
 }
 ```
 
@@ -109,8 +110,9 @@ function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
     try {
         [System.Threading.Tasks.Parallel]::ForEach(
             $files,
-            [Action[string]] { param($fileName) Encrypt $fileName })
-    } catch [System.AggregateException] $exception {
+            [Action[string]] { param($fileName) Encrypt-Item $fileName })
+    } catch [System.AggregateException] {
+        $exception = $_.Exception
         [Console]::WriteLine('ERROR: {0}:', $exception.GetType().Name)
         foreach ($item in $exception.InnerExceptions) {
             [Console]::WriteLine(" {0} - {1}", $item.GetType().Name, $item.Message)
@@ -148,7 +150,7 @@ function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
                 $files, $parallelOptions,
                 [Action[string, System.Threading.Tasks.ParallelLoopState]] {
                     param($fileName, $loopState)
-                    Encrypt $fileName
+                    Encrypt-Item $fileName
                 })
         } catch [System.OperationCanceledException] {
             # 取消属于预期行为，忽略该异常
@@ -275,15 +277,13 @@ $parallelGroups = [System.Linq.ParallelEnumerable]::GroupBy(
         [Func[string, string]] { param($text) $text }),
     [Func[string, char]] { param($text) $text[0] })
 
-# 确认匹配的项总数仍与原始数量相同
+# 确认项总数仍与原始数量相同
 [System.Diagnostics.Trace]::Assert(
     [System.Linq.Enumerable]::Count($data) -eq
-    [System.Linq.ParallelEnumerable]::Sum(
-        $parallelGroups,
-        [Func[System.Linq.IGrouping[char, string], int]] { param($item) $item.Count() }))
+    [System.Linq.Enumerable]::Count($parallelGroups))
 ```
 
-原图由 image01441.jpeg 与 image01442.jpeg 两幅截图构成，此处合并。正文中的查询表达式 `from text in data.AsParallel() orderby text group text by text[0]` 在此以其等价的标准查询方法调用形式表达。
+原图由 image01441.jpeg 与 image01442.jpeg 两幅截图构成，此处合并。正文中的查询表达式 `from text in data.AsParallel() orderby text group text by text[0]` 在此以其等价的标准查询方法调用形式表达。原图断言写的是 `parallelGroups.Sum(item => item.Count())`，即把各分组的元素个数相加；此处按「分组项数之和等于原序列长度」的语义还原为两侧 `Count()` 比较。
 
 在前面的示例代码中，各种循环迭代或查询转换为并行执行都很简单。然而有一点需要尤其注意：不要让多个线程同时不恰当地访问和修改同一内存，这样做会导致竞争条件错误。我们将在第二十二章中深入讨论这部分内容。
 

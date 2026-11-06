@@ -94,7 +94,21 @@ dotnet run
 
 输出 1.1
 
-![](img/image00320.jpeg)
+```powershell
+PS> New-Item -ItemType Directory -Path ./HelloWorld
+PS> Set-Location ./HelloWorld/
+PS> dotnet new console
+The template "Console Application" was created successfully.
+
+Processing post-creation actions...
+Restore succeeded.
+PS> dotnet run
+Hello World!
+PS> dotnet run
+Hello. My name is Inigo Montoya.
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 使用 Visual Studio 2019
 
@@ -122,7 +136,12 @@ dotnet run
 
 输出 1.2
 
-![](img/image00322.jpeg)
+```powershell
+Hello. My name is Inigo Montoya.
+Press any key to close this window . . .
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 调试
 
@@ -513,7 +532,14 @@ Write-Output $miracleMax
 
 输出 1.3
 
-![](img/image00340.jpeg)
+```powershell
+PS> dotnet run
+Have fun storming the castle!
+Think it will work?
+It would take a miracle.
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 本例列出了 dotnet run 命令，以后会省略，除非要附加额外参数来指定程序的运行方式。
 
@@ -599,7 +625,15 @@ Write-Output "Your full name is $firstName $lastName."
 
 输出 1.5
 
-![](img/image00346.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+
+Your full name is Inigo Montoya.
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 代码清单 1.16 不是先用 Write 语句输出"Your full name is"，再用 Write 语句输出 firstName，用第三条 Write 语句输出空格，最后用 WriteLine 语句输出 lastName。相反，是用 C# 6.0 的字符串插值功能一次性输出。字符串中的大括号被解释成表达式。编译器会求值这些表达式，转换成字符串并插入当前位置。不需要单独执行多个代码段并将结果整合成字符串，该技术允许一个步骤完成全部操作，从而增强了代码的可读性。
 
@@ -621,11 +655,22 @@ Write-Output ("Your full name is {0} {1}." -f $firstName, $lastName)
 
 代码清单 1.18　交换索引占位符和对应的变量
 
-![](img/image00348.jpeg)
+```powershell
+Write-Output ("Your full name is {1}, {0}" -f $firstName, $lastName)
+```
+
+原图中的 C# 代码清单已改写为 PowerShell 脚本。
 
 输出 1.6
 
-![](img/image00349.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+Your full name is Montoya, Inigo
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 占位符除了能在格式字符串中按任意顺序出现，同一占位符还能在一个格式字符串中多次使用。另外，也可省略占位符。但每个占位符都必须有对应的实参。
 
@@ -637,11 +682,36 @@ Write-Output ("Your full name is {0} {1}." -f $firstName, $lastName)
 
 代码清单 1.19　为代码添加注释
 
-![](img/image00301.jpeg)
+```powershell
+$firstName = $null # Variable for storing the first name
+$lastName = $null  # Variable for storing the last name
+
+Write-Output 'Hey you!'
+Write-Host <# No new line #> -NoNewline 'Enter your first name: '
+$firstName = Read-Host
+
+Write-Host <# No new line #> -NoNewline 'Enter your last name: '
+$lastName = Read-Host
+
+<# Display a greeting to the console
+   using composite formatting. #>
+Write-Output ("Your full name is {0} {1}." -f $firstName, $lastName)
+# This is the end of the program listing
+```
+
+原图中的 C# 代码清单已改写为 PowerShell 脚本。
 
 输出 1.7
 
-![](img/image00308.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+
+Your full name is Inigo Montoya.
+```
+
+原图中的控制台输出已改写为 PowerShell 示例。
 
 虽然插入了注释，但编译并执行后产生的输出和以前是一样的。
 
@@ -674,7 +744,9 @@ XML（Extensible Markup Language，可扩展标记语言）是一种简单而灵
     <chapters>
 ```
 
-原图中的 XML 片段已转写为可读文本。```xml
+原图中的 XML 片段已转写为可读文本。
+
+```xml
 <chapter title="Introducing C#"/>
 <chapter title="Data Types"/>
 ...

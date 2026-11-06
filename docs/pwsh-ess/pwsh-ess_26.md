@@ -28,7 +28,14 @@ C#功能强大还很安全（基础构架完全托管）。但它有时仍然“
 
 代码清单 23.1　声明外部方法
 
-![](img/image01480.jpeg)
+```powershell
+# PowerShell 通过 Add-Type 声明 Win32 P/Invoke 方法。
+Add-Type -Namespace Interop -Name NativeMethods -MemberDefinition @'
+    [DllImport("kernel32.dll", EntryPoint = "GetCurrentProcess")]
+    public static extern IntPtr GetCurrentProcessHandle();
+'@
+$processHandle = [Interop.NativeMethods]::GetCurrentProcessHandle()
+```
 
 本例的类是 VirtualMemoryManager，它将包含与内存管理相关的函数（函数直接由 System.Diagnostics.Processor 类提供，所以真正写这个程序时没必要声明）。注意方法返回一个 IntPtr。该类型将在下一节解释。
 
@@ -36,7 +43,10 @@ extern 方法永远没有主体，而且几乎总是静态方法。具体实现�
 
 本例的外部函数 GetCurrentProcess()获取当前进程的一个“伪句柄”（pseudohandle）。在调用中会使用该伪句柄进行虚拟内存分配。以下是非托管声明：
 
-![](img/image01481.jpeg)
+```powershell
+# 原生签名：PowerShell 通过 Add-Type 映射 HANDLE 为 [IntPtr]。
+$processHandle = [Interop.NativeMethods]::GetCurrentProcessHandle()
+```
 
 ### 23.1.2　参数的数据类型
 
@@ -44,13 +54,23 @@ extern 方法永远没有主体，而且几乎总是静态方法。具体实现�
 
 代码清单 23.2　VirtualAllocEx() API
 
-![](img/image01482.jpeg)
+```powershell
+# PowerShell 映射 Win32 VirtualAllocEx 的原生签名。
+# HANDLE/LPVOID/SIZE_T 使用 [IntPtr]，DWORD 使用 [uint32]。
+```
 
 VirtualAllocEx()分配操作系统特别为代码执行或数据指定的虚拟内存。要调用它，托管代码需要为每种数据类型提供相应的定义——虽然在 Win32 编程中，HANDLE、LPVOID、SIZE\_T 和 DWORD 在 CLI 托管代码中通常是未定义的。代码清单 23.3 展示了 VirtualAllocEx()的 C#声明。
 
 代码清单 23.3　在 C#中声明 VirtualAllocEx() API
 
-![](img/image01483.jpeg)
+```powershell
+Add-Type -Namespace Interop -Name VirtualMemoryManager -MemberDefinition @'
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr GetCurrentProcess();
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress, IntPtr dwSize, uint flAllocationType, uint flProtect);
+'@
+```
 
 托管代码的一个显著特征是，像 int 这样的基元数据类型不会随处理器改变大小。无论 16 位、32 位还是 64 位处理器，int 始终是 32 位。不过在非托管代码中，内存指针会随处理器而变化。因此，不要将 HANDLE 和 LPVOID 等类型映射为 int，而应把它们映射为 System.IntPtr，其大小将随处理器内存布局而变化。本例还使用了一个 AllocationType 枚举类型，详情参见本章后面的 23.1.8 节。
 
@@ -62,7 +82,12 @@ VirtualAllocEx()分配操作系统特别为代码执行或数据指定的虚拟�
 
 代码清单 23.4　使用 ref 和 out 而不是指针
 
-![](img/image01484.jpeg)
+```powershell
+Add-Type -Namespace Interop -Name MemoryProtection -MemberDefinition @'
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern bool VirtualProtectEx(IntPtr hProcess, IntPtr lpAddress, IntPtr dwSize, uint flNewProtect, ref uint lpflOldProtect);
+'@
+```
 
 文档中 lpflOldProtect 被定义为\[out\]参数（虽然签名没有强制要求），但在随后的描述中，又指出该参数必须指向一个有效的变量，而不能是 NULL。文档出现这种自相矛盾的说法，难免令人迷惑，但这是一个很常见的情况。针对这种情况，我们的指导原则是为 P/Invoke 类型参数使用 ref 而不是 out，因为被调用者总是能忽略随同 ref 传递的数据，反之则不然。
 
@@ -74,7 +99,17 @@ VirtualAllocEx()分配操作系统特别为代码执行或数据指定的虚拟�
 
 代码清单 23.5　从非托管的 struct 中声明类型
 
-![](img/image01485.jpeg)![](img/image01486.jpeg)
+```powershell
+# 顺序布局结构需由 Add-Type 定义；PowerShell class 不支持 StructLayout。
+Add-Type -TypeDefinition @'
+using System.Runtime.InteropServices;
+[StructLayout(LayoutKind.Sequential)]
+public struct ColorRef {
+    public byte Red; public byte Green; public byte Blue; private byte Unused;
+    public ColorRef(byte red, byte green, byte blue) { Red=red; Green=green; Blue=blue; Unused=0; }
+}
+'@
+```
 
 Microsoft Windows 所有与颜色相关的 API 都用 COLORREF 来表示 RGB 颜色（红、绿、蓝）。
 
@@ -90,7 +125,12 @@ Win32 API 编程的一个不便之处在于，错误经常以不一致的方式�
 
 代码清单 23.6　Win32 错误处理
 
-![](img/image01487.jpeg)![](img/image01488.jpeg)![](img/image01489.jpeg)
+```powershell
+$pointer = [Interop.VirtualMemoryManager]::VirtualAllocEx($processHandle, [IntPtr]::Zero, [IntPtr]$size, 0x3000, 0x40)
+if ($pointer -eq [IntPtr]::Zero) { throw [ComponentModel.Win32Exception]::new([Runtime.InteropServices.Marshal]::GetLastWin32Error()) }
+$oldProtect = [uint32]0
+if (-not [Interop.MemoryProtection]::VirtualProtectEx($processHandle, $pointer, [IntPtr]$size, 0x40, [ref]$oldProtect)) { throw [ComponentModel.Win32Exception]::new([Runtime.InteropServices.Marshal]::GetLastWin32Error()) }
+```
 
 这样开发者就可提供每个 API 所用的自定义错误检查，同时仍可通过标准方式报告错误。
 
@@ -106,7 +146,14 @@ P/Invoke 经常涉及用完需要清理的资源（如句柄）。但不要强�
 
 代码清单 23.7　使用 SafeHandle 的托管资源
 
-![](img/image01490.jpeg)![](img/image01491.jpeg)
+```powershell
+# PowerShell 用 IDisposable 包装非托管资源；没有 SafeHandle 的直接脚本语法。
+class VirtualMemoryPtr : System.IDisposable {
+    [IntPtr] $Pointer
+    VirtualMemoryPtr([int] $size) { $this.Pointer = [IntPtr]::Zero }
+    Dispose() { $this.Pointer = [IntPtr]::Zero }
+}
+```
 
 System.Runtime.InteropServices.SafeHandle 包含抽象成员 IsInvalid 和 ReleaseHandle()。可在后者中放入资源清理代码，前者指出是否已执行了资源清理代码。
 
@@ -120,7 +167,11 @@ System.Runtime.InteropServices.SafeHandle 包含抽象成员 IsInvalid 和 Relea
 
 代码清单 23.8　将 API 封装到一起
 
-![](img/image01492.jpeg)![](img/image01493.jpeg)![](img/image01494.jpeg)
+```powershell
+$allocationType = [uint32](0x2000 -bor 0x1000) # MEM_RESERVE | MEM_COMMIT
+$protection = [uint32]0x40                    # PAGE_EXECUTE_READWRITE
+$freeType = [IntPtr]0x4000                    # MEM_DECOMMIT
+```
 
 枚举的好处在于将所有值组合到一起。另外，还将作用域严格限定在这些值之内。
 
@@ -130,7 +181,16 @@ System.Runtime.InteropServices.SafeHandle 包含抽象成员 IsInvalid 和 Relea
 
 代码清单 23.9　包装底层 API
 
-![](img/image01495.jpeg)![](img/image01496.jpeg)
+```powershell
+Add-Type -Namespace Interop -Name MemoryFree -MemberDefinition @'
+    [DllImport("kernel32.dll", SetLastError = true)]
+    public static extern bool VirtualFreeEx(IntPtr hProcess, IntPtr lpAddress, IntPtr dwSize, IntPtr dwFreeType);
+'@
+function Free-VirtualMemory {
+    param([IntPtr]$ProcessHandle, [IntPtr]$Address, [IntPtr]$Size)
+    if (-not [Interop.MemoryFree]::VirtualFreeEx($ProcessHandle,$Address,$Size,[IntPtr]0x4000)) { throw [ComponentModel.Win32Exception]::new([Runtime.InteropServices.Marshal]::GetLastWin32Error()) }
+}
+```
 
 ### 23.1.9　函数指针映射到委托
 
@@ -174,7 +234,9 @@ C#的一个突出优势在于它是强类型的，且支持运行时类型检查
 
 代码清单 23.10　为不安全代码指定方法
 
-![](img/image01497.jpeg)
+```powershell
+# PowerShell 没有 unsafe 修饰符；低级指针操作需放入 Add-Type 编译的 C# 类型。
+```
 
 可将 unsafe 用作类型或者类型内部的特定成员的修饰符。
 
@@ -182,7 +244,9 @@ C#的一个突出优势在于它是强类型的，且支持运行时类型检查
 
 代码清单 23.11　指定不安全代码块
 
-![](img/image01498.jpeg)
+```powershell
+# PowerShell 没有 unsafe 代码块；指针操作只能由互操作组件实现。
+```
 
 unsafe 块中的代码可以包含指针之类的不安全构造。
 
@@ -192,7 +256,10 @@ unsafe 块中的代码可以包含指针之类的不安全构造。
 
 代码清单 23.12　设置 AllowUnsafeBlocks
 
-![](img/image01499.jpeg)
+```xml
+<!-- PowerShell 脚本不需要 AllowUnsafeBlocks；若使用 Add-Type 编译 unsafe C#，需在编译项目中启用该选项。 -->
+<PropertyGroup><AllowUnsafeBlocks>true</AllowUnsafeBlocks></PropertyGroup>
+```
 
 还可在运行 dotnet build 命令时通过命令行传递属性，如输出 23.1 所示。
 
@@ -214,7 +281,10 @@ unsafe 块中的代码可以包含指针之类的不安全构造。
 
 代码块标记为 unsafe 之后，接着要知道如何写不安全代码。首先，不安全代码允许声明指针。来看以下例子。
 
-![](img/image01502.jpeg)
+```powershell
+# PowerShell 不支持 byte*；可用 [IntPtr] 表示原生地址，但不能直接解引用。
+$pointer = [IntPtr]::Zero
+```
 
 假设 pData 不为 null，那么它的值指向包含一个或多个连续字节的内存位置，pData 的值代表这些字节的内存地址。符号\*之前指定的类型是被引用物 （referent）类型 ，或者说是指针指向的那个位置存储的值的类型。在本例中，pData 是指针，而 byte 是被引用物类型，如图 23.1 所示。
 
@@ -224,17 +294,26 @@ unsafe 块中的代码可以包含指针之类的不安全构造。
 
 因为指针是指向内存地址的整数，所以不会被垃圾回收。C#不允许非托管类型 以外的被引用物类型。换言之，不能是引用类型，不能是泛型类型，而且内部不能包含引用类型。所以，以下声明是无效的：
 
-![](img/image01504.jpeg)
+```powershell
+# 字符串是引用类型，不能声明 string*。
+$message = 'text'
+```
 
 以下声明也不正确：
 
-![](img/image01505.jpeg)
+```powershell
+# PowerShell 不支持指针变量；通过 [IntPtr] 保存原生地址。
+$pointer = [IntPtr]::Zero
+```
 
 其中，ServiceStatus 的定义如代码清单 23.13 所示。问题仍然是 ServiceStatus 中包含了一个 string 字段。
 
 代码清单 23.13　无效的被引用物类型示例
 
-![](img/image01506.jpeg)
+```powershell
+# 含有 string 引用的对象不能映射为非托管指针结构。
+$status = [pscustomobject]@{ State=0; Description='Running' }
+```
 
 除了只含非托管类型的自定义结构之外，其他有效的被引用物类型还包括枚举、预定义值类型（sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 和 bool）以及指针类型（比如 byte\*\*）。void\*指针也有效，代表指向未知类型的指针。
 
@@ -242,15 +321,24 @@ unsafe 块中的代码可以包含指针之类的不安全构造。
 
 C/C++要求像下面这样一次声明多个指针：
 
-![](img/image01507.jpeg)
+```powershell
+$p1 = [IntPtr]::Zero
+$p2 = [IntPtr]::Zero
+```
 
 注意 p2 之前的\*，它使 p2 成为一个 int\*，而不是一个 int。相比之下，C#总是把\*和数据类型放在一块儿，如下所示：
 
-![](img/image01508.jpeg)
+```powershell
+$p1 = [IntPtr]::Zero
+$p2 = [IntPtr]::Zero
+```
 
 结果是两个 int\*类型的变量。两种语言在一个语句中声明多个数组的语法是一致的：
 
-![](img/image01509.jpeg)
+```powershell
+$array1 = [int[]]::new(10)
+$array2 = [int[]]::new(10)
+```
 
 指针是全新的类型。有别于结构、枚举和类，指针的终极基类不是 System.Object，甚至不能转换成 System.Object。相反，它们能（显式）转换成 System.IntPtr（后者能转换成 System.Object）。
 
@@ -260,11 +348,18 @@ C/C++要求像下面这样一次声明多个指针：
 
 可显式将一个 int 或 long 转换为指针。但除非事先知道一个特定数据值在执行时的地址，否则很少这样做。相反，要用地址操作符（&）来获取值类型的地址，如下所示：
 
-![](img/image01510.jpeg)
+```powershell
+$bytes = [byte[]]::new(8)
+$pointer = [IntPtr]::Zero
+```
 
 问题在于托管环境中的数据可能发生移动，导致地址无效。编译器显示的错误消息是：“只能获取固定语句初始值设定项内的未固定表达式的地址”^( [\[1\]](part0188.xhtml#ch1_back) ) 。在本例中，被引用的字节出现在一个数组内，而数组是引用类型（在内存中可能移动的类型）。引用类型出现在内存堆（heap）上，可被垃圾回收或转移位置。对一个可移动类型中的值类型字段进行引用，会发生类似的问题：
 
-![](img/image01511.jpeg)
+```powershell
+# PowerShell 不支持对托管字符串取地址。
+$message = 'message'
+$length = $message.Length
+```
 
 无论采用哪种方式，为了将数据的地址赋给指针，要求如下：
 
@@ -282,7 +377,11 @@ C/C++要求像下面这样一次声明多个指针：
 
 代码清单 23.14　fixed 语句
 
-![](img/image01512.jpeg)
+```powershell
+$bytes = [byte[]]::new(24)
+$handle = [Runtime.InteropServices.GCHandle]::Alloc($bytes, [Runtime.InteropServices.GCHandleType]::Pinned)
+try { $pointer = $handle.AddrOfPinnedObject() } finally { $handle.Free() }
+```
 
 在 fixed 限定的代码块中，赋值的数据不会再移动。在本例中，bytes 会固定不动（至少在 fixed 语句结束之前如此）。
 
@@ -294,7 +393,11 @@ fixed 语句要求指针变量在其作用域内声明。这样可防止当数�
 
 代码清单 23.15　没有地址或数组索引器的固定语句
 
-![](img/image01513.jpeg)
+```powershell
+$bytes = [byte[]]::new(24)
+$handle = [Runtime.InteropServices.GCHandle]::Alloc($bytes, [Runtime.InteropServices.GCHandleType]::Pinned)
+try { $pointer = $handle.AddrOfPinnedObject() } finally { $handle.Free() }
+```
 
 取决于执行频率和时机，fixed 语句可能导致内存堆中出现碎片（fragmentation），这是由于垃圾回收器不能压缩^( [\[2\]](part0188.xhtml#ch2_back) ) 已固定的对象。为解决该问题，最好的做法是在执行前期就固定好代码块，而且宁可固定较少的几个大块，也不要固定许多的小块。遗憾的是，这又和另一个原则发生了冲突，即“应该尽量缩短固定时间，降低在数据固定期间发生垃圾回收的概率”。.NET 2.0（及更高版本）添加了一些能避免过多碎片的代码，从而在某种程度上减少了这方面的问题。
 
@@ -306,7 +409,10 @@ fixed 语句要求指针变量在其作用域内声明。这样可防止当数�
 
 代码清单 23.16　在调用栈上分配数据
 
-![](img/image01514.jpeg)
+```powershell
+# PowerShell 没有 stackalloc；普通数组由 .NET 托管堆分配。
+$bytes = [byte[]]::new(42)
+```
 
 由于数据类型是非托管类型的数组，所以“运行时”可为该数组分配一个固定大小的缓冲区，并在指针越界时回收该缓冲区。具体地说，它会分配 sizeof(T)\*E，其中 E 是数组大小，T 是被引用物的类型。由于只能为非托管类型的数组使用 stackalloc，“运行时”为了回收缓冲区并把它返还给系统，只需对栈执行一次展开（unwind）操作，这就避免了遍历 f-reachable 队列（参见第十章的垃圾回收和终结器部分）并对 reachable（可达）数据进行压缩的复杂性。但结果是无法显式释放 stackalloc 数据。
 
@@ -331,7 +437,10 @@ byte data=\*pData;
 
 代码清单 23.17　修改“不可变”字符串
 
-![](img/image01515.jpeg)
+```powershell
+# PowerShell 字符串不可变；通过构造新字符串表达修改。
+$text = 'S5280ft'; Write-Host -NoNewline "$text = "; $text = 'Smile'; Write-Host $text
+```
 
 代码清单 23.17 的结果如输出 23.3 所示。
 
@@ -349,7 +458,11 @@ byte data=\*pData;
 
 代码清单 23.18　在不安全代码中用索引操作符修改“不可变”字符串
 
-![](img/image01517.jpeg)
+```powershell
+$text = 'S5280ft'; $characters = $text.ToCharArray()
+$characters[1]='m'; $characters[2]='i'; $characters[3]='l'; $characters[4]='e'
+Write-Host (-join $characters)
+```
 
 代码清单 23.18 的结果如输出 23.4 所示。
 
@@ -359,7 +472,9 @@ byte data=\*pData;
 
 代码清单 23.17 和代码清单 23.18 中的修改会导致出乎意料的行为。例如，假定在 Console.WriteLine()语句后重新为 text 赋值"S5280ft"，再重新显示 text，那么输出结果仍是 Smile，这是由于两个相同的字符串字面值的地址会优化成由两个变量共同引用的一个字符串字面值。在代码清单 23.17 的不安全代码之后，即使明确执行以下赋值：
 
-![](img/image01519.jpeg)
+```powershell
+$text = 'S5280ft'
+```
 
 字符串赋值在内部实际仍然是一次地址赋值，所赋的地址是修改过的"S5280ft"位置，所以 text 永远不会被设置成你希望的值。
 
@@ -369,7 +484,10 @@ byte data=\*pData;
 
 代码清单 23.19　直接访问被引用物类型的成员
 
-![](img/image01520.jpeg)
+```powershell
+$angle = [pscustomobject]@{ Hours=30; Minutes=18; Seconds=0 }
+Write-Host ('{0}° {1}'' {2}"' -f $angle.Hours,$angle.Minutes,$angle.Seconds)
+```
 
 代码清单 23.19 的输出结果如输出 23.5 所示。
 
@@ -387,7 +505,11 @@ byte data=\*pData;
 
 代码清单 23.20　指定不安全代码块
 
-![](img/image01522.jpeg)![](img/image01523.jpeg)
+```powershell
+# CPUID 机器码和可执行委托依赖 C# unsafe；PowerShell 不能直接执行该字节缓冲区。
+if ($env:OS -eq 'Windows_NT') { (Get-CimInstance Win32_Processor | Select-Object -First 1).Name }
+else { Write-Host '此示例仅适用于 Windows' }
+```
 
 代码清单 23.20 的输出结果如输出 23.6 所示。
 
