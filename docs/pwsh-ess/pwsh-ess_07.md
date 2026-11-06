@@ -14,7 +14,9 @@
 
 代码清单 4.1　简单的操作符例子
 
-![](img/image00479.jpeg)
+```powershell
+$difference = 4 - 2
+```
 
 通常将操作符划分为三大类：一元、二元和三元，分别对应着需要一个、两个和三个操作数的操作符。此外，有些操作符以符号的形式呈现，例如+、-、?.或者??等，而另一些操作符则为关键词，例如 default 和 is。本节讨论最基本的一元和二元操作符，三元操作符将在本章后面简略介绍。
 
@@ -22,9 +24,11 @@
 
 有时需要改变数值的正负号。这时一元负操作符（-）就能派上用场。例如，代码清单 4.2 将当前的美国国债金额变成负值，指明这是欠款。
 
-代码清单 4.2　指定负值^( [\[1\]](part0029.xhtml#ch1_back) ) 
+代码清单 4.2　指定负值^( [\[1\]](part0029.xhtml#ch1_back) )
 
-![](img/image00480.jpeg)
+```powershell
+$debt = -26457079712930.80
+```
 
 使用一元负操作符等价于从零减去操作数。一元正操作符（+）对值几乎^( [\[2\]](part0029.xhtml#ch2_back) ) 没有影响。它在 C#语言中是多余的，只是出于对称性的考虑才加进来。
 
@@ -40,13 +44,23 @@
 
 代码清单 4.3　使用二元操作符
 
-![](img/image00481.jpeg)
+```powershell
+$numerator = [int](Read-Host 'Enter the numerator')
+$denominator = [int](Read-Host 'Enter the denominator')
+$quotient = $numerator / $denominator
+$remainder = $numerator % $denominator
+Write-Output "$numerator / $denominator = $quotient with remainder $remainder"
+```
 
 输出 4.1 展示了结果。
 
 输出 4.1
 
-![](img/image00482.jpeg)
+```powershell
+Enter the numerator: 23
+Enter the denominator: 3
+23 / 3 = 7 with remainder 2
+```
 
 在突出显示的赋值语句中，除法和取余操作先于赋值发生。操作符的执行顺序取决于它们的优先级 和结合性 。迄今为止用过的操作符的优先级如下：
 
@@ -62,7 +76,10 @@
 
 输出 4.2
 
-![](img/image00483.jpeg)
+```powershell
+error CS0201: Only assignment, call, increment, decrement,
+and new object expressions can be used as a statement
+```
 
 初学者主题：圆括号、结合性、优先级和求值
 
@@ -90,19 +107,26 @@
 
 和上述规则相反，C++规范允许不同的实现自行选择操作数求值顺序。对于 A()+B()\*C()这样的表达式，不同的 C++编译器可选择以不同顺序求值函数调用，只要乘积是某个被加数即可。例如，可以选择先求值 B()，再 A()，再 C()，再乘法，最后加法。
 
-将加法操作符用于字符串 
+将加法操作符用于字符串
 
 操作符也可用于非数值类型。例如，可用加法操作符连接两个或更多字符串，如代码清单 4.4 所示。
 
 代码清单 4.4　将二元操作符应用于非数值类型
 
-![](img/image00484.jpeg)
+```powershell
+$windSpeed = 42
+Write-Output "The original Tacoma Bridge in Washington
+was brought down by a $windSpeed mile/hour wind."
+```
 
 输出 4.3 展示了结果。
 
 输出 4.3
 
-![](img/image00485.jpeg)
+```powershell
+The original Tacoma Bridge in Washington
+was brought down by a 42 mile/hour wind.
+```
 
 由于不同语言文化的语句结构迥异，所以开发者注意不要对准备本地化的字符串使用加法操作符。类似地，虽然可用 C# 6.0 的字符串插值技术在字符串中嵌入表达式，但其他语言的本地化仍然要求将字符串移至某个资源文件，这使字符串插值没了用武之地。在这种情况下，复合格式化更理想。
 
@@ -110,33 +134,44 @@
 
 ·要在字符串可能会本地化时用复合格式化而不是加法操作符来连接字符串。
 
-在算术运算中使用字符 
+在算术运算中使用字符
 
 第二章介绍 char 类型时提到，虽然 char 类型存储的是字符而不是数字，但它是“整数的类型”（意味着基于整数）。可以和其他整型一起参与算术运算。但不是基于存储的字符来解释 char 类型的值，而是基于它的基础值。例如，数字 3 用 Unicode 值 0x33（十六进制）表示，换算成十进制值是 51。数字 4 用 Unicode 值 0x34 表示，或十进制 52。如代码清单 4.5 所示，3 和 4 相加获得十六进制值 0x67，即十进制 103，等价于字母 g。
 
 代码清单 4.5　将加法操作符应用于 char 数据类型
 
-![](img/image00486.jpeg)
+```powershell
+$n = [int][char]'3' + [int][char]'4'
+$c = [char]$n
+Write-Output $c # Writes out g
+```
 
 输出 4.4 展示了结果。
 
 输出 4.4
 
-![](img/image00487.jpeg)
+```powershell
+6
+```
 
 可利用 char 类型的这个特点判断两个字符相距多远。例如，字母 f 与字母 c 有 3 个字符的距离。为获得这个值，可以用字母 f 减去字母 c，如代码清单 4.6 所示。
 
 代码清单 4.6　判断两个字符之间的“距离”
 
-![](img/image00488.jpeg)
+```powershell
+$distance = [int][char]'f' - [int][char]'c'
+Write-Output $distance
+```
 
 输出 4.5 展示了结果。
 
 输出 4.5
 
-![](img/image00489.jpeg)
+```powershell
+3
+```
 
-浮点类型的特殊性 
+浮点类型的特殊性
 
 浮点类型 float 和 double 有一些特殊性，比如它们处理精度的方式。本节通过一些实例帮助认识浮点类型的特殊性。
 
@@ -156,13 +191,40 @@ float 具有 7 位精度，能容纳值 1 234 567 和值 0.123 456 7。但这两
 
 代码清单 4.7　浮点类型的不准确性造成非预期的不相等
 
-![](img/image00490.jpeg)![](img/image00491.jpeg)
+```powershell
+[decimal]$decimalNumber = 4.2
+[double]$doubleNumber1 = 0.1 * 42
+[double]$doubleNumber2 = 0.1 * 42
+[float]$floatNumber = 0.1 * 42
+```
+
+```powershell
+$decimalNumber = [decimal]4.2
+$doubleNumber1 = [double]0.1 * 42
+$doubleNumber2 = [double]0.1 * 42
+$floatNumber = [float](0.1 * 42)
+Write-Output "$decimalNumber != $([decimal]$doubleNumber1)"
+Write-Output "$([double]$decimalNumber) != $doubleNumber1"
+Write-Output "$([float]$decimalNumber) != $floatNumber"
+Write-Output "$doubleNumber1 != $([double]$floatNumber)"
+Write-Output "$doubleNumber1 != $doubleNumber2"
+Write-Output "${floatNumber}F != ${doubleNumber2}D"
+```
 
 输出 4.6 展示了结果。
 
 输出 4.6
 
-![](img/image00492.jpeg)
+```powershell
+4.2 != 4.20000006258488
+4.2 != 4.20000006258488
+(float)4.2M != 4.2F
+4.20000006258488 != 4.20000028610229
+4.20000006258488 != 4.2
+4.2F != 4.2D
+4.19999980926514 != 4.2
+4.2F != 4.2D
+```
 
 Assert()方法在实参求值为 false 时提醒开发者“断言失败”^( [\[3\]](part0029.xhtml#ch3_back) ) 。但上述代码中的所有 Assert()语句都求值为 true。所以，虽然值理论上应该相等，但由于浮点数的不准确性，它们被错误地判断为不相等。
 
@@ -174,11 +236,17 @@ Assert()方法在实参求值为 false 时提醒开发者“断言失败”^( [\
 
 代码清单 4.8　浮点数被零除的结果是 NaN
 
-![](img/image00493.jpeg)
+```powershell
+$n = [float]0 / 0
+# Displays: NaN
+Write-Output $n
+```
 
 输出 4.7
 
-![](img/image00494.jpeg)
+```powershell
+NaN
+```
 
 数学中的特定算术运算是未定义的，例如 0 除以它自己。在 C#中，浮点 0 除以 0 会得到“Not a Number”（非数字）。打印这样的一个数实际输出的就是 NaN。类似地，获取负数的平方根（System.Math.Sqrt(-1)）也会得到 NaN。
 
@@ -186,11 +254,17 @@ Assert()方法在实参求值为 false 时提醒开发者“断言失败”^( [\
 
 代码清单 4.9　溢出 float 值边界
 
-![](img/image00495.jpeg)
+```powershell
+Write-Output ([float]-1 / 0) # -Infinity
+Write-Output ([float]3.402823E+38 * 2) # Infinity
+```
 
 输出 4.8
 
-![](img/image00496.jpeg)
+```powershell
+-Infinity
+Infinity
+```
 
 进一步研究浮点数，发现它能包含非常接近零但实际不是零的值。如值超过 float 或 double 类型的阈值，值可能表示成“负零”或者“正零”，具体取决于数是负还是正，并在输出中表示成-0 或者 0。
 
@@ -200,13 +274,19 @@ Assert()方法在实参求值为 false 时提醒开发者“断言失败”^( [\
 
 代码清单 4.10　常见的递增计算
 
-![](img/image00497.jpeg)
+```powershell
+$x = 123
+$x = $x + 2
+```
 
 在上述赋值运算中，首先计算 x+2，结果赋回 x。由于这种形式的运算相当普遍，所以专门有一个操作符集成了计算和赋值。+=操作符使左边的变量递增右边的值，如代码清单 4.11 所示。
 
 代码清单 4.11　使用+=操作符
 
-![](img/image00498.jpeg)
+```powershell
+$x = 123
+$x += 2
+```
 
 上述代码等价于代码清单 4.10。
 
@@ -214,7 +294,12 @@ Assert()方法在实参求值为 false 时提醒开发者“断言失败”^( [\
 
 代码清单 4.12　其他复合赋值操作符
 
-![](img/image00499.jpeg)
+```powershell
+$x -= 2
+$x /= 2
+$x *= 2
+$x %= 2
+```
 
 ### 4.1.4　递增和递减操作符
 
@@ -222,13 +307,21 @@ C#提供了特殊的一元操作符来实现计数器的递增和递减。递增
 
 代码清单 4.13　递增操作符
 
-![](img/image00500.jpeg)
+```powershell
+$spaceCount = $spaceCount + 1
+$spaceCount += 1
+$spaceCount++
+```
 
 类似地，递减操作符 （--）使变量递减 1。所以，代码清单 4.14 每行代码的作用都一样。
 
 代码清单 4.14　递减操作符
 
-![](img/image00501.jpeg)
+```powershell
+$lines = $lines - 1
+$lines -= 1
+$lines--
+```
 
 初学者主题：循环中的递减示例
 
@@ -236,13 +329,25 @@ C#提供了特殊的一元操作符来实现计数器的递增和递减。递增
 
 代码清单 4.15　降序显示每个字母的 ASCII 值
 
-![](img/image00502.jpeg)
+```powershell
+$current = [char]'z'
+do {
+    $unicodeValue = [int]$current
+    Write-Host "${current}=$unicodeValue" -NoNewline
+    Write-Host "`t" -NoNewline
+    $current = [char](([int]$current) - 1)
+} while ($current -ge [char]'a')
+```
 
 输出 4.9 展示了结果。
 
 输出 4.9
 
-![](img/image00503.jpeg)
+```powershell
+z=122 y=121 x=120 w=119 v=118 u=117 t=116 s=115 r=114
+q=113 p=112 o=111 n=110 m=109 l=108 k=107 j=106 i=105
+h=104 g=103 f=102 e=101 d=100 c=99 b=98 a=97
+```
 
 递增和递减操作符用于控制特定操作的执行次数。本例还要注意递减操作符可以应用于字符（char）数据类型。只要数据类型支持“下一个值”和“上一个值”的概念，就适合使用递增和递减操作符。
 
@@ -250,33 +355,62 @@ C#提供了特殊的一元操作符来实现计数器的递增和递减。递增
 
 代码清单 4.16　使用后缀递增操作符
 
-![](img/image00504.jpeg)
+```powershell
+$count = 123
+$result = $count
+$count++
+Write-Output "result = $result and count = $count"
+```
 
 输出 4.10
 
-![](img/image00505.jpeg)
+```powershell
+result = 123 and count = 124
+```
 
 赋给 result 的是 count 递增前的值。递增或递减操作符的位置决定了所赋的值是操作数计算之前还是之后的值。如希望 result 的值是递增/递减后的结果，需要将操作符放在想递增/递减的变量之前，如代码清单 4.17 所示。
 
 代码清单 4.17　使用前缀递增操作符
 
-![](img/image00506.jpeg)
+```powershell
+$count = 123
+$count++
+$result = $count
+Write-Output "result = $result and count = $count"
+```
 
 输出 4.11 展示了代码清单 4.17 的结果。
 
 输出 4.11
 
-![](img/image00507.jpeg)
+```powershell
+result = 124 and count = 124
+```
 
 本例的递增操作符出现在操作数之前，所以表达式生成的结果是递增后赋给变量的值。假定 count 为 123，那么++count 将 124 赋给 count，生成的结果是 124。相反，后缀形式 count++将 124 赋给 count，生成的结果是递增前 count 所容纳的值，即 123。无论后缀还是前缀形式，变量 count 都会在表达式的结果生成之前递增，区别在于结果选择哪个值。代码清单 4.18 和输出 4.12 展示了前缀和后缀操作符在行为上的差异。
 
 代码清单 4.18　对比前缀和后缀递增操作符
 
-![](img/image00508.jpeg)
+```powershell
+[int]$x = 123
+Write-Output "$x"
+$x++
+Write-Output "$x"
+$x++
+Write-Output "$x"
+$x++
+Write-Output "$x"
+$x++
+Write-Output "$x"
+# x now contains 127
+```
 
 输出 4.12
 
-![](img/image00509.jpeg)
+```powershell
+123, 124, 125
+126, 127, 127
+```
 
 在代码清单 4.18 中，递增和递减操作符相对于操作数的位置影响了表达式的结果。前缀操作符的结果是变量递增/递减之后的值，而后缀操作符的结果是变量递增/递减之前的值。在语句中使用这些操作符应该小心。若心存疑虑，最好独立使用这些操作符（自成一个语句）。这样不仅代码更易读，还可保证不犯错。
 
@@ -302,7 +436,10 @@ C#提供了特殊的一元操作符来实现计数器的递增和递减。递增
 
 代码清单 4.19　声明常量
 
-![](img/image00510.jpeg)
+```powershell
+$secondsPerDay = 60 * 60 * 24
+$secondsPerWeek = $secondsPerDay * 7
+```
 
 注意赋给 secondsPerWeek 的也是常量表达式。表达式中所有操作数都是常量，编译器能确定结果。
 
@@ -334,13 +471,26 @@ C#提供了特殊的一元操作符来实现计数器的递增和递减。递增
 
 if 语句是 C#最常见的语句之一。它对称为条件 （condition）的布尔表达式 （返回 true 或 false 的表达式）进行求值，条件为 true 将执行后续语句（consequence-statement）。if 语句可以有 else 子句，其中包含在条件为 false 时执行的替代语句（alternative-statement）。常规形式如下：
 
-![](img/image00513.jpeg)
+```powershell
+if ($condition) {
+    $consequence
+} else {
+    $alternative
+}
+```
 
 在代码清单 4.20 中，玩家输入 1，程序将显示"Play against computer selected."（人机对战）；否则显示"Play against another player."（双人对战）。
 
 代码清单 4.20　if/else 语句示例
 
-![](img/image00514.jpeg)
+```powershell
+$input = Read-Host '1 - Play against the computer`n2 - Play against another player.`nChoose'
+if ($input -eq '1') {
+    Write-Output 'Play against computer selected.'
+} else {
+    Write-Output 'Play against another player.'
+}
+```
 
 ### 4.2.2　嵌套 if
 
@@ -348,13 +498,27 @@ if 语句是 C#最常见的语句之一。它对称为条件 （condition）的�
 
 代码清单 4.21　嵌套 if 语句
 
-![](img/image00515.jpeg)
+```powershell
+$input = [int](Read-Host 'What is the maximum number of turns in tic-tac-toe? (Enter 0 to exit.)')
+if ($input -le 0) {
+    Write-Output 'Exiting...'
+} elseif ($input -lt 9) {
+    Write-Output "Tic-tac-toe has more than $input maximum turns."
+} elseif ($input -gt 9) {
+    Write-Output "Tic-tac-toe has fewer than $input maximum turns."
+} else {
+    Write-Output 'Correct, tic-tac-toe has a maximum of 9 turns.'
+}
+```
 
 输出 4.13 展示了结果。
 
 输出 4.13
 
-![](img/image00516.jpeg)
+```powershell
+What is the maximum number of turns in tic-tac-toe? (Enter 0 to exit.): 9
+Correct, tic-tac-toe has a maximum of 9 turns.
+```
 
 假定第 14 行显示提示时玩家输入 9，那么执行路径如下：
 
@@ -370,7 +534,12 @@ if 语句是 C#最常见的语句之一。它对称为条件 （condition）的�
 
 代码清单 4.22　if/else 的连贯格式
 
-![](img/image00517.jpeg)
+```powershell
+if ($input -lt 0) { Write-Output 'Exiting...' }
+elseif ($input -lt 9) { Write-Output "Tic-tac-toe has more than $input maximum turns." }
+elseif ($input -gt 9) { Write-Output "Tic-tac-toe has fewer than $input maximum turns." }
+else { Write-Output 'Correct, tic-tac-toe has a maximum of 9 turns.' }
+```
 
 虽然后一种格式更常见，但无论哪种情况，都应选择代码最易读的格式。
 
@@ -382,19 +551,38 @@ if 语句是 C#最常见的语句之一。它对称为条件 （condition）的�
 
 代码清单 4.23　不需要代码块的 if 语句
 
-![](img/image00518.jpeg)
+```powershell
+if ($input -lt 9) {
+    Write-Output 'Exiting'
+}
+```
 
 可用大括号将多个语句合并成代码块 ，以实现在符合条件时执行多个语句。例如代码清单 4.24 中突出显示的用于计算半径的代码块。
 
 代码清单 4.24　跟随了代码块的 if 语句
 
-![](img/image00519.jpeg)![](img/image00520.jpeg)
+```powershell
+function Get-CircleArea([double]$radius) { }
+```
+
+```powershell
+$radius = [double](Read-Host 'Enter the radius of the circle')
+if ($radius -ge 0) {
+    $area = [math]::PI * $radius * $radius
+    Write-Output ('The area of the circle is: {0:N2}' -f $area)
+} else {
+    Write-Output "$radius is not a valid radius."
+}
+```
 
 输出 4.14 展示了结果。
 
 输出 4.14
 
-![](img/image00521.jpeg)
+```powershell
+Enter the radius of the circle: 3
+The area of the circle is: 28.27
+```
 
 在这个例子中，if 语句检查 radius（半径）是不是正数。如果是，就计算并显示圆的面积；否则显示消息指出半径无效。
 
@@ -404,13 +592,23 @@ if 语句是 C#最常见的语句之一。它对称为条件 （condition）的�
 
 代码清单 4.25　依赖缩进造成无效的代码
 
-![](img/image00522.jpeg)
+```powershell
+if ($radius -ge 0) {
+    $area = [math]::PI * $radius * $radius
+}
+Write-Output ('The area of the circle is: {0:N2}' -f $area)
+```
 
 在 C#中，缩进仅用来增强代码的可读性。编译器会忽略它，所以上述代码在语义上等价于代码清单 4.26。
 
 代码清单 4.26　使用大括号的 if 语句
 
-![](img/image00523.jpeg)
+```powershell
+if ($radius -ge 0) {
+    $area = [math]::PI * $radius * $radius
+    Write-Output ('The area of the circle is: {0:N2}' -f $area)
+}
+```
 
 程序员必须防止此类不容易发现的错误。一种比较极端的做法是，无论如何都在控制流程语句之后包括代码块，即使其中只有一个语句。事实上，设计规范是除非是最简单的单行 if 语句，否则避免省略大括号。
 
@@ -432,13 +630,32 @@ if 语句是 C#最常见的语句之一。它对称为条件 （condition）的�
 
 代码清单 4.27　变量在其作用域外无法访问
 
-![](img/image00524.jpeg)![](img/image00525.jpeg)
+```powershell
+$playerCount = Read-Host 'Enter the number of players (1 or 2)'
+if ($playerCount -ne '1' -and $playerCount -ne '2') {
+    $message = 'You entered an invalid number of players.'
+} else {
+    Write-Output $message # Error: message is not in scope
+}
+```
+
+```powershell
+Write-Output 'Enter the number of players (1 or 2):'
+$playerCount = Read-Host
+if ($playerCount -ne '1' -and $playerCount -ne '2') {
+    $message = 'You entered an invalid number of players.'
+} else {
+    Write-Output $message
+}
+```
 
 输出 4.15 展示了结果。
 
 输出 4.15
 
-![](img/image00526.jpeg)
+```powershell
+Program.cs (18,26): error CS0103: The name message does not exist in the current context
+```
 
 局部变量名称必须唯一的声明空间包含最初声明局部变量的块中以文本形式包含的所有子代码块。C#编译器禁止一个代码块中声明（或作为参数声明）的局部变量在其子代码块中重复声明。总之，一个变量的声明空间是当前代码块以及它的所有子代码块。在代码清单 4.27 中，由于 args 和 playerCount 在方法的代码块（方法主体）中声明，所以在这个代码块的任何地方（包括子代码块）都不能再次声明。
 
@@ -454,7 +671,11 @@ if 语句中包含在圆括号内的部分是布尔表达式 ，称为条件 。
 
 代码清单 4.28　布尔表达式
 
-![](img/image00527.jpeg)
+```powershell
+if ($input -lt 9) {
+    Write-Output "Tic-tac-toe has more than $input maximum turns."
+}
+```
 
 许多控制流程语句都要使用布尔表达式，其关键特征在于总是求值为 true 或 false。input<9 要成为布尔表达式就必须返回 bool 值。例如，编译器不允许将布尔表达式写成 x=42，因为它的作用是对 x 进行赋值，并返回新值，而不是检查 x 的值是否等于 42。
 
@@ -464,7 +685,11 @@ C#消除了 C/C++的一个常见的编码错误。代码清单 4.29 在 C++中�
 
 代码清单 4.29　C++允许将赋值作为条件
 
-![](img/image00528.jpeg)
+```powershell
+if ($input = 9) { # Assignment is not a comparison
+    Write-Output 'Correct, tic-tac-toe has a maximum of 9 turns.'
+}
+```
 
 虽然上述代码表面上是检查 input 是否等于 9，但正如第一章讲过的那样，=代表的是赋值操作符，而不是检查相等性的操作符。从赋值操作符返回的是赋给变量的值，本例中就是 9。然而，作为 int 的 9 无法被判定为布尔表达式，所以是 C#编译器不允许的。C 和 C++将非零整数视为 true，将零视为 false。相反，C#要求条件必须是布尔类型，不允许整数。
 
@@ -482,29 +707,40 @@ C#消除了 C/C++的一个常见的编码错误。代码清单 4.29 在 C++中�
 
 代码清单 4.30　将关系操作符的结果赋给 bool 变量
 
-![](img/image00530.jpeg)
+```powershell
+$result = 70 -gt 7
+```
 
 井字棋程序的完整代码清单使用相等操作符判断玩家是否退出游戏。代码清单 4.31 的布尔表达式包含一个 OR（||）逻辑操作符，下一节将详细讨论它。
 
 代码清单 4.31　在布尔表达式中使用相等操作符
 
-![](img/image00531.jpeg)
+```powershell
+if ($input.Length -eq 0 -or $input -eq 'quit') {
+    Write-Output "player $currentPlayer quit!!"
+    break
+}
+```
 
 ### 4.5.2　逻辑操作符
 
 逻辑操作符 获取布尔操作数并生成布尔结果。可用逻辑操作符合并多个布尔表达式来构成更复杂的布尔表达式。逻辑操作符包括|、||、&、&&和^，对应 OR、AND 和 XOR（异或）。OR 和 AND 的|和&版本很少用，原因稍后讨论。
 
-OR 操作符 
+OR 操作符
 
 在代码清单 4.31 中，如果玩家输入 quit，或直接按回车键而不输入任何值，就认为想退出程序。为了允许玩家以两种方式退出，程序使用了逻辑 OR 操作符||。||操作符对两个布尔表达式进行求值，任何 一个为 true 就返回 true，如代码清单 4.32 所示。
 
 代码清单 4.32　使用 OR 操作符
 
-![](img/image00532.jpeg)
+```powershell
+if (($hourOfTheDay -gt 23) -or ($hourOfTheDay -lt 0)) {
+    Write-Output 'The time you entered is invalid.'
+}
+```
 
 注意使用布尔 OR 操作符时，不一定每次都要对操作符两边的表达式进行求值。和 C#的所有操作符一样，OR 操作符从左向右求值，所以假如左边求值为 true，那么右边可以忽略。换言之，如 hourOfTheDay 的值为 33，那么(hourOfTheDay > 23)会返回 true，所以 OR 操作符会忽略右侧表达式。这种短路 求值方式同样适合布尔 AND 操作符。注意，此处不需要括号，逻辑操作符的优先级低于关系操作符。然而，对于新手读者来说，在子表达式中加括号更为清晰。
 
-AND 操作符 
+AND 操作符
 
 布尔 AND 操作符&&在两个操作数求值都为 true 的前提下才返回 true。任何操作数为 false 都会返回 false。
 
@@ -512,9 +748,13 @@ AND 操作符
 
 代码清单 4.33　使用 AND 操作符
 
-![](img/image00533.jpeg)
+```powershell
+if ((10 -lt $hourOfTheDay) -and ($hourOfTheDay -lt 24)) {
+    Write-Output "Hi-Ho, Hi-Ho, it's off to work we go."
+}
+```
 
-XOR 操作符 
+XOR 操作符
 
 ^符号是异或（Exclusive OR，XOR）操作符。若应用于两个布尔操作数，那么只有在两个操作数中仅有一个为 true 的前提下，XOR 操作符才会返回 true，如表 4.3 所示。
 
@@ -530,11 +770,17 @@ XOR 操作符
 
 代码清单 4.34　使用逻辑求反操作符
 
-![](img/image00535.jpeg)
+```powershell
+$valid = $false
+$result = -not $valid
+Write-Output "result = $result"
+```
 
 输出 4.16
 
-![](img/image00536.jpeg)
+```powershell
+result = True
+```
 
 valid 最开始的值为 false。求反操作符对 valid 的值取反，将新值赋给 result。
 
@@ -542,7 +788,9 @@ valid 最开始的值为 false。求反操作符对 valid 的值取反，将新�
 
 可用条件操作符取代 if-else 语句来选择两个值中的一个。条件操作符同时使用一个问号和一个冒号，常规格式如下：
 
-![](img/image00537.jpeg)
+```powershell
+$result = if ($condition) { $consequence } else { $alternative }
+```
 
 条件操作符是三元操作符，需要三个操作数：condition、consequence 和 alternative。（由于它是 C#中唯一的三元操作符，因此通常称为三元操作符，但用它的名称来称呼它比用操作数数量更清楚。）类似于逻辑操作符，条件操作符也采用了某种形式的短路求值。如 condition 求值为 true，则条件操作符只求值 consequence；否则只求值 alternative。操作符的结果是被求值的表达式。
 
@@ -550,7 +798,10 @@ valid 最开始的值为 false。求反操作符对 valid 的值取反，将新�
 
 代码清单 4.35　条件操作符
 
-![](img/image00538.jpeg)
+```powershell
+$currentPlayer = 1
+$currentPlayer = if ($currentPlayer -eq 2) { 1 } else { 2 }
+```
 
 程序作用是交换当前玩家。它检查当前值是否为 2。这是条件语句的 condition 部分。如结果为 true，条件操作符返回 consequence 值 1；否则返回 alternative 值 2。和 if 语句不同，条件操作符的结果必须赋给某个变量（或作为参数传递），不能自成语句。
 
@@ -586,7 +837,10 @@ C#语言要求条件操作符的 consequence 和 alternative 表达式类型一�
 
 空合并操作符 ??能简单地表示“如果这个值为空，就使用另一个值”，其形式如下：
 
-![](img/image00541.jpeg)
+```powershell
+$value = $expression1
+if ($null -eq $value) { $value = $expression2 }
+```
 
 ??操作符支持短路求值。如 expression1 不为 null，就返回 expression1 的值，另一个表达式不求值。如 expression1 求值为 null，就返回 expression2 的值。和条件操作符不同，空合并操作符是二元操作符。
 
@@ -594,7 +848,15 @@ C#语言要求条件操作符的 consequence 和 alternative 表达式类型一�
 
 代码清单 4.36　空合并操作符
 
-![](img/image00542.jpeg)
+```powershell
+$fullName = Get-DefaultDirectory
+$fileName = Get-FileName
+if ($null -eq $fileName) { $fileName = 'config.json' }
+$directory = Get-ConfigurationDirectory
+if ($null -eq $directory) { $directory = Get-ApplicationDirectory }
+if ($null -eq $directory) { $directory = (Get-Location).Path }
+if ($null -eq $fullName) { $fullName = "$directory/$fileName" }
+```
 
 如果 GetFileName()方法返回 null，空合并操作符便会将 fullName 设置为"default.txt"。否则，fullName 被设置为 GetFileName()方法返回的值。
 
@@ -608,11 +870,26 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.37　空条件操作符
 
-![](img/image00543.jpeg)![](img/image00544.jpeg)
+```powershell
+[string[]]$segments = $null
+$length = if ($null -ne $segments) { $segments.Length } else { $null }
+if ($null -ne $length -and $length -ne 0) {
+    $uri = [string]::Join('/', $segments)
+}
+if ($null -eq $uri -or $length -eq 0) {
+    Write-Output 'There were no segments to combine.'
+}
+```
+
+```powershell
+Write-Output $uri
+```
 
 调用方法或属性（Length）前，空条件操作符检查操作数（第一个 segments）是否为 null。segments?.Length 逻辑上等价于以下代码（虽然在 C# 6.0 语法中 segments 只求值一次）：
 
-![](img/image00545.jpeg)
+```powershell
+$length = if ($null -ne $segments) { $segments.Length } else { $null }
+```
 
 关于空条件操作符，有非常重要的一点需要注意：它产生的运算结果永远是可空类型。在前面的例子中，即使 string.Length 是一个不可空的 int 类型值，但当我们通过可空操作符来访问 Length 属性时，得到的将是一个可空的 int 值（即 int?）。
 
@@ -620,17 +897,23 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 空条件操作符最方便之处在于可“链接”（使用或者不使用空合并操作符均可）。例如，在下面的示例代码中，ToLower()和 StartsWith()都只有在 segments 以及 segments\[0\]均不为 null 的前提下才会调用：
 
-![](img/image00546.jpeg)
+```powershell
+$segments[0]?.ToLower().StartsWith('file:')
+```
 
 上面代码假设 segments 数组中的元素有可能为 null。因此，segments 数组应该像下面这样来声明（假设使用 C# 8.0）：
 
-![](img/image00547.jpeg)
+```powershell
+[AllowNull()][string[]]$segments = $null
+```
 
 上面代码将 segments 数组及其元素均声明为可空。
 
 空条件表达式链接起来后，如第一个操作数为 null，表达式求值会被短路，调用链中不再发生其他调用。也可以在整个表达式的末尾追加空合并操作符，这样一来，如果前面的表达式运算的结果为 null，则可以自动获得默认值：
 
-![](img/image00548.jpeg)
+```powershell
+$uri = if ($null -ne $segments -and $null -ne $segments[0]) { $segments[0].ToLower().StartsWith('file:') } else { 'intellitect.com' }
+```
 
 与空条件操作符不同的是，空合并操作符未必返回可空的值。在上面的代码中，如果空合并操作符右侧的值不为空，而整个表达式恰好返回了这个值，则此时返回的是字符串字面量"intellitech.com"，显然是一个不可空的值。
 
@@ -642,11 +925,15 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 你可能注意到了，在代码清单 4.37 中，调用 Join()方法时使用了一个叹号：
 
-![](img/image00549.jpeg)
+```powershell
+$uri = [string]::Join('/', $segments)
+```
 
 这段代码先检查了 length 变量是否为有效值。根据代码中的逻辑，如果 length 不为 null 并且不等于 0，则说明 segments 数组也不为 null 并且有大于 0 个元素，所以此时可以安全地调用 Join()方法。
 
-![](img/image00550.jpeg)
+```powershell
+if ($null -ne $length -and $length -ne 0) { }
+```
 
 然而，编译器有能力做出同样的判断。但是，由于 Join()方法要求第二个参数不为空，因此如果直接将未赋值的可空型变量 segments 作为参数，则会产生编译器警告。在 C# 8.0 中可以使用空包容操作符 (!)来避免该警告。该操作符告诉编译器程序员可以保证某个变量一定不为 null 值，从而在编译时，编译器会相信程序员的保证而不再产生警告信息。（但是在程序执行的时候，运行时库仍然会检查 null 值。）
 
@@ -658,11 +945,18 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.38　空条件操作符在事件处理程序中的应用
 
-![](img/image00551.jpeg)
+```powershell
+$propertyChanged = $PropertyChanged
+if ($null -ne $propertyChanged) {
+    & $propertyChanged $this ([System.ComponentModel.PropertyChangedEventArgs]::new('Name'))
+}
+```
 
 变成了以下更优雅的代码：
 
-![](img/image00552.jpeg)
+```powershell
+$PropertyChanged?.Invoke($this, [System.ComponentModel.PropertyChangedEventArgs]::new('Name'))
+```
 
 事件即委托，所以通过空条件操作符和 Invoke()来调用委托也完全可行。
 
@@ -702,13 +996,18 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.39　使用右移位操作符
 
-![](img/image00556.jpeg)
+```powershell
+$x = -7
+Write-Output "x = $($x -shr 2)."
+```
 
 输出 4.17 展示了代码清单 4.39 的结果。
 
 输出 4.17
 
-![](img/image00557.jpeg)
+```powershell
+x = -2
+```
 
 右移位时最右侧的位在边界处“离开”，左边的负数位标识符右移两个位置，腾出来的空白位置用 1 填充。最终结果是-2。
 
@@ -732,11 +1031,20 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.40　使用按位操作符
 
-![](img/image00559.jpeg)
+```powershell
+$and = 12 -band 7
+$or = 12 -bor 7
+$xor = 12 -bxor 7
+Write-Output "and = $and`nor = $or`nxor = $xor"
+```
 
 输出 4.18
 
-![](img/image00560.jpeg)
+```powershell
+and = 4
+or = 15
+xor = 11
+```
 
 在代码清单 4.40 中，值 7 称为掩码 ，作用是通过特定的操作符表达式，公开（expose）或消除（eliminate）第一个操作数中特定的位。注意和 AND (&&)操作符不同，&操作符总是两边求值，即使左边为 false。类似地，OR 操作符的|版本也不进行“短路求值”。即使左边的操作数为 true，右边也要求值。总之，AND 和 OR 操作符的按位版本不进行“短路求值”。
 
@@ -744,11 +1052,24 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.41　获取二进制形式的字符串表示
 
-![](img/image00561.jpeg)
+```powershell
+$size = 64
+$value = [uint64][long](Read-Host 'Enter an integer')
+$mask = [uint64]1 -shl ($size - 1)
+for ($count = 0; $count -lt $size; $count++) {
+    $bit = if (($mask -band $value) -gt 0) { '1' } else { '0' }
+    Write-Host $bit -NoNewline
+    $mask = $mask -shr 1
+}
+Write-Host
+```
 
 输出 4.19
 
-![](img/image00562.jpeg)
+```powershell
+Enter an integer: 42
+0000000000000000000000000000000000000000000000000000000000101010
+```
 
 注意，每次 for 循环（稍后就会讨论）都使用右移位赋值操作符创建与变量 value 中的每一位对应的掩码。使用按位操作符&，可判断一个特定的位是否已设置（是否设为 1）。如掩码测试生成非零结果，就将 1 写到控制台，否则写 0。这样可真实反映一个无符号长整数的二进制形式。
 
@@ -762,13 +1083,25 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 代码清单 4.42　使用逻辑赋值操作符
 
-![](img/image00563.jpeg)
+```powershell
+$and = 12
+$or = 12
+$xor = 12
+$and -band 7
+$or = $or -bor 7
+$xor = $xor -bxor 7
+Write-Output "and = $and`nor = $or`nxor = $xor"
+```
 
 输出 4.20 展示了结果。
 
 输出 4.20
 
-![](img/image00564.jpeg)
+```powershell
+and = 4
+or = 15
+xor = 11
+```
 
 使用 fields &=mask 这样的表达式将位映射与掩码合并，会从 fields 中消除 mask 中没有设置的位。相反，fields &=~mask 从 fields 中消除 mask 中已设置的位。
 
@@ -784,13 +1117,31 @@ C# 8.0 引入了空合并赋值操作符，可以简单地理解为：如果等�
 
 目前学习的都是只执行一遍的程序。但计算机的关键优势之一是能多次执行相同操作。为此需要创建指令循环。本节讨论的第一个指令循环是 while 循环，它是最简单的条件循环。while 语句的常规形式如下：
 
-![](img/image00565.jpeg)
+```powershell
+while ($condition) {
+    $statement
+}
+```
 
-条件（condition）必须是布尔表达式，只要它求值为 true，作为循环主体的语句（statement）就会反复执行。如果条件求值为 false，就跳过循环主体，从它之后的语句执行。注意循环主体会一直执行，即使这个过程中条件变成 false。除非回到“循环顶部”重新求值条件，而且结果是 false，否则循环不会退出。代码清单 4.43 用一个斐波那契计算器演示了 while 循环语句的用法。  
+条件（condition）必须是布尔表达式，只要它求值为 true，作为循环主体的语句（statement）就会反复执行。如果条件求值为 false，就跳过循环主体，从它之后的语句执行。注意循环主体会一直执行，即使这个过程中条件变成 false。除非回到“循环顶部”重新求值条件，而且结果是 false，否则循环不会退出。代码清单 4.43 用一个斐波那契计算器演示了 while 循环语句的用法。
 
 代码清单 4.43　while 循环示例
 
-![](img/image00566.jpeg)![](img/image00567.jpeg)
+```powershell
+$input = [decimal](Read-Host 'Enter a positive integer:')
+$current = [decimal]1
+$previous = [decimal]1
+while ($current -le $input) {
+    $temp = $current
+    $current = $previous + $current
+    $previous = $temp
+}
+Write-Output "The Fibonacci number following this is $current"
+```
+
+```powershell
+The Fibonacci number following this is 13
+```
 
 斐波那契数 是斐波那契数列 的成员，数列中所有数都是数列中前两个数之和。数列最开头两个数是 1 和 1。代码清单 4.43 中提示输入整数，使用 while 循环寻找比输入的数大的第一个斐波那契数。
 
@@ -802,13 +1153,23 @@ do/while 循环与 while 循环非常相似，只是最适合需要循环 1～n 
 
 代码清单 4.44　do/while 循环示例
 
-![](img/image00568.jpeg)
+```powershell
+do {
+    $valid = $false
+    $input = Read-Host "`nPlayer ${currentPlayer}: Enter move:"
+    # Check the current player's input and set $valid
+} while (-not $valid)
+```
 
 代码清单 4.44 在每次迭代 ^( [\[1\]](part0036.xhtml#ch1_back) ) 或循环开始的时候将 valid 设为 false。接着提示并获取用户输入的数。虽然这部分在代码中省略了，但接下来的操作是检查输入是否正确。如正确，就将 true 赋给 valid。由于代码使用 do/while 而不是 while 语句，所以至少提示用户输入一次。
 
 do/while 循环的常规形式如下：
 
-![](img/image00569.jpeg)
+```powershell
+do {
+    $statement
+} while ($condition)
+```
 
 和所有控制流程语句一样，循环主体通常是代码块，以便执行多个语句。但也可将单一语句作为循环主体（标签语句和局部变量声明除外）。
 
@@ -820,15 +1181,32 @@ for 循环反复执行代码块直至满足指定条件。这一点与 while 循
 
 代码清单 4.45　使用 for 循环
 
-![](img/image00570.jpeg)
+```powershell
+$size = 64
+$value = [uint64][long](Read-Host 'Enter an integer: ')
+$mask = [uint64]1 -shl ($size - 1)
+for ($count = 0; $count -lt $size; $count++) {
+    $bit = if (($mask -band $value) -gt 0) { '1' } else { '0' }
+    Write-Host $bit -NoNewline
+    $mask = $mask -shr 1
+}
+Write-Host
+```
 
 输出 4.21
 
-![](img/image00571.jpeg)
+```powershell
+Enter an integer: -42
+1111111111111111111111111111111111111111111111111111010110
+```
 
 代码清单 4.45 执行位掩码 64 次，对用户输入的数中的每一位都应用一次。for 循环头部包含三个部分。第一部分声明并初始化变量 count，第二部分描述 for 循环主体的执行条件，第三部分描述如何更新循环变量。for 循环的常规形式如下：
 
-![](img/image00572.jpeg)
+```powershell
+for ($initial; $condition; $loop) {
+    $statement
+}
+```
 
 下面解释了 for 循环的各个部分。
 
@@ -862,13 +1240,23 @@ initial 和 loop 表达式支持多个循环变量，如代码清单 4.46 所示
 
 代码清单 4.46　使用多个表达式的 for 循环
 
-![](img/image00573.jpeg)
+```powershell
+$x = 0
+$y = 5
+while ($x -le 5 -and $y -ge 0) {
+    Write-Output "$x`t$y"
+    $y--
+    $x++
+}
+```
 
 结果如输出 4.22 所示。
 
 输出 4.22
 
-![](img/image00574.jpeg)
+```powershell
+0<5 1<4 2<3 3<2 4<1 5<0
+```
 
 initial 部分声明并初始化两个循环变量。尽管看起来复杂，但起码像是在一个语句中声明多个局部变量，还算正常。loop 部分则看起来不正常，因为它包含以逗号分隔的表达式列表，而非单一表达式。
 
@@ -878,7 +1266,13 @@ initial 部分声明并初始化两个循环变量。尽管看起来复杂，但
 
 任何 for 循环都能改写成 while 循环：
 
-![](img/image00575.jpeg)
+```powershell
+$initial
+while ($condition) {
+    $statement
+    $loop
+}
+```
 
 ![](img/image00300.jpeg)设计规范
 
@@ -892,7 +1286,11 @@ C#最后一个循环语句是 foreach，它迭代数据项集合，设置循环�
 
 foreach 语句的常规形式如下：
 
-![](img/image00576.jpeg)
+```powershell
+foreach ($variable in $collection) {
+    $statement
+}
+```
 
 下面解释了 foreach 语句的各个部分。
 
@@ -908,13 +1306,28 @@ foreach 语句的常规形式如下：
 
 代码清单 4.47　使用 foreach 循环判断剩余走棋
 
-![](img/image00577.jpeg)![](img/image00578.jpeg)
+```powershell
+$cells = '1','2','3','4','5','6','7','8','9'
+```
+
+```powershell
+$cells = '1','2','3','4','5','6','7','8','9'
+Write-Host 'The available moves are as follows: ' -NoNewline
+foreach ($cell in $cells) {
+    if ($cell -ne 'O' -and $cell -ne 'X') {
+        Write-Host "$cell " -NoNewline
+    }
+}
+Write-Host
+```
 
 输出 4.23 展示了代码清单 4.47 的结果。
 
 输出 4.23
 
-![](img/image00579.jpeg)
+```powershell
+The available moves are as follows: 1 2 3 4 5 6 7 8 9
+```
 
 执行到 foreach 语句时，将 cells 数组的第一项，也就是值'1'赋给 cell 变量。然后执行 foreach 循环主体。if 语句判断 cell 的值是否等于'O'或'X'，两者都不是就在控制台上输出 cell 的值。下次循环将数组的下个值赋给 cell，以此类推。
 
@@ -926,7 +1339,25 @@ foreach 语句的常规形式如下：
 
 代码清单 4.48　用 if 语句检查玩家输入
 
-![](img/image00580.jpeg)![](img/image00581.jpeg)
+```powershell
+switch ($input) {
+    '1' { $valid = $true; break }
+    '2' { $valid = $true; break }
+    '3' { $valid = $true; break }
+    '4' { $valid = $true; break }
+    '5' { $valid = $true; break }
+    '6' { $valid = $true; break }
+    '7' { $valid = $true; break }
+    '8' { $valid = $true; break }
+    '9' { $valid = $true; break }
+    { $input.Length -eq 0 -or $input -eq 'quit' } { $valid = $true; break }
+    default { Write-Output "`nERROR: Enter a value from 1-9.`nPush ENTER to quit" }
+}
+```
+
+```powershell
+# Continuation of the switch-based input validation
+```
 
 代码验证用户输入的文本，确定是一步有效的井字棋走棋。例如，假定 input 的值是 9，那么程序不得不执行 9 次求值。显然，更好的思路是只在一次求值之后就跳转到正确的代码。这种情况下应使用 switch 语句。
 
@@ -934,7 +1365,12 @@ foreach 语句的常规形式如下：
 
 当将一个值和多个常量值比较时，switch 比 if 语句更易理解。其常规形式如下：
 
-![](img/image00582.jpeg)
+```powershell
+switch ($expression) {
+    { $_ -eq $constant } { $statements }
+    default { $statements }
+}
+```
 
 下面解释了 switch 语句的各个部分。
 
@@ -956,7 +1392,31 @@ switch 语句应至少有一个 switch 小节，switch(x){}合法但会产生一
 
 代码清单 4.49　将 if 语句替换成 switch 语句
 
-![](img/image00583.jpeg)![](img/image00584.jpeg)
+```powershell
+function Test-AndMove([int[]]$playerPositions, [int]$currentPlayer, [string]$input) {
+    $valid = $false
+    switch ($input) {
+        '1' { $valid = $true; break }
+        '2' { $valid = $true; break }
+        '3' { $valid = $true; break }
+        '4' { $valid = $true; break }
+        '5' { $valid = $true; break }
+        '6' { $valid = $true; break }
+        '7' { $valid = $true; break }
+        '8' { $valid = $true; break }
+        '9' { $valid = $true; break }
+        '' { $valid = $true; break }
+        'quit' { $valid = $true; break }
+        default { Write-Output "`nERROR: Enter a value from 1-9.`nPush ENTER to quit" }
+    }
+    return $valid
+}
+```
+
+```powershell
+# End of the switch statement
+return $valid
+```
 
 代码清单 4.49 中的 input 是要测试的表达式。由于 input 是字符串，所以主导类型是 string。如 input 的值是"1"，"2"，…，"9"，那么走棋有效（valid=true），然后更改相应的单元格，使之与当前用户的标记（X 或 O）匹配。遇到 break 语句会立即跳转到 switch 语句之后的语句。
 
@@ -990,13 +1450,31 @@ C#使用 break 语句退出循环或 switch 语句。任何时候遇到 break �
 
 代码清单 4.50　发现赢家就用 break 跳出循环
 
-![](img/image00585.jpeg)
+```powershell
+$winner = 0
+$playerPositions = @(0, 0)
+$playerPositions[0] = 449
+$playerPositions[1] = 28
+$winningMasks = @(7, 56, 448, 73, 146, 292, 84, 273)
+foreach ($mask in $winningMasks) {
+    if (($mask -band $playerPositions[0]) -eq $mask) {
+        $winner = 1
+        break
+    } elseif (($mask -band $playerPositions[1]) -eq $mask) {
+        $winner = 2
+        break
+    }
+}
+Write-Output "Player $winner was the winner"
+```
 
 输出 4.24 展示了结果。
 
 输出 4.24
 
-![](img/image00586.jpeg)
+```powershell
+Player 1 was the winner
+```
 
 代码清单 4.50 发现有玩家取胜后就执行 break 语句。break 强迫它所在的循环（或 switch 语句）终止，控制转移到循环（或 switch 语句）后的下一个语句。在本例中，如果位比较返回 true（当前棋盘上已有玩家取胜）就执行 break 语句，跳出当前 foreach 循环并显示赢家。
 
@@ -1008,7 +1486,11 @@ C#使用 break 语句退出循环或 switch 语句。任何时候遇到 break �
 
 代码清单 4.51　设置与玩家每次走棋对应的位
 
-![](img/image00587.jpeg)
+```powershell
+$shifter = [int]$input - 1
+$position = 1 -shl $shifter
+$playerPositions[$currentPlayer - 1] = $playerPositions[$currentPlayer - 1] -bor $position
+```
 
 之后就可迭代与棋盘上的取胜布局对应的每一个掩码，判断当前玩家是否得到了一个取胜布局，就像代码清单 4.50 展示的那样。
 
@@ -1020,11 +1502,27 @@ C#使用 break 语句退出循环或 switch 语句。任何时候遇到 break �
 
 代码清单 4.52　判断电子邮件地址的域
 
-![](img/image00588.jpeg)
+```powershell
+$email = Read-Host 'Enter an email address'
+$insideDomain = $false
+Write-Host 'The email domain is: ' -NoNewline
+foreach ($letter in $email.ToCharArray()) {
+    if (-not $insideDomain) {
+        if ($letter -eq '@') { $insideDomain = $true }
+        continue
+    }
+    Write-Host $letter -NoNewline
+}
+Write-Host
+```
 
 输出 4.25
 
-![](img/image00589.jpeg)
+```powershell
+Enter an email address:
+mark@IntelliTect.com
+The email domain is: IntelliTect.com
+```
 
 在代码清单 4.52 中，在遇到电子邮件地址的域部分之前，需一直使用 continue 语句来跳至电子邮件地址的下一个字符。
 
@@ -1032,7 +1530,15 @@ C#使用 break 语句退出循环或 switch 语句。任何时候遇到 break �
 
 代码清单 4.53　将 continue 替换成 if 语句
 
-![](img/image00590.jpeg)
+```powershell
+foreach ($letter in $email.ToCharArray()) {
+    if ($insideDomain) {
+        Write-Host $letter -NoNewline
+    } elseif ($letter -eq '@') {
+        $insideDomain = $true
+    }
+}
+```
 
 ### 4.9.3　goto 语句
 
@@ -1040,13 +1546,37 @@ C#使用 break 语句退出循环或 switch 语句。任何时候遇到 break �
 
 代码清单 4.54　演示带 goto 的 switch 语句
 
-![](img/image00591.jpeg)![](img/image00592.jpeg)
+```powershell
+$isOutputSet = $false
+$isFiltered = $false
+foreach ($option in $args) {
+    switch ($option) {
+        '/out' { $isOutputSet = $true; $isFiltered = $false; continue }
+        '/f' { $isFiltered = $true; continue }
+        default {
+            if ($isRecursive) { # Recurse down the hierarchy
+            } elseif ($isFiltered) { # Add option to list of filters
+            }
+        }
+    }
+}
+```
+
+```powershell
+if ($isRecursive) {
+    # Recurse down the hierarchy
+} elseif ($isFiltered) {
+    # Add option to list of filters
+}
+```
 
 输出 4.26 演示了如何执行代码清单 4.54 的代码。
 
 输出 4.26
 
-![](img/image00593.jpeg)
+```powershell
+PS> .\Generate.ps1 /out fizbottle.bin /f '*.xml' '*.wsdl'
+```
 
 要跳转到标签不是 default 的其他 switch 小节，可以使用 goto case constant;语法；其中 constant 是在目标标签中指定的常量。要跳转到没有和 switch 小节关联的语句，在目标语句前添加标识符和冒号，并在 goto 语句中使用该标识符。例如，可以写标签语句 myLabel : Console.WriteLine();，然后用 goto myLabel;跳到那里。幸好，C#禁止通过 goto 跳入代码块。只能用 goto 在代码块内部跳转或跳到一个包围当前块的代码块。通过这个限制，C#避免了在其他语言中可能遇到的大多数滥用 goto 的情况。
 
@@ -1086,7 +1616,11 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.55　遇到 C# 1.x 编译器就排除 C# 2.0 代码
 
-![](img/image00596.jpeg)
+```powershell
+if ($CSharp2Plus) {
+    [Console]::Clear()
+}
+```
 
 本例调用了 System.Console.Clear()方法，只有 2.0 或更高版本才支持。使用#if 和#endif 预处理器指令，这行代码只有在定义了预处理器符号 CSHARP2PLUS 的前提下才会编译。
 
@@ -1098,7 +1632,13 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.56　使用#if、#elif 和#endif 指令
 
-![](img/image00597.jpeg)
+```powershell
+if ($IsLinux) {
+    # Linux-specific code
+} elseif ($IsWindows) {
+    # Windows-specific code
+}
+```
 
 ### 4.10.2　定义预处理器符号
 
@@ -1106,13 +1646,17 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.57　#define 例子
 
-![](img/image00598.jpeg)
+```powershell
+$CSharp2Plus = $true
+```
 
 第二种方式是在编译时使用 define 选项，输出 4.27 演示了在 dotnet 命令行上的用法。
 
 输出 4.27
 
-![](img/image00599.jpeg)
+```powershell
+dotnet.exe -define:CSHARP2PLUS TicTacToe.cs
+```
 
 多个定义以分号分隔。使用 define 编译器选项的优点是不需要更改源代码，所以可用相同的源代码文件生成两套不同的二进制程序。
 
@@ -1124,11 +1668,17 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.58　用#warning 定义警告
 
-![](img/image00600.jpeg)
+```powershell
+#warning 'Same move allowed multiple times.'
+```
 
 输出 4.28
 
-![](img/image00601.jpeg)
+```powershell
+Performing main compilation...
+.\TicTacToe.cs(471,16): warning CS1030: #warning: Same move allowed multiple times.
+Build complete: 0 errors, 1 warning
+```
 
 包含#warning 指令后，编译器会主动发出警告，如输出 4.28 所示。可用这种警告标记代码中潜在的 bug 和可能改善的地方。它是提醒开发者任务尚未完结的好帮手。
 
@@ -1138,7 +1688,9 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.59　使用预处理器指令#pragma 禁用#warning 指令
 
-![](img/image00602.jpeg)
+```powershell
+# PowerShell has no pragma warning directive; suppress warnings in the invoking tool.
+```
 
 注意，编译器输出时会在警告编号前附加 CS 前缀。但在用#pragma 禁用警告时可以不添加该前缀。
 
@@ -1146,7 +1698,9 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.60　使用预处理器指令#pragma 还原警告
 
-![](img/image00603.jpeg)
+```powershell
+# Restore warning behavior in the invoking tool.
+```
 
 上述两条指令正好可以将一个特定的代码块包围起来——前提是已知该警告不适用于该代码块。
 
@@ -1158,7 +1712,9 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 输出 4.29
 
-![](img/image00604.jpeg)
+```powershell
+dotnet build /p:NoWarn="0219"
+```
 
 ### 4.10.6　指定行号
 
@@ -1166,13 +1722,20 @@ C 和 C++等语言用预处理器对代码进行整理，根据特殊的记号�
 
 代码清单 4.61　#line 预处理器指令
 
-![](img/image00605.jpeg)
+```powershell
+# PowerShell has no #line directive; preserve source locations in comments if needed.
+Write-Warning 'Same move allowed multiple times.'
+```
 
 在上例中，使用#line 指令后，编译器会将实际发生在 125 行的警告报告在 113 行上发生，如输出 4.30 所示。
 
 输出 4.30
 
-![](img/image00606.jpeg)
+```powershell
+Performing main compilation...
+.\TicTacToe.cs (113,18): warning CS1030: #warning: Same move allowed multiple times.
+Build complete: 0 errors, 1 warning
+```
 
 在#line 指令后添加 default，会反转之前的所有#line 的效果，并指示编译器报告真实的行号，而不是之前使用#line 指定的行号。
 
@@ -1184,7 +1747,18 @@ C#提供了只有在可视代码编辑器中才有用的两个预处理器指令
 
 代码清单 4.62　#region 和#endregion 预处理器指令
 
-![](img/image00607.jpeg)
+```powershell
+#region Display Tic-tac-toe Board
+# Display the current board
+$border = 0
+Write-Host $borders[2] -NoNewline
+foreach ($cell in $cells) {
+    Write-Host " $cell $($borders[$border])" -NoNewline
+    $border++
+    if ($border -eq 3) { $border = 0 }
+}
+#endregion Display Tic-tac-toe Board
+```
 
 Visual Studio 检查上述代码，在编辑器左侧提供树形控件来展开和折叠由#region 和#endregion 指令界定的代码区域，如图 4.5 所示。
 
