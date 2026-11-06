@@ -12,7 +12,11 @@
 
 代码清单 16.1　简单查询表达式
 
-![](img/image01223.jpeg)
+```powershell
+$keywords = @('abstract','add','alias','as','ascending','async','await','by','base','bool','break','byte','case','catch','char','checked','class','const','continue','decimal','default','delegate','descending','do','double','dynamic','else','enum','event','equals','explicit','extern','false','finally','fixed','float','for','foreach','from','global','group','if','implicit','in','int','interface','internal','is','lock','long','namespace','new','null','object','operator','orderby','out','override','params','partial','private','protected','public','readonly','ref','remove','return','sbyte','sealed','select','set','short','sizeof','stackalloc','static','string','struct','switch','this','throw','true','try','typeof','uint','ulong','unchecked','unsafe','ushort','using','value','var','virtual','void','volatile','where','while','yield')
+$selection = $keywords | Where-Object { $_ -notmatch '\*' }
+$selection | ForEach-Object { Write-Host -NoNewline "$_ " }
+```
 
 输出 16.1
 
@@ -40,7 +44,11 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.2　使用查询表达式来投射
 
-![](img/image01225.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    ForEach-Object { $_ } |
+    ForEach-Object { '{0} ({1})' -f $_.Name, $_.LastWriteTime }
+```
 
 输出 16.2
 
@@ -52,7 +60,11 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.3　在查询表达式中使用元组
 
-![](img/image01227.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    Select-Object Name, LastWriteTime |
+    ForEach-Object { '{0} ({1})' -f $_.Name, $_.LastWriteTime }
+```
 
 本例在查询结果中只投射出了文件名和它的上一次写入时间。如处理的数据规模不大（比如 FileInfo），像代码清单 16.3 这样的投射对效率的提升并不是特别明显。但假如数据量非常大，而且检索这些数据的代价非常高（例如要通过 Internet 从一台远程计算机上获取），那么像这样在“水平”方向上投射，从而减少与集合中每一项关联的数据量，效率的提升将非常明显。使用元组（C# 7.0 之前使用匿名类型），执行查询时可以不必获取全部数据，而是只在集合中存储和获取需要的数据。
 
@@ -66,7 +78,19 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.4　推迟执行和查询表达式（例 1）
 
-![](img/image01228.jpeg)
+```powershell
+function Is-Keyword {
+    param([string] $word)
+    if ($word -match '\*') {
+        Write-Host -NoNewline ' '
+        return $true
+    }
+    return $false
+}
+$selection = { $keywords | Where-Object { Is-Keyword $_ } }
+Write-Host 'Query created.'
+& $selection | ForEach-Object { Write-Host -NoNewline $_ }
+```
 
 输出 16.3
 
@@ -78,7 +102,26 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.5　推迟执行和查询表达式（例 2）
 
-![](img/image01230.jpeg)![](img/image01231.jpeg)
+```powershell
+$delegateInvocations = 0
+$selection = $keywords | Where-Object { $_ -match '\*' } |
+    ForEach-Object { $delegateInvocations++; $_ }
+Write-Host "1. delegateInvocations=$delegateInvocations"
+Write-Host "2. Contextual keyword count=$(@($selection).Count)"
+Write-Host "3. delegateInvocations=$delegateInvocations"
+Write-Host "4. Contextual keyword count=$(@($selection).Count)"
+Write-Host "5. delegateInvocations=$delegateInvocations"
+$selectionCache = @($selection)
+Write-Host "6. delegateInvocations=$delegateInvocations"
+Write-Host "7. selectionCache count=$($selectionCache.Count)"
+Write-Host "8. delegateInvocations=$delegateInvocations"
+```
+
+```powershell
+Write-Host "delegateInvocations: $delegateInvocations"
+Write-Host "selection cache count: $($selectionCache.Count)"
+Write-Host "delegateInvocations: $delegateInvocations"
+```
 
 输出 16.4
 
@@ -104,7 +147,11 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.6　用 where 子句进行筛选
 
-![](img/image01233.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    Where-Object { $_.LastWriteTime -lt (Get-Date).AddMonths(-1) } |
+    ForEach-Object { "{0} ({1})" -f $_.FullName, $_.LastWriteTime }
+```
 
 输出 16.5
 
@@ -116,7 +163,11 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.7　使用 orderby 子句进行排序
 
-![](img/image01235.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    Sort-Object @{Expression={$_.Length};Descending=$true}, Name |
+    ForEach-Object { $_.Name }
+```
 
 代码清单 16.7 使用 orderby 子句来排序由 Directory.GetFiles()返回的文件，首先按文件长度降序排序，再按文件名升序排序。多个排序条件以逗号分隔。在这个例子中，如果两个文件的长度相同，则再按文件名排序。ascending 和 descending 是上下文关键字，分别指定以升序或降序排序。将排序顺序指定为升序或降序是可选的（例如，filename 就没有指定）。没有指定排序顺序就默认为 ascending。
 
@@ -126,13 +177,21 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 代码清单 16.8　投射一个 FileInfo 集合并按文件长度排序
 
-![](img/image01236.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    Sort-Object Length, Name |
+    ForEach-Object { "{0} ({1})" -f $_.Name, $_.LastWriteTime }
+```
 
 遗憾的是，虽然结果正确，但代码清单 16.8 会为来源集合中的每一项都实例化 FileInfo 对象两次。可用 let 子句避免这种无谓的、可能非常昂贵的开销，如代码清单 16.9 所示。
 
 代码清单 16.9　用 let 避免多余的实例化
 
-![](img/image01237.jpeg)
+```powershell
+Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
+    Sort-Object Length, Name |
+    Select-Object Name, Length
+```
 
 let 子句引入一个新的范围变量，它容纳的表达式值可在查询表达式剩余部分使用。可添加任意数量的 let 子句，只需把它放在第一个 from 子句之后、最后一个 select/group by 子句之前。
 
@@ -142,7 +201,13 @@ let 子句引入一个新的范围变量，它容纳的表达式值可在查询�
 
 代码清单 16.10　分组查询结果
 
-![](img/image01238.jpeg)
+```powershell
+$groups = $keywords | Group-Object { $_ -notmatch '\*' }
+foreach ($group in $groups) {
+    Write-Host "Contextual keyword: $($group.Name)"
+    $group.Group | ForEach-Object { Write-Host "  $_" }
+}
+```
 
 输出 16.6
 
@@ -156,7 +221,15 @@ let 子句引入一个新的范围变量，它容纳的表达式值可在查询�
 
 代码清单 16.11　在 group by 子句后面选择一个元组
 
-![](img/image01240.jpeg)
+```powershell
+$groups = $keywords | Group-Object { $_ -notmatch '\*' }
+$groups | ForEach-Object {
+    [pscustomobject]@{ IsContextualKeyword = [bool]$_.Name; Items = $_.Group }
+} | ForEach-Object {
+    Write-Host "Contextual keyword: $($_.IsContextualKeyword)"
+    $_.Items | ForEach-Object { Write-Host "  $_" }
+}
+```
 
 输出 16.7
 
@@ -170,7 +243,19 @@ group 子句使查询生成由 IGrouping<TKey, TElement>对象构成的集合—
 
 代码清单 16.12　用查询延续子句扩展查询
 
-![](img/image01242.jpeg)![](img/image01243.jpeg)
+```powershell
+$groups = $keywords |
+    Where-Object { $_ -notmatch '\*' } |
+    Group-Object { $_ -notmatch '\*' } |
+    ForEach-Object { [pscustomobject]@{ IsContextualKeyword=[bool]$_.Name; Items=$_.Group } }
+```
+
+```powershell
+$groups | ForEach-Object {
+    Write-Host "Contextual keyword: $($_.IsContextualKeyword)"
+    $_.Items | ForEach-Object { Write-Host "  $_" }
+}
+```
 
 使用 into 在现有查询结果上运行附加查询，这不是只有以 group 子句结尾的查询才有的福利。相反，它可用于所有查询表达式。查询延续简单地实现了在查询表达式中使用其他查询表达式的结果。into 相当于一个“管道操作符”，它将第一个查询的结果“管道传送”给第二个查询。用这种方式可以链接任意数量的查询。
 
@@ -180,13 +265,19 @@ group 子句使查询生成由 IGrouping<TKey, TElement>对象构成的集合—
 
 代码清单 16.13　多个选择
 
-![](img/image01244.jpeg)
+```powershell
+$keywords | ForEach-Object { $_.ToCharArray() } | ForEach-Object { [string]$_ }
+```
 
 上述查询生成字符序列 a,b,s,t,r,a,c,t,a,d,d,\*,a,l,i,a,…。还可用多个 from 子句生成笛卡尔乘积 ——几个序列所有可能的组合，如代码清单 16.14 所示。
 
 代码清单 16.14　笛卡尔乘积
 
-![](img/image01245.jpeg)
+```powershell
+foreach ($word in $keywords) {
+    foreach ($number in 1,2,3) { [pscustomobject]@{ Word=$word; Number=$number } }
+}
+```
 
 这个查询生成的是一系列对，包括(abstract, 1),(abstract, 2),(abstract, 3), (as, 1), (as, 2), …。
 
@@ -196,7 +287,11 @@ group 子句使查询生成由 IGrouping<TKey, TElement>对象构成的集合—
 
 代码清单 16.15　从查询表达式获取不重复的成员
 
-![](img/image01246.jpeg)
+```powershell
+[System.Linq.Enumerable].GetMembers() |
+    Select-Object -ExpandProperty Name -Unique |
+    ForEach-Object { Write-Host -NoNewline "$_ " }
+```
 
 输出 16.8
 
@@ -212,13 +307,17 @@ group 子句使查询生成由 IGrouping<TKey, TElement>对象构成的集合—
 
 代码清单 16.16　简单查询表达式
 
-![](img/image01248.jpeg)
+```powershell
+$selection = $keywords | Where-Object { $_ -notmatch '\*' }
+```
 
 编译之后，代码清单 16.16 的表达式会转换成一个由 System.Linq.Enumerable 提供的 IEnumerable<T>扩展方法调用，如代码清单 16.17 所示。
 
 代码清单 16.17　查询表达式转换成标准查询操作符语法
 
-![](img/image01249.jpeg)
+```powershell
+$selection = $keywords | Where-Object { $_ -notmatch '\*' }
+```
 
 如第十五章所述，Lambda 表达式随后由编译器进行转换来生成一个方法。方法主体就是 Lambda 的主体，使用时会分配一个对该方法的委托。
 

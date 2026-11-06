@@ -18,7 +18,28 @@
 
 代码清单 22.1　未同步的状态
 
-![](img/image01448.jpeg)
+```powershell
+$script:_Total = [int]::MaxValue
+$script:_Count = [long]0
+
+function Decrement {
+    # 递减
+    for ($i = 0; $i -lt $script:_Total; $i++) {
+        $script:_Count--
+    }
+}
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] { Decrement })
+
+# 递增
+for ($i = 0; $i -lt $script:_Total; $i++) {
+    $script:_Count++
+}
+
+$task.Wait()
+Write-Host "Count = $script:_Count"
+```
 
 输出 22.1 展示了代码清单 22.1 的一个可能的输出结果。
 
@@ -46,7 +67,20 @@
 
 代码清单 22.2　未同步的局部变量
 
-![](img/image01451.jpeg)
+```powershell
+$x = 0
+# 并行 for 循环中，多个线程并发访问 $x，造成竞态条件
+[System.Threading.Tasks.Parallel]::For(
+    0,
+    [int]::MaxValue,
+    [Action[int]]{
+        param($i)
+        $script:x++
+        $script:x--
+    })
+
+Write-Host "Count = $x"
+```
 
 本例在一个并行 for 循环中访问 x（一个局部变量），使多个线程可以同时修改它，造成和代码清单 22.1 非常相似的竞态条件。即使 x 新增和递减相同的次数，输出也不一定是 0。
 
@@ -58,7 +92,49 @@
 
 代码清单 22.3　显式使用监视器来同步
 
-![](img/image01452.jpeg)![](img/image01453.jpeg)
+```powershell
+# 同步对象：私有只读字段
+$script:_Sync = [object]::new()
+$script:_Total = [int]::MaxValue
+$script:_Count = [long]0
+
+function Decrement {
+    for ($i = 0; $i -lt $script:_Total; $i++) {
+        $lockTaken = $false
+        try {
+            [System.Threading.Monitor]::Enter($script:_Sync, [ref]$lockTaken)
+            $script:_Count--
+        }
+        finally {
+            if ($lockTaken) {
+                [System.Threading.Monitor]::Exit($script:_Sync)
+            }
+        }
+    }
+}
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] { Decrement })
+
+# 递增
+for ($i = 0; $i -lt $script:_Total; $i++) {
+    $lockTaken = $false
+    try {
+        [System.Threading.Monitor]::Enter($script:_Sync, [ref]$lockTaken)
+        $script:_Count++
+    }
+    finally {
+        if ($lockTaken) {
+            [System.Threading.Monitor]::Exit($script:_Sync)
+        }
+    }
+}
+
+$task.Wait()
+Write-Host "Count = $script:_Count"
+```
+
+PowerShell 没有 C# 的 `lock` 关键字，这里显式使用 `[System.Threading.Monitor]::Enter()`/`Exit()` 并配合 try/finally 表达相同的同步模式。
 
 输出 22.2 展示了代码清单 22.3 的结果。
 
@@ -76,7 +152,43 @@ Monitor 还支持 Pulse()方法，允许线程进入“就绪队列”（ready q
 
 代码清单 22.4　用 lock 关键字同步
 
-![](img/image01455.jpeg)
+```powershell
+# 同步对象：私有只读字段
+$script:_Sync = [object]::new()
+$script:_Total = [int]::MaxValue
+$script:_Count = [long]0
+
+function Decrement {
+    for ($i = 0; $i -lt $script:_Total; $i++) {
+        [System.Threading.Monitor]::Enter($script:_Sync)
+        try {
+            $script:_Count--
+        }
+        finally {
+            [System.Threading.Monitor]::Exit($script:_Sync)
+        }
+    }
+}
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] { Decrement })
+
+# 递增
+for ($i = 0; $i -lt $script:_Total; $i++) {
+    [System.Threading.Monitor]::Enter($script:_Sync)
+    try {
+        $script:_Count++
+    }
+    finally {
+        [System.Threading.Monitor]::Exit($script:_Sync)
+    }
+}
+
+$task.Wait()
+Write-Host "Count = $script:_Count"
+```
+
+PowerShell 没有 C# 的 `lock` 关键字，这里用 `[System.Threading.Monitor]::Enter()`/`Exit()` 配 try/finally 来表示等价的锁定同步。
 
 输出 22.3
 
@@ -94,7 +206,43 @@ Monitor 还支持 Pulse()方法，允许线程进入“就绪队列”（ready q
 
 代码清单 22.5　C# 7.1 的 async Main()
 
-![](img/image01457.jpeg)![](img/image01458.jpeg)
+```powershell
+# 同步对象：私有只读字段
+$script:_Sync = [object]::new()
+$script:_Total = [int]::MaxValue
+$script:_Count = [long]0
+
+function Decrement {
+    for ($i = 0; $i -lt $script:_Total; $i++) {
+        [System.Threading.Monitor]::Enter($script:_Sync)
+        try {
+            $script:_Count--
+        }
+        finally {
+            [System.Threading.Monitor]::Exit($script:_Sync)
+        }
+    }
+}
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] { Decrement })
+
+# 递增
+for ($i = 0; $i -lt $script:_Total; $i++) {
+    [System.Threading.Monitor]::Enter($script:_Sync)
+    try {
+        $script:_Count++
+    }
+    finally {
+        [System.Threading.Monitor]::Exit($script:_Sync)
+    }
+}
+
+# C# 中用 await task 等待任务；PowerShell 脚本顶层不支持 async/await，
+# 故用 GetAwaiter().GetResult() 达到相同效果
+$task.GetAwaiter().GetResult()
+Write-Host "Count = $script:_Count"
+```
 
 ### 22.1.3　lock 对象的选择
 
@@ -146,7 +294,16 @@ Monitor 还支持 Pulse()方法，允许线程进入“就绪队列”（ready q
 
 代码清单 22.6　用 System.Threading.Interlocked 同步
 
-![](img/image01459.jpeg)
+```powershell
+$script:_Data = $null
+
+# 若 _Data 为 null，则将其设为 $newValue
+function Initialize($newValue) {
+    [System.Threading.Interlocked]::CompareExchange([ref]$script:_Data, $newValue, $null)
+}
+```
+
+`[ref]` 在 PowerShell 中用于按引用传递参数，对应于 C# 的 `ref _Data`。
 
 表 22.2　Interlock 提供的与同步相关的方法
 
@@ -162,21 +319,40 @@ Monitor 还支持 Pulse()方法，允许线程进入“就绪队列”（ready q
 
 代码清单 22.7　触发事件通知
 
-![](img/image01462.jpeg)
+```powershell
+# 以下片段位于类方法内部，$this 指当前实例
+# 非线程安全
+if ($null -ne $OnTemperatureChanged) {
+    # 调用订阅者
+    & $OnTemperatureChanged $this ([TemperatureEventArgs]::new($value))
+}
+```
 
 只要该方法和事件订阅者之间没有竞态条件，代码就是有效的。但这段代码不是原子性的，所以多个线程可能造成竞态条件。从检查 OnTemperatureChange 是否为 null 到实际触发事件这段时间里，OnTemperatureChange 可能被设为 null，导致抛出一个 NullReferenceException。换言之，如委托可能由多个线程同时访问，就需同步委托的赋值和触发。
 
 C# 6.0 为这个问题提供了轻松的解决方案。使用空条件操作符就可以了。
 
-![](img/image01463.jpeg)
+```powershell
+# PowerShell 没有 C# 的空条件操作符（?.）。这里用显式 null 检查表达相同意图。
+if ($null -ne $OnTemperature) {
+    & $OnTemperature $this ([TemperatureEventArgs]::new($value))
+}
+```
 
-空条件操作符专门设计为原子性操作，所以这个委托调用实际是原子性的。显然，关键在于记得使用空条件操作符。
+C# 中 `OnTemperature?.Invoke(...)` 被专门设计为原子性操作，所以这个委托调用实际是原子性的。显然，关键在于记得使用空条件操作符。PowerShell 脚本层无法保证“检查 + 调用”的原子性，需要线程安全的委托调用时请采用代码清单 22.8 的拷贝再触发模式。
 
 而在 C# 6.0 之前，虽然要写更多的代码，但线程安全的委托调用也不是很难实现。关键在于，用于添加和删除侦听器的操作符是线程安全的，而且是静态的（操作符重载通过静态方法完成）。为修正代码清单 22.7 使其变得线程安全，需创建一个拷贝，检查拷贝是否为 null，再触发该拷贝（参见代码清单 22.8）。
 
 代码清单 22.8　线程安全的事件通知
 
-![](img/image01464.jpeg)
+```powershell
+# 先把委托拷贝到局部变量，再对局部变量做 null 检查并触发
+$localOnChange = $OnTemperatureChanged
+if ($null -ne $localOnChange) {
+    # 调用订阅者
+    & $localOnChange $this ([TemperatureEventArgs]::new($value))
+}
+```
 
 由于委托是引用类型，所以有人觉得奇怪：为什么赋值一个局部变量，再触发那个局部变量，就足以使 null 检查成为线程安全的操作？由于 localOnChange 和 OnTemperature-Change 指向同一位置，所以有人会认为：OnTemperatureChange 中的任何改变都会在 localOnChange 中反映出来。
 
@@ -236,7 +412,27 @@ System.Threading.Mutex 在概念上和 System.Threading.Monitor 类几乎完全�
 
 代码清单 22.9　创建单实例应用程序
 
-![](img/image01465.jpeg)
+```powershell
+# 从程序集完整名称获取 mutex 名称
+$mutexName = [System.Reflection.Assembly]::GetEntryAssembly().FullName
+
+# firstApplicationInstance 指示当前是否为第一个应用程序实例
+$firstApplicationInstance = $false
+$mutex = [System.Threading.Mutex]::new(
+    $false, $mutexName, [ref]$firstApplicationInstance)
+
+if (-not $firstApplicationInstance) {
+    Write-Host 'This application is already running.'
+}
+else {
+    Write-Host 'ENTER to shut down'
+    Read-Host | Out-Null
+}
+
+$mutex.Dispose()
+```
+
+PowerShell 没有 C# 的 `using` 语句，这里在结尾显式调用 `Dispose()` 清理 mutex。
 
 运行应用程序的第一个实例，会得到输出 22.4 的结果。
 
@@ -270,7 +466,35 @@ Mutex 的基类是 System.Threading.WaitHandle。后者是由 Mutex、EventWaitH
 
 代码清单 22.10　等待 ManualResetEventSlim
 
-![](img/image01468.jpeg)![](img/image01469.jpeg)
+```powershell
+$script:_MainSignaledResetEvent = [System.Threading.ManualResetEventSlim]::new()
+$script:_DoWorkSignaledResetEvent = [System.Threading.ManualResetEventSlim]::new()
+
+function DoWork {
+    Write-Host 'DoWork() started....'
+    $script:_DoWorkSignaledResetEvent.Set()
+    $script:_MainSignaledResetEvent.Wait()
+    Write-Host 'DoWork() ending....'
+}
+
+Write-Host 'Application started....'
+Write-Host 'Starting task....'
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] { DoWork })
+
+# 阻塞，直到 DoWork() 已经开始
+$script:_DoWorkSignaledResetEvent.Wait()
+Write-Host ' waiting while thread executes...'
+$script:_MainSignaledResetEvent.Set()
+$task.Wait()
+Write-Host 'Thread completed'
+Write-Host 'Application shutting down....'
+
+$script:_MainSignaledResetEvent.Dispose()
+$script:_DoWorkSignaledResetEvent.Dispose()
+```
+
+PowerShell 没有 C# 的 `using` 语句，这里在结尾显式调用 `Dispose()`；`ManualResetEventSlim` 实现了 `IDisposable`。
 
 输出 22.6
 
@@ -330,7 +554,28 @@ Microsoft.NET Framework 4 还引入了一系列并发集合类。这些类专门
 
 代码清单 22.11　用 ThreadLocal<T>实现线程本地存储
 
-![](img/image01473.jpeg)
+```powershell
+# ThreadLocal<T>：每个线程都拥有 _Count 的独立实例
+$script:_Count = [System.Threading.ThreadLocal[double]]::new([Func[double]] { 0.01134 })
+
+function Decrement {
+    $script:_Count.Value = -$script:_Count.Value
+    for ($i = 0; $i -lt [short]::MaxValue; $i++) {
+        $script:_Count.Value--
+    }
+    Write-Host "Decrement Count = $($script:_Count.Value)"
+}
+
+$thread = [System.Threading.Thread]::new([ThreadStart] { Decrement })
+$thread.Start()
+
+# 递增
+for ($i = 0; $i -lt [short]::MaxValue; $i++) {
+    $script:_Count.Value++
+}
+$thread.Join()
+Write-Host "Main Count = $($script:_Count.Value)"
+```
 
 输出 22.7
 
@@ -344,7 +589,33 @@ Microsoft.NET Framework 4 还引入了一系列并发集合类。这些类专门
 
 代码清单 22.12　用 ThreadStaticAttribute 实现线程本地存储
 
-![](img/image01475.jpeg)
+```powershell
+# [ThreadStatic] 字段的初始化器只在初始化类型的线程（主线程）上运行，
+# 其他线程看到的仍是默认值（double 的默认值为 0）。
+# PowerShell 变量不能直接加 [ThreadStatic]，这里用不带值工厂的
+# ThreadLocal<T> 模拟同一语义。
+$script:_Count = [System.Threading.ThreadLocal[double]]::new()
+$script:_Count.Value = 0.01134   # 只有当前（主）线程被初始化
+
+function Decrement {
+    for ($i = 0; $i -lt [short]::MaxValue; $i++) {
+        $script:_Count.Value--
+    }
+    Write-Host "Decrement Count = $($script:_Count.Value)"
+}
+
+$thread = [System.Threading.Thread]::new([ThreadStart] { Decrement })
+$thread.Start()
+
+# 递增
+for ($i = 0; $i -lt [short]::MaxValue; $i++) {
+    $script:_Count.Value++
+}
+$thread.Join()
+Write-Host "Main Count = $($script:_Count.Value)"
+```
+
+由于 `ThreadLocal<T>` 未被赋值的线程返回 `default(double)`，所以 `Decrement()` 线程上的 `_Count` 从 0 开始，与 C# 中 `[ThreadStatic]` 字段初始化器不作用于其他线程的表现一致。
 
 代码清单 22.12 的结果如输出 22.8 所示。
 
@@ -378,7 +649,24 @@ Microsoft.NET Framework 4 还引入了一系列并发集合类。这些类专门
 
 代码清单 22.13　Task.Delay()作为计时器使用
 
-![](img/image01477.jpeg)![](img/image01478.jpeg)
+```powershell
+# 25 个番茄钟工作周期，每个周期显示分钟和秒的进度
+function Tick {
+    param([System.Threading.CancellationToken] $token)
+    for ($minute = 0; $minute -lt 25; $minute++) {
+        Write-Host "Minute $minute"
+        for ($second = 0; $second -lt 60; $second++) {
+            # Task.Delay(1000) 设置一个倒计时器，1 秒后触发并执行之后的代码
+            [System.Threading.Tasks.Task]::Delay(1000, $token).Wait()
+            if ($token.IsCancellationRequested) { break }
+            Write-Host "  Second $second"
+        }
+        if ($token.IsCancellationRequested) { break }
+    }
+}
+```
+
+原 C# 为 `async Task TickAsync()` 并用 `await Task.Delay(1000)`；PowerShell 脚本层不支持 `await`，这里用 `Task.Delay(...).Wait()` 阻塞等待，保持计时器语义。
 
 对 Task.Delay(1000)的调用会设置一个倒计时器，1 秒后触发并执行之后的延续代码。
 

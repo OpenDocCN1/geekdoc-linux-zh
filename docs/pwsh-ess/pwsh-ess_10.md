@@ -32,13 +32,32 @@
 
 代码清单 7.1　从一个类派生出另一个类
 
-![](img/image00787.jpeg)![](img/image00788.jpeg)
+```powershell
+class PdaItem {
+    [string] $Name
+    [datetime] $LastUpdated
+}
+
+class Contact : PdaItem {
+    [string] $Address
+    [string] $Email
+    [string] $Phone
+    [string] $Title
+}
+```
+
+原图代码已改写为 PowerShell 类定义。
 
 代码清单 7.2 展示如何访问 Contact 中定义的属性。
 
 代码清单 7.2　使用继承的属性
 
-![](img/image00789.jpeg)
+```powershell
+$contact = [Contact]::new()
+$contact.Name = 'Inigo Montoya'
+```
+
+
 
 虽然 Contact 没有直接定义 Name 属性，但 Contact 的所有实例都可访问来自 PdaItem 的 Name 属性，并把它作为 Contact 的一部分使用。此外，从 Contact 派生的其他任何类也会继承 PdaItem 类（或者 PdaItem 的父类）的成员。该继承链没有限制，每个派生类都拥有由其所有基类公开的所有成员（参见代码清单 7.3）。换言之，虽然 Customer 不直接从 PdaItem 派生，它依然继承了 PdaItem 的成员。
 
@@ -46,7 +65,14 @@
 
 代码清单 7.3　一个接一个继承构成了继承链
 
-![](img/image00790.jpeg)
+```powershell
+class PdaItem { }
+class Appointment : PdaItem { }
+class Contact : PdaItem { }
+class Customer : Contact { }
+```
+
+
 
 代码清单 7.3 中的 PdaItem 显式地从 object 派生。虽然允许这样写，但没有必要。所有类都隐式派生自 object。
 
@@ -68,11 +94,19 @@
 
 即使类型层次结构允许隐式转型，C#编译器也允许添加转型操作符（虽然多余）。例如，将 contact 赋给 item 可以像下面这样添加转型操作符：
 
-![](img/image00792.jpeg)
+```powershell
+$item = [PdaItem] $contact
+```
+
+
 
 甚至在无须转型时也能添加转型操作符：
 
-![](img/image00793.jpeg)
+```powershell
+$contact = [Contact] $item
+```
+
+
 
 ![](img/image00312.jpeg)注意 　派生类型能隐式转型为它的基类。相反，基类向派生类的转换要求显式的转型操作符，因为转换可能失败。虽然编译器允许可能有效的显式转型，但“运行时”会坚持检查，无效转型将抛出异常。
 
@@ -90,7 +124,17 @@
 
 代码清单 7.5　定义转型操作符
 
-![](img/image00794.jpeg)
+```powershell
+class GPSCoordinates { }
+class UTMCoordinates {
+    static [UTMCoordinates] FromGps([GPSCoordinates] $coordinates) {
+        # 转换实现
+        return [UTMCoordinates]::new()
+    }
+}
+```
+
+PowerShell 没有 C# 用户定义的 implicit/explicit 转换操作符，故以显式工厂方法表达同一转换意图。
 
 本例实现从 GPSCoordinates 向 UTMCoordinates 的隐式转换。可以写类似的转换来反转上述过程。将 implicit 替换成 explicit 就是显式转换。
 
@@ -100,7 +144,20 @@
 
 代码清单 7.6　私有成员继承但不能访问
 
-![](img/image00795.jpeg)![](img/image00796.jpeg)
+```powershell
+class PdaItem {
+    hidden [string] $_Name
+    [string] $Name
+}
+
+class Contact : PdaItem { }
+
+$contact = [Contact]::new()
+$contact.Name = 'Inigo Montoya'
+# $contact._Name 不能作为公共 API 访问
+```
+
+
 
 根据封装原则，派生类不能访问基类的 private 成员^( [\[1\]](part0069.xhtml#ch1_back) ) 。这就强迫基类开发者决定一个成员是否能由派生类访问。本例的基类定义了一个 API，其中\_Name 只能通过 Name 属性更改。假如以后在 Name 属性中添加了验证机制，那么所有派生类不需要任何修改就能马上享受到验证带来的好处，因为它们从一开始就不能直接访问\_Name 字段。
 

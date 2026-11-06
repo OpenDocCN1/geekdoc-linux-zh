@@ -10,7 +10,23 @@
 
 代码清单 21.1　计算 pi 值的串行算法
 
-![](img/image01429.jpeg)
+```powershell
+# PiCalculator.Calculate() 的数学实现与本书内容无关，此处从略
+class PiCalculator {
+    static [string] Calculate([int] $digits, [int] $startingAt) {
+        # 计算 pi 值十进制展开的 digits 位，从 startingAt 位开始
+    }
+}
+
+$totalDigits = 100
+$batchSize = 10
+$pi = ''
+$iterations = $totalDigits / $batchSize
+for ($i = 0; $i -lt $iterations; $i++) {
+    $pi += [PiCalculator]::Calculate($batchSize, $i * $batchSize)
+}
+[Console]::WriteLine($pi)
+```
 
 输出 21.1
 
@@ -22,7 +38,23 @@ TPL（基于任务的并行库）提供了一个方便的方法 Parallel.For()�
 
 代码清单 21.2　计算 pi 值的并行算法
 
-![](img/image01431.jpeg)
+```powershell
+$totalDigits = 100
+$batchSize = 10
+$pi = ''
+$iterations = $totalDigits / $batchSize
+$sections = New-Object string[] $iterations
+[System.Threading.Tasks.Parallel]::For(
+    0, $iterations,
+    [Action[int]] {
+        param($i)
+        $sections[$i] = [PiCalculator]::Calculate($batchSize, $i * $batchSize)
+    })
+$pi = -join $sections
+[Console]::WriteLine($pi)
+```
+
+原图在循环内使用 `+=` 逐段拼接字符串；并行版本改为先将各段存入 `$sections` 数组，循环结束后用 `-join` 一次性组装，这正是正文所描述的避免竞争条件和错误顺序的做法。
 
 代码清单 21.2 的输出与输出 21.1 相同，但是在拥有更多 CPU 的计算机上，其执行时间会显著减少。Parallel.For()API 的设计看起来类似于标准的 for 循环。第一个参数是 fromInclusive 值（即循环起始值，循环将从该值开始），第二个参数是 toExclusive 值（即循环结束值，循环将在到达该值之前结束），最后一个参数是 Action<int>，作为循环体执行。当以 Lambda 表达式作为最后一个参数时，代码看起来便与 for 循环语句很像，不同之处在于现在每个迭代都可以并行执行。与 for 循环一样，在所有迭代完成之前，对 Parallel.For()的调用不会完成。换句话说，当执行到达 string.Join()语句时，pi 值的计算将全部完成。
 
@@ -38,7 +70,16 @@ TPL 也为 foreach 循环提供了类似的并行方法，如代码清单 21.3 �
 
 代码清单 21.3　基于 foreach 的并行循环
 
-![](img/image01432.jpeg)
+```powershell
+function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
+    $files = [System.IO.Directory]::EnumerateFiles(
+        $directoryPath, $searchPattern,
+        [System.IO.SearchOption]::AllDirectories)
+    [System.Threading.Tasks.Parallel]::ForEach(
+        $files,
+        [Action[string]] { param($fileName) Encrypt $fileName })
+}
+```
 
 上面代码并行地将 files 集合中的所有文件进行加密。TPL 将决定效率最高的线程数量。
 
@@ -60,7 +101,23 @@ TPL 会捕获与任务相关的异常状况并抛出 AggregateException 异常�
 
 代码清单 21.4　并行循环中的异常处理
 
-![](img/image01433.jpeg)
+```powershell
+function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
+    $files = [System.IO.Directory]::EnumerateFiles(
+        $directoryPath, $searchPattern,
+        [System.IO.SearchOption]::AllDirectories)
+    try {
+        [System.Threading.Tasks.Parallel]::ForEach(
+            $files,
+            [Action[string]] { param($fileName) Encrypt $fileName })
+    } catch [System.AggregateException] $exception {
+        [Console]::WriteLine('ERROR: {0}:', $exception.GetType().Name)
+        foreach ($item in $exception.InnerExceptions) {
+            [Console]::WriteLine(" {0} - {1}", $item.GetType().Name, $item.Message)
+        }
+    }
+}
+```
 
 输出 21.2 
 
@@ -74,7 +131,39 @@ TPL 会捕获与任务相关的异常状况并抛出 AggregateException 异常�
 
 代码清单 21.5　取消并行循环
 
-![](img/image01435.jpeg)![](img/image01436.jpeg)
+```powershell
+function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
+    $stars = ''.PadRight([Console]::WindowWidth - 1, '*')
+    $files = [System.IO.Directory]::GetFiles(
+        $directoryPath, $searchPattern,
+        [System.IO.SearchOption]::AllDirectories)
+    $cts = [System.Threading.CancellationTokenSource]::new()
+    $parallelOptions = [System.Threading.Tasks.ParallelOptions]::new()
+    $parallelOptions.CancellationToken = $cts.Token
+    [void] $cts.Token.Register({ [Console]::WriteLine('Canceling...') })
+    [Console]::WriteLine('Press any key to exit.')
+    $task = [System.Threading.Tasks.Task]::Run([Action] {
+        try {
+            [System.Threading.Tasks.Parallel]::ForEach(
+                $files, $parallelOptions,
+                [Action[string, System.Threading.Tasks.ParallelLoopState]] {
+                    param($fileName, $loopState)
+                    Encrypt $fileName
+                })
+        } catch [System.OperationCanceledException] {
+            # 取消属于预期行为，忽略该异常
+        }
+    })
+    # 等待用户输入
+    [void] [Console]::Read()
+    # 取消并行循环
+    $cts.Cancel()
+    [Console]::Write($stars)
+    $task.Wait()
+}
+```
+
+原图由两幅截图构成（image01435.jpeg 与 image01436.jpeg），此处合并为一处完整代码。
 
 并行循环使用与任务相同的取消令牌机制。ForEach()方法的其中一个重载版本接收一个 ParallelOptions 类型参数。你需要先创建一个 CancellationTokenSource 对象作为取消令牌，然后创建一个 ParallelOptions 类型的并行参数对象并将取消令牌包装进参数对象，最后在并行 ForEach()时提供参数对象，便可将取消令牌与即将运行的并行循环相关联。当需要时可以调用已关联令牌的 Cancel()方法提前终止并行循环。
 
@@ -120,7 +209,19 @@ Parallel.For()和 Parallel.ForEach<T>()方法返回 ParallelLoopResult 对象，
 
 代码清单 21.6　LINQ Select()
 
-![](img/image01437.jpeg)
+```powershell
+# Encrypt-Item —— 对单个字符串执行加密的辅助函数，实现从略
+function Encrypt-Item([string] $item) {
+    # 返回加密后的字符串
+}
+
+function Encrypt-Data(
+    [System.Collections.Generic.IEnumerable[string]] $data) {
+    return @($data | ForEach-Object { Encrypt-Item $_ })
+}
+```
+
+C# 版本借助 `Select(item => Encrypt(item)).ToList()` 一次完成投射与列表化；PowerShell 中用管道加 `ForEach-Object` 表达同样的投射，`@()` 则对应 `ToList()`。
 
 在代码清单 21.6 中，LINQ 查询使用 Select()标准查询方法来加密字符串序列中的每个字符串并将结果序列转换为列表^( [\[1\]](part0180.xhtml#ch1_back) ) 。由于在这个操作中，每个加密都可能是一个高延迟的处理器绑定操作，因此可以考虑分配给另一个 CPU 上的工作线程。
 
@@ -128,7 +229,16 @@ Parallel.For()和 Parallel.ForEach<T>()方法返回 ParallelLoopResult 对象，
 
 代码清单 21.7　并行 LINQ Select()
 
-![](img/image01438.jpeg)![](img/image01439.jpeg)
+```powershell
+function Encrypt-DataParallel(
+    [System.Collections.Generic.IEnumerable[string]] $data) {
+    $parallelQuery = [System.Linq.ParallelEnumerable]::AsParallel($data)
+    $result = $parallelQuery | ForEach-Object { Encrypt-Item $_ }
+    return @($result)
+}
+```
+
+原图由 image01438.jpeg 与 image01439.jpeg 两幅截图构成，此处合并。与代码清单 21.6 相比，唯一的差别是加上 `AsParallel()`，将普通 LINQ 查询变为 PLINQ 查询。
 
 如代码清单 21.7 所示，启用并行支持只需要非常小的更改，所涉及的只是一个标准查询方法 AsParallel()，它可以在静态类 System.Linq.ParallelEnumerable 中找到。这个简单的扩展方法告诉运行时可以并行执行查询。结果是在具有多个可用 CPU 的机器上，执行查询所花费的总时间可以显著缩短。
 
@@ -136,7 +246,20 @@ System.Linq.ParallelEnumerable 是在 Microsoft .NET Framework 4.0 中引入的�
 
 代码清单 21.8　并行 LINQ 和标准查询方法
 
-![](img/image01440.jpeg)
+```powershell
+$parallelGroups = [System.Linq.ParallelEnumerable]::OrderBy(
+    [System.Linq.ParallelEnumerable]::AsParallel($data),
+    [Func[string, string]] { param($item) $item })
+
+# 确认项总数仍与原始数量相同
+[System.Diagnostics.Trace]::Assert(
+    [System.Linq.Enumerable]::Count($data) -eq
+    [System.Linq.ParallelEnumerable]::Sum(
+        $parallelGroups,
+        [Func[string, int]] { param($item) $item.Length }))
+```
+
+原图中 `OrderBy()` 的结果类型是 `OrderedParallelQuery<string>`。C# 里对字符串元素调用 `item.Count()` 得到的其实是字符个数，在 PowerShell 中对应 `$item.Length`。
 
 如代码清单 21.8 所示，调用并行版本只涉及调用 AsParallel()扩展方法。请注意，并行标准查询方法返回的结果类型是 ParallelQuery<T>或 OrderedParallelQuery<T>，两者都会提示编译器应该继续使用并行版本的标准查询操作。
 
@@ -144,7 +267,23 @@ System.Linq.ParallelEnumerable 是在 Microsoft .NET Framework 4.0 中引入的�
 
 代码清单 21.9　并行 LINQ 和查询表达式
 
-![](img/image01441.jpeg)![](img/image01442.jpeg)
+```powershell
+# 并行分组查询等价于下面的方法调用链
+$parallelGroups = [System.Linq.ParallelEnumerable]::GroupBy(
+    [System.Linq.ParallelEnumerable]::OrderBy(
+        [System.Linq.ParallelEnumerable]::AsParallel($data),
+        [Func[string, string]] { param($text) $text }),
+    [Func[string, char]] { param($text) $text[0] })
+
+# 确认匹配的项总数仍与原始数量相同
+[System.Diagnostics.Trace]::Assert(
+    [System.Linq.Enumerable]::Count($data) -eq
+    [System.Linq.ParallelEnumerable]::Sum(
+        $parallelGroups,
+        [Func[System.Linq.IGrouping[char, string], int]] { param($item) $item.Count() }))
+```
+
+原图由 image01441.jpeg 与 image01442.jpeg 两幅截图构成，此处合并。正文中的查询表达式 `from text in data.AsParallel() orderby text group text by text[0]` 在此以其等价的标准查询方法调用形式表达。
 
 在前面的示例代码中，各种循环迭代或查询转换为并行执行都很简单。然而有一点需要尤其注意：不要让多个线程同时不恰当地访问和修改同一内存，这样做会导致竞争条件错误。我们将在第二十二章中深入讨论这部分内容。
 
@@ -156,7 +295,77 @@ System.Linq.ParallelEnumerable 是在 Microsoft .NET Framework 4.0 中引入的�
 
 代码清单 21.10　取消 PLINQ 查询
 
-![](img/image01443.jpeg)![](img/image01444.jpeg)![](img/image01445.jpeg)
+```powershell
+# Encrypt-Item —— 对单个字符串执行加密的辅助函数，实现从略
+function ParallelEncrypt(
+    [System.Collections.Generic.List[string]] $data,
+    [System.Threading.CancellationToken] $cancellationToken) {
+
+    $governor = 0
+    $parallelQuery = [System.Linq.ParallelEnumerable]::WithCancellation(
+        [System.Linq.ParallelEnumerable]::AsParallel($data),
+        $cancellationToken)
+
+    return [System.Linq.Enumerable]::ToList(
+        [System.Linq.ParallelEnumerable]::Select(
+            $parallelQuery,
+            [Func[string, string]] {
+                param($item)
+                # 控制输出进度点的频率：每 100 次加密打印一个点
+                if ([System.Threading.Interlocked]::CompareExchange(
+                        [ref] $governor, 0, 100) % 100 -eq 0) {
+                    [Console]::Write('.')
+                }
+                [System.Threading.Interlocked]::Increment([ref] $governor) | Out-Null
+                Encrypt-Item $item
+            }))
+}
+
+function Read-ConsoleWithBackoff(
+    [System.Threading.CancellationToken] $cancellationToken =
+        [System.Threading.CancellationToken]::None) {
+
+    $maxDelay = 1025
+    $delay = 0
+    while (-not $cancellationToken.IsCancellationRequested) {
+        if ([Console]::KeyAvailable) {
+            return [Console]::Read()
+        }
+        Start-Sleep -Milliseconds $delay
+        if ($delay -lt $maxDelay) { $delay = $delay * 2 + 1 }
+    }
+    $cancellationToken.ThrowIfCancellationRequested()
+    throw '上一行应抛出异常，使本行永远不会执行'
+}
+
+$originalColor = [Console]::ForegroundColor
+$cts = [System.Threading.CancellationTokenSource]::new()
+
+$task = [System.Threading.Tasks.Task]::Run(
+    [Action] { ParallelEncrypt $data $cts.Token },
+    $cts.Token)
+
+[Console]::WriteLine('Press any key to Exit.')
+$cancelTask = [System.Threading.Tasks.Task]::Run(
+    [Func[int]] { Read-ConsoleWithBackoff $cts.Token },
+    $cts.Token)
+
+try {
+    [System.Threading.Tasks.Task]::WaitAny($task, $cancelTask)
+    # 取消尚未结束的那个任务
+    $cts.Cancel()
+    $task.Wait()
+    [Console]::ForegroundColor = [ConsoleColor]::Green
+    [Console]::WriteLine("`ncompleted successfully")
+} catch [System.OperationCanceledException] {
+    [Console]::ForegroundColor = [ConsoleColor]::Red
+    [Console]::WriteLine("`ncancelled: $($_.Exception.Message)")
+} finally {
+    [Console]::ForegroundColor = $originalColor
+}
+```
+
+原图由三幅截图构成（image01443.jpeg、image01444.jpeg、image01445.jpeg），此处合并为一处完整代码。原图的 `ConsoleReadAsync()` 方法在 PowerShell 中改写为 `Read-ConsoleWithBackoff` 函数，保留了「按键轮询 + 指数退避延迟」的逻辑。打印进度点的 `$governor` 计数器使用 `[System.Threading.Interlocked]` 保证线程安全，与 C# 原图一致。
 
 输出 21.3
 

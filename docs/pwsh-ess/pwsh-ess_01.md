@@ -92,29 +92,59 @@ C#设计规范
 
 代码清单 1.19　注释代码
 
-![](img/image00301.jpeg)
+```powershell
+$firstName = $null # Variable for storing the first name
+$lastName = $null  # Variable for storing the last name
+
+Write-Output 'Hey you!'
+Write-Host -NoNewline 'Enter your first name: '
+$firstName = Read-Host
+Write-Host -NoNewline 'Enter your last name: '
+$lastName = Read-Host
+
+<# Display a greeting to the console
+   using composite formatting. #>
+Write-Output ("Your full name is {0} {1}." -f $firstName, $lastName)
+# This is the end of the program listing
+```
+
+原图代码已改写为 PowerShell 脚本。
 
 下面解释具体的格式：
 
 ·注释使用斜体。
 
-![](img/image00302.jpeg)
+```powershell
+<# Display a greeting to the console
+   using composite formatting. #>
+```
 
 ·关键字加粗。
 
-![](img/image00303.jpeg)
+```powershell
+function Main {
+}
+```
 
 ·有的代码突出显示，是为了指出这些代码与之前的有区别，或是为了演示正文介绍的概念。
 
-![](img/image00304.jpeg)
+```powershell
+Write-Output $valerie
+$miracleMax = 'It would take a miracle.'
+Write-Output $miracleMax
+```
 
 突出显示的可能是一整行，也可能是一行中的几个字符。
 
-![](img/image00305.jpeg)![](img/image00306.jpeg)
+```powershell
+Write-Output ("The palindrome `"$palindrome`" is $($palindrome.Length) characters.")
+```
 
 ·省略号表示无关代码已省略。
 
-![](img/image00307.jpeg)
+```powershell
+# ...
+```
 
 ·代码清单后列出了对应的控制台输出。由用户输入的内容加粗显示。
 

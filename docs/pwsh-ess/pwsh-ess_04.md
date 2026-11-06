@@ -14,7 +14,11 @@ C#编程语言可以为各种不同的系统平台开发应用软件和程序组
 
 代码清单 1.1　用 C#编写的 HelloWorld^( [\[1\]](part0009.xhtml#ch1_back) ) 
 
-![](img/image00311.jpeg)
+```powershell
+Write-Output 'Hello. My name is Inigo Montoya.'
+```
+
+原图中的 C# HelloWorld 示例已改写为 PowerShell。
 
 ![](img/image00312.jpeg)注意 　C#是区分大小写的语言，大小写不正确会使代码无法成功编译。
 
@@ -46,19 +50,27 @@ dotnet 命令 dotnet.exe 是 dotnet 命令行接口（或称 dotnet CLI），可
 
 2.在想要放代码的地方新建一个目录。考虑./HelloWorld 或./EssentialCSharp/HelloWorld 这样的名称。在命令行上执行：
 
-![](img/image00314.jpeg)
+```powershell
+New-Item -ItemType Directory -Path ./HelloWorld
+```
 
 3.导航到新目录，使之成为命令行的当前目录：
 
-![](img/image00315.jpeg)
+```powershell
+Set-Location ./HelloWorld
+```
 
 4.在 HelloWorld 目录中执行 dotnet new console 命令来生成程序基架（或称程序项目）。这会生成几个文件，最主要的是 Program.cs 和项目文件：
 
-![](img/image00316.jpeg)
+```powershell
+dotnet new console
+```
 
 5.运行生成的程序。这会编译并运行由 dotnet new console 命令创建的默认 Program.cs 程序。程序内容和代码清单 1.1 相似，只是输出变成“Hello World!”。
 
-![](img/image00317.jpeg)
+```powershell
+dotnet run
+```
 
 虽然没有显式请求、编译（或生成）程序项目，但 dotnet run 命令在执行时隐式执行了这一步。
 
@@ -66,13 +78,17 @@ dotnet 命令 dotnet.exe 是 dotnet 命令行接口（或称 dotnet CLI），可
 
 若想用 Visual Studio Code 打开和编辑项目，请在 HelloWorld 目录中执行
 
-![](img/image00318.jpeg)
+```powershell
+code .
+```
 
 命令。（也可以参考输出 1.1，那里展示的命令行命令在 Bash 和 PowerShell 中均可使用。）
 
 7.重新运行程序：
 
-![](img/image00319.jpeg)
+```powershell
+dotnet run
+```
 
 输出 1.1 展示了上述步骤的输出^( [\[5\]](part0009.xhtml#ch5_back) ) 。
 
@@ -142,7 +158,16 @@ Java 要求文件名和类名一致。C#虽然也常遵守这一约定，却并�
 
 代码清单 1.2　示例.NET Core 控制台应用的项目文件
 
-![](img/image00325.jpeg)
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+原图中的项目文件内容已转写为可读文本。
 
 注意应用程序标识为.NET Core 版本 3.1（netcoreapp3.1）的控制台应用（Exe）。其他所有设置（比如要编译哪些 C#文件）则沿用默认值。例如，和项目文件同一目录（或子目录）中的所有\*.cs 文件都会包含到编译中。
 
@@ -154,11 +179,15 @@ dotnet build 命令生成名为 HelloWorld.dll 的程序集 （assembly）^( [\[
 
 生成一个可以独立运行，而不依赖于 dotnet 命令的可执行文件是完全可行的。要做到这一点，需要执行 dotnet publish 命令，并且通过命令参数--runtime（-r）来指定需要兼容的目标平台。例如，如需兼容大部分 Linux 平台，可以在 CSPROJ 文件所在的目录下执行上述命令，并使用 linux-x64 参数：
 
-![](img/image00326.jpeg)
+```powershell
+dotnet publish --runtime linux-x64
+```
 
 执行上述命令后，会生成一个目录（./bin/Debug/netcoreapp3.1/linux-x64/publish/），里面包含了运行 HelloWorld 程序所需的所有文件。有了这些便不需要在目标平台事先安装 dotnet 运行时库。若要运行 HelloWorld 程序，只需要直接运行其可执行文件即可：
 
-![](img/image00327.jpeg)
+```powershell
+./bin/Debug/netcoreapp3.1/linux-x64/publish/HelloWorld
+```
 
 （在 Windows 上，可执行文件会带有扩展名“.exe”，但是在运行可执行文件时不需要写出该扩展名。）
 
@@ -166,7 +195,9 @@ dotnet build 命令生成名为 HelloWorld.dll 的程序集 （assembly）^( [\[
 
 按照前面的方法生成的目录里面，除了应用程序自己的可执行文件之外，还有将近 200 个依赖文件。实际上也可以生成单一的可独立运行的文件。若要生成单一文件，需要为生成命令加上-p:PublishSingleFile=true 参数：
 
-![](img/image00328.jpeg)
+```powershell
+dotnet publish --runtime linux-x64 -p:PublishSingleFile=true
+```
 
 第十章将会介绍更多关于-p 参数的内容。
 
@@ -274,7 +305,11 @@ C#所有代码都出现在一个类型定义的内部，最常见的类型定义
 
 代码清单 1.3　基本的类声明
 
-![](img/image00330.jpeg)
+```powershell
+class HelloWorld {
+    # ...
+}
+```
 
 ![](img/image00300.jpeg)设计规范
 
@@ -294,7 +329,11 @@ C#程序从 Main 方法开始执行。该方法以 static void Main()开头。�
 
 代码清单 1.4　HelloWorld 分解示意图
 
-![](img/image00331.jpeg)
+```powershell
+function Main {
+    Write-Output 'Hello, My name is Inigo Montoya'
+}
+```
 
 虽然 Main 方法声明可进行某种程度的变化，但关键字 static 和方法名 Main 是始终都需要的。
 
@@ -304,7 +343,12 @@ C#要求 Main 方法返回 void 或 int，而且要么无参，要么接收一�
 
 代码清单 1.5　带有参数和返回类型的 Main 方法
 
-![](img/image00332.jpeg)
+```powershell
+function Main {
+    # ...
+    return 0
+}
+```
 
 args 参数是用于接收命令行参数的字符串数组。但数组第一个元素不是程序名称，而是可执行文件名称^( [\[4\]](part0010.xhtml#ch4_back) ) 后的第一个命令行参数，这和 C 和 C++不同。用 System.Environment.CommandLine 获取执行程序所用的完整命令。
 
@@ -340,13 +384,18 @@ C#的许多编程元素都以分号结尾。不要求分号的一个例子是 sw
 
 代码清单 1.6　一行上的多条语句
 
-![](img/image00333.jpeg)
+```powershell
+Write-Output 'Up'
+Write-Output 'Down'
+```
 
 C#还允许一条语句跨越多行。同样地，C#编译器根据分号判断语句结束位置。在代码清单 1.7 中，HelloWorld 程序里原本单行的 WriteLine()代码被分成多行书写。
 
 代码清单 1.7　一条语句跨越多行
 
-![](img/image00334.jpeg)
+```powershell
+Write-Output 'Hello. My name is Inigo Montoya.'
+```
 
 ### 1.2.6　空白
 
@@ -360,11 +409,17 @@ C#还允许一条语句跨越多行。同样地，C#编译器根据分号判断�
 
 代码清单 1.8　不缩进
 
-![](img/image00335.jpeg)
+```powershell
+function Main {
+    Write-Output 'Hello Inigo Montoya'
+}
+```
 
 代码清单 1.9　删除一切可以删除的空白
 
-![](img/image00336.jpeg)
+```powershell
+function Main { Write-Output 'Hello Inigo Montoya' }
+```
 
 虽然这两个版本看起来和原始版本颇有不同，但 C#编译器认为所有版本无差别。
 
@@ -390,7 +445,10 @@ C#还允许一条语句跨越多行。同样地，C#编译器根据分号判断�
 
 代码清单 1.10　变量声明和赋值
 
-![](img/image00337.jpeg)
+```powershell
+$max = 'Have fun storming the castle!'
+Write-Output $max
+```
 
 初学者主题：局部变量
 
@@ -420,7 +478,10 @@ C#还允许一条语句跨越多行。同样地，C#编译器根据分号判断�
 
 代码清单 1.11　一条语句声明两个变量
 
-![](img/image00338.jpeg)
+```powershell
+$message1 = $null
+$message2 = $null
+```
 
 由于声明多个变量的语句只允许提供一次数据类型，因此所有变量都具有相同类型。
 
@@ -436,7 +497,15 @@ C#变量名可用任何字母或下划线（\_）开头，后跟任意数量的�
 
 代码清单 1.12　更改变量值
 
-![](img/image00339.jpeg)
+```powershell
+$valerie = 'Think it will work?'
+$miracleMax = 'Have fun storming the castle!'
+Write-Output $miracleMax
+Write-Output $valerie
+
+$miracleMax = 'It would take a miracle.'
+Write-Output $miracleMax
+```
 
 从中可以看出，既可在声明变量的同时赋值（比如变量 miracleMax），也可在声明后用另一条语句赋值（比如变量 valerie）。要赋的值必须放在赋值操作符右侧。
 
@@ -452,7 +521,13 @@ C#要求局部变量在读取前“明确赋值”。此外，赋值作为一种
 
 代码清单 1.13　赋值会返回值，该值可用于再次赋值
 
-![](img/image00341.jpeg)
+```powershell
+# ...
+$requirements = $null
+$miracleMax = 'It would take a miracle.'
+$requirements = $miracleMax
+# ...
+```
 
 ### 1.3.4　变量的使用
 
@@ -476,11 +551,19 @@ C#要求局部变量在读取前“明确赋值”。此外，赋值作为一种
 
 代码清单 1.14　使用 System.Console.ReadLine()
 
-![](img/image00342.jpeg)
+```powershell
+$firstName = Read-Host 'Enter your first name'
+$lastName = Read-Host 'Enter your last name'
+```
 
 输出 1.4
 
-![](img/image00343.jpeg)
+```powershell
+# 示例输出
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+```
 
 在每条提示信息后，程序都用 System.Console.ReadLine()方法获取用户输入并赋给变量。在第二个 System.Console.ReadLine()赋值操作完成之后，firstName 引用值 Inigo，而 lastName 引用值 Montoya。
 
@@ -490,7 +573,11 @@ C#要求局部变量在读取前“明确赋值”。此外，赋值作为一种
 
 代码清单 1.15　使用 System.Console.Read()
 
-![](img/image00344.jpeg)
+```powershell
+$readValue = [Console]::Read()
+$character = [char]$readValue
+Write-Host -NoNewline $character
+```
 
 注意，除非用户按回车键，否则 System.Console.Read()方法不会返回输入。按回车键之前不会对字符进行处理，即使用户已输入了多个字符。
 
@@ -504,7 +591,11 @@ C# 2.0 新增了 System.Console.ReadKey()方法。它和 System.Console.Read()�
 
 代码清单 1.16　使用字符串插值来格式化
 
-![](img/image00345.jpeg)
+```powershell
+$firstName = Read-Host 'Enter your first name'
+$lastName = Read-Host 'Enter your last name'
+Write-Output "Your full name is $firstName $lastName."
+```
 
 输出 1.5
 
@@ -516,7 +607,11 @@ C# 6.0 之前则采用不同的方式，称为复合格式化 。它要求先提
 
 代码清单 1.17　使用复合格式化
 
-![](img/image00347.jpeg)
+```powershell
+$firstName = Read-Host 'Enter your first name'
+$lastName = Read-Host 'Enter your last name'
+Write-Output ("Your full name is {0} {1}." -f $firstName, $lastName)
+```
 
 本例的格式字符串是 Your full name is {0} {1}.。它为要在字符串中插入的数据标识了两个索引占位符。每个占位符的顺序对应格式字符串之后的实参。
 
@@ -572,7 +667,21 @@ C# 6.0 之前则采用不同的方式，称为复合格式化 。它要求先提
 
 XML（Extensible Markup Language，可扩展标记语言）是一种简单而灵活的文本格式，常用于 Web 应用程序以及应用程序间的数据交换。XML 之所以“可扩展”，是因为 XML 文档中包含的是对数据进行描述的信息，也就是所谓的元数据 （metadata）。下面是示例 XML 文件：
 
-![](img/image00351.jpeg)![](img/image00352.jpeg)
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<body>
+  <book title="Essential C# 8.0">
+    <chapters>
+```
+
+原图中的 XML 片段已转写为可读文本。```xml
+<chapter title="Introducing C#"/>
+<chapter title="Data Types"/>
+...
+</chapters>
+</book>
+</body>
+```
 
 文件以 header 元素开始，描述 XML 文件版本和字符编码方式。之后是一个主要的 book 元素。元素以尖括号中的单词开头，比如<body>。结束元素需要将同一单词放在尖括号中，并为单词添加正斜杠前缀，比如</body>。除了元素，XML 还支持属性。title="Essential C#"就是 XML 属性的例子。注意 XML 文件包含了对数据（比如“Essential C#”“Data Types”等）进行描述的元数据（书名、章名等）。这可能形成相当臃肿的文件，但优点是可通过描述来帮助解释数据。
 

@@ -14,7 +14,29 @@
 
 代码清单 20.1　同步 Web 请求
 
-![](img/image01384.jpeg)![](img/image01385.jpeg)
+```powershell
+param(
+    [Parameter(Position = 0)][string] $FindText,
+    [Parameter(Position = 1)][string] $Url = 'https://IntelliTect.com'
+)
+
+if (-not $FindText) {
+    Write-Output 'ERROR: No findText argument specified.'
+    return
+}
+
+Write-Host -NoNewline "Searching for '$FindText' at URL '$Url'."
+Write-Output 'Downloading....'
+$webClient = [System.Net.WebClient]::new()
+try {
+    [byte[]] $downloadData = $webClient.DownloadData($Url)
+    Write-Output 'Searching....'
+    $text = [System.Text.Encoding]::UTF8.GetString($downloadData)
+    $count = [regex]::Matches($text, [regex]::Escape($FindText)).Count
+    Write-Output "`n'$FindText' appears $count times at URL '$Url'."
+}
+finally { $webClient.Dispose() }
+```
 
 输出 20.1
 
@@ -30,7 +52,36 @@
 
 代码清单 20.2　异步 Web 请求
 
-![](img/image01387.jpeg)![](img/image01388.jpeg)
+```powershell
+param(
+    [Parameter(Position = 0)][string] $FindText,
+    [Parameter(Position = 1)][string] $Url = 'https://IntelliTect.com'
+)
+
+if (-not $FindText) { Write-Output 'ERROR: No findText argument specified.'; return }
+Write-Host -NoNewline "Searching for '$FindText' at URL '$Url'."
+$client = [System.Net.WebClient]::new()
+try {
+    Write-Host -NoNewline "`nDownloading..."
+    $downloadTask = $client.DownloadDataTaskAsync($Url)
+    while (-not $downloadTask.Wait(100)) { Write-Host -NoNewline '.' }
+    [byte[]] $downloadData = $downloadTask.GetAwaiter().GetResult()
+    Write-Host -NoNewline "`nSearching..."
+    $searchTask = Count-OccurrencesAsync $downloadData $FindText
+    while (-not $searchTask.Wait(100)) { Write-Host -NoNewline '.' }
+    $count = $searchTask.GetAwaiter().GetResult()
+    Write-Output "`n'$FindText' appears $count times at URL '$Url'."
+}
+catch [System.Net.WebException] { Write-Error $_ }
+catch [System.IO.IOException] { Write-Error $_ }
+catch [System.NotSupportedException] { Write-Error $_ }
+finally { $client.Dispose() }
+
+function Count-OccurrencesAsync([byte[]] $DownloadData, [string] $Text) {
+    $content = [System.Text.Encoding]::UTF8.GetString($DownloadData)
+    return [System.Threading.Tasks.Task]::FromResult([regex]::Matches($content, [regex]::Escape($Text)).Count)
+}
+```
 
 其输出与代码清单 20.1 相似，唯一的区别是，在下载网页和检索关键词的过程中，在“Download…”和“Searching…”两行打印的后面会显示更多的点，其数量取决于操作的实际耗时。这些点用于提示用户：操作正在正常进行中，请耐心等待。
 
@@ -68,7 +119,33 @@
 
 代码清单 20.3　通过基于任务的异步模式实现异步高延迟操作
 
-![](img/image01389.jpeg)![](img/image01390.jpeg)
+```powershell
+param(
+    [Parameter(Position = 0)][string] $FindText,
+    [Parameter(Position = 1)][string] $Url = 'https://IntelliTect.com'
+)
+
+if (-not $FindText) { Write-Output 'ERROR: No findText argument specified.'; return }
+Write-Host -NoNewline "Searching for '$FindText' at URL '$Url'."
+$client = [System.Net.WebClient]::new()
+try {
+    $downloadTask = $client.DownloadDataTaskAsync($Url)
+    Write-Output 'Downloading...'
+    while (-not $downloadTask.Wait(100)) { Write-Host -NoNewline '.' }
+    [byte[]] $downloadData = $downloadTask.GetAwaiter().GetResult()
+    $searchTask = Count-OccurrencesAsync $downloadData $FindText
+    Write-Output 'Searching...'
+    while (-not $searchTask.Wait(100)) { Write-Host -NoNewline '.' }
+    $count = $searchTask.GetAwaiter().GetResult()
+    Write-Output "`n'$FindText' appears $count times at URL '$Url'."
+}
+finally { $client.Dispose() }
+
+function Count-OccurrencesAsync([byte[]] $DownloadData, [string] $Text) {
+    $content = [System.Text.Encoding]::UTF8.GetString($DownloadData)
+    return [System.Threading.Tasks.Task]::FromResult([regex]::Matches($content, [regex]::Escape($Text)).Count)
+}
+```
 
 代码清单 20.3 和 20.1 中的代码看起来差别不大，却可以在下载过程中不断打印点号以提示进度。这刚好体现了 async/await 关键字的优越性：只需通过很小的改动，便可将同步代码改为异步模式。
 
@@ -78,17 +155,31 @@
 
 请注意，在上面代码中，CountOccurrencesAsync()方法的声明如下：
 
-![](img/image01391.jpeg)
+```powershell
+function Count-OccurrencesAsync([byte[]] $DownloadData, [string] $FindText) {
+    $content = [System.Text.Encoding]::UTF8.GetString($DownloadData)
+    return [System.Threading.Tasks.Task]::FromResult(
+        [regex]::Matches($content, [regex]::Escape($FindText)).Count)
+}
+```
 
 虽然该方法的实际返回值类型为 Task<int>，但当使用 await 操作符调用时，其返回值为 int：
 
-![](img/image01392.jpeg)
+```powershell
+$searchTask = Count-OccurrencesAsync $downloadData $findText
+$textOccurrenceCount = $searchTask.GetAwaiter().GetResult()
+```
 
 从这里我们可以看到 await 操作符带来的一个方便特性：它会自动将逻辑上的返回值从 Task 对象中提取出来。
 
 如果在异步操作的执行期间可以在一定程度上同时执行其他代码，那么可以直到并行的工作结束再调用 await 去等待和提取异步操作的结果。在前面的代码中，调用 webClient.DownloadDataTaskAsync(url)的代码就是这样的例子。它没有用 await 简单地等待该方法结束，而是在异步任务下载数据的同时输出点号。直到 taskDownload.Wait(100)返回 true 才调用 await 提取下载数据。
 
-![](img/image01393.jpeg)
+```powershell
+$client = [System.Net.WebClient]::new()
+$downloadTask = $client.DownloadDataTaskAsync($url)
+while (-not $downloadTask.Wait(100)) { [Console]::Write('.') }
+[byte[]] $downloadData = $downloadTask.GetAwaiter().GetResult()
+```
 
 除了提取异步任务的返回数据之外，await 操作符还会告诉 C#编译器将其后的代码放到恰当的线程中去执行。这其实是使用 await 操作符的一个更关键的好处，它可以避免很多错误的发生。
 
@@ -124,7 +215,20 @@
 
 代码清单 20.4　从异步方法中返回 ValueTask<T>类型
 
-![](img/image01395.jpeg)
+```powershell
+function Compress-Async([byte[]] $Buffer) {
+    if ($Buffer.Length -eq 0) { return ,$Buffer }
+    $memoryStream = [System.IO.MemoryStream]::new()
+    $gzipStream = [System.IO.Compression.GZipStream]::new(
+        $memoryStream, [System.IO.Compression.CompressionMode]::Compress)
+    try {
+        $gzipStream.Write($Buffer, 0, $Buffer.Length)
+        $gzipStream.Dispose()
+        return ,$memoryStream.ToArray()
+    }
+    finally { $memoryStream.Dispose() }
+}
+```
 
 值得注意的是，即使异步方法 GZipStream.WriteAsync()返回的是 Task<T>对象，但是对它执行 await 的异步方法仍然可以返回 ValueTask<T>类型。实际上，无论上面的压缩方法使用 ValueTask<T>还是 Task<T>作为返回值，其内部代码均无须修改。
 
@@ -136,7 +240,12 @@
 
 代码清单 20.5　一些 await 表达式
 
-![](img/image01396.jpeg)
+```powershell
+function Do-StuffAsync {
+    Do-SomethingAsync
+    Do-Something-ElseAsync
+}
+```
 
 这里我们假设第一个方法返回一个 Task，而不是 Task<T>或 ValueTask<T>。在上面的代码中，由于我们假设前两个 await 语句中的异步任务不返回结果，因此它们都是单纯的语句；假设第三个 await 语句中的异步任务返回 Task<int>，因此可以将这条语句写成 DoStuffAsync()返回的任务值的运算式。
 
@@ -150,13 +259,42 @@ C# 8.0 提供了实现异步流 的能力，本质上是将异步模式与使用
 
 代码清单 20.6　异步流
 
-![](img/image01397.jpeg)![](img/image01398.jpeg)
+```powershell
+$directoryPath = Get-Location
+$cryptographer = [Cryptographer]::new()
+$files = Get-ChildItem -LiteralPath $directoryPath -File | Select-Object -ExpandProperty FullName
+
+foreach ($fileName in $files) {
+    $encryptedFileName = Encrypt-FileAsync $fileName $cryptographer
+    Write-Output "$fileName=>$encryptedFileName"
+}
+
+function Encrypt-FileAsync([string] $FileName, $Cryptographer) {
+    $encryptedFileName = "$FileName.encrypted"
+    $data = [System.IO.File]::ReadAllTextAsync($FileName).GetAwaiter().GetResult()
+    $output = [System.IO.FileStream]::new($encryptedFileName, [System.IO.FileMode]::Create)
+    try { $Cryptographer.EncryptAsync($data, $output).GetAwaiter().GetResult() }
+    finally { $output.Dispose() }
+    return $encryptedFileName
+}
+```
 
 代码清单 20.6 始于 Main()方法，其中有一个 C# 8.0 引入的新语句——async foreach，我们用它来迭代异步方法 EncryptFilesAsync()的返回值。（稍后再介绍 WithCancellation()的作用。）在 EncryptFilesAsync()方法的内部使用 foreach 循环迭代每个指定的文件。在该 foreach 循环中，对每个指定的文件，都调用另一个异步方法 EncryptFileAsync()方法进行处理^( [\[1\]](part0170.xhtml#ch1_back) ) 。该方法中有两个异步方法调用：第一个是调用 File.ReadAllTextAsync()，它读取文件的所有内容。一旦内容读到内存中后，代码便调用 EncryptAsync()方法进行加密，然后将加密后的新文件返回到前面的 foreach 循环中，接着再通过 yield return 语句将新文件名返回给 Main()方法中的 async foreach 代码块。该示例代码展示了向调用者提供异步迭代器的方法。这里的关键是：（1）EncryptFilesAsync()方法使用 async 声明为异步方法；（2）该方法返回 IAsyncEnumerable<T>对象而不是 Task<T>（代码中的 T 为字符串）；（3）在异步方法中使用 yield return 向调用者异步地提供可迭代的数据；（4）调用者使用 await foreach 对异步流进行异步迭代。
 
 GetAsyncEnumerator()的声明中包含一个 CancellationToken 参数。由于 await foreach 循环生成调用 GetAsyncEnumerator()的代码，因此注入取消令牌并提供取消的方法是通过 WithCancellation()扩展方法（如图 20.2 所示，IAsyncEnumerable<T>上没有直接使用 WithCancellation()方法）。要支持异步流方法中的取消，需要添加可选的 CancellationToken 和 EnumeratorCancellationAttribute，如 EncryptFilesAsunc 方法声明所示：
 
-![](img/image01399.jpeg)![](img/image01400.jpeg)
+```powershell
+# PowerShell 没有 C# async iterator 声明；此函数以常规枚举方式逐项处理。
+function Get-EncryptedFiles([string] $DirectoryPath, [string] $SearchPattern = '*',
+    [System.Threading.CancellationToken] $CancellationToken) {
+    foreach ($file in Get-ChildItem -LiteralPath $DirectoryPath -Filter $SearchPattern -File) {
+        $CancellationToken.ThrowIfCancellationRequested()
+        Encrypt-FileAsync $file.FullName
+    }
+}
+```
+
+![](img/image01400.jpeg)
 
 图 20.2　IAsycnEnumerable<T>以及相关接口
 
@@ -164,7 +302,16 @@ GetAsyncEnumerator()的声明中包含一个 CancellationToken 参数。由于 a
 
 代码清单 20.7　使用 await foreach 迭代异步流
 
-![](img/image01401.jpeg)![](img/image01402.jpeg)
+```powershell
+class AsyncEncryptionCollection : System.Collections.IEnumerable {
+    [System.Collections.IEnumerator] GetEnumerator() {
+        return ([System.Collections.ArrayList]::new()).GetEnumerator()
+    }
+}
+
+$collection = [AsyncEncryptionCollection]::new()
+foreach ($fileName in $collection) { Write-Output $fileName }
+```
 
 再次强调一点：一个方法被声明为异步的（使用 async 关键字）不会自动导致对它的调用并行运行。所以仅仅因为 EncryptFilesAsync()方法是异步的，并不意味着迭代每个文件并调用 File.ReadAllTextAsync()和 Cryptographer.EncryptAsync()将并行发生。为了保证并行执行，需要在异步方法中使用 await 执行其他异步任务，或使用类似 System.Threading.Tasks.Parallel.ForEach()的方法（参见第二十一章）。
 
@@ -178,7 +325,16 @@ IAsyncDisposable 是 IDisposable 的异步版本，因此可以使用 C# 8.0 中
 
 await using 语句与 using 语句的语法完全相同：
 
-![](img/image01403.jpeg)
+```powershell
+$outputFileStream = [System.IO.FileStream]::new(
+    $encryptedFileName, [System.IO.FileMode]::Create)
+try {
+    # 使用完毕后释放资源
+}
+finally {
+    $outputFileStream.DisposeAsync().GetAwaiter().GetResult()
+}
+```
 
 只要一个类型实现了 IAsyncDisposable 或者仅仅具有 DisposeAsync()方法，便可使用 await using 声明或语句来声明变量。C#编译器在声明周围以及变量超出作用域之前注入了一个 try/finally 块，并在 finally 块中调用 await DisposeAsync()^( [\[1\]](part0171.xhtml#ch1_back) ) 。这样便可确保所有资源都被清除。
 
@@ -190,7 +346,12 @@ await using 语句与 using 语句的语法完全相同：
 
 在代码清单 20.6 的 await foreach 语句中，我们使用了 LINQ AsyncEnumberable.Zip()将加密后的文件名与原文件名相关联。
 
-![](img/image01404.jpeg)
+```powershell
+$encryptedFiles = Encrypt-FilesAsync $files
+foreach ($item in $encryptedFiles) {
+    Write-Output "$($item.FileName)=>$($item.EncryptedFileName)"
+}
+```
 
 正如你所希望的，AsyncEnumerable 为 IAsyncEnumerable<T>提供了 LINQ 功能。但是，这个库并没有在 BCL 里。若要在程序中使用异步 LINQ，需要在工程中添加 System.Linq.Async NuGet 包。
 
@@ -198,11 +359,23 @@ AsyncEnumerable 就定义在 System.Linq 中（而不是在一个具有异步功
 
 代码清单 20.8　AsyncEnumerable 中 Select\*()方法的声明
 
-![](img/image01405.jpeg)
+```powershell
+# System.Linq.Async 中 Select/SelectAwait 的代表性签名：
+# Select<TSource,TResult>(IAsyncEnumerable<TSource>, Func<TSource,TResult>)
+# SelectAwait<TSource,TResult>(IAsyncEnumerable<TSource>, Func<TSource,ValueTask<TResult>>)
+# SelectAwaitWithCancellation<TSource,TResult>(
+#     IAsyncEnumerable<TSource>, Func<TSource,CancellationToken,ValueTask<TResult>>)
+```
 
 与 Enumerable 版本相匹配的方法名称（在本例中为 Select()）大都具有类似的“实例”方法签名，但 TResult 和 TSource 是例外。名称中带有“Await”的两个方法签名都采用了异步签名，其中包括一个返回 ValueTask<T>的选择器。例如，可以通过 SelectAwait()来调用代码清单 20.6 中的 EncryptFileAsync()方法，如下所示：
 
-![](img/image01406.jpeg)
+```powershell
+$items = $files.ToAsyncEnumerable()
+$items = $items.SelectAwait([Func[string, System.Threading.Tasks.ValueTask[string]]] {
+    param($text)
+    Encrypt-FileAsync $text
+})
+```
 
 需要注意的一点是：EncyryptFileAsync()方法返回的是一个 ValueTask<T>对象，这是为了符合\*Await()和\*AwaitWithCancellationAsync()的要求，当然后者还允许指定一个用于取消操作的 token。
 
@@ -210,7 +383,9 @@ AsyncEnumerable 就定义在 System.Linq 中（而不是在一个具有异步功
 
 异步 LINQ 方法的“标量”版本与 IEnumerable<T>类似，也具有\*Await()、\*AwaitAsync()和\*AwaitWithCancellation()系列方法。关键的区别在于它们都返回一个 ValueTask<T>对象。以下代码展示了使用 AverageAsync()方法的示例：
 
-![](img/image01407.jpeg)
+```powershell
+$average = [System.Linq.AsyncEnumerable]::Range(0, 999).AverageAsync().GetAwaiter().GetResult()
+```
 
 这样我们就可以利用 await 将其返回值直接提取成为 double 类型，从而可以忽略其实际的类型：ValueTask<double>。
 
@@ -220,13 +395,20 @@ AsyncEnumerable 就定义在 System.Linq 中（而不是在一个具有异步功
 
 如果通常应避免使用 async void 方法，那么为什么没有将它们彻底禁止？这是因为 async void 方法可用于编写异步的事件处理程序。如第十四章所述，事件处理程序应被声明为 EventHandler<T>，它具有以下形式的签名：
 
-![](img/image01408.jpeg)
+```powershell
+# .NET 事件处理程序的典型签名
+[System.EventHandler[object]] $handler
+```
 
 因此，为了符合与 EventHandler<T>签名相匹配，异步事件处理程序需要返回 void。或许你会有疑问：是否可以修改 EventHandler<T>的签名？问题是，（如第十四章所述）一个事件可能有多个订阅者，而从多个订阅者那里检索返回值是不直观且烦琐的。出于这个原因，指导原则是：尽量避免使用 async void 方法，除非它们是事件处理程序的订阅者。当然，在这种情况下，它们应该避免抛出异常。或者，也可以提供一个同步上下文来接收同步事件通知，如启动任务（例如 Task.Run()）以及处理所有未处理的异常。代码清单 20.9 和对应的输出 20.2 提供了如何执行此操作的示例。
 
 代码清单 20.9　捕获 async void 方法中的异常
 
-![](img/image01409.jpeg)![](img/image01410.jpeg)![](img/image01411.jpeg)
+```powershell
+# async void 方法的异常无法由普通调用者 await；在回调内部处理异常。
+# PowerShell 脚本块没有与 C# SynchronizationContext 同等的轻量写法；
+# 生产代码应优先返回 Task，并由调用方等待。
+```
 
 输出 20.2
 
@@ -248,11 +430,29 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 代码清单 20.10　用 Lambda 表达式实现异步服务器-客户端交互
 
-![](img/image01413.jpeg)![](img/image01414.jpeg)
+```powershell
+$url = 'http://www.IntelliTect.com'
+$request = [System.Net.WebRequest]::Create($url)
+$responseTask = $request.GetResponseAsync()
+while (-not $responseTask.Wait(100)) { [Console]::Write('.') }
+$response = $responseTask.GetAwaiter().GetResult()
+try {
+    $reader = [System.IO.StreamReader]::new($response.GetResponseStream())
+    $readTask = $reader.ReadToEndAsync()
+    while (-not $readTask.Wait(100)) { [Console]::Write('.') }
+    $text = $readTask.GetAwaiter().GetResult()
+    Write-Output ([Math]::Round($text.Length / 1KB, 2))
+}
+finally { $response.Dispose() }
+```
 
 类似地，在 C# 7.0（及更高版本）中，也可以使用本地函数来代替 Lambda 表达式。例如，可以将代码清单 20.10 中的 Lambda 表达式（从表达式开始到=>操作符为止）改为如下形式：
 
-![](img/image01415.jpeg)
+```powershell
+function Write-WebRequestSizeAsync([string] $WebRequestUrl) {
+    # 创建请求、读取响应，并返回内容大小
+}
+```
 
 函数主体中的其他内容，包括一对大括号，都不用修改。
 
@@ -272,13 +472,33 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 通过使用 await 关键字调用其他异步任务来实现异步方法相对容易。但是最终总是需要创建一个“最外层”的异步方法来返回异步任务对象。例如，考虑创建一个用于运行其他命令行程序的异步方法，其最终目标是可以获得所运行的程序的输出。这样的方法可被声明如下：
 
-![](img/image01416.jpeg)
+```powershell
+function Start-ProcessAsync([string] $FileName) {
+    # 返回表示进程状态的 Task
+}
+```
 
 最简单的实现方法是依赖 Task.Run()并调用 System.Diagnostics.Process 的 Start()和 WaitForExit()方法。然而当被调用的进程本身拥有自己的一个或多个线程集合时，在当前进程中创建一个额外的线程是不必要的。要实现 RunProcessAsync()方法并在调用的进程完成时返回调用者的同步上下文，我们可以依赖 TaskCompletionSource<T>对象，如代码清单 20.11 所示。
 
 代码清单 20.11　实现自定义异步方法
 
-![](img/image01417.jpeg)![](img/image01418.jpeg)
+```powershell
+function Start-ProcessAsync(
+    [string] $FileName,
+    [string] $Arguments = '',
+    [System.Threading.CancellationToken] $CancellationToken) {
+    $source = [System.Threading.Tasks.TaskCompletionSource[System.Diagnostics.Process]]::new()
+    $process = [System.Diagnostics.Process]::new()
+    $process.StartInfo = [System.Diagnostics.ProcessStartInfo]::new($FileName)
+    $process.StartInfo.UseShellExecute = $false
+    $process.StartInfo.Arguments = $Arguments
+    $process.EnableRaisingEvents = $true
+    $process.add_Exited({ $source.TrySetResult($process) })
+    $CancellationToken.ThrowIfCancellationRequested()
+    [void] $process.Start()
+    return $source.Task
+}
+```
 
 请暂时忽略上面代码中的高亮部分，先观察一下当进程结束时使用事件进行通知的方式。由于 System.Diagnostics.Process 支持进程退出时通告，因此我们注册此通告并在回调中调用 TaskCompletionSource.SetResult()。清单 20.11 中的代码遵循一个相当常见的模式。可以使用它来创建异步方法，而不必求助于 Task.Run()。
 
@@ -290,7 +510,29 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 代码清单 20.12　带有进度显示的自定义异步方法
 
-![](img/image01419.jpeg)![](img/image01420.jpeg)
+```powershell
+function Start-ProcessAsync(
+    [string] $FileName,
+    [string] $Arguments = '',
+    [System.Threading.CancellationToken] $CancellationToken,
+    $Progress) {
+    $source = [System.Threading.Tasks.TaskCompletionSource[System.Diagnostics.Process]]::new()
+    $process = [System.Diagnostics.Process]::new()
+    $process.StartInfo = [System.Diagnostics.ProcessStartInfo]::new($FileName)
+    $process.StartInfo.UseShellExecute = $false
+    $process.StartInfo.Arguments = $Arguments
+    $process.StartInfo.RedirectStandardOutput = ($null -ne $Progress)
+    $process.EnableRaisingEvents = $true
+    $process.add_Exited({ $source.TrySetResult($process) })
+    if ($null -ne $Progress) {
+        $process.add_OutputDataReceived({ param($s, $e) $Progress.Report($e.Data) })
+    }
+    $CancellationToken.ThrowIfCancellationRequested()
+    [void] $process.Start()
+    if ($null -ne $Progress) { $process.BeginOutputReadLine() }
+    return $source.Task
+}
+```
 
 准确地了解异步方法中发生的事情可能很困难，但这远没有比试图弄清楚 Lambda 表达式中的异步代码在做什么更困难。因此，在编写异步程序时请记住以下要点：
 
@@ -312,7 +554,20 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 代码清单 20.13　调用 Task.ContinueWith()
 
-![](img/image01421.jpeg)
+```powershell
+function Show-Status([string] $Message) {
+    $threadId = [System.Threading.Thread]::CurrentThread.ManagedThreadId
+    [Console]::WriteLine("{0}: {1}" -f $threadId, $Message)
+}
+
+Show-Status 'Before'
+$taskA = [System.Threading.Tasks.Task]::Run([Action] { Show-Status 'Starting...' }).ContinueWith(
+    [Action[System.Threading.Tasks.Task]] { param($task) Show-Status 'Continuing A...' })
+$taskB = $taskA.ContinueWith([Action[System.Threading.Tasks.Task]] { param($task) Show-Status 'Continuing B...' })
+$taskC = $taskA.ContinueWith([Action[System.Threading.Tasks.Task]] { param($task) Show-Status 'Continuing C...' })
+[System.Threading.Tasks.Task]::WaitAll(@($taskB, $taskC))
+Show-Status 'Finished!'
+```
 
 输出 20.3
 
@@ -338,7 +593,14 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 代码清单 20.14　在 WPF 程序中同步高延迟调用
 
-![](img/image01424.jpeg)![](img/image01425.jpeg)
+```powershell
+# WPF 事件处理器中的同步 ping 会阻塞 UI 线程
+$StatusLabel.Content = 'Pinging...'
+$StatusLabel.UpdateLayout()
+$ping = [System.Net.NetworkInformation.Ping]::new()
+$reply = $ping.Send('www.IntelliTect.com')
+$StatusLabel.Content = $reply.Status.ToString()
+```
 
 由于 StatusLabel 是一个 WPF 中的 System.Windows.Controls.TextBlock 标签界面控件，并且我们在 PingButton\_Click()事件处理器中更新了标签控件的 Content 属性两次，因此一个合理的假设是“Pinging...”文字将被一直显示在界面标签上，直到 Ping.Send()返回之后才改变。Ping.Send()返回之后，标签再次更新为 Send()任务返回的信息。然而，熟悉 Windows UI 框架的人都知道，事实上情况并非如此。程序会先将一条带有“Pinging...”的消息发送到 Windows 的消息泵中以使用界面显示更新，但由于 UI 线程正忙于执行 PingButton\_Click()方法，因此不会处理 Windows 消息泵。当 UI 线程被释放并可以查看 Windows 消息泵时，第二个界面更新请求也已经等候在消息队列中，用户能够观察到的唯一显示是界面最终的状态^( [\[1\]](part0176.xhtml#ch1_back) ) 。
 
@@ -346,7 +608,14 @@ await 关键字后面的表达式的类型通常为 Task、Task<T>、ValueTask<T
 
 代码清单 20.15　在 WPF 程序中使用 await 同步高延迟调用
 
-![](img/image01426.jpeg)
+```powershell
+# WPF 事件处理器应通过异步 API 释放 UI 线程
+$StatusLabel.Content = 'Pinging...'
+$StatusLabel.UpdateLayout()
+$ping = [System.Net.NetworkInformation.Ping]::new()
+$reply = $ping.SendPingAsync('www.IntelliTect.com').GetAwaiter().GetResult()
+$StatusLabel.Content = $reply.Status.ToString()
+```
 
 这个修改提供了两个优点。首先 ping 改为异步调用，这样就释放了调用者线程去处理 Windows 消息泵，这样便可以处理对 StatusLabel.Content 的更新，从而可以向用户显示“Pinging...”文字。其次，当等待 ping.SendTaskAsync()完成时，它将始终在与调用者相同的同步上下文中执行。此外，因为同步上下文特别适用于 Windows UI，所以它是单线程的。因此，异步任务的结果将始终返回给同一个线程，即 UI 线程。换句话说，TPL 不是立即执行后续代码，而是查询同步上下文，将 ping 任务返回的信息发布到消息泵。接下来，由于 UI 线程监视消息泵，因此在获得继续工作的消息时，它会调用 await 调用之后的代码。（因此，后续代码的调用与处理消息泵的调用者在同一线程上。）
 
@@ -358,7 +627,17 @@ TAP 编程模式充分考虑了代码可读性问题。请注意在代码清单 
 
 代码清单 20.16　在循环中使用 await 操作符
 
-![](img/image01427.jpeg)
+```powershell
+$urls = @(
+    'www.habitat-spokane.org', 'www.partnersintl.org', 'www.iassist.org',
+    'www.fh.org', 'www.worldvision.org'
+)
+$ping = [System.Net.NetworkInformation.Ping]::new()
+foreach ($url in $urls) {
+    $status = $ping.SendPingAsync($url).GetAwaiter().GetResult().Status
+    $StatusLabel.Content = "$url`: $status"
+}
+```
 
 无论 await 语句是在迭代中出现还是作为单独的语句出现，它们都将串行执行，即一个接一个地按照调用线程调用它们的顺序执行。其底层实现是在 Task.ContinueWith()的语义等价实现中将它们串在一起，而且 await 操作符之间的所有其他代码都将在调用者的同步上下文中执行。
 

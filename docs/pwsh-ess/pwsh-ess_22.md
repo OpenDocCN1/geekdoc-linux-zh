@@ -82,7 +82,14 @@ CPU （中央处理器）或者核心/内核 ^( [\[1\]](part0160.xhtml#ch1_back)
 
 当一个操作为原子操作时，它要么尚未开始，要么已经完成。从外部看，其状态永远不会是“进行中”。例如以下代码：
 
-![](img/image01358.jpeg)
+```powershell
+if ($bankAccounts.Checking.Balance -ge 1000.00d) {
+    $bankAccounts.Checking.Balance -= 1000.00d
+    $bankAccounts.Savings.Balance += 1000.00d
+}
+```
+
+原图使用 decimal 字面量后缀 `m`，PowerShell 中对应后缀为 `d`。
 
 上述代码检查银行账户余额，条件符合就从中取钱，向另一个账户存钱。这个操作必须是原子性的。换言之，为了使代码能正确执行，永远不能发生操作只是部分完成的情况。例如，假定两个线程同时运行，可能两个都验证账户有足够的余额，所以两个都执行转账，而剩余的资金其实只够进行一次转账。事实上，局面会变得更糟。在上述代码中，没有任何一个操作是原子性的。就连复合加/减（或读/写）decimal 类型的属性在 C#中都不属于原子操作。因此，它们在多线程的情况下全都属于“部分完成”——只是部分递增或递减。因为部分完成的非原子操作而造成了不一致状态，这是竞态条件 的一种特例。
 
@@ -164,7 +171,25 @@ CPU （中央处理器）或者核心/内核 ^( [\[1\]](part0160.xhtml#ch1_back)
 
 代码清单 19.1　调用异步任务
 
-![](img/image01360.jpeg)
+```powershell
+$repetitions = 10000
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] {
+    for ($count = 0; $count -lt $repetitions; $count++) {
+        [Console]::Write('-')
+    }
+})
+
+for ($count = 0; $count -lt $repetitions; $count++) {
+    [Console]::Write('+')
+}
+
+# 等待任务完成
+$task.Wait()
+```
+
+PowerShell 中把脚本块强转为 `[Action]` 或 `[Func[T]]`，即可作为委托传给 `Task.Run()`。
 
 新线程要运行的代码由传给 Task.Run()方法的委托（本例是 Action 类型）来定义。该委托（以 Lambda 表达式的形式）在控制台上反复打印连字号。主线程的循环几乎完全一样，只是它打印加号。
 
@@ -180,7 +205,41 @@ CPU （中央处理器）或者核心/内核 ^( [\[1\]](part0160.xhtml#ch1_back)
 
 代码清单 19.2　轮询一个 Task<T>
 
-![](img/image01361.jpeg)![](img/image01362.jpeg)
+```powershell
+class PiCalculator {
+    static [string] Calculate([int] $digits) {
+        # 计算实现略
+    }
+}
+
+function Get-BusySymbols {
+    $busySymbols = "-\|/-\|/"
+    $next = 0
+    while ($true) {
+        $busySymbols[$next]
+        $next = ($next + 1) % $busySymbols.Length
+        "`b"
+    }
+}
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Func[string]] {
+    [PiCalculator]::Calculate(100)
+})
+
+Get-BusySymbols | ForEach-Object {
+    if ($task.IsCompleted) {
+        [Console]::Write("`b")
+        break
+    }
+    [Console]::Write($_)
+}
+[Console]::WriteLine()
+[Console]::WriteLine($task.Result)
+[System.Diagnostics.Trace]::Assert($task.IsCompleted)
+```
+
+PowerShell 没有 C# 的 `yield` 迭代器，这里用函数配合管道模拟无限序列。
 
 在这个代码清单中，任务的数据类型是 Task<string>。该泛型类型包含一个 Result 属性，可从中获取由 Task<string>执行的 Func<string>的返回值。
 
@@ -208,7 +267,31 @@ CPU （中央处理器）或者核心/内核 ^( [\[1\]](part0160.xhtml#ch1_back)
 
 代码清单 19.3　调用 Task.ContinueWith()
 
-![](img/image01363.jpeg)
+```powershell
+[Console]::WriteLine("Before")
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$taskA = [System.Threading.Tasks.Task]::Run(
+    [Action] { [Console]::WriteLine("Starting...") }).ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedent)
+        [Console]::WriteLine("Continuing A...")
+    })
+
+$taskB = $taskA.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedent)
+        [Console]::WriteLine("Continuing B...")
+    })
+$taskC = $taskA.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedent)
+        [Console]::WriteLine("Continuing C...")
+    })
+
+[System.Threading.Tasks.Task]::WaitAll(@($taskB, $taskC))
+[Console]::WriteLine("Finished!")
+```
 
 输出 19.1
 
@@ -226,7 +309,14 @@ ContinueWith()有许多重载版本，有的要获取一个 TaskContinuationOpti
 
 注①：该枚举值指定两个 Task“同步运行”，或者说强制用一个线程运行。也就是说，用此 ContinueWith()指定的操作（一个委托），会使用该 Task 的先驱 Task 所用的那个线程。例如，
 
-![](img/image01367.jpeg)
+```powershell
+$t.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($task)
+        # 此处的代码将在 $t 这个 Task 的线程上执行
+    },
+    [System.Threading.Tasks.TaskContinuationOptions]::ExecuteSynchronously)
+```
 
 ——译者注
 
@@ -234,7 +324,38 @@ ContinueWith()有许多重载版本，有的要获取一个 TaskContinuationOpti
 
 代码清单 19.4　用 ContinueWith()登记事件通知
 
-![](img/image01368.jpeg)![](img/image01369.jpeg)
+```powershell
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Func[string]] {
+    [PiCalculator]::Calculate(10)
+})
+
+$faultedTask = $task.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedentTask)
+        [System.Diagnostics.Trace]::Assert($antecedentTask.IsFaulted)
+        [Console]::WriteLine("Task State: Faulted")
+    },
+    [System.Threading.Tasks.TaskContinuationOptions]::OnlyOnFaulted)
+
+$canceledTask = $task.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedentTask)
+        [System.Diagnostics.Trace]::Assert($antecedentTask.IsCanceled)
+        [Console]::WriteLine("Task State: Canceled")
+    },
+    [System.Threading.Tasks.TaskContinuationOptions]::OnlyOnCanceled)
+
+$completedTask = $task.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedentTask)
+        [System.Diagnostics.Trace]::Assert($antecedentTask.IsCompleted)
+        [Console]::WriteLine("Task State: Completed")
+    },
+    [System.Threading.Tasks.TaskContinuationOptions]::OnlyOnRanToCompletion)
+
+$completedTask.Wait()
+```
 
 这个代码清单实际是为先驱任务上的“事件”登记“侦听者”。事件（任务正常或异常完成）一旦发生，就执行特定的“侦听”任务。这是很强大的功能，尤其是对于那些 fire-and-forget^( [\[5\]](part0161.xhtml#ch5_back) ) 的任务——任务开始，和延续任务挂钩，然后就可以对它不管不问了。
 
@@ -260,7 +381,23 @@ ContinueWith()有许多重载版本，有的要获取一个 TaskContinuationOpti
 
 代码清单 19.5　处理任务的未处理异常
 
-![](img/image01371.jpeg)![](img/image01372.jpeg)
+```powershell
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run([Action] {
+    throw [System.InvalidOperationException]::new()
+})
+
+try {
+    $task.Wait()
+}
+catch [System.AggregateException] {
+    $_.Exception.Handle([Func[System.Exception, bool]] {
+        param($eachException)
+        [Console]::WriteLine("ERROR: $($eachException.Message)")
+        return $true
+    })
+}
+```
 
 输出 19.3
 
@@ -274,7 +411,31 @@ AggregateException 包含的异常列表通过 InnerExceptions 属性获取。�
 
 代码清单 19.6　使用 ContinueWith()观察未处理的异常
 
-![](img/image01373.jpeg)
+```powershell
+$state = @{ ParentTaskFaulted = $false }
+$task = [System.Threading.Tasks.Task]::new([Action] {
+    throw [System.InvalidOperationException]::new()
+})
+$continuationTask = $task.ContinueWith(
+    [Action[System.Threading.Tasks.Task]] {
+        param($antecedentTask)
+        $state.ParentTaskFaulted = $antecedentTask.IsFaulted
+    },
+    [System.Threading.Tasks.TaskContinuationOptions]::OnlyOnFaulted)
+
+$task.Start()
+$continuationTask.Wait()
+
+[System.Diagnostics.Trace]::Assert($state.ParentTaskFaulted)
+[System.Diagnostics.Trace]::Assert($task.IsFaulted)
+$task.Exception.Handle([Func[System.Exception, bool]] {
+    param($eachException)
+    [Console]::WriteLine("ERROR: $($eachException.Message)")
+    return $true
+})
+```
+
+PowerShell 的脚本块委托无法直接改写外层局部变量，故用哈希表保存可以在委托间共享的状态。
 
 注意，为获取原始任务上的未处理异常，我们使用了 Exception 属性（并且使用空包容操作符，因为该属性肯定不为空）。结果和输出 19.3 一样。
 
@@ -294,7 +455,45 @@ AggregateException 包含的异常列表通过 InnerExceptions 属性获取。�
 
 代码清单 19.7　登记未处理异常
 
-![](img/image01374.jpeg)![](img/image01375.jpeg)
+```powershell
+$script:_Clock = [System.Diagnostics.Stopwatch]::new()
+
+function Write-Message([string] $text) {
+    [Console]::WriteLine(
+        "{0}:{1:0000}:{2}",
+        [System.Threading.Thread]::CurrentThread.ManagedThreadId,
+        $script:_Clock.ElapsedMilliseconds,
+        $text)
+}
+
+function Wait-Delay([int] $milliseconds) {
+    Write-Message "Sleeping for $milliseconds ms"
+    [System.Threading.Thread]::Sleep($milliseconds)
+    Write-Message "Awake"
+}
+
+try {
+    $script:_Clock.Start()
+
+    # 登记一个回调来接收未处理异常的通知
+    [AppDomain]::CurrentDomain.add_UnhandledException(
+        [UnhandledExceptionEventHandler] {
+            param($s, $e)
+            Write-Message "Unhandled exception handler starting"
+            Wait-Delay 4000
+        })
+
+    $thread = [System.Threading.Thread]::new([System.Threading.ThreadStart] {
+        Write-Message "Throwing exception."
+        throw [System.Exception]::new()
+    })
+    $thread.Start()
+    Wait-Delay 2000
+}
+finally {
+    Write-Message "Finally block running."
+}
+```
 
 输出 19.4
 
@@ -336,7 +535,33 @@ AggregateException 包含的异常列表通过 InnerExceptions 属性获取。�
 
 代码清单 19.8　使用 CancellationToken 取消任务
 
-![](img/image01377.jpeg)![](img/image01378.jpeg)
+```powershell
+function Write-Pi([System.Threading.CancellationToken] $cancellationToken) {
+    $batchsize = 1
+    $piSection = [string]::Empty
+    $i = 0
+    while (-not $cancellationToken.IsCancellationRequested -or $i -eq [int]::MaxValue) {
+        $piSection = [PiCalculator]::Calculate($batchsize, ($i++) * $batchsize)
+        [Console]::Write($piSection)
+    }
+}
+
+$stars = '*'.PadRight([Console]::WindowWidth - 1, '*')
+[Console]::WriteLine("Push ENTER to exit.")
+$cancellationTokenSource = [System.Threading.CancellationTokenSource]::new()
+
+# .NET 4.5 之前使用 [System.Threading.Tasks.Task]::Factory.StartNew()
+$task = [System.Threading.Tasks.Task]::Run(
+    [Action] { Write-Pi $cancellationTokenSource.Token },
+    $cancellationTokenSource.Token)
+
+# 等待用户输入
+[Console]::ReadLine()
+$cancellationTokenSource.Cancel()
+[Console]::WriteLine($stars)
+$task.Wait()
+[Console]::WriteLine()
+```
 
 输出 19.5
 
@@ -378,7 +603,16 @@ AggregateException 包含的异常列表通过 InnerExceptions 属性获取。�
 
 代码清单 19.9　使用 Task.Factory.StartNew()
 
-![](img/image01381.jpeg)
+```powershell
+function CalculatePiAsync([int] $digits) {
+    return [System.Threading.Tasks.Task]::Factory.StartNew(
+        [Func[string]] { CalculatePi $digits })
+}
+
+function CalculatePi([int] $digits) {
+    # 计算实现略
+}
+```
 
 ### 19.3.2　长时间运行的任务
 
@@ -388,7 +622,11 @@ AggregateException 包含的异常列表通过 InnerExceptions 属性获取。�
 
 代码清单 19.10　协作执行耗时任务
 
-![](img/image01382.jpeg)
+```powershell
+$task = [System.Threading.Tasks.Task]::Factory.StartNew(
+    [Action] { Write-Pi $cancellationTokenSource.Token },
+    [System.Threading.Tasks.TaskCreationOptions]::LongRunning)
+```
 
 ![](img/image00300.jpeg)设计规范
 

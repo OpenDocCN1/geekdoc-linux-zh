@@ -48,7 +48,13 @@ object 包含一个 GetType()成员。因此所有类型都包含该方法。调
 
 代码清单 18.1　使用 Type.GetProperties()获取对象的 public 属性
 
-![](img/image01299.jpeg)
+```powershell
+$dateTime = [DateTime]::new()
+$type = $dateTime.GetType()
+foreach ($property in $type.GetProperties()) {
+    Write-Host $property.Name
+}
+```
 
 输出 18.1
 
@@ -62,13 +68,21 @@ object 包含一个 GetType()成员。因此所有类型都包含该方法。调
 
 代码清单 18.2　使用 typeof()创建 System.Type 实例
 
-![](img/image01301.jpeg)
+```powershell
+[System.Diagnostics.ThreadPriorityLevel] $priority =
+    [System.Enum]::Parse(
+        [System.Diagnostics.ThreadPriorityLevel], 'Idle')
+```
 
 Enum.Parse()获取标识了一个枚举的 Type 对象，然后将一个字符串转换成特定的枚举值。在本例中，它将"Idle"转换成 System.Diagnostics.ThreadPriorityLevel.Idle。
 
 类似地，下一节的代码清单 18.3 在 CompareTo(object obj)方法中使用 typeof 表达式验证 obj 参数的类型确实符合预期：
 
-![](img/image01302.jpeg)
+```powershell
+if ($obj.GetType() -ne [Contact]) {
+    # ...
+}
+```
 
 typeof 表达式在编译时求值，使一次类型比较（例如和 GetType()调用返回的类型比较）能判断对象是否具有希望的类型。
 
@@ -78,7 +92,105 @@ typeof 表达式在编译时求值，使一次类型比较（例如和 GetType()
 
 代码清单 18.3　动态调用成员
 
-![](img/image01303.jpeg)![](img/image01304.jpeg)![](img/image01305.jpeg)![](img/image01306.jpeg)
+```powershell
+using namespace System.Diagnostics
+
+class CommandLineInfo {
+    [bool] $Help
+    [string] $Out
+    [ProcessPriorityClass] $Priority = [ProcessPriorityClass]::Normal
+}
+
+# 将命令行选项与属性名匹配，并在运行时动态赋值
+class CommandLineHandler {
+
+    static [void] Parse([string[]] $args, [object] $commandLine) {
+        $errorMessage = $null
+        if (-not [CommandLineHandler]::TryParse($args, $commandLine, [ref] $errorMessage)) {
+            throw [System.InvalidOperationException]::new($errorMessage)
+        }
+    }
+
+    static [bool] TryParse([string[]] $args, [object] $commandLine,
+        [ref] [string] $errorMessage) {
+        $success = $false
+        $errorMessage.Value = $null
+        foreach ($arg in $args) {
+            if ($arg[0] -eq '/' -or $arg[0] -eq '-') {
+                # 去除选项前的斜杠/短横线
+                $optionParts = $arg -split ':', 2
+                $option = $optionParts[0].Remove(0, 1)
+
+                $property = $commandLine.GetType().GetProperty(
+                    $option,
+                    [System.Reflection.BindingFlags]::IgnoreCase -bor
+                    [System.Reflection.BindingFlags]::Instance -bor
+                    [System.Reflection.BindingFlags]::Public)
+
+                if ($null -ne $property) {
+                    if ($property.PropertyType -eq [bool]) {
+                        # 最后一个参数用于处理索引器
+                        $property.SetValue($commandLine, $true, $null)
+                        $success = $true
+                    }
+                    elseif ($property.PropertyType -eq [string]) {
+                        $property.SetValue($commandLine, $optionParts[1], $null)
+                        $success = $true
+                    }
+                    elseif ($property.PropertyType -eq [ProcessPriorityClass]) {
+                        try {
+                            $property.SetValue(
+                                $commandLine,
+                                [Enum]::Parse([ProcessPriorityClass], $optionParts[1], $true),
+                                $null)
+                            $success = $true
+                        }
+                        catch [ArgumentException] {
+                            $success = $false
+                            $errorMessage.Value =
+                                "The option '$($optionParts[1])' is invalid for '$option'"
+                        }
+                    }
+                    else {
+                        $success = $false
+                        $errorMessage.Value =
+                            "Data type '$($property.PropertyType)' on $($commandLine.GetType()) is not supported."
+                    }
+                }
+                else {
+                    $success = $false
+                    $errorMessage.Value = "option '$option' is not supported."
+                }
+            }
+        }
+        return $success
+    }
+
+    static [void] DisplayHelp() {
+        # 显示命令行帮助
+        Write-Host @"
+Compress.exe /Out:<filename> /Help
+             /Priority:RealTime|High|AboveNormal|Normal|BelowNormal|Idle
+"@
+    }
+}
+
+$commandLine = [CommandLineInfo]::new()
+$errorMessage = $null
+if (-not [CommandLineHandler]::TryParse($args, $commandLine, [ref] $errorMessage)) {
+    Write-Host $errorMessage
+    [CommandLineHandler]::DisplayHelp()
+}
+
+if ($commandLine.Help) {
+    [CommandLineHandler]::DisplayHelp()
+}
+elseif ($commandLine.Priority -ne [ProcessPriorityClass]::Normal) {
+    # 更改线程优先级
+}
+```
+
+PowerShell 类中的成员在脚本内可见，可近似对应原例中嵌套在 `Program` 中的 private 类。反射的 `GetProperty()`/`SetValue()` 依然可以访问它，这正是本节要演示的行为。
 
 虽然程序很长，但代码结构是相当简单的。Main()首先实例化一个 CommandLineInfo 类。这个类型专门用来包含当前程序的命令行数据。每个属性都对应程序的一个命令行选项，具体的命令行如输出 18.2 所示。
 
@@ -106,7 +218,14 @@ CLR 2.0 引入泛型类型后也带来了更多的反射功能。在泛型类型
 
 代码清单 18.4　声明 Stack<T>类
 
-![](img/image01309.jpeg)
+```powershell
+class Stack<T> {
+    [void] Add([T] $i) {
+        $t = [T]     # 等价于 C# 中的 typeof(T)
+        # ...
+    }
+}
+```
 
 获得类型参数的 Type 对象实例以后，就可在类型参数上执行反射，从而判断它的行为，并针对具体类型来调整 Add 方法，使其能更有效地支持这种类型。
 
@@ -116,7 +235,17 @@ CLR 2.0 的 System.Type 类新增了一系列方法来判断给定类型是否�
 
 代码清单 18.5　泛型反射
 
-![](img/image01310.jpeg)
+```powershell
+$type = [System.Nullable``1]
+Write-Host $type.ContainsGenericParameters
+Write-Host $type.IsGenericType
+
+$type = [System.Nullable[DateTime]]
+Write-Host $type.ContainsGenericParameters
+Write-Host $type.IsGenericType
+```
+
+`[System.Nullable``1]` 是 PowerShell 中开放泛型类型的写法（两个反引号加类型参数个数），对应 C# 的 `typeof(System.Nullable<>)`。
 
 输出 18.3 展示了代码清单 18.5 的结果。
 
@@ -132,7 +261,13 @@ Type.IsGenericType 是指示类型是否泛型的 Boolean 属性。
 
 代码清单 18.6　泛型类型反射
 
-![](img/image01312.jpeg)
+```powershell
+$s = [System.Collections.Generic.Stack[int]]::new()
+$t = $s.GetType()
+foreach ($type in $t.GetGenericArguments()) {
+    Write-Host "Type parameter: $($type.FullName)"
+}
+```
 
 输出 18.4
 
@@ -144,7 +279,10 @@ Type.IsGenericType 是指示类型是否泛型的 Boolean 属性。
 
 第十一章简单介绍了 nameof 操作符，当时是用它在参数异常中提供参数名：
 
-![](img/image01314.jpeg)
+```powershell
+throw [System.ArgumentException]::new(
+    'The argument did not represent a digit', 'textDigit')
+```
 
 C# 6.0 引入的这个上下文关键字生成一个常量字符串来包含被指定为实参的任何程序元素的非限定名称。本例的 textDigit 是方法实参，所以 nameof(textDigit)返回"textDigit"（因为这个行动在编译时发生，所以 nameof 从技术上说不是反射。在这里介绍它是因为它最终接收的是有关程序集及其结构的数据）。
 
@@ -158,7 +296,34 @@ C# 6.0 引入的这个上下文关键字生成一个常量字符串来包含被�
 
 代码清单 18.7　动态调用成员
 
-![](img/image01315.jpeg)
+```powershell
+using namespace System.ComponentModel
+
+class Person : System.ComponentModel.INotifyPropertyChanged {
+    [System.ComponentModel.PropertyChangedEventHandler] $PropertyChanged
+
+    Person([string] $name) { $this.Name = $name }
+
+    hidden [string] $_Name = [string]::Empty
+
+    [string] Name {
+        get { return $this._Name }
+        set {
+            if ($this._Name -ne $value) {
+                $this._Name = $value
+                # 使用 C# 6.0 的条件空引用等价写法
+                if ($null -ne $this.PropertyChanged) {
+                    $this.PropertyChanged.Invoke(
+                        $this,
+                        [System.ComponentModel.PropertyChangedEventArgs]::new('Name'))
+                }
+            }
+        }
+    }
+}
+```
+
+PowerShell 没有 `nameof` 运算符，原代码 `nameof(Name)` 生成常量字符串 `"Name"`，此处直接传入同一字符串。
 
 注意无论只提供非限定名称 Name（因其在作用域中），还是使用完全（或部分）限定名称 Person.Name，结果都是最后一个标识符（Person.Name 就只取 Name）。现在仍然可用 C# 5.0 的 CallerMemberName 参数特性来获取属性名，详情参见[`t.cn/Ew4X3Pw`](http://t.cn/Ew4X3Pw) 。
 
@@ -172,7 +337,18 @@ C# 6.0 引入的这个上下文关键字生成一个常量字符串来包含被�
 
 代码清单 18.8　用特性修饰属性
 
-![](img/image01316.jpeg)
+```powershell
+class CommandLineInfo {
+    [CommandLineSwitchAlias('?')]
+    [bool] $Help
+
+    [CommandLineSwitchRequired]
+    [string] $Out
+
+    [System.Diagnostics.ProcessPriorityClass] $Priority =
+        [System.Diagnostics.ProcessPriorityClass]::Normal
+}
+```
 
 在代码清单 18.8 中，Help 和 Out 属性均用特性进行了修饰。这些特性的目的是允许使用别名/?来取代/Help，以及指出/Out 是必需的参数。思路是从 CommandLineHandler.TryParse()方法中启用对选项别名的支持。另外，如解析成功，可检查是否指定了所有必需的开关。
 
@@ -180,7 +356,16 @@ C# 6.0 引入的这个上下文关键字生成一个常量字符串来包含被�
 
 代码清单 18.9　用多个特性来修饰一个属性
 
-![](img/image01317.jpeg)
+```powershell
+# 每个特性各占一对方括号
+[CommandLineSwitchRequired]
+[CommandLineSwitchAlias('FileName')]
+[string] $Out
+
+# 多个特性放在同一对方括号中，以逗号分隔
+[CommandLineSwitchRequired, CommandLineSwitchAlias('FileName')]
+[string] $Out
+```
 
 除了修饰属性，特性还可修饰程序集、类、构造函数、委托、枚举、事件、字段、泛型参数、接口、方法、模块、参数、返回值和结构。大多数构造都可以像代码清单 18.9 那样使用方括号语法来应用特性。但该语法不适用于返回值、程序集和模块。
 
@@ -188,7 +373,43 @@ C# 6.0 引入的这个上下文关键字生成一个常量字符串来包含被�
 
 代码清单 18.10　AssemblyInfo.cs 中保存的程序集特性
 
-![](img/image01318.jpeg)
+```powershell
+using namespace System.Reflection
+using namespace System.Runtime.CompilerServices
+using namespace System.Runtime.InteropServices
+
+# 程序集的常规信息由以下特性控制。
+# 修改这些特性值即可修改与程序集关联的信息。
+[assembly: AssemblyTitle('CompressionLibrary')]
+[assembly: AssemblyDescription('')]
+[assembly: AssemblyConfiguration('')]
+[assembly: AssemblyCompany('IntelliTect')]
+[assembly: AssemblyProduct('CompressionLibrary')]
+[assembly: AssemblyCopyright('Copyright © IntelliTect 2020')]
+[assembly: AssemblyTrademark('')]
+[assembly: AssemblyCulture('')]
+
+# 将 ComVisible 设为 false 可使此程序集中的类型对 COM 组件不可见。
+# 如需从 COM 访问此程序集中的某个类型，请将该类型上的
+# ComVisible 特性设为 true。
+[assembly: ComVisible($false)]
+
+# 以下 GUID 用于类型库的 ID（如果此项目对 COM 公开）。
+[assembly: Guid('417a9609-24ae-4323-b1d6-cef0f87a42c3')]
+
+# 程序集的版本信息由以下四个值构成：
+#
+#       主版本
+#       次版本
+#       生成号
+#       修订号
+#
+# 可以指定所有值，也可以使用 '*' 默认生成号和修订号：
+# [assembly: AssemblyVersion('1.0.*')]
+[assembly: AssemblyFileVersion('1.0.0.0')]
+```
+
+PowerShell 脚本编译为程序集的方式与 C# 项目不同，`[assembly: ...]` 特性在 C# 的 AssemblyInfo.cs 中使用；在 PowerShell 中同样的元数据通常通过模块清单（`.psd1`）指定。此处保留原代码结构以说明程序集特性的写法。
 
 assembly 特性定义类似公司、产品和程序集版本号的事物。类似地，作用于模块的特性需使用 module:前缀。assembly 和 module 特性的限制是它们必须位于 using 指令之后，任何命名空间或类声明之前。代码清单 18.10 的特性由 Visual Studio 项目向导生成，所有项目都应包括，以便使用与可执行文件或 DLL 的内容有关的信息来标记生成的二进制文件。
 
@@ -196,7 +417,14 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.11　指定 return 特性
 
-![](img/image01319.jpeg)
+```powershell
+[return: System.ComponentModel.Description(
+    'Returns true if the object is in a valid state.')]
+[bool] IsValid() {
+    # ...
+    return $true
+}
+```
 
 除了 assembly:和 return:，C#还允许显式指定 module:、class:和 method:等目标，分别对应于修饰模块、类和方法的特性。但正如前面展示的那样，class:和 method:是可选的。
 
@@ -206,7 +434,16 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.12　添加自定义特性
 
-![](img/image01320.jpeg)
+```xml
+<Project>
+  <PropertyGroup>
+    <Company>Addison Wesley</Company>
+    <Copyright>Copyright © Addison Wesley 2020</Copyright>
+    <Product>Essential C# 8.0</Product>
+    <Version>8.0</Version>
+  </PropertyGroup>
+</Project>
+```
 
 这些特性将被转换到 CIL 编译结果中，如输出 18.5 所示。
 
@@ -230,7 +467,10 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.13　定义自定义特性
 
-![](img/image01323.jpeg)
+```powershell
+class CommandLineSwitchRequiredAttribute : System.Attribute {
+}
+```
 
 有了这个简单的定义之后，就可像代码清单 18.8 演示的那样使用该特性。但目前还没有代码与这个特性对应。所以，应用了该特性的 Out 属性暂时无法影响命令行解析。
 
@@ -244,7 +484,27 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.14　获取自定义特性
 
-![](img/image01324.jpeg)![](img/image01325.jpeg)
+```powershell
+using namespace System.Collections.Specialized
+using namespace System.Reflection
+
+class CommandLineSwitchRequiredAttribute : System.Attribute {
+
+    static [string[]] GetMissingRequiredOptions([object] $commandLine) {
+        $missingOptions = [System.Collections.Generic.List[string]]::new()
+        $properties = $commandLine.GetType().GetProperties()
+        foreach ($property in $properties) {
+            $attributes = $property.GetCustomAttributes(
+                [CommandLineSwitchRequiredAttribute], $false)
+            if ($attributes.Length -gt 0 -and
+                $null -eq $property.GetValue($commandLine, $null)) {
+                $missingOptions.Add($property.Name)
+            }
+        }
+        return $missingOptions.ToArray()
+    }
+}
+```
 
 用于查找特性的代码很简单。给定一个 PropertyInfo 对象（通过反射来获取），调用 GetCustomAttributes()，指定要查找的特性，并指定是否检查任何重载的方法。另外，也可调用 GetCustomAttributes()方法而不指定特性类型，从而返回所有特性。
 
@@ -256,7 +516,22 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.15　提供特性构造函数
 
-![](img/image01326.jpeg)![](img/image01327.jpeg)
+```powershell
+class CommandLineSwitchAliasAttribute : System.Attribute {
+    CommandLineSwitchAliasAttribute([string] $alias) {
+        $this.Alias = $alias
+    }
+
+    [string] $Alias
+}
+```
+
+```powershell
+class CommandLineInfo {
+    [CommandLineSwitchAlias('?')]
+    [bool] $Help
+}
+```
 
 支持该功能需为特性提供一个构造函数。具体地说，针对别名，需提供构造函数来获取一个 string 参数。类似地，如希望允许多个别名，构造函数要获取 params string 数组作为参数。
 
@@ -266,17 +541,116 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.16　获取特性实例并检查其初始化
 
-![](img/image01328.jpeg)
+```powershell
+$property = [CommandLineInfo].GetProperty('Help')
+$attribute = [CommandLineSwitchAliasAttribute]$property.GetCustomAttribute(
+    [CommandLineSwitchAliasAttribute], $false)
+if ($null -ne $attribute -and $attribute.Alias -eq '?') {
+    Write-Host 'Help(?)'
+}
+```
+
+PowerShell 没有 C# 的 `?.` 条件访问运算符，因此这里写成显式的空值检查。
 
 除此之外，如代码清单 18.17 和代码清单 18.18 所示，可在 CommandLineAliasAttribute 的 GetSwitches()方法中使用类似的代码返回由所有开关（包括来自属性名的那些）构成的一个字典集合，将每个名称同命令行对象的对应特性关联。
 
 代码清单 18.17　获取自定义特性实例
 
-![](img/image01329.jpeg)![](img/image01330.jpeg)
+```powershell
+using namespace System.Reflection
+
+class CommandLineSwitchAliasAttribute : System.Attribute {
+    CommandLineSwitchAliasAttribute([string] $alias) {
+        $this.Alias = $alias
+    }
+
+    [string] $Alias
+
+    static [System.Collections.Generic.Dictionary[string, PropertyInfo]] GetSwitches(
+        [object] $commandLine) {
+
+        $options = [System.Collections.Generic.Dictionary[string, PropertyInfo]]::new()
+        $properties = $commandLine.GetType().GetProperties(
+            [BindingFlags]::Public -bor [BindingFlags]::Instance)
+
+        foreach ($property in $properties) {
+            $options.Add($property.Name, $property)
+
+            $attributes = $property.GetCustomAttributes(
+                [CommandLineSwitchAliasAttribute], $false)
+            foreach ($attribute in $attributes) {
+                $options.Add($attribute.Alias.ToLower(), $property)
+            }
+        }
+        return $options
+    }
+}
+```
 
 代码清单 18.18　更新 CommandLineHandler.TryParse()以处理别名
 
-![](img/image01331.jpeg)![](img/image01332.jpeg)![](img/image01333.jpeg)
+```powershell
+using namespace System.Reflection
+
+class CommandLineHandler {
+
+    static [bool] TryParse([string[]] $args, [object] $commandLine,
+        [ref] [string] $errorMessage) {
+
+        $success = $false
+        $errorMessage.Value = $null
+        $options = [CommandLineSwitchAliasAttribute]::GetSwitches($commandLine)
+
+        foreach ($arg in $args) {
+            if ($arg[0] -eq '/' -or $arg[0] -eq '-') {
+                $optionParts = $arg -split ':', 2
+                $option = $optionParts[0].Remove(0, 1).ToLower()
+
+                $property = $null
+                if ($options.TryGetValue($option, [ref] $property)) {
+                    $success = [CommandLineHandler]::SetOption(
+                        $commandLine, $property, $optionParts, [ref] $errorMessage)
+                }
+                else {
+                    $success = $false
+                    $errorMessage.Value = "option '$option' is not supported."
+                }
+            }
+        }
+        return $success
+    }
+
+    static [bool] SetOption([object] $commandLine, [PropertyInfo] $property,
+        [string[]] $optionParts, [ref] [string] $errorMessage) {
+
+        $success = $false
+        if ($property.PropertyType -eq [bool]) {
+            # 最后一个参数用于处理索引器
+            $property.SetValue($commandLine, $true, $null)
+            $success = $true
+        }
+        elseif ($optionParts.Length -lt 2 -or $optionParts[1] -eq '') {
+            # 没有为该开关提供值
+            $success = $false
+            $errorMessage.Value = "You must specify the value for the '$($property.Name)' option."
+        }
+        elseif ($property.PropertyType -eq [string]) {
+            $property.SetValue($commandLine, $optionParts[1], $null)
+            $success = $true
+        }
+        elseif ($property.PropertyType -eq [System.Diagnostics.ProcessPriorityClass]) {
+            $success = [CommandLineHandler]::TryParseEnumSwitch(
+                $commandLine, $optionParts, $property, [ref] $errorMessage)
+        }
+        else {
+            $success = $false
+            $errorMessage.Value =
+                "Data type '$($property.PropertyType.ToString())' on $($commandLine.GetType().ToString()) is not supported."
+        }
+        return $success
+    }
+}
+```
 
 ![](img/image00300.jpeg)设计规范
 
@@ -292,7 +666,15 @@ return 特性（如代码清单 18.11 所示）出现在方法声明之前，语
 
 代码清单 18.19　限制特性能修饰哪些构造
 
-![](img/image01334.jpeg)
+```powershell
+[System.AttributeUsage([System.AttributeTargets]::Property)]
+class CommandLineSwitchAliasAttribute : System.Attribute {
+    CommandLineSwitchAliasAttribute([string] $alias) {
+        $this.Alias = $alias
+    }
+    [string] $Alias
+}
+```
 
 如代码清单 18.20 所示，只要特性被不恰当地使用，就会导致输出 18.6 所示的编译时错误。
 
