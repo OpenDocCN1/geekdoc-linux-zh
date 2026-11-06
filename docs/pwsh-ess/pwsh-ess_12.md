@@ -58,7 +58,20 @@
 
 代码清单 9.1　定义结构
 
-![](img/image00885.jpeg)![](img/image00886.jpeg)
+```powershell
+class Angle {
+    [int]$Degrees
+    [int]$Minutes
+    [int]$Seconds
+    Angle([int]$degrees, [int]$minutes, [int]$seconds) {
+        $this.Degrees = $degrees; $this.Minutes = $minutes; $this.Seconds = $seconds
+    }
+    [Angle] Move([int]$degrees, [int]$minutes, [int]$seconds) {
+        return [Angle]::new($this.Degrees + $degrees, $this.Minutes + $minutes, $this.Seconds + $seconds)
+    }
+}
+# Value types have no direct PowerShell class equivalent; class instances are references.
+```
 
 上述代码定义值类型 Angle 来存储角度（无论经度还是纬度）的时、分、秒。这样生成的 C#类型称为结构 。
 
@@ -66,19 +79,27 @@
 
 从 C# 7.2 起甚至可在编译时验证结构只读，只需像下面这样声明：
 
-![](img/image00887.jpeg)
+```powershell
+# PowerShell classes do not support readonly struct declarations.
+class Angle {}
+```
 
 编译时发现某个字段非只读或某个属性含赋值方法（setter）将报错。
 
 有时候，我们可能只希望将个别方法，或者将属性的取值方法设置为只读，因为逻辑上它们不应当修改实例的状态，但实际上却有这个能力。因此，如果需要对结构的只读性进行更加精细的控制，在 C# 8.0 中，可以只在声明个别成员，而不是整个结构时使用 readonly 关键字。比如代码清单 9.1 中的 Move()方法就适合使用 readonly 关键字：
 
-![](img/image00888.jpeg)
+```powershell
+# Keep methods side-effect free to emulate a readonly member.
+[Angle] Move([int]$degrees, [int]$minutes, [int]$seconds) { ... }
+```
 
 （如果结构体被整体声明为只读，仍然可以在个别成员上使用 readonly 关键字，只是这样做没有额外的效果。）
 
 当只读成员直接修改字段、通过属性方法修改字段，或者调用其他非只读方法时，会引发编译时错误。通过将个别成员声明为只读，程序员可以清晰地表达成员方法的行为意图。注意，对于非自动实现的属性方法，可以分别给取值方法或者赋值方法添加 readonly 关键字（虽然将赋值方法声明为只读一般没有意义），而如果要将整个属性声明为只读，则可以将 readonly 关键字写在整个属性的名字前面。
 
-![](img/image00312.jpeg)注意 　虽然语言本身未作要求，但好的实践是使值类型不可变。换言之，值类型一旦实例化，就不能修改该实例。要修改应创建新实例。代码清单 9.1 提供了一个 Move()方法，它不修改 Angle 的实例，而是返回一个全新实例。该实践出于两方面的考虑。首先，值类型应表示值。两个整数相加，其中任何一个都不应改变。所以，应该使两个加数不可变，生成第三个值作为结果。其次，值类型拷贝的是值而非引用，很容易混淆并错误地以为对一个值类型变量的变动会造成另一个值类型的变动，就像引用类型那样。
+![](img/image00312.jpeg)
+
+注意 　虽然语言本身未作要求，但好的实践是使值类型不可变。换言之，值类型一旦实例化，就不能修改该实例。要修改应创建新实例。代码清单 9.1 提供了一个 Move()方法，它不修改 Angle 的实例，而是返回一个全新实例。该实践出于两方面的考虑。首先，值类型应表示值。两个整数相加，其中任何一个都不应改变。所以，应该使两个加数不可变，生成第三个值作为结果。其次，值类型拷贝的是值而非引用，很容易混淆并错误地以为对一个值类型变量的变动会造成另一个值类型的变动，就像引用类型那样。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -94,7 +115,10 @@
 
 代码清单 9.2　在结构声明中初始化字段会报错
 
-![](img/image00889.jpeg)
+```powershell
+# PowerShell initializes fields when the class is instantiated; there is no declaration-time struct-field error.
+class Angle { [int]$Degrees = 42 }
+```
 
 如果不用 new 操作符来调用构造函数从而显式实例化结构，结构中的所有数据都隐式初始化为对应数据类型的默认值。但值类型中的所有数据都必须显式初始化来避免编译时错误。这带来一个问题：一个值类型在什么时候会隐式初始化而不显式实例化呢？实例化含有未赋值的值类型字段的一个引用类型，或者实例化值类型的一个数组而不使用数组初始化器（初始化列表）时，就会发生这种情况。
 
@@ -102,7 +126,18 @@
 
 代码清单 9.3　不初始化字段就访问属性
 
-![](img/image00890.jpeg)![](img/image00891.jpeg)
+```powershell
+# Initialize fields before reading computed properties.
+class Angle {
+    hidden [int]$_Degrees
+    hidden [int]$_Minutes
+    hidden [int]$_Seconds
+    Angle([int]$degrees, [int]$minutes, [int]$seconds) {
+        $this._Degrees=$degrees; $this._Minutes=$minutes; $this._Seconds=$seconds
+    }
+    [int]$Degrees; [int]$Minutes; [int]$Seconds
+}
+```
 
 访问 Degrees 会隐式访问 this.Degrees，但除非编译器知道所有字段都已初始化，否则访问 this 非法。为解决该问题，要像代码清单 9.3 未注释掉的构造函数那样直接初始化字段。
 
@@ -158,7 +193,16 @@ System.ValueType 规定了值类型的行为，但没有包含任何附加成员
 
 代码清单 9.4　容易忽视的 box 和 unbox 指令
 
-![](img/image00893.jpeg)![](img/image00894.jpeg)
+```powershell
+# ArrayList stores objects; prefer a generic PowerShell array to avoid boxing.
+$totalCount = [int](Read-Host 'Enter a number between 2 and 1000')
+$list = [System.Collections.ArrayList]::new()
+[void]$list.Add([double]0); [void]$list.Add([double]1)
+for ($i=2; $i -lt $totalCount; $i++) {
+    [void]$list.Add([double]$list[$i-1] + [double]$list[$i-2])
+}
+$list | ForEach-Object { Write-Host "$_" -NoNewline; Write-Host ', ' -NoNewline }
+```
 
 输出 9.1
 
@@ -182,7 +226,12 @@ System.ValueType 规定了值类型的行为，但没有包含任何附加成员
 
 代码清单 9.5　必须先拆箱为基础类型
 
-![](img/image00896.jpeg)
+```powershell
+$number = 42
+$boxed = [object]$number
+# Unbox to the original value type before converting to another type.
+$bigNumber = [double][int]$boxed
+```
 
 高级主题：lock 语句中的值类型
 
@@ -192,7 +241,18 @@ C#支持用于同步代码的 lock 语句。该语句实际编译成 System.Thre
 
 代码清单 9.6　容易忽视的装箱问题
 
-![](img/image00897.jpeg)![](img/image00898.jpeg)
+```powershell
+class Angle {
+    [int]$Degrees; [int]$Minutes; [int]$Seconds
+    Angle([int]$d,[int]$m,[int]$s) { $this.Degrees=$d; $this.Minutes=$m; $this.Seconds=$s }
+    [void]MoveTo([int]$d,[int]$m,[int]$s) { $this.Degrees=$d; $this.Minutes=$m; $this.Seconds=$s }
+}
+$angle = [Angle]::new(25,58,23)
+# PowerShell class references are not boxed value-type copies; mutations affect the same object.
+$objectAngle = [object]$angle
+$angle.MoveTo(26,58,23)
+$objectAngle.Degrees
+```
 
 输出 9.2
 
@@ -230,7 +290,12 @@ C#支持用于同步代码的 lock 语句。该语句实际编译成 System.Thre
 
 代码清单 9.7　避免拆箱和拷贝
 
-![](img/image00900.jpeg)
+```powershell
+$number = 42
+$boxed = [object]$number
+# .NET interface calls can be made without an explicit unbox in PowerShell.
+([System.IFormattable]$boxed).ToString('X', $null)
+```
 
 你或许会问，如果将值类型的实例作为接收者来调用 object 声明的虚方法 ToString()会发生什么？实例会装箱、拆箱还是什么？这要视情况而定：
 
@@ -248,7 +313,15 @@ C#支持用于同步代码的 lock 语句。该语句实际编译成 System.Thre
 
 代码清单 9.8　比较整数 switch 和枚举 switch
 
-![](img/image00901.jpeg)![](img/image00902.jpeg)
+```powershell
+enum ConnectionState { Disconnected; Connecting; Connected; Disconnecting }
+$connectionState = [ConnectionState]::Connected
+switch ($connectionState) {
+    ([ConnectionState]::Connected) { 'connected'; break }
+    ([ConnectionState]::Connecting) { 'connecting'; break }
+    default { 'other' }
+}
+```
 
 两者在可读性上区别明显。在第二个代码片段中，各个 case 让人一目了然。不过，两者在运行时的性能完全一样，因为第二个代码片段在每个 case 中使用了枚举值 。
 
@@ -256,7 +329,14 @@ C#支持用于同步代码的 lock 语句。该语句实际编译成 System.Thre
 
 代码清单 9.9　定义枚举
 
-![](img/image00903.jpeg)
+```powershell
+enum ConnectionState {
+    Disconnected
+    Connecting
+    Connected
+    Disconnecting
+}
+```
 
 ![](img/image00312.jpeg)注意 　用枚举替代布尔值能改善可读性。例如，SetState(DeviceState.On)的可读性优于 SetState(true)。
 
@@ -266,7 +346,15 @@ C#支持用于同步代码的 lock 语句。该语句实际编译成 System.Thre
 
 代码清单 9.10　定义枚举类型
 
-![](img/image00904.jpeg)
+```powershell
+enum ConnectionState {
+    Disconnected = 0
+    Connecting = 10
+    Connected = 11
+    Joined = 11
+    Disconnecting = 12
+}
+```
 
 Disconnected 仍然具有默认值 0，Connecting 则被显式赋值为 10，所以它后面的 Connected 会被赋值为 11。随后，Joined 也被赋值为 11，也就是赋给 Connected 的值（此时不需要为 Connected 附加枚举名称前缀，因为目前正处在枚举的作用域内）。最后，Disconnecting 自动递增 1，所以值是 12。
 
@@ -302,7 +390,12 @@ C#不支持不同枚举数组之间的直接转型。但 CLR 允许，前提是�
 
 代码清单 9.11　枚举数组之间的转型
 
-![](img/image00905.jpeg)
+```powershell
+enum ConnectionState1 { Disconnected; Connecting; Connected; Disconnecting }
+enum ConnectionState2 { Disconnected; Connecting; Connected; Disconnecting }
+# Convert through the underlying integer values when changing enum types.
+$states = [ConnectionState1[]]([ConnectionState2[]](42))
+```
 
 这个例子利用了 CLR 的赋值兼容性比 C#宽松这一事实。（还可用同样的技巧进行非法转换，比如 int\[\]转换成 uint\[\]。）但使用该技巧时务必慎重，因为 C#规范没有说这个技巧在不同 CLR 实现中都能发挥作用。
 
@@ -310,7 +403,9 @@ C#不支持不同枚举数组之间的直接转型。但 CLR 允许，前提是�
 
 枚举的一个好处是 ToString()方法（通过 System.Console.WriteLine()这样的方法来调用）会输出枚举值标识符：
 
-![](img/image00906.jpeg)
+```powershell
+[System.Diagnostics.Trace]::WriteLine("The connection is currently $([ConnectionState]::Disconnecting)")
+```
 
 上述代码将输出 9.3 的文本写入跟踪缓冲区（trace buffer）。
 
@@ -322,7 +417,10 @@ C#不支持不同枚举数组之间的直接转型。但 CLR 允许，前提是�
 
 代码清单 9.12　使用 Enum.Parse()将字符串转换为枚举
 
-![](img/image00908.jpeg)
+```powershell
+$priority = [System.Threading.ThreadPriority]::Parse([System.Threading.ThreadPriority], 'Idle')
+$priority
+```
 
 输出 9.4
 
@@ -334,7 +432,10 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 代码清单 9.13　使用 Enum.TryParse<T>()将字符串转换成枚举
 
-![](img/image00910.jpeg)
+```powershell
+[System.Threading.ThreadPriority]$priority = 0
+if ([System.Enum]::TryParse('Idle', [ref]$priority)) { $priority }
+```
 
 该技术的优点在于，不必使用异常处理机制来防范转换不成功的情况，检查 TryParse<T>()返回的 Boolean 结果就可以了。
 
@@ -350,7 +451,10 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 代码清单 9.14　枚举作为位标志
 
-![](img/image00911.jpeg)
+```powershell
+# PowerShell can use the .NET flags enum directly.
+[System.IO.FileAttributes]$attrs = [System.IO.FileAttributes]::ReadOnly -bor [System.IO.FileAttributes]::Hidden
+```
 
 ![](img/image00312.jpeg)注意 　位标志枚举名称通常是复数，因为它的值代表一个标志（flag）的集合。
 
@@ -358,7 +462,13 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 代码清单 9.15　为标志枚举值使用按位 OR 和 AND^( [\[1\]](part0093.xhtml#ch1_back) ) 
 
-![](img/image00912.jpeg)![](img/image00913.jpeg)
+```powershell
+$fileName = 'enumtest.txt'
+$file = Get-Item $fileName
+$file.Attributes = [System.IO.FileAttributes]::Hidden -bor [System.IO.FileAttributes]::ReadOnly
+if (($file.Attributes -band [System.IO.FileAttributes]::Hidden) -ne [System.IO.FileAttributes]::Hidden) { throw 'File is not hidden.' }
+if (-not ($file.Attributes.HasFlag([System.IO.FileAttributes]::ReadOnly))) { throw 'File is not read-only.' }
+```
 
 输出 9.5 展示了代码清单 9.15 的结果。
 
@@ -370,7 +480,17 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 代码清单 9.16　为常用组合定义枚举值
 
-![](img/image00915.jpeg)![](img/image00916.jpeg)
+```powershell
+enum DistributedChannel {
+    None = 0
+    Transacted = 1
+    Queued = 2
+    Encrypted = 4
+    Persisted = 16
+    FaultTolerant = 19 # Transacted -bor Queued -bor Persisted
+}
+$channel = [DistributedChannel]19
+```
 
 一个好习惯是在标志枚举中包含值为 0 的 None 成员，因为无论是枚举类型的字段，还是枚举类型的一个数组中的元素，其初始默认值都是 0。避免最后一个枚举值对应像 Maximum（最大）这样的东西，因为 Maximum 可能被解释成有效枚举值。要检查枚举是否包含某个值，请使用 System.Enum.IsDefined()方法。
 
@@ -394,7 +514,16 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 代码清单 9.17　使用 FlagsAttribute
 
-![](img/image00917.jpeg)![](img/image00918.jpeg)
+```powershell
+# [Flags] is already applied to System.IO.FileAttributes.
+$fileName = 'enumtest.txt'
+New-Item $fileName -ItemType File -Force | Out-Null
+$file = Get-Item $fileName
+$file.Attributes = [System.IO.FileAttributes]::Hidden -bor [System.IO.FileAttributes]::ReadOnly
+$file.Attributes
+[System.IO.FileAttributes]::Parse([System.IO.FileAttributes], $file.Attributes.ToString())
+Remove-Item $fileName
+```
 
 输出 9.6 展示了代码清单 9.17 的结果。
 
