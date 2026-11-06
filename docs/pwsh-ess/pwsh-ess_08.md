@@ -18,7 +18,15 @@
 
 代码清单 5.1　语句组合成方法
 
-![](img/image00611.jpeg)
+```powershell
+# LineCount.Main: coordinate work through focused functions
+$lineCount = 0
+$files = $null
+Display-HelpText
+$files = Get-Files
+$lineCount = Get-LineCount $files
+Show-LineCount $lineCount
+```
 
 这里没有将所有语句都放到 Main()中，而是把它们划分在多个方法中。例如，程序先用一系列 System.Console.WriteLine()语句显示帮助文本，这些语句全部放在 DisplayHelpText()方法中。类似地，用 GetFiles()方法获取要统计行数的文件。最后调用 CountLines()方法实际统计行数，调用 DisplayLineCount()方法显示结果。一眼就能看清楚整个程序的结构，因为方法名清楚地描述了方法的作用。
 
@@ -34,7 +42,12 @@
 
 代码清单 5.2　简单方法调用
 
-![](img/image00612.jpeg)
+```powershell
+Write-Output 'Hey you!'
+$firstName = Read-Host 'Enter your first name'
+$lastName = Read-Host 'Enter your last name'
+Write-Output "Your full name is $firstName $lastName."
+```
 
 方法调用由方法名称、实参列表和返回值构成。完全限定的方法名称包括命名空间、类型名和方法名，每部分以句点分隔。稍后会讲到，调用方法时经常只使用方法名称，而不必完全限定。
 
@@ -76,7 +89,9 @@
 
 方法可获取任意数量的形参，每个形参都具有特定的数据类型。调用者为形参提供的值称为实参 ，每个实参都要和一个形参对应。例如，以下方法调用有三个参数：
 
-![](img/image00614.jpeg)
+```powershell
+Copy-Item -LiteralPath $oldFileName -Destination $newFileName -ErrorAction Stop
+```
 
 该方法位于 File 类中，后者位于 System.IO 命名空间中。方法声明为有三个参数，第一个和第二个是 string 类型，第三个是 bool 类型。本例传递 string 变量 oldFileName 和 newFileName 代表旧的和新的文件名，第三个参数传递 false，用于判断在新文件名存在的情况下文件拷贝失败的情形。
 
@@ -86,7 +101,10 @@
 
 代码清单 5.3　将方法返回值作为实参传给另一个方法调用
 
-![](img/image00615.jpeg)
+```powershell
+Write-Host 'Enter your first name: ' -NoNewline
+Write-Output "Hello $(Read-Host)!"
+```
 
 代码清单 5.3 不是先为变量赋值，再在 System.Console.WriteLine()调用中使用这个变量。相反，是在调用 System.Console.WriteLine()时直接调用 System.Console.ReadLine()方法。运行时会先执行 System.Console.ReadLine()方法，返回值直接传给 System.Console.WriteLine()方法，而不是传给一个变量。
 
@@ -108,11 +126,27 @@
 
 代码清单 5.4　声明方法
 
-![](img/image00616.jpeg)![](img/image00617.jpeg)
+```powershell
+function Get-UserInput([string]$prompt) { Read-Host $prompt }
+function Get-FullName([string]$firstName, [string]$lastName) { "$firstName $lastName" }
+function Show-Greeting([string]$fullName, [string]$initials) { Write-Output "Hello $fullName! Your initials are $initials" }
+function Get-Initials([string]$firstName, [string]$lastName) { "$($firstName[0]). $($lastName[0])." }
+Write-Output 'Hey you!'
+$firstName = Get-UserInput 'Enter your first name: '
+$lastName = Get-UserInput 'Enter your last name: '
+$fullName = Get-FullName $firstName $lastName
+$initials = Get-Initials $firstName $lastName
+Show-Greeting $fullName $initials
+```
 
 输出 5.1
 
-![](img/image00618.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your last name: Montoya
+Hello Inigo Montoya! Your initials are I. M.
+```
 
 代码清单 5.4 声明了 5 个方法。从 Main()中调用了 GetUserInput()，然后调用 GetFullName()和 GetInitials()。后三个方法都返回一个值，而且都要获取实参。最后调用 DisplayGreeting()，它不返回任何数据。C#的每个方法都必须在某个类型中，本例的包容类型是 IntroducingMethods 类。即使第一章讨论的 Main()方法也必须在一个类型中。
 
@@ -148,7 +182,16 @@ GetUserInput()、GetFullName()和 GetInitials()方法除了定义参数，还定
 
 代码清单 5.5　方法中间的 return 语句
 
-![](img/image00619.jpeg)![](img/image00620.jpeg)
+```powershell
+function Invoke-MyMethod {
+    $command = Get-CommandText
+    switch ($command) {
+        'quit' { return $false }
+        # ... other cases omitted
+        default { return $true }
+    }
+}
+```
 
 （注意，return 语句将控制转移出 switch，所以不需要用 break 语句防止非法“贯穿”switch 部分。）
 
@@ -164,7 +207,14 @@ GetUserInput()、GetFullName()和 GetInitials()方法除了定义参数，还定
 
 代码清单 5.6　用元组返回多个值
 
-![](img/image00621.jpeg)![](img/image00622.jpeg)
+```powershell
+function Get-UserInput([string]$prompt) { Read-Host $prompt }
+function Get-Name {
+    [pscustomobject]@{ First = Get-UserInput 'Enter your first name: '; Last = Get-UserInput 'Enter your last name: ' }
+}
+$name = Get-Name
+Write-Output "Hello $($name.First) $($name.Last)!"
+```
 
 技术上仍然只返回一个数据类型，即一个 ValueTuple<string, string>，但实际可以返回任意数量（当然要合理）。
 
@@ -172,7 +222,9 @@ GetUserInput()、GetFullName()和 GetInitials()方法除了定义参数，还定
 
 有些方法过于简单。为简化这些方法的定义，C# 6.0 引入了表达式主体方法 ，允许用表达式代替完整方法主体。代码清单 5.4 的 GetFullName()方法就是一例：
 
-![](img/image00623.jpeg)
+```powershell
+function Get-FullName([string]$firstName, [string]$lastName) { "$firstName $lastName" }
+```
 
 表达式主体方法不是用大括号定义方法主体，而是用=>操作符（第十三章详述）。该操作符的结果数据类型必须与方法返回类型匹配。换言之，虽然没有显式的 return 语句，但表达式本身的返回类型必须与方法声明的返回类型匹配。
 
@@ -194,13 +246,18 @@ GetUserInput()、GetFullName()和 GetInitials()方法除了定义参数，还定
 
 代码清单 5.7　using 指令的例子
 
-![](img/image00624.jpeg)![](img/image00625.jpeg)
+```powershell
+# PowerShell cmdlets do not require C# namespace qualification.
+Write-Output 'Hello, my name is Inigo Montoya'
+```
 
 代码清单 5.7 的结果如输出 5.2 所示。
 
 输出 5.2
 
-![](img/image00626.jpeg)
+```powershell
+Hello, my name is Inigo Montoya
+```
 
 虽然添加了 using System，但使用 System 的某个子命名空间中的类型时还是不能省略 System。例如，要访问 System.Text 中的 StringBuilder 类型，必须另外添加一个 using System.Text 指令或者对类型进行完全限定（System.Text.StringBuilder），而不能只是写 Text.StringBuilder。简单地说，using 指令不“导入”任何嵌套命名空间 中的类型。嵌套命名空间（由命名空间中的句点符号来标识）必须显式导入。
 
@@ -233,13 +290,18 @@ using 指令不仅可以在文件顶部使用，还可以在命名空间声明�
 
 代码清单 5.8　在命名空间声明中使用 using 指令
 
-![](img/image00627.jpeg)
+```powershell
+# Namespace-scoped imports have no direct PowerShell equivalent.
+Write-Output 'Hello, my name is Inigo Montoya'
+```
 
 输出 5.3 展示了结果。
 
 输出 5.3
 
-![](img/image00628.jpeg)
+```powershell
+Hello, my name is Inigo Montoya
+```
 
 在文件顶部和命名空间声明的顶部使用 using 指令的区别在于，后者的 using 指令只在声明的命名空间内有效。如果在 EssentialCSharp 命名空间前后声明了新命名空间，新命名空间不会受别的命名空间中的 using System 指令的影响。但我们很少写这样的代码，特别是根据约定，每个文件只应该有一个类型声明。
 
@@ -249,7 +311,12 @@ using 指令允许省略命名空间限定符来简化类型名称。而 using s
 
 代码清单 5.9　using static 指令
 
-![](img/image00629.jpeg)![](img/image00630.jpeg)
+```powershell
+Write-Output 'Hey you!'
+$firstName = Read-Host 'Enter your first name'
+$lastName = Read-Host 'Enter your last name'
+Write-Output "Your full name is $firstName $lastName."
+```
 
 本例不会降低代码的可读性。WriteLine()、Write()和 ReadLine()明显与控制台指令有关。事实上，我们可以说代码显得比以往更简单、更清晰。
 
@@ -263,13 +330,11 @@ using 指令允许省略命名空间限定符来简化类型名称。而 using s
 
 代码清单 5.10　声明类型别名
 
-![](img/image00631.jpeg)
-
-代码清单 5.10 将全新的名称 CountDownTimer 作为别名，但也可将别名指定为 Timer，如代码清单 5.11 所示。
-
-代码清单 5.11　声明同名的类型别名
-
-![](img/image00632.jpeg)
+```powershell
+# Use a fully qualified type name when .NET type names are ambiguous.
+$timer = [System.Timers.Timer]::new()
+# Distinguish this from [System.Threading.Timer].
+```
 
 由于 Timer 现在是别名，所以“Timer”引用没有歧义。这时如果要引用 System.Threading.Timer 类型，必须完全限定或定义不同的别名。
 
@@ -287,13 +352,26 @@ using 指令允许省略命名空间限定符来简化类型名称。而 using s
 
 代码清单 5.12　向 Main()传递命令行参数
 
-![](img/image00633.jpeg)![](img/image00634.jpeg)
+```powershell
+param([string[]]$args)
+if ($args.Count -ne 2) {
+    Write-Error 'You must specify the URL and target file name.'
+    Write-Output 'Usage: Downloader.ps1 <URL> <TargetFileName>'
+    exit 1
+}
+Invoke-WebRequest -Uri $args[0] -OutFile $args[1]
+exit 0
+```
 
 代码清单 5.12 的结果如输出 5.4 所示。
 
 输出 5.4
 
-![](img/image00635.jpeg)
+```powershell
+Downloader.ps1
+ERROR: You must specify the URL and target file name.
+Usage: Downloader.ps1 <URL> <TargetFileName>
+```
 
 成功获取存盘文件名，就用它保存下载的文件。否则应显示帮助文本。Main()方法还会返回一个 int，而不是像往常那样返回 void。返回值对于 Main()声明来说是可选的。但如果有返回值，程序就可以将状态码返回给调用者（比如脚本或批处理文件）。根据约定，非零返回值代表出错。
 
@@ -303,7 +381,9 @@ using 指令允许省略命名空间限定符来简化类型名称。而 using s
 
 假如一个程序的两个类都有 Main()方法，可以选取其中一个类作为程序的入口点。在 Visual Studio 中找到“解决方法资源管理器”面板，右键单击项目图标，在弹出的菜单中点击“属性”命令。属性设置页面将会显示在窗口右侧。请确保“应用程序”选项卡处于选中状态。在页面中找到“启动对象”下拉选单。在这里可以选择作为入口点的类名称。如果使用命令行编译程序，也可以通过设置 StartupObject 属性来设置入口点的类。例如：
 
-![](img/image00636.jpeg)
+```powershell
+dotnet build -p:StartupObject=AddisonWesley.Program2
+```
 
 上例中，AddisonWesley.Program2 是具有 Main()方法的命名空间和类名称。
 
@@ -325,11 +405,19 @@ using 指令允许省略命名空间限定符来简化类型名称。而 using s
 
 代码清单 5.13　以传值方式传递变量
 
-![](img/image00637.jpeg)![](img/image00638.jpeg)
+```powershell
+$driveLetter = 'C:'
+$folderPath = 'Data'
+$fileName = 'index.html'
+$fullName = Join-Path (Join-Path $driveLetter $folderPath) $fileName
+Write-Output $fullName
+```
 
 输出 5.5
 
-![](img/image00639.jpeg)
+```powershell
+C:\Data\index.html
+```
 
 Combine()方法返回前，即使将 null 值赋给 driveLetter、folderPath 和 fileName 等变量，Main()中对应的变量仍会保持其初始值不变，因为在调用方法时，只是将变量的值拷贝了一份给方法。调用栈在一次调用的末尾“展开”的时候，拷贝的数据会被丢弃。
 
@@ -353,11 +441,23 @@ Combine()方法返回前，即使将 null 值赋给 driveLetter、folderPath 和
 
 代码清单 5.14　以传引用的方式传递变量
 
-![](img/image00640.jpeg)
+```powershell
+function Swap-Value([ref]$first, [ref]$second) {
+    $temp = $first.Value
+    $first.Value = $second.Value
+    $second.Value = $temp
+}
+$first = 'hello'
+$second = 'goodbye'
+Swap-Value ([ref]$first) ([ref]$second)
+Write-Output "first = `"$first`", second = `"$second`""
+```
 
 输出 5.6
 
-![](img/image00641.jpeg)
+```powershell
+first = "goodbye", second = "hello"
+```
 
 赋给 first 和 second 的值被成功交换。这要求以传引用 的方式传递变量。比较本例的 Swap()调用与代码清单 5.13 的 Combine()调用，不难发现两者最明显的区别就是本例在参数数据类型前使用了关键字 ref，这使参数以传引用的方式传递，被调用的方法可用新值更新调用者的变量。
 
@@ -371,13 +471,29 @@ Combine()方法返回前，即使将 null 值赋给 driveLetter、folderPath 和
 
 代码清单 5.15　仅传出的变量
 
-![](img/image00642.jpeg)![](img/image00643.jpeg)
+```powershell
+function ConvertTo-PhoneButton([char]$character) {
+    switch -Regex ($character.ToString().ToLowerInvariant()) {
+        '[abc]' { return '2' }; '[def]' { return '3' }; '[ghi]' { return '4' }; '[jkl]' { return '5' }
+        '[mno]' { return '6' }; '[pqrs]' { return '7' }; '[tuv]' { return '8' }; '[wxyz]' { return '9' }
+        '[0-9]' { return $character.ToString() }
+        default { return '_' }
+    }
+}
+foreach ($word in $args) {
+    foreach ($character in $word.ToCharArray()) { Write-Host (ConvertTo-PhoneButton $character) -NoNewline }
+    Write-Host
+}
+```
 
 输出 5.7 展示了代码清单 5.15 的结果。
 
 输出 5.7
 
-![](img/image00644.jpeg)
+```powershell
+PS> .\ConvertToPhoneNumber.ps1 CSharpIsGood
+274277474663
+```
 
 在本例中，如果能成功判断与 character 对应的电话按键，TryGetPhoneButton()方法就返回 true。方法还使用 out 修饰的 button 参数返回对应的按键。
 
@@ -395,7 +511,10 @@ C# 7.0 的另一个功能是允许完全放弃 out 参数。例如，可能只�
 
 C# 7.2 支持以传引用的方式传入只读值类型。该特性以传引用的方式传入值类型参数，并且让该参数不能被方法修改。这样不仅避免了每次调用方法都创建值类型的拷贝，而且不用担心值类型参数被修改。换言之，其作用是在传值时减少拷贝量，同时把它标识为只读，从而增强性能。该语法要为参数添加 in 修饰符。例如：
 
-![](img/image00645.jpeg)
+```powershell
+# PowerShell parameters are passed by value by default.
+function Get-Number([int]$number) { $number }
+```
 
 使用 in 修饰符，方法中对 number 的任何重新赋值操作（例如 number++）都会造成编译错误，并指示 number 只读。
 
@@ -405,47 +524,13 @@ C# 7.0 新增的另一个功能返回对变量的引用。例如，代码清单 
 
 代码清单 5.16　ref Return 和 ref 局部变量声明
 
-![](img/image00646.jpeg)
-
-通过返回对变量的引用，调用者可将像素更新为不同颜色，如代码清单 5.16 灰色背景的行所示。检查对数组的更新，证明值现已变成黑色。
-
-返回引用有两个重要的限制，两者都和对象生存期有关：（1）对象仍被引用时不应被垃圾回收；（2）对象的所有引用都消失之后，不应再占用内存。为符合这些限制，从方法返回引用时只能返回：
-
-·对字段或数组元素的引用。
-
-·其他返回引用的属性或方法。
-
-·作为参数传给“返回引用的方法”的引用。
-
-例如，FindFirstRedEyePixel()返回对一个 image 数组元素的引用，该引用是传给方法的参数。类似地，如图片作为类的字段存储，可返回对字段的引用：
-
-![](img/image00647.jpeg)
-
-此外，ref 局部变量被初始化为引用一个特定变量，以后不能修改为引用其他变量。
-
-返回引用时要注意几点：
-
-·如决定返回引用，就必须返回一个引用。以代码清单 5.16 为例，即使不存在红眼像素，仍需返回一个引用字节。找不到就只有抛出异常。相反，如采取传引用参数的方式，就可以不修改参数，只是返回一个 bool 值代表成功，许多时候这种做法更佳。
-
-·声明引用局部变量的同时必须初始化它。为此需要将方法返回的引用赋给它，或将一个变量引用赋给它：
-
-![](img/image00648.jpeg)
-
-·虽然 C# 7.0 允许声明 ref 局部变量，但不允许声明 ref 字段：
-
-![](img/image00649.jpeg)
-
-·自动实现的属性不能声明为引用类型：
-
-![](img/image00650.jpeg)
-
-·允许返回引用的属性：
-
-![](img/image00651.jpeg)
-
-·引用局部变量不能用值（比如 null 或常量）来初始化。必须将返回引用的成员赋给它，或者将局部变量、字段或数组赋给它：
-
-![](img/image00652.jpeg)
+```powershell
+# PowerShell has no direct equivalent for C# ref returns or ref locals.
+# Use mutable objects or [ref] parameters when callers must observe changes.
+$state = [pscustomobject]@{ Text = 'Inigo Montoya' }
+$state.Text = 'Updated value'
+Write-Output $state.Text
+```
 
 ### 5.5.6　参数数组
 
@@ -455,13 +540,26 @@ C# 7.0 新增的另一个功能返回对变量的引用。例如，代码清单 
 
 代码清单 5.17　传递长度可变的参数列表
 
-![](img/image00653.jpeg)
+```powershell
+$parts = @((Get-Location).Path, 'bin', 'config', 'index.html')
+$fullName = Join-Path $parts[0] (Join-Path $parts[1] (Join-Path $parts[2] $parts[3]))
+Write-Output $fullName
+$fullName = Join-Path $env:SystemRoot (Join-Path 'Temp' 'index.html')
+Write-Output $fullName
+$parts = @('C:\', 'Data', 'HomeDir', 'index.html')
+$fullName = $parts[0] + ($parts[1..($parts.Count - 1)] -join '\')
+Write-Output $fullName
+```
 
 输出 5.8 展示了代码清单 5.17 的结果。
 
 输出 5.8
 
-![](img/image00654.jpeg)![](img/image00655.jpeg)
+```powershell
+C:\Data\markin\config\index.html
+C:\Windows\System32\Temp\index.html
+C:\Data\HomeDir\index.html
+```
 
 第一个 Combine()调用提供了 4 个参数。第二个只提供了 3 个。最后一个调用传递一个数组来作为参数。换言之，Combine()方法接受数量可变的参数，要么是以逗号分隔的字符串参数，要么是单个字符串数组。前者称为方法调用的“展开”（expanded）形式，后者称为“正常”（normal）形式。
 
@@ -499,7 +597,19 @@ C# 7.0 新增的另一个功能返回对变量的引用。例如，代码清单 
 
 代码清单 5.18　返回目录中所有.cs 文件的代码行数
 
-![](img/image00656.jpeg)![](img/image00657.jpeg)
+```powershell
+param([string[]]$args)
+$directory = if ($args.Count -gt 0) { $args[0] } else { (Get-Location).Path }
+function Get-FileLineCount([string]$path) { (Get-Content -LiteralPath $path | Where-Object { $_.Trim() }).Count }
+function Get-DirectoryLineCount([string]$path) {
+    $count = 0
+    Get-ChildItem -LiteralPath $path -Filter '*.cs' -File | ForEach-Object { $count += Get-FileLineCount $_.FullName }
+    Get-ChildItem -LiteralPath $path -Directory | ForEach-Object { $count += Get-DirectoryLineCount $_.FullName }
+    $count
+}
+$totalLineCount = Get-DirectoryLineCount $directory
+Write-Output $totalLineCount
+```
 
 注①：该代码可用 using 语句改进，但因为我们还没有讲到，所以暂时不使用。
 
@@ -507,7 +617,9 @@ C# 7.0 新增的另一个功能返回对变量的引用。例如，代码清单 
 
 输出 5.9
 
-![](img/image00658.jpeg)
+```powershell
+104
+```
 
 程序首先将第一个命令行参数传给 DirectoryCountLines()，或直接使用当前目录（如果没有提供参数）。方法首先迭代当前目录中的所有文件，累加每个.cs 文件包含的源代码行数。处理好当前目录之后，将 subdirectory 传给 Directory.CountLines()方法以处理每个子目录。同样的过程针对每个子目录反复进行，直到再也没有更多子目录可供处理。
 
@@ -557,13 +669,22 @@ M(x)
 
 代码清单 5.19　使用重载统计\*.cs 文件的行数
 
-![](img/image00659.jpeg)![](img/image00660.jpeg)
+```powershell
+param([string[]]$args)
+if ($args.Count -gt 1) { $totalLineCount = Get-DirectoryLineCount $args[0] $args[1] }
+elseif ($args.Count -gt 0) { $totalLineCount = Get-DirectoryLineCount $args[0] }
+else { $totalLineCount = Get-DirectoryLineCount (Get-Location).Path }
+Write-Output $totalLineCount
+```
 
 注①：该代码可用 using 语句改进，但因为我们还没有讲到，所以暂时不使用。
 
 输出 5.10
 
-![](img/image00661.jpeg)
+```powershell
+PS> .\LineCounter.ps1 *.CS
+28
+```
 
 方法重载的作用是提供调用方法的多种方式。如本例所示，在 Main()中调用 Directory-CountLines()方法时，可选择是否传递要搜索的目录和文件扩展名。
 
@@ -577,11 +698,21 @@ C# 4.0 新增了对可选参数 的支持。声明方法时将常量值赋给参
 
 代码清单 5.20　使用可选参数的方法
 
-![](img/image00662.jpeg)![](img/image00663.jpeg)
+```powershell
+param([string[]]$args)
+if ($args.Count -gt 1) { $totalLineCount = Get-DirectoryLineCount $args[0] $args[1] }
+elseif ($args.Count -gt 0) { $totalLineCount = Get-DirectoryLineCount $args[0] }
+else { $totalLineCount = Get-DirectoryLineCount (Get-Location).Path }
+Write-Output $totalLineCount
+# An optional extension defaults to *.cs.
+```
 
 在代码清单 5.20 中，DirectoryCountLines()方法的单参数版本已被移除（注释掉），但 Main()方法似乎仍在调用该方法（指定一个参数）。如调用时不指定 extension（扩展名）参数，就使用声明时赋给 extension 的值（本例中是\*.cs）。这样在调用代码时就可以不为该参数传递值。而在 C# 3.0 和更早的版本中，将不得不声明一个额外的重载版本。注意可选参数一定要放在所有必需参数（无默认值的参数）后面。另外，默认值必须是常量或其他能在编译时确定的值，这一点极大地限制了“可选参数”的应用。例如，不能像下面这样声明方法：
 
-![](img/image00664.jpeg)
+```powershell
+# Compute runtime-dependent defaults in the function body rather than a parameter default.
+param([string]$directory = (Get-Location).Path, [string]$extension = '*.cs')
+```
 
 这是由于 Environment.CurrentDirectory 不是常量。而因为"\*.cs"是常量，所以 C#允许它作为可选参数的默认值。
 
@@ -597,7 +728,12 @@ C# 4.0 新增的另一个方法调用功能是具名参数 。调用者可利用
 
 代码清单 5.21　调用方法时指定参数名
 
-![](img/image00665.jpeg)
+```powershell
+function Show-Greeting([string]$firstName, [string]$middleName = $null, [string]$lastName = $null) {
+    Write-Output "Hello $firstName $middleName $lastName"
+}
+Show-Greeting -firstName 'Inigo' -lastName 'Montoya'
+```
 
 代码清单 5.21 从 Main()中调用 DisplayGreeting()时将值赋给一个具名参数。调用时，两个可选参数（middleName 和 lastName）只指定了 lastName。如一个方法有大量参数，其中许多都可选（访问 Microsoft COM 库时很常见），那么具名参数语法肯定能带来不少便利。但注意代价是牺牲了方法接口的灵活性。过去（至少就 C#来说）参数名可自由更改，不会造成调用代码无法编译的情况。但在添加了具名参数后，参数名就成为方法接口的一部分。更改名称会导致使用具名参数的代码无法编译。
 
@@ -619,7 +755,12 @@ C# 4.0 新增的另一个方法调用功能是具名参数 。调用者可利用
 
 例如，给定以下方法：
 
-![](img/image00666.jpeg)
+```powershell
+function Invoke-Object([object]$thing) { }
+function Invoke-Double([double]$thing) { }
+function Invoke-Long([long]$thing) { }
+function Invoke-Integer([int]$thing) { }
+```
 
 调用 Method(42)会解析成 Method(int thing)，因为存在从实参类型到形参类型的完全匹配。如删除该版本，重载解析会选择 long 版本，因为 long 比 double 和 object 更具体。
 
@@ -631,13 +772,24 @@ C#规范包含额外的规则来决定 byte、ushort、uint、ulong 和其他数
 
 代码清单 5.22　将 string 转换成 int
 
-![](img/image00667.jpeg)![](img/image00668.jpeg)
+```powershell
+Write-Output 'Hey you!'
+$firstName = Read-Host 'Enter your first name'
+$ageText = Read-Host 'Enter your age'
+$age = [int]::Parse($ageText)
+Write-Output "Hi $firstName! You are $($age * 12) months old."
+```
 
 输出 5.11 展示了结果。
 
 输出 5.11
 
-![](img/image00669.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your age: 42
+Hi Inigo! You are 504 months old.
+```
 
 System.Console.ReadLine()的返回值存储在 ageText 变量中，然后传给 int 数据类型的 Parse()方法。该方法获取代表数字的 string 值并转换为 int 类型。
 
@@ -657,7 +809,12 @@ C#要求每个非空值都有一个良好定义的类型。换言之，数据不
 
 输出 5.12
 
-![](img/image00670.jpeg)
+```powershell
+Hey you!
+Enter your first name: Inigo
+Enter your age: forty-two
+Exception: Input string was not in a correct format.
+```
 
 显然，像这样的错误消息并不是特别有用。为解决问题，需要提供一个机制对错误进行恰当的处理，例如向用户报告一条更有意义的错误消息。
 
@@ -665,11 +822,31 @@ C#要求每个非空值都有一个良好定义的类型。换言之，数据不
 
 代码清单 5.23　捕捉异常
 
-![](img/image00671.jpeg)![](img/image00672.jpeg)
+```powershell
+$firstName = Read-Host 'Enter your first name'
+$ageText = Read-Host 'Enter your age'
+$result = 0
+try {
+    $age = [int]::Parse($ageText)
+    Write-Output "Hi $firstName! You are $($age * 12) months old."
+} catch [System.FormatException] {
+    Write-Output "The age entered, '$ageText', is not valid."
+    $result = 1
+} catch {
+    Write-Output "Unexpected error: $($_.Exception.Message)"
+    $result = 1
+} finally { Write-Output "Goodbye $firstName" }
+exit $result
+```
 
 输出 5.13
 
-![](img/image00673.jpeg)
+```powershell
+Enter your first name: Inigo
+Enter your age: forty-two
+The age entered, 'forty-two', is not valid.
+Goodbye Inigo
+```
 
 首先用 try 块 将可能抛出异常的代码（age=int.Parse()）包围起来。这个块以 try 关键字开始。try 关键字告诉编译器：开发者认为块中的代码有可能抛出异常，如果真的抛出了异常，那么某个 catch 块 要尝试处理这个异常。
 
@@ -689,11 +866,23 @@ try 块之后必须紧跟着一个或多个 catch 块（或一个 finally 块）
 
 代码清单 5.24　有 finally 块但无 catch 块
 
-![](img/image00675.jpeg)![](img/image00676.jpeg)
+```powershell
+$firstName = Read-Host 'Enter your first name'
+$ageText = Read-Host 'Enter your age'
+try {
+    $age = [int]::Parse($ageText)
+    Write-Output "Hi $firstName! You are $($age * 12) months old."
+} finally { Write-Output "Goodbye $firstName" }
+```
 
 输出 5.14
 
-![](img/image00677.jpeg)
+```powershell
+Enter your first name: Inigo
+Enter your age: forty-two
+Exception: Input string was not in a correct format.
+Goodbye Inigo
+```
 
 细心的读者能看出蹊跷。“运行时”是先报告未处理的异常，再运行 finally 块。这种行为该如何解释？
 
@@ -727,7 +916,12 @@ try 块之后必须紧跟着一个或多个 catch 块（或一个 finally 块）
 
 代码清单 5.25　常规 catch 块
 
-![](img/image00680.jpeg)
+```powershell
+try { $age = [int]::Parse($ageText) }
+catch [System.FormatException] { Write-Output "The age entered, '$ageText', is not valid." }
+catch { Write-Output "Unexpected error: $($_.Exception.Message)" }
+finally { Write-Output "Goodbye $firstName" }
+```
 
 没有指定数据类型的 catch 块称为常规 catch 块 ，等价于获取 object 数据类型的 catch 块，例如 catch(object exception){...}。由于所有类最终都从 object 派生，所以没有数据类型的 catch 块必须放到最后。
 
@@ -751,11 +945,28 @@ C#允许开发者从代码中抛出异常，代码清单 5.26 和输出 5.15 对
 
 代码清单 5.26　抛出异常
 
-![](img/image00681.jpeg)![](img/image00682.jpeg)
+```powershell
+try {
+    Write-Output 'Begin executing'
+    Write-Output 'Throw exception...'
+    throw [System.Exception]::new('Arbitrary exception')
+    Write-Output 'End executing'
+} catch [System.FormatException] {
+    Write-Output 'A FormatException was thrown'
+} catch {
+    Write-Output "Unexpected error: $($_.Exception.Message)"
+}
+Write-Output 'Shutting down...'
+```
 
 输出 5.15
 
-![](img/image00683.jpeg)
+```powershell
+Begin executing
+Throw exception...
+Unexpected error: Arbitrary exception
+Shutting down...
+```
 
 如代码清单 5.26 的箭头所示，抛出异常会使执行从异常的抛出点跳转到与抛出的异常类型兼容的第一个 catch 块^( [\[3\]](part0049.xhtml#ch3_back) ) 。本例是第二个 catch 块处理抛出的异常，它在屏幕上输出一条错误消息。在代码清单 5.26 中，由于没有 finally 块，所以随后执行 try/catch 块后的 System.Console.WriteLine()语句。
 
@@ -765,7 +976,12 @@ C#允许开发者从代码中抛出异常，代码清单 5.26 和输出 5.15 对
 
 代码清单 5.27　重新抛出异常
 
-![](img/image00684.jpeg)
+```powershell
+catch {
+    Write-Output "Rethrowing unexpected error: $($_.Exception.Message)"
+    throw
+}
+```
 
 注意代码清单 5.27 中的 throw 语句是“空”的，没有指定 exception 变量所引用的异常。区别在于，throw;保留了异常中的“调用栈”信息，而 throw exception;将那些信息替换成当前调用栈信息。而调试时一般需要知道原始调用栈。
 
@@ -785,7 +1001,13 @@ C#允许开发者从代码中抛出异常，代码清单 5.26 和输出 5.15 对
 
 代码清单 5.28　使用 int.TryParse()执行转换
 
-![](img/image00685.jpeg)
+```powershell
+if ([int]::TryParse($ageText, [ref]$age)) {
+    Write-Output "Hi $firstName! You are $($age * 12) months old."
+} else {
+    Write-Output "The age entered, '$ageText', is not valid."
+}
+```
 
 使用 TryParse()方法就无须再为字符串到数值的转换使用 try/catch 块。
 
