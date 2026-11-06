@@ -58,7 +58,10 @@
 
 代码清单 6.1　定义类
 
-![](img/image00688.jpeg)
+```powershell
+class Employee {
+}
+```
 
 该类的所有代码放到类声明之后的大括号中。虽然并非必须，但一般应该将每个类都放到它自己的文件中，用类名对文件进行命名。这样可以更容易地寻找定义了一个特定类的代码。
 
@@ -72,7 +75,13 @@
 
 代码清单 6.2　声明类类型的变量
 
-![](img/image00689.jpeg)
+```powershell
+class Program {
+    static [void] IncreaseSalary([Employee]$employee) { }
+}
+$employee1 = $null
+$employee2 = $null
+```
 
 初学者主题：对象和类
 
@@ -82,7 +91,12 @@
 
 代码清单 6.3　实例化一个类
 
-![](img/image00690.jpeg)
+```powershell
+$employee1 = [Employee]::new()
+$employee2 = [Employee]::new()
+Increase-Salary $employee1
+Increase-Salary $employee2
+```
 
 毫不奇怪，声明和赋值既能在同一行上完成，也能分行完成。
 
@@ -114,7 +128,13 @@
 
 代码清单 6.4　声明字段
 
-![](img/image00691.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary
+}
+```
 
 添加好字段后，就可随同每个 Employee 实例存储一些基本数据。本例添加访问修饰符 public 作为字段前缀。为字段添加 public 前缀，意味着可从 Employee 之外的其他类访问该字段中的数据（参见本章后面的 6.5 节）。
 
@@ -122,7 +142,15 @@
 
 代码清单 6.5　在声明时设置字段的初始值
 
-![](img/image00692.jpeg)
+```powershell
+# Non-nullable field uninitialized warning disabled while code is incomplete
+# (PowerShell has no equivalent compile-time warning.)
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not enough"
+}
+```
 
 字段命名和编码的设计规范稍后在介绍了 C#“属性”之后给出。现在将暂时使用不符合规范的写法。因为这个原因，上面示例中的代码会触发下面两个编译器警告^( [\[1\]](part0053.xhtml#ch1_back) ) ：
 
@@ -142,7 +170,18 @@
 
 代码清单 6.6　访问字段
 
-![](img/image00693.jpeg)![](img/image00694.jpeg)
+```powershell
+$employee1 = [Employee]::new()
+$employee1.FirstName = "Inigo"
+$employee1.LastName = "Montoya"
+$employee1.Salary = "Too Little"
+Increase-Salary $employee1
+"{0} {1}: {2}" -f $employee1.FirstName, $employee1.LastName, $employee1.Salary
+
+function Increase-Salary([Employee]$employee) {
+    $employee.Salary = "Enough to survive on"
+}
+```
 
 输出 6.1
 
@@ -160,7 +199,14 @@
 
 代码清单 6.7　从包容类内部访问字段
 
-![](img/image00696.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary
+    [string] GetName() { return "$($this.FirstName) $($this.LastName)" }
+}
+```
 
 和第五章的同名方法相比，这里的 GetName()没有太多特别之处，只是方法现在访问对象中的字段，而非访问局部变量。此外，方法声明没有用 static 来标记。本章稍后会讲到，静态方法不能直接访问类的实例字段。相反，必须先获得类的实例才能调用实例成员——无论该实例成员是方法还是字段。
 
@@ -168,7 +214,17 @@
 
 代码清单 6.8　从包容类外部访问字段
 
-![](img/image00697.jpeg)![](img/image00698.jpeg)
+```powershell
+class Program {
+}
+
+$employee1 = [Employee]::new()
+$employee1.FirstName = "Inigo"
+$employee1.LastName = "Montoya"
+$employee1.Salary = "Too Little"
+Increase-Salary $employee1
+"{0}: {1}" -f $employee1.GetName(), $employee1.Salary
+```
 
 输出 6.2
 
@@ -180,7 +236,18 @@
 
 代码清单 6.9　使用 this 显式标识字段的所有者
 
-![](img/image00700.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary
+    [string] GetName() { return "$($this.FirstName) $($this.LastName)" }
+    [void] SetName([string]$newFirstName, [string]$newLastName) {
+        $this.FirstName = $newFirstName
+        $this.LastName = $newLastName
+    }
+}
+```
 
 本例使用关键字 this 指出字段 FirstName 和 LastName 是类的实例成员。
 
@@ -192,7 +259,19 @@
 
 代码清单 6.10　使用 this 避免歧义
 
-![](img/image00701.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary
+    [string] GetName() { return "$($this.FirstName) $($this.LastName)" }
+    # Caution: parameter names use PascalCase
+    [void] SetName([string]$FirstName, [string]$LastName) {
+        $this.FirstName = $FirstName
+        $this.LastName = $LastName
+    }
+}
+```
 
 本例要引用 FirstName 字段就必须显式指明它所在的 Employee 对象。this 就像在 Program.Main()方法中使用的 employee1 变量前缀（参见代码清单 6.8），它引用要在其上调用 SetName()方法的对象。
 
@@ -208,7 +287,20 @@ C#关键字 this 完全等价于 Visual Basic 关键字 Me。
 
 代码清单 6.11　this 作为方法名前缀
 
-![](img/image00702.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string] GetName() { return "$($this.FirstName) $($this.LastName)" }
+    [void] SetName([string]$newFirstName, [string]$newLastName) {
+        $this.FirstName = $newFirstName
+        $this.LastName = $newLastName
+        Write-Output "Name changed to '$($this.GetName())'"
+    }
+}
+$employee = [Employee]::new()
+$employee.SetName("Inigo", "Montoya")
+```
 
 输出 6.3
 
@@ -218,7 +310,17 @@ C#关键字 this 完全等价于 Visual Basic 关键字 Me。
 
 代码清单 6.12　在方法调用中传递 this
 
-![](img/image00704.jpeg)![](img/image00705.jpeg)
+```powershell
+class Employee {
+    [void] Save() { [DataStorage]::Store($this) }
+}
+
+class DataStorage {
+    # Save an employee object to a file named with the employee name
+    static [void] Store([Employee]$employee) {
+    }
+}
+```
 
 Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法传递准备进行持久化存储的 Employee 对象。这是使用关键字 this 来完成的，它传递了正在其上调用 Save()方法的 Employee 对象的实例。
 
@@ -228,7 +330,21 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.13　将数据持久化存储到文件
 
-![](img/image00706.jpeg)![](img/image00707.jpeg)
+```powershell
+using namespace System.IO
+class DataStorage {
+    # Save an employee object to a file named with the Employee name.
+    # Error handling not shown.
+    static [void] Store([Employee]$employee) {
+        # Create a file and write the employee data to it.
+        $path = "$($employee.FirstName)$($employee.LastName).dat"
+        $employee | Export-Clixml -Path $path
+    }
+}
+
+# Write all the data associated with the employee
+$employee | Export-Clixml -Path $path
+```
 
 注①：该代码可用 using 语句改进，但因为我们还没有讲到，所以暂时不使用。
 
@@ -238,7 +354,26 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.14　从文件获取数据
 
-![](img/image00708.jpeg)![](img/image00709.jpeg)
+```powershell
+class DataStorage {
+    static [Employee] Load([string]$firstName, [string]$lastName) {
+        # Open an existing file or else report an error.
+        $path = "$firstName$lastName.dat"
+        [Employee]$employee = Import-Clixml $path
+        return $employee
+    }
+}
+
+$employee1 = $null
+$employee2 = [Employee]::new()
+$employee2.SetName("Inigo", "Montoya")
+$employee2.Save()
+# Modify employee2 after saving
+Increase-Salary $employee2
+# Load employee1 from the saved version of employee2
+$employee1 = [DataStorage]::Load("Inigo", "Montoya")
+"{0}: {1}" -f $employee1.GetName(), $employee1.Salary
+```
 
 注①：该代码可用 using 语句改进，但因为我们还没有讲到，所以暂时不使用。
 
@@ -272,7 +407,30 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.15　使用 private 访问修饰符
 
-![](img/image00711.jpeg)![](img/image00712.jpeg)
+```powershell
+class Employee {
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary
+    # working with decrypted passwords for elucidation
+    # only - this is not recommended.
+    hidden [string]$Password
+    hidden [bool]$IsAuthenticated
+    [bool] Logon([string]$password) {
+        if ($this.Password -eq $password) {
+            $this.IsAuthenticated = $true
+        }
+        return $this.IsAuthenticated
+    }
+    [bool] GetIsAuthenticated() { return $this.IsAuthenticated }
+}
+
+$employee = [Employee]::new()
+$employee.FirstName = "Inigo"
+$employee.LastName = "Montoya"
+# Password is private, so it cannot be accessed from outside the class
+# Write-Output "Password = $($employee.Password)"
+```
 
 虽然代码清单 6.15 没有演示使用 private 来修饰方法，但实际可以这么做。
 
@@ -284,7 +442,31 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.16　声明取值和赋值方法
 
-![](img/image00713.jpeg)![](img/image00714.jpeg)
+```powershell
+class Employee {
+}
+
+class Employee {
+    hidden [string]$FirstName
+    # FirstName getter
+    [string] GetFirstName() { return $this.FirstName }
+    # FirstName setter
+    [void] SetFirstName([string]$newFirstName) {
+        if (-not [string]::IsNullOrEmpty($newFirstName)) {
+            $this.FirstName = $newFirstName
+        }
+    }
+    hidden [string]$LastName
+    # LastName getter
+    [string] GetLastName() { return $this.LastName }
+    # LastName setter
+    [void] SetLastName([string]$newLastName) {
+        if (-not [string]::IsNullOrEmpty($newLastName)) {
+            $this.LastName = $newLastName
+        }
+    }
+}
+```
 
 遗憾的是，这一更改会影响 Employee 类的可编程性。无法再用赋值操作符来设置类中的数据。此外也导致只能调用方法来访问数据。
 
@@ -294,7 +476,20 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.17　定义属性
 
-![](img/image00715.jpeg)![](img/image00716.jpeg)
+```powershell
+$employee = [Employee]::new()
+# Call the FirstName property's setter
+$employee.FirstName = "Inigo"
+# Call the FirstName property's getter
+
+[System.Console]::WriteLine($employee.FirstName)
+
+class Employee {
+    # FirstName property
+    [string]$FirstName
+    hidden [string]$_FirstName
+}
+```
 
 输出 6.5
 
@@ -304,7 +499,9 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 属性的关键在于，它提供了从编程角度看类似于字段的 API。但事实上并不存在这样的字段。属性声明看起来和字段声明一样，但跟随在属性名之后的是一对大括号，要在其中添加属性的实现。属性的实现由两个可选的部分构成。其中，get 标志属性的取值方法（getter），直接对应代码清单 6.16 定义的 GetFirstName()和 GetLastName()方法。访问 FirstName 属性需调用 employee.FirstName。类似地，set 标志属性的赋值方法（setter），它实现了字段的赋值语法：
 
-![](img/image00718.jpeg)
+```powershell
+$employee.FirstName = "Inigo"
+```
 
 属性的定义使用了三个上下文关键字。其中，get 和 set 关键字分别标识属性的取值和赋值部分。此外，赋值方法可用 value 关键字引用赋值操作的右侧部分。所以，当 Program.Main()调用 employee.FirstName="Inigo"时，赋值方法中的 value 被设为"Inigo"，该值可以赋给\_FirstName 字段。代码清单 6.17 的属性实现是最常见的。调用取值方法时，比如 Console.WriteLine(employee2.FirstName)，会获取字段（\_FirstName）值并将其写入控制台。
 
@@ -312,7 +509,16 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.18　用表达式主体成员定义属性
 
-![](img/image00719.jpeg)
+```powershell
+class Employee {
+    # FirstName property
+    [string]$FirstName
+    hidden [string]$_FirstName
+    # LastName property
+    [string]$LastName
+    hidden [string]$_LastName
+}
+```
 
 代码清单 6.18 用两种不同的语法实现属性，实际编程时请统一。
 
@@ -322,7 +528,29 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.19　自动实现的属性
 
-![](img/image00720.jpeg)![](img/image00721.jpeg)
+```powershell
+$employee1 = [Employee]::new()
+$employee2 = [Employee]::new()
+# Call the FirstName property's setter
+$employee1.FirstName = "Inigo"
+# Call the FirstName property's getter
+
+[System.Console]::WriteLine($employee1.FirstName)
+# Assign an auto-implemented property
+$employee2.Title = "Computer Nerd"
+$employee1.Manager = $employee2
+# Print employee1's manager's title
+[System.Console]::WriteLine($employee1.Manager.Title)
+
+class Employee {
+    [string]$FirstName
+    hidden [string]$_FirstName
+    [string]$LastName
+    hidden [string]$_LastName
+    [string]$Title
+    [string]$Salary = "Not Enough"
+}
+```
 
 输出 6.6
 
@@ -334,7 +562,9 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 关于自动实现的属性，最后要注意从 C# 6.0 开始可以像代码清单 6.19 最后一行进行初始化：
 
-![](img/image00723.jpeg)
+```powershell
+[string]$Salary = "Not Enough"
+```
 
 在 C# 6.0 之前，只能通过方法（包括构造函数，本章稍后会讲到）来初始化属性。但现在可以用字段初始化那样的语法在声明时初始化自动实现的属性。
 
@@ -382,7 +612,31 @@ Save()方法调用 DataStorage 类的 Store()方法。但需要向 Store()方法
 
 代码清单 6.20　提供属性验证
 
-![](img/image00724.jpeg)![](img/image00725.jpeg)
+```powershell
+class Employee {
+    [void] Initialize([string]$newFirstName, [string]$newLastName) {
+        # Use property inside the Employee class as well
+        $this.FirstName = $newFirstName
+        $this.LastName = $newLastName
+    }
+    # LastName property (validation is done in the setter equivalent below)
+    [string]$LastName
+    hidden [string]$_LastName
+    [void] SetLastName([string]$value) {
+        if ($null -eq $value) {
+            # In C# 6.0 replace "value" with nameof(value)
+            throw [System.ArgumentNullException]::new("value")
+        }
+        $value = $value.Trim()
+        if ($value -eq "") {
+            throw [System.ArgumentException]::new("LastName cannot be blank.", "value")
+        }
+        $this._LastName = $value
+    }
+}
+
+hidden [string]$_LastName
+```
 
 在新实现中，如果为 LastName 赋了无效的值（要么从同一个类的另一个成员赋值，要么在 Program.Main()内直接向 LastName 赋值），代码就会抛出异常。拦截赋值，并通过字段风格的 API 对参数进行验证，这是属性的优点之一。
 
@@ -410,13 +664,34 @@ nameof 操作符的优点在于，以后若标识符名称发生改变，重构�
 
 代码清单 6.21　C# 6.0 之前定义只读属性
 
-![](img/image00726.jpeg)
+```powershell
+class Program {
+    static [void] Main() {
+        $employee1 = [Employee]::new()
+        $employee1.Initialize(42)
+        # ERROR: Property or indexer 'Employee.Id'
+        # cannot be assigned to; it is read-only
+        # $employee1.Id = "490"
+    }
+}
+class Employee {
+    [void] Initialize([int]$id) {
+        # Use field because Id property has no setter; it is read-only
+        $this._Id = $id.ToString()
+    }
+    # Id property declaration
+    [string]$Id
+    hidden [string]$_Id
+}
+```
 
 代码清单 6.21 从 Employee 的 Initialize()方法（而不是属性）中对字段赋值（\_Id=id）。通过属性来赋值会造成编译错误，如 Program.Main()中注释掉的 employee1.Id="490";代码所示。
 
 C# 6.0 开始支持只读自动实现的属性 ，如下所示：
 
-![](img/image00727.jpeg)
+```powershell
+[bool[,,]]$Cells = [bool[,,]]::new(2, 3, 3)
+```
 
 这对 C# 6.0 之前的方式是一项重大改进，尤其是需要处理太多只读属性的时候，例如数组或代码清单 6.21 的 Id。
 
@@ -436,7 +711,35 @@ C# 6.0 开始支持只读自动实现的属性 ，如下所示：
 
 代码清单 6.22　定义属性
 
-![](img/image00728.jpeg)![](img/image00729.jpeg)
+```powershell
+$employee1 = [Employee]::new()
+$employee1.Name = "Inigo Montoya"
+[System.Console]::WriteLine($employee1.Name)
+
+class Employee {
+    # FirstName property
+    [string]$FirstName
+    hidden [string]$_FirstName
+    # LastName property
+    [string]$LastName
+    hidden [string]$_LastName
+}
+
+# Name property
+[string]$Name
+
+# setter equivalent: split the assigned value into first and last names
+[string[]]$names = $value.Split([char[]]@(' '))
+if ($names.Length -eq 2) {
+    $FirstName = $names[0]
+    $LastName = $names[1]
+} else {
+    # Throw an exception if the full name was not assigned
+    throw [System.ArgumentException]::new(
+        "Assigned value '$value' is invalid", "value")
+}
+[string]$Initials = "$($FirstName[0])$($LastName[0])"
+```
 
 输出 6.7
 
@@ -452,7 +755,24 @@ C# 2.0 的情况发生了变化，允许在属性的实现中为 get 或 set 部
 
 代码清单 6.23　为赋值方法指定访问修饰符
 
-![](img/image00731.jpeg)
+```powershell
+class Program {
+    static [void] Main() {
+        $employee1 = [Employee]::new()
+        $employee1.Initialize(42)
+        # ERROR: The property or indexer 'Employee.Id'
+        # cannot be used in this context because the set
+        # accessor is inaccessible
+        # $employee1.Id = "490"
+    }
+}
+class Employee {
+    [void] Initialize([int]$id) { $this.Id = $id.ToString() }
+    # Id property declaration (private setter, C# 2.0 and higher)
+    [string]$Id
+    hidden [string]$_Id
+}
+```
 
 为赋值方法指定 private 修饰符，属性对于除 Employee 的其他类来说就是只读的。在 Employee 类内部，属性可读且可写，所以可在构造函数中对属性进行赋值。为取值或赋值方法指定访问修饰符时，注意该访问修饰符的“限制性”必须比应用于整个属性的访问修饰符更“严格”。例如，将属性声明为较严格的 private，但将它的赋值方法声明为较宽松的 public，就会发生编译错误。
 
@@ -472,13 +792,40 @@ C#允许属性像字段那样使用，只是不允许作为 ref 或 out 参数�
 
 代码清单 6.24　属性的 CIL 代码
 
-![](img/image00732.jpeg)
+```text
+.field private string _FirstName
+.method public hidebysig specialname instance string
+        get_FirstName() cil managed
+{
+    .maxstack 1
+    IL_0000: ldarg.0
+    IL_0001: ldfld string Employee::_FirstName
+    IL_0006: ret
+}
+.method public hidebysig specialname instance void
+        set_FirstName(string 'value') cil managed
+{
+    .maxstack 8
+    IL_0000: ldarg.0
+    IL_0001: ldarg.1
+    IL_0002: stfld string Employee::_FirstName
+    IL_0007: ret
+}
+.property instance string FirstName()
+```
 
 除了外观与普通方法无异，注意属性在 CIL 中也是一种显式的构造。如代码清单 6.25 所示，取值方法和赋值方法由 CIL 属性调用，而 CIL 属性是 CIL 代码中的一种显式构造。因此，语言和编译器并非总是依据一个惯例来解释属性。相反，正是由于反正最后都会回归 CIL 属性，所以编译器和代码编辑器能随便提供自己的特殊语法。
 
 代码清单 6.25　属性是 CIL 的显式构造
 
-![](img/image00733.jpeg)
+```text
+.property instance string FirstName()
+{
+    .get instance string Program::get_FirstName()
+    .set instance void Program::set_FirstName(string)
+}
+// End of property Program::FirstName
+```
 
 注意在代码清单 6.24 中，作为属性一部分的取值方法和赋值方法包含了 specialname 元数据。IDE（比如 Visual Studio）根据该修饰符在“智能感知”（IntelliSense）中隐藏成员。
 
@@ -498,13 +845,29 @@ C#允许属性像字段那样使用，只是不允许作为 ref 或 out 参数�
 
 代码清单 6.26　定义构造函数
 
-![](img/image00734.jpeg)![](img/image00735.jpeg)
+```powershell
+class Employee {
+    # Employee constructor
+    Employee([string]$firstName, [string]$lastName) {
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+    }
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not Enough"
+}
+```
 
 定义构造函数需创建一个无返回类型的方法，方法名必须和类名完全一样。构造函数是“运行时”用来初始化对象实例的方法。本例的构造函数获取员工名字和姓氏作为参数，允许程序员在实例化 Employee 对象时指定这些参数的值。代码清单 6.27 演示了如何调用构造函数。
 
 代码清单 6.27　调用构造函数
 
-![](img/image00736.jpeg)
+```powershell
+$employee = [Employee]::new("Inigo", "Montoya")
+$employee.Salary = "Too Little"
+[System.Console]::WriteLine(
+    "{0} {1}: {2}", $employee.FirstName, $employee.LastName, $employee.Salary)
+```
 
 注意 new 操作符返回对完成实例化的对象的一个引用（虽然在构造函数的声明或实现中没有显式指定返回类型，也没有使用返回语句）。另外已移除了名字和姓氏的初始化代码，因为现在是在构造函数内部初始化。本例由于没有在构造函数内部初始化 Salary，因此对工资进行赋值的代码仍然予以保留。
 
@@ -520,7 +883,11 @@ new 操作符内部和构造函数是像下面这样交互的。new 操作符从
 
 代码清单 6.28　默认构造函数不再可用
 
-![](img/image00737.jpeg)
+```powershell
+$employee = $null
+# ERROR: No overload because method 'Employee' takes '0' arguments
+$employee = [Employee]::new()
+```
 
 如果类没有显式定义的构造函数，C#编译器会在编译时自动添加一个。该构造函数不获取参数，称为默认构造函数 。一旦为类显式添加了构造函数，C#编译器就不再自动提供默认构造函数。因此，在定义了 Employee(string firstName, string lastName)之后，编译器不再添加默认构造函数 Employee()。虽然可以手动添加，但会再度允许构造没有指定员工姓名的 Employee 对象。
 
@@ -532,7 +899,12 @@ C# 3.0 新增了对象初始化器 ^( [\[1\]](part0058.xhtml#ch1_back) ) ，用�
 
 代码清单 6.29　使用显式成员赋值调用对象初始化器
 
-![](img/image00738.jpeg)
+```powershell
+$employee1 = [Employee]::new("Inigo", "Montoya")
+# Object initializer equivalent
+$employee1.Title = "Computer Nerd"
+$employee1.Salary = "Not enough"
+```
 
 注意，使用对象初始化器时要遵守相同的构造函数规则。这实际只是一种语法糖，最终生成的 CIL 代码和创建对象实例后单独用语句对字段及属性进行赋值无异。C#代码中的成员初始化顺序决定了在 CIL 中调用构造函数后的属性和字段赋值顺序。
 
@@ -550,7 +922,11 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.30　调用集合初始化器
 
-![](img/image00739.jpeg)
+```powershell
+$employees = [System.Collections.Generic.List[Employee]]::new()
+$employees.Add([Employee]::new("Inigo", "Montoya"))
+$employees.Add([Employee]::new("Kevin", "Bost"))
+```
 
 像这样为新集合实例赋值，编译器生成的代码会按顺序实例化每个对象，并通过 Add()方法把它们添加到集合。
 
@@ -564,7 +940,24 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.31　重载构造函数
 
-![](img/image00740.jpeg)
+```powershell
+class Employee {
+    Employee([string]$firstName, [string]$lastName) {
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+    }
+    Employee([int]$id, [string]$firstName, [string]$lastName) {
+        $this.Id = $id
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+    }
+    # FirstName and LastName set inside Id property setter.
+    [int]$Id
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not Enough"
+}
+```
 
 这样当 Program.Main()根据姓名来实例化员工对象时，既可只传递员工 ID，也可同时传递姓名和 ID。例如，在创建新员工时调用同时获取姓名和 ID 的构造函数，而从文件或数据库加载现有员工时调用只获取 ID 的构造函数。
 
@@ -572,7 +965,19 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 注意，从 C# 7.0 开始支持构造函数的表达式主体成员实现，例如，
 
-![](img/image00741.jpeg)
+```powershell
+class Employee {
+    # FirstName and LastName set inside Id property setter.
+    Employee([int]$id) {
+        $this.Id = $id
+        # Look up employee name...
+    }
+    [int]$Id
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not Enough"
+}
+```
 
 在本例中，我们通过设置 Id 属性来间接地为 FirstName 和 LastName 成员赋值。不幸的是，编译器无法检测到这种间接赋值，因此认为这两个成员未赋值，并且从 C# 8.0 开始发出警告，建议将这两个成员声明为可空。事实上，因为我们明确知道已经为它们赋值，所以将该警告关闭。
 
@@ -590,7 +995,26 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.32　从一个构造函数中调用另一个
 
-![](img/image00742.jpeg)![](img/image00743.jpeg)
+```powershell
+class Employee {
+    Employee([string]$firstName, [string]$lastName) {
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+    }
+    Employee([int]$id, [string]$firstName, [string]$lastName) {
+        # PowerShell has no ": this(...)" constructor chaining,
+        # so the shared assignments are repeated here.
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+        $this.Id = $id
+    }
+    # FirstName and LastName set inside Id property setter.
+    [int]$Id
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not Enough"
+}
+```
 
 针对相同对象实例，为了从一个构造函数中调用同一个类的另一个构造函数，C#语法在一个冒号后添加 this 关键字，再添加被调用构造函数的参数列表。本例是获取三个参数的构造函数调用获取两个参数的构造函数。但通常采取相反的调用模式——参数最少的构造函数调用参数最多的构造函数，为未知参数传递默认值。
 
@@ -600,7 +1024,36 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.33　提供初始化方法
 
-![](img/image00744.jpeg)![](img/image00745.jpeg)
+```powershell
+class Employee {
+    # FirstName and LastName set inside Initialize() method.
+    Employee([string]$firstName, [string]$lastName) {
+        [int]$id = 0
+        # Generate an employee ID...
+        $this.Initialize($id, $firstName, $lastName)
+    }
+    Employee([int]$id, [string]$firstName, [string]$lastName) {
+        $this.Initialize($id, $firstName, $lastName)
+    }
+    Employee([int]$id) {
+        [string]$firstName = ""
+        [string]$lastName = ""
+        # Look up employee data
+        $this.Initialize($id, $firstName, $lastName)
+    }
+    hidden [void] Initialize([int]$id, [string]$firstName, [string]$lastName) {
+        $this.Id = $id
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+    }
+}
+
+hidden [void] Initialize([int]$id, [string]$firstName, [string]$lastName) {
+    $this.Id = $id
+    $this.FirstName = $firstName
+    $this.LastName = $lastName
+}
+```
 
 本例是将方法命名为 Initialize()，它同时获取员工的名字、姓氏和 ID。注意，仍然可以从一个构造函数中调用另一个构造函数，就像代码清单 6.32 展示的那样。
 
@@ -636,7 +1089,17 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.34　为不可空属性提供 null 值检查
 
-![](img/image00746.jpeg)
+```powershell
+class Employee {
+    Employee([string]$name) { $this.Name = $name }
+    [string]$Name
+    hidden [string]$_Name
+    # Setter equivalent: reject null before updating the backing field.
+    [void] SetName([string]$value) {
+        $this._Name = $value ?? throw [System.ArgumentNullException]::new('value')
+    }
+}
+```
 
 上面代码能够达到前述目的的原理如下：
 
@@ -656,7 +1119,14 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.35　在构造函数中为不可空引用型字段赋值时的 null 值检查
 
-![](img/image00747.jpeg)
+```powershell
+class Employee {
+    Employee([string]$name) {
+        $this.Name = $name ?? throw [System.ArgumentNullException]::new('name')
+    }
+    [string]$Name
+}
+```
 
 你可能会产生这样的疑问：当一个不可空的引用型字段有自动实现的属性时，是否可以让它拥有私有的赋值方法？毕竟这样做，对类的外部来说，该属性仍然是只读的。这种做法看起来可行，问题是，你能否保证在编写该类的其他部分程序时，不会意外地将该属性设置为 null 值？一个类从外部接收到 null 值的情形，不只会在构造函数中发生。事实上，这种情形随时有可能发生，但是对 null 值的检查却非常容易被忽略。
 
@@ -688,7 +1158,34 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.36　NotNullWhen 和 NotNullIfNotNull 特性的应用示例
 
-![](img/image00749.jpeg)![](img/image00750.jpeg)
+```powershell
+using namespace System.Diagnostics.CodeAnalysis
+
+# C#: static bool TryGetDigitAsText(char number, [NotNullWhen(true)] out string? text)
+function Test-TryGetDigitAsText([char]$number, [ref]$text) {
+    $text.Value = switch ($number) {
+        '1' { "one" }
+        '2' { "two" }
+        '9' { "nine" }
+        default { $null }
+    }
+    return $text.Value -is [string]
+}
+
+# C#: [return: NotNullIfNotNull("text")] static string? TryGetDigitsAsText(string? text)
+function Try-GetDigitsAsText([string]$text) {
+    if ($null -eq $text) { return $null }
+    $result = ""
+    foreach ($character in $text.ToCharArray()) {
+        $digitText = $null
+        if (Test-TryGetDigitAsText $character ([ref]$digitText)) {
+            if ($result -ne "") { $result += '-' }
+            $result += $digitText.ToLower()
+        }
+    }
+    return $result
+}
+```
 
 观察上面代码你会注意到，即便 digitText 变量被定义为可空，后面在调用其 ToLower 方法时也没有使用空合并操作符。如果编译这段代码，会发现此处甚至不会产生编译器警告。这是因为在 TryGetDigitAsText()方法的定义中，输出变量 text 被标记了 NotNullWhen(true)特性。它告诉编译器，如果该方法返回 true（即 NotNullWhen 特性中指定的值），则 digit text 不会为 null。NotNullWhen 是一个后置条件特性，因此它的条件是否成立会在方法结束后再被评估。有了这个认识，再次观察代码，可以注意到 ToLower 方法的调用发生在 if 判断的内部，因此只有当 TryGetDigitAsText()返回 true，该调用才会发生。而根据 NotNullWhen 特性的描述，此时 digitText 变量一定不会是 null，所以这里既不需要使用空合并操作符，也不会产生编译器警告。
 
@@ -704,7 +1201,12 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.37　为可能的 null 返回值使用 MaybeNull 特性
 
-![](img/image00752.jpeg)
+```powershell
+# C#: [return: MaybeNull] static T GetObject<T>(IEnumerable<T>, Func<T, bool>)
+function Get-Object($sequence, [scriptblock]$match) {
+    $sequence | Where-Object $match | Select-Object -First 1
+}
+```
 
 上面代码中的 GetObject 方法从 sequence 集合中寻找能够使 match 预测函数返回 true 的元素。如果这样的元素存在，则返回该元素；否则，返回 null 值。遗憾的是，编译器不允许在没有类型约束的情况下采用 T?这样的写法^( [\[2\]](part0060.xhtml#ch2_back) ) ，而如果忽略可空修饰符，则会产生编译器警告。为了解决这个问题，可以使用后置条件可空特性 MaybeNull 来代替可空修饰符。
 
@@ -718,21 +1220,42 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.38　解构用户自定义类型
 
-![](img/image00753.jpeg)![](img/image00754.jpeg)
+```powershell
+class Employee {
+    [void] Deconstruct(
+        [ref]$id, [ref]$firstName, [ref]$lastName, [ref]$salary) {
+        $id.Value = $this.Id
+        $firstName.Value = $this.FirstName
+        $lastName.Value = $this.LastName
+        $salary.Value = $this.Salary
+    }
+}
+
+$employee.Deconstruct(
+    [ref]$id, [ref]$firstName, [ref]$lastName, [ref]$salary)
+[System.Console]::WriteLine("{0} {1}: {2}", $firstName, $lastName, $salary)
+```
 
 该方法可直接调用。如第五章所述，调用前要以内联形式声明 out 参数。
 
 从 C# 7.0 起可直接将对象实例赋给一个元组，从而隐式调用 Deconstruct()方法（称为解构函数 ）。这时可认为被赋值的变量已声明。例如：
 
-![](img/image00755.jpeg)
+```powershell
+$firstName, $lastName, $salary = $employee.FirstName, $employee.LastName, $employee.Salary
+```
 
 该语法生成的 CIL 代码和代码清单 6.38 突出显示的语法完全一样，只是更简单（而且更让人注意不到调用了 Deconstruct()方法）。注意只允许用元组语法向那些和 out 参数匹配的变量赋值。不允许向元组类型的变量赋值，例如：
 
-![](img/image00756.jpeg)
+```powershell
+# C#: (int, string, string, string) tuple;
+$tuple = [System.ValueTuple[int, string, string, string]]::new()
+```
 
 也不允许向元组中的具名项赋值：
 
-![](img/image00757.jpeg)
+```powershell
+$id, $firstName, $lastName, $salary = $employee.Id, $employee.FirstName, $employee.LastName, $employee.Salary
+```
 
 为声明解构函数，方法名必须是 Deconstruct，其签名是返回 void 并接收两个或更多 out 参数。基于该签名，可将对象实例直接赋给一个元组而无须显式方法调用。
 
@@ -752,7 +1275,21 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.39　声明静态字段
 
-![](img/image00758.jpeg)
+```powershell
+class Employee {
+    Employee([string]$firstName, [string]$lastName) {
+        $this.FirstName = $firstName
+        $this.LastName = $lastName
+        $this.Id = [Employee]::NextId
+        [Employee]::NextId++
+    }
+    static [int]$NextId
+    [int]$Id
+    [string]$FirstName
+    [string]$LastName
+    [string]$Salary = "Not Enough"
+}
+```
 
 本例用 static 修饰符将 NextId 字段声明为静态字段 。和 Id 不同，所有 Employee 实例都共享同一个 NextId 存储位置。Employee 构造函数先将 NextId 的值赋给新 Employee 对象的 Id，然后立即递增 NextId。创建另一个 Employee 类时，由于 NextId 的值已递增，所以新 Employee 对象的 Id 字段将获得不同的值。
 
@@ -760,7 +1297,11 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.40　声明时向静态字段赋值
 
-![](img/image00759.jpeg)
+```powershell
+class Employee {
+    static [int]$NextId = 42
+}
+```
 
 和实例字段不同，未初始化的静态字段将获得默认值（0、null、false 等），即 default(T)的结果，其中 T 是类型名。所以，没有显式赋值的静态字段也是可以访问的。
 
@@ -768,7 +1309,22 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.41　访问静态字段
 
-![](img/image00760.jpeg)![](img/image00761.jpeg)
+```powershell
+using namespace System
+class Program {
+}
+
+static [void] Main() {
+    [Employee]::NextId = 1000000
+    $employee1 = [Employee]::new("Inigo", "Montoya")
+    $employee2 = [Employee]::new("Princess", "Buttercup")
+    [System.Console]::WriteLine("{0} {1} ({2})",
+        $employee1.FirstName, $employee1.LastName, $employee1.Id)
+    [System.Console]::WriteLine("{0} {1} ({2})",
+        $employee2.FirstName, $employee2.LastName, $employee2.Id)
+    [System.Console]::WriteLine("NextId = $([Employee]::NextId)")
+}
+```
 
 输出 6.8 显示了代码清单 6.41 的结果。
 
@@ -796,7 +1352,39 @@ C# 3.0 还增加了集合初始化器 ，采用和对象初始化器相似的语
 
 代码清单 6.42　为 DirectoryInfoExtension 类定义静态方法
 
-![](img/image00763.jpeg)![](img/image00764.jpeg)
+```powershell
+class DirectoryInfoExtension {
+    static [void] CopyTo(
+        [System.IO.DirectoryInfo]$sourceDirectory, [string]$target,
+        [System.IO.SearchOption]$option, [string]$searchPattern) {
+        if ($target[$target.Length - 1] -ne [System.IO.Path]::DirectorySeparatorChar) {
+            $target += [System.IO.Path]::DirectorySeparatorChar
+        }
+        if (-not [System.IO.Directory]::Exists($target)) {
+            [System.IO.Directory]::CreateDirectory($target)
+        }
+        foreach ($file in [System.IO.Directory]::GetFiles(
+                $sourceDirectory.FullName, $searchPattern)) {
+            [System.IO.File]::Copy(
+                $file, $target + [System.IO.Path]::GetFileName($file), $true)
+        }
+        # Copy subdirectories (recursively)
+        if ($option -eq [System.IO.SearchOption]::AllDirectories) {
+            foreach ($element in [System.IO.Directory]::GetDirectories(
+                    $sourceDirectory.FullName)) {
+                [DirectoryInfoExtension]::CopyTo(
+                    $element, $target + [System.IO.Path]::GetFileName($element),
+                    $option, $searchPattern)
+            }
+        }
+    }
+}
+
+$directory = [System.IO.DirectoryInfo]::new(".\Source")
+$directory.MoveTo(".\Root")
+[DirectoryInfoExtension]::CopyTo(
+    $directory, ".\Target", [System.IO.SearchOption]::AllDirectories, "*")
+```
 
 DirectoryInfoExtension.CopyTo()方法获取一个 DirectoryInfo 对象，将基础目录结构拷贝到新位置。
 
@@ -812,7 +1400,15 @@ DirectoryInfoExtension.CopyTo()方法获取一个 DirectoryInfo 对象，将基�
 
 代码清单 6.43　声明静态构造函数
 
-![](img/image00765.jpeg)
+```powershell
+class Employee {
+    static Employee() {
+        $randomGenerator = [Random]::new()
+        [Employee]::NextId = $randomGenerator.Next(101, 999)
+    }
+    static [int]$NextId = 42
+}
+```
 
 本例将 NextId 的初始值设为 100～1000 的随机整数。由于初始值涉及方法调用，所以 NextId 的初始化代码被放到一个静态构造函数中，而没有作为声明的一部分。
 
@@ -836,13 +1432,22 @@ DirectoryInfoExtension.CopyTo()方法获取一个 DirectoryInfo 对象，将基�
 
 代码清单 6.44　声明静态属性
 
-![](img/image00766.jpeg)![](img/image00767.jpeg)
+```powershell
+class Employee {
+    static [int]$NextId
+    hidden static [int]$_NextId
+    # private setter equivalent:
+    # [Employee]::_NextId = $value
+}
+```
 
 使用静态属性几乎肯定比使用公共静态字段好，因为公共静态字段在任何地方都能调用，而静态属性至少提供了一定程度的封装。
 
 从 C# 6.0 开始，整个 NextId（含不可访问的支持字段）都可简化实现为带初始化器的自动实现属性：
 
-![](img/image00768.jpeg)
+```powershell
+static [int]$NextId = 42
+```
 
 ### 6.11.5　静态类
 
@@ -850,7 +1455,50 @@ DirectoryInfoExtension.CopyTo()方法获取一个 DirectoryInfo 对象，将基�
 
 代码清单 6.45　声明静态类
 
-![](img/image00769.jpeg)![](img/image00770.jpeg)
+```powershell
+# Static classes were introduced in C# 2.0
+class SimpleMath {
+    # params allows the number of parameters to vary
+    static [int] Max([int[]]$numbers) {
+        # Check that there is at least one item in numbers
+        if ($numbers.Length -eq 0) {
+            throw [System.ArgumentException]::new(
+                "numbers cannot be empty", "numbers")
+        }
+        $result = $numbers[0]
+        foreach ($number in $numbers) {
+            if ($number -gt $result) { $result = $number }
+        }
+        return $result
+    }
+    # params allows the number of parameters to vary
+    static [int] Min([int[]]$numbers) {
+        # Check that there is at least one item in numbers
+        if ($numbers.Length -eq 0) {
+            throw [System.ArgumentException]::new(
+                "numbers cannot be empty", "numbers")
+        }
+        $result = $numbers[0]
+        foreach ($number in $numbers) {
+            if ($number -lt $result) { $result = $number }
+        }
+        return $result
+    }
+}
+
+class Program {
+    static [void] Main([string[]]$args) {
+        $numbers = [int[]]::new($args.Length)
+        for ($count = 0; $count -lt $args.Length; $count++) {
+            $numbers[$count] = $args[$count].Length
+        }
+        [System.Console]::WriteLine(
+            "Longest argument length = $([SimpleMath]::Max($numbers))")
+        [System.Console]::WriteLine(
+            "Shortest argument length = $([SimpleMath]::Min($numbers))")
+    }
+}
+```
 
 该类不包含任何实例字段（或方法），创建能实例化的类没有意义。所以用 static 关键字修饰该类。声明类时使用 static 关键字有两方面的意义。首先，它防止程序员写代码来实例化 SimpleMath 类。其次，防止在类的内部声明任何实例字段或方法。既然类无法实例化，实例成员当然也就没有了意义。以前代码清单中的 Program 类也应设计成静态类，因为它只包含静态成员。
 
@@ -858,7 +1506,10 @@ DirectoryInfoExtension.CopyTo()方法获取一个 DirectoryInfo 对象，将基�
 
 第五章说过，可为 SimpleMath 这样的静态类使用 using static 指令。例如，在代码清单 6.45 顶部添加 using static SimpleMath;指令，就可在不添加 SimpleMath 前缀的前提下调用 Max：
 
-![](img/image00771.jpeg)
+```powershell
+[System.Console]::WriteLine(
+    "Longest argument length = $([SimpleMath]::Max($numbers))")
+```
 
 [\[1\]](part0062.xhtml#ch1) 更准确的说法是“应用程序域”（AppDomain），即“操作系统进程”在 CLR 中的虚拟等价物。
 
@@ -872,7 +1523,17 @@ C# 3.0 引入了扩展方法 的概念，能模拟为其他类创建实例方法
 
 代码清单 6.46　DirectoryInfoExtension 的静态 CopyTo()方法
 
-![](img/image00772.jpeg)
+```powershell
+class DirectoryInfoExtension {
+    static [void] CopyTo(
+        [System.IO.DirectoryInfo]$sourceDirectory, [string]$target,
+        [System.IO.SearchOption]$option, [string]$searchPattern) {
+    }
+}
+
+$directory = [System.IO.DirectoryInfo]::new(".\Source")
+$directory.CopyTo(".\Target", [System.IO.SearchOption]::AllDirectories, "*")
+```
 
 该设计允许为任何类添加“实例方法”，即使那些不在同一个程序集中的类。但查看 CIL 代码，会发现扩展方法是作为普通静态方法调用的。
 
@@ -906,7 +1567,13 @@ C# 3.0 引入了扩展方法 的概念，能模拟为其他类创建实例方法
 
 代码清单 6.47　声明常量字段
 
-![](img/image00773.jpeg)
+```powershell
+# PowerShell classes have no const members; static fields are the equivalent.
+class ConvertUnits {
+    static [float]$CentimetersPerInch = 2.54
+    static [int]$CupsPerGallon = 16
+}
+```
 
 常量字段自动成为静态字段，因为不需要为每个对象实例都生成新的字段实例。但将常量字段显式声明为 static 会造成编译错误。另外，常量字段通常只声明为有字面值的类型（例如，string、int 和 double 等）。Program 或 System.Guid 等类型则不能用于常量字段。
 
@@ -928,13 +1595,25 @@ public 常量应恒定不变，因为如果修改它，在使用它的程序集�
 
 代码清单 6.48　声明 readonly 字段
 
-![](img/image00774.jpeg)
+```powershell
+class Employee {
+    Employee([int]$id) { $this._Id = $id }
+    hidden [int]$_Id
+    [int]$Id
+    # Error: A readonly field cannot be assigned to (except
+    # in a constructor or a variable initializer)
+    # [void] SetId([int]$id) { $this._Id = $id }
+}
+```
 
 和 const 字段不同，每个实例的 readonly 字段值都可以不同。事实上，readonly 字段的值可在构造函数中更改。此外，readonly 字段可以是实例或静态字段。另一个关键区别是，可在执行时为 readonly 字段赋值，而非只能在编译时。由于 readonly 字段必须通过构造函数或初始化器来设置，所以编译器要求这种字段能从其属性外部访问。但除此之外，不要从属性外部访问属性的支持字段。
 
 和 const 字段相比，readonly 字段的另一个重要特点是不限于有字面值的类型。例如，可声明 readonly System.Guid 实例字段：
 
-![](img/image00775.jpeg)
+```powershell
+# PowerShell has no static readonly field modifier.
+[Guid]$ComIUnknownGuid = "00000000-0000-0000-C000-000000000046"
+```
 
 声明为常量则不行，因为没有 GUID 的 C#字面值形式。
 
@@ -942,7 +1621,14 @@ public 常量应恒定不变，因为如果修改它，在使用它的程序集�
 
 代码清单 6.49　声明只读自动实现的属性
 
-![](img/image00776.jpeg)![](img/image00777.jpeg)
+```powershell
+class TicTacToeBoard {
+    # Set both players' moves to all false (blank)
+}
+
+[bool[,,]]$Cells = [bool[,,]]::new(2, 3, 3)
+# Error: The property Cells cannot be assigned to because it is read-only
+```
 
 无论用 C# 6.0 只读自动实现属性还是 readonly 修饰符，确保数组引用的“不可变”性质都是一项有用的防卫性编程技术。它确保数组实例保持不变，同时允许修改数组中的元素。不施加只读限制，很容易就会误将新数组赋给成员，这样会丢弃现有数组而不是更新其中的数组元素。换言之，向数组施加只读限制，不会冻结数组的内容。相反，它只是冻结数组实例（以及数组中的元素数量），因为不可能重新赋值来指向一个新的数组实例。数组中的元素仍然可写。
 
@@ -962,7 +1648,40 @@ public 常量应恒定不变，因为如果修改它，在使用它的程序集�
 
 代码清单 6.50　定义嵌套类
 
-![](img/image00778.jpeg)![](img/image00779.jpeg)
+```powershell
+# Command line is nested within Program
+class Program {
+    # Define a nested class for processing the command line
+    hidden class CommandLine {
+        CommandLine([string[]]$arguments) {
+        }
+    }
+}
+
+for ($argumentCounter = 0; $argumentCounter -lt $arguments.Length; $argumentCounter++) {
+    switch ($argumentCounter) {
+        0 { $Action = $arguments[0].ToLower(); break }
+        1 { $Id = $arguments[1]; break }
+        2 { $FirstName = $arguments[2]; break }
+        3 { $LastName = $arguments[3]; break }
+    }
+}
+static [void] Main([string[]]$args) {
+    $commandLine = [CommandLine]::new($args)
+    switch ($commandLine.Action) {
+        "new" { # Create a new employee
+        }
+        "update" { # Update an existing employee's data
+        }
+        "delete" { # Remove an existing employee's file
+        }
+        default {
+            [System.Console]::WriteLine(
+                "Employee.exe new|update|delete <id> [firstname] [lastname]")
+        }
+    }
+}
+```
 
 本例的嵌套类是 Program.CommandLine。和所有类成员一样，包容类内部没必要使用包容类名称前缀，直接把它引用为 CommandLine 就好。
 
@@ -992,7 +1711,16 @@ C# 2.0（和更高版本）使用 class 前的上下文关键字 partial 来声�
 
 代码清单 6.51　定义分部类
 
-![](img/image00780.jpeg)![](img/image00781.jpeg)
+```powershell
+# File: Program1.cs
+# PowerShell has no partial classes; all members must live in one class.
+class Program {
+}
+
+# File: Program2.cs
+class Program {
+}
+```
 
 本例将 Program 的每个部分都放到单独文件中（参见注释）。
 
@@ -1000,7 +1728,20 @@ C# 2.0（和更高版本）使用 class 前的上下文关键字 partial 来声�
 
 代码清单 6.52　在分部类中定义嵌套类
 
-![](img/image00782.jpeg)
+```powershell
+# File: Program.cs
+class Program {
+    static [void] Main([string[]]$args) {
+        $commandLine = [CommandLine]::new($args)
+        switch ($commandLine.Action) {
+        }
+    }
+}
+# File: Program+CommandLine.cs
+# (PowerShell has no partial classes; the nested class must be declared above.)
+class CommandLine {
+}
+```
 
 不允许用分部类扩展编译好的类或其他程序集中的类。只能利用分部类在同一个程序集中将一个类的实现拆分成多个文件。
 
@@ -1014,7 +1755,31 @@ C# 3.0 引入分部方法 的概念，对 C# 2.0 的分部类进行了扩展。�
 
 代码清单 6.53　为 Person 类声明和实现分部方法
 
-![](img/image00783.jpeg)![](img/image00784.jpeg)
+```powershell
+# File: Person.Designer.cs
+# PowerShell has no partial classes or partial methods.
+class Person {
+    #region Extensibility Method Definitions
+    [void] OnLastNameChanging([string]$value) { }
+    [void] OnFirstNameChanging([string]$value) { }
+    #endregion
+    [string]$LastName
+    hidden [string]$_LastName
+    [string]$FirstName
+    hidden [string]$_FirstName
+}
+
+# File: Person.cs (the partial method implementation)
+[void] OnLastNameChanging([string]$value) {
+    if ($null -eq $value) {
+        throw [System.ArgumentNullException]::new('value')
+    }
+    if ($value.Trim().Length -eq 0) {
+        throw [System.ArgumentException]::new(
+            "LastName cannot be empty.", 'value')
+    }
+}
+```
 
 Person.Designer.cs 包含 OnLastNameChanging()和 OnFirstNameChanging()方法的声明。此外，LastName 和 FirstName 属性调用了它们对应的 Changing 方法。虽然这两个方法只有声明而没有实现，但却能成功通过编译。关键在于方法声明附加了上下文关键字 partial，其所在的类也是一个 partial 类。
 
