@@ -18,7 +18,9 @@
 
 代码清单 15.1　集合初始化
 
-![](img/image01152.jpeg)
+```powershell
+$sevenWorldBlunders = @('wealth without work','pleasure without conscience','knowledge without character','commerce without morality','science without humanity','worship without sacrifice','politics without principle')
+```
 
 该语法不仅和数组初始化的语法相似，也和对象初始化器（参见 6.7.3 节）的语法相似，都是在构造函数调用的后面添加一对大括号，再在大括号内添加初始化列表。如调用构造函数时不传递参数，则数据类型名称之后的圆括号可选（和对象初始化器一样）。
 
@@ -28,7 +30,9 @@
 
 代码清单 15.2　用集合初始化器初始化一个 Dictionary<>
 
-![](img/image01153.jpeg)
+```powershell
+$colorMap = @{ Error = 'Red'; Warning = 'Yellow'; Information = 'Green'; Verbose = 'White' }
+```
 
 代码清单 15.2 用了两个不同版本的初始化。第一个演示 C# 6.0 引入的新语法，它通过赋值操作符明确哪个值和哪个键关联，准确传达“名称/值”对的意图。第二个语法（C# 6.0 起仍支持）使用大括号关联名称和值。
 
@@ -48,13 +52,19 @@
 
 代码清单 15.3　对数组执行 foreach
 
-![](img/image01154.jpeg)
+```powershell
+$array = 1..6
+foreach ($item in $array) { Write-Output $item }
+```
 
 C#编译器在生成 CIL 时，为这段代码创建了一个等价的 for 循环，如代码清单 15.4 所示。
 
 代码清单 15.4　编译器实现的数组 foreach 操作
 
-![](img/image01155.jpeg)
+```powershell
+$array = 1..6
+for ($counter = 0; $counter -lt $array.Length; $counter++) { Write-Output $array[$counter] }
+```
 
 在本例中，注意 foreach 要依赖对 Length 属性和数组索引操作符（\[\]）的支持。知道 Length 属性的值之后，C#编译器才可用 for 语句遍历数组中的每一个元素。
 
@@ -72,7 +82,10 @@ IEnumerator<T>从 IEnumerator 派生，后者包含三个成员。第一个成�
 
 代码清单 15.5　使用 while 遍历集合
 
-![](img/image01157.jpeg)![](img/image01158.jpeg)
+```powershell
+$stack = [System.Collections.Generic.Stack[int]]::new()
+foreach ($number in $stack) { Write-Output $number }
+```
 
 在代码清单 15.5 中，MoveNext()方法在越过集合末尾之后将返回 false，避免循环时还要对元素计数。
 
@@ -88,7 +101,11 @@ IEnumerator<T>从 IEnumerator 派生，后者包含三个成员。第一个成�
 
 代码清单 15.6　由一个单独的枚举数来维持状态
 
-![](img/image01159.jpeg)
+```powershell
+$stack = [System.Collections.Generic.Stack[int]]::new()
+$enumerator = $stack.GetEnumerator()
+while ($enumerator.MoveNext()) { Write-Output $enumerator.Current }
+```
 
 高级/初学者主题：清理状态
 
@@ -96,13 +113,19 @@ IEnumerator<T>从 IEnumerator 派生，后者包含三个成员。第一个成�
 
 代码清单 15.7　对集合执行遍历的编译结果
 
-![](img/image01160.jpeg)
+```powershell
+$enumerator = $stack.GetEnumerator()
+try { while ($enumerator.MoveNext()) { Write-Output $enumerator.Current } }
+finally { $enumerator.Dispose() }
+```
 
 注意，由于 IEnumerator<T>支持 IDisposable 接口，所以可用 using 关键字简化代码清单 15.7 的 C#代码，如代码清单 15.8 所示。
 
 代码清单 15.8　使用 using 的错误处理和资源清理
 
-![](img/image01161.jpeg)![](img/image01162.jpeg)
+```powershell
+foreach ($number in $stack) { Write-Output $number }
+```
 
 但要记住 CIL 本身并不直接支持 using 关键字，因此实际上代码清单 15.7 的 C#代码才更准确地对应遍历集合的 CIL 代码。
 
@@ -139,7 +162,52 @@ IEnumerable<T>上的每个方法都是标准查询操作符 ，用于为所操�
 
 代码清单 15.9　用于演示标准查询操作符的示例类
 
-![](img/image01163.jpeg)![](img/image01164.jpeg)![](img/image01165.jpeg)
+```powershell
+class Patent {
+    [string]$Title
+    [string]$YearOfPublication
+    [string]$ApplicationNumber
+    [long[]]$InventorIds
+    Patent([string]$title, [string]$year, [long[]]$inventorIds) {
+        $this.Title = $title
+        $this.YearOfPublication = $year
+        $this.InventorIds = $inventorIds
+    }
+    [string] ToString() { return "$($this.Title) ($($this.YearOfPublication))" }
+}
+
+class Inventor {
+    [long]$Id
+    [string]$Name
+    [string]$City
+    [string]$State
+    [string]$Country
+    Inventor([string]$name, [string]$city, [string]$state, [string]$country, [long]$id) {
+        $this.Name = $name; $this.City = $city; $this.State = $state; $this.Country = $country; $this.Id = $id
+    }
+    [string] ToString() { return "$($this.Name) ($($this.City), $($this.State))" }
+}
+
+$inventors = @(
+    [Inventor]::new('Benjamin Franklin','Philadelphia','PA','USA',1),
+    [Inventor]::new('Orville Wright','Kitty Hawk','NC','USA',2),
+    [Inventor]::new('Wilbur Wright','Kitty Hawk','NC','USA',3),
+    [Inventor]::new('Samuel Morse','New York','NY','USA',4),
+    [Inventor]::new('George Stephenson','Wylam','Northumberland','UK',5),
+    [Inventor]::new('John Michaelis','Chicago','IL','USA',6),
+    [Inventor]::new('Mary Phelps Jacob','New York','NY','USA',7)
+)
+$patents = @(
+    [Patent]::new('Bifocals','1784',[long[]](1)),
+    [Patent]::new('Phonograph','1877',[long[]](1)),
+    [Patent]::new('Kinetoscope','1888',[long[]](1)),
+    [Patent]::new('Electrical Telegraph','1837',[long[]](4)),
+    [Patent]::new('Flying Machine','1903',[long[]](2,3)),
+    [Patent]::new('Steam Locomotive','1815',[long[]](5)),
+    [Patent]::new('Droplet Deposition Apparatus','1989',[long[]](6)),
+    [Patent]::new('Backless Brassiere','1914',[long[]](7))
+)
+```
 
 代码清单 15.9 还提供了一些示例数据。输出 15.1 展示了结果。
 
@@ -153,7 +221,9 @@ IEnumerable<T>上的每个方法都是标准查询操作符 ，用于为所操�
 
 代码清单 15.10　使用 System.Linq.Enumerable.Where()来筛选
 
-![](img/image01167.jpeg)
+```powershell
+$patentsPriorTo1900 = $patents | Where-Object { $_.YearOfPublication.StartsWith('18') }
+```
 
 输出 15.2
 
@@ -169,7 +239,9 @@ IEnumerable<T>上的每个方法都是标准查询操作符 ，用于为所操�
 
 代码清单 15.11　使用 System.Linq.Enumerable.Select()来投射
 
-![](img/image01169.jpeg)
+```powershell
+$patentsOf1800s = $patents | Where-Object { $_.YearOfPublication.StartsWith('18') } | ForEach-Object { $_.Title }
+```
 
 代码清单 15.11 创建了一个新的 IEnumerable<string>集合。虽然添加了一个 Select()调用，但并未造成输出的任何改变。但这纯属巧合，因为 Print()中的 Console.WriteLine()调用恰好会使用 ToString()。事实上，针对每个数据项都会发生一次转换：从原始集合的 Patent 类型转换成 items 集合的 string 类型。
 
@@ -177,7 +249,9 @@ IEnumerable<T>上的每个方法都是标准查询操作符 ，用于为所操�
 
 代码清单 15.12　使用 System.Linq.Enumerable.Select()和 new 来投射
 
-![](img/image01170.jpeg)
+```powershell
+$files = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern
+```
 
 fileList 是 IEnumerable<string>类型。但利用 Select 的投射功能，可将集合中的每一项转换成 System.IO.FileInfo 对象。
 
@@ -185,7 +259,9 @@ fileList 是 IEnumerable<string>类型。但利用 Select 的投射功能，可�
 
 代码清单 15.13　投射成元组
 
-![](img/image01171.jpeg)![](img/image01172.jpeg)
+```powershell
+$items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEach-Object { [pscustomobject]@{ FileName = $_.Name; Size = $_.Length } }
+```
 
 输出 15.3
 
@@ -201,7 +277,15 @@ fileList 是 IEnumerable<string>类型。但利用 Select 的投射功能，可�
 
 代码清单 15.14　并行执行 LINQ 查询
 
-![](img/image01174.jpeg)![](img/image01175.jpeg)
+```powershell
+$items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEach-Object {
+    [pscustomobject]@{ FileName = $_.Name; Size = $_.Length }
+}
+# Parallel equivalent: PowerShell 7's ForEach-Object -Parallel
+$items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEach-Object -Parallel {
+    [pscustomobject]@{ FileName = $_.Name; Size = $_.Length }
+}
+```
 
 在代码清单 15.14 中，简单修改代码即可实现并行。唯一要做的就是利用 Microsoft.NET Framework 4 引入的标准查询操作符 AsParallel()，它是静态类 System.Linq.ParallelEnumerable 的成员。使用这个简单的扩展方法，“运行时”一边遍历 fileList 中的数据项，一边返回结果对象。两个操作并行发生。本例中的每个并行操作开销不大（虽然只是相对于其他正在进行的操作），但在执行 CPU 密集型处理时（比如加密或压缩），累积起来的开销还是相当大的。在多个 CPU 之间并行执行，执行时间将根据 CPU 的数量成比例缩短。
 
@@ -217,7 +301,10 @@ fileList 是 IEnumerable<string>类型。但利用 Select 的投射功能，可�
 
 代码清单 15.15　使用 Count()对元素进行计数
 
-![](img/image01176.jpeg)
+```powershell
+Write-Output "Patent Count: $($patents.Count)"
+Write-Output "Patent Count in 1800s: $(($patents | Where-Object YearOfPublication -like '18*').Count)"
+```
 
 虽然 Count()语句写起来简单，但 IEnumerable<T>没有变，所以执行的代码仍会遍历集合中的所有项。有 Count 属性的集合应首选属性，而不要用 LINQ 的 Count()方法（这是一个容易忽视的差异）。幸好，ICollection<T>包含了 Count 属性，所以如果集合支持 ICollection<T>，在它上面调用 Count()方法会对集合进行转型，并直接调用 Count。但如果不支持 ICollection<T>，Enumerable.Count()就会枚举集合中的所有项，而不是调用内建的 Count 机制。如果计数的目的只是为了看这个计数是否大于 0（if(patents.Count() > 0){...}），那么首选做法是使用 Any()操作符（if(patents.Any()) {...}）。Any()只尝试遍历集合中的一个项，成功就返回 true，而不会遍历整个序列。
 
@@ -233,7 +320,20 @@ fileList 是 IEnumerable<string>类型。但利用 Select 的投射功能，可�
 
 代码清单 15.16　使用 System.Linq.Enumerable.Where()来筛选
 
-![](img/image01177.jpeg)![](img/image01178.jpeg)
+```powershell
+$patents = $patents | Where-Object {
+    $result = $_.YearOfPublication.StartsWith('18')
+    if ($result) { Write-Output "`t$_" }
+    $result
+}
+Write-Output '1. Patents prior to the 1900s:'
+$patents
+Write-Output "2. A second listing of patents prior to the 1900s:"
+Write-Output "There are $($patents.Count) patents prior to 1900."
+Write-Output '3. A third listing of patents prior to the 1900s:'
+$patents = @($patents)
+Write-Output "There are $($patents.Count) patents prior to 1900."
+```
 
 输出 15.4
 
@@ -267,7 +367,9 @@ Lambda 表达式在声明时不执行。事实上，Lambda 表达式中的代码
 
 代码清单 15.17　使用 System.Linq.Enumerable.OrderBy()/ThenBy()排序
 
-![](img/image01181.jpeg)
+```powershell
+$items = $patents | Sort-Object YearOfPublication, Title
+```
 
 输出 15.5
 
@@ -281,7 +383,11 @@ OrderBy()返回的是一个 IOrderedEnumerable<T>接口，而不是一个 IEnume
 
 指定额外排序条件需使用扩展方法 ThenBy()。ThenBy()扩展的不是 IEnumerable<T>而是 IOrderedEnumerable<T>。该方法也在 System.Linq.Extensions.Enumerable 中定义，声明如下：
 
-![](img/image01184.jpeg)
+```powershell
+# Equivalent signature:
+# Then-By receives an ordered sequence and a key selector.
+$items = $items | Sort-Object FirstKey | Sort-Object SecondKey
+```
 
 总之，要先使用 OrderBy()，再执行零个或多个 ThenBy()调用来提供额外的排序“列”。OrderByDescending()和 ThenByDescending()提供了相同的功能，只是变成按降序排序。升序和降序方法混用没有问题，但进一步排序就要用一个 ThenBy()调用（无论升序还是降序）。
 
@@ -309,7 +415,39 @@ OrderBy()返回的是一个 IOrderedEnumerable<T>接口，而不是一个 IEnume
 
 代码清单 15.18　示范员工和部门数据
 
-![](img/image01186.jpeg)![](img/image01187.jpeg)
+```powershell
+class Department {
+    [long]$Id
+    [string]$Name
+    Department([string]$name, [long]$id) { $this.Id = $id; $this.Name = $name }
+    [string] ToString() { return $this.Name }
+}
+class Employee {
+    [int]$Id
+    [string]$Name
+    [string]$Title
+    [int]$DepartmentId
+    Employee([string]$name, [string]$title, [int]$departmentId) {
+        $this.Name = $name; $this.Title = $title; $this.DepartmentId = $departmentId
+    }
+    [string] ToString() { return "$($this.Name) ($($this.Title))" }
+}
+$departments = @(
+    [Department]::new('Corporate',0), [Department]::new('Human Resources',1),
+    [Department]::new('Engineering',2), [Department]::new('Information Technology',3),
+    [Department]::new('Philanthropy',4), [Department]::new('Marketing',5)
+)
+$employees = @(
+    [Employee]::new('Mark Michaelis','Chief Computer Nerd',0),
+    [Employee]::new('Michael Stokesbary','Senior Computer Wizard',2),
+    [Employee]::new('Brian Jones','Enterprise Integration Guru',2),
+    [Employee]::new('Anne Beard','HR Director',1),
+    [Employee]::new('Pat Dever','Enterprise Architect',3),
+    [Employee]::new('Kevin Bost','Programmer Extraordinaire',2),
+    [Employee]::new('Thomas Heavey','Software Architect',2),
+    [Employee]::new('Eric Edmonds','Philanthropy Coordinator',4)
+)
+```
 
 输出 15.6
 
@@ -325,7 +463,9 @@ OrderBy()返回的是一个 IOrderedEnumerable<T>接口，而不是一个 IEnume
 
 代码清单 15.19　使用 System.Linq.Enumerable.Join()进行内部联接
 
-![](img/image01189.jpeg)
+```powershell
+$items = foreach ($employee in $employees) { $department = $departments | Where-Object Id -eq $employee.DepartmentId; [pscustomobject]@{ Name=$employee.Name; Title=$employee.Title; Department=$department } }
+```
 
 输出 15.7
 
@@ -341,7 +481,14 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.20　使用 System.Linq.Enumerable.Join()执行的另一个内部联接
 
-![](img/image01192.jpeg)![](img/image01193.jpeg)
+```powershell
+$items = foreach ($department in $departments) {
+    foreach ($employee in ($employees | Where-Object DepartmentId -eq $department.Id)) {
+        [pscustomobject]@{ Id = $department.Id; Name = $department.Name; Employee = $employee }
+    }
+}
+$items | ForEach-Object { $_.Name; Write-Output "`t$($_.Employee)" }
+```
 
 输出 15.8
 
@@ -351,7 +498,10 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.21　使用 System.Linq.Enumerable.GroupBy()对数据项进行分组
 
-![](img/image01195.jpeg)![](img/image01196.jpeg)
+```powershell
+$groups = $employees | Group-Object DepartmentId
+foreach ($group in $groups) { $group.Group; Write-Output "Count: $($group.Count)" }
+```
 
 输出 15.9
 
@@ -365,7 +515,16 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.22　使用 System.Linq.Enumerable.GroupJoin()创建子集合
 
-![](img/image01198.jpeg)![](img/image01199.jpeg)
+```powershell
+$items = foreach ($department in $departments) {
+    $departmentEmployees = @($employees | Where-Object DepartmentId -eq $department.Id)
+    [pscustomobject]@{ Id = $department.Id; Name = $department.Name; Employees = $departmentEmployees }
+}
+foreach ($item in $items) {
+    Write-Output $item.Name
+    foreach ($employee in $item.Employees) { Write-Output "`t$employee" }
+}
+```
 
 输出 15.10
 
@@ -381,7 +540,16 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.23　使用 GroupJoin()和 SelectMany()实现外部联接
 
-![](img/image01201.jpeg)
+```powershell
+$items = foreach ($department in $departments) {
+    $matches = @($employees | Where-Object DepartmentId -eq $department.Id)
+    if ($matches.Count -eq 0) { $matches = @($null) }
+    foreach ($employee in $matches) {
+        [pscustomobject]@{ Id = $department.Id; Name = $department.Name; Employee = $employee }
+    }
+}
+$items = $items | Sort-Object Id -Unique
+```
 
 输出 15.11
 
@@ -393,7 +561,9 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.24　调用 SelectMany()
 
-![](img/image01203.jpeg)![](img/image01204.jpeg)
+```powershell
+$players = $worldCup2006Finalists | ForEach-Object Players
+```
 
 在输出中，代码清单 15.24 会按每个球员在代码中出现的顺序逐行显示其姓名。Select()和 Select-Many()的区别在于，Select()会返回两个球员数组，每个都对应原始集合中的球员数组。Select()可以一边投射一边转换，但项的数量不会发生改变。例如，teams.Select (team=> team.Players)会返回一个 IEnumerable<string\[\]>。
 
@@ -401,11 +571,19 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 ①注：作者的这个例子过于复杂以至于可能不好理解。下面是一个简单的例子：
 
-![](img/image01205.jpeg)
+```powershell
+$text = @('Zhou Jing', 'walking in', 'the sideway')
+$tokens = $text | ForEach-Object { $_.Split(' ') }
+foreach ($line in $tokens) { foreach ($token in $line) { Write-Host -NoNewline "$token-" } }
+```
 
 如果使用 Select()，那么获得的 tokens 是一个 string\[\]数组，还需遍历每个 string\[\]，才能解析出其中的 string。相反，如换用 SelectMany()，不仅代码量减少了，也更容易理解：
 
-![](img/image01206.jpeg)
+```powershell
+$text = @('Zhou Jing', 'walking in', 'the sideway')
+$tokens = $text | ForEach-Object { $_.Split(' ') }
+foreach ($token in $tokens) { Write-Host -NoNewline "$token-" }
+```
 
 ——译者注
 
@@ -415,7 +593,10 @@ Join()的第一个参数称为 inner，指定了 employees 要联接到的集合
 
 代码清单 15.25　更多的 System.Linq.Enumerable 方法调用
 
-![](img/image01207.jpeg)![](img/image01208.jpeg)
+```powershell
+$even = 0..9 | Where-Object { $_ % 2 -eq 0 }
+$odd = 0..9 | Where-Object { $_ % 2 -eq 1 }
+```
 
 输出 15.12
 
@@ -457,7 +638,10 @@ C# 3.0 通过 LINQ 显著增强了集合处理。令人印象深刻的是，为�
 
 代码清单 15.26　使用匿名类型的隐式局部变量
 
-![](img/image01212.jpeg)![](img/image01213.jpeg)
+```powershell
+$patent1 = [pscustomobject]@{ Title = 'Bifocals'; YearOfPublication = '1784' }
+$patent2 = [pscustomobject]@{ Title = 'Phonograph'; YearOfPublication = '1877' }
+```
 
 输出 15.13 展示了执行这个程序的结果。
 
@@ -534,7 +718,9 @@ Dictionary<string, List<Account>> dictionary=GetAccounts();
 
 代码清单 15.27　投射成匿名类型
 
-![](img/image01215.jpeg)
+```powershell
+$items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEach-Object { [pscustomobject]@{ FileName = $_.Name; Size = $_.Length } }
+```
 
 输出 15.14
 
@@ -552,7 +738,19 @@ patent1 和 patent2 使用了相同的属性名称和相同的数据类型。因
 
 代码清单 15.28　类型安全性和匿名类型的“不可变”性质
 
-![](img/image01217.jpeg)![](img/image01218.jpeg)
+```powershell
+$patent1 = [pscustomobject]@{ Title = 'Bifocals'; YearOfPublication = '1784' }
+$patent2 = [pscustomobject]@{ YearOfPublication = '1877'; Title = 'Phonograph' }
+$patent3 = [pscustomobject]@{ YearOfPublication = $patent1.YearOfPublication; Year = $patent1.YearOfPublication }
+
+# PowerShell 中两个 PSCustomObject 都是同一类型的实例，
+# 属性名称或顺序不同不会造成类型不兼容。
+$patent1 = $patent2     # 允许
+$patent1 = $patent3     # 允许
+
+# PowerShell 的 PSCustomObject 可变（不同于 C# 匿名类型的只读属性）
+$patent1.Title = 'Swiss Cheese'
+```
 
 前两个编译时错误证明类型不兼容，无法从一个转换成另一个。第三个编译时错误是由于重新对 Title 属性进行赋值造成的。匿名类型“不可变”（immutable），一经实例化，再更改它的某个属性，就会造成编译时错误。
 
@@ -580,7 +778,9 @@ patent1 和 patent2 使用了相同的属性名称和相同的数据类型。因
 
 匿名类型不能使用集合初始化器，因为集合初始化器要求执行一次构造函数调用，但根本没办法命名这个构造函数。解决方案是定义像下面这样的方法：
 
-![](img/image01219.jpeg)
+```powershell
+function New-AnonymousList { param($item) ,$item }
+```
 
 由于能进行方法类型推断，因此类型参数可以隐式，不用显式指定。所以，采用这个方案，就可成功创建匿名类型的集合。
 
@@ -588,7 +788,18 @@ patent1 和 patent2 使用了相同的属性名称和相同的数据类型。因
 
 代码清单 15.29　初始化匿名类型数组
 
-![](img/image01220.jpeg)![](img/image01221.jpeg)
+```powershell
+$worldCup2006Finalists = @(
+    [pscustomobject]@{
+        TeamName = 'France'
+        Players = @('Fabien Barthez', 'Gregory Coupet', 'Mickael Landreau', 'Eric Abidal')
+    },
+    [pscustomobject]@{
+        TeamName = 'Italy'
+        Players = @('Gianluigi Buffon', 'Angelo Peruzzi', 'Marco Amelia', 'Cristian Zaccardo')
+    }
+)
+```
 
 最终的变量是由匿名类型的项构成的数组。由于是数组，所以每一项的类型必须相同。
 
