@@ -52,7 +52,14 @@
 
 代码清单 3.1　检查 null 值
 
-![](img/image00427.jpeg)
+```powershell
+$number = $null
+if ($null -eq $number) {
+    Write-Output "'number' requires a value and cannot be null"
+} else {
+    Write-Output "'number' doubled is $($number * 2)."
+}
+```
 
 在上面的代码中，if 语句用 is 操作符判断 number 变量是否为 null，并且根据判断结果执行不同的操作。虽然也可以使用等于操作符“==”来判断 null 值，但由于等于操作符可能被重写并实现不同的行为，因此判断 null 值最好使用 is 操作符。
 
@@ -74,7 +81,12 @@
 
 代码清单 3.2　对未赋值的变量进行解引用
 
-![](img/image00428.jpeg)
+```powershell
+# PowerShell does not perform C# nullable-reference analysis.
+# An uninitialized variable is $null and fails when dereferenced.
+$text = $null
+$text.Length  # Runtime error: cannot call a method on a null-valued expression.
+```
 
 总之，引用型变量默认可以被赋值为空，是造成 System.NullReferenceException 异常的罪魁祸首。而编译器的赋值检查则很容易将程序员引入歧途，除非他们特别小心谨慎地编程才能躲避陷阱。
 
@@ -86,7 +98,9 @@
 
 首先，可以在程序代码中使用下面语句来启用引用类型的可空性特性：
 
-![](img/image00429.jpeg)
+```powershell
+#nullable enable
+```
 
 该语句在#nullable 后面输入三个可选值：enable、disable 和 restore。restore 的作用是将可空性设置恢复为项目全局设置的值。前面的代码清单 3.2 演示了使用#nullable 语句来启用该特性的例子。正是该语句使得编译器不再会因为 string? Text;语句而发出警告。
 
@@ -94,11 +108,16 @@
 
 代码清单 3.3　通过修改.csproj 文件在项目全局范围内启用可空性特性
 
-![](img/image00430.jpeg)
+```powershell
+# PowerShell has no project-wide nullable-reference compiler setting.
+# Use explicit $null checks in PowerShell code instead.
+```
 
 本书附带的全部示例代码（[`github.com/EssentialCSharp`](https://github.com/EssentialCSharp) ）都在项目全局范围内启用了可空性特性。也可以在 dotnet 命令行参数中通过/p 参数设置该特性是否启用：
 
-![](img/image00431.jpeg)
+```powershell
+dotnet build /p:Nullable=enable
+```
 
 该命令行参数会取代项目代码中所有对可空性特性的设置。
 
@@ -114,7 +133,11 @@ C# 3.0 新增上下文关键字 var 来声明隐式类型的局部变量 。声�
 
 代码清单 3.4　字符串处理
 
-![](img/image00432.jpeg)
+```powershell
+$text = Read-Host 'Enter text'
+$uppercase = $text.ToUpperInvariant()
+Write-Output $uppercase
+```
 
 上述代码清单和代码清单 2.18 相比有两处不同。首先，不显式声明为 string 类型，而是声明为 var。最终的 CIL 代码没有区别。但 var 告诉编译器根据声明时所赋的值（System.Console.ReadLine()）来推断数据类型。
 
@@ -136,13 +159,21 @@ C# 3.0 添加 var 的真正目的是支持匿名类型。匿名类型是在方�
 
 代码清单 3.5　使用匿名类型声明隐式局部变量
 
-![](img/image00433.jpeg)
+```powershell
+$patent1 = [pscustomobject]@{ Title = 'Bifocals'; YearOfPublication = 1784 }
+$patent2 = [pscustomobject]@{ Title = 'Phonograph'; YearOfPublication = 1877 }
+Write-Output "$($patent1.Title) ($($patent1.YearOfPublication))"
+Write-Output "$($patent2.Title) ($($patent2.YearOfPublication))"
+```
 
 输出 3.1 展示了结果。
 
 输出 3.1
 
-![](img/image00434.jpeg)
+```text
+Bifocals (1784)
+Phonograph (1877)
+```
 
 代码清单 3.5 演示了如何将匿名类型的值赋给隐式类型(var)局部变量。C# 3.0 支持连接（关联）数据类型或将特定类型的大小缩减至更少数据元素，所以才配合设计了这种操作。但自从 C# 7.0 引入元组语法后，匿名类型几乎就用不着了。
 
@@ -152,7 +183,9 @@ C# 3.0 添加 var 的真正目的是支持匿名类型。匿名类型是在方�
 
 C# 7.0 提供了第三个方案：元组 （tuple）。元组允许在一条语句中完成对所有变量的赋值，如下所示：
 
-![](img/image00435.jpeg)
+```powershell
+$country, $capital, $gdpPerCapita = 'South Sudan', 'Juba', 275.18
+```
 
 表 3.1 总结了元组的其他语法形式。
 
@@ -192,7 +225,12 @@ C# 7.0 提供了第三个方案：元组 （tuple）。元组允许在一条语�
 
 编译器能判断作用域中的元组项名称，这一点还好理解，但如果元组要对外公开，比如作为另一个程序集中的一个方法的参数或返回值使用（另一个程序集可能看不到你的源代码），那么会发生什么？其实对于作为 API（公共或私有）一部分的所有元组，编译器都会以“属性”（attribute）的形式将元组项名称添加到成员元数据中。例如，代码清单 3.6 展示了编译器为以下方法生成的 CIL 代码的 C#形式：
 
-![](img/image00438.jpeg)
+```powershell
+function Split-Name([string]$fullName) {
+    $parts = $fullName.Split(' ')
+    return $parts[0], $parts[1]
+}
+```
 
 代码清单 3.6　编译器为返回 ValueTuple 的方法生成的 CIL 代码
 
@@ -238,7 +276,9 @@ C#用方括号声明数组变量。首先指定数组元素的类型，后跟一
 
 代码清单 3.7　声明数组
 
-![](img/image00442.jpeg)
+```powershell
+[string[]]$languages
+```
 
 显然，数组声明的第一部分标识了数组中存储的元素的类型。作为声明的一部分，方括号指定了数组的秩 （rank），或者说维数。本例声明一维数组。类型和维数构成了 languages 变量的数据类型。
 
@@ -250,7 +290,9 @@ C#用方括号声明数组变量。首先指定数组元素的类型，后跟一
 
 代码清单 3.8　声明二维数组
 
-![](img/image00443.jpeg)
+```powershell
+[int[,]]$cells
+```
 
 代码清单 3.8 定义了一个二维数组。第一维对应从左到右的单元格，第二维对应从上到下的单元格。可用更多逗号定义更多维，数组总维数等于逗号数加 1。注意，某一维上的元素数量不是变量声明的一部分。这是在创建（实例化）数组并为每个元素分配内存空间时指定的。
 
@@ -260,7 +302,9 @@ C#用方括号声明数组变量。首先指定数组元素的类型，后跟一
 
 代码清单 3.9　声明数组的同时赋值
 
-![](img/image00444.jpeg)
+```powershell
+$languages = @('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+```
 
 列表第一项成为数组的第一个元素，第二项成为第二个，以此类推。我们用大括号定义数组字面值。
 
@@ -268,7 +312,9 @@ C#用方括号声明数组变量。首先指定数组元素的类型，后跟一
 
 代码清单 3.10　声明数组后再赋值
 
-![](img/image00445.jpeg)
+```powershell
+$languages = [string[]]@('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+```
 
 自 C# 3.0 起不必在 new 后指定数组类型（string）。编译器能根据初始化列表中的数据类型推断数组类型。但方括号仍不可缺少。
 
@@ -276,7 +322,9 @@ C#支持将 new 关键字作为声明语句的一部分，所以可以像代码�
 
 代码清单 3.11　声明数组时用 new 赋值
 
-![](img/image00446.jpeg)
+```powershell
+$languages = [string[]]@('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+```
 
 new 关键字的作用是指示“运行时”为数据类型分配内存，即指示它实例化数据类型（本例是数组）。
 
@@ -284,13 +332,17 @@ new 关键字的作用是指示“运行时”为数据类型分配内存，即�
 
 代码清单 3.12　声明数组时用 new 关键字赋值并指定数组大小
 
-![](img/image00447.jpeg)
+```powershell
+$languages = [string[]]@('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+```
 
 指定的数组大小必须和大括号中的元素数量匹配。另外，也可分配数组但不提供初始值，如代码清单 3.13 所示。
 
 代码清单 3.13　分配数组但不提供初始值
 
-![](img/image00448.jpeg)
+```powershell
+$languages = [string[]]::new(9)
+```
 
 分配数组但不指定初始值，“运行时”会将每个数组元素初始化为它们的默认值，如下所示：
 
@@ -310,31 +362,49 @@ new 关键字的作用是指示“运行时”为数据类型分配内存，即�
 
 代码清单 3.14　在运行时确定数组大小
 
-![](img/image00449.jpeg)
+```powershell
+$size = [int](Read-Host 'How many items on the list?')
+[string[]]$groceryList = [string[]]::new($size)
+```
 
 C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代码清单 3.15 初始化一个没有开始走棋的井字棋棋盘。
 
 代码清单 3.15　声明二维数组
 
-![](img/image00450.jpeg)
+```powershell
+$cells = [int[,]]::new(3, 3)
+```
 
 还可以像代码清单 3.16 那样，将井字棋棋盘初始化成特定的棋子布局。
 
 代码清单 3.16　初始化二维整数数组
 
-![](img/image00451.jpeg)
+```powershell
+$cells = [int[,]]::new(3, 3)
+$cells[0, 0] = 1; $cells[0, 1] = 0; $cells[0, 2] = 2
+$cells[1, 0] = 1; $cells[1, 1] = 2; $cells[1, 2] = 0
+$cells[2, 0] = 1; $cells[2, 1] = 2; $cells[2, 2] = 1
+```
 
 数组包含三个 int\[\]类型的元素，每个元素大小一样（本例中凑巧也是 3）。注意每个 int\[\]元素的大小必须完全一样。也就是说，像代码清单 3.17 那样的声明是无效的。
 
 代码清单 3.17　大小不一致的多维数组会造成错误
 
-![](img/image00452.jpeg)
+```powershell
+# Rectangular arrays require equal lengths in every dimension.
+$cells = [int[,]]::new(3, 3)
+```
 
 表示棋盘并不需要在每个位置都使用整数。另一个办法是为每个玩家都单独提供虚拟棋盘，每个棋盘都包含一个 bool 来指出玩家选择的位置。代码清单 3.18 对应于一个三维棋盘。
 
 代码清单 3.18　初始化三维数组
 
-![](img/image00453.jpeg)![](img/image00454.jpeg)
+```powershell
+$cells = New-Object 'bool[,,]' 2, 3, 3
+$cells[0, 0, 0] = $true
+$cells[0, 0, 2] = $true
+$cells[1, 1, 1] = $true
+```
 
 本例初始化棋盘并显式指定每一维的大小。new 表达式除了指定大小，还提供了数组的字面值。bool\[,,\]类型的字面值被分解成两个 bool\[,\]类型的二维数组（大小均为 3×3）。每个二维数组都由三个 bool 数组（大小为 3）构成。
 
@@ -342,7 +412,14 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 代码清单 3.19　初始化交错数组
 
-![](img/image00455.jpeg)
+```powershell
+$cells = @(
+    [int[]](1, 0, 2, 0),
+    [int[]](1, 2, 0),
+    [int[]](1, 2),
+    [int[]](1)
+)
+```
 
 交错数组不用逗号标识新维。相反，交错数组定义由数组构成的数组。代码清单 3.19 在 int\[\]后添加\[\]，表明数组元素是 int\[\]类型的数组。
 
@@ -354,7 +431,13 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 代码清单 3.20　声明并访问数组
 
-![](img/image00456.jpeg)![](img/image00457.jpeg)
+```powershell
+$languages = @('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+$language = $languages[4]
+Write-Output $language
+$language = $languages[-3]
+Write-Output $language
+```
 
 从 C# 8.0 开始，你可以使用相对于末尾元素的索引来访问数组，该操作需要用到反向索引操作符 （index from end operator），有时也称作^操作符或者“帽子操作符”。以代码清单 3.20 中的数组 languages 为例。索引¹ 访问的是数组最后一个元素，索引⁹ 访问的是第一个元素，而索引³ 则访问倒数第三个元素，即“Python”。
 
@@ -364,7 +447,10 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 最后要注意：^操作符后面不局限于使用字面量数字，也可以使用任何返回正整数的表达式，例如，
 
-![](img/image00458.jpeg)
+```powershell
+# The first element is the equivalent of C#'s ^languages.Length index.
+$languages[0]
+```
 
 可以访问数组的首元素。
 
@@ -372,19 +458,37 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 代码清单 3.21　交换数组中不同位置的数据
 
-![](img/image00459.jpeg)
+```powershell
+$languages = @('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+$language = $languages[3]
+$languages[3] = $languages[2]
+$languages[2] = $language
+```
 
 多维数组的元素用每一个维的索引来标识，如代码清单 3.22 所示。
 
 代码清单 3.22　初始化二维整数数组
 
-![](img/image00460.jpeg)
+```powershell
+$cells = [int[,]]::new(3, 3)
+$cells[0, 0] = 1; $cells[0, 1] = 0; $cells[0, 2] = 2
+$cells[1, 0] = 0; $cells[1, 1] = 2; $cells[1, 2] = 0
+$cells[2, 0] = 1; $cells[2, 1] = 2; $cells[2, 2] = 1
+$cells[1, 0] = 1
+```
 
 交错数组元素的赋值稍有不同，这是因为它必须与交错数组的声明一致。第一个索引指定“由数组构成的数组”中的一个数组。第二个索引指定是该数组中的哪一项（参见代码清单 3.23）。
 
 代码清单 3.23　声明交错数组
 
-![](img/image00461.jpeg)
+```powershell
+$cells = @(
+    [int[]](1, 0, 2),
+    [int[]](0, 2, 0),
+    [int[]](1, 2, 1)
+)
+$cells[1][0] = 1
+```
 
 长度
 
@@ -392,13 +496,19 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 代码清单 3.24　获取数组长度
 
-![](img/image00462.jpeg)
+```powershell
+Write-Output "There are $($languages.Length) languages in the array."
+```
 
 数组长度固定，除非重新创建数组，否则不能随便更改。此外，越过数组的边界 （或长度）会造成“运行时”报错。用无效索引（指向的元素不存在）来访问（检索或者赋值）数组时就会发生这种情况。例如在代码清单 3.25 中，用数组长度作为索引来访问数组就会出错。
 
 代码清单 3.25　访问数组越界会抛出异常
 
-![](img/image00463.jpeg)
+```powershell
+$languages = [string[]]::new(9)
+# Runtime error: valid indexes are 0 through 8.
+$languages[4] = $languages[9]
+```
 
 ![](img/image00312.jpeg)注意 　Length 属性返回数组元素个数，而不是返回最高索引值。languages 变量的 Length 属性是 9，而 languages 数组的最高索引是 8，是从起点能到达的最远位置，当使用大于 8 的索引来访问 languages 数组时，运行时会报告错误。
 
@@ -412,7 +522,10 @@ C#以类似的方式处理多维数组。每一维的大小以逗号分隔。代
 
 代码清单 3.26　在数组索引中使用 Length-1
 
-![](img/image00464.jpeg)
+```powershell
+$languages = [string[]]::new(9)
+$languages[4] = $languages[$languages.Length - 1]
+```
 
 （当然，上面代码中访问数组前没有检查数组元素是否为 null。在实际开发中，应当进行检查。）
 
@@ -434,7 +547,15 @@ C# 8.0 为数组提供了一个新的访问方法：数组切片。简单地说�
 
 代码清单 3.27　区间操作符的应用示例
 
-![](img/image00465.jpeg)![](img/image00466.jpeg)
+```powershell
+$languages = @('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic', 'Python', 'Lisp', 'JavaScript')
+Write-Output "0..3: $($languages[0..2] -join ', ')"
+Write-Output "^3..^0: $($languages[-3..-1] -join ', ')"
+Write-Output "3..^3: $($languages[3..5] -join ', ')"
+Write-Output "..^6: $($languages[0..2] -join ', ')"
+Write-Output "6..: $($languages[6..8] -join ', ')"
+Write-Output "..: $($languages -join ', ')"
+```
 
 区间操作符有一个非常重要的概念，即它所代表的区间为半闭半开区间。写在它左侧的索引所代表的元素被包含在区间内，而写在右侧的索引所代表的元素则不被包含。因此代码清单 3.27 中的区间 0..3 所代表的区间为从第 0 号元素开始的 3 个元素，而第 4 个元素（由于正向索引从 0 开始计数，因此索引值 3 代表第 4 个元素）则不包含在该区间内。上面代码中的第二个区间为³..⁰ 则从数组中提取最后 3 个元素。在这里⁰ 不会造成问题，同样是因为⁰ 作为区间操作符右侧的索引值，其所代表的元素不被包含在区间内。
 
@@ -456,13 +577,32 @@ C# 8.0 为数组提供了一个新的访问方法：数组切片。简单地说�
 
 代码清单 3.28　更多数组方法
 
-![](img/image00467.jpeg)
+```powershell
+$languages = @('C#', 'COBOL', 'Java', 'C++', 'TypeScript', 'Visual Basic')
+[Array]::Sort($languages)
+$searchString = 'COBOL'
+$index = [Array]::BinarySearch($languages, $searchString)
+Write-Output "The wave of the future, $searchString, is at index $index."
+Write-Output "First Element`tLast Element"
+Write-Output "$($languages[0])`t$($languages[-1])"
+[Array]::Reverse($languages)
+Write-Output "$($languages[0])`t$($languages[-1])"
+[Array]::Clear($languages, 0, $languages.Length)
+Write-Output "$($languages[0])`t$($languages[-1])"
+Write-Output "After clearing, the array size is: $($languages.Length)"
+```
 
 输出 3.2 展示了结果。
 
 输出 3.2
 
-![](img/image00468.jpeg)
+```text
+The wave of the future, COBOL, is at index 2.
+First Element Last Element
+C# TypeScript
+TypeScript C#
+After clearing, the array size is: 6
+```
 
 这些方法通过 System.Array 类提供。大多数都一目了然，但注意以下两点：
 
@@ -482,13 +622,19 @@ Visual Basic 提供 Redim 语句来更改数组元素数量。虽然没有等价
 
 代码清单 3.29　获取特定维的大小
 
-![](img/image00469.jpeg)
+```powershell
+$cells = New-Object 'bool[,,]' 2, 3, 3
+Write-Output $cells.GetLength(0)
+Write-Output $cells.Rank
+```
 
 结果如输出 3.3 所示。
 
 输出 3.3
 
-![](img/image00470.jpeg)
+```text
+2
+```
 
 输出 2，这是第一维的元素个数。
 
@@ -502,25 +648,49 @@ Visual Basic 提供 Redim 语句来更改数组元素数量。虽然没有等价
 
 代码清单 3.30　查找命令行选项
 
-![](img/image00471.jpeg)
+```powershell
+param([string[]]$args)
+if ($args[0][0] -eq '-') {
+    # This parameter is an option
+}
+```
 
 上述代码使用了要在第四章讲述的 if 语句。注意，第一个数组访问符\[\]获取字符串数组 args 的第一个元素，第二个数组访问符则获取该字符串的第一个字符。上述代码等价于代码清单 3.31。
 
 代码清单 3.31　查找命令行选项（简化版）
 
-![](img/image00472.jpeg)
+```powershell
+param([string[]]$args)
+$arg = $args[0]
+if ($arg[0] -eq '-') {
+    # This parameter is an option
+}
+```
 
 不仅可用数组访问符单独访问字符串中的字符，还可使用字符串的 ToCharArray()方法将整个字符串作为字符数组返回，再用 System.Array.Reverse()方法反转数组中的元素，如代码清单 3.32 所示，该程序判断字符串是不是回文。
 
 代码清单 3.32　反转字符串
 
-![](img/image00473.jpeg)![](img/image00474.jpeg)
+```powershell
+$palindrome = Read-Host 'Enter a palindrome'
+$reverse = $palindrome.Replace(' ', '').ToLowerInvariant()
+$temp = $reverse.ToCharArray()
+[Array]::Reverse($temp)
+if ($reverse -eq (-join $temp)) {
+    Write-Output "`"$palindrome`" is a palindrome."
+} else {
+    Write-Output "`"$palindrome`" is NOT a palindrome."
+}
+```
 
 输出 3.4 展示了结果。
 
 输出 3.4
 
-![](img/image00475.jpeg)
+```text
+Enter a palindrome: NeverOddOrEven
+"NeverOddOrEven" is a palindrome.
+```
 
 这个例子使用 new 关键字根据反转好的字符数组创建新字符串。
 
