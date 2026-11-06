@@ -40,6 +40,8 @@ C#查询表达式的顺序其实更接近各个操作在逻辑上的顺序。对
 
 查询表达式的结果是 IEnumerable<T>或 IQueryable<T>类型的集合^( [\[1\]](part0143.xhtml#ch1_back) ) 。T 的实际类型从 select 或 group by 子句推断。例如在代码清单 16.1 中，编译器知道 keywords 是 string\[\]类型，能转换成 IEnumerable<string>，所以推断 word 是 string 类型。查询以 select word 结尾，意味着查询表达式的结果肯定是字符串集合，所以查询表达式的类型是 IEnumerable<string>。
 
+注：PowerShell 管道输出的是对象流（可枚举序列），与 C# 中 IEnumerable<T> 的角色相当，但 PowerShell 没有编译期的类型推断过程；集合元素的类型由管道中实际对象的类型决定。
+
 在本例中，查询的“输入”和“输出”都是字符串集合。但“输出”类型可以有别于“输入”类型，select 子句中的表达式可以是完全不同的类型。代码清单 16.2 和输出 16.2 展示了一个例子。
 
 代码清单 16.2　使用查询表达式来投射
@@ -74,6 +76,8 @@ Get-ChildItem -Path $rootDirectory -Filter $searchPattern -File |
 
 第十五章已讲过“推迟执行”的主题，同样的道理也适用于查询表达式。来考虑代码清单 16.1 中对 selection 的赋值。创建查询和向变量赋值不会执行查询；相反，只是生成代表查询的对象。换言之，查询对象创建时不会调用 word.Contains("\*")方法。查询表达式只是存储了一个选择条件（查询标准）。以后在遍历由 selection 变量所标识的集合时会用到这个条件。
 
+注：在 PowerShell 中，`$keywords | Where-Object …` 这样的管道在赋值时会立即执行，并不具备 C# 查询表达式的推迟执行语义。要想推迟执行，只能把管道包在脚本块（scriptblock）里，如代码清单 16.4 所示，再在需要时用调用操作符 `&` 执行。
+
 为了体验这具体是如何发生的，来看看代码清单 16.4 和输出 16.3。
 
 代码清单 16.4　推迟执行和查询表达式（例 1）
@@ -104,6 +108,8 @@ Write-Host 'Query created.'
 
 ```powershell
 $delegateInvocations = 0
+# 注：PowerShell 管道在赋值时立即执行。因此下面赋值后 $delegateInvocations
+# 已经非零，C# 版的“赋值后保持为零”在 PowerShell 中不成立（见正文说明）。
 $selection = $keywords | Where-Object { $_ -match '\*' } |
     ForEach-Object { $delegateInvocations++; $_ }
 Write-Host "1. delegateInvocations=$delegateInvocations"
@@ -131,15 +137,21 @@ Write-Host "delegateInvocations: $delegateInvocations"
 
 输出中有两个地方值得注意。第一个要注意的地方是，在 selection 被赋值之后，delegate-Invocations 保持为零。在对 selection 进行赋值时，还没有发生对 Keywords 的遍历。如果 Keywords 是属性，那么属性调用会发生。换言之，from 子句会在赋值时执行。但除非代码开始遍历 selection 中的值，否则无论投射、筛选，还是 from 子句之后的一切都不会执行。与其说对 selection 进行赋值，不如说只是用它定义了一个查询。
 
+注：以上描述的是 C# 查询表达式的推迟执行行为。PowerShell 的管道在赋值时就完成了遍历（见代码清单 16.5 中的注），因此这里“赋值后 delegateInvocations 保持为零”的情况在 PowerShell 中不会出现。若要在 PowerShell 中获得推迟执行的效果，需将管道包进脚本块。
+
 但一旦调用 ToList()，selection 或者 Items 等暗示容器或集合的名称就显得恰当了，因为我们要开始对集合中的项进行计数。换言之，变量 selection 扮演着双重角色，第一是保存查询，第二是作为可从中获取数据的容器。
 
 第二个要注意的地方是，每次为 selection 调用 Count()，都会对每个被选择的项执行 func。由于 selection 兼具查询和集合两个角色，所以请求计数要求再次执行查询，遍历 selection 引用的 IEnumerable<string>集合并统计数据项个数。C#编译器不知道是否有人修改了数组中的字符串而造成计数发生变化，所以每次都要重新计数，保证答案总是正确和最新的。类似地，对 selection 执行 foreach 循环，也会针对 selection 中的每一项调用 func。调用 System.Linq.Enumerable 提供的其他所有扩展方法时，这个道理都是适用的。
+
+注：对 PowerShell 而言，`$selection` 一旦赋值即为普通数组（已缓存结果），后续 `@($selection).Count` 不会再重新执行管道；这与 C#版每次 Count() 都重新查询的行为不同。若需要“每次求值都重新筛选”的语义，应使用脚本块并在循环内通过 `&` 调用。
 
 高级主题：实现推迟执行
 
 推迟执行通过委托和表达式树来实现。委托允许创建和操纵方法引用，方法含有可在以后调用的表达式。类似地，可利用表达式树创建和操纵与表达式有关的信息，这种表达式能在以后检查和处理。
 
 在代码清单 16.5 中，where 子句的谓词表达式和 select 子句的投射表达式由编译器转换成表达式 Lambda，再转换成委托。查询表达式的结果是包含了委托引用的对象。只有在遍历查询结果时，查询对象才实际地执行委托。
+
+注：以上讨论的是 C# 编译器如何为查询表达式生成表达式树/委托。PowerShell 中没有查询表达式语法，负责“推迟执行”的角色由脚本块（scriptblock）承担——脚本块就是可稍后调用的一段代码，见代码清单 16.4。
 
 ### 16.1.2　筛选
 
