@@ -451,9 +451,7 @@ PropertyInfo 类型代表与属性有关的元数据信息(参见第十章“属
 
 EventInfo 类型代表与事件有关的元数据信息(参见第十一章“事件”)。EventInfo 类型提供了只读 EventHandlerType 属性，返回事件的基础委托的 Type。EventInfo 类型还提供了只读 AddMethod 和 RemoveMethod 属性，返回为事件增删委托的方法的 MethodInfo 对象。增删委托可调用这些 MethodInfo 对象，也可调用 EventInfo 类型提供的更好用的 AddEventHandler 和 RemoveEventHandler 方法。
 
-以下示例应用程序演示了用反射来访问类型成员的各种方式。SomeType 类包含多种成员：一个私有字段(m_someField)；一个公共构造器(SomeType)，它获取一个传引用的 Int32 实参；一个公共方法(ToString)；一个公共属性(SomeProp)；以及一个公共事件(SomeEvent)。定义好 SomeType 类型后，我提供了三个不同的方法，它们利用反射来访问 SomeType 的
-
-成员。三个方法用不同的方式做相同的事情。
+以下示例应用程序演示了用反射来访问类型成员的各种方式。SomeType 类包含多种成员：一个私有字段(m_someField)；一个公共构造器(SomeType)，它获取一个传引用的 Int32 实参；一个公共方法(ToString)；一个公共属性(SomeProp)；以及一个公共事件(SomeEvent)。定义好 SomeType 类型后，我提供了三个不同的方法，它们利用反射来访问 SomeType 的成员。三个方法用不同的方式做相同的事情。
 
 - **BindToMemberThenInvokeTheMember** 方法演示了如何绑定到成员并调用它。
 - **BindToMemberCreateDelegateToMemberThenInvokeTheMember** 方法演示了如何绑定到一个对象或成员，然后创建一个委托来引用该对象或成员。通过委托来调用的速度很快。如果需要在相同的对象上多次调用相同的成员，这个技术的性能比上一个好。

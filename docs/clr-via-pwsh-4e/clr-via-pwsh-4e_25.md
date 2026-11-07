@@ -346,16 +346,9 @@ CLR 启动时会选择一个 GC 模式，进程终止前该模式不会改变。
 
 应用程序运行时，可查询 **GCSettings** 类的只读 **Boolean** 属性 **IsServerGC** 来询问 CLR 它是否正在“服务器”GC 模式中运行：
 
-```csharp
-using System;
-using System.Runtime; // 这个命名空间包含了 GCSettings
-
-public static class Program {
-    public static void Main() {
-        Console.WriteLine("Application is running with server GC=" +
-                          GCSettings.IsServerGC);
-    }
-}
+```powershell
+# 等效 PowerShell 写法
+[System.Runtime.GCSettings]::IsServerGC
 ```
 
 除了这两种主要模式，GC 还支持两种子模式：并发（默认）或非并发。在并发方式中，垃圾回收器有一个额外的后台线程，它能在应用程序运行时并发标记对象。一个线程因为分配对象造成第 0 代超出预算时，GC 首先挂起所有线程，再判断要回收哪些代。如果要回收第 0 代或第 1 代，那么一切如常进行。但是，如果要回收第 2 代，就会增大第 0 代的大小（超过其预算），以便在第 0 代中分配新对象。然后，应用程序的线程恢复运行。
@@ -387,19 +380,19 @@ GC 模式是针对进程配置的，进程运行期间不能更改。但是，�
 
 在 **LowLatency** 模式中，应用程序抛出 **OutOfMemoryException** 的机率会大一些。所以，处于该模式的时间应尽量短，避免分配太多对象，避免分配大对象，并用一个约束执行区域(CER)①将模式设回 **Batch** 或 **Interactive**。另外注意，延迟模式是进程级的设置，而可能有多个线程并发运行。在一个线程使用该设置期间，其他线程可能试图更改这个设置。所以，假如有多个线程都要操作这个设置，可考虑更新某种计数器(更新计数器要通过 **Interlocked** 的方法来进行)。以下代码展示了如何正确地使用 **LowLatency** 模式：
 
-```csharp
-private static void LowLatencyDemo() {
-    GCLatencyMode oldMode = GCSettings.LatencyMode;
-    System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions();
-    try {
-        GCSettings.LatencyMode = GCLatencyMode.LowLatency;
-        // 在这里运行你的代码...
-    }
-    finally {
-        GCSettings.LatencyMode = oldMode;
-    }
+```powershell
+# 等效 PowerShell 写法
+$oldMode = [System.Runtime.GCSettings]::LatencyMode
+try {
+    [System.Runtime.GCSettings]::LatencyMode = [System.Runtime.GCLatencyMode]::LowLatency
+    # 在这里运行你的代码...
+}
+finally {
+    [System.Runtime.GCSettings]::LatencyMode = $oldMode
 }
 ```
+
+> 注：原书在 try 之前调用 `RuntimeHelpers.PrepareConstrainedRegions()` 来标示约束执行区域（CER），并靠 `finally` 保证模式被还原。PowerShell 没有对应的 CER 声明语法，这里用 `try/finally` 保留保证还原的语义，但无法获得 CER 在极端情况下的保证。另外，`GCLatencyMode` 是进程级设置，脚本中多个运行空间并发修改时同样需要自行同步。
 
 #### 21.2.4 强制垃圾回收
 
@@ -786,6 +779,8 @@ public static class Program {
 ```
 
 编译并运行上述代码，会得到和下面相似的输出。
+
+> 注：PowerShell 脚本无法为类定义终结器（没有 `~类型名()` 语法），因此不能照搬这个演示。脚本中若需在对象被回收时调用 `GC.RemoveMemoryPressure`，只能用 `Add-Type` 编译一段 C#，或改为显式释放模式。`GC.AddMemoryPressure` / `GC.RemoveMemoryPressure` 本身可在 PowerShell 中直接调用；`HandleCollector` 的 `Add()` / `Remove()` / `Count` 也可直接使用。
 
 ```text
 MemoryPressureDemo, size=0
