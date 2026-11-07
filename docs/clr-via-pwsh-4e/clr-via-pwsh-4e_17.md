@@ -44,48 +44,44 @@
 
 以下代码演示了如何使用这三种技术。
 
-```csharp
-using System;
+```powershell
+# 等效 PowerShell 写法
+$c = $null
+$n = $null
 
-public static class Program {
-  public static void Main() {
-    Char c;
-    Int32 n;
+# 通过 PowerShell 强制类型转换实现数字与字符的相互转换
+$c = [char]65
+Write-Output $c             # 显示"A"
 
-    // 通过 C#转型(强制类型转换)实现数字与字符的相互转换
-    c = (Char) 65;
-    Console.WriteLine(c);             // 显示"A"
+$n = [int]$c
+Write-Output $n             # 显示"65"
 
-    n = (Int32) c;
-    Console.WriteLine(n);             // 显示"65"
+# PowerShell 没有 unchecked，显式做 16 位截断以复现 unchecked 语义
+$c = [char]((65536 + 65) -band 0xFFFF)
+Write-Output $c             # 显示"A"
 
-    c = unchecked((Char) (65536 + 65));
-    Console.WriteLine(c);             // 显示"A"
+# 使用 Convert 实现数字与字符的相互转换
+$c = [System.Convert]::ToChar(65)
+Write-Output $c             # 显示"A"
 
-    // 使用 Convert 实现数字与字符的相互转换
-    c = Convert.ToChar(65);
-    Console.WriteLine(c);             // 显示"A"
+$n = [System.Convert]::ToInt32($c)
+Write-Output $n             # 显示"65"
 
-    n = Convert.ToInt32(c);
-    Console.WriteLine(n);             // 显示"65"
-
-    // 演示 Convert 的范围检查
-    try {
-        c = Convert.ToChar(70000);    // 对 16 位来说过大
-        Console.WriteLine(c);         // 不执行
-    }
-    catch (OverflowException) {
-        Console.WriteLine("Can't convert 70000 to a Char.");
-    }
-
-    // 使用 IConvertible 实现数字与字符的相互转换
-    c = ((IConvertible) 65).ToChar(null);
-    Console.WriteLine(c); // 显示"A"
-
-    n = ((IConvertible) c).ToInt32(null);
-    Console.WriteLine(n); // 显示"65"
-    }
+# 演示 Convert 的范围检查
+try {
+    $c = [System.Convert]::ToChar(70000)  # 对 16 位来说过大
+    Write-Output $c                       # 不执行
 }
+catch [System.OverflowException] {
+    Write-Output "Can't convert 70000 to a Char."
+}
+
+# 使用 IConvertible 实现数字与字符的相互转换
+$c = ([System.IConvertible]65).ToChar($null)
+Write-Output $c             # 显示"A"
+
+$n = ([System.IConvertible]$c).ToInt32($null)
+Write-Output $n             # 显示"65"
 ```
 
 ### 14.2 System.String 类型
@@ -111,23 +107,21 @@ public static class Program {
 }
 ```
 
+> 注：这是 C# 的编译错误示例（`String` 没有接受 `String` 的构造器）。PowerShell 的 `[string]::new('Hi there.')` 并不会报错——方法绑定器会把它匹配到接受 `char[]` 的构造器并隐式转换——因此无法用 PowerShell 复现该编译错误。脚本中给字符串赋值的正确写法见下一段转换。
+
 相反，必须使用以下简化语法：
 
-```csharp
-using System;
-
-public static class Program {
-    public static void Main() {
-        String s = "Hi there.";
-        Console.WriteLine(s);
-    }
-}
+```powershell
+# 等效 PowerShell 写法
+$s = 'Hi there.'
+Write-Output $s
 ```
 
 ① 堆和线程栈的详情请参见 4.4 节“运行时的相互关系”。
 
-```csharp
-String s = "Hi" + " " + "there.";
+```powershell
+# 等效 PowerShell 写法
+$s = 'Hi' + ' ' + 'there.'
 ```
 
 如果将字面值字符串拼接，C#编译器能在编译时连接它们，最终只将一个字符串(即"Hi there.")放到模块的元数据中。对非字面值字符串使用+操作符，连接则在运行时进行。运行时连接不要使用+操作符，因为这样会在堆上创建多个字符串对象，而堆是需要垃圾回收的，对性能有影响。相反，应该使用 **System.Text.StringBuilder** 类型(本章稍后详细解释)。
@@ -136,12 +130,14 @@ String s = "Hi" + " " + "there.";
 
 最后，C#提供了一种特殊的字符串声明方式。采取这种方式，引号之间的所有字符都会被视作字符串的一部分。这种特殊声明称为“逐字字符串”(verbatim string)，通常用于指定文件或目录的路径，或者与正则表达式配合使用。以下代码展示了如何使用和不使用逐字字符串字符(@)来声明同一个字符串：
 
-```csharp
-// 指定应用程序路径
-String file = "C:\\Windows\\System32\\Notepad.exe";
+```powershell
+# 等效 PowerShell 写法
+# 指定应用程序路径
+$file = 'C:\Windows\System32\Notepad.exe'
 
-// 使用逐字字符串指定应用程序路径
-String file = @"C:\Windows\System32\Notepad.exe";
+# 单引号字符串就是 PowerShell 的"逐字字符串"：反斜杠按字面值处理
+# 因此上面一行已等价于 C# 的 @"..."；若要写含单引号的路径再考虑转义
+$file = 'C:\Windows\System32\Notepad.exe'
 ```
 
 两种写法在程序集的元数据中生成完全一样的字符串，但后者可读性更好。在字符串之前添加@符号使编译器知道这是逐字字符串。编译器会将反斜杠字符视为字面值(literal)而非转义符，使文件路径在源代码中更易读。
@@ -154,8 +150,9 @@ String file = @"C:\Windows\System32\Notepad.exe";
 
 **String** 对象最重要的一点就是不可变(immutable)。也就是说，字符串一经创建便不能更改，不能变长、变短或修改其中的任何字符。使字符串不可变有几方面的好处。首先，它允许在一个字符串上执行各种操作，而不实际地更改字符串：
 
-```csharp
-if (s.ToUpperInvariant().Substring(10, 21).EndsWith("EXE")) {
+```powershell
+# 等效 PowerShell 写法
+if ($s.ToUpperInvariant().Substring(10, 21).EndsWith('EXE')) {
     ...
 }
 ```
@@ -215,6 +212,8 @@ public enum StringComparison {
 }
 ```
 
+> 注：枚举是类型声明，保留原样。PowerShell 中直接用类型字面值引用这些枚举值，例如 `[System.StringComparison]::Ordinal`、`[System.Globalization.CompareOptions]::IgnoreKanaType`。
+
 另外，前面有两个方法要求传递一个 **options** 参数，它是 **CompareOptions** 枚举类型定义的值之一：
 
 ```csharp
@@ -231,6 +230,8 @@ public enum CompareOptions {
     StringSort = 0x20000000
 }
 ```
+
+> 注：枚举声明保留原样。PowerShell 中引用这些位标志用 `[System.Globalization.CompareOptions]::IgnoreKanaType`、`[System.Globalization.CompareOptions]::Ordinal` 等；多个标志用 `-bor` 组合，例如 `[System.Globalization.CompareOptions]::IgnoreCase -bor [System.Globalization.CompareOptions]::IgnoreKanaType`。
 
 接受 **CompareOptions** 实参的方法要求显式传递语言文化，传递 **Ordinal** 或 **OrdinalIgnoreCase** 标志，这些 **Compare** 方法会忽略指定的语言文化。
 
@@ -262,31 +263,24 @@ public enum CompareOptions {
 
 **CultureInfo** 对象内部的一个字段引用了一个 **System.Globalization.CompareInfo** 对象，该对象封装了语言文化的字符排序表信息（根据 Unicode 标准的定义）。以下代码演示了序号比较和对语言文化敏感的比较的区别：
 
-```csharp
-using System;
-using System.Globalization;
+```powershell
+# 等效 PowerShell 写法
+$s1 = 'Strasse'
+$s2 = 'Straße'
 
-public static class Program {
-    public static void Main() {
-        String s1 = "Strasse";
-        String s2 = "Straße";
-        Boolean eq;
+# Compare 返回非零值
+$eq = ([string]::Compare($s1, $s2, [System.StringComparison]::Ordinal) -eq 0)
+"Ordinal comparison: '{0}' {2} '{1}'" -f $s1, $s2, $(if ($eq) {'=='} else {'!='})
 
-        // Compare 返回非零值①
-        eq = String.Compare(s1, s2, StringComparison.Ordinal) == 0;
-        Console.WriteLine("Ordinal comparison: '{0}' {2} '{1}'", s1, s2,
-            eq ? "==" : "!=");
+# 面向在德国 (DE) 说德语 (de) 的人群，
+# 正确地比较字符串
+$ci = [System.Globalization.CultureInfo]::new('de-DE')
 
-        // 面向在德国 (DE) 说德语 (de) 的人群，
-        // 正确地比较字符串
-        CultureInfo ci = new CultureInfo("de-DE");
-
-        // Compare 返回零值
-        eq = String.Compare(s1, s2, true, ci) == 0;
-        Console.WriteLine("Cultural comparison: '{0}' {2} '{1}'", s1, s2,
-            eq ? "==" : "!=");
-    }
-}
+# 在 .NET Framework 上 Compare 返回零值
+$eq = ([string]::Compare($s1, $s2, $true, $ci) -eq 0)
+"Cultural comparison: '{0}' {2} '{1}'" -f $s1, $s2, $(if ($eq) {'=='} else {'!='})
+# 注意：PowerShell 7 基于 .NET Core（ICU 排序表），此处的文化比较实际返回 -1，
+# 输出将是 '!='，与 .NET Framework 时代的原文输出不同
 ```
 
 ```text
@@ -310,69 +304,61 @@ Cultural comparison: 'Strasse' == 'Straße'
 
 以下代码演示了语言文化对于字符串排序的重要性，并展示了执行字符串比较的各种方式：
 
-```csharp
-using System;
-using System.Text;
-using System.Windows.Forms;
-using System.Globalization;
-using System.Threading;
+```powershell
+# 等效 PowerShell 写法（消息框依赖 Windows 桌面运行时）
+Add-Type -AssemblyName System.Windows.Forms
 
-public static class Program {
-    public static void Main() {
-        String output = String.Empty;
-        String[] symbol = new String[] { "<", "=", ">" };
-        Int32 x;
-        CultureInfo ci;
+$output = [string]::Empty
+$symbol = [string[]]('<', '=', '>')
 
-        // 以下代码演示了在不同语言文化中，
-        // 字符串的比较方式也有所不同
-        String s1 = "cote";
-        String s2 = "coté";
+# 以下代码演示了在不同语言文化中，
+# 字符串的比较方式也有所不同
+$s1 = 'cote'
+$s2 = 'coté'
 
-        // 为法国语言排序字符串
-        ci = new CultureInfo("fr-FR");
-        x = Math.Sign(ci.CompareInfo.Compare(s1, s2));
-        output += String.Format("{0} Compare: {1} | {3} | {2}",
-            ci.Name, s1, s2, symbol[x + 1]);
-        output += Environment.NewLine;
+# 为法国语言排序字符串
+$ci = [System.Globalization.CultureInfo]::new('fr-FR')
+$x = [Math]::Sign($ci.CompareInfo.Compare($s1, $s2))
+$output += [string]::Format("{0} Compare: {1} | {3} | {2}",
+    $ci.Name, $s1, $s2, $symbol[$x + 1])
+$output += [Environment]::NewLine
 
-        // 为日本日语排序字符串
-        ci = new CultureInfo("ja-JP");
-        x = Math.Sign(ci.CompareInfo.Compare(s1, s2));
-        output += String.Format("{0} Compare: {1} | {3} | {2}",
-            ci.Name, s1, s2, symbol[x + 1]);
-        output += Environment.NewLine;
+# 为日本日语排序字符串
+$ci = [System.Globalization.CultureInfo]::new('ja-JP')
+$x = [Math]::Sign($ci.CompareInfo.Compare($s1, $s2))
+$output += [string]::Format("{0} Compare: {1} | {3} | {2}",
+    $ci.Name, $s1, $s2, $symbol[$x + 1])
+$output += [Environment]::NewLine
 
-        // 为当前线程的当前语言文化排序字符串
-        ci = Thread.CurrentThread.CurrentCulture;
-        x = Math.Sign(ci.CompareInfo.Compare(s1, s2));
-        output += String.Format("{0} Compare: {1} | {3} | {2}",
-            ci.Name, s1, s2, symbol[x + 1]);
-        output += Environment.NewLine + Environment.NewLine;
+# 为当前线程的当前语言文化排序字符串
+$ci = [System.Threading.Thread]::CurrentThread.CurrentCulture
+$x = [Math]::Sign($ci.CompareInfo.Compare($s1, $s2))
+$output += [string]::Format("{0} Compare: {1} | {3} | {2}",
+    $ci.Name, $s1, $s2, $symbol[$x + 1])
+$output += [Environment]::NewLine + [Environment]::NewLine
 
-        // 以下代码演示了如何将 CompareInfo.Compare 的
-        // 高级选项应用于两个日语字符串。
-        // 一个字符串代表采用平假名写成的单词“shinkansen”（新干线）；
-        // 另一个字符串代表用片假名写成的同一个单词
-        s1 = "しんかんせん";  // ("\\u3057\\u3093\\u304b\\u3093\\u305b\\u3093")
-        s2 = "シンカセン";   // ("\\u30b7\\u30f3\\u30ab\\u30f3\\u30bb\\u30f3")
+# 以下代码演示了如何将 CompareInfo.Compare 的
+# 高级选项应用于两个日语字符串。
+# 一个字符串代表采用平假名写成的单词“shinkansen”（新干线）；
+# 另一个字符串代表用片假名写成的同一个单词
+$s1 = 'しんかんせん'  # ("\\u3057\\u3093\\u304b\\u3093\\u305b\\u3093")
+$s2 = 'シンカセン'   # ("\\u30b7\\u30f3\\u30ab\\u30f3\\u30bb\\u30f3")
 
-        // 以下是默认比较结果
-        ci = new CultureInfo("ja-JP");
-        x = Math.Sign(String.Compare(s1, s2, true, ci));
-        output += String.Format("Simple {0} Compare: {1} {3} {2}",
-            ci.Name, s1, s2, symbol[x + 1]);
-        output += Environment.NewLine;
+# 以下是默认比较结果
+$ci = [System.Globalization.CultureInfo]::new('ja-JP')
+$x = [Math]::Sign([string]::Compare($s1, $s2, $true, $ci))
+$output += [string]::Format("Simple {0} Compare: {1} {3} {2}",
+    $ci.Name, $s1, $s2, $symbol[$x + 1])
+$output += [Environment]::NewLine
 
-        // 以下是忽略日语假名的比较结果
-        CompareInfo compareInfo = CompareInfo.GetCompareInfo("ja-JP");
-        x = Math.Sign(compareInfo.Compare(s1, s2, CompareOptions.IgnoreKanaType));
-        output += String.Format("Advanced {0} Compare: {1} {3} {2}",
-            ci.Name, s1, s2, symbol[x + 1]);
+# 以下是忽略日语假名的比较结果
+$compareInfo = [System.Globalization.CompareInfo]::GetCompareInfo('ja-JP')
+$x = [Math]::Sign($compareInfo.Compare($s1, $s2,
+    [System.Globalization.CompareOptions]::IgnoreKanaType))
+$output += [string]::Format("Advanced {0} Compare: {1} {3} {2}",
+    $ci.Name, $s1, $s2, $symbol[$x + 1])
 
-        MessageBox.Show(output, "Comparing Strings For Sorting");
-    }
-}
+[System.Windows.Forms.MessageBox]::Show($output, 'Comparing Strings For Sorting')
 ```
 
 生成并运行以上代码得到如图 14-1 所示的结果。
@@ -422,14 +408,16 @@ Console.WriteLine(Object.ReferenceEquals(s1, s2)); // 显示'True'
 
 现在通过一个例子理解如何利用字符串留用来提升性能并减少内存耗用。以下 **NumTimesWordAppearsEquals** 方法获取两个参数：一个单词和一个字符串数组。每个数组元素都引用了一个单词。方法统计指定单词在单词列表中出现了多少次并返回计数：
 
-```csharp
-private static Int32 NumTimesWordAppearsEquals(String word, String[] wordlist) {
-    Int32 count = 0;
-    for (Int32 wordnum = 0; wordnum < wordlist.Length; wordnum++) {
-        if (word.Equals(wordlist[wordnum], StringComparison.Ordinal))
-            count++;
+```powershell
+# 等效 PowerShell 写法
+function NumTimesWordAppearsEquals([string]$word, [string[]]$wordlist) {
+    $count = 0
+    for ($wordnum = 0; $wordnum -lt $wordlist.Length; $wordnum++) {
+        if ($word.Equals($wordlist[$wordnum], [System.StringComparison]::Ordinal)) {
+            $count++
+        }
     }
-    return count;
+    return $count
 }
 ```
 
@@ -437,16 +425,18 @@ private static Int32 NumTimesWordAppearsEquals(String word, String[] wordlist) {
 
 现在看一下这个方法的另一个版本。新版本利用了字符串留用：
 
-```csharp
-private static Int32 NumTimesWordAppearsIntern(String word, String[] wordlist) {
-    // 这个方法假定 wordlist 中的所有数组元素都引用已留用的字符串
-    word = String.Intern(word);
-    Int32 count = 0;
-    for (Int32 wordnum = 0; wordnum < wordlist.Length; wordnum++) {
-        if (Object.ReferenceEquals(word, wordlist[wordnum]))
-            count++;
+```powershell
+# 等效 PowerShell 写法
+function NumTimesWordAppearsIntern([string]$word, [string[]]$wordlist) {
+    # 这个方法假定 wordlist 中的所有数组元素都引用已留用的字符串
+    $word = [string]::Intern($word)
+    $count = 0
+    for ($wordnum = 0; $wordnum -lt $wordlist.Length; $wordnum++) {
+        if ([object]::ReferenceEquals($word, $wordlist[$wordnum])) {
+            $count++
+        }
     }
-    return count;
+    return $count
 }
 ```
 
@@ -480,60 +470,54 @@ private static Int32 NumTimesWordAppearsIntern(String word, String[] wordlist) {
 
 以下代码演示了使用 StringInfo 类来处理字符串中的文本元素的各种方式：
 
-```csharp
-using System;
-using System.Text;
-using System.Globalization;
-using System.Windows.Forms;
+```powershell
+# 等效 PowerShell 写法（消息框依赖 Windows 桌面运行时）
+Add-Type -AssemblyName System.Windows.Forms
 
-public sealed class Program {
-    public static void Main() {
-        // 以下字符串包含组合字符
-        String s = "a\u0304\u0308bc\u0327";
-        SubstringByTextElements(s);
-        EnumTextElements(s);
-        EnumTextElementIndexes(s);
+# 以下字符串包含组合字符；PowerShell 用 `u{XXXX} 表示 Unicode 转义
+$s = "a`u{0304}`u{0308}bc`u{0327}"
+
+function SubstringByTextElements([string]$s) {
+    $output = [string]::Empty
+
+    $si = [System.Globalization.StringInfo]::new($s)
+    for ($element = 0; $element -lt $si.LengthInTextElements; $element++) {
+        $output += [string]::Format(
+            "Text element {0} is '{1}{2}'",
+            $element, $si.SubstringByTextElements($element, 1),
+            [Environment]::NewLine)
     }
-
-    private static void SubstringByTextElements(String s) {
-        String output = String.Empty;
-
-        StringInfo si = new StringInfo(s);
-        for (Int32 element = 0; element < si.LengthInTextElements; element++) {
-            output += String.Format(
-                "Text element {0} is '{1}{2}'",
-                element, si.SubstringByTextElements(element, 1),
-                Environment.NewLine);
-        }
-        MessageBox.Show(output, "Result of SubstringByTextElements");
-    }
-
-    private static void EnumTextElements(String s) {
-        String output = String.Empty;
-
-        TextElementEnumerator charEnum =
-            StringInfo.GetTextElementEnumerator(s);
-        while (charEnum.MoveNext()) {
-            output += String.Format(
-                "Character at index {0} is '{1}{2}'",
-                charEnum.ElementIndex, charEnum.GetTextElement(),
-                Environment.NewLine);
-        }
-        MessageBox.Show(output, "Result of GetTextElementEnumerator");
-    }
-
-    private static void EnumTextElementIndexes(String s) {
-        String output = String.Empty;
-
-        Int32[] textElemIndex = StringInfo.ParseCombiningCharacters(s);
-        for (Int32 i = 0; i < textElemIndex.Length; i++) {
-            output += String.Format(
-                "Character {0} starts at index {1}{2}",
-                i, textElemIndex[i], Environment.NewLine);
-        }
-        MessageBox.Show(output, "Result of ParseCombiningCharacters");
-    }
+    [System.Windows.Forms.MessageBox]::Show($output, 'Result of SubstringByTextElements')
 }
+
+function EnumTextElements([string]$s) {
+    $output = [string]::Empty
+
+    $charEnum = [System.Globalization.StringInfo]::GetTextElementEnumerator($s)
+    while ($charEnum.MoveNext()) {
+        $output += [string]::Format(
+            "Character at index {0} is '{1}{2}'",
+            $charEnum.ElementIndex, $charEnum.GetTextElement(),
+            [Environment]::NewLine)
+    }
+    [System.Windows.Forms.MessageBox]::Show($output, 'Result of GetTextElementEnumerator')
+}
+
+function EnumTextElementIndexes([string]$s) {
+    $output = [string]::Empty
+
+    $textElemIndex = [System.Globalization.StringInfo]::ParseCombiningCharacters($s)
+    for ($i = 0; $i -lt $textElemIndex.Length; $i++) {
+        $output += [string]::Format(
+            "Character {0} starts at index {1}{2}",
+            $i, $textElemIndex[$i], [Environment]::NewLine)
+    }
+    [System.Windows.Forms.MessageBox]::Show($output, 'Result of ParseCombiningCharacters')
+}
+
+SubstringByTextElements $s
+EnumTextElements $s
+EnumTextElementIndexes $s
 ```
 
 编译并运行上述代码，会显示如图 14-2、图 14-3 和图 14-4 所示的对话框。
@@ -580,8 +564,9 @@ public sealed class Program {
 
 和 String 不同，CLR 不觉得 StringBuilder 类有什么特别。此外，大多数语言（包括 C#）都不将 StringBuilder 类视为基元类型。要像构造其他任何非基元类型那样构造 StringBuilder 对象：
 
-```csharp
-StringBuilder sb = new StringBuilder();
+```powershell
+# 等效 PowerShell 写法
+$sb = [System.Text.StringBuilder]::new()
 ```
 
 > 注：PowerShell 的对应写法是 `$sb = [System.Text.StringBuilder]::new()`，也可用 `$sb = New-Object System.Text.StringBuilder`。注意与字符串字面值不同，StringBuilder 必须显式创建。
@@ -625,39 +610,39 @@ StringBuilder 类型提供了许多构造器。每个构造器的职责是分配
 
 使用 **StringBuilder** 的方法要注意，大多数方法返回的都是对同一个 **StringBuilder** 对象的引用，所以几个操作能连接到一起完成：
 
-```csharp
-StringBuilder sb = new StringBuilder();
-String s = sb.AppendFormat("{0} {1}", "Jeffrey", "Richter").
-    Replace(' ', '-').
-    Remove(4, 3).ToString();
-Console.WriteLine(s);    // 显示"Jeff-Richter"
+```powershell
+# 等效 PowerShell 写法
+$sb = [System.Text.StringBuilder]::new()
+$s = $sb.AppendFormat('{0} {1}', 'Jeffrey', 'Richter').Replace(' ', '-').Remove(4, 3).ToString()
+Write-Output $s    # 显示 "Jeff-Richter"
 ```
 
 > 注：PowerShell 的 `:` 之后不能直接续行，链式调用有两种写法：用反引号 ` 续行，或把方法调用分行写在括号内。此外 `AppendFormat()` 的返回值会进入管线，需要 `[void]` 抑制：`[void]$sb.AppendFormat('{0} {1}', 'Jeffrey', 'Richter')`。也可以写成 `$s = $sb.AppendFormat(...).Replace(...).Remove(...).ToString()` 一行加反引号续行。
 
 **String** 和 **StringBuilder** 类提供的方法并不完全对应。例如，**String** 提供了 **ToLower**、**ToUpper**、**EndsWith**、**PadLeft**、**PadRight**、**Trim** 等方法；但 **StringBuilder** 类没有提供任何与之对应的方法。另一方面，**StringBuilder** 类提供了功能更全面的 **Replace** 方法，允许替换作为字符串一部分的字符或者子字符串（而不是一定要替换整个字符串）。由于两个类不完全对应，所以有时需要在 **String** 和 **StringBuilder** 之间转换以完成特定任务。例如，要构造字符串将所有字符转换成大写，再在其中插入一个子字符串，需要写下面这样的代码：
 
-```csharp
-// 构造一个 StringBuilder 来执行字符串操作
-StringBuilder sb = new StringBuilder();
+```powershell
+# 等效 PowerShell 写法
+# 构造一个 StringBuilder 来执行字符串操作
+$sb = [System.Text.StringBuilder]::new()
 
-// 使用 StringBuilder 来执行一些字符串操作
-sb.AppendFormat("{0} {1}", "Jeffrey", "Richter").Replace(" ", "-");
+# 使用 StringBuilder 来执行一些字符串操作
+[void]$sb.AppendFormat('{0} {1}', 'Jeffrey', 'Richter').Replace(' ', '-')
 
-// 将 StringBuilder 转换成 String，以便将所有字符转换成大写
-String s = sb.ToString().ToUpper();
+# 将 StringBuilder 转换成 String，以便将所有字符转换成大写
+$s = $sb.ToString().ToUpper()
 
-// 清除 StringBuilder(分配新的 Char 数组)
-sb.Length = 0;
+# 清除 StringBuilder(分配新的 Char 数组)
+$sb.Length = 0
 
-// 将全部字符大写的 String 加载到 StringBuilder 中，执行其他操作
-sb.Append(s).Insert(8, "Marc-");
+# 将全部字符大写的 String 加载到 StringBuilder 中，执行其他操作
+[void]$sb.Append($s).Insert(8, 'Marc-')
 
-// 将 StringBuilder 转换回 String
-s = sb.ToString();
+# 将 StringBuilder 转换回 String
+$s = $sb.ToString()
 
-// 向用户显示 String
-Console.WriteLine(s);    // "JEFFREY-Marc-RICHTER"
+# 向用户显示 String
+Write-Output $s    # "JEFFREY-Marc-RICHTER"
 ```
 
 仅仅因为 **StringBuilder** 没有提供 **String** 提供的所有操作就要像这样写代码，显然是不方便的，效率也很低。希望 **Microsoft** 将来能为 **StringBuilder** 添加更多的字符串操作，进一步完善这个类。
@@ -710,9 +695,10 @@ Microsoft 在 FCL 中定义的许多类型都能同时识别几种格式。例�
 
 **Decimal** 类型只请求数字格式信息。但其他类型（如 **DateTime**）可能像下面这样调用 **GetFormat**：
 
-```csharp
-DateTimeFormatInfo dtfi = (DateTimeFormatInfo)
-    formatProvider.GetFormat(typeof(DateTimeFormatInfo));
+```powershell
+# 等效 PowerShell 写法
+$dtfi = [System.Globalization.DateTimeFormatInfo]$formatProvider.GetFormat(
+    [System.Globalization.DateTimeFormatInfo])
 ```
 
 > 注：PowerShell 没有 `typeof()` 运算符，直接用类型字面值代替：`$formatProvider.GetFormat([System.Globalization.DateTimeFormatInfo])`。类型字面值本身就是运行时的 `System.Type` 对象。
@@ -721,10 +707,12 @@ DateTimeFormatInfo dtfi = (DateTimeFormatInfo)
 
 顺便说一句，如果对象不针对任何具体的语言文化而格式化，那么为了获取它的字符串表示，应调用 **System.Globalization.CultureInfo** 的静态 **InvariantCulture** 属性，并将返回的对象作为 **ToString** 的 **formatProvider** 参数来传递：
 
-```csharp
-Decimal price = 123.54M;
-String s = price.ToString("C", CultureInfo.InvariantCulture);
-MessageBox.Show(s);
+```powershell
+# 等效 PowerShell 写法
+$price = 123.54m
+$s = $price.ToString('C', [System.Globalization.CultureInfo]::InvariantCulture)
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.MessageBox]::Show($s)
 ```
 
 > 注：PowerShell 里写成 `$price = 123.54m; $s = $price.ToString('C', [System.Globalization.CultureInfo]::InvariantCulture)`。`-f` 运算符的 `{0:C}` 格式由当前文化决定，若要固定文化，可用文化对象的 `GetFormat()` 直接参与，或先切换 `[System.Threading.Thread]::CurrentThread.CurrentCulture`。
@@ -759,14 +747,17 @@ public String ToString(String format);
 public String ToString(IFormatProvider formatProvider);
 ```
 
+> 注：这是 C# 的方法重载声明，必须保留原样。PowerShell 不需要声明重载，`.NET` 的 4 个 `Decimal.ToString` 重载都能按实参个数直接调用，例如 `$d.ToString()`、`$d.ToString('C')`、`$d.ToString([System.Globalization.CultureInfo]::InvariantCulture)`、`$d.ToString('C', [System.Globalization.CultureInfo]::InvariantCulture)`。
+
 ### 14.4.2 将多个对象格式化成一个字符串
 
 到目前为止讲的都是一个单独的类型如何格式化它自己的对象。但有时需要构造由多个已格式化对象构成的字符串。例如，以下字符串由一个日期、一个人名和一个年龄构成：
 
-```csharp
-String s = String.Format("On {0}, {1} is {2} years old.",
-    new DateTime(2012, 4, 22, 14, 35, 5), "Aidan", 9);
-Console.WriteLine(s);
+```powershell
+# 等效 PowerShell 写法（输出取决于当前线程的语言文化，下文按 en-US 展示）
+$s = [string]::Format('On {0}, {1} is {2} years old.',
+    [datetime]::new(2012, 4, 22, 14, 35, 5), 'Aidan', 9)
+Write-Output $s
 ```
 
 生成并运行上述代码，而且“en-US”是线程当前的语言文化，就会看到以下输出：
@@ -781,10 +772,11 @@ On 4/22/2012 2:35:05 PM, Aidan is 9 years old.
 
 在大括号内指定格式信息，可以更全面地控制对对象格式化。例如，以下代码和上例几乎完全一致，只是为可替换参数 0 和 2 添加了格式化信息：
 
-```csharp
-String s = String.Format("On {0:D}, {1} is {2:E} years old.",
-    new DateTime(2012, 4, 22, 14, 35, 5), "Aidan", 9);
-Console.WriteLine(s);
+```powershell
+# 等效 PowerShell 写法（输出取决于当前线程的语言文化，下文按 en-US 展示）
+$s = [string]::Format('On {0:D}, {1} is {2:E} years old.',
+    [datetime]::new(2012, 4, 22, 14, 35, 5), 'Aidan', 9)
+Write-Output $s
 ```
 
 生成并运行上述代码，同时“en-US”是线程当前的语言文化，会看到以下输出：
@@ -807,38 +799,32 @@ On Sunday, April 22, 2012, Aidan is 9.000000E+000 years old.
 
 下面通过一个例子来解释这个机制。假定需要格式化用户在 Internet 浏览器中查看的 HTML 文本，希望所有 **Int32** 值都加粗显示。所以，每次将 **Int32** 值格式化成 **String** 时，都要用 **<B>** 和 **</B>** 标记将字符串包围起来。以下代码演示了要做到这一点是多么容易：
 
-```csharp
-using System;
-using System.Text;
-using System.Threading;
+```powershell
+# 等效 PowerShell 写法
+class BoldInt32s : System.IFormatProvider, System.ICustomFormatter {
+    [object] GetFormat([System.Type]$formatType) {
+        if ($formatType -eq [System.ICustomFormatter]) { return $this }
+        return [System.Threading.Thread]::CurrentThread.CurrentCulture.GetFormat($formatType)
+    }
 
-public static class Program {
-    public static void Main() {
-        StringBuilder sb = new StringBuilder();
-        sb.AppendFormat(new BoldInt32s(), "{0} {1} {2:M}", "Jeff", 123, DateTime.Now);
-        Console.WriteLine(sb);
+    [string] Format([string]$format, [object]$arg, [System.IFormatProvider]$formatProvider) {
+        $s = $null
+
+        $formattable = $arg -as [System.IFormattable]
+
+        if ($null -eq $formattable) { $s = $arg.ToString() }
+        else { $s = $formattable.ToString($format, $formatProvider) }
+
+        if ($arg.GetType() -eq [int]) {
+            return '<B>' + $s + '</B>'
+        }
+        return $s
     }
 }
 
-internal sealed class BoldInt32s : IFormatProvider, ICustomFormatter {
-    public Object GetFormat(Type formatType) {
-        if (formatType == typeof(ICustomFormatter)) return this;
-        return Thread.CurrentThread.CurrentCulture.GetFormat(formatType);
-    }
-
-    public String Format(String format, Object arg, IFormatProvider formatProvider) {
-        String s;
-
-        IFormattable formattable = arg as IFormattable;
-
-        if (formattable == null) s = arg.ToString();
-        else s = formattable.ToString(format, formatProvider);
-
-        if (arg.GetType() == typeof(Int32))
-            return "<B>" + s + "</B>";
-        return s;
-    }
-}
+$sb = [System.Text.StringBuilder]::new()
+[void]$sb.AppendFormat([BoldInt32s]::new(), '{0} {1} {2:M}', 'Jeff', 123, [datetime]::Now)
+Write-Output $sb.ToString()
 ```
 
 ① 文档中的“标准数字格式字符串”一节对 R 符号(文档中称为说明符)的解释是：往返行程说明符保证转换为字符串的数值再次被分析为相同的数值。使用此说明符格式化数值时，首先使用常规格式对其进行测试：**Double** 使用 15 位精度，**Single** 使用 7 位精度。如果此值被成功地分析回相同的数值，则使用常规格式说明符对其进行格式化。但是，如果此值未被成功地分析为相同数值，则它这样格式化：**Double** 使用 17 位精度，**Single** 使用 9 位精度。虽然精度说明符可以附加到往返行程格式说明符，但它将被忽略。使用此说明符时，往返行程优先于精度。此格式仅有浮点型(**Single** 和 **Double**)支持。——译注
@@ -868,27 +854,32 @@ public static Int32 Parse(String s, NumberStyles style,
     IFormatProvider provider);
 ```
 
+> 注：这是 C# 的方法签名，必须保留原样。PowerShell 中直接调用 `[int]::Parse(...)`，重载按实参个数自动选择，不需要声明签名。
+
 从原型就能猜出方法具体如何工作。**String** 参数 `s` 是希望解析成 **Int32** 对象的一个数字的字符串表示。**System.Globalization.NumberStyles** 参数 `style` 是位标志(bit flag)集合，标识了 **Parse** 应在字符串查找的字符(也就是字符串 `s` 中允许的样式，有不允许的样式会抛出异常)。如本章前面所述，**IFormatProvider** 参数 `provider` 标识了一个对象，**Parse** 方法通过该对象获取语言文化特有的信息。
 
 例如，以下代码造成 **Parse** 抛出 **System.FormatException** 异常，因为要解析的字符串包含前导空白字符：
 
-```csharp
-Int32 x = Int32.Parse(" 123", NumberStyles.None, null);
+```powershell
+# 等效 PowerShell 写法（抛出 FormatException）
+$x = [int]::Parse(' 123', [System.Globalization.NumberStyles]::None, $null)
 ```
 
 要允许 **Parse** 跳过前导的空白字符，要像下面这样修改 `style` 参数：
 
-```csharp
-Int32 x = Int32.Parse(" 123", NumberStyles.AllowLeadingWhite, null);
+```powershell
+# 等效 PowerShell 写法
+$x = [int]::Parse(' 123', [System.Globalization.NumberStyles]::AllowLeadingWhite, $null)
 ```
 
 请参考文档来完整地了解 **NumberStyles** 枚举类型定义的位符号和常见组合。
 
 以下代码段展示了如何解析十六进制数：
 
-```csharp
-Int32 x = Int32.Parse("1A", NumberStyles.HexNumber, null);
-Console.WriteLine(x); // 显示: "26"
+```powershell
+# 等效 PowerShell 写法
+$x = [int]::Parse('1A', [System.Globalization.NumberStyles]::HexNumber, $null)
+Write-Output $x # 显示: "26"
 ```
 
 这个 **Parse** 方法接受 3 个参数。为简化编程，许多类型都提供了额外的 **Parse** 重载版本，所以不需要传递如此多的实参。例如，**Int32** 提供了 **Parse** 方法的 4 个重载版本：
@@ -908,6 +899,8 @@ public static Int32 Parse(String s, IFormatProvider provider);
 public static Int32 Parse(String s, NumberStyles style,
     IFormatProvider provider);
 ```
+
+> 注：这是 C# 的重载声明，必须保留原样。PowerShell 不需要这些包装方法，直接按实参个数调用 `[int]::Parse($s)`、`[int]::Parse($s, $style)`、`[int]::Parse($s, $provider)` 或 `[int]::Parse($s, $style, $provider)` 即可。
 
 **DateTime** 类型也提供了一个 **Parse** 方法：
 
@@ -934,6 +927,8 @@ public static DateTime Parse(String s, IFormatProvider provider);
 public static DateTime Parse(String s,
     IFormatProvider provider, DateTimeStyles styles);
 ```
+
+> 注：这是 C# 的重载声明，必须保留原样。PowerShell 中同样按实参个数调用 `[datetime]::Parse($s)`、`[datetime]::Parse($s, $provider)`、`[datetime]::Parse($s, $provider, $styles)`。
 
 对日期和时间的解析比较复杂。许多开发人员都感觉 `DateTime` 类型的 `Parse` 方法过于宽松，有时会解析不含日期或时间的字符串。有鉴于此，`DateTime` 类型还提供了 `ParseExact` 方法，它接受一个 `picture` 格式字符串，能准确描述应该如何格式化日期/时间字符串，以及如何对它进行解析。欲知详情，请在文档中查阅 `DateTimeFormatInfo` 类。
 
@@ -977,33 +972,26 @@ UTF-16 和 UTF-8 编码是目前最常用的编码方案。FCL 还支持下面�
 
 下列代码使用 UTF-8 进行字符串编码/解码。
 
-```csharp
-using System;
-using System.Text;
+```powershell
+# 等效 PowerShell 写法
+# 准备编码的字符串
+$s = 'Hi there.'
 
-public static class Program {
-    public static void Main() {
-        // 准备编码的字符串
-        String s = "Hi there.";
+# 获取从 Encoding 派生的一个对象，
+# 它知道怎样使用 UTF8 来进行编码/解码
+$encodingUTF8 = [System.Text.Encoding]::UTF8
 
-        // 获取从 Encoding 派生的一个对象，
-        // 它知道怎样使用 UTF8 来进行编码/解码
-        Encoding encodingUTF8 = Encoding.UTF8;
+# 将字符串编码成字节数组
+$encodedBytes = $encodingUTF8.GetBytes($s)
 
-        // 将字符串编码成字节数组
-        Byte[] encodedBytes = encodingUTF8.GetBytes(s);
+# 显示编码好的字节值
+Write-Output ('Encoded bytes: ' + [System.BitConverter]::ToString($encodedBytes))
 
-        // 显示编码好的字节值
-        Console.WriteLine("Encoded bytes: " +
-            BitConverter.ToString(encodedBytes));
+# 将字节数组解码回字符串
+$decodedString = $encodingUTF8.GetString($encodedBytes)
 
-        // 将字节数组解码回字符串
-        String decodedString = encodingUTF8.GetString(encodedBytes);
-
-        // 显示解码的字符串
-        Console.WriteLine("Decoded string: " + decodedString);
-    }
-}
+# 显示解码的字符串
+Write-Output ('Decoded string: ' + $decodedString)
 ```
 
 上述代码的输出如下：
@@ -1045,26 +1033,20 @@ Decoded string: Hi there.
 >
 > ② 如果对指定数量的字符/字节进行编码/解码，那么所产生的最大字节数/字符数。——译注
 
-```csharp
-using System;
-using System.Text;
-
-public static class Program {
-    public static void Main() {
-        foreach (EncodingInfo ei in Encoding.GetEncodings()) {
-            Encoding e = ei.GetEncoding();
-            Console.WriteLine("{1}{0}" +
-                "\tCodePage={2}, WindowsCodePage={3}{0}" +
-                "\tWebName={4}, HeaderName={5}, BodyName={6}{0}" +
-                "\tIsBrowserDisplay={7}, IsBrowserSave={8}{0}" +
-                "\tIsMailNewsDisplay={9}, IsMailNewsSave={10}{0}",
-                Environment.NewLine,
-                e.EncodingName, e.CodePage, e.WindowsCodePage,
-                e.WebName, e.HeaderName, e.BodyName,
-                e.IsBrowserDisplay, e.IsBrowserSave,
-                e.IsMailNewsDisplay, e.IsMailNewsSave);
-        }
-    }
+```powershell
+# 等效 PowerShell 写法（.NET Core/PS7 的内置编码少于 .NET Framework，输出与下文不同）
+foreach ($ei in [System.Text.Encoding]::GetEncodings()) {
+    $e = $ei.GetEncoding()
+    Write-Output ([string]::Format("{1}{0}" +
+        "`tCodePage={2}, WindowsCodePage={3}{0}" +
+        "`tWebName={4}, HeaderName={5}, BodyName={6}{0}" +
+        "`tIsBrowserDisplay={7}, IsBrowserSave={8}{0}" +
+        "`tIsMailNewsDisplay={9}, IsMailNewsSave={10}{0}",
+        [Environment]::NewLine,
+        $e.EncodingName, $e.CodePage, $e.WindowsCodePage,
+        $e.WebName, $e.HeaderName, $e.BodyName,
+        $e.IsBrowserDisplay, $e.IsBrowserSave,
+        $e.IsMailNewsDisplay, $e.IsMailNewsSave))
 }
 ```
 
@@ -1155,27 +1137,22 @@ Decoder 的所有派生类都提供了两个重要的方法：GetChars 和 GetCh
 
 将 Base-64 字符串编码成字节数组需调用 Convert 的静态 FromBase64String 或 FromBase64CharArray 方法。类似地，将字节数组解码成 Base-64 字符串需调用 Convert 的静态 ToBase64String 或者 ToBase64CharArray 方法。以下代码演示了如何使用其中的部分方法：
 
-```csharp
-using System;
+```powershell
+# 等效 PowerShell 写法
+# 获取一组 10 个随机生成的字节
+$bytes = [byte[]]::new(10)
+[System.Random]::new().NextBytes($bytes)
 
-public static class Program {
-    public static void Main() {
-        // 获取一组 10 个随机生成的字节
-        Byte[] bytes = new Byte[10];
-        new Random().NextBytes(bytes);
+# 显示字节
+Write-Output ([System.BitConverter]::ToString($bytes))
 
-        // 显示字节
-        Console.WriteLine(BitConverter.ToString(bytes));
+# 将字节解码成 Base-64 字符串，并显示字符串
+$s = [System.Convert]::ToBase64String($bytes)
+Write-Output $s
 
-        // 将字节解码成 Base-64 字符串，并显示字符串
-        String s = Convert.ToBase64String(bytes);
-        Console.WriteLine(s);
-
-        // 将 Base-64 字符串编码回字节，并显示字节
-        bytes = Convert.FromBase64String(s);
-        Console.WriteLine(BitConverter.ToString(bytes));
-    }
-}
+# 将 Base-64 字符串编码回字节，并显示字节
+$bytes = [System.Convert]::FromBase64String($s)
+Write-Output ([System.BitConverter]::ToString($bytes))
 ```
 
 编译并执行上述代码得到以下输出（因为是随机生成的字节，所以你的输出可能不同）：
@@ -1227,6 +1204,8 @@ private unsafe static void DisplaySecureString(SecureString ss) {
 
 }
 ```
+
+> 注：这段代码使用 `unsafe` 和指针（`Char*`）直接遍历非托管内存，PowerShell 无法声明指针或运行不安全代码，因此必须保留为 C#。在 PowerShell 中只能做安全的等价操作：用 `[System.Runtime.InteropServices.Marshal]::SecureStringToCoTaskMemUnicode($ss)` 取得 `IntPtr`，再用 `PtrToStringUni` 读出字符串，最后务必调用 `ZeroFreeCoTaskMemUnicode` 清零并释放；也可以直接用 `PSCredential` 管理凭据。
 
 System.Runtime.InteropServices.Marshal 类提供了 5 个方法来将一个 SecureString 的字符解密到非托管内存缓冲区。所有方法都是静态方法，所有方法都接受一个 SecureString 参数，而且所有方法都返回一个 IntPtr。每个方法都另有一个配对的方法，必须调用配对方法来清零并释放内部缓冲区。表 14-4 总结了 System.Runtime.InteropServices.Marshal 类提供的将 SecureString 解密到内部缓冲区的方法以及对应的清零和释放缓冲区的方法。
 

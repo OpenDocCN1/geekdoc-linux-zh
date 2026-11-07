@@ -125,6 +125,8 @@ private static void ConversionsAndCasting() {
 }
 ```
 
+> 注：PowerShell 没有 `Int32?`/`Nullable<T>` 的编译期类型提升。脚本里 `[double]$null` 得到 `0` 而不是 `null`，`[Nullable[int]]$null` 直接就是 `$null`，因此无法复现 C# 的“可空转换/转型”语义。要在脚本中表达“可能为空”，直接用 `$null` 和 `$null -ne`/`$null -eq` 判断，并在需要数值时显式给出默认值。
+
 C#还允许向可空实例应用操作符，例如：
 
 ```csharp
@@ -150,6 +152,8 @@ private static void Operators() {
 }
 ```
 
+> 注：PowerShell 没有可空值类型的运算符提升：`-$null` 得到 `0`，`$null + 3` 得到 `3`，与 C# 的“任一操作数为 null 结果就为 null”不同；`&`/`|` 的三值逻辑也不存在。脚本中应先显式用 `$null -ne $x` 判断，再做运算。
+
 下面总结了 C#如何解析操作符。
 
 - 一元操作符(+, ++, -, --, !, ~)：操作数是 null，结果就是 null。
@@ -172,6 +176,8 @@ private static Int32? NullableCodeSize(Int32? a, Int32? b) {
 }
 ```
 
+> 注：PowerShell 没有 `Nullable<T>` 的算术提升，`$null + $b` 会得到 `$b` 而不是 `null`。此方法保留 C# 原样，用于说明可空运算会生成额外代码；脚本中等价逻辑需先判断 `$null` 再相加。
+
 编译这个方法会生成相当多的 IL 代码，而且操作可空类型的速度慢于非可空类型。编译器生成的 IL 代码等价于以下 C#代码：
 
 ```csharp
@@ -187,6 +193,8 @@ private static Nullable<Int32> NullableCodeSize(
         nullable1.GetValueOrDefault() + nullable2.GetValueOrDefault());
 }
 ```
+
+> 注：这是 C# 编译器为可空运算展开的等价代码，依赖 `Nullable<T>` 的 `HasValue`/`GetValueOrDefault` 语义；PowerShell 变量本身可为 `$null`，但没有对应的可空值类型运算，故保留原样。
 
 最后要说明的是，可定义自己的值类型来重载上述各种操作符。8.4 节“操作符重载方法”已对此进行了讨论。使用自己的值类型的可空实例，编译器能正确识别它并调用你重载的操作符(方法)。以下 Point 值类型重载了 `==` 和 `!=` 操作符：
 
@@ -207,6 +215,8 @@ internal struct Point {
 }
 ```
 
+> 注：PowerShell 脚本不能声明 `struct`，也不能重载 `==`/`!=` 运算符；若要保留这些运算符语义，需用 `Add-Type` 编译这段 C# 源码，或改用普通函数比较字段。
+
 然后可以使用 Point 类型的可空实例，编译器能自动调用你重载的操作符(方法)：
 
 ```csharp
@@ -221,6 +231,8 @@ internal static class Program {
 }
 ```
 
+> 注：该示例依赖上一块 `Point` 的自定义运算符重载，PowerShell 无法声明这种类型；可用 `Add-Type` 引入后再通过 `[Point]::new(...)` 调用，脚本自身不能定义 `Point?` 或 `==` 重载。
+
 生成并运行上述代码得到以下输出：
 
 ```text
@@ -232,55 +244,61 @@ Are points not equal? True
 
 C#提供了一个“空接合操作符”(null-coalescing operator)，即 `??` 操作符，它要获取两个操作数。假如左边的操作数不为 null，就返回这个操作数的值。如果左边的操作数为 null，就返回右边的操作数的值。利用空接合操作符，可以方便地设置变量的默认值。
 
-> 注：PowerShell 没有 `??` 运算符。等效写法是 `if ($null -ne $b) { $b } else { 123 }`；PowerShell 7 可写成三元表达式 `$b ? $b : 123`，但要注意 PowerShell 中 `0`、`''`、空数组并不等于 `$null`，因此这种近似只在操作数确实可能为 `$null` 时成立。连续取默认值时，通常用 `$a ?? $b` 对应的 `if/elseif` 链或 `@($a, $b, 'Untitled') | Where-Object { $null -ne $_ } | Select-Object -First 1`。
+> 注：PowerShell 7 起支持 `??`（空接合）和 `??=` 运算符，可直接写成 `$x = $b ?? 123`、`$s ??= 'Untitled'`；Windows PowerShell 5.1 没有 `??`，只能用 `if ($null -ne $b) { $b } else { 123 }` 或三元表达式 `$b ? $b : 123`。注意 PowerShell 中 `0`、`''`、空数组并不等于 `$null`，所以 `??` 只在操作数确实可能为 `$null` 时符合 C# 语义。连续取默认值时可直接链式书写 `$a ?? $b ?? 'Untitled'`。
 
 空接合操作符的一个好处在于，它既能用于引用类型，也能用于可空值类型。以下代码演示了如何使用 `??` 操作符：
 
-```csharp
-private static void NullCoalescingOperator() {
-    Int32? b = null;
+```powershell
+# 等效 PowerShell 写法（PowerShell 7 支持 ?? 运算符）
+function Test-NullCoalescingOperator {
+    $b = $null
 
-    // 下面这行等价于：
-    // x = (b.HasValue) ? b.Value : 123
-    Int32 x = b ?? 123;
-    Console.WriteLine(x); // "123"
+    # 下面这行等价于：
+    # $x = if ($null -ne $b) { $b } else { 123 }
+    $x = $b ?? 123
+    $x  # "123"
 
-    // 下面这行等价于：
-    // String temp = GetFilename();
-    // filename = (temp != null) ? temp : "Untitled";
-    String filename = GetFilename() ?? "Untitled";
+    # 下面这行等价于：
+    # $temp = Get-Filename
+    # $filename = if ($null -ne $temp) { $temp } else { "Untitled" }
+    $filename = (Get-Filename) ?? "Untitled"
 }
 ```
 
 有人争辩说 `??` 操作符不过是 `?:` 操作符的“语法糖”而已，所以 C#编译器团队不应该将这个操作符添加到语言中。实际上，`??` 提供了重大的语法上的改进。第一个改进是 `??` 操作符能更好地支持表达式：
 
-```csharp
-Func<String> f = () => SomeMethod() ?? "Untitled";
+```powershell
+# 等效 PowerShell 写法
+$f = [Func[string]]{ (Some-Method) ?? "Untitled" }
 ```
 
 相比下一行代码，上述代码更容易阅读和理解。下面这行代码要求进行变量赋值，而且用一个语句还搞不定：
 
-```csharp
-Func<String> f = () => { var temp = SomeMethod();
-    return temp != null ? temp : "Untitled"; };
+```powershell
+# 等效 PowerShell 写法
+$f = [Func[string]]{
+    $temp = Some-Method
+    if ($null -ne $temp) { $temp } else { "Untitled" }
+}
 ```
 
 第二个改进是 `??` 在复合情形中更好用。例如，下面这行代码：
 
-```csharp
-String s = SomeMethod1() ?? SomeMethod2() ?? "Untitled";
+```powershell
+# 等效 PowerShell 写法
+$s = (Some-Method1) ?? (Some-Method2) ?? "Untitled"
 ```
 
 它比下面这一堆代码更容易阅读和理解：
 
-```csharp
-String s;
-var sm1 = SomeMethod1();
-if (sm1 != null) s = sm1;
+```powershell
+# 等效 PowerShell 写法
+$sm1 = Some-Method1
+if ($null -ne $sm1) { $s = $sm1 }
 else {
-    var sm2 = SomeMethod2();
-    if (sm2 != null) s = sm2;
-    else s = "Untitled";
+    $sm2 = Some-Method2
+    if ($null -ne $sm2) { $s = $sm2 }
+    else { $s = "Untitled" }
 }
 ```
 
@@ -294,15 +312,16 @@ CLR 内建对可空值类型的支持。这个特殊的支持是针对装箱、�
 
 具体地说，当 CLR 对 `Nullable<T>` 实例进行装箱时，会检查它是否为 null。如果是，CLR 不装箱任何东西，直接返回 null。如果可空实例不为 null，CLR 从可空实例中取出值并进行装箱。也就是说，一个值为 5 的 `Nullable<Int32>` 会装箱成值为 5 的已装箱 Int32。以下代码演示了这一行为：
 
-```csharp
-// 对 Nullable<T>进行装箱，要么返回 null，要么返回一个已装箱的 T
-Int32? n = null;
-Object o = n; // o 为 null
-Console.WriteLine("o is null={0}", o == null); // "True"
+```powershell
+# 等效 PowerShell 写法（脚本变量本身就在引用/装箱层面）
+# 对 Nullable<T> 装箱，要么返回 $null，要么返回一个已装箱的 T
+$n = $null
+$o = $n                     # $o 为 $null
+"o is null={0}" -f ($null -eq $o)   # "True"
 
-n = 5;
-o = n; // o 引用一个已装箱的 Int32
-Console.WriteLine("o's type={0}", o.GetType()); // "System.Int32"
+$n = 5
+$o = $n                     # $o 引用一个已装箱的 Int32
+"o's type={0}" -f $o.GetType().FullName   # "System.Int32"
 ```
 
 > 注：PowerShell 的变量与管道全都在引用（装箱）层面操作，所以这段行为在脚本里是自然结果：`$n = [Nullable[int]]$null; $o = $n; $null -eq $o` 为 True；`$n = 5; $o = $n; $o.GetType().Name` 为 `Int32`。无需也不能在 PowerShell 中显式控制“装箱”这一步。
@@ -327,31 +346,36 @@ a = (Int32?) o;  // a = null
 b = (Int32) o;   // NullReferenceException
 ```
 
+> 注：PowerShell 无法复现这里的拆箱语义。实测 `[int]$null` 和 `[System.Convert]::ToInt32($null)` 都返回 `0`，不会抛出 `NullReferenceException`；`$null -as [int]` 则得到 `$null`。因此脚本中应先用 `$null -ne $o` 判断，再决定是否转换，而不能依赖 C# 的拆箱异常。
+
 ### 19.3.3 通过可空值类型调用 GetType
 
 在 `Nullable<T>` 对象上调用 `GetType`，CLR 实际会“撒谎”说类型是 `T`，而不是 `Nullable<T>`。以下代码演示了这一行为：
 
-```csharp
-Int32? x = 5;
+```powershell
+# 等效 PowerShell 写法
+$x = [Nullable[int]]5
 
-// 下面这行会显示“System.Int32”，而非“System.Nullable<Int32>”
-Console.WriteLine(x.GetType());
+# 下面这行会显示 "System.Int32"，而非 "System.Nullable`1[System.Int32]"
+$x.GetType().FullName
 ```
 
 ### 19.3.4 通过可空值类型调用接口方法
 
 以下代码将 `Nullable<Int32>` 类型的变量 n 转型为接口类型 `IComparable`。`Nullable<T>` 不像 `Int32` 那样实现了 `IComparable` 接口，但 C# 编译器允许这样的代码通过编译，而且 CLR 的校验器也认为这样的代码可验证，从而允许使用更简洁的语法：
 
-```csharp
-Int32? n = 5;
-Int32 result = ((IComparable) n).CompareTo(5);  // 能顺利编译和运行
-Console.WriteLine(result);                       // 0
+```powershell
+# 等效 PowerShell 写法
+$n = [Nullable[int]]5
+$result = ([IComparable]$n).CompareTo(5)  # 能顺利运行
+$result                                   # 0
 ```
 
 假如 CLR 不提供这一特殊支持，要在可空值类型上调用接口方法，就必须写很繁琐的代码。首先要转型为已拆箱的值类型，然后才能转型为接口以发出调用：
 
-```csharp
-Int32 result = ((IComparable) (Int32) n).CompareTo(5); // 很繁琐
+```powershell
+# 等效 PowerShell 写法
+$result = ([IComparable][int]$n).CompareTo(5) # 很繁琐
 ```
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_413_0.png)

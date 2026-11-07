@@ -142,6 +142,8 @@ private static Boolean FeedbackToConsole(String value) {
 }
 ```
 
+> 注：这段代码刻意把签名改成与 `Feedback` 委托不匹配的样子，目的只是展示 C# 的编译期类型检查（error CS0123）。PowerShell 没有编译期委托签名校验，脚本块转委托时只会在构造/调用阶段才暴露不兼容性，因此没有与此对应的“编译错误”。
+
 C# 编译器将不会编译以上代码，并报告以下错误：error CS0123: "FeedbackToConsole"的重载均与委托"Feedback"不匹配。
 
 将方法绑定到委托时，C# 和 CLR 都允许引用类型的协变性(covariance)和逆变性(contravariance)。协变性是指方法能返回从委托的返回类型派生的一个类型。逆变性是指方法获取的参数可以是委托的参数类型的基类。例如下面这个委托：
@@ -149,6 +151,8 @@ C# 编译器将不会编译以上代码，并报告以下错误：error CS0123: 
 ```csharp
 delegate Object MyCallback(FileStream s);
 ```
+
+> 注：这是委托类型声明，PowerShell 没有 `delegate` 关键字，不能用它声明自定义委托。下面的 `SomeMethod(Stream s)`、`SomeOtherMethod(Stream s)` 也只是方法原型，用于说明协变/逆变规则；PowerShell 里没有编译期方法签名与委托的绑定检查，这些规则由 .NET 在委托绑定/调用时体现（引用类型支持协变/逆变，值类型与 void 不支持）。
 
 完全可以构造该委托类型的一个实例并绑定具有以下原型的方法：
 
@@ -187,6 +191,8 @@ FeedbackToFile 方法的工作方式类似于 FeedbackToConsole 和 FeedbackToMs
 ```csharp
 internal delegate void Feedback(Int32 value);
 ```
+
+> 注：此处再次展示委托声明。PowerShell 没有 `delegate` 关键字，无法声明自定义委托类型；要用等效签名，直接使用 .NET 内置的 `[Action[int]]`（返回 void）或 `[Func[int, 结果类型]]`（有返回值）。只有确需自定义签名时，才用 `Add-Type` 编译 C# 源码。
 
 看到这行代码后，编译器实际上会像下面这样定义一个完整的类：
 
@@ -237,9 +243,11 @@ internal class Feedback : System.MulticastDelegate {
 
 所以，每个委托对象实际上都是一个包装器，其中包装了一个方法和调用该方法时要操作的对象。例如，在执行以下两行代码之后：
 
-```csharp
-Feedback fbStatic = new Feedback(Program.FeedbackToConsole);
-Feedback fbInstance = new Feedback(new Program().FeedbackToFile);
+```powershell
+# 等效 PowerShell 写法（用内置 Action[int] 代替自定义 Feedback 委托；
+# PowerShell 没有“静态方法委托/实例方法委托”的构造区别，实例状态通过闭包捕获）
+$fbStatic = [Action[int]] { param($value) Write-Host "Item=$value" }
+$fbInstance = [Action[int]] { param($value) Write-Host "Item=$value" }   # 需要实例状态时在脚本块中引用该对象
 ```
 
 `fbStatic` 和 `fbInstance` 变量将引用两个独立的、初始化好的 `Feedback` 委托对象，如图 17-2 所示。
@@ -250,26 +258,29 @@ Feedback fbInstance = new Feedback(new Program().FeedbackToFile);
 
 知道委托对象如何构造并了解其内部结构之后，再来看看回调方法是如何调用的。为方便讨论，下面重复了 `Counter` 方法的定义：
 
-```csharp
-private static void Counter(Int32 from, Int32 to, Feedback fb) {
-    for (Int32 val = from; val <= to; val++) {
-        // 如果指定了任何回调，就调用它们
-        if (fb != null)
-            fb(val);
+```powershell
+# 等效 PowerShell 写法
+function Counter([int]$from, [int]$to, [Action[int]]$fb) {
+    for ($val = $from; $val -le $to; $val++) {
+        # 如果指定了任何回调，就调用它们
+        if ($null -ne $fb)
+            { $fb.Invoke($val) }
     }
 }
 ```
 
 注意 if 语句首先检查 fb 是否为 null。不为 null 就调用“回调”方法。null 检查必不可少，因为 fb 只是可能引用了 Feedback 委托对象的变量；它也可能为 null。这段代码看上去像是调用了一个名为 fb 的函数，并向它传递一个参数(val)。但事实上，这里没有名为 fb 的函数。再次提醒你注意，因为编译器知道 fb 是引用了委托对象的变量，所以会生成代码调用该委托对象的 Invoke 方法。也就是说，编译器在看到以下代码时：
 
-```csharp
-fb(val);
+```powershell
+# 等效 PowerShell 写法（$fb 是委托变量时的调用形式）
+$fb.Invoke($val)
 ```
 
 它将生成以下代码，好像源代码本来就是这么写的一样：
 
-```csharp
-fb.Invoke(val);
+```powershell
+# 等效 PowerShell 写法
+$fb.Invoke($val)
 ```
 
 为了验证编译器生成代码来调用委托类型的 Invoke 方法，可利用 ILDasm.exe 检查为 Counter 方法创建的 IL 代码。下面列出了 Counter 方法的 IL 代码。IL_0009 处的指令就是对 Feedback 的 Invoke 方法的调用。
@@ -303,12 +314,13 @@ fb.Invoke(val);
 
 其实，完全可以修改 Counter 方法来显式调用 Invoke 方法，如下所示：
 
-```csharp
-private static void Counter(Int32 from, Int32 to, Feedback fb) {
-    for (Int32 val = from; val <= to; val++) {
-        // 如果指定了任何回调，就调用它们
-        if (fb != null)
-            fb.Invoke(val);
+```powershell
+# 等效 PowerShell 写法：PowerShell 中委托变量必须显式调用 Invoke
+function Counter([int]$from, [int]$to, [Action[int]]$fb) {
+    for ($val = $from; $val -le $to; $val++) {
+        # 如果指定了任何回调，就调用它们
+        if ($null -ne $fb)
+            { $fb.Invoke($val) }
     }
 }
 ```
@@ -325,16 +337,18 @@ private static void Counter(Int32 from, Int32 to, Feedback fb) {
 
 指向 **Feedback** 委托对象的引用变量 **fbChain** 旨在引用委托链（或者说委托对象集合），这些对象包装了可回调的方法。**fbChain** 初始化为 **null**，表明目前没有要回调的方法。使用 **Delegate** 类的公共静态方法 **Combine** 将委托添加到链中：
 
-```csharp
-fbChain = (Feedback) Delegate.Combine(fbChain, fb1);
+```powershell
+# 等效 PowerShell 写法
+$fbChain = [System.Delegate]::Combine($fbChain, $fb1)
 ```
 
 执行这行代码时，**Combine** 方法发现要合并的是 **null** 和 **fb1**。在内部，**Combine** 直接返回 **fb1** 中的值，所以 **fbChain** 变量现在引用 **fb1** 变量所引用的委托对象，如图 17-4 所示。
 
 再次调用 **Combine** 方法在链中添加第二个委托：
 
-```csharp
-fbChain = (Feedback) Delegate.Combine(fbChain, fb2);
+```powershell
+# 等效 PowerShell 写法
+$fbChain = [System.Delegate]::Combine($fbChain, $fb2)
 ```
 
 在内部，**Combine** 方法发现 **fbChain** 已引用了一个委托对象，所以 **Combine** 会构造一个新的委托对象。新委托对象对它的私有字段 **_target** 和 **_methodPtr** 进行初始化，具体的值对于目前的讨论来说并不重要。重要的是，**_invocationList** 字段被初始化为引用一个委托对象数组。数组的第一个元素（索引 0）被初始化为引用包装了 **FeedbackToConsole** 方法的委托（也就是 **fbChain** 目前引用的委托）。数组的第二个元素（索引 1）被初始化为引用包装了 **FeedbackToMsgBox** 方法的委托（也就是 **fb2** 引用的委托）。最后，**fbChain** 被设为引用新建的委托对象，如图 17-5 所示。
@@ -349,16 +363,18 @@ fbChain = (Feedback) Delegate.Combine(fbChain, fb2);
 
 为了在链中添加第三个委托，我再次调用 **Combine** 方法。
 
-```csharp
-fbChain = (Feedback) Delegate.Combine(fbChain, fb3);
+```powershell
+# 等效 PowerShell 写法
+$fbChain = [System.Delegate]::Combine($fbChain, $fb3)
 ```
 
 同样地，**Combine** 方法发现 **fbChain** 已引用了一个委托对象，因而又构造一个新的委托对象，如图 17-6 所示。和前面一样，新委托对象对私有字段 **_target** 和 **_methodPtr** 进行初始化，具体的值就目前来说并不重要。**_invocationList** 字段被初始化为引用一个委托对象数组。该数组的第一个元素和第二个元素（索引 0 和 1）被初始化为引用 **fb1** 和 **fb2** 所引用的委托。数组的第三个元素（索引 2）被初始化为引用包装了 **FeedbackToFile** 方法的委托（这是 fb3 所引用的委托）。最后，**fbChain** 被设为引用这个新建的委托对象。注意，之前新建的委托及其 **_invocationList** 字段引用的数组现在可以进行垃圾回收。
 
 在 **ChainDelegateDemo1** 方法中，用于设置委托链的所有代码执行完毕之后，我将 **fbChain** 变量传给 **Counter** 方法：
 
-```csharp
-Counter(1, 2, fbChain);
+```powershell
+# 等效 PowerShell 写法
+Counter 1 2 $fbChain
 ```
 
 **Counter** 方法内部的代码会在 **Feedback** 委托对象上隐式调用 **Invoke** 方法，具体已在前面讲述过了。在 **fbChain** 引用的委托上调用 **Invoke** 时，该委托发现私有字段 **_invocationList** 不为 **null**，所以会执行一个循环来遍历数组中的所有元素，并依次调用每个委托包装的方法。在本例中，**FeedbackToConsole** 首先被调用，随后是 **FeedbackToMsgBox**，最后是 **FeedbackToFile**。
@@ -386,10 +402,14 @@ public void Invoke(Int32 value) {
 }
 ```
 
+> 注：这是描述 `Invoke` 内部算法的伪代码，`_invocationList`、`_methodPtr`、`_target` 是 `MulticastDelegate` 的非公共字段，`_methodPtr.Invoke(...)` 这种调用方式在 C# 和 PowerShell 中都无法直接表达。PowerShell 中无需自己实现这一层：对委托链变量调用 `$d.Invoke(...)` 或 `$d.DynamicInvoke(...)` 即可，运行时会按同样规则依次调用链中每个委托。
+
 注意，还可调用 **Delegate** 的公共静态方法 **Remove** 从链中删除委托。**ChainDelegateDemo1** 方法在结尾处对此进行了演示。
 
-```csharp
-fbChain = (Feedback) Delegate.Remove(fbChain, new Feedback(FeedbackToMsgBox));
+```powershell
+# 等效 PowerShell 写法（注意：脚本块转成的委托按实例比较，
+# 要移除的必须与链中已有的委托是同一个实例，因此这里复用 $fb2）
+$fbChain = [System.Delegate]::Remove($fbChain, $fb2)
 ```
 
 **Remove** 方法被调用时，它扫描第一个实参(本例是 **fbChain**)所引用的那个委托对象内部维护的委托数组(从末尾向索引 0 扫描)。**Remove** 查找的是其 **_target** 和 **_methodPtr** 字段与第二个实参(本例是新建的 **Feedback** 委托)中的字段匹配的委托。如果找到匹配的委托，并且(在删除之后)数组中只剩余一个数据项，就返回那个数据项。如果找到匹配的委托，并且数组中还剩余多个数据项，就新建一个委托对象——其中创建并初始化的 **_invocationList** 数组将引用原始数组中的所有数据项，当然被删除的数据项除外——并返回对这个新建委托对象的引用。如果从链中删除了仅有的一个元素，**Remove** 会返回 **null**。注意，每次 **Remove** 方法调用只能从链中删除一个委托，它不会删除所有匹配的 **_target** 和 **_methodPtr** 字段的所有委托。
@@ -399,6 +419,8 @@ fbChain = (Feedback) Delegate.Remove(fbChain, new Feedback(FeedbackToMsgBox));
 ```csharp
 public delegate Int32 Feedback(Int32 value);
 ```
+
+> 注：这是带返回值的委托声明。PowerShell 无法声明它；等效签名为 `[Func[int, int]]`。注意委托链调用时，简单遍历算法只保留最后一个委托的返回值，PowerShell 中 `$d.Invoke(...)` 的行为相同。
 
 如果是这样定义的，那么该委托的 **Invoke** 方法就应该像下面这样(又是伪代码形式)：
 
@@ -420,6 +442,8 @@ public Int32 Invoke(Int32 value) {
     return result;
 }
 ```
+
+> 注：同前面的伪代码说明，带返回值的 `Invoke` 内部算法同样依赖 `_methodPtr` 等不可直接访问的字段，PowerShell 中不可复刻；直接调用 `$d.Invoke(...)` 即可，链中只有最后一个委托的返回值会返回给调用者。
 
 数组中的每个委托被调用时，其返回值被保存到 **result** 变量中。循环完成后，**result** 变量只包含调用的最后一个委托的结果(前面的返回值会被丢弃)，该值返回给调用 **Invoke** 的代码。
 
@@ -447,6 +471,8 @@ public abstract class MulticastDelegate : Delegate {
     public sealed override Delegate[] GetInvocationList();
 }
 ```
+
+> 注：这是 FCL 中 `System.MulticastDelegate` 的公开成员声明，PowerShell 不需要也无法重新定义该类。脚本中直接对委托链调用 `$chain.GetInvocationList()` 即可得到 `Delegate[]`，再逐个 `Invoke`，从而自行控制调用顺序、返回值收集与异常处理。
 
 GetInvocationList 方法操作从 MulticastDelegate 派生的对象，返回包含 Delegate 引用的一个数组，其中每个引用都指向链中的一个委托对象。在内部，GetInvocationList 构造并初始化一个数组，让它的每个元素都引用链中的一个委托，然后返回对该数组的引用。如果 _invocationList 字段为 null，返回的数组就只有一个元素，该元素引用链中唯一的委托，即委托实例本身。
 
@@ -537,6 +563,8 @@ public sealed class Program {
 }
 ```
 
+> 注：此块定义了 `Light`/`Fan`/`Speaker` 类与 `GetStatus` 委托，属于类型声明，PowerShell 无法照搬（自定义委托需 `Add-Type`）。其核心做法在 PowerShell 中可等效实现：用脚本块转委托（如 `[Func[string]]` 或 `[Action]`）并保留各自的 `$d.Target`/`$d.Method.Name`，用 `[System.Delegate]::Combine` 串成链，`$chain.GetInvocationList()` 取出数组后逐个放进 `try`/`catch [System.InvalidOperationException]` 调用，即可模拟“一个委托失败不影响后续委托”的报告逻辑。
+
 生成并运行以上代码，会得到如下所示的输出：
 
 ```text
@@ -560,6 +588,8 @@ public delegate void ContextCallback(Object state);
 public delegate void SendOrPostCallback(Object state);
 public delegate void ParameterizedThreadStart(Object obj);
 ```
+
+> 注：这些委托类型都已经在 .NET 中定义好，PowerShell 无需也无法重新声明，直接引用即可，例如 `[System.Threading.WaitCallback]`、`[System.Threading.TimerCallback]`、`[System.Threading.ParameterizedThreadStart]`。它们都可与 `[Action[object]]` 互换使用；下面的 `Action`/`Func` 泛型委托同理，直接用 `[Action[int]]`、`[Func[int, string]]` 这类类型字面量即可。
 
 发现这几个委托的共同点了吗？它们其实都是一样的：这些委托类型的变量所引用的方法都是获取一个 Object，并返回 void。没理由定义这么多委托类型，留一个就可以了！
 
@@ -591,6 +621,8 @@ public delegate TResult Func<T1, ..., T16, TResult>(T1 arg1, ..., T16 arg16);
 delegate void Bar(ref Int32 z);
 ```
 
+> 注：含 `ref`/`out` 参数的委托无法用内置 `Action`/`Func` 表达，PowerShell 也没有声明自定义委托的语法，只能在 C# 中用 `Add-Type` 编译定义 `Bar`；调用时 PowerShell 需以 `[ref]$z` 传参。
+
 如果委托要通过 C# 的 `params` 关键字获取数量可变的参数，要为委托的任何参数指定默认值，或者要对委托的泛型类型参数进行约束，也必须定义自己的委托类型。
 
 获取泛型实参并返回值的委托支持逆变和协变，而且建议总是利用这些功能，因为它们没有副作用，而且使你的委托适用于更多情形。欲知逆变和协变的详情，请参见 12.5 节“委托和接口的逆变和协变泛型类型实参”。
@@ -599,22 +631,27 @@ delegate void Bar(ref Int32 z);
 
 许多程序员因为语法奇怪而对委托有抗拒感。例如下面这行代码：
 
-```csharp
-button1.Click += new EventHandler(button1_Click);
+```powershell
+# 等效 PowerShell 写法（WinForms 按钮事件用 add_Click 登记）
+Add-Type -AssemblyName System.Windows.Forms
+$button1.add_Click({ param($sender, $e) button1_Click $sender $e })
 ```
 
 其中的 **button1_Click** 是方法，看起来像下面这样：
 
-```csharp
-void button1_Click(Object sender, EventArgs e) {
-    // 按钮单击后要做的事情……
+```powershell
+# 等效 PowerShell 写法
+function button1_Click($sender, $e) {
+    # 按钮单击后要做的事情……
 }
 ```
 
 第一行代码的思路是向按钮控件登记 **button1_Click** 方法的地址，以便在按钮被单击时调用方法。许多程序员认为，仅仅为了指定 **button1_Click** 方法的地址，就构造一个 **EventHandler** 委托对象，这显得有点儿不可思议。然而，构造 **EventHandler** 委托对象是 CLR 要求的，因为这个对象提供了一个包装器，可确保（被包装的）方法只能以类型安全的方式调用。这个包装器还支持调用实例方法和委托链。遗憾的是，很多程序员并不想仔细研究这些细节。程序员更喜欢像下面这样写代码：
 
-```csharp
-button1.Click += button1_Click;
+```powershell
+# 等效 PowerShell 写法（PowerShell 的事件没有 += 简化语法，
+# 用 add_Click 登记；脚本块会自动转换为 EventHandler 委托）
+$button1.add_Click({ param($sender, $e) button1_Click $sender $e })
 ```
 
 幸好，Microsoft C# 编译器确实为程序员提供了用于处理委托的一些简化语法。本书将讨论所有这些简化语法。但开始之前我要声明一点，后文描述的基本上只是 C# 的语法糖①，这些简化语法为程序员提供了一种更简单的方式生成 CLR 和其他编程语言处理委托时所必需的 IL 代码。这些简化语法是 C# 特有的，其他编译器可能还没有提供额外的委托简化语法。
@@ -637,6 +674,8 @@ internal sealed class AClass {
 }
 ```
 
+> 注：此块定义了类 `AClass`，属于类型声明，PowerShell 无法照搬。更关键的是，脚本块虽然能自动转成 `WaitCallback` 委托，但**线程池线程上没有可用的 Runspace**，回调执行时会抛 `PSInvalidOperationException: There is no Runspace available to run scripts in this thread.`（实测该异常会终止 pwsh 进程）。因此 `ThreadPool.QueueUserWorkItem` 在 PowerShell 中不能用脚本块回调；需要跨线程执行时改用自带 Runspace 的 `Start-ThreadJob`、`ForEach-Object -Parallel`，或把回调写成 C# 用 `Add-Type` 编译。若回调是 .NET 方法（如 `[Console]::WriteLine`）则不受此限制。
+
 ThreadPool 类的静态 QueueUserWorkItem 方法期待一个 WaitCallback 委托对象引用，委托对象中包装的是对 SomeAsyncTask 方法的引用。由于 C# 编译器能自己进行推断，所以可以省略构造 WaitCallback 委托对象的代码，使代码的可读性更佳，也更容易理解。当然，当代码编译时，C# 编译器还是会生成 IL 代码来新建 WaitCallback 委托对象——只是语法得到了简化而已。
 
 ### 17.7.2 简化语法 2：不需要定义回调方法（lambda 表达式）
@@ -651,7 +690,7 @@ internal sealed class AClass {
 }
 ```
 
-> 注：PowerShell 的对应写法是把脚本块强制转换成委托类型，参数用 `param` 声明：`[System.Threading.ThreadPool]::QueueUserWorkItem([System.Threading.WaitCallback]{ param($obj) Write-Host $obj }, 5)`。PowerShell 7 中可省略类型转换，直接用脚本块作为委托参数传给 .NET 方法，运行时会自动转换。需要注意的是，脚本块里未声明的参数会放进 `$args`，与 C# lambda 的形参语义不同。
+> 注：PowerShell 的对应写法是把脚本块强制转换成委托类型，参数用 `param` 声明：`[System.Threading.ThreadPool]::QueueUserWorkItem([System.Threading.WaitCallback]{ param($obj) Write-Host $obj }, 5)`。PowerShell 7 中可省略类型转换，直接用脚本块作为委托参数传给 .NET 方法，运行时会自动转换。需要注意的是，脚本块里未声明的参数会放进 `$args`，与 C# lambda 的形参语义不同。此外，该写法只在“回调由 PowerShell 线程调用”时可行——`QueueUserWorkItem` 的回调在线程池线程上执行，那里没有可用 Runspace，实测会抛 `PSInvalidOperationException` 并终止进程，故本示例不能据此直接改成可运行的 PowerShell。
 
 注意，传给 QueueUserWorkItem 方法的第一个实参是代码（我把它倾斜显示了）！更正式地说，这是一个 C# lambda 表达式，可通过 C# lambda 表达式操作符 `=>` 来轻松识别。lambda 表达式可在编译器预先会看到一个委托的地方使用。编译器看到这个 lambda 表达式之后，会在类（本例是 AClass）中自动定义一个新的私有方法。这个新方法称为匿名函数，因为方法名称由编译器自动创建，而且你一般不知道这个名称。①但可利用 ILDasm.exe 这样的工具检查编译器生成的代码。写完前面的代码并编译之后，我通过 ILDasm.exe 看到 C# 编译器将该方法命名为 `<CallbackWithoutNewingADelegateObject>b__0`，它获取一个 Object，返回 void。
 
@@ -691,6 +730,8 @@ internal sealed class AClass {
 }
 ```
 
+> 注：这段是 C# 编译器对 lambda 的“语法糖”改写结果，含 `<>9__CachedAnonymousMethodDelegate1`、`<CallbackWithoutNewingADelegateObject>b__0` 等编译器生成标识符，本就不是合法的、可手写的 C# 代码，PowerShell 也没有对应的编译期生成与委托缓存机制。PowerShell 的脚本块在需要时转换为委托，由运行时/引擎处理缓存，无需手写这类字段与方法。
+
 **lambda 表达式必须匹配 WaitCallback 委托**：获取一个 **Object** 并返回 **void**。但在指定参数名称时，我简单地将 **obj** 放在 `=>` 操作符的左侧。在 `=>` 操作符右侧，**Console.WriteLine** 碰巧本来就返回 **void**。然而，如果在这里放一个返回值不为 **void** 的表达式，编译器生成的代码会直接忽略返回值，因为编译器生成的方法必须用 **void** 返回类型来满足 **WaitCallback** 委托。
 
 另外还要注意，匿名函数被标记为 **private**，禁止非类型内定义的代码访问（尽管反射能揭示出方法确实存在）。另外，匿名函数被标记为 **static**，因为代码没有访问任何实例成员（也不能访问，因为 **CallbackWithoutNewingADelegateObject** 本身是静态方法）。不过，代码可以引用类中定义的任何静态字段或静态方法。下面是一个例子：
@@ -706,6 +747,8 @@ internal sealed class AClass {
     }
 }
 ```
+
+> 注：此块是类声明，PowerShell 无法照搬；其中的 lambda 若改用脚本块，可以像 C# 一样引用外层作用域的变量（闭包），但仍受前文“线程池线程无 Runspace”限制，`QueueUserWorkItem` 的回调不能直接由脚本块执行。
 
 如果 `CallbackWithoutNewingADelegateObject` 方法不是静态的，匿名函数的代码就可以包含对实例成员的引用。不包含实例成员引用，编译器仍会生成静态匿名函数，因为它的效率比实例方法高。之所以更高效，是因为不需要额外的 `this` 参数。但是，如果匿名函数的代码确实引用了实例成员，编译器就会生成非静态匿名函数：
 
@@ -743,6 +786,8 @@ Func<Int32, String> f6 = n => n.ToString();
 Bar b = (out Int32 n) => n = 5;
 ```
 
+> 注：这一组是 C# lambda 的参数书写规则。PowerShell 没有 `=>`，等价的“匿名函数”是脚本块 `{ param(...) ... }`，再强制转换为委托类型；但脚本块参数不能声明 `ref`/`out`，也不能像 `n => ...` 那样省略 `param()`，因此最后一行 `Bar b = (out Int32 n) => n = 5;` 无法用 PowerShell 脚本块表达，只能在 C# 中定义（`Bar` 本身也需 `Add-Type` 编译）。
+
 对于最后一个例子，假定 `Bar` 的定义如下：
 
 ```csharp
@@ -753,8 +798,9 @@ delegate void Bar(out Int32 z);
 
 如果主体由两个或多个语句构成，必须用大括号将语句包围。在用了大括号的情况下，如果委托期待返回值，还必须在主体中添加 `return` 语句，例如：
 
-```csharp
-Func<Int32, Int32, String> f7 = (n1, n2) => { Int32 sum = n1 + n2; return sum.ToString(); };
+```powershell
+# 等效 PowerShell 写法（多语句主体用大括号脚本块 + return）
+$f7 = [Func[int, int, string]] { param($n1, $n2) $sum = $n1 + $n2; return $sum.ToString() }
 ```
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_380_0.png)
@@ -800,6 +846,8 @@ internal sealed class AClass {
    }
 }
 ```
+
+> 注：此块是类声明，PowerShell 无法照搬。脚本块本身就能形成闭包捕获 `$squares`、`$done`、`$numToDo`，但 `ThreadPool.QueueUserWorkItem` 的脚本块回调仍受“线程池线程无 Runspace”限制（见 17.7.1 节注）。PowerShell 中做同类并行计算应改用 `Start-ThreadJob` / `ForEach-Object -Parallel`，并注意 `[System.Threading.Interlocked]::Decrement([ref]$numToDo)` 这类 `[ref]` 参数在闭包中的绑定语义与 C# 的 `ref` 局部变量不同。
 
 这个例子生动地演示了 C# 如何简单地实现一个非常复杂的任务。方法定义了一个参数 `numToDo` 和两个局部变量 `squares` 和 `done`。而且 lambda 表达式的主体引用了这些变量。
 
@@ -867,33 +915,37 @@ internal sealed class AClass {
 }
 ```
 
+> 注：这段是 C# 编译器为“lambda 捕获局部变量”自动生成的辅助类 `<>c__DisplayClass2`，标记为 `[CompilerGenerated]`，标识符含 `<`、`>`，并不是可手写的 C# 代码，PowerShell 也没有对应机制。PowerShell 的脚本块天然就是闭包，直接引用外层变量即可，无需手写这个辅助类；但跨线程执行仍受 Runspace 限制，见前注。
+
 #### 重要提示
 
 毫无疑问，C# 的 lambda 表达式功能很容易被程序员滥用。我开始使用 lambda 表达式时，绝对是花了一些时间来熟悉它的。毕竟，你在一个方法中写的代码实际不在这个方法中。除了有违直觉，还使调试和单步执行变得比较有挑战性。但事实上，Visual Studio 调试器还是非常不错的。我对自己源代码中的 lambda 表达式进行单步测试时，它处理得相当好。
 
 我为自己设定了一个规则：如果需要在回调方法中包含 3 行以上的代码，就不使用 lambda 表达式。相反，我会手动写一个方法，并为其分配自己的名称。但如果使用得当，匿名方法确实能显著提高开发人员的效率和代码的可维护性。在以下代码中，使用 lambda 表达式感觉非常自然。没有它们，这样的代码会很难写、读和维护。
 
-```csharp
-// 创建并初始化一个 String 数组
-String[] names = { "Jeff", "Kristin", "Aidan", "Grant" };
+```powershell
+# 等效 PowerShell 写法（脚本块转成 Predicate/Converter/Action 委托）
+# 创建并初始化一个 String 数组
+$names = [string[]]@('Jeff', 'Kristin', 'Aidan', 'Grant')
 
-// 只获取含有小写字母'a'的名字
-Char charToFind = 'a';
-names = Array.FindAll(names, name => name.IndexOf(charToFind) >= 0);
+# 只获取含有小写字母'a'的名字
+$charToFind = [char]'a'
+$names = [System.Array]::FindAll($names, [Predicate[string]] { param($name) $name.IndexOf($charToFind) -ge 0 })
 
-// 将每个字符串的字符转换为大写
-names = Array.ConvertAll(names, name => name.ToUpper());
+# 将每个字符串的字符转换为大写
+$names = [System.Array]::ConvertAll($names, [System.Converter[string, string]] { param($name) $name.ToUpper() })
 
-// 显示结果
-Array.ForEach(names, Console.WriteLine);
+# 显示结果
+[System.Array]::ForEach($names, [Action[string]] { param($name) Write-Host $name })
 ```
 
 ### 17.8 委托和反射
 
 本章到目前为止，使用委托都要求开发人员事先知道回调方法的原型。例如，假定 `fb` 是引用了一个 **Feedback** 委托的变量（参见本章 17.1 节的示例程序），那么为了调用这个委托，代码应该像下面这样写：
 
-```csharp
-fb(item);   // item 被定义为 Int32
+```powershell
+# 等效 PowerShell 写法
+$fb.Invoke($item)   # $item 被定义为 Int32
 ```
 
 可以看出，编码时必须知道回调方法需要多少个参数，以及参数的具体类型。还好，开发人员几乎总是知道这些信息，所以像前面那样写代码是没有问题的。
@@ -911,6 +963,8 @@ public abstract class MethodInfo : MethodBase {
     public virtual Delegate CreateDelegate(Type delegateType, Object target);
 }
 ```
+
+> 注：这是 `System.Reflection.MethodInfo` 的成员声明，PowerShell 无需重定义，直接调用即可：`$mi = $type.GetMethod('SomeMethod'); $d = $mi.CreateDelegate([System.Func[int, object]])`；若绑定实例方法，则 `$mi.CreateDelegate($delegateType, $target)`。所选方法的签名必须与委托类型兼容，否则运行时抛 `ArgumentException`。
 
 创建好委托后，用 **Delegate** 的 **DynamicInvoke** 方法调用它，如下所示：
 
@@ -1030,5 +1084,7 @@ public static class DelegateReflection {
    }
 }
 ```
+
+> 注：此示例声明了自定义委托 `TwoInt32s`、`OneString`，并定义了 `DelegateReflection` 类，PowerShell 无法照搬（自定义委托需 `Add-Type`）。其核心逻辑在 PowerShell 中可直接实现：把委托替换为内置的 `[System.Func[int, int, object]]` / `[System.Func[string, object]]`，用 `[Type]::GetType(...)`、`$type.GetMethod(...)` 取 `MethodInfo`，再 `$mi.CreateDelegate($delType)` 包装，最后 `$d.DynamicInvoke(@(...))` 调用并 `try`/`catch [System.Reflection.TargetParameterCountException]`。注意 `Reverse` 用到 LINQ 的字符序列反转，PowerShell 中可用 `-join ([System.Linq.Enumerable]::Reverse([char[]]$s))` 实现。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_387_0.png)

@@ -45,8 +45,9 @@ internal class Account {
 
 面向对象编程极大提高了开发人员的开发效率，因为可以写这样的代码：
 
-```csharp
-Boolean f = "Jeff".Substring(1, 1).ToUpper().EndsWith("E");  // true
+```powershell
+# 等效 PowerShell 写法
+$f = "Jeff".Substring(1, 1).ToUpper().EndsWith("E");  # True
 ```
 
 这行代码将多个操作链接到一起②。我很容易写这行代码，其他人也很容易阅读和维护，因为它的意图很明显：获取字符串，取出一部分，全部大写那个部分，然后检查那个部分是否以"E"结尾。出发点不错，但有一个重要的前提：没有操作失败，中途不出错。但错误总是可能发生的，所以需要以一种方式处理错误。事实上，许多面向对象的构造——构造器、获取和设置属性、添加和删除事件、调用操作符重载和调用转换操作符等——都没办法返回错误代码，但它们仍然需要报告错误。Microsoft .NET Framework 和所有编程语言通过异常处理来解决这个问题。
@@ -67,30 +68,31 @@ Boolean f = "Jeff".Substring(1, 1).ToUpper().EndsWith("E");  // true
 
 以下 C# 代码展示了异常处理机制的标准用法，可通过它对异常处理代码块及其用途产生初步认识。代码后面的各小节将正式描述 try、catch 和 finally 块及其用途，并提供关于它们的一些注意事项。
 
-```csharp
-private void SomeMethod() {
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
     try {
-        // 需要可靠地进行恢复和/或清理的代码放在这里
+        # 需要可靠地进行恢复和/或清理的代码放在这里
     }
-    catch (InvalidOperationException) {
-        // 从 InvalidOperationException 恢复的代码放在这里
+    catch [System.InvalidOperationException] {
+        # 从 InvalidOperationException 恢复的代码放在这里
     }
-    catch (IOException) {
-        // 从 IOException 恢复的代码放在这里
+    catch [System.IO.IOException] {
+        # 从 IOException 恢复的代码放在这里
     }
     catch {
-        // 从除了上述异常之外的其他所有异常恢复的代码放在这里
-        ...
-        // 如果什么异常都捕捉，通常要重新抛出异常。本章稍后将详细解释
-        throw;
+        # 从除了上述异常之外的其他所有异常恢复的代码放在这里
+        # ...
+        # 如果什么异常都捕捉，通常要重新抛出异常。本章稍后将详细解释
+        throw
     }
     finally {
-        // 这里的代码对始于 try 块的任何操作进行清理
-        // 这里的代码总是执行，不管是不是抛出了异常
+        # 这里的代码对始于 try 块的任何操作进行清理
+        # 这里的代码总是执行，不管是不是抛出了异常
     }
-    // 如果 try 块没有抛出异常，或者某个 catch 块捕捉到异常，但没有抛出或
-    // 重新抛出异常，就执行下面的代码
-    ...
+    # 如果 try 块没有抛出异常，或者某个 catch 块捕捉到异常，但没有抛出或
+    # 重新抛出异常，就执行下面的代码
+    # ...
 }
 ```
 
@@ -154,19 +156,20 @@ finally 块包含的是保证会执行的代码。一般在 finally 块中执行
 
 例如，在 try 块中打开了文件，就应该将关闭文件的代码放到 finally 块中。
 
-```csharp
-private void ReadData(String pathname) {
-    FileStream fs = null;
+```powershell
+# 等效 PowerShell 写法
+function ReadData([string]$pathname) {
+    $fs = $null
     try {
-        fs = new FileStream(pathname, FileMode.Open);
-        // 处理文件中的数据...
+        $fs = [System.IO.FileStream]::new($pathname, [System.IO.FileMode]::Open)
+        # 处理文件中的数据...
     }
-    catch (IOException) {
-        // 在此添加从 IOException 恢复的代码
+    catch [System.IO.IOException] {
+        # 在此添加从 IOException 恢复的代码
     }
     finally {
-        // 确保文件被关闭
-        if (fs != null) fs.Close();
+        # 确保文件被关闭
+        if ($null -ne $fs) { $fs.Close() }
     }
 }
 ```
@@ -207,6 +210,8 @@ void Method() {
 }
 ```
 
+> 注：原文用 `XxxException`/`YyyException` 作为占位类型，PowerShell 的 `catch [类型]` 必须写真实存在的 .NET 类型，因此无法原样转换；实际写法是把方括号中的类型换成具体的异常类，最后一个无类型 `catch` 仍可捕捉其余异常。
+
 ```csharp
 void Method() {
     try {
@@ -227,6 +232,8 @@ void Method() {
 }
 ```
 
+> 注：右半部分是作者设想的理想关键字（`handle`/`compensate`/`cleanup`），并非合法 C# 语法，PowerShell 也没有这些关键字；实际等价的仍是 `try`/`catch`/`finally`。保留原文用于对照。
+
 ### CLS 和非 CLS 异常
 
 > 所有面向 **CLR** 的编程语言都必须支持抛出从 **Exception** 派生的对象，因为公共语言规范(**Common Language Specification, CLS**)对此进行了硬性规定。但是，**CLR** 实际允许抛出任何类型的实例，而且有些编程语言允许代码抛出非 **CLS** 相容的异常对象，比如一个 **String**、**Int32** 和 **DateTime** 等。**C#**编译器只允许代码抛出从 **Exception** 派生的对象，而用其他一些语言写的代码不仅允许抛出 **Exception** 派生对象，还允许抛出非 **Exception** 派生对象。
@@ -237,19 +244,21 @@ void Method() {
 
 虽然 C# 编译器只允许开发人员抛出派生自 Exception 的对象，但在 C# 的 2.0 版本之前，C# 编译器确实允许开发人员使用以下形式的代码捕捉非 CLS 相容的异常：
 
-```csharp
-private void SomeMethod() {
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
     try {
-        // 需要得体地进行恢复和/或清理的代码放在这里
+        # 需要得体地进行恢复和/或清理的代码放在这里
     }
-    catch (Exception e) {
-        // C# 2.0 以前，这个块只能捕捉 CLS 相容的异常；
-        // 而现在，这个块能捕捉 CLS 相容和不相容的异常
-        throw;  // 重新抛出捕捉到的任何东西
+    catch [System.Exception] {
+        # typed catch 会捕捉 System.Exception 及其派生类型；
+        # PowerShell 会把 throw 的非 Exception 对象包装成 RuntimeException，
+        # 所以这个块也相当于能捕捉 CLS 相容和不相容的“异常”。
+        throw  # 重新抛出捕捉到的任何东西
     }
     catch {
-        // 在所有版本的 C# 中，这个块可以捕捉 CLS 相容和不相容的异常
-        throw;  // 重新抛出捕捉到的任何东西
+        # 在所有版本的 PowerShell 中，这个块可以捕捉其余异常对象
+        throw  # 重新抛出捕捉到的任何东西
     }
 }
 ```
@@ -264,6 +273,8 @@ CS1058：上一个 catch 子句已捕获所有异常。引发的所有非异常�
 using System.Runtime.CompilerServices;
 [assembly:RuntimeCompatibility(WrapNonExceptionThrows = false)]
 ```
+
+> 注：`[assembly: ...]` 是程序集级特性，PowerShell 脚本没有应用特性的语法；若要设置 `RuntimeCompatibility`，只能把该行放进 `Add-Type -TypeDefinition` 编译的 C# 源码中。
 
 注意，该特性影响的是整个程序集。在同一个程序集中，包装和不包装异常这两种处理方式不能同时存在。向包含旧代码的程序集（假如 CLR 不支持在其中包装异常）添加新代码（希望 CLR 包装异常）时要特别小心。
 
@@ -296,39 +307,47 @@ CLR 允许异常抛出任何类型的实例——从 **Int32** 到 **String** �
 
 以下代码抛出它捕捉到的相同的异常对象，导致 CLR 重置该异常的起点：
 
-```csharp
-private void SomeMethod() {
-    try { ... }
-    catch (Exception e) {
-        ...
-        throw e;   // CLR 认为这是异常的起点，FxCop 报错
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
+    try { # ...
+    }
+    catch [System.Exception] {
+        $e = $_
+        # ...
+        throw $e   # 重新抛出异常对象；与 C# 的 throw e 类似，堆栈起点会被重置
     }
 }
 ```
 
 但如果仅仅使用 **throw** 关键字本身(删除后面的 e)来重新抛出异常对象，CLR 就不会重置堆栈的起点。以下代码重新抛出它捕捉到的异常，但不会导致 CLR 重置起点：
 
-```csharp
-private void SomeMethod() {
-    try { ... }
-    catch (Exception e) {
-        ...
-        throw;  // 不影响 CLR 对异常起点的认知。FxCop 不再报错
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
+    try { # ...
+    }
+    catch [System.Exception] {
+        # ...
+        throw  # 不影响 CLR 对异常起点的认知
     }
 }
 ```
 
 实际上，两段代码唯一的区别就是 CLR 对于异常起始抛出位置的认知。遗憾的是，不管抛出还是重新抛出异常，Windows 都会重置栈的起点。因此，如果一个异常成为未处理的异常，那么向 Windows Error Reporting 报告的栈位置就是最后一次抛出或重新抛出的位置(即使 CLR 知道异常的原始抛出位置)。之所以遗憾，是因为假如应用程序在现场那里失败，会使调试工作变得异常困难。有些开发人员无法忍受这一点，于是选择以一种不同的方式实现代码，确保堆栈跟踪能真正反映异常的原始抛出位置：
 
-```csharp
-private void SomeMethod() {
-    Boolean trySucceeds = false;
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
+    $trySucceeds = $false
     try {
-        ...
-        trySucceeds = true;
+        # ...
+        $trySucceeds = $true
     }
     finally {
-        if (!trySucceeds) { /*捕捉代码放到这里*/ }
+        if (-not $trySucceeds) {
+            # 捕捉代码放到这里
+        }
     }
 }
 ```
@@ -357,6 +376,8 @@ internal sealed class SomeType {
     }
 }
 ```
+
+> 注：`MethodImpl` 等特性只能写在类型/方法声明上，PowerShell 脚本无法应用；需要禁止内联时，只能把该方法放进 `Add-Type` 编译的 C# 源码，脚本本身没有对应的编译期选项。
 
 ① 栈顶移动即“升高”，向栈底移动即“降低”。——译注
 
@@ -609,6 +630,8 @@ public static void TestException() {
 }
 ```
 
+> 注：该示例依赖上一块的泛型异常类型 `Exception<TExceptionArgs>`，PowerShell 不能声明泛型异常类，因此无法直接运行；如需自定义异常，可用 `Add-Type` 编译上述 C# 类型，或直接抛出 FCL 已有的异常类型。
+
 > **注意**　我的 `Exception<TExceptionArgs>` 类有两个问题需要注意。第一个问题是，用它定义的任何异常类型都总是派生自 `System.Exception`。这在大多数时候都不是问题，而且浅而宽的异常类型层次结构还是一件好事。第二个问题是，Visual Studio 的未处理异常对话框不会显示 `Exception<T>` 类型的泛型类型参数，如下图所示。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_430_0.png)
@@ -623,8 +646,9 @@ public static void TestException() {
 
 面向对象编程极大提升了开发人员的开发效率。开发效率的提升有很大一部分来自可组合性（composability），它使代码很容易编写、阅读和维护。例如下面这行代码：
 
-```csharp
-Boolean f = "Jeff".Substring(1, 1).ToUpper().EndsWith("E");
+```powershell
+# 等效 PowerShell 写法
+$f = "Jeff".Substring(1, 1).ToUpper().EndsWith("E");
 ```
 
 但上述代码有一个很重要的前提：没有错误发生。而错误总是可能发生的。所以，我们需要一种方式处理错误。这正是异常处理构造①和机制的目的，我们不能像 Win32 和 COM 函数那样返回 true/false 或者一个 HRESULT 来指出成功/失败。
@@ -651,6 +675,8 @@ private static Object OneStatement(Stream stream, char charToFind) {
         (stream.Position + 512M)).Where(c=>c == charToFind).ToArray();
 }
 ```
+
+> 注：这段代码本身并非合法 C#（`String.Empty` 与后面的括号表达式之间缺少运算符），原书用它示意“一条语句可能隐含大量操作和错误点”，故保留原样。PowerShell 也无法用单个表达式复现这些隐式装箱、类型构造器和 LINQ 操作。
 
 这个不太自然的方法只包含一个 C# 语句，但该语句做了大量工作。下面是 C# 编译器为这个方法生成的 IL 代码（一些行加粗并倾斜；由于一些隐式的操作，它们成了潜在的“错误点”）：
 
@@ -742,6 +768,8 @@ Stream 的 Position 属性比较有趣。首先，它是一个虚属性，所以
   }
   ```
 
+  > 注：该示例依赖 C# 的 `Account` 运算符重载，并讨论 `Thread.Abort`/`AppDomain.Unload` 期间 `finally` 的执行保证；PowerShell 7（.NET Core）既不支持 `Thread.Abort`，也没有等价的 CER 保证，且脚本不能重载 `-=`/`+=`，故保留原样。脚本中能表达的只是 `try { ... } finally { ... }` 的结构。
+
   但绝对不建议将所有代码都放到 finally 块中！这个技术只适合修改极其敏感的状态。
 
 - 可以用 System.Diagnostics.Contracts.Contract 类向方法应用代码协定。通过代码协定，在用实参和其他变量对状态进行修改之前，可以先对这些实参/变量进行验证。如果实参/变量遵守协定，状态被破坏的可能性将大幅降低（但不能完全消除）。如果不遵守协定，那么异常会在任何状态被修改之前抛出。本章稍后将讨论代码协定。
@@ -770,6 +798,8 @@ Stream 的 Position 属性比较有趣。首先，它是一个虚属性，所以
   }
   ```
 
+  > 注：PowerShell 不能声明同名的静态类和静态字段，但可以在函数里复刻该锁模式：`[System.Threading.Monitor]::Enter($lock); try { ... } finally { [System.Threading.Monitor]::Exit($lock) }`。保留原文是为了说明“先 Enter 再进入 try”可能导致锁泄漏。
+
   由于存在前面展示的问题，所以这个重载的 **Monitor** 的 **Enter** 方法已经不再鼓励使用。建议像下面这样重写以上代码：
 
   ```csharp
@@ -792,6 +822,8 @@ Stream 的 Position 属性比较有趣。首先，它是一个虚属性，所以
       // ...
   }
   ```
+
+  > 注：PowerShell 可以调用带 `ref` 参数的重载：`$lockTaken = $false; [System.Threading.Monitor]::Enter($lock, [ref]$lockTaken)`，并在 `finally` 中按 `$lockTaken` 释放。此处保留 C# 类声明，因为脚本无法声明同名的静态类和静态字段（可用普通脚本变量或 `Add-Type` 替代）。
 
   虽然以上代码使方法变得更明确，但在线程同步锁的情况下，现在的建议是根本不要随同异常处理使用它们。详情参见第三十章“混合线程同步构造”。
 
@@ -933,6 +965,8 @@ internal sealed class PhoneBook {
 }
 ```
 
+> 注：PowerShell 可以定义类和函数，但没有与 `FileStream`/`finally` 完全对应的 C# 类结构；可把 `GetPhoneNumber` 改写为脚本函数，用 `try`/`catch [System.IO.FileNotFoundException]`/`catch [System.IO.IOException]`/`finally` 复刻逻辑。保留原文是为了展示“隐藏实现细节、维系方法协定”的设计。
+
 地址簿数据从一个文件(而非网络连接或数据库)中获得。但 **PhoneBook** 类型的用户并不知道这一点，因为该实现细节将来是可能改变的。所以，文件由于任何原因未找到或者不能读取，调用者将看到一个 **FileNotFoundException** 或者 **IOException** 异常，但这两个异常都不是(调用者)预期的，因为“文件存在与否”以及“能否读取”不是方法的隐式协定的一部分，调用者根本猜不到①。所以，**GetPhoneNumber** 方法会捕捉这两种异常类型，并抛出一个新的 **NameNotFoundException** 异常。
 
 ① 猜不到 **PhoneBook** 类的 **GetPhoneNumber** 方法要从文件中读取数据。——译注
@@ -947,16 +981,17 @@ internal sealed class PhoneBook {
 
 有时，开发人员之所以捕捉一个异常并抛出一个新异常，目的是在异常中添加额外的数据或上下文。然而，如果这是你唯一的目的，那么只需捕捉希望的异常类型，在异常对象的 **Data** 属性(一个键/值对的集合)中添加数据，然后重新抛出相同的异常对象：
 
-```csharp
-private static void SomeMethod(String filename) {
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod([string]$filename) {
     try {
-        // 这里随便做什么...
+        # 这里随便做什么...
     }
-    catch (IOException e) {
-        // 将文件名添加到 IOException 对象中
-        e.Data.Add("Filename", filename);
+    catch [System.IO.IOException] {
+        # 将文件名添加到 IOException 对象中
+        $_.Exception.Data.Add("Filename", $filename)
 
-        throw; // 重新抛出同一个异常对象，只是它现在包含额外的数据
+        throw # 重新抛出同一个异常对象，只是它现在包含额外的数据
     }
 }
 ```
@@ -1132,6 +1167,8 @@ public static Boolean TryParse(String s, NumberStyles style,
     IFormatProvider provider, out Int32 result);
 ```
 
+> 注：这是 `Int32.TryParse` 的方法签名，属于 API 声明，保留原样。PowerShell 中可直接调用：`$ok = [int]::TryParse($s, [ref]$result)`，其中 `$result` 需先赋值（如 `$result = 0`）。
+
 注意，这些方法都返回一个 **Boolean**，指明传给方法的 **String** 是否包含了能解析成 **Int32** 的字符。它们同时返回一个名为 **result** 的输出参数。如果方法返回 **true**，**result** 将包含字符串解析成 32 位整数的结果。返回 **false**，**result** 将包含 **0**，这时自然不应再执行任何代码去检查 **result**。
 
 有一点必须澄清：**TryXxx** 方法的 **Boolean** 返回值如果为 **false**，那么代表的只是一种错误。方法仍要为其他错误抛出异常。例如，如果为 **style** 参数传递的实参无效，**Int32** 的 **TryParse** 方法会抛出一个 **ArgumentException** 异常。另外，调用 **TryParse** 方法时仍有可能抛出一个 **OutOfMemoryException** 异常。
@@ -1173,6 +1210,8 @@ private sealed class Type1 {
 }
 ```
 
+> 注：PowerShell 类不支持静态构造器，也不能应用 `ReliabilityContract`；此示例依赖类型静态构造器的执行时机与 CER 语义，脚本无法等效。需要复现时请用 `Add-Type` 编译这段 C# 源码。
+
 运行上述代码得到以下输出：
 
 ```
@@ -1210,6 +1249,8 @@ public class Type2 {
 }
 ```
 
+> 注：`RuntimeHelpers.PrepareConstrainedRegions` 和 `ReliabilityContractAttribute` 是 .NET Framework 的 CER 机制，PowerShell 7（.NET Core）不提供同等的执行保证（可见上文关于 CER 的注），脚本也没有声明可靠性协定的语法，故保留原文说明 CER 的设计意图。
+
 运行这个版本得到以下输入：
 
 ```text
@@ -1239,6 +1280,8 @@ public sealed class ReliabilityContractAttribute : Attribute {
 public delegate void TryCode(Object userData);
 public delegate void CleanupCode(Object userData, Boolean exceptionThrown);
 ```
+
+> 注：`delegate` 声明属于类型定义，PowerShell 脚本不能声明委托类型；可改用 `[Func[object, void]]`、`[Action[object, bool]]` 等内建泛型委托，或用 `Add-Type` 编译原声明。
 
 最后，另一种保证代码得以执行的方式是使用 CriticalFinalizerObject 类，该类将在第二十一章“托管堆和垃圾回收”详细解释。
 

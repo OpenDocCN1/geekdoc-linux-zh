@@ -12,9 +12,9 @@
 
 数组是允许将多个数据项作为集合来处理的机制。CLR 支持一维、多维和交错数组（即数组构成的数组）。所有数组类型都隐式地从 **System.Array** 抽象类派生，后者又派生自 **System.Object**。这意味着数组始终是引用类型，是在托管堆上分配的。在应用程序的变量或字段中，包含的是对数组的引用，而不是包含数组本身的元素。下面的代码更清楚地说明了这一点：
 
-```csharp
-Int32[] myIntegers;          // 声明一个数组引用
-myIntegers = new Int32[100];  // 创建含有 100 个 Int32 的数组
+```powershell
+# 等效 PowerShell 写法
+$myIntegers = [int[]]::new(100)   # 创建含有 100 个 Int32 的数组，元素全部初始化为 0
 ```
 
 > 注：PowerShell 创建数组更简洁：`$myIntegers = [int[]]::new(100)` 会创建 100 个元素、全部为 0 的数组；`[int[]]::new(100)` 得到的长度固定，不能追加元素。常见的 `@(1, 2, 3)` 和 `1, 2, 3` 产生的是 `System.Object[]`，元素类型不固定；需要强类型数组时用 `[int[]]@(1, 2, 3)` 或 `[int[]](1, 2, 3)`。PowerShell 的 `+` 拼接数组会创建新数组，而不是修改原数组。
@@ -25,9 +25,10 @@ myIntegers = new Int32[100];  // 创建含有 100 个 Int32 的数组
 
 还可创建引用类型的数组：
 
-```csharp
-Control[] myControls;          // 声明一个数组引用
-myControls = new Control[50];  // 创建含有 50 个 Control 引用的数组
+```powershell
+# 等效 PowerShell 写法（Control 属 Windows Forms，需先加载程序集）
+Add-Type -AssemblyName System.Windows.Forms
+$myControls = [System.Windows.Forms.Control[]]::new(50)   # 创建含有 50 个 Control 引用的数组，全部为 $null
 ```
 
 第一行代码声明 **myControls** 变量，它能指向包含 **Control** 引用的一维数组。**myControls** 刚开始被设为 null，因为当时还没有分配数组。第二行代码分配了含有 50 个 Control 引用的数组，这些引用全被初始化为 null。由于 Control 是引用类型，所以创建数组只是创建了一组引用，此时没有创建实际的对象。这个内存块的地址被返回并保存到 myControls 变量中。
@@ -40,13 +41,14 @@ myControls = new Control[50];  // 创建含有 50 个 Control 引用的数组
 
 在图 16-1 中，Control 数组显示了执行以下各行代码之后的结果：
 
-```csharp
-myControls[1] = new Button();
-myControls[2] = new TextBox();
-myControls[3] = myControls[2];    // 两个元素引用同一个对象
-myControls[46] = new DataGrid();
-myControls[48] = new ComboBox();
-myControls[49] = new Button();
+```powershell
+# 等效 PowerShell 写法（Control 类需按上例先加载 System.Windows.Forms）
+$myControls[1] = [System.Windows.Forms.Button]::new()
+$myControls[2] = [System.Windows.Forms.TextBox]::new()
+$myControls[3] = $myControls[2]                                # 两个元素引用同一个对象
+$myControls[46] = [System.Windows.Forms.DataGrid]::new()
+$myControls[48] = [System.Windows.Forms.ComboBox]::new()
+$myControls[49] = [System.Windows.Forms.Button]::new()
 ```
 
 为了符合“公共语言规范”（Common Language Specification，CLS）的要求，所有数组都必须是 0 基数组（即最小索引为 0）。这样就可以用 C# 的方法创建数组，并将该数组的引用传给用其他语言（比如 Microsoft Visual Basic .NET）写的代码。此外，由于 0 基数组是最常用的数组（至少就目前而言），所以 Microsoft 花了很大力气优化性能。不过，CLR 确实支持非 0 基数组，只是不提倡使用。对于不介意稍许性能下降或者跨语言移植问题的读者，本章后文将介绍如何创建和使用非 0 基数组。
@@ -61,41 +63,45 @@ myControls[49] = new Button();
 
 不过，必要时也可使用多维数组。下面展示了几个多维数组的例子：
 
-```csharp
-// 创建一个二维数组，由 Double 值构成
-Double[,] myDoubles = new Double[10, 20];
+```powershell
+# 等效 PowerShell 写法
+# 创建一个二维数组，由 Double 值构成
+$myDoubles = [double[,]]::new(10, 20)
 
-// 创建一个三维数组，由 String 引用构成
-String[,,] myStrings = new String[5, 3, 10];
+# 创建一个三维数组，由 String 引用构成
+$myStrings = [string[,,]]::new(5, 3, 10)
 ```
 
 CLR 还支持交错数组（jagged array），即数组构成的数组。交错数组的性能和普通向量一样好。不过，访问交错数组的元素意味着必须进行两次或更多次数组访问。下例演示了如何创建一个多边形数组，每个多边形都由一个包含 **Point** 实例的数组构成：
 
-```csharp
-// 创建由多个 Point 数组构成的一维数组
-Point[][] myPolygons = new Point[3][];
+```powershell
+# 等效 PowerShell 写法（Point 为 System.Drawing.Point）
+# 创建由多个 Point 数组构成的一维数组
+$myPolygons = [System.Drawing.Point[][]]::new(3)
 
-// myPolygons[0] 引用一个含有 10 个 Point 实例的数组
-myPolygons[0] = new Point[10];
+# $myPolygons[0] 引用一个含有 10 个 Point 实例的数组
+$myPolygons[0] = [System.Drawing.Point[]]::new(10)
 
-// myPolygons[1] 引用一个含有 20 个 Point 实例的数组
-myPolygons[1] = new Point[20];
+# $myPolygons[1] 引用一个含有 20 个 Point 实例的数组
+$myPolygons[1] = [System.Drawing.Point[]]::new(20)
 
-// myPolygons[2] 引用一个含有 30 个 Point 实例的数组
-myPolygons[2] = new Point[30];
+# $myPolygons[2] 引用一个含有 30 个 Point 实例的数组
+$myPolygons[2] = [System.Drawing.Point[]]::new(30)
 
-// 显示第一个多边形中的 Point
-for (Int32 x = 0; x < myPolygons[0].Length; x++)
-    Console.WriteLine(myPolygons[0][x]);
+# 显示第一个多边形中的 Point
+for ($x = 0; $x -lt $myPolygons[0].Length; $x++) {
+    Write-Host $myPolygons[0][$x]
+}
 ```
 
 > **注意** CLR 会验证数组索引的有效性。换句话说，不能创建含有 100 个元素的数组（索引编号 0 到 99），然后试图访问索引为 -5 或 100 的元素。这样做会导致 **System.IndexOutOfRangeException** 异常。允许访问数组范围之外的内存会破坏类型安全性，而且会造成潜在的安全漏洞，所以 CLR 不允许可验证的代码这么做。通常，索引范围检查对性能的影响微乎其微，因为 JIT 编译器通常只在循环开始之前检查一次数组边界，而不是每次循环迭代都检查①。不过，如果仍然担心 CLR 索引检查造成的性能损失，可以在 C# 中使用 unsafe 代码来访问数组。16.7 节“数组的内部工作原理”将演示具体做法。
 
 ① 不要混淆“循环”和“循环迭代”。例如以下代码：
 
-```csharp
-Int32[] myArray = new Int32[100];
-for (Int32 i = 0; i < myArray.Length; i++) myArray[i] = i;
+```powershell
+# 等效 PowerShell 写法
+$myArray = [int[]]::new(100)
+for ($i = 0; $i -lt $myArray.Length; $i++) { $myArray[$i] = $i }
 ```
 
 “for 循环”总共要“循环迭代 100 次”，有时也简单地说“迭代 100 次”。——译注
@@ -104,8 +110,9 @@ for (Int32 i = 0; i < myArray.Length; i++) myArray[i] = i;
 
 前面展示了如何创建数组对象，如何初始化数组中的元素。C# 允许用一个语句做这两件事情。例如：
 
-```csharp
-String[] names = new String[] { "Aidan", "Grant" };
+```powershell
+# 等效 PowerShell 写法
+$names = [string[]]@('Aidan', 'Grant')
 ```
 
 > 注：PowerShell 没有数组初始化器和 `var`，直接写 `$names = @('Aidan', 'Grant')`；需要 `String[]` 类型时写 `[string[]]@('Aidan', 'Grant')`。PowerShell 的数组字面量对元素类型不做严格检查，`@('Aidan', 'Grant', 123)` 也是合法的 `Object[]`，只有显式加类型约束 `[string[]]` 时才会在赋值时进行转换。
@@ -114,40 +121,43 @@ String[] names = new String[] { "Aidan", "Grant" };
 
 在方法中声明局部变量来引用初始化好的数组时，可利用 C# 的“隐式类型的局部变量”功能来简化一下代码：
 
-```csharp
-// 利用 C# 的隐式类型的局部变量功能：
-var names = new String[] { "Aidan", "Grant" };
+```powershell
+# 等效 PowerShell 写法（PowerShell 无 var，变量类型由赋值决定）
+$names = [string[]]@('Aidan', 'Grant')
 ```
 
 编译器推断局部变量 **names** 是 **String[]** 类型，因为那是赋值操作符(=)右侧的表达式的类型。
 
 可利用 C# 的隐式类型的数组功能让编译器推断数组元素的类型。注意，下面这行代码没有在 **new** 和 **[]** 之间指定类型。
 
-```csharp
-// 利用 C# 的隐式类型的局部变量和隐式类型的数组功能：
-var names = new[] { "Aidan", "Grant", null };
+```powershell
+# 等效 PowerShell 写法：显式声明元素类型时，$null 也是合法的 String 元素
+$names = [string[]]@('Aidan', 'Grant', $null)
 ```
 
 在上一行中，编译器检查数组中用于初始化数组元素的表达式的类型，并选择所有元素最接近的共同基类来作为数组的类型。在本例中，编译器发现两个 **String** 和一个 **null**。由于 **null** 可隐式转型为任意引用类型(包括 **String**)，所以编译器推断应该创建和初始化一个由 **String** 引用构成的数组。但假如写以下代码：
 
-```csharp
-// 使用 C# 的隐式类型的局部变量和隐式类型的数组功能：(错误)
-var names = new[] { "Aidan", "Grant", 123 };
+```powershell
+# 等效 PowerShell 写法：PowerShell 不会报错（与 C# 的编译错误相反），
+# 会生成 Object[] 并把 123 装箱；要强类型数组须自己显式声明
+$names = @('Aidan', 'Grant', 123)
 ```
 
 编译器就会报错：**error CS0826: 找不到隐式类型数组的最佳类型。** 这是由于两个 **String** 和一个 **Int32** 的共同基类是 **Object**，意味着编译器不得不创建 **Object** 引用的一个数组，然后对 **123** 进行装箱，并让最后一个数组元素引用已装箱的、值为 **123** 的一个 **Int32**。C# 团队认为，隐式对数组元素进行装箱是一个代价高昂的操作，所以要在编译时报错。
 
 作为初始化数组时的一个额外的语法奖励，还可以像下面这样写：
 
-```csharp
-String[] names = { "Aidan", "Grant" };
+```powershell
+# 等效 PowerShell 写法（需要 String[] 时显式加类型约束）
+$names = [string[]]@('Aidan', 'Grant')
 ```
 
 注意，赋值操作符(=)右侧只给出了一个初始化器，没有 **new**，没有类型，没有 **[]**。这个语法可读性很好，但遗憾的是，C# 编译器不允许在这种语法中使用隐式类型的局部变量：
 
-```csharp
-// 试图使用隐式类型的局部变量(错误)
-var names = { "Aidan", "Grant" };
+```powershell
+# 等效 PowerShell 写法：{} 在 PowerShell 中是脚本块（ScriptBlock），不是数组，
+# 与 C# 此处的不合法数组初始化器语义不同（C# 会报编译错误 CS0820/CS0622）
+$names = { 'Aidan', 'Grant' }
 ```
 
 试图编译上面这行代码，编译器会报告以下两条消息。
@@ -159,13 +169,14 @@ var names = { "Aidan", "Grant" };
 
 最后讲一下“隐式类型的数组”如何与“匿名类型”和“隐式类型的局部变量”组合使用。10.1.4 节“匿名类型”已讨论了匿名类型以及如何保证类型同一性。下面来看看以下代码：
 
-```csharp
-// 使用 C# 的隐式类型的局部变量、隐式类型的数组和匿名类型功能：
-var kids = new[] { new { Name="Aidan" }, new { Name="Grant" } };
+```powershell
+# 等效 PowerShell 写法（用 [pscustomobject] 模拟匿名类型）
+$kids = @([pscustomobject]@{ Name = 'Aidan' }, [pscustomobject]@{ Name = 'Grant' })
 
-// 示例用法(用了另一个隐式类型的局部变量)：
-foreach (var kid in kids)
-    Console.WriteLine(kid.Name);
+# 示例用法：
+foreach ($kid in $kids) {
+    Write-Host $kid.Name
+}
 ```
 
 这个例子在一个数组初始化器中添加了两个用于定义数组元素的表达式。每个表达式都代表一个匿名类型(因为 new 操作符后没有提供类型名称)。由于两个匿名类型具有一致的结构(有一个 String 类型的 Name 字段)，所以编译器知道这两个对象具有相同的类型(类型的同一性)。然后，我使用了 C# 的“隐式类型的数组”功能(在 new 和 [] 之间不指定类型)，让编译器推断数组本身的类型，构造这个数组对象，并初始化它内部的两个引用，指向匿名类型的两个实例。最后，将对这个数组对象的引用赋给 kids 局部变量，该变量的类型通过 C# 的“隐式类型的局部变量”功能来推断。
@@ -183,37 +194,37 @@ Grant
 
 ① 注意，**Array.Copy** 方法执行的是浅拷贝。换言之，如果数组元素是引用类型，新数组将引用现有的对象。——译注
 
-```csharp
-// 创建二维 FileStream 数组
-FileStream[,] fs2dim = new FileStream[5, 10];
+```powershell
+# 等效 PowerShell 写法（PowerShell 不做编译期数组类型检查，赋值/转型行为与 C# 不同，
+# 下面用注释标注各行的实际结果）
+# 创建二维 FileStream 数组
+$fs2dim = [System.IO.FileStream[,]]::new(5, 10)
 
-// 隐式转型为二维 Object 数组
-Object[,] o2dim = fs2dim;
+# "隐式转型为二维 Object 数组"：PS 中变量无静态类型，$o2dim 仍引用 FileStream[,] 对象
+$o2dim = $fs2dim
 
-// 二维数组不能转型为一维数组，编译器报错：
-// error CS0030: 无法将类型"object[*,*]"转换为"System.IO.Stream[]"
-Stream[] s1dim = (Stream[]) o2dim;
+# 二维数组不能转型为一维数组：C# 编译报错 CS0030；
+# PS 中强制转型会抛 RankException（维度不匹配）
+# $s1dim = [System.IO.Stream[]]$o2dim
 
-// 显式转型为二维 Stream 数组
-Stream[,] s2dim = (Stream[,]) o2dim;
+# 显式转型为二维 Stream 数组：PS 中引用转换直接得到同一个对象
+$s2dim = [System.IO.Stream[,]]$o2dim
 
-// 显式转型为二维 String 数组
-// 能通过编译，但在运行时抛出 InvalidCastException 异常
-String[,] st2dim = (String[,]) o2dim;
+# 显式转型为二维 String 数组：C# 编译通过但运行时抛 InvalidCastException；
+# PS 中强制转型会抛异常（"Array was not a one-dimensional array"）
+# $st2dim = [string[,]]$o2dim
 
-// 创建一维 Int32 数组（元素是值类型）
-Int32[] i1dim = new Int32[5];
+# 创建一维 Int32 数组（元素是值类型）
+$i1dim = [int[]]::new(5)
 
-// 不能将值类型的数组转型为其他任何类型，编译器报错：
-// error CS0030: 无法将类型“int[]”转换为“object[]”
-Object[] o1dim = (Object[]) i1dim;
+# 值类型数组不能转型为其他任何类型：C# 编译报错 CS0030；
+# PS 中 [object[]] 会逐元素装箱，得到 Object[]
+# $o1dim = [object[]]$i1dim
 
-// 创建一个新数组，使用 Array.Copy 将源数组中的每个元素
-// 转型为目标数组中的元素类型，并把它们复制过去。
-// 下面的代码创建元素为引用类型的数组，
-// 每个元素都是对已装箱 Int32 的引用
-Object[] o1dim = new Object[i1dim.Length];
-Array.Copy(i1dim, o1dim, i1dim.Length);
+# 创建一个新数组，使用 Array.Copy 将源数组中的每个元素
+# 装箱为目标数组中的元素类型，并把它们复制过去
+$o1dim = [object[]]::new($i1dim.Length)
+[System.Array]::Copy($i1dim, $o1dim, $i1dim.Length)
 ```
 
 Array.Copy 的作用不仅仅是将元素从一个数组复制到另一个数组。Copy 方法还能正确处理内存的重叠区域，就像 C 的 memmove 函数一样。有趣的是，C 的 memcpy 函数反而不能正确处理重叠的内存区域。Copy 方法还能在复制每个数组元素时进行必要的类型转换，具体如下所述：
@@ -248,16 +259,19 @@ public static class Program {
 }
 ```
 
+> 注：此块定义了实现接口的值类型结构 `MyValueType` 和静态类 `Program`，属于类型声明，PowerShell 无法在脚本中声明 `struct`，也不能让自定义类型实现 `System.IComparable`。若只演示“值类型元素装箱后复制到接口数组”，可改用 .NET 现成的值类型：`$src = [int[]]::new(100); $dest = [System.IComparable[]]::new($src.Length); [System.Array]::Copy($src, $dest, $src.Length)`。`Array.Copy` 本身在 PowerShell 中可直接调用，装箱、拆箱、加宽与向下转型规则与 C# 相同。
+
 地球人都能猜得到，FCL 频繁运用了 Array 的 Copy 方法。
 
 有时确实需要将数组从一种类型转换为另一种类型。这种功能称为数组协变性（array covariance）。但在利用它时要清楚由此而来的性能损失。假设有以下代码：
 
-```csharp
-String[] sa = new String[100];
-Object[] oa = sa;       // oa 引用一个 String 数组
-oa[5] = "Jeff";        // 性能损失：CLR 检查 oa 的元素类型是不是 String；检查通过
-oa[3] = 5;             // 性能损失：CLR 检查 oa 的元素类型是不是 Int32；发现有错。
-                       // 抛出 ArrayTypeMismatchException 异常
+```powershell
+# 等效 PowerShell 写法（注意与 C# 的差异：PS 赋值时会先按数组元素类型转换）
+$sa = [string[]]::new(100)
+$oa = $sa             # $oa 引用一个 String 数组
+$oa[5] = 'Jeff'       # 赋字符串，CLR 检查通过
+$oa[3] = 5            # PS 会把 5 转成字符串 "5" 存入，不会抛 ArrayTypeMismatchException
+                      # 若要观察 CLR 自身的类型检查，可调用 $sa.SetValue(5, 3)，会抛 InvalidCastException
 ```
 
 在上述代码中，oa 变量被定义为 Object[] 类型，但实际引用的是一个 String[]。编译器允许代码将 5 放到数组元素中，因为 5 是 Int32，而 Int32 派生自 Object。虽然编译能通过，但 CLR 必须保证类型安全。对数组元素赋值时，它必须保证赋值的合法性。所以，CLR 必须在运行时检查数组包含的是不是 Int32 元素。在本例中，答案是否定的，所以不允许赋值；CLR 抛出 ArrayTypeMismatchException 异常。
@@ -276,8 +290,9 @@ oa[3] = 5;             // 性能损失：CLR 检查 oa 的元素类型是不是 
 
 像下面这样声明数组变量：
 
-```csharp
-FileStream[] fsArray;
+```powershell
+# 等效 PowerShell 写法：变量无静态类型，赋 $null 即可，无需“声明数组引用”
+$fsArray = $null
 ```
 
 CLR 会自动为 AppDomain 创建一个 FileStream[] 类型。该类型隐式派生自 System.Array 类型；因此，System.Array 类型定义的所有实例方法和属性都将由 FileStream[] 继承，使这些方法和属性能通过 fsArray 变量调用。这极大方便了数组处理，因为 System.Array 定义了许多有用的实例方法和属性，比如 Clone，CopyTo，GetLength，GetLongLength，GetLowerBound，GetUpperBound，Length，Rank 等。
@@ -304,8 +319,9 @@ Object
 
 所以，如果执行以下代码：
 
-```csharp
-FileStream[] fsArray;
+```powershell
+# 等效 PowerShell 写法：变量无静态类型，赋 $null 即可，无需“声明数组引用”
+$fsArray = $null
 ```
 
 那么当 CLR 创建 FileStream[] 类型时，会自动为这个类型实现 IEnumerable<FileStream>，ICollection<FileStream>和 IList<FileStream>接口。此外，FileStream[] 类型还会为基类型实现接口：IEnumerable<Stream>，IEnumerable<Object>，ICollection<Stream>，ICollection<Object>，IList<Stream>和 IList<Object>。由于所有这些接口都由 CLR 自动实现，因此这些接口转换在运行时总能成功，不需要在数组类型上再做任何声明。
@@ -314,11 +330,12 @@ FileStream[] fsArray;
 
 > 注：原文此处缺失了一小段正文（§16.5 的开头）。从上下文和章首目录看，本节讨论的是数组作为参数传递和作为返回值时的注意事项，下面的示例对应“方法返回数组时，应返回空数组而不是 null”这一要点。
 
-```csharp
-Appointment[] appointments = GetAppointmentsForToday();
-if (appointments != null) {
-    for (Int32 a = 0; a < appointments.Length; a++) {
-        // 对 appointments[a] 执行操作
+```powershell
+# 等效 PowerShell 写法
+$appointments = Get-AppointmentsForToday   # 示例：返回一个数组的方法
+if ($null -ne $appointments) {
+    for ($a = 0; $a -lt $appointments.Length; $a++) {
+        # 对 $appointments[$a] 执行操作
     }
 }
 ```
@@ -331,32 +348,25 @@ if (appointments != null) {
 
 以下代码演示了如何动态创建由 **System.Decimal** 值构成的二维数组。第一维代表 2005 到 2009(含)年份，第二维代表 1 到 4(含)季度。代码遍历动态数组中的所有元素。我本来可以将数组的上限硬编码到代码中，这样能获得更好的性能。但我最后决定使用 **System.Array** 的 **GetLowerBound** 和 **GetUpperBound** 方法来演示它们的用法：
 
-```csharp
-using System;
+```powershell
+# 等效 PowerShell 写法（非 0 基多维数组）
+# 我想创建一个二维数组 (2005..2009)[1..4]
+$lowerBounds = [int[]]@(2005, 1)
+$lengths = [int[]]@(5, 4)
+$quarterlyRevenue = [System.Array]::CreateInstance([decimal], $lengths, $lowerBounds)
 
-public sealed class DynamicArrays {
-    public static void Main() {
-        // 我想创建一个二维数组 (2005..2009)[1..4]
-        Int32[] lowerBounds = { 2005, 1 };
-        Int32[] lengths = { 5, 4 };
-        Decimal[,] quarterlyRevenue = (Decimal[,])
-            Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);
+'{0,4} {1,9} {2,9} {3,9} {4,9}' -f 'Year', 'Q1', 'Q2', 'Q3', 'Q4'
+$firstYear = $quarterlyRevenue.GetLowerBound(0)
+$lastYear = $quarterlyRevenue.GetUpperBound(0)
+$firstQuarter = $quarterlyRevenue.GetLowerBound(1)
+$lastQuarter = $quarterlyRevenue.GetUpperBound(1)
 
-        Console.WriteLine("{0,4} {1,9} {2,9} {3,9} {4,9}",
-            "Year", "Q1", "Q2", "Q3", "Q4");
-        Int32 firstYear = quarterlyRevenue.GetLowerBound(0);
-        Int32 lastYear = quarterlyRevenue.GetUpperBound(0);
-        Int32 firstQuarter = quarterlyRevenue.GetLowerBound(1);
-        Int32 lastQuarter = quarterlyRevenue.GetUpperBound(1);
-
-        for (Int32 year = firstYear; year <= lastYear; year++) {
-            Console.Write(year + " ");
-            for (Int32 quarter = firstQuarter; quarter <= lastQuarter; quarter++) {
-                Console.Write("{0,9:C} ", quarterlyRevenue[year, quarter]);
-            }
-            Console.WriteLine();
-        }
+for ($year = $firstYear; $year -le $lastYear; $year++) {
+    [Console]::Write("$year ")
+    for ($quarter = $firstQuarter; $quarter -le $lastQuarter; $quarter++) {
+        [Console]::Write('{0,9:C} ' -f $quarterlyRevenue.GetValue($year, $quarter))
     }
+    [Console]::WriteLine()
 }
 ```
 
@@ -381,44 +391,31 @@ CLR 内部实际支持两种不同的数组。
 
 可执行以下代码来实际地查看不同种类的数组(注释显示了输出)
 
-```csharp
-using System;
+```powershell
+# 等效 PowerShell 写法（输出与 C# 一致）
+# 创建一维的 0 基数组，不包含任何元素
+$a = [string[]]::new(0)
+$a.GetType().ToString()   # "System.String[]"
 
-public sealed class Program {
-    public static void Main() {
-        Array a;
+# 创建一维 0 基数组，不包含任何元素
+$a = [System.Array]::CreateInstance([string], [int[]]@(0), [int[]]@(0))
+$a.GetType().ToString()   # "System.String[]"
 
-        // 创建一维的 0 基数组，不包含任何元素
-        a = new String[0];
-        Console.WriteLine(a.GetType()); // "System.String[]"
+# 创建一维 1 基数组，其中不包含任何元素
+$a = [System.Array]::CreateInstance([string], [int[]]@(0), [int[]]@(1))
+$a.GetType().ToString()   # "System.String[*]" <-- 这个显示很奇怪，不是吗？
 
-        // 创建一维 0 基数组，不包含任何元素
-        a = Array.CreateInstance(typeof(String),
-            new Int32[] { 0 }, new Int32[] { 0 });
-        Console.WriteLine(a.GetType()); // "System.String[]"
+# 创建二维 0 基数组，其中不包含任何元素
+$a = [string[,]]::new(0, 0)
+$a.GetType().ToString()   # "System.String[,]"
 
-        // 创建一维 1 基数组，其中不包含任何元素
-        a = Array.CreateInstance(typeof(String),
-            new Int32[] { 0 }, new Int32[] { 1 });
-        Console.WriteLine(a.GetType()); // "System.String[*]" <-- 这个显示很奇怪，不是吗？
+# 创建二维 0 基数组，其中不包含任何元素
+$a = [System.Array]::CreateInstance([string], [int[]]@(0, 0), [int[]]@(0, 0))
+$a.GetType().ToString()   # "System.String[,]"
 
-        Console.WriteLine();
-
-        // 创建二维 0 基数组，其中不包含任何元素
-        a = new String[0, 0];
-        Console.WriteLine(a.GetType()); // "System.String[,]"
-
-        // 创建二维 0 基数组，其中不包含任何元素
-        a = Array.CreateInstance(typeof(String),
-            new Int32[] { 0, 0 }, new Int32[] { 0, 0 });
-        Console.WriteLine(a.GetType()); // "System.String[,]"
-
-        // 创建二维的 1 基数组，其中不包含任何元素
-        a = Array.CreateInstance(typeof(String),
-            new Int32[] { 0, 0 }, new Int32[] { 1, 1 });
-        Console.WriteLine(a.GetType()); // "System.String[,]"
-    }
-}
+# 创建二维的 1 基数组，其中不包含任何元素
+$a = [System.Array]::CreateInstance([string], [int[]]@(0, 0), [int[]]@(1, 1))
+$a.GetType().ToString()   # "System.String[,]"
 ```
 
 每个 **Console.WriteLine** 语句后都有一条指出其输出的注释。对于一维数组，0 基数组显示的类型名称是 **System.String[]**，但 1 基数组显示的是 **System.String[*]**。* 符号表明 CLR 知道该数组不是 0 基的。注意，C#不允许声明 `String[*]` 类型的变量，因此不能使用 C#语法来访问一维非 0 基数组。尽管可以调用 Array 的 `GetValue` 和 `SetValue` 方法来访问这种数组的元素，但速度会比较慢，因为有方法调用的开销。
@@ -427,16 +424,11 @@ public sealed class Program {
 
 访问一维 0 基数组的元素比访问非 0 基一维或多维数组的元素稍快。这是多方面的原因造成的。首先，有一些特殊 IL 指令，比如 **newarr、ldelem、ldelema、ldlen** 和 **stelem**，用于处理一维 0 基数组，这些特殊 IL 指令会导致 JIT 编译器生成优化代码。例如，JIT 编译器生成的代码假定数组是 0 基的，所以在访问元素时不需要从指定索引中减去一个偏移量。其次，一般情况下，JIT 编译器能将索引范围检查代码从循环中拿出，导致它只执行一次。以下面这段常见的代码为例：
 
-```csharp
-using System;
-
-public static class Program {
-    public static void Main() {
-        Int32[] a = new Int32[5];
-        for(Int32 index = 0; index < a.Length; index++) {
-            // 对 a[index] 执行操作
-        }
-    }
+```powershell
+# 等效 PowerShell 写法
+$a = [int[]]::new(5)
+for ($index = 0; $index -lt $a.Length; $index++) {
+    # 对 $a[$index] 执行操作
 }
 ```
 
@@ -512,6 +504,8 @@ public static class Program {
     }
 }
 ```
+
+> 注：此块同时包含普通安全访问、交错数组访问和 `unsafe`/`fixed` 指针访问。PowerShell 没有 `unsafe`、`fixed`、指针语法，因此整块只能保留 C#。前两种访问方式的循环可用 PowerShell 直接写出（`$a[$x, $y]`、`$a[$x][$y]`），性能差异也依然存在；`Unsafe2DimArrayAccess` 需在 C# 中用 `/unsafe` 编译后经 `Add-Type` 调用，不应在普通脚本中尝试。
 
 **Unsafe2DimArrayAccess** 方法标记了 **unsafe** 修饰符，这是使用 C# 的 fixed 语句所必须的。编译这段代码要求在运行 C# 编译器时指定 `/unsafe` 开关，或者在 Microsoft Visual Studio 的项目属性页的“生成”选项卡中勾选“允许不安全代码”。
 

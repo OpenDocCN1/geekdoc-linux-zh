@@ -71,6 +71,8 @@ CLR 允许将特性应用于可在文件的元数据中表示的几乎任何东�
 [DllImport("Kernel32", CharSet = CharSet.Auto, SetLastError = true)]
 ```
 
+> 注：这是 C# 的特性应用语法，只在编译期写入元数据，PowerShell 没有对应语句；需要带 `DllImport` 的方法时，必须把整段源码交给 `Add-Type -TypeDefinition` 编译。
+
 这一行代码的语法表面上看很奇怪，因为调用构造器时永远不会使用这样的语法。查阅 DllImportAttribute 类的文档，会发现它的构造器要求接受一个 String 参数。在这个例子中，"Kernel32" 将传给这个参数。构造器的参数称为定位参数(positional parameter)，而且是强制性的；也就是说，应用特性时必须指定参数。
 
 那么，另外两个“参数”是什么呢？这种特殊的语法允许在构造好 DllImportAttribute 对象后设置对象的任何公共字段或属性。在这个例子中，将 "Kernel32" 传给构造器并构造好 DllImportAttribute 对象之后，对象的公共实例字段 CharSet 和 SetLastError 分别设为 CharSet.Auto 和 true。用于设置字段或属性的“参数”称为命名参数(named parameter)。这种参数是可选的，因为在应用特性的实例时不一定要指定参数。稍后会解释是什么导致了实际地构造 DllImportAttribute 类的实例。
@@ -84,6 +86,8 @@ CLR 允许将特性应用于可在文件的元数据中表示的几乎任何东�
 [FlagsAttribute()][Serializable()]
 ```
 
+> 注：以上都是 C# 应用同一组特性的等价写法，PowerShell 无法把特性“应用”到类型或成员上，只能读取已有元数据中的特性（见本章开头注）。
+
 ### 18.2　定义自己的特性类
 
 现在已经知道特性是从 System.Attribute 派生的一个类的实例，也知道了如何应用特性。接着要研究如何定义定制特性类。假定你是 Microsoft 的员工，负责为枚举类型添加位标志(bit flag)支持，那么要做的第一件事就是定义一个 FlagsAttribute 类：
@@ -96,6 +100,8 @@ namespace System {
     }
 }
 ```
+
+> 注：PowerShell 脚本不能声明继承 `System.Attribute` 的特性类，也没有 `namespace` 声明语法；要定义此类，需用 `Add-Type -TypeDefinition` 编译 C# 源码。
 
 注意，FlagsAttribute 类从 Attribute 继承。这使 FlagsAttribute 类成为符合 CLS 规范的定制特性。此外，注意类名有 Attribute 后缀；这是为了保持与标准的兼容性，但这并不是必须的。最后，所有非抽象特性至少要包含一个公共构造器。上述代码中的 FlagsAttribute 构造器非常简单，不获取任何参数，也不做任何事情。
 
@@ -114,6 +120,8 @@ namespace System {
     }
 }
 ```
+
+> 注：`AttributeUsage` 同样是编译期特性，脚本既不能声明带该特性的类型，也不能应用它；只能在 `Add-Type` 的 C# 源码里使用。
 
 新版本将 AttributeUsageAttribute 的实例应用于特性。毕竟，特性类型本质上还是类，而类是可以应用特性的。AttributeUsage 特性是一个简单的类，可利用它告诉编译器定制特性的合法应用范围。所有编译器都内建了对该特性的支持，并会在定制特性应用于无效目标时报警。在这个例子中，AttributeUsage 特性指出 Flags 特性的实例只能应用于枚举类型的目标。
 
@@ -158,6 +166,8 @@ public sealed class AttributeUsageAttribute : Attribute {
 }
 ```
 
+> 注：这是 FCL 中 `AttributeUsageAttribute` 的 C# 源码/API 结构，保留用于说明其字段和构造器；PowerShell 中可通过 `[System.AttributeUsageAttribute]` 反射查看，但不能用脚本重新定义该类型。
+
 如你所见，**AttributeUsageAttribute** 类有一个公共构造器，它允许传递位标志(bit flag)来指明特性的合法应用范围。**System.AttributeTargets** 枚举类型在 FCL 中是像下面这样定义的：
 
 ```csharp
@@ -185,6 +195,8 @@ public enum AttributeTargets {
 }
 ```
 
+> 注：`AttributeTargets` 是 FCL 的 `[Flags]` 枚举声明，属于类型定义；PowerShell 可用 `[System.AttributeTargets]` 直接访问该枚举，但脚本自身无法声明带 `[Flags]` 的枚举（需 `Add-Type`）。
+
 **AttributeUsageAttribute** 类提供了两个附加的公共属性，即 **AllowMultiple** 和 **Inherited**。可在向特性类应用特性时选择设置这两个属性。
 
 大多数特性多次应用于同一个目标是没有意义的。例如，将 **Flags** 或 **Serializable** 特性多次应用于同一个目标不会有任何好处。事实上，编译如下所示的代码：
@@ -195,6 +207,8 @@ internal enum Color {
     Red
 }
 ```
+
+> 注：同一特性重复应用在 C# 中是编译期错误（CS0579），属于编译器/元数据行为；PowerShell 无法应用特性，自然也无法复现该错误。
 
 编译器会报告以下错误：
 
@@ -224,6 +238,8 @@ internal class DerivedType : BaseType
     protected override void DoSomething() { }
 }
 ```
+
+> 注：该示例用类声明演示 `AttributeUsage(Inherited=true)` 的效果，PowerShell 不能声明特性类、也不能应用特性，但可以用 `[DerivedType].GetCustomAttributes($true)` 观察已有类型上的可继承特性。
 
 在上述代码中，DerivedType 及其 DoSomething 方法都被视为 Tasty，因为 TastyAttribute 类被标记为可继承。但 DerivedType 不可序列化，因为 FCL 的 SerializableAttribute 类被标记为不可继承。
 
@@ -261,6 +277,8 @@ internal sealed class SomeAttribute : Attribute {
 internal sealed class SomeType {
 }
 ```
+
+> 注：该特性构造器接受 `Type[]` 等参数，只能在 C# 源码中声明和应用；PowerShell 中若要构造 `Type` 参数，直接用类型字面量（如 `[System.Math]`），但整个 `SomeAttribute` 类型仍需 `Add-Type` 定义。
 
 逻辑上，当编译器检测到向目标元素应用了定制特性时，会调用特性类的构造器，向它传递任何指定的参数，从而构造特性类的实例。然后，编译器采用增强型构造器语法所指定的值，对任何公共字段和属性进行初始化。构造并初始化好定制特性类的对象之后，编译器将它的状态序列化到目标元素的元数据表记录项中。
 
@@ -389,6 +407,8 @@ public sealed class Program {
     }
 }
 ```
+
+> 注：该程序把多种特性应用于程序集、类型和方法，PowerShell 不能应用这些特性，因此无法原样运行；其中反射遍历成员的部分可以改写为脚本，例如 `[Program].GetTypeInfo().DeclaredMembers`，但被检查的特性元数据需由 `Add-Type` 编译的 C# 类型提供。
 
 编译并运行上述应用程序得到以下输出：
 
@@ -544,6 +564,8 @@ public sealed class Program
 }
 ```
 
+> 注：`AccountsAttribute` 及其 `Match`/`Equals` 重写属于特性类型定义，PowerShell 无法声明；匹配逻辑本身可以用脚本函数实现（比较两个位标志的包含关系），但要在类型上应用该特性仍需 `Add-Type`。
+
 ```text
 ChildAccount types can NOT write checks.
 AdultAccount types can write checks.
@@ -635,6 +657,8 @@ public sealed class Program
     }
 }
 ```
+
+> 注：脚本无法向 `Program` 类型应用这些特性，故不能复现完整示例；但 `[System.Reflection.CustomAttributeData]::GetCustomAttributes($member)` 在 PowerShell 中可直接调用，用来读取现有类型/成员的特性构造器参数和命名参数（参见上文注）。
 
 编译并运行上述应用程序，将获得以下输出：
 

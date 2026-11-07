@@ -45,28 +45,32 @@ public class List<T> : IList<T>, ICollection<T>, IEnumerable<T>,
 }
 ```
 
+> 注：这是 `List<T>` 的类/方法签名（类型声明），保留原样。PowerShell 不能定义泛型类，直接消费封闭类型即可，例如 `[System.Collections.Generic.List[datetime]]`。
+
 泛型 List 类的设计者紧接在类名后添加了一个 \<T\>，表明它操作的是一个未指定的数据类型。定义泛型类型或方法时，为类型指定的任何变量（比如 T）都称为类型参数（type parameter）。T 是变量名，源代码能使用数据类型的任何地方都能使用 T。例如，在 List 类定义中，T 被用于方法参数（Add 方法接受一个 T 类型的参数）和返回值（ToArray 方法返回 T 类型的一维数组）。另一个例子是索引器方法（在 C# 中称为 this）。索引器有一个 get 访问器方法，它返回 T 类型的值；一个 set 访问器方法，它接受 T 类型的参数。由于凡是能指定一个数据类型的地方都能使用 T 变量，所以在方法内部定义一个局部变量时，或者在类中定义字段时，也可以使用 T。
 
 > **注意**　根据 Microsoft 的设计原则，泛型参数变量要么称为 T，要么至少以大写 T 开头（如 TKey 和 TValue）。大写 T 代表类型（Type），就像大写 I 代表接口（Interface）一样，比如 IComparable。
 
 定义好泛型 List\<T\> 类型之后，其他开发人员为了使用这个泛型算法，要指定由算法操作的具体数据类型。使用泛型类型或方法时指定的具体数据类型称为类型实参（type argument）。例如，开发人员可指定一个 DateTime 类型实参来使用 List 算法。以下代码对此进行了演示：
 
-```csharp
-private static void SomeMethod() {
-    // 构造一个 List 来操作 DateTime 对象
-    List<DateTime> dtList = new List<DateTime>();
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod {
+    # 构造一个 List 来操作 DateTime 对象
+    $dtList = [System.Collections.Generic.List[datetime]]::new()
 
-    // 向列表添加一个 DateTime 对象
-    dtList.Add(DateTime.Now);                  // 不进行装箱
+    # 向列表添加一个 DateTime 对象
+    $dtList.Add([datetime]::Now)                  # 不进行装箱
 
-    // 向列表添加另一个 DateTime 对象
-    dtList.Add(DateTime.MinValue);             // 不进行装箱
+    # 向列表添加另一个 DateTime 对象
+    $dtList.Add([datetime]::MinValue)             # 不进行装箱
 
-    // 尝试向列表中添加一个 String 对象
-    dtList.Add("1/1/2004");                    // 编译时错误
+    # 尝试向列表中添加一个 String 对象
+    # $dtList.Add('1/1/2004')                     # 编译时错误 -> PowerShell 中没有编译期检查，
+    #                                             # 取消注释会在运行时抛方法调用异常
 
-    // 从列表提取一个 DateTime 对象
-    DateTime dt = dtList[0];                   // 不需要转型
+    # 从列表提取一个 DateTime 对象
+    $dt = $dtList[0]                              # 不需要转型
 }
 ```
 
@@ -136,6 +140,8 @@ internal sealed class OperationTimer : IDisposable {
 }
 ```
 
+> 注：本块含 `internal sealed class OperationTimer : IDisposable` 类定义（且本块开头在原文中已被截断），类声明按规则保留。PowerShell 做同类性能基准时无需自写 IDisposable 辅助类：循环耗时可用 `Measure-Command`，GC 次数可读 `[GC]::CollectionCount(0)`。另外，PowerShell 没有 `using` 语句，资源释放请用 `try/finally`。
+
 在我的机器上编译并运行这个程序（打开优化开关），得到以下输出：
 
 ```text
@@ -181,22 +187,23 @@ public abstract class Array : ICloneable, IList, ICollection, IEnumerable,
 }
 ```
 
+> 注：这是 `System.Array` 的静态泛型方法签名声明，必须保留原样。PowerShell 不能声明类型或泛型方法，但可直接调用这些已存在的泛型方法，并用方括号写出类型实参（见下段）；日常脚本也可用 `Sort-Object` 等 cmdlet 替代。
+
 以下代码展示了如何使用其中一些方法：
 
 > 注：PowerShell 5.0 起支持在调用泛型方法时用方括号显式写出类型实参，例如 `[System.Array]::Sort[byte]($byteArray)`。注意实参类型必须与写出的类型实参一致：若数组是 `[byte[]]` 却写成 `[System.Array]::Sort[int]($byteArray)`，PowerShell 不会报错，而是找不到匹配重载后静默跳过（数组保持原序）。日常脚本更常用 `Sort-Object` 等 cmdlet。
 
-```csharp
-public static void Main() {
-    // 创建并初始化字节数组
-    Byte[] byteArray = new Byte[] { 5, 1, 4, 2, 3 };
+```powershell
+# 等效 PowerShell 写法（PowerShell 5 起可用 [System.Array]::Sort[T] 显式写出类型实参）
+# 创建并初始化字节数组
+$byteArray = [byte[]](5, 1, 4, 2, 3)
 
-    // 调用 Byte[] 排序算法
-    Array.Sort<Byte>(byteArray);
+# 调用 Byte[] 排序算法
+[System.Array]::Sort[byte]($byteArray)
 
-    // 调用 Byte[] 二分搜索算法
-    Int32 i = Array.BinarySearch<Byte>(byteArray, 1);
-    Console.WriteLine(i); // 显示“0”
-}
+# 调用 Byte[] 二分搜索算法
+$i = [System.Array]::BinarySearch[byte]($byteArray, [byte]1)
+Write-Output $i  # 显示“0”
 ```
 
 ### 12.2 泛型基础结构
@@ -272,6 +279,8 @@ public static class Program {
 }
 ```
 
+> 注：本块定义并使用了自定义泛型类型 `DictionaryStringKey<TValue>`，还用了 `typeof(Dictionary<,>)` 这类开放类型字面值。PowerShell 脚本无法声明泛型类型，也无法复刻该继承结构，故保留原样；开放类型/封闭类型在 PowerShell 中的写法见下文注记。
+
 编译并运行上述代码得到以下输出：
 
 ```
@@ -303,6 +312,8 @@ internal sealed class GenericTypeThatRequiresAnEnum<T> {
 }
 ```
 
+> 注：这是泛型类型声明（靠静态构造器在运行时校验类型实参）。PowerShell 不能声明泛型类和静态构造器，因此无法等效书写；脚本若要保证“仅枚举类型”，只能在获得类型对象后手工检查 `[type]::IsEnum`，或改用 `Add-Type` 编译这段 C#。
+
 CLR 提供了名为**约束**的功能，可以更好地指定有效的类型实参。本章稍后会详细讨论。遗憾的是，约束无法将类型实参限制为“仅枚举类型”。正是因为这个原因，所以上例需要用静态构造器来保证类型是一个枚举类型。
 
 #### 12.2.2 泛型类型和继承
@@ -329,6 +340,8 @@ internal sealed class Node<T> {
     }
 }
 ```
+
+> 注：`Node<T>` 是自定义泛型类型声明，PowerShell 类不支持类型参数，无法等效定义。下面的链表用法都依赖这个类型；脚本中若需要泛型链表，可使用现成的 `[System.Collections.Generic.LinkedList[T]]`，或先用 `Add-Type` 编译本段 C# 再调用。
 
 那么可以写代码来构造链表，例如：
 
@@ -373,6 +386,8 @@ internal sealed class TypedNode<T> : Node {
 }
 ```
 
+> 注：`Node` 与 `TypedNode<T>` 都是类型声明，后者还是泛型类型，PowerShell 无法声明泛型类，故保留原样。下方创建混合类型链表的用法同样依赖这两个类型，无法直接在脚本中运行；可用 `Add-Type` 编译后使用。
+
 现在可以写代码来创建一个链表，其中每个节点都是不同的数据类型。例如：
 
 ```csharp
@@ -388,8 +403,9 @@ private static void DifferentDataLinkedList() {
 
 泛型语法有时会将开发人员弄糊涂，因为源代码中可能散布着大量“<”和“>”符号，这有损可读性。为了对语法进行增强，有的开发人员定义了一个新的非泛型类类型，它从一个泛型类型派生，并指定了所有类型实参。例如，为了简化下面这样的代码：
 
-```csharp
-List<DateTime> dt1 = new List<DateTime>();
+```powershell
+# 等效 PowerShell 写法
+$dt1 = [System.Collections.Generic.List[datetime]]::new()
 ```
 
 一些开发人员可能首先定义下面这样的类：
@@ -400,16 +416,23 @@ internal sealed class DateTimeList : List<DateTime> {
 }
 ```
 
+> 注：这是仅为简化书写而派生的类型声明。PowerShell 也可用 `class DateTimeList : System.Collections.Generic.List[datetime] {}` 定义等价类，但单纯为简写而新建类型同样会破坏类型同一性（见下文的 PowerShell 对照）。
+
 然后就可以简化创建列表的代码（没有了“<”和“>”符号）：
 
-```csharp
-DateTimeList dt1 = new DateTimeList();
+```powershell
+# 等效 PowerShell 写法（用 PowerShell 类模拟上面那个仅用于简写的派生类）
+class DateTimeList : System.Collections.Generic.List[datetime] { }
+
+$dt1 = [DateTimeList]::new()
 ```
 
 这样做表面上是方便了（尤其是要为参数、局部变量和字段使用新类型的时候），但是，绝对不要单纯出于增强源码可读性的目的来定义一个新类。这样会丧失类型同一性（identity）和相等性（equivalence），如以下代码所示：
 
-```csharp
-Boolean sameType = (typeof(List<DateTime>) == typeof(DateTimeList));
+```powershell
+# 等效 PowerShell 写法（假设上面的 DateTimeList 类已定义）
+# PowerShell 的类型字面值本身就是 System.Type，可直接用 -eq 比较
+$sameType = ([System.Collections.Generic.List[datetime]] -eq [DateTimeList])
 ```
 
 上述代码运行时，**sameType** 会被初始化为 **false**，因为比较的是两个不同类型的对象。这也意味着如果方法的原型接受一个 **DateTimeList**，那么不可以将一个 `List<DateTime>` 传给它。然而，如果方法的原型接受一个 `List<DateTime>`，那么可以将一个 **DateTimeList** 传给它，因为 **DateTimeList** 从 `List<DateTime>` 派生。开发人员很容易被所有这一切搞糊涂。
@@ -420,27 +443,24 @@ Boolean sameType = (typeof(List<DateTime>) == typeof(DateTimeList));
 using DateTimeList = System.Collections.Generic.List<System.DateTime>;
 ```
 
+> 注：这是 C# 的“类型别名”指令（编译期替换），PowerShell 没有等价语法（只有 `using namespace` / `using assembly`，不能给类型起别名）。脚本中直接使用完整的封闭泛型类型字面值即可，例如 `[System.Collections.Generic.List[datetime]]`。
+
 **using** 指令实际定义的是名为 **DateTimeList** 的符号。代码编译时，编译器将代码中出现的所有 **DateTimeList** 替换成 `System.Collections.Generic.List<System.DateTime>`。这样就允许开发人员使用简化的语法，同时不影响代码的实际含义。所以，类型的同一性和相等性得到了维持。现在，执行下面这行代码时，**sameType** 会被初始化为 **true**：
 
-```csharp
-Boolean sameType = (typeof(List<DateTime>) == typeof(DateTimeList));
+```powershell
+# 等效 PowerShell 写法（PowerShell 没有 using 类型别名，
+# 直接比较同一个封闭类型字面值，结果同样为 True）
+$sameType = ([System.Collections.Generic.List[datetime]] -eq [System.Collections.Generic.List[datetime]])
 ```
 
 另外，可以利用 C# 的“隐式类型局部变量”功能，让编译器根据表达式的类型来推断方法的局部变量的类型：
 
-```csharp
-using System;
-using System.Collections.Generic;
-...
-internal sealed class SomeType {
-    private static void SomeMethod () {
-
-        // 编译器推断出 dt1 的类型
-        // 是 System.Collections.Generic.List<System.DateTime>
-        var dt1 = new List<DateTime>();
-        ...
-    }
-}
+```powershell
+# 等效 PowerShell 写法
+# PowerShell 变量本身是动态类型，不需要 var；
+# 赋值后 $dt1 引用的就是 System.Collections.Generic.List[System.DateTime]
+$dt1 = [System.Collections.Generic.List[datetime]]::new()
+# ...
 ```
 
 #### 12.2.4 代码爆炸
@@ -464,6 +484,8 @@ public interface IEnumerator<T> : IDisposable, IEnumerator {
     T Current { get; }
 }
 ```
+
+> 注：本小节展示的是泛型接口声明及其实现类型。PowerShell 脚本不能声明接口，也不能声明带类型参数的类；脚本里的 `class` 可以指定封闭类型实参实现已有泛型接口（如 `System.IComparable[int]`），但像 `ArrayEnumerator<T>` 这种开放泛型实现只能用 `Add-Type` 编译 C# 得到。
 
 下面的示例类型实现了上述泛型接口，而且指定了类型实参。注意，**Triangle** 对象可枚举一组 **Point** 对象。还要注意，**Current** 属性具有 **Point** 数据类型：
 
@@ -503,6 +525,8 @@ CLR 支持泛型委托，目的是保证任何类型的对象都能以类型安�
 public delegate TReturn CallMe<TReturn, TKey, TValue>(TKey key, TValue value);
 ```
 
+> 注：`delegate` 是类型声明，PowerShell 脚本不能自定义委托类型。脚本中的回调通常直接用 `scriptblock`，或使用 FCL 预定义的 `[System.Action]` / `[System.Func[...]]` 委托；下面的编译器生成类也只是 CLR 内部表示，无需在脚本中书写。
+
 编译器会将它转换成如下所示的类：
 
 ```csharp
@@ -521,7 +545,7 @@ public sealed class CallMe<TReturn, TKey, TValue> : MulticastDelegate {
 
 委托的每个泛型类型参数都可标记为协变量或逆变量①。利用这个功能，可将泛型委托类型的变量转换为相同的委托类型（但泛型参数类型不同）。泛型类型参数可以是以下任何一种形式。
 
-> 注：`in`/`out` 方差标记只能出现在 C#、Visual Basic 等语言的类型声明中，PowerShell 脚本无法声明带方差参数的委托或接口。对脚本作者而言，这些规则只体现在"能否把某个委托或接口赋给另一个类型的变量"上；赋值是否成立仍由 CLR 校验，脚本本身不写方差标记。
+> 注：`in`/`out` 方差标记只能出现在 C#、Visual Basic 等语言的类型声明中，PowerShell 脚本无法声明带方差参数的委托或接口。对脚本作者而言，这些规则只体现在"能否把某个委托或接口赋给另一个类型的变量"上；赋值是否成立仍由 CLR 校验，脚本本身不写方差标记。本节下面的 `Func<in T, out TResult>`、`SomeDelegate<in T>`、`IEnumerator<in T>` 等声明，以及依赖编译期方差检查的 `Count` 示例，都因同一原因保留为 C#；脚本可直接使用现成的 `[System.Func[...]]`、`[System.Collections.Generic.IEnumerable[...]]` 等类型。
 
 - **不变量（invariant）** 意味着泛型类型参数不能更改。到目前为止，你在本章看到的全是不变量形式的泛型类型参数。
 - **逆变量（contravariant）** 意味着泛型类型参数可以从一个类更改为它的某个派生类。在 C# 中是用 **in** 关键字标记逆变量形式的泛型类型参数。逆变量泛型类型参数只出现在输入位置，比如作为方法的参数。
@@ -537,15 +561,17 @@ public delegate TResult Func<in T, out TResult>(T arg);
 
 所以，如果像下面这样声明一个变量：
 
-```csharp
-Func<Object, ArgumentException> fn1 = null;
+```powershell
+# 等效 PowerShell 写法（用类型约束声明变量）
+[System.Func[object, System.ArgumentException]]$fn1 = $null
 ```
 
 就可将它转型为另一个泛型类型参数不同的 **Func** 类型：
 
-```csharp
-Func<String, Exception> fn2 = fn1; // 不需要显式转型
-Exception e = fn2("");
+```powershell
+# 等效 PowerShell 写法
+[System.Func[string, System.Exception]]$fn2 = $fn1  # 不需要显式转型
+$e = $fn2.Invoke('')  # 注意：$fn1 为 $null，此处会抛 NullReferenceException（原 C# 示例同样如此）
 ```
 
 上述代码的意思是：**fn1** 变量引用一个方法，获取一个 **Object**，返回一个 **ArgumentException**。而 **fn2** 变量引用另一个方法，获取一个 **String**，返回一个 **Exception**。由于可将一个 **String** 传给期待 **Object** 的方法（因为 **String** 从 **Object** 派生），而且由于可以
@@ -610,7 +636,7 @@ Int32 c = Count(new[] { "Grant" });
 
 定义泛型类、结构或接口时，类型中定义的任何方法都可引用类型指定的类型参数。类型参数可作为方法参数、方法返回值或方法内部定义的局部变量的类型使用。然而，CLR 还允许方法指定它自己的类型参数。这些类型参数也可作为参数、返回值或局部变量的类型使用。
 
-> 注：PowerShell 脚本不能定义泛型方法（脚本里的 function 不带类型参数），但可以调用 .NET 的泛型方法。PowerShell 5 之后，调用泛型方法需要结合 `[System.Reflection.MakeGenericMethod]` 等反射手段，或者先用类型字面值将方法名称限定为具体封闭类型；也可以用 `[System.Collections.Generic.List[string]]` 这类封闭类型的实例方法。
+> 注：PowerShell 脚本不能定义泛型方法（脚本里的 function 不带类型参数），也不能定义带类型参数的类，但可以调用 .NET 的泛型方法。PowerShell 5 之后，调用泛型方法可写成 `[System.Array]::Sort[int](...)` 这样的显式类型实参形式，或借助 `[System.Reflection.MethodInfo]::MakeGenericMethod()` 反射构造封闭方法。本节下面的 `GenericType<T>`、`Swap<T>`、`Interlocked` 泛型方法以及 `Display<T>` 等代码块都是类型/方法声明，必须保留为 C#；脚本能做的只是调用已封闭的 .NET 泛型成员。
 
 在下例中，类型定义了一个类型参数，方法也定义了自己的：
 
@@ -654,6 +680,8 @@ private static void CallingSwap() {
     Console.WriteLine("s1={0}, s2={1}", s1, s2);
 }
 ```
+
+> 注：这段调用依赖上面的泛型方法 `Swap<T>`，PowerShell 不能声明泛型方法，因此保留原样。若只需演示“按引用交换”，脚本可用非泛型 `function Swap([ref]$a, [ref]$b)` 配合 `[ref]$n1` 调用；类型安全与泛型特化则无法在脚本层复刻。
 
 为获取 **out** 和 **ref** 参数的方法使用泛型类型很有意思，因为作为 **out/ref** 实参传递的变量必须具有与方法参数相同的类型，以防止损害类型安全性。涉及 **out/ref** 参数的这个问题已在 9.3 节“以传引用的方式向方法传递参数”讨论。事实上，**Interlocked** 类的 **Exchange** 和 **CompareExchange** 方法就是因为这个原因才提供泛型重载的①（where 子句将在本章稍后的 12.8 节“可验证性和约束”讨论）。
 
@@ -706,6 +734,8 @@ Display(123);                    // 调用 Display<T>(T)
 Display<String>("Aidan");       // 调用 Display<T>(T)
 ```
 
+> 注：这三行依赖 C# 编译期的重载决策（先精确匹配、再泛型匹配）。PowerShell 的普通 `function` 不支持按参数类型重载，同名函数以后定义者为准；要复现该行为，脚本需在函数体内按参数类型分支，或直接把两个逻辑写成不同名称的函数。
+
 在第一个调用中，编译器可调用接受一个 String 参数的 Display 方法，也可调用泛型 Display 方法(将 T 替换成 String)。但 C#编译器的策略是先考虑较明确的匹配，再考虑泛型匹配。所以，它会生成对非泛型 Display 方法的调用，也就是接受一个 String 参数的版本。对于第二个调用，编译器不能调用接受 String 参数的非泛型 Display 方法，所以必须调用泛型 Display 方法。顺便说一句，编译器优先选择较明确的匹配，开发人员应对此感到庆幸。假如编译器优先选择泛型方法，那么由于泛型 Display 方法会再次调用 Display(但传递由 ToString 返回的一个 String)，所以会造成无限递归。
 
 对 Display 的第三个调用明确指定了泛型类型实参 String。这告诉编译器不要尝试推断类型实参。相反，应使用显式指定的类型实参。在本例中，编译器还假定我肯定是想调用泛型 Display 方法，所以会毫不犹豫地调用泛型 Display 方法。在内部，泛型 Display 方法会为传入的字符串调用 ToString 方法，然后将转换所得的字符串传给非泛型 Display 方法。
@@ -722,7 +752,7 @@ C#之所以不允许这些成员指定自己的泛型类型参数，是因为 Mi
 
 编译泛型代码时，C#编译器会进行分析，确保代码适用于当前已有或将来可能定义的任何类型。看看下面这个方法：
 
-> 注：PowerShell 脚本没有编译期，因此不存在"编译器会保证在编译时对 T 进行约束检查"的环节。`.NET` 泛型类型/方法在实例化时仍由 CLR 校验类型实参是否满足约束，违背约束会在运行时抛出 `[System.ArgumentException]`（如 `New-Object System.Collections.Generic.List[string]` 传错类型）。脚本中访问不存在的成员会报 MethodNotFound / PropertyNotFound 之类的运行时错误。
+> 注：PowerShell 脚本没有编译期，因此不存在"编译器会保证在编译时对 T 进行约束检查"的环节。`.NET` 泛型类型/方法在实例化时仍由 CLR 校验类型实参是否满足约束，违背约束会在运行时抛出 `[System.ArgumentException]`（如 `New-Object System.Collections.Generic.List[string]` 传错类型）。脚本中访问不存在的成员会报 MethodNotFound / PropertyNotFound 之类的运行时错误。12.8 节余下的 `Min<T>`、`CallMin`、`AType`/`M<T>` 重载、`Base`/`Derived` 虚泛型方法以及 12.8.1～12.8.3 的各种约束示例，都是泛型声明或编译期约束检查的演示，PowerShell 无法等价声明，故统一保留为 C#；脚本只能使用已封闭的泛型类型或通过反射构造封闭实例。
 
 ```csharp
 private static Boolean MethodTakingAnyType<T>(T o) {
@@ -953,7 +983,7 @@ internal sealed class ConstructorConstraint<T> where T : new() {
 
 将泛型类型的变量转型为其他类型是非法的，除非转型为与约束兼容的类型。
 
-> 注：PowerShell 中变量的类型在实际上是后期绑定的，强制类型转换用 `[类型]变量` 或 `$var -as [类型]`；不存在编译期约束检查，转型失败会在运行时抛出 `InvalidCastException`（用 `-as` 时返回 `$null`）。脚本变量本身没有泛型类型参数，只有具体对象的类型。
+> 注：PowerShell 中变量的类型在实际上是后期绑定的，强制类型转换用 `[类型]变量` 或 `$var -as [类型]`；不存在编译期约束检查，转型失败会在运行时抛出 `InvalidCastException`（用 `-as` 时返回 `$null`）。脚本变量本身没有泛型类型参数，只有具体对象的类型。12.8.4 节余下的 `default(T)`、泛型变量与 `null` 比较、两个泛型变量比较等示例同样是编译期可验证性问题：PowerShell 没有 `default(T)` 运算符，未赋值变量即 `$null`，比较用 `-eq`，因此这些块保留为 C#。
 
 ```csharp
 private static void CastingAGenericTypeVariable1<T>(T obj) {
@@ -1048,6 +1078,8 @@ private static T Sum<T>(T num) where T : struct {
     return sum;
 }
 ```
+
+> 注：这段泛型方法在 C# 中本身就无法编译（`<`、`++`、`+=` 不能用于未约束运算符的类型参数 T）。PowerShell 既不能声明泛型方法，也没有运算符约束机制，同样写不出对任意数值类型通用的 `Sum`；实际脚本应按具体类型（如 `[int]`）直接循环，或接受动态类型的性能损失。
 
 我千方百计想让这个方法通过编译。我将 T 约束成一个 struct，而且使用 default(T)将 sum 和 n 初始化为 0。但编译时得到以下错误：
 

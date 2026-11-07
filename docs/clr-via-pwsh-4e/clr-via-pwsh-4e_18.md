@@ -207,20 +207,23 @@ Value  Symbol
 
 **IsDefined** 方法被经常用于参数校验，如下例所示：
 
-```csharp
-public void SetColor(Color c) {
-    if (!Enum.IsDefined(typeof(Color), c)) {
-        throw(new ArgumentOutOfRangeException("c", c, "无效颜色值。"));
+```powershell
+# 等效 PowerShell 写法（Color 需先用 Add-Type 定义，见 15.1 节）
+function Set-Color($c) {
+    if (-not [System.Enum]::IsDefined([Color], $c)) {
+        throw [System.ArgumentOutOfRangeException]::new('c', $c, '无效颜色值。')
     }
-    // 将颜色设置为 White、Red、Green、Blue 或 Orange
-    ...
+    # 将颜色设置为 White、Red、Green、Blue 或 Orange
+    # ……（其余代码略）
 }
 ```
 
 参数校验是很有用的一个功能，因为其他人可能像下面这样调用 **SetColor**：
 
-```csharp
-SetColor((Color) 547);
+```powershell
+# 等效 PowerShell 写法：没有和值 547 对应的符号，
+# 调用 Set-Color 时会抛出 ArgumentOutOfRangeException 异常
+Set-Color ([Color] 547)
 ```
 
 没有和值 547 对应的符号，所以 **SetColor** 方法抛出 **ArgumentOutOfRangeException** 异常，指出哪个参数无效，并解释为什么无效。
@@ -256,9 +259,10 @@ internal enum Actions {
 
 由于 **Actions** 是枚举类型，所以在操纵位标志枚举类型时，可以使用上一节描述的所有方法。不过，假如其中一些方法的行为稍有区别，效果会更加理想。例如，假设有以下代码：
 
-```csharp
-Actions actions = Actions.Read | Actions.Delete;    // 0x0005
-Console.WriteLine(actions.ToString());                // "Read, Delete"
+```powershell
+# 等效 PowerShell 写法（Actions 需先用 Add-Type 定义，见 15.2 节开头）
+$actions = [Actions]::Read -bor [Actions]::Delete    # 0x0005
+$actions.ToString()                                   # "Read, Delete"
 ```
 
 调用 **ToString** 时，它会试图将数值转换为对应的符号。现在的数值是 **0x0005**，没有对应的符号。不过，**ToString** 方法检测到 **Actions** 类型上存在 **[Flags]** 特性，所以 **ToString** 方法现在不会将该数值视为单独的值。相反，会把它视为一组位标志。由于 **0x0005** 由 **0x0001** 和 **0x0004** 组合而成，所以 **ToString** 会生成字符串 "Read, Delete"。从 **Actions** 类型中删除 **[Flags]** 特性，**ToString** 方法将返回 "5"。
@@ -287,9 +291,12 @@ internal enum Actions {
 }
 ```
 
-```csharp
-Actions actions = Actions.Read | Actions.Delete;       // 0x0005
-Console.WriteLine(actions.ToString("F"));             // "Read, Delete"
+> 注：此块仍是枚举类型声明（只是去掉了 `[Flags]` 特性），PowerShell 无法在脚本中直接声明枚举。要对比有无 `[Flags]` 时 `ToString` 的差异，需用 `Add-Type` 分别定义两个版本：带 `[Flags]` 时 `$actions.ToString()`（常规格式）就返回 "Read, Delete"；不带 `[Flags]` 时常规 `ToString()` 返回 "5"，必须用 `$actions.ToString('F')` 才能得到 "Read, Delete"。
+
+```powershell
+# 等效 PowerShell 写法（前提同上：Actions 枚举需先用 Add-Type 定义）
+$actions = [Actions]::Read -bor [Actions]::Delete       # 0x0005
+$actions.ToString("F")                                  # "Read, Delete"
 ```
 
 如果数值有一个位不能映射到一个符号，返回的字符串只包含一个代表原始数值的十进制数；字符串中不会有符号。
@@ -298,18 +305,20 @@ Console.WriteLine(actions.ToString("F"));             // "Read, Delete"
 
 前面讨论的是如何将数值转换成标志字符串（string of flag）。还可将以逗号分隔的符号字符串转换成数值，这是通过调用 **Enum** 的静态方法 **Parse** 和 **TryParse** 来实现的。以下代码演示了如何使用这些方法：
 
-```csharp
-// 由于 Query 被定义为 8，所以'a'被初始化为 8
-Actions a = (Actions) Enum.Parse(typeof(Actions), "Query", true);
-Console.WriteLine(a.ToString()); // "Query"
+```powershell
+# 等效 PowerShell 写法（Actions 需先用 Add-Type 定义）
+# 由于 Query 被定义为 8，所以 $a 被初始化为 8
+$a = [System.Enum]::Parse([Actions], 'Query', $true)
+$a.ToString()   # "Query"
 
-// 由于 Query 和 Read 已定义，所以'a'被初始化为 9
-Enum.TryParse<Actions>("Query, Read", false, out a);
-Console.WriteLine(a.ToString()); // "Read, Query"
+# 由于 Query 和 Read 已定义，所以 $a 被初始化为 9
+$a = $null
+[System.Enum]::TryParse([Actions], 'Query, Read', $false, [ref]$a)
+$a.ToString()   # "Read, Query"
 
-// 创建一个 Actions 枚举类型实例，其值为 28
-a = (Actions) Enum.Parse(typeof(Actions), "28", false);
-Console.WriteLine(a.ToString()); // "Delete, Query, Sync"
+# 创建一个 Actions 枚举类型实例，其值为 28
+$a = [System.Enum]::Parse([Actions], '28', $false)
+$a.ToString()   # "Delete, Query, Sync"
 ```
 
 **Parse** 和 **TryParse** 方法在调用时，会在内部执行以下动作。
@@ -375,11 +384,19 @@ internal static class FileAttributesExtensionMethods {
 
 以下代码演示了如何调用其中的一些方法。从表面上看，似乎真的是在枚举类型上调用这些方法：
 
-```csharp
-FileAttributes fa = FileAttributes.System;
-fa = fa.Set(FileAttributes.ReadOnly);
-fa = fa.Clear(FileAttributes.System);
-fa.ForEach(f => Console.WriteLine(f));
+```powershell
+# 等效 PowerShell 写法（用 -bor / -band 位运算代替扩展方法）
+$fa = [System.IO.FileAttributes]::System
+$fa = $fa -bor [System.IO.FileAttributes]::ReadOnly          # 等价于 fa.Set(FileAttributes.ReadOnly)
+$fa = $fa -band (-bnot [System.IO.FileAttributes]::System)    # 等价于 fa.Clear(FileAttributes.System)
+
+# 等价于 fa.ForEach(f => Console.WriteLine(f))：逐位检查并输出
+$bit = [uint32]1
+while ($bit -ne 0) {
+    $temp = ([uint32]$fa) -band $bit
+    if ($temp -ne 0) { Write-Host ([System.IO.FileAttributes]$temp) }
+    $bit = [uint32]($bit -shl 1)
+}
 ```
 
 ① 因为 bit flag 一般都要组合起来使用。——译注

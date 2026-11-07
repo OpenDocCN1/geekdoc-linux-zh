@@ -96,6 +96,8 @@ public interface IComparable<in T> {
 }
 ```
 
+> 注：接口声明保留原样。PowerShell 不能声明接口，脚本可直接使用 .NET 已有的封闭接口（如 `[System.IComparable[int]]`），也可让自己的 `class` 实现它。
+
 以下代码展示了如何定义实现了该接口的类型，同时还展示了对两个 **Point** 对象进行比较的代码：
 
 ```csharp
@@ -140,6 +142,8 @@ public static class Program {
     }
 }
 ```
+
+> 注：这是完整的 C# 类型定义与调用程序，保留原样。PowerShell 可用 `class Point : System.IComparable[Point] { [int] CompareTo([Point]$other) { ... } [string] ToString() { ... } }` 表达同类逻辑，但脚本类没有 `override` 修饰符，数组排序也要改用 `[System.Array]::Sort(...)`（需 `IComparable`）或手工交换，故不逐行转换。
 
 C#编译器要求将实现接口的方法（后文简称为“接口方法”）标记为 public。CLR 要求将接口方法标记为 virtual。不将方法显式标记为 virtual，编译器会将它们标记为 virtual 和 sealed；这会阻止派生类重写接口方法。将方法显式标记为 virtual，编译器就会将该方法标记为 virtual（并保持它的非密封状态），使派生类能重写它。
 
@@ -210,30 +214,30 @@ FCL 的 **System.String** 类型继承了 **System.Object** 的方法签名及�
 
 CLR 允许定义接口类型的字段、参数或局部变量。使用接口类型的变量可以调用该接口定义的方法。此外，CLR 允许调用 **Object** 定义的方法，因为所有类都继承了 **Object** 的方法。以下代码对此进行了演示：
 
-```csharp
-// s 变量引用一个 String 对象
-String s = "Jeffrey";
-// 可以使用 s 调用在 String、Object、IComparable、ICloneable、
-// IConvertible、IEnumerable 中定义的任何方法
+```powershell
+# 等效 PowerShell 写法
+# $s 变量引用一个 String 对象
+$s = 'Jeffrey'
+# 可以用 $s 调用在 String、Object、IComparable、ICloneable、
+# IConvertible、IEnumerable 中定义的任何公共方法
 
-// cloneable 变量引用同一个 String 对象
-ICloneable cloneable = s;
-// 使用 cloneable 只能调用 ICloneable 接口声明的
-// 任何方法（或 Object 定义的任何方法）
+# $cloneable 变量引用同一个 String 对象
+$cloneable = [System.ICloneable]$s
+# PowerShell 不会因接口转换而收窄成员可见性，
+# 使用 $cloneable 仍按实际对象类型解析成员
 ```
 
-```csharp
-// comparable 变量引用同一个 String 对象
-IComparable comparable = s;
-// 使用 comparable 只能调用 IComparable 接口声明的
-// 任何方法（或 Object 定义的任何方法）
+```powershell
+# 等效 PowerShell 写法
+# $comparable 变量引用同一个 String 对象
+$comparable = [System.IComparable]$s
+# 使用 $comparable 仍可调用实际对象（String）的公共成员
 
-// enumerable 变量引用同一个 String 对象
-// 可在运行时将变量从一个接口转换成另一个，只要
-// 对象的类型实现了这两个接口
-IEnumerable enumerable = (IEnumerable) comparable;
-// 使用 enumerable 只能调用 IEnumerable 接口声明的
-// 任何方法（或 Object 定义的任何方法）
+# $enumerable 变量引用同一个 String 对象
+# 可在运行时将变量从一个接口转换成另一个，只要
+# 对象的类型实现了这两个接口
+$enumerable = [System.Collections.IEnumerable]$comparable
+# 使用 $enumerable 仍按实际对象类型解析成员
 ```
 
 在这段代码中，所有变量都引用同一个“Jeffrey”String 对象。该对象在托管堆中；所以，使用其中任何变量时，调用的任何方法都会影响这个“Jeffrey”String 对象。不过，变量的类型规定了能对这个对象执行的操作。s 变量是 String 类型，所以可以用 s 调用 String 类型定义的任何成员（比如 Length 属性）。还可用变量 s 调用从 Object 继承的任何方法（比如 GetType）。
@@ -254,6 +258,8 @@ internal sealed class SimpleType : IDisposable {
 }
 ```
 
+> 注：这是类声明（含接口实现）。PowerShell 可以用 `class SimpleType : System.IDisposable { [void] Dispose() { [Console]::WriteLine('Dispose') } }` 定义等价类，但无法观察下面讨论的方法表内部记录项；相关调用示例已改为 PowerShell。
+
 类型的方法表将包含以下方法的记录项。
 
 - **Object**（隐式继承的基类）定义的所有虚实例方法。
@@ -267,19 +273,20 @@ internal sealed class SimpleType : IDisposable {
 
 C# 编译器将新方法和接口方法匹配起来之后，会生成元数据，指明 **SimpleType** 类型的方法表中的两个记录项应引用同一个实现。为了更清楚地理解这一点，下面的代码演示了如何调用类的公共 **Dispose** 方法以及如何调用 **IDisposable** 的 **Dispose** 方法在类中的实现：
 
-```csharp
-public sealed class Program {
-    public static void Main() {
-        SimpleType st = new SimpleType();
-
-        // 调用公共 Dispose 方法实现
-        st.Dispose();
-
-        // 调用 IDisposable 的 Dispose 方法的实现
-        IDisposable d = st;
-        d.Dispose();
-    }
+```powershell
+# 等效 PowerShell 写法
+class SimpleType : System.IDisposable {
+    [void] Dispose() { [Console]::WriteLine('Dispose') }
 }
+
+$st = [SimpleType]::new()
+
+# 调用公共 Dispose 方法实现
+$st.Dispose()
+
+# 调用 IDisposable 的 Dispose 方法的实现
+$d = [System.IDisposable]$st
+$d.Dispose()
 ```
 
 在第一个 **Dispose** 方法调用中，调用的是 **SimpleType** 定义的 **Dispose** 方法。然后定义 **IDisposable** 接口类型的变量 d，它引用 **SimpleType** 对象 st。调用 d.Dispose() 时，调用的是 **IDisposable** 接口的 **Dispose** 方法。由于 C# 要求公共 **Dispose** 方法同时是 **IDisposable** 的 **Dispose** 方法的实现，所以会执行相同的代码。在这个例子中，两个调用你看不出任何区别。输出结果如下所示：
@@ -321,33 +328,35 @@ C# 和 CLR 所支持的泛型接口为开发人员提供了许多非常出色的
 
 首先，泛型接口提供了出色的编译时类型安全性。有的接口（比如非泛型 **IComparable** 接口）定义的方法使用了 **Object** 参数或 **Object** 返回类型。在代码中调用这些接口方法时，可传递对任何类型的实例的引用。但这通常不是我们期望的。下面的代码对此进行了演示：
 
-```csharp
-private void SomeMethod1() {
-    Int32 x = 1, y = 2;
-    IComparable c = x;
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod1 {
+    $x = 1; $y = 2
+    $c = [System.IComparable]$x
 
-    // CompareTo 期待 Object；传递 y(一个 Int32)没有问题
-    c.CompareTo(y);  // y 在这里装箱
+    # CompareTo 期待 Object；传递 y(一个 Int32)没有问题
+    $c.CompareTo($y)   # $y 在这里装箱
 
-    // CompareTo 期待 Object，传递"2" (一个 String)可以编译，
-    // 但在运行时抛出 ArgumentException 异常
-    c.CompareTo("2");
+    # CompareTo 期待 Object，传递"2" (一个 String)可以执行，
+    # 但在运行时抛出 ArgumentException 异常
+    $c.CompareTo('2')
 }
 ```
 
 接口方法理想情况下应该使用强类型。这正是 FCL 为什么包含泛型 **IComparable<in T>** 接口的原因。下面修改代码来使用泛型接口：
 
-```csharp
-private void SomeMethod2() {
-    Int32 x = 1, y = 2;
-    IComparable<Int32> c = x;
+```powershell
+# 等效 PowerShell 写法
+function SomeMethod2 {
+    $x = 1; $y = 2
+    $c = [System.IComparable[int]]$x
 
-    // CompareTo 期待 Int32，传递 y(一个 Int32)没有问题
-    c.CompareTo(y);   // y 在这里不装箱
+    # CompareTo 期待 Int32，传递 y(一个 Int32)没有问题
+    $c.CompareTo($y)   # $y 在这里不装箱
 
-    // CompareTo 期待 Int32，传递"2"(一个 String)造成编译错误，
-    // 指出 String 不能被转换为 Int32
-    c.CompareTo("2"); // 错误
+    # CompareTo 期待 Int32，传递"2"(一个 String)在 C# 中是编译错误；
+    # PowerShell 没有编译期检查，取消注释会在运行时抛方法调用异常
+    # $c.CompareTo('2')
 }
 ```
 
@@ -394,13 +403,15 @@ public static class Program {
 }
 ```
 
+> 注：类声明保留原样。PowerShell 类也能同时实现多个封闭泛型接口，并写同名但参数类型不同的 `CompareTo` 重载（PowerShell 7 支持按参数类型重载）；但字段初始化、`IComparable<Int32>` 显式转换等细节要按脚本语法改写，此处不逐行转换。
+
 接口的泛型类型参数可标记为逆变和协变，为泛型接口的使用提供更大的灵活性。欲知协变和逆变的详情，请参见 12.5 节“委托和接口的逆变和协变泛型实参”。
 
 ### 13.7 泛型和接口约束
 
 上一节讨论了泛型接口的好处。本节要讨论将泛型类型参数约束为接口的好处。
 
-> 注：将类型参数约束为接口（`where T : IComparable, IConvertible`）同样只能在 C#/VB 的类型声明里书写。PowerShell 脚本不能声明泛型方法，也就不能写这种约束；它只能调用已有的泛型方法来"撞"约束检查。
+> 注：将类型参数约束为接口（`where T : IComparable, IConvertible`）同样只能在 C#/VB 的类型声明里书写。PowerShell 脚本不能声明泛型方法，也就不能写这种约束；它只能调用已有的泛型方法来"撞"约束检查。本节下面的 `SomeType.M<T>` 与 `M(IComparable)` 示例都是在演示约束和装箱差异，属于泛型/方法声明，统一保留为 C#；脚本调用 `[System.IComparable]` 视图或值类型实例方法时，装箱由运行时决定。
 
 第一个好处在于，可将泛型类型参数约束为多个接口。这样一来，传递的参数的类型必须实现全部接口约束。例如：
 
@@ -498,11 +509,13 @@ IRestaurant restaurant = mp;
 restaurant.GetMenu();
 ```
 
+> 注：这段调用依赖上面的 EIM 类型 `MarioPizzeria`，而 PowerShell 无法定义 EIM，故保留原样。若该类型来自已编译程序集，脚本可写 `$mp = [MarioPizzeria]::new(); $mp.GetMenu(); ([IWindow]$mp).GetMenu(); ([IRestaurant]$mp).GetMenu()`，用接口转换选择不同的实现。
+
 ### 13.9 用显式接口方法实现来增强编译时类型安全性
 
 接口很好用，它们定义了在类型之间进行沟通的标准方式。前面曾讨论了泛型接口，讨论了它们如何增强编译时的类型安全性和减少装箱操作。遗憾的是，有时由于不存在泛型版本，所以仍需实现非泛型接口。接口的任何方法接受 System.Object 类型的参数或返回 System.Object 类型的值，就会失去编译时的类型安全性，装箱也会发生。本节将介绍如何用“显式接口方法实现”（EIM）在某种程度上改善这个局面。
 
-> 注：本节依赖 EIM，而 PowerShell 没有 EIM 语法。脚本中更实际的做法是：优先调用泛型接口（如 `IComparable[int]`、`IEquatable[string]`）上的方法，让实参保持强类型；`$x.CompareTo($y)` 这类调用由 PowerShell 在运行时绑定，不存在"编译时类型安全"这一层保护。装箱与否取决于传入的是值类型还是引用类型。
+> 注：本节依赖 EIM，而 PowerShell 没有 EIM 语法。脚本中更实际的做法是：优先调用泛型接口（如 `IComparable[int]`、`IEquatable[string]`）上的方法，让实参保持强类型；`$x.CompareTo($y)` 这类调用由 PowerShell 在运行时绑定，不存在"编译时类型安全"这一层保护。装箱与否取决于传入的是值类型还是引用类型。本节下面的 `IComparable` 接口声明、`SomeValueType` 结构体、EIM 版本以及三个 `Main` 示例都依赖 `struct`/EIM 语法，故统一保留为 C#；PowerShell 只能用 `class` 定义引用类型，无法复现值类型的装箱/非装箱差异。
 
 下面是极其常用的 IComparable 接口：
 
@@ -615,15 +628,16 @@ public static void Main() {
 }
 ```
 
+> 注：这是 C# 的编译错误示例（`Int32` 没有公共 `ToSingle` 方法）。PowerShell 没有编译期成员检查，直接写 `$x.ToSingle($null)` 会在运行时因找不到方法而报错；要通过接口调用，需像下一段那样先把值类型转换为 `[System.IConvertible]`。
+
 编译这个方法时，C#编译器会报告以下消息：error CS0117: "int"不包含"ToSingle"的定义。这个错误信息使开发人员感到困惑，因为它明显是在说 Int32 类型没有定义 ToSingle 方法，但实际上它定义了。
 
 要在一个 Int32 上调用 ToSingle，首先必须将其转换为 IConvertible，如下所示：
 
-```csharp
-public static void Main() {
-    Int32 x = 5;
-    Single s = ((IConvertible) x).ToSingle(null);
-}
+```powershell
+# 等效 PowerShell 写法（值类型转接口会发生装箱）
+$x = 5
+$s = ([System.IConvertible]$x).ToSingle($null)
 ```
 
 对类型转换的要求不明确，而许多开发人员自己看不出来问题出在哪里。还有一个更让人烦恼的问题：Int32 值类型转换为 IConvertible 会发生装箱，既浪费内存，又损害性能。这是本书开头提到的 EIMI 存在的第二个问题。
