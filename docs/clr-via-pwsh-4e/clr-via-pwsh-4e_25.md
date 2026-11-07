@@ -297,9 +297,7 @@ public static class GCNotification {
 前面说过，CLR 在检测第 0 代超过预算时触发一次 GC。这是 GC 最常见的触发条件，下面列出其他条件。
 
 - **代码显式调用 System.GC 的静态 Collect 方法**  
-  代码可显式请求 CLR 执行回收。虽然 Microsoft 强烈反对这种请求，但有时情势比人
-
-强。详情参见本章稍后的 21.2.4 节“强制垃圾回收”。
+  代码可显式请求 CLR 执行回收。虽然 Microsoft 强烈反对这种请求，但有时情势比人强。详情参见本章稍后的 21.2.4 节“强制垃圾回收”。
 
 - **Windows 报告低内存情况**：CLR 内部使用 Win32 函数 **CreateMemoryResourceNotification** 和 **QueryMemoryResourceNotification** 监视系统的总体内存使用情况。如果 Windows 报告低内存，CLR 将强制垃圾回收以释放死对象，减小进程工作集。
 - **CLR 正在卸载 AppDomain**：一个 AppDomain 卸载时，CLR 认为其中一切都不是根，所以执行涵盖所有代的垃圾回收。AppDomain 将在第二十二章讨论。
@@ -636,7 +634,7 @@ $fs.Write($bytesToWrite, 0, $bytesToWrite.Length)
 Remove-Item Temp.dat
 ```
 
-遗憾的是，生成并运行上述代码，它也许能工作，但大多数时候都不能。问题在于 File 的静态 Delete 方法要求 Windows 删除一个仍然打开的文件。所以 Delete 方法会抛出 System.IO.IOException 异常，并显示以下字符串消息：**文件"Temp.dat"正由另一进程使用，因此该进程无法访问此文件。**
+遗憾的是，生成并运行上述代码，它也许能工作，但大多数时候都不能。问题在于删除操作要求 Windows 删除一个仍然打开的文件（原书用 File 的静态 Delete 方法，上例改用 Remove-Item）。所以删除会抛出 System.IO.IOException 异常，并显示以下字符串消息：**文件"Temp.dat"正由另一进程使用，因此该进程无法访问此文件。**
 
 但某些情况下，文件可能“误打误撞”地被删除！如果另一线程不知怎么造成了一次垃圾回收，而且这次垃圾回收刚好在调用 Write 之后、调用 Delete 之前发生，那么 FileStream 的 SafeFileHandle 字段的 Finalize 方法就会被调用，这会关闭文件，随后 Delete 操作也就可以正常运行。但发生这种情况的概率很小，上述代码无法运行的可能性在 99%以上。
 
