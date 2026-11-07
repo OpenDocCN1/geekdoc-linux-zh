@@ -452,9 +452,9 @@ System.Linq.Queryable 类中声明的扩展方法签名是：
 
 ### 13.7.4　检查表达式树
 
-如前所述，将 Lambda 表达式转换成 Expression<TDelegate>将创建表达式树而不是委托。本章前面讲过如何将(x,y)=>x>y 这样的 Lambda 转换成 Func<int, int, bool>这样的委托类型。要将同样的 Lambda 转换成表达式树，只需把它转换成 Expression <Func<int, int, bool>>，如代码清单 13.25 所示。
+如前所述，将 Lambda 表达式转换成 Expression<TDelegate>将创建表达式树而不是委托。本章前面讲过如何将(x,y)=>x>y 这样的 Lambda 转换成 Func<int, int, bool>这样的委托类型。要将同样的 Lambda 转换成表达式树，只需把它转换成 Expression <Func<int, int, bool>>，如代码清单 13.25 所示。然后就可检查生成的对象，显示和它的结构相关的信息，并可显示更复杂的表达式树的信息。
 
-> 注：PowerShell 中无法进行这种转换：把脚本块强制转换成 `Expression<Func<int,int,bool>>` 会直接失败，只能像下一条注那样手工构造表达式树对象。然后就可检查生成的对象，显示和它的结构相关的信息，并可显示更复杂的表达式树的信息。
+> 注：PowerShell 中无法进行这种转换：把脚本块强制转换成 `Expression<Func<int,int,bool>>` 会直接失败，只能像下一条注那样手工构造表达式树对象。
 
 代码清单 13.25　检查表达式树
 

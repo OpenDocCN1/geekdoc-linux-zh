@@ -227,9 +227,9 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 要理解委托是如何工作的，你需要复习 13.2.2 节，那里第一次在高级主题中探讨了 System.Delegate 类型的内部机制。delegate 关键字是派生自 System.Multicast-Delegate 的一个类型的别名。System.MulticastDelegate 则从 System.Delegate 派生，后者由一个对象引用（以满足非静态方法的需要）和一个方法引用构成。创建委托时，编译器自动使用 System.MulticastDelegate 类型而不是 System.Delegate 类型。MulticastDelegate 类包含对象引用和方法引用，这和它的 Delegate 基类一样。但除此之外，它还包含对另一个 System.MulticastDelegate 对象的引用。
 
-向多播委托添加方法时，MulticastDelegate 类会创建委托类型的一个新实例，在新实例中为新增的方法存储对象引用和方法引用，并在委托实例列表中添加新的委托实例作为下一项。所以 MulticastDelegate 类事实上维护着一个 Delegate 对象链表。
+向多播委托添加方法时，MulticastDelegate 类会创建委托类型的一个新实例，在新实例中为新增的方法存储对象引用和方法引用，并在委托实例列表中添加新的委托实例作为下一项。所以 MulticastDelegate 类事实上维护着一个 Delegate 对象链表。图 14.2 展示了恒温器的概念图。
 
-> 注：MulticastDelegate 的“委托链表”内部机制不适用于脚本块数组。改编版把订阅者放进 `[scriptblock[]]` 数组，`+=` 追加元素，调用顺序由数组索引决定——顺序是稳定的，不存在 CLI 规范“不保证顺序”的问题；也没有 Combine/Remove 的链表语义。图 14.2 展示了恒温器的概念图。
+> 注：MulticastDelegate 的“委托链表”内部机制不适用于脚本块数组。改编版把订阅者放进 `[scriptblock[]]` 数组，`+=` 追加元素，调用顺序由数组索引决定——顺序是稳定的，不存在 CLI 规范“不保证顺序”的问题；也没有 Combine/Remove 的链表语义。
 
 ![](img/image01135.jpeg)
 
