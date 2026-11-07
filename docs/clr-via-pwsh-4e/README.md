@@ -1,6 +1,6 @@
-# CLR via C#（第 4 版）
+# CLR via PowerShell 第四版
 
-> 原文：[CLR_via_C#_4e]()
+> 原文：[CLR_via_PowerShell_4e]()
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 
