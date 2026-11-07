@@ -195,6 +195,8 @@ while (-not $downloadTask.Wait(100)) { [Console]::Write('.') }
 
 注：错误概念 1 和 2 描述的是 C# 编译器对 async/await 的改写行为。PowerShell 脚本块在执行前不会进行“保持调用者线程/返回到调用者”这样的自动分叉；任务是否在线程池线程上运行只取决于任务本身（如 [Task]::Run）。用 .GetAwaiter().GetResult() 同步阻塞等待结果与 C# 中 await 的分叉行为不完全等价。
 
+注：本章余下的 `Task.Run`、`ContinueWith`、`Task.Factory.StartNew` 等清单沿用了原书的 API 结构。在 PowerShell 中，把脚本块交给线程池或独立线程执行会因该线程没有运行空间而报错（详见第十九章的注），所以这些清单同样只用于对照正文语义；可直接运行的替代写法是 `ForEach-Object -Parallel` / `Start-ThreadJob`。
+
 实际上，async 关键字的存在有两个意义。首先它明确提示阅读代码的人：该方法有可能会被编译器根据需要自动改写。其次它告诉编译器：在该方法内遇到 await 关键字时，那条语句将被异步执行。
 
 从 C# 7.1 开始，Main 方法也可以是 async 的，因此我们在代码清单 20.3 中，将 Main 声明为 public static async Task Main(string\[\] args)。这样便可在 Main 方法内使用 await 操作符来执行其他异步方法了。不过，执行了异步操作之后，我们通过异步返回值来提取真正的返回数据，并且必须在程序结束之前，明确等待所有异步任务都结束，这样才能避免发生意外状况。

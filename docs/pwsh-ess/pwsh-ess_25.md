@@ -18,6 +18,8 @@
 
 代码清单 22.1　未同步的状态
 
+注：本清单及本章其余清单中的 `Task.Run`、`[Thread]::new(...)` 都是把脚本块交给非 PowerShell 线程执行，在 PowerShell 中会因该线程没有运行空间而报错（`[Thread]::new` 的未处理异常甚至会终止宿主进程）。清单保留原写法仅为对照正文的同步语义；实际运行请改用 `ForEach-Object -Parallel` 或 `Start-ThreadJob`。
+
 ```powershell
 $script:_Total = [int]::MaxValue
 $script:_Count = [long]0
@@ -556,6 +558,8 @@ Microsoft.NET Framework 4 还引入了一系列并发集合类。这些类专门
 
 代码清单 22.11　用 ThreadLocal<T>实现线程本地存储
 
+注：本清单用 `[Thread]::new([ThreadStart] {...})` 另起一个线程。在 PowerShell 中，脚本块在该线程上执行时没有可用运行空间，会抛出“此线程中没有可用于运行脚本的运行空间”（若异常未被处理，可能直接终止宿主进程）。此处保留原写法以对应正文的线程/线程本地存储语义；需实际运行时，应改用 `Start-ThreadJob` 或其他显式创建运行空间的机制。
+
 ```powershell
 # ThreadLocal<T>：每个线程都拥有 _Count 的独立实例
 $script:_Count = [System.Threading.ThreadLocal[double]]::new([Func[double]] { 0.01134 })
@@ -590,6 +594,8 @@ Write-Host "Main Count = $($script:_Count.Value)"
 用 ThreadStaticAttribute 修饰静态字段（如代码清单 22.12 所示）是指定静态变量每线程一个实例的第二个办法。虽然和 ThreadLocal<T>相比，这个技术有一些小缺点，但它的优点在于 Microsoft.NET Framework 4 之前的版本也支持。（另外，由于 ThreadLocal<T>基于 Thread-StaticAttribute，所以如果涉及大量重复的、小的迭代处理，后者消耗的内存会少一些，性能也会好一些。）
 
 代码清单 22.12　用 ThreadStaticAttribute 实现线程本地存储
+
+注：本清单同样用 `[Thread]::new([ThreadStart] {...})` 启动副线程，受代码清单 22.11 注中所述的运行空间限制，保留原写法仅为对照语义。
 
 ```powershell
 # [ThreadStatic] 字段的初始化器只在初始化类型的线程（主线程）上运行，

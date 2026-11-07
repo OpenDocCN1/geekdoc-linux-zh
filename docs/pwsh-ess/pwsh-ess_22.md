@@ -193,6 +193,8 @@ PowerShell 中把脚本块强转为 `[Action]` 或 `[Func[T]]`，即可作为委
 
 注意：`[Task]::Run([Action]{...})` 之类把脚本块投递给线程池线程的写法，在 PowerShell 中会因工作线程上没有可用的运行空间而报错。需要并行执行脚本块时，应改用 PowerShell 原生的 `ForEach-Object -Parallel`、`Start-ThreadJob` 或显式为工作线程创建 `[powershell]` 实例。
 
+本章及第二十章、第二十一、二十二章中，`Task.Run`、`Task.Factory.StartNew`、`[Task]::new(...)` + `Start()`、`ContinueWith`、`Parallel.For/ForEach`、PLINQ 及 `[Thread]::new(...)` 等任何把脚本块交给**其他线程**执行的重载都受此限制（`[Thread]::new` 的未处理异常还会直接终止宿主进程）；而传给同步调用的脚本块（如 `List.FindAll`、`Enumerable.Select`、`AggregateException.Handle`）在当前线程执行，可以正常工作。下文各代码清单一律保留原 API 以对应正文语义，实际运行需按上述方式改写。
+
 新线程要运行的代码由传给 Task.Run()方法的委托（本例是 Action 类型）来定义。该委托（以 Lambda 表达式的形式）在控制台上反复打印连字号。主线程的循环几乎完全一样，只是它打印加号。
 
 注意，一旦调用 Task.Run()，作为实参传递的 Action 几乎立即开始执行。这称为“热”任务，意味着它已触发并开始执行。“冷”任务则相反，需要在显式触发之后才开始异步工作。
@@ -456,6 +458,8 @@ PowerShell 的脚本块委托无法直接改写外层局部变量，故用哈希
 代码清单 19.7 展示如何创建另一个线程来抛出异常，并由 AppDomain 的未处理异常事件处理程序进行处理。由于只是演示，为确保不受到线程计时问题的干扰，使用 Thread.Sleep 插入了一定的人工延迟。结果如输出 19.4 所示。
 
 代码清单 19.7　登记未处理异常
+
+注：本清单用 `[System.Threading.Thread]::new([ThreadStart] {...})` 启动副线程，且副线程内抛出未处理异常。在 PowerShell 中，该脚本块在副线程上无运行空间可用，异常会直接终止宿主进程，因此这段代码不要直接运行；保留原写法仅为对照正文的未处理异常语义。
 
 ```powershell
 $script:_Clock = [System.Diagnostics.Stopwatch]::new()

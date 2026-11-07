@@ -86,6 +86,8 @@ function Encrypt-Files([string] $directoryPath, [string] $searchPattern) {
 
 上面代码并行地将 files 集合中的所有文件进行加密。TPL 将决定效率最高的线程数量。
 
+注：与代码清单 21.2 相同，把脚本块交给 `Parallel.ForEach` 的写法在 PowerShell 中会因工作线程没有运行空间而报错。本章 21.3、21.4、21.5 的 `Parallel.ForEach` 清单均据此保留为语义演示，实际并行请用 `ForEach-Object -Parallel` 或 `Start-ThreadJob`。
+
 高级主题：TPL 如何自动调整执行效率
 
 TPL 中默认的任务调度器基于线程池，采用多种启发式算法来调整线程数量，确保程序以最佳性能工作。它使用的两种启发式算法为爬山算法 和工作窃取算法 。
@@ -266,6 +268,8 @@ $parallelGroups = [System.Linq.ParallelEnumerable]::OrderBy(
 ```
 
 原图中 `OrderBy()` 的结果类型是 `OrderedParallelQuery<string>`。C# 里对字符串元素调用 `item.Count()` 得到的其实是字符个数，在 PowerShell 中对应 `$item.Length`。
+
+注：这里的并行排序由 PLINQ 把排序委托分发到多个线程执行，因而触发与 21.2 相同的运行空间限制——清单 21.8、21.9 及 21.10 中的 PLINQ 查询在 PowerShell 中都会因此报错，仅用于对照 API 语义。
 
 如代码清单 21.8 所示，调用并行版本只涉及调用 AsParallel()扩展方法。请注意，并行标准查询方法返回的结果类型是 ParallelQuery<T>或 OrderedParallelQuery<T>，两者都会提示编译器应该继续使用并行版本的标准查询操作。
 
