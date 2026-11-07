@@ -59,6 +59,8 @@ class Thermostat {
 
 Thermostat 包含一个名为 OnTemperatureChange 的属性，它属于 Action<float>委托类型。OnTemperatureChange 存储了订阅者列表。注意，只需一个委托字段即可存储所有订阅者。换言之，来自一个发布者的温度变化通知会同时被 Cooler 和 Heater 实例接收。
 
+> 注：改编版中 `OnTemperatureChange` 是 `[scriptblock[]]` 数组，而不是 C# 的 `Action<float>` 委托。数组在这里充当“订阅者列表”：`+=` 向数组追加一个脚本块，并不对应委托的 `System.Delegate.Combine()`；也没有 `GetInvocationList()`，没有委托的引用赋值语义（详见下文诸注）。
+
 Thermostat 的最后一个成员是 CurrentTemperature 属性。它负责设置和获取由 Thermostat 类报告的当前温度值。
 
 ### 14.1.3　连接发布者和订阅者
@@ -104,11 +106,15 @@ class Thermostat {
 
 对 CurrentTemperature 的赋值包含向订阅者通知 CurrentTemperature 变化的特殊逻辑。只需执行 C#语句 OnTemperatureChange(value);即可向所有订阅者发出通知。该语句将温度的变化发布给 cooler 和 heater 对象。执行一个调用，即可向多个订阅者发出通知——这正是“多播委托”的由来。
 
+> 注：在改编版中不存在“一条语句调用整个委托链”的多播调用——`[scriptblock[]]` 数组需要显式 `foreach` 逐个调用（代码清单 14.4 已这样改写）。
+
 在 C# 8.0 中，如果像上面代码中那样直接调用 OnTemperatureChange 委托，编译器会发出关于 null 值解引用的警告。这意味着需要进行空值检查。
 
 ### 14.1.5　检查空值
 
 代码清单 14.4 遗漏了事件发布代码的一个重要部分。假如当前没有订阅者注册接收通知，则 OnTemperatureChange 为 null，执行 OnTemperatureChange(value)语句会抛出 NullReferenceException 异常。避免该问题需在触发事件之前检查空值。代码清单 14.5 演示了如何在调用 Invoke()前使用 C# 6.0 的空条件操作符来达成目标。
+
+> 注：PowerShell 没有 `?.` 空条件操作符——写成 `$x?.Member` 会被解析成名为 `$x?` 的变量（PowerShell 也没有 `?[]`）。因此改编版改用显式 `if ($null -ne ...)` 判断，代码清单 14.5 与后续清单都已这样改写。PowerShell 7 只支持空合并 `??` 与三元 `? :`。
 
 代码清单 14.5　调用委托
 
@@ -137,6 +143,8 @@ if ($null -ne $localOnChange) {
 
 不是一上来就检查空值，而是先将 OnTemperatureChange 赋给第二个委托局部变量 localOnChange。这个简单的修改可确保在检查空值和发送通知之间，如一个不同的线程移除了所有 OnTemperatureChange 订阅者，将不会引发 NullReferenceException 异常。
 
+> 注：“拷贝引用再检查再调用”这份防竞态意图可以由 PowerShell 套用——`$local = $thermostat.OnTemperatureChange` 拷贝的是数组引用，之后若另一线程把该属性整体重新赋成新数组，`$local` 仍指向旧数组。但 PowerShell 数组本身没有 C# 委托“`+=`/`-=` 产生新实例并替换引用”的语义，见下注。
+
 本书剩下的所有例子都依赖 C# 6.0 的空条件操作符进行委托调用。
 
 ![](img/image00300.jpeg)设计规范
@@ -150,6 +158,8 @@ if ($null -ne $localOnChange) {
 既然委托是引用类型，肯定有人会感觉疑惑：为什么赋值给一个局部变量，再用那个局部变量就能保证 null 检查的线程安全性？因为 localOnChange 指向的位置就是 OnTemperatureChange 指向的位置，所以很自然的结论是：OnTemperatureChange 中发生的任何变化都将在 localOnChange 中反映。
 
 但实情并非如此。事实上，对 OnTemperatureChange-=<subscriber>的任何调用都不会从 OnTemperatureChange 删除一个委托，而使它包含的委托比之前少一个。相反，该调用会赋值一个全新的多播委托，原始多播委托不受任何影响（localOnChange 指向的正是原始的那个）。
+
+> 注：这里讨论的是 C# 委托（引用类型）的“`-=` 产生新委托实例、原引用不受影响”语义。PowerShell 的 `[scriptblock[]]` 数组没有 `-=` 操作符；把属性整体重新赋值成新数组后，旧数组引用仍被 `$local` 持有——防竞态效果与 C# 类似，但数组内容的增删是元素级操作，不存在新委托实例整体替换的机制。
 
 高级主题：线程安全的委托调用
 
@@ -197,6 +207,8 @@ foreach ($delegate in $delegates) { & $delegate 60 }
 
 无论“+”“–”还是它们的复合赋值版本（“+=”和“–=”），内部都用静态方法 System.Delegate.Combine()和 System.Delegate.Remove()来分别实现。两个方法都获取 delegate 类型的两个参数。第一个方法 Combine()连接两个参数，将两个委托的调用列表按顺序连接到一起。第二个方法 Remove()则搜索由第一个参数指定的委托链，删除由第二个参数指定的委托。此外，既然 Remove()方法有可能返回 null，我们可以使用 C# 8.0 提供的空包容操作符来要求编译器假设委托对象存在。
 
+> 注：`System.Delegate.Combine()`/`Remove()` 只适用于真正的 .NET 委托对象，对 `[scriptblock[]]` 数组无效。改编版对“增删订阅者”用数组操作：`+=` 追加元素；删除则重建数组（如代码清单 14.19 的 `Where-Object` 过滤）。注意 PowerShell 数组**不支持 `-=`**：`$arr -= $sb` 会报“减法失败，因为 [System.Object[]] 不具有名为 'op_Subtraction' 的方法”（已实测）。另外脚本块用 `-eq` 比较是**引用比较**（两个内容相同的字面脚本块也不相等），要移出某个订阅者应保留对它的引用。
+
 Combine()方法的一个有趣的地方是两个参数都可为 null。任何参数为 null，Combine()返回非空的那个。两个都为 null，Combine()返回 null。这解释了为什么调用 thermostat.OnTemperatureChange+=heater.OnTemperatureChanged;不会抛出异常（即使 thermostat.OnTemperatureChange 的值仍然为 null）。
 
 ### 14.1.7　顺序调用
@@ -215,7 +227,9 @@ Combine()方法的一个有趣的地方是两个参数都可为 null。任何参
 
 要理解委托是如何工作的，你需要复习 13.2.2 节，那里第一次在高级主题中探讨了 System.Delegate 类型的内部机制。delegate 关键字是派生自 System.Multicast-Delegate 的一个类型的别名。System.MulticastDelegate 则从 System.Delegate 派生，后者由一个对象引用（以满足非静态方法的需要）和一个方法引用构成。创建委托时，编译器自动使用 System.MulticastDelegate 类型而不是 System.Delegate 类型。MulticastDelegate 类包含对象引用和方法引用，这和它的 Delegate 基类一样。但除此之外，它还包含对另一个 System.MulticastDelegate 对象的引用。
 
-向多播委托添加方法时，MulticastDelegate 类会创建委托类型的一个新实例，在新实例中为新增的方法存储对象引用和方法引用，并在委托实例列表中添加新的委托实例作为下一项。所以 MulticastDelegate 类事实上维护着一个 Delegate 对象链表。图 14.2 展示了恒温器的概念图。
+向多播委托添加方法时，MulticastDelegate 类会创建委托类型的一个新实例，在新实例中为新增的方法存储对象引用和方法引用，并在委托实例列表中添加新的委托实例作为下一项。所以 MulticastDelegate 类事实上维护着一个 Delegate 对象链表。
+
+> 注：MulticastDelegate 的“委托链表”内部机制不适用于脚本块数组。改编版把订阅者放进 `[scriptblock[]]` 数组，`+=` 追加元素，调用顺序由数组索引决定——顺序是稳定的，不存在 CLI 规范“不保证顺序”的问题；也没有 Combine/Remove 的链表语义。图 14.2 展示了恒温器的概念图。
 
 ![](img/image01135.jpeg)
 
@@ -262,17 +276,23 @@ if ($exceptions.Count -gt 0) {
 
 代码清单 14.10 演示了可以从委托类的 GetInvocationList()方法获得一份订阅者列表。枚举列表中的每一项以返回单独的订阅者。随后将每个订阅者调用都放到一个 try/catch 块中，就可以先处理好任何出错的情形，再继续循环迭代。本例即使订阅者抛出异常，cooler 仍能收到温度变化通知。所有通知都发送完毕之后，代码清单 14.10 通过抛出 AggregateException 来报告所有已发生的异常。AggregateException 包装一个异常集合，集合中的异常可通过 InnerExceptions 属性访问。结果是所有异常都得到报告，同时所有订阅者都不会错过通知。
 
+> 注：脚本块数组没有 `GetInvocationList()`。改编版直接 `foreach ($subscriber in $arr) { & $subscriber ... }`，天然逐一调用列表中的脚本块，效果与 GetInvocationList() 枚举一致；每个订阅者单独 try/catch 再收集异常的写法（代码清单 14.10）在 PowerShell 中照常可用，`[System.AggregateException]` 也支持。
+
 ### 14.1.9　方法返回值和传引用
 
 还有一种情形需要遍历委托调用列表而非直接调用一个委托。这种情形涉及的委托要么不返回 void，要么具有 ref 或 out 参数。在恒温器的例子中，OnTemperatureChange 委托是 Action<float>类型，它返回 void，而且没有 ref 或 out 参数。结果是没有数据返回给发布者。这一点相当重要，因为调用委托可能将一个通知发送给多个订阅者。如每个订阅者都返回值，就无法确定应该使用哪个订阅者的返回值。
 
 如修改 OnTemperatureChange，让它不是返回 void，而是返回枚举值，指出设备是否因温度的改变而启动，新的委托就应该是 Func<float, Status>，其中 Status 是包含元素 On 和 Off 的枚举。因为所有订阅者方法都要使用和委托一样的方法签名，所以都必须返回状态值。由于 OnTemperatureChange 可能和一个委托链对应，所以需要遵循和错误处理一样的模式。也就是说，必须使用 GetInvocationList()方法遍历每一个委托调用列表来获取每一个单独的返回值。类似地，使用 ref 和 out 参数的委托类型也需特别对待。虽然极少数情况下需采取这样的做法，但一般原则是通过只返回 void 来彻底避免该情形。
 
+> 注：脚本块数组逐个 `& $subscriber $value` 时无法简单地复用某个订阅者的返回值：多次 `return`/输出会被 PowerShell 打包成一个数组，而非像委托链那样“丢弃非 void 的返回值”。若订阅者需要回传结果，惯用做法是写进外部变量/集合而不是依赖返回值；`ref`/`out` 参数没有直接对应（PowerShell 可用 `[ref]` 近似）。
+
 [\[1\]](part0133.xhtml#ch1) 本例使用“恒温器”（thermostat）这个词，因为人们习惯于它在加热或冷却系统中的使用。但从技术上说，“温度计”（thermometer）一词更恰当。
 
 ## 14.2　理解事件
 
 到目前为止使用的委托存在两个重要问题。C#使用关键字 event（事件）来解决这些问题。本节描述如何使用事件，以及它们是如何工作的。
+
+> 注：PowerShell **没有** `event` 关键字——在类声明中写 `event System.EventHandler E` 会解析失败（报“类方法声明列表缺少…”，已实测）。因此本章 C# 用 event 提供的“只能在本类中触发、外部只能订阅”这一整套封装在 PowerShell 中无法原样照搬；改编版用公开的 `[scriptblock[]]` 数组模拟“订阅者列表”，并把“增删”行为封装成公开方法（见代码清单 14.19 的改编）。若订阅真正的 .NET 对象事件，PowerShell 另有事件子系统，见 14.3 小结的注。
 
 ### 14.2.1　事件的作用
 
@@ -329,9 +349,13 @@ class Thermostat {
 
 普通委托另一个潜在缺陷在于很容易忘记在调用委托前检查 null 值（C# 6.0 起应使用空条件操作符）。这可能造成非预期的 NullReferenceException 异常。幸好，如代码清单 14.13 所示，通过 event 关键字提供的封装，可在声明时（或在构造函数中）采用一个替代方案。注意在声明事件时，我赋的值是 delegate{}，这是一个空白委托，代表包含零个订阅者的一个集合。通过赋值空白委托，就可引发事件而不必检查是否有任何订阅者。（该行为类似于向变量赋一个包含零个元素的数组，这样调用一个数组成员时就不必先检查变量是否为 null。）当然，如委托存在被重新赋值为 null 的任何可能，那么仍需进行 null 值检查。但因为 event 关键字限制赋值只能在类中发生，所以要重新对委托进行赋值，只能在类中进行。如果从未在类中赋过 null 值，则不必在每次调用委托时检查 null^( [\[1\]](part0134.xhtml#ch1_back) ) 。
 
+> 注：C# 用空白委托 `delegate{}` 初始化事件，避免触发前判空。改编版用 `[scriptblock[]]$OnTemperatureChange = @()` 赋空数组：`foreach` 对空数组不执行循环体，天然免判空。另验证过对值为 `$null` 的 `[scriptblock[]]` 属性执行 `+=` 也会得到单元素数组（`$null` 被当作空数组处理），不会报错。
+
 ### 14.2.3　编码规范
 
 为获得希望的功能，唯一要做的就是将原始委托变量声明更改为字段并添加 event 关键字。进行这两处修改后，就可提供全部必要的封装，其他功能没有变化。但在代码清单 14.13 中，委托声明还进行了另一处修改。为遵循标准的 C#编码规范，要将 Action<float>替换成新的委托类型 EventHandler<TemperatureArgs>，这是一个 CLR 类型，其声明如代码清单 14.14 所示。
+
+> 注：`System.EventHandler[TEventArgs]` 是普通 .NET 泛型委托类型，PowerShell 中可以写出 `[System.EventHandler[TemperatureArgs]]` 这类类型字面量（已实测）。但脚本块的参数列表不写类型，`param([object]$sender, [TemperatureArgs]$e)` 只是声明时标注，PowerShell 没有编译器强制“sender 必须是 object、e 必须派生自 EventArgs”的约定；这门约定在 PowerShell 中只是风格建议。
 
 代码清单 14.14　泛型 EventHandler 类型
 
@@ -449,6 +473,8 @@ class CustomThermostat {
 
 在本例中，存储每个订阅者的委托\_OnTemperatureChange 变成了 protected。此外，add 块的实现交换了两个委托存储的位置，使添加到链中的最后一个委托是接收通知的第一个委托。不过由于 C#不保证同一个事件对象中所有接收者接收事件的顺序，因此开发者不能依赖 Combine()方法中参数的顺序来断定事件实际接收的顺序。
 
+> 注：PowerShell 没有事件的自定义 `add`/`remove` 访问器语法。改编版用类的公开方法 `AddSubscriber(...)`/`RemoveSubscriber(...)` 封装 `[scriptblock[]]` 列表来模拟（见代码清单 14.19）。其中 `RemoveSubscriber` 用 `Where-Object { $_ -ne $handler }` 过滤，注意脚本块的 `-ne` 是引用比较。
+
 [\[1\]](part0134.xhtml#ch1) 虽然很少见，但请注意，当事件包含在结构中时，此模式不起作用。
 
 [\[2\]](part0134.xhtml#ch2) 本书按约定俗成的译法将 event handler 翻译成“事件处理程序”，但请把它理解成“事件处理方法”（在 VB 中，则理解成“事件处理 Sub 过程”）。——译者注
@@ -456,5 +482,7 @@ class CustomThermostat {
 ## 14.3　小结
 
 本章讨论了事件。注意若不用到事件，唯一适合与委托变量配合使用的就是方法引用。换言之，由于事件提供了额外的封装性，而且允许在必要时自定义实现，所以最佳做法就是始终为 Publish-Subscribe 模式使用事件。
+
+> 注：本节的发布—订阅全部用 `[scriptblock[]]` 数组模拟。实际面向 .NET 对象的异步事件（如 `System.Timers.Timer` 的 `Elapsed`），PowerShell 自带事件子系统：`Register-ObjectEvent` 订阅对象事件，`Register-EngineEvent`/`New-Event` 定义并引发引擎事件，`Get-Event`/`Wait-Event`/`Unregister-Event` 查看、等待和注销。但注意 `Register-ObjectEvent -Action` 的处理块是**异步**运行在后台任务中的，与本章的同步顺序调用模型不同。
 
 可能需要一段时间的练习，才能脱离示例代码熟练进行事件编程。但只有熟练之后，才能更好地理解本书后面章节中将要讲述的异步、多线程编码。

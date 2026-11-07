@@ -10,6 +10,8 @@ Lambda 表达式自 C# 3.0 引入。C# 2.0 支持用一种称为匿名方法 的
 
 本章最后讨论表达式树，它允许在运行时使用编译器对 Lambda 表达式进行分析。
 
+> 注：PowerShell 没有 C# 的 Lambda 表达式（`=>`）和匿名方法（`delegate {...}`）语法——两者在 PowerShell 里都由脚本块（scriptblock，即 `{ ... }`）承担。因此本章按 C# 版本讲述的匿名方法／语句 Lambda／表达式 Lambda 演进史，在 PowerShell 中并不存在；脚本块统一承担“可传递的代码块”这一角色。下文各节的注会指出对应的 PowerShell 写法。
+
 ## 13.1　委托概述
 
 经验丰富的 C 和 C++程序员长期以来利用“函数指针”将对方法的引用作为实参传给另一个方法。C#使用委托 提供相似的功能。委托允许捕捉对方法的引用，并像传递其他对象那样传递该引用，像调用其他方法那样调用被捕捉的方法。来看看下面的例子。
@@ -36,6 +38,8 @@ Lambda 表达式自 C# 3.0 引入。C# 2.0 支持用一种称为匿名方法 的
 
 为增强灵活性和减少重复代码，可将比较方法作为参数传给 BubbleSort()方法。为了能将方法作为参数传递，要有一个能表示方法的数据类型。该数据类型就是委托 ，因为它将调用“委托”给对象引用的方法。可将方法名作为委托实例。从 C# 3.0 开始还可使用 Lambda 表达式作为委托来内联一小段代码，而不必非要为其创建方法。从 C# 7.0 开始则支持创建本地函数（嵌套方法）并将函数名用作委托。代码清单 13.3 修改 BubbleSort()方法来获取一个 Lambda 表达式参数。本例的委托数据类型是 Func<int, int, bool>。
 
+> 注：PowerShell 没有 `Func<int, int, bool>` 这样的泛型类型字面量写法，但可直接使用 .NET 的泛型委托类型 `[System.Func[int,int,bool]]`（可简写为 `[Func[int,int,bool]]`）。把脚本块强制转换成该类型就得到委托，例如 `[Func[int,int,bool]] { param($a,$b) $a -gt $b }`。
+
 代码清单 13.3　带委托参数的 BubbleSort()方法
 
 ![](img/image01074.jpeg)
@@ -46,11 +50,15 @@ Func<int, int, bool>类型的委托代表对两个整数进行比较的方法。
 
 注意，Func<int, int, bool>委托是强类型的，代表返回 bool 值并正好接受两个整数参数的方法。和其他任何方法调用一样，对委托的调用也是强类型的。如果实参数据类型不兼容，那么 C#编译器会报错。
 
+> 注：PowerShell 没有编译期类型检查：把脚本块转换成委托是运行时行为，转换时通常不会校验参数个数或类型，错误往往到 `Invoke()` 时才暴露；而且 PowerShell 会做隐式类型转换（例如向 `Func[string,...]` 传数字会被转成字符串）。
+
 ## 13.2　声明委托类型
 
 前面描述了如何定义使用委托的方法，展示了如何将委托变量当作方法来发出对委托的调用。但还必须学习如何声明委托类型。声明委托类型要使用 delegate 关键字，后跟像是方法声明的内容。该方法的签名就是委托能引用的方法的签名。正常方法声明中的方法名要替换成委托类型的名称。例如，代码清单 13.3 的 Func<...>是这样声明的：
 
 ![](img/image01076.jpeg)
+
+> 注：PowerShell **没有** `delegate` 关键字，不能声明自定义委托类型：在类中写 `delegate bool Comparer(...)` 会解析失败，在顶层写则会被当成命令调用而报“找不到命令”。日常应直接使用 .NET 内建的 `[Action[...]]`、`[Func[...]]`、`[Predicate[...]]`；确实需要自定义委托类型时，可用 `Add-Type` 编译一段 C# 代码来定义。
 
 （in/out 类型修饰符自 C# 4.0 引入，本章稍后会讨论。）
 
@@ -67,6 +75,8 @@ Func<int, int, bool>类型的委托代表对两个整数进行比较的方法。
 代码清单 13.4 的第一组委托类型是 Action<...>，代表无返回值并支持最多 16 个参数的方法。如果需要返回结果，则使用第二组 Func<...>委托。Func<...>的最后一个类型参数是 TResult，即返回值的类型。Func<...>的其他类型参数按顺序对应委托参数的类型。例如，代码清单 13.3 的 BubbleSort 方法要求返回 bool 并获取两个 int 参数的一个委托。
 
 清单中最后一个委托是 Predicate<in T>。若用一个 Lambda 返回 bool，则该 Lambda 称为谓词 （predicate）。通常用谓词筛选或识别集合中的数据项。换言之，向谓词传递一个数据项，它返回 true 或 false 指出该项是否符合条件。而在我们的 BubbleSort()例子中，是接收两个参数来比较它们，所以要用 Func<int, int, bool>而不是谓词。
+
+> 注：`System.Action`、`System.Func`、`System.Predicate` 等 .NET 泛型委托类型在 PowerShell 中可以直接使用，写法为 `[System.Func[int,int,bool]]` 这类方括号形式。将脚本块（或静态方法引用）转换成该类型即可得到委托实例，例如 `[System.Predicate[int]] { param($x) $x -gt 0 }`。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -108,6 +118,8 @@ Func<int, int, bool>类型的委托代表对两个整数进行比较的方法。
 
 注意委托是引用类型，但不需要用 new 实例化。从 C# 2.0 开始，从方法组 （为方法命名的表达式）向委托类型的转换会自动创建新的委托对象。
 
+> 注：PowerShell 也支持“方法组→委托”的转换，但要求通过类型转换显式进行，且主要适用于静态方法，例如 `[Func[double,double]] [Math]::Sqrt`（已验证）。实例方法的引用是重载组（`PSMethod`），一般无法直接转换成某个具体委托类型，需要再用脚本块包一层。PowerShell 中也不存在 C# 意义的“方法组”一等表达式。
+
 高级主题：C# 1.0 中的委托实例化
 
 在代码清单 13.8 中，调用 BubbleSort()时传递方法名（GreaterThan）即可实例化委托。C#的第一个版本要求如代码清单 13.9 所示的较复杂的语法来实例化委托。
@@ -132,11 +144,15 @@ Func<int, int, bool>类型的委托代表对两个整数进行比较的方法。
 
 注意所有委托都不可变（immutable）。换言之，委托创建好后无法更改。如果变量包含委托引用，并想引用不同的方法，则只能创建新委托再把它赋给变量。
 
+> 注：委托不可变、且都派生自 `System.MulticastDelegate` 这些底层事实对 PowerShell 同样成立，因为脚本块转换出来的就是同一套 .NET 委托对象。但 PowerShell 脚本块本身是 `System.Management.Automation.ScriptBlock` 对象，不是委托；脚本块可以直接用 `& $sb` 或 `$sb.Invoke()` 调用。
+
 虽然所有委托数据类型都间接从 System.Delegate 派生，但 C#编译器不允许声明直接或间接从 System.Delegate 或者 System.MulticastDelegate 派生的类。代码清单 13.10 的代码无效。
 
 代码清单 13.10　System.Delegate 不能是显式的基类
 
 ![](img/image01086.jpeg)
+
+> 注：这条限制来自 CLR 而非 C# 语言本身，PowerShell 类同样不能从 `System.Delegate`/`System.MulticastDelegate` 派生。
 
 通过传递委托来指定排序方式显然比本章开头的方式灵活得多。例如，要改为按字母排序，只需添加一个委托，比较时将整数转换为字符串。代码清单 13.11 是按字母排序的完整代码，输出 13.1 展示了结果。
 
@@ -157,6 +173,8 @@ Func<int, int, bool>类型的委托代表对两个整数进行比较的方法。
 为解决问题，C# 2.0 引入了非常精简的语法创建委托，C# 3.0 则引入了更精简的。C# 2.0 的称为匿名方法 ，C# 3.0 的称为 Lambda 表达式 。这两种语法统称为匿名函数 。两种都合法，但新代码应优先使用 Lambda 表达式。除非要专门讲述 C# 2.0 匿名方法，否则，本书都使用 Lambda 表达式^( [\[1\]](part0126.xhtml#ch1_back) ) 。
 
 Lambda 表达式本身分为两种：语句 Lambda 和表达式 Lambda 。图 13.2 展示了这些术语的层次关系。
+
+> 注：PowerShell 没有 `=>` Lambda 操作符，脚本块就是它的“匿名函数”。对应写法如 `{ param($first, $second) $first -lt $second }`。脚本块没有“语句 Lambda”与“表达式 Lambda”的区分，主体总是由若干语句组成；向 .NET 方法传委托时需先把脚本块转换成相应委托类型（见上文注），而 PowerShell 自己的 cmdlet（如 `Where-Object`、`ForEach-Object`）则直接接受脚本块。
 
 ![](img/image01090.jpeg)
 
@@ -183,6 +201,8 @@ Lambda 表达式的目的是在需要基于很简单的方法生成委托时，�
 ![](img/image01092.jpeg)
 
 通常，只要编译器能从 Lambda 表达式所转换成的委托推断出类型，所有 Lambda 表达式就都不需要显式声明参数类型。不过，若指定类型能使代码更易读，C#也允许这样做。在不能推断的情况下，C#要求显式指定 Lambda 参数类型。显式指定一个 Lambda 参数类型，所有参数类型都必须显式指定，而且必须和委托参数类型完全一致。
+
+> 注：脚本块的 `param()` 列表本身也不写类型，例如 `{ param($a, $b) $a -lt $b }`。PowerShell 不根据上下文推断参数类型，参数的实际类型由调用时传入的值决定，且不做静态检查。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -214,6 +234,8 @@ Lambda 表达式的目的是在需要基于很简单的方法生成委托时，�
 
 类似于 null 字面值，匿名函数不和任何类型关联。其类型由转换成的类型决定。也就是说，目前为止的所有 Lambda 表达式并非天生就是 Func<int, int, bool>或 Comparer 类型。它们只是与那个类型兼容，能转换成它。所以，不能对匿名方法使用 typeof()操作符。另外，只有在将匿名方法转换成具体类型后才能调用 GetType()。
 
+> 注：PowerShell 中脚本块是 `System.Management.Automation.ScriptBlock` 类型的普通对象，创建后即可调用 `GetType()`（`{ 1 }.GetType()` 返回 `ScriptBlock`）。PowerShell 也没有 C# 的 `typeof` 操作符：`typeof(int)` 会被当作命令调用而失败；表示类型应使用方括号字面量，如 `[int]`。
+
 表 13.1 总结了关于 Lambda 表达式的其他注意事项。
 
 表 13.1　Lambda 表达式的注意事项和例子
@@ -231,6 +253,8 @@ C# 2.0 不支持 Lambda 表达式，而是使用称为匿名方法 的语法。�
 ![](img/image01098.jpeg)
 
 所以在 C# 3.0 和以后的版本中，可用两种相似的方式定义匿名函数，这多少令人有点遗憾。
+
+> 注：PowerShell 从未有过 C# 2.0 式的匿名方法语法，本节属于 C# 版本历史；在 PowerShell 中脚本块统一承担匿名函数角色。下一小节的“无参匿名方法”等 C# 细节在 PowerShell 中没有对应物。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -261,6 +285,8 @@ Lambda 表达式的概念来自阿隆佐·邱奇（Alonzo Church），他于 20 
 但通过 C# 4.0 添加的对可变性的支持，现在可在某些委托类型之间进行引用转换。来考虑一个逆变的例子：由于 void Action<in T>(T arg)有 in 类型参数修饰符，所以可将 Action<object>类型的委托引用赋给 Action<string>类型的变量。
 
 许多人都觉得委托的逆变不好理解。只需记住，适合任何对象的行动必定适合任何字符串。反之则不然，只适合字符串的行动不适合每个对象。类似地，Func 系列委托类型对它的返回类型协变，这通过 TResult 的 out 类型参数修饰符来指示。所以，Func<string>类型的委托引用可以赋给 Func<object>类型的变量。
+
+> 注：PowerShell 是动态类型语言，不存在委托类型的“结构相等性”及引用转换限制：任意脚本块都可按需转换成任意兼容的委托类型。若要把已有委托 `$c` 当作另一种委托类型使用，用脚本块间接调用即可，例如 `[Func[int,int,bool]] { param($a,$b) $c.Invoke($a,$b) }`。C# 4.0 的 `in`/`out` 协变、逆变仍作用于 .NET 泛型委托类型本身（已验证 `[Action[object]]` 赋给 `[Action[string]]` 可行），但 PowerShell 代码通常无需关心。
 
 代码清单 13.18 展示了委托的协变和逆变。
 
@@ -299,6 +325,8 @@ comparisonCount 在 Lambda 表达式外部声明，在其内部递增。调用 B
 局部变量的生存期一般和它的作用域绑定。一旦控制离开作用域，变量的存储位置就不再有效。但如果从 Lambda 表达式创建的委托捕捉了外部变量，该委托可能具有比局部变量一般情况下更长（或更短）的生存期。委托每次被调用时，都必须能安全地访问外部变量。在这种情况下，被捕捉的变量的生存期被延长了。这个生存期至少和存活时间最长的委托对象一样长。（也许更长：编译器如何生成代码来延长外部变量生存期是一种实现细节，可能会发生变化。）
 
 总之，C#编译器生成在匿名函数和声明它的方法之间共享 comparison-Count 的 CIL 代码。
+
+> 注：PowerShell 脚本块也会“捕捉”外层变量，但机制不同：脚本块保留对变量所在作用域的引用，调用时才读取变量的当前值，不存在 C# 编译器生成的闭包类；变量的生存期由作用域与脚本块引用共同维持。若要在创建脚本块时锁定变量当时的值，用 `.GetNewClosure()` 生成快照，例如 `$c=5; $sb={ $c }.GetNewClosure(); $c=9; & $sb` 输出 5（已验证）。
 
 高级主题：外部变量的 CIL 实现
 
@@ -340,6 +368,8 @@ C# 5.0 对此进行了更改，认为每一次循环迭代，foreach 循环变�
 
 这样可保证每次循环迭代都有一个新变量，每个委托捕捉的都是一个不同的变量。
 
+> 注：PowerShell 捕捉循环变量的行为与 **C# 4.0** 一致：循环里创建的脚本块共享同一个循环变量，调用时全部读到循环结束后的最后值（验证：循环结束后调用各脚本块，输出 3,3,3）。若要让每次迭代各自持有值，可对每个脚本块调用 `.GetNewClosure()`（输出 1,2,3），或先把当前值复制到新变量再引用。PowerShell 没有 C# 5.0 的 `foreach` 新变量语义，`for`、`foreach` 都一样。
+
 ![](img/image00300.jpeg)设计规范
 
 ·避免在匿名函数中捕捉循环变量。
@@ -347,6 +377,8 @@ C# 5.0 对此进行了更改，认为每一次循环迭代，foreach 循环变�
 ## 13.7　表达式树
 
 Lambda 表达式提供了一种简洁的语法来定义代码中“内联”的方法，使其能转换成委托类型。表达式 Lambda（但不包括语句 Lambda 和匿名方法）还能转换成表达式树 。委托是对象，允许像传递其他任何对象那样传递方法，并在任何时候调用该方法。表达式树也是对象，允许传递编译器对 Lambda 表达式的分析。但这个分析有什么用呢？显然，编译器的分析在生成 CIL 时对编译器有用，但是在程序执行时，代表这种分析的一个对象对开发者有什么用呢？下面看一个例子。
+
+> 注：PowerShell **不能**把脚本块转换成表达式树：`[System.Linq.Expressions.Expression[System.Func[int,bool]]] { param($x) $x -gt 3 }` 会报“无法将 ScriptBlock 转换为 Expression`1”的错误（已验证）。C# 编译器“根据类型自动选择生成委托还是表达式树”的 LINQ 机制在 PowerShell 中不存在；PowerShell 的管道（`Where-Object` 等）总在本地执行，不会把代码序列化后发给远程服务器。
 
 ### 13.7.1　Lambda 表达式作为数据使用
 
@@ -416,9 +448,13 @@ System.Linq.Queryable 类中声明的扩展方法签名是：
 
 如果 persons 不能隐式转换成 IQueryable<Person>，但能隐式转换成 IEnumerable <Person>，就选择来自 System.Linq.Enumerable 的方法，Lambda 被转换成委托。所以，调用 Where 的结果是一个对象，一旦请求查询结果，就将生成的委托作为谓词应用于集合的每个成员，生成与谓词匹配的结果。
 
+> 注：PowerShell 不支持扩展方法语法，不能对集合直接调用 `Where()`；需要按静态方法调用，例如 `[System.Linq.Enumerable]::Where($arr, [Func[int,bool]] { param($x) $x -gt 3 })`（已验证）。`IQueryable`/`Queryable` 那套表达式树机制在 PowerShell 中一般用不到，惯用做法是 `Where-Object`、`ForEach-Object` 等管道 cmdlet，它们在本地逐项执行。
+
 ### 13.7.4　检查表达式树
 
-如前所述，将 Lambda 表达式转换成 Expression<TDelegate>将创建表达式树而不是委托。本章前面讲过如何将(x,y)=>x>y 这样的 Lambda 转换成 Func<int, int, bool>这样的委托类型。要将同样的 Lambda 转换成表达式树，只需把它转换成 Expression <Func<int, int, bool>>，如代码清单 13.25 所示。然后就可检查生成的对象，显示和它的结构相关的信息，并可显示更复杂的表达式树的信息。
+如前所述，将 Lambda 表达式转换成 Expression<TDelegate>将创建表达式树而不是委托。本章前面讲过如何将(x,y)=>x>y 这样的 Lambda 转换成 Func<int, int, bool>这样的委托类型。要将同样的 Lambda 转换成表达式树，只需把它转换成 Expression <Func<int, int, bool>>，如代码清单 13.25 所示。
+
+> 注：PowerShell 中无法进行这种转换：把脚本块强制转换成 `Expression<Func<int,int,bool>>` 会直接失败，只能像下一条注那样手工构造表达式树对象。然后就可检查生成的对象，显示和它的结构相关的信息，并可显示更复杂的表达式树的信息。
 
 代码清单 13.25　检查表达式树
 
@@ -437,6 +473,8 @@ System.Linq.Queryable 类中声明的扩展方法签名是：
 PrintNode()方法使用递归证明表达式树由零个或者多个其他表达式树构成。代表 Lambda 的“根”树通过其 Body 属性引用 Lambda 的主体。每个表达式树节点都包含枚举类型 ExpressionType 的一个 NodeType 属性，描述了它是哪一种表达式。有多种表达式类型，例如 BinaryExpression、ConditionalExpression、LambdaExpression、MethodCall-Expression、ParameterExpression 和 ConstantExpression。每个类型都从 Expression 派生。
 
 注意，虽然表达式树库包含的对象能表示 C#和 Visual Basic 的大多数语句，但两种语言都不支持将语句 Lambda 转换成表达式树。只有表达式 Lambda 才能转换成表达式树。
+
+> 注：虽然脚本块不能转换成表达式树，`System.Linq.Expressions` 只是一组普通 .NET 类型，仍可在 PowerShell 中手工构造和遍历节点，例如 `[System.Linq.Expressions.Expression]::Add([System.Linq.Expressions.Expression]::Parameter([int],'x'), [System.Linq.Expressions.Expression]::Constant(5))` 可构造出 `(x + 5)`（已验证）。但不存在“由编译器分析脚本块生成表达式树”的机制。
 
 ## 13.8　小结
 

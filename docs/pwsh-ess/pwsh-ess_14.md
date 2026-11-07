@@ -26,11 +26,17 @@ class TextNumberParser {
 
 以代码清单 11.1 的 TextNumberParser.Parse()方法为例。调用 Array.IndexOf()时，在 textDigit 为空的前提下利用了 C# 7.0 的 throw 表达式功能。C# 7.0 之前不支持 throw 表达式，只支持 throw 语句，所以需要两个单独的语句：一个进行空检查，另一个抛出异常。但这样就无法在同一个语句中嵌入 throw 和空合并操作符(??)。
 
+> 注：PowerShell 没有 C# 的 throw 表达式——`throw` 只能是语句，不能嵌入表达式，也无法与空合并操作符组合。代码清单 11.1 已改用两条独立语句（`if` 判断后 `throw`）实现同样的逻辑。
+
 程序不是抛出 System.Exception，而是抛出更合适的 ArgumentException，因为类型本身指出什么地方出错（参数异常），并包含了特殊的参数来指出具体是哪一个参数出错。
 
 ArgumentNullException 和 NullReferenceException 这两个异常很相似。前者应在错误传递了空值时抛出。空值是无效参数的特例。非空的无效参数则应抛出 Argument-Exception 或 ArgumentOutOfRangeException。一般只有在底层“运行时”解引用 null 值（想调用对象的成员，但发现对象的值为空）时才抛出 NullReferenceException。开发者不要自己抛出 NullReferenceException。相反，应在访问参数前检查它们是否为空，为空就抛出 ArgumentNullException，这样能提供更具体的上下文信息，比如参数名等。如果在实参为空时可以无害地继续，请一定使用 C# 6.0 的空条件操作符（?.）来避免“运行时”抛出 NullReferenceException。
 
+> 注：PowerShell **没有** `?.` 空条件操作符——写成 `$x?.Member` 会被解析成名为 `$x?` 的变量再访问 `.Member`，结果通常不是“遇空返回 null”的预期。应改用显式判断，例如 `if ($null -ne $x) { $x.Member }`。PowerShell 7.0 起支持空合并运算符 `??` 和三元运算符 `? :`，但不支持 `?.`/`?[]`。
+
 参数异常类型（包括 ArgumentException、ArgumentNullException 和 ArgumentOutOf-RangeException）的一个重要特点是构造函数支持用一个字符串参数来标识参数名。C# 6.0 以前需硬编码一个字符串（例如"textDigit"）来标识参数名。参数名发生更改，开发者必须手动更新该字符串。幸好，C# 6.0 增加了一个 nameof 操作符，它获取参数名标识符并在编译时生成参数名，如代码清单 11.1 的 nameof(textDigit)所示。它的好处在于，现在 IDE 可利用重构工具（比如自动重命名）自动更改标识符，包括在作为实参传给 nameof 操作符的时候。另外，如参数名发生更改（不是通过重构工具），在传给 nameof 操作符的标识符不复存在时会报告编译错误。从 C# 6.0 起，编程规范在抛出参数异常时总是为参数名使用 nameof 操作符。第十八章完整解释了 nameof 操作符。目前只需知道 nameof 返回所标识的实参的名称。
+
+> 注：PowerShell 没有 `nameof` 操作符（`nameof($x)` 会被当作调用名为 `nameof` 的命令，运行时报“找不到命令”）。向参数异常传递参数名时通常直接写字符串，例如 `[ArgumentException]::new('...', 'textDigit')`；PowerShell 没有编译期自动同步名称的机制，重命名参数后需自行更新这些字符串。
 
 还有几个直接或间接从 System.SystemException 派生的异常仅供“运行时”抛出，其中包括 System.StackOverflowException、System.OutOfMemoryException、System.Runtime.InteropServices.COMException、System.ExecutionEngineException 和 System.Runtime.InteropServices.SEHException。不要自己抛出这些异常。类似地，不要抛出 System.Exception 或 System.ApplicationException。它们过于宽泛，为问题的解决提供不了太多帮助。相反，要抛出最能说明问题的异常。虽然开发者应避免创建可能造成系统错误的 API，但假如代码的执行达到一种再执行就会不安全或者不可恢复的状态，就应该果断地调用 System.Environment.FailFast()。这会向 Windows Application 事件日志写入一条消息，然后立即终止进程。（如用户事先进行了设置，消息还会发送给“Windows 错误报告”。）
 
@@ -82,6 +88,8 @@ finally {
 
 从 C# 6.0 起，catch 块支持一个额外的条件表达式。不是只根据异常类型来匹配，现在可以添加 when 子句来提供一个 Boolean 表达式。条件为 true 时，catch 块才处理异常。
 
+> 注：PowerShell 没有 `catch [类型] when (条件)` 语法（解析器会报“Catch 缺少语句块”）。要按条件筛选异常，应在 catch 块内用 `if` 判断 `$_.Exception` 的属性，条件不满足时用裸 `throw` 重新抛出；或针对不同异常类型分别写 catch 块。
+
 代码清单 11.2 在 when 子句中使用的是一个相等性比较操作符，但可以在这里使用任何条件表达式。例如，可以执行一次方法调用来验证条件。
 
 也可以在 catch 主体中用 if 语句执行条件检查。但这样做会造成该 catch 块先成为异常的“处理程序”，再执行条件检查，导致难以在条件不满足时改为使用一个不同的 catch 块。而使用异常条件表达式 ，就可先检查程序状态（包括异常），而不需要先捕捉再重新抛出异常。
@@ -90,11 +98,17 @@ finally {
 
 catch 块必须按从最具体到最常规的顺序排列以避免编译错误。例如，将 catch (Exception ...)块移到其他任何一种异常之前都会造成编译错误。因为之前的所有异常都直接或间接从 System.Exception 派生。
 
+> 注：PowerShell 同样要求 catch 块按从具体到宽泛的顺序排列，并在解析阶段报错（提示“异常类型 … 已被前一个 catch 块覆盖”），效果与 C# 的编译错误类似；运行时按书写顺序匹配第一个兼容的异常类型。
+
 catch 块并非一定需要具名参数，例如 catch (SystemException){...}。事实上，如下一节所述，最后一个 catch 甚至连类型参数都可以不要。
+
+> 注：PowerShell 的 catch 块不声明参数名，异常对象始终通过自动变量 `$_`（完整错误记录）和 `$_.Exception`（异常实例）访问。裸 `catch { }`（不带类型）在 PowerShell 中同样受支持，可捕获所有异常。
 
 ## 11.3　重新抛出现有异常
 
 注意在捕捉 InvalidOperationException 的 catch 块中，虽然当前 catch 块的范围内有一个异常实例（exception）可供重新抛出，但还是使用了一个未注明要抛出什么异常的 throw 语句（一个独立的 throw 语句）。如选择抛出具体异常，会更新所有栈信息来匹配新的抛出位置。这会导致指示异常最初发生位置的所有栈信息丢失，使问题变得更难诊断。有鉴于此，C#支持不指定具体异常、但只能在 catch 块中使用的 throw 语句。这使代码可以检查异常，判断是否能完整处理该异常，不能就重新抛出异常（虽然没有显式指定这个动作）。结果是异常似乎从未被捕捉，也没有任何栈信息被替换。
+
+> 注：PowerShell 同样支持在 catch 块中单独写 `throw`（裸 throw）来重新抛出当前异常，并保留原始异常信息；写 `throw $_.Exception` 则会以新位置重新抛出，可能丢失原始调用栈信息。PowerShell 的异常实例位于 `$_.Exception`，而不是具名的 catch 变量。
 
 高级主题/初学者主题：抛出现有异常而不替换栈信息
 
@@ -120,6 +134,8 @@ catch [System.AggregateException] {
 
 ExceptionDispatchInfo.Throw()值得注意的一个地方是，编译器不认为它是像普通 throw 语句那样的一个返回语句。例如，如方法签名返回一个值，但没有值从 ExceptionDispatchInfo.Throw()所在的代码路径返回，编译器就会报错，指出没有返回值。所以，开发者有时不得不在 ExceptionDispatchInfo.Throw()后面跟随一个 return 语句，即使该语句在运行时永远不会执行（相反是抛出异常）。
 
+> 注：PowerShell 没有编译器对“所有代码路径是否返回值”的检查，因此代码清单 11.3 的 `ExceptionDispatchInfo.Throw()` 之后不需要额外补 `return`。`ExceptionDispatchInfo` 本身在 PowerShell 中可正常使用。
+
 语言对比：Java——异常指示符
 
 C#没有与 Java 异常指示符(exception specifiers)对应的东西。通过异常指示符，Java 编译器可验证一个函数（或函数的调用层次结构）中抛出的所有可能的异常是已被捕捉到还是被声明为可以重新抛出。C#团队考虑过这种设计，但认为它的好处不足以抵消维护所带来的负担。所以，最终的决定是没必要维持一个特定调用栈上所有可能异常的列表。当然，这也造成不能轻松判断所有可能的异常。事实上，Java 也做不到这一点。由于可能调用虚方法或使用晚期绑定（比如反射），因此编译时不可能完整分析一个方法可能抛出的异常。
@@ -127,6 +143,8 @@ C#没有与 Java 异常指示符(exception specifiers)对应的东西。通过�
 ## 11.4　常规 catch 块
 
 C#要求代码抛出的任何对象都必须从 System.Exception 派生。但并非所有语言都如此要求。例如，C++允许抛出任意对象类型，包括不是从 System.Exception 派生的托管异常。不管是不是从 System.Exception 派生的所有异常在进入程序集之后，都会被“包装”成从 System.Exception 派生。结果是捕捉 System.Exception 的 catch 块现在可捕捉前面的块不能捕捉的所有异常。
+
+> 注：PowerShell 允许 `throw` 任意对象（字符串、数字、哈希表等），引擎会自动把它包装成 `System.Management.Automation.RuntimeException` 再传播，因此“必须派生自 System.Exception”的约束由运行时自动满足；实践中仍应抛出具体的 .NET 异常类型，以便调用者按类型精确捕获。
 
 C#还支持常规 catch 块 ，即 catch{}，其行为和 catch(System.Exception exception)块完全一致，只是没有类型名或变量名。此外，常规 catch 块必须是所有 catch 块的最后一个。由于常规 catch 块在功能上完全等价于 catch(System.Exception exception)块，而且必须放在最后，所以在同一个 try/catch 语句中，假如这两个 catch 块同时出现，编译器就会显示一条警告消息，因为常规 catch 块永远得不到调用。
 
@@ -213,6 +231,8 @@ c）异常类型过于具体，以至于调用者不能恰当地处理。
 必须抛出异常时，应首选框架内建的异常，因其构建良好，能被很好地理解。例如，首选的不是抛出自定义的“无效参数”异常，而应抛出 System.ArgumentException。但假如使用特定 API 的开发者需采取特殊行动（例如要用不同逻辑处理错误），就适合定义一个自定义异常。例如，某个地图 API 接收到邮编无效的地址时不应抛出 System.ArgumentException，而应抛出自定义 InvalidAddressException。这里的关键在于调用者是否愿意编写专门的 InvalidAddressException catch 块来进行特殊处理，而不是用一个常规 System.ArgumentException catch 块。
 
 定义自定义异常时，从 System.Exception 或者其他异常类型派生就可以了。代码清单 11.4 展示了一个例子。
+
+> 注：PowerShell 类可以像代码清单 11.4 这样从 `System.Exception` 派生，并用 `: base(...)` 构造链调用基类构造函数（已验证可用）。PowerShell 类没有 `public` 等访问修饰符，构造函数直接以类名声明。
 
 代码清单 11.4　创建自定义异常
 
@@ -302,6 +322,8 @@ class DatabaseException : System.Exception {
 初学者主题：checked 和 unchecked 转换
 
 正如第二章的“高级主题：checked 和 unchecked 转换”讨论的那样，C#提供了特殊的关键字来标识代码块，指出假如目标数据类型太小，以至于不能包含所赋的数据，那么“运行时”应该怎么办。默认情况下，假如目标数据类型容不下所赋的数据，那么数据会被截短。代码清单 11.6 展示了一个例子。
+
+> 注：PowerShell 没有 `checked`/`unchecked` 关键字，也没有工程级的溢出检查开关，而且其算术运算的溢出行为与 C# 不同：`[int]::MaxValue + 1` 会自动提升为 `Double`，结果为 2147483648，而不是 C# unchecked 下的 -2147483648（因此代码清单 11.6 的输出不会与书中一致）。显式转换 `[int]([int]::MaxValue + 1)` 会抛出 `System.Management.Automation.RuntimeException`（内部为 PSInvalidCastException），并不能靠 `catch [System.OverflowException]` 捕获；若需要 `OverflowException`，可改用 .NET 的转换方法，例如 `[int]::Parse('2147483648')`。
 
 代码清单 11.6　溢出一个整数值
 

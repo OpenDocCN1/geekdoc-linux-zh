@@ -8,6 +8,8 @@
 
 第六章说过，object 是终极基类，所有类和结构都从它派生，还讨论了 object 提供的方法，并提到其中一些是虚方法。本节讨论对虚方法进行重写的细节。
 
+> 注：PowerShell 类同样直接或间接继承 System.Object，可以覆盖 ToString()、GetHashCode()、Equals() 这些虚方法——按相同的名称和签名定义方法即可，不需要（也不支持）`virtual`/`override` 关键字。本章代码清单中带 override 的写法只为说明 C# 语法而保留。
+
 ### 10.1.1　重写 ToString()
 
 在对象上调用 ToString()默认返回类的完全限定名称。例如，在一个 System.IO.FileStream 对象上调用 ToString()会返回字符串"System.IO.FileStream"。但 ToString()对于某些类应返回更有意义的结果。以 string 类为例，ToString()应返回字符串值本身。类似地，返回一个 Contact 的姓名显然更有意义。代码清单 10.1 重写了 ToString()，返回 Coordinate（坐标）的字符串表示。
@@ -35,6 +37,8 @@ Console.WriteLine()和 System.Diagnostics.Trace.Write()等方法会调用对象�
 ### 10.1.2　重写 GetHashCode()
 
 重写 GetHashCode()远比重写 ToString()复杂。但底线是重写 Equals()就要重写 GetHashCode()，否则编译器会显示警告。将类作为哈希表集合（比如 System.Collections.Hashtable 和 System.Collections.Generic.Dictionary）的键（key）使用也应重写 GetHashCode()。
+
+> 注：PowerShell 没有编译阶段，也就不会有“编译器警告”，但该原则在 PowerShell 中依然成立——重写 Equals()时要同时重写 GetHashCode()，否则把对象用作 Hashtable 或 Dictionary 的键时行为可能不正确。
 
 哈希码（hash code）作用是生成和对象值对应的数字，从而高效地平衡哈希表 ^( [\[1\]](part0096.xhtml#ch1_back) ) 。要获得良好的 GetHashCode()实现，请参照以下实现原则（“必须”是指必须满足的要求，“性能”是指为了增强性能而需要采取的措施，“安全性”是指为了保障安全性而需要采取的措施）：
 
@@ -134,6 +138,8 @@ Console.WriteLine()和 System.Diagnostics.Trace.Write()等方法会调用对象�
 
 （8）重写==和!=操作符（参见下一节）。
 
+> 注：第 (8) 步仅适用于 C#。PowerShell 不支持操作符重载，无法重写 `==`/`!=`；PowerShell 中的 `-eq`/`-ne` 在比较对象时会调用对象的 Equals()（未重写时退化为引用相等），因此只要实现了第 (4)～(7) 步，`-eq` 就会得到正确的值相等语义。
+
 代码清单 10.5 展示了一个示例 Equals()实现。
 
 代码清单 10.5　重写 Equals()
@@ -162,9 +168,13 @@ Console.WriteLine()和 System.Diagnostics.Trace.Write()等方法会调用对象�
 
 ·要在实现 IEquitable 时实现与相等性相关的所有方法。
 
+> 注：以上规范中的 `==`/`!=` 重载在 PowerShell 中不可用；PowerShell 能落实的是 GetHashCode() 与 Equals() 的成对实现，比较时使用 `-eq`/`-ne`（它们会调用 Equals()）。
+
 ### 10.1.4　用元组重写 GetHashCode()和 Equals()
 
 如前所述，Equals()和 GetHashCode()的实现相当烦琐，实际代码又比较模板化。Equals()需要比较包含的所有标识（关键）数据结构，同时避免无限递归或空引用异常。GetHashCode()则需要通过 XOR 运算来合并所有非空标识（关键）数据结构的唯一哈希码。现在利用 C# 7.0 元组就相当简单了。
+
+> 注：PowerShell 没有 C# 的元组字面量语法——`(1, 2)` 在 PowerShell 中创建的是数组（`Object[]`）而不是 `ValueTuple`，也不能用 C# 的解构语法。若确需 `ValueTuple`，须显式构造，例如 `[System.ValueTuple[int,int]]::new(1,2)`。因此本节用元组简化 Equals()/GetHashCode() 的写法在 PowerShell 中不能直接照搬，应改为显式比较各字段或构造 ValueTuple。
 
 对于 Equals(Coordinate coordinate)，可将每个标识（关键）成员合并到一个元组中，并将它们和同类型的目标实参比较：
 
@@ -184,6 +194,8 @@ GetHashCode()用元组来实现之后发生了翻天覆地的变化。不需要�
 
 10.1 节讨论了如何重写 Equals()，并指出类还应实现==和!=。实现操作符的过程称为操作符重载 。本节的内容不只适合==和!=操作符，还适合其他支持的操作符。
 
+> 注：PowerShell 不支持操作符重载——`operator` 关键字在 PowerShell 类语法中直接报错，类无法定义 `+`、`==` 等操作符的行为。本节（10.2）描述的重载 `==`/`!=`、二元操作符、一元操作符、true/false 以及隐式/显式转换操作符的机制全部不适用于 PowerShell。在 PowerShell 中：对象比较应依赖重写 Equals()/GetHashCode() 后用 `-eq`/`-ne`；算术和转换应写成命名方法（如 `Add()`、`Parse()`）；类型转换用 `[类型]$value` 或 `-as` 操作符（见 10.2.6 注），但这些都是内建机制，不能改变自定义类型的操作符语义。
+
 例如，string 支持用+操作符连接两个字符串。这或许并不奇怪，string 毕竟是预定义类型，可能获得了特殊的编译器支持。但 C#允许为任何类或结构添加+操作符支持。事实上，除了 x.y、f(x)、new、typeof、default、checked、unchecked、delegate、is、as、=和=>之外，其他所有操作符都支持。尤其要注意不能实现赋值操作符。=操作符的行为无法改变。
 
 重载的操作符无法通过 IntelliSense 呈现。除非故意要使类型表现得像基元类型（比如数值类型），否则不要重载操作符。
@@ -201,6 +213,8 @@ GetHashCode()用元组来实现之后发生了翻天覆地的变化。不需要�
 注意本例用 ProductSerialNumber 类而不是 Coordinate 结构演示针对引用类型的逻辑，要考虑到空值的复杂性。
 
 不要在相等性操作符的重写函数里使用相等性操作符（leftHandSide==null），否则会引起递归调用，造成只有栈溢出才会终止的死循环。相反，应使用 is null（C# 7.0 以后）或者 ReferenceEquals()检查是否为空。
+
+> 注：C# 的 `is null` 语法在 PowerShell 中不存在；判断变量是否为 null 应写 `$null -eq $leftHandSide`（习惯把 `$null` 写在左边，可避免数组语义的干扰）。PowerShell 中比较引用同一性可调用 `[System.Object]::ReferenceEquals($x, $null)`。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -278,6 +292,8 @@ Coordinate 的-和+操作符会在加减 Arc 后返回坐标位置。这就允�
 
 定义好这些转换操作符之后，就可将 double 隐式转型为 Latitude 对象，或者将 Latitude 对象隐式转型为 double。假定为 Longitude 也定义了类似的转换，那么为了创建 Coordinate 对象，可以像下面这样写：
 
+> 注：PowerShell 不支持自定义隐式/显式转换操作符，但可以用自己的静态方法模拟“从某种类型构造/转换”，例如 `[Coordinate]::Parse($str)`、`$coord.ToString()`；也可以利用 PowerShell 的重载构造函数完成由字符串等类型的构造。PowerShell 内建的强制转换 `[类型]$value` 只做 .NET 的元数据转换或在类型明显可转换时工作，不会调用任何自定义转换逻辑。
+
 ![](img/image00947.jpeg)
 
 ![](img/image00312.jpeg)注意 　实现转换操作符时，为了保证封装性，要么返回值、要么参数必须是包容类型。C#不允许在被转换类型的作用域之外指定转换^( [\[1\]](part0097.xhtml#ch1_back) ) 。
@@ -299,6 +315,8 @@ Coordinate 的-和+操作符会在加减 Arc 后返回坐标位置。这就允�
 ## 10.3　引用其他程序集
 
 不需要将所有代码都放到单独一个二进制文件中，C#和底层 CLI 框架允许将代码分散到多个程序集中。这样就可在多个可执行文件中重用程序集。
+
+> 注：PowerShell 没有编译期的“项目”和“程序集引用”概念——脚本和函数在运行期加载。可复用的功能通常写成 `.psm1` 模块，用 `Import-Module` 加载；若要用到 .NET 程序集，可在运行时用 `Add-Type -Path <dll>`、`[System.Reflection.Assembly]::LoadFrom(<path>)` 或 `Import-Module <dll>` 引入。因此本节（10.3）关于 dotnet CLI、`.csproj`、Visual Studio 与 NuGet 的工程流程只适用于 C# 项目；PowerShell 中取代 NuGet 包管理的是 PowerShellGet/PSResourceGet（`Install-Module`、`Install-PSResource`）。
 
 初学者主题：类库
 
@@ -406,6 +424,8 @@ Microsoft.Extensions.Logging.Console 库用于在控制台（即命令行窗口�
 
 不添加任何访问修饰符的类或结构体会被默认声明为内部访问（等同于使用关键字 internal 来声明），而嵌套类型（即声明在类中的类）则默认被声明为私有访问。这种类无法从程序集外部访问。即使另一个程序集引用了该类所在的程序集，被引用程序集中的所有 internal 类都无法访问。
 
+> 注：PowerShell 类不支持 `public`/`internal`/`private`/`protected` 等访问修饰符——在类或成员上写这些关键字会直接报语法错误。PowerShell 类的成员一律对外可见；`hidden` 关键字只能把成员从 Get-Member、IntelliSense 和补全中隐藏，并不提供强制的访问控制。PowerShell 也没有“类型级封装”的概念，模块中哪些类型/函数对外公开，由模块清单的导出设置（`Export-ModuleMember` 等）决定。
+
 类似于为类成员使用 private 和 protected 访问修饰符来指定不同封装级别，C#允许为类添加访问修饰符以控制类在程序集中的封装级别。可用的访问修饰符包括 public 和 internal。想在程序集外部可见的类必须标记成 public。因此，在编译 Coordinates.dll 程序集之前，需要像代码清单 10.13 那样将类型声明修改为 public。
 
 代码清单 10.13　使类型在程序集外部可用
@@ -441,6 +461,8 @@ protected internal 是另一种类型成员访问修饰符。这种成员可从�
 解决问题的方案是组织所有类型，用命名空间 对它们进行逻辑分组。例如，System 命名空间外部的类通常应该放到与公司名、产品名或者“公司名+产品名”对应的命名空间中。例如，来自 Addison-Wesley 的类应该放到 Awl 或 AddisonWesley 命名空间中，而来自 Microsoft 的类（System 中的类除外）应该放到 Microsoft 命名空间中。命名空间的第二级是不会随着版本升级而改变的稳定产品名称。事实上，稳定性在所有级别上都是关键。改变命名空间名称会影响版本兼容性，所以应该避免。有鉴于此，不要使用容易变化的名称（组织层次结构、短期品牌等）。
 
 命名空间应使用 PascalCase 大小写，但如果你的品牌使用非传统大小写，也可以使用和品牌相符的大小写。（一致性是关键，所以如果面临两难选择——是 PascalCase 还是品牌名称，就使用一致性最好的。）用 namespace 关键字创建命名空间，并将类分配给该命名空间，如代码清单 10.14 所示。
+
+> 注：PowerShell 没有声明命名空间的语法——`namespace` 关键字不能用于给类或函数分组，本书中的命名空间实践无法在 PowerShell 类上照搬。PowerShell 引用已有的 .NET 命名空间可用脚本顶部的 `using namespace System.Net` 指令或类型完全限定名（如 `[System.Net.WebClient]`）；组织自定义代码主要依靠模块（`.psm1`）和函数命名前缀（如 `Get-ContosoUser`）。
 
 代码清单 10.14　定义命名空间
 
@@ -488,6 +510,8 @@ protected internal 是另一种类型成员访问修饰符。这种成员可从�
 
 图 10.4 演示 IDE 如何利用 XML 注释向开发者提示如何编码。这种提示能为大型应用程序的开发提供重要帮助，尤其是多个开发者需要共享代码的时候。但为了让它起作用，开发者必须花时间在代码中输入 XML 注释内容，然后指示编译器创建 XML 文件。下一节将解释具体如何做。
 
+> 注：PowerShell 没有 XML 文档注释，也没有从注释生成 XML 文档文件的机制。PowerShell 使用 `#` 行注释和 `<# ... #>` 块注释；块注释中可写基于注释的帮助（关键字如 `.SYNOPSIS`、`.DESCRIPTION`、`.PARAMETER`、`.EXAMPLE`），由 `Get-Help` 显示，但其语法与 C# 的 XML 注释（`/// <summary>`）不同。本节其余关于 `.csproj` 的 `DocumentationFile` 选项和 XML 输出文件的内容均属 C# 工具链。
+
 ![](img/image00961.jpeg)
 
 图 10.4　利用 XML 注释在 Visual Studio IDE 中显示编码提示
@@ -533,6 +557,8 @@ protected internal 是另一种类型成员访问修饰符。这种成员可从�
 ## 10.7　垃圾回收
 
 垃圾回收是“运行时”的核心功能，旨在回收不再被引用的对象所占用的内存。这句话的重点是“内存”和“引用”。垃圾回收器只回收内存，不处理其他资源，比如数据库连接、句柄（文件、窗口等）、网络端口以及硬件设备（比如串口）。此外，垃圾回收器根据是否存在任何引用来决定要清理什么。这暗示垃圾回收器处理的是引用对象，并且只回收堆上的内存。另外，还意味着假如维持对一个对象的引用，就会阻止垃圾回收器重用对象所用的内存。
+
+> 注：PowerShell 本身运行在 .NET 之上，本节描述的垃圾回收、分代回收和弱引用机制对 PowerShell 同样适用。在 PowerShell 中可直接使用 `[System.GC]`、`[System.WeakReference]`、`[System.WeakReference[T]]` 等 .NET 类型；代码清单 10.19 的泛型写法在 PowerShell 中需写成 `[System.WeakReference[byte[]]]`，并将 C# 的方法改写成 PowerShell 函数。
 
 高级主题：.NET 中的垃圾回收
 
@@ -582,6 +608,8 @@ protected internal 是另一种类型成员访问修饰符。这种成员可从�
 
 终结器的声明与 C++析构器的语法完全一致。如代码清单 10.20 所示，终结器声明要求在类名之前添加一个“~”字符。
 
+> 注：PowerShell 类不支持终结器——`~ClassName()` 这种写法在 PowerShell 中会直接报语法错误。若要让 PowerShell 对象参与资源清理，应实现 `System.IDisposable` 接口（例如 `class C : System.IDisposable { [void] Dispose() { ... } }`）并在使用完毕后显式调用 `Dispose()`。本节其余关于终结器运行时机、f-reachable 队列等的讨论属于 .NET 内部机制，对 PowerShell 自定义类不适用。
+
 代码清单 10.20　定义终结器
 
 ![](img/image00968.jpeg)![](img/image00969.jpeg)
@@ -620,6 +648,8 @@ Program.Search()在用完 TemporaryFileStream 之后显式调用 Dispose()。Dis
 
 在第一块高亮代码中，最终生成的 CIL 代码与写一个显式的 try/finally 块完全一样。如果自己写 try/finally 块，那么 fileStream.Dispose()应该在 finally 块中调用。总之，using 语句只是提供了 try/finally 块的语法快捷方式。
 
+> 注：PowerShell 没有 C# 的 using 语句（`using ($x = ...) { ... }`，以及 C# 8.0 的 `using var x = ...` 写法），在 PowerShell 里这些都会触发语法错误。要保证资源被释放，只能自己写 `try { ... } finally { $obj.Dispose() }`。注意 PowerShell 的 `using` 是另一回事——它只是 `using namespace`/`using assembly`/`using module` 这类导入指令，与资源清理无关。
+
 可在 using 语句内实例化多个变量，只需用逗号分隔每个变量即可。关键是所有变量都具有相同的类型，都实现了 IDisposable。为强制使用同一类型，数据类型只能指定一次，而不是在每个变量声明之前都指定一次。
 
 从 C# 8.0 开始，using 语句有一个简化的写法：可以在声明单个变量的语句之前使用 using 关键字，就像代码清单 10.22 中第二块高亮代码所示的那样。这种写法每次只能声明一个变量，并且也要求其类型实现了 IDisposable 接口。当程序的运行越过了变量的作用区间（在本例中为 search()方法的结束大括号）后，该变量的 Dispose()方法便会被自动调用。此外，用 using 关键字声明的变量还有一个限制，就是这种变量不能再被赋值为其他值。
@@ -627,6 +657,8 @@ Program.Search()在用完 TemporaryFileStream 之后显式调用 Dispose()。Dis
 ### 10.8.3　垃圾回收、终结和 IDisposable
 
 代码清单 10.21 还有另外几个值得注意的地方。第一，IDisposable.Dispose()方法包含对 System.GC.SuppressFinalize()的调用，作用是从终结（f-reachable）队列中移除 TemporaryFileStream 类实例。这是因为所有清理都在 Dispose()方法中完成了，而不是等着终结器执行。
+
+> 注：本节关于 SuppressFinalize()、f-reachable 队列的细节只对“带终结器的 .NET 类型”有意义。PowerShell 类无法定义终结器，所以这些机制对 PowerShell 自定义类不构成问题；PowerShell 类若要支持资源清理，实现 `System.IDisposable` 并在最后调用 `Dispose()` 即可，无须（也无法）关心终结队列。
 
 不调用 SuppressFinalize()，对象的实例会包括到 f-reachable 队列中。该队列中的对象已差不多准备好了进行垃圾回收，只是它们还有终结方法没有运行。这种对象只有在其终结方法被调用之后，才能由“运行时”进行垃圾回收。但垃圾回收器本身不调用终结方法。相反，对这种对象的引用会添加到 f-reachable 队列中，并由一个额外的线程根据执行上下文，挑选合适的时间进行处理。讽刺的是，这造成了托管资源的垃圾回收时间的推迟——而许多这样的资源本应更早一些被清理。推迟是因为 f-reachable 队列是“引用”列表。所以，对象只有在它的终结方法得到调用，而且对象引用从 f-reachable 队列中删除之后，才会真正变成“垃圾”。
 
@@ -732,6 +764,8 @@ Program.Search()在用完 TemporaryFileStream 之后显式调用 Dispose()。Dis
 
 在 FileStream 表达式主体属性中，我们在直接返回 InternalFileStream 的值之前检查它是否为空。如为空，就先实例化 TemporaryFileStream 对象，在返回新实例前先把它赋给 InternalFileStream。这样只有当调用 FileStream 属性的 get 访问器方法时才实例化属性要求的 TemporaryFileStream 对象。如果 get 访问器方法永不调用，那么 TemporaryFileStream 对象永不实例化。这样就可省下进行实例化所需的时间。显然，如实例化代价微不足道或不可避免（而且不适合推迟这个必然要做的事情），就应直接在声明时或在构造函数中赋值。
 
+> 注：PowerShell 类不支持自定义属性访问器（在类中写 `get { ... }` 会报语法错误），因此代码清单 10.24 这种“在 get 中做推迟初始化”的写法不能直接照搬。PowerShell 中可改用一个普通方法实现相同的延迟加载：方法内判断后台字段是否为 `$null`，为空则创建并缓存后再返回。此外，也可以用 `Update-TypeData -MemberType ScriptProperty` 为对象附加带脚本块的属性。
+
 高级主题：为泛型和 Lambda 表达式使用推迟加载
 
 从 C# 4.0 和 Microsoft .NET Framework 4.0 开始，CLR 添加了一个新类来帮助进行推迟初始化，这个类就是 System.Lazy<T>。代码清单 10.25 演示了如何使用。
@@ -746,6 +780,8 @@ System.Lazy<T>获取一个类型参数（T），该参数标识了 System.Lazy<T
 
 注意，Lambda 表达式本身，即()=> new TemporaryFileStream()，是直到调用 Value 时才执行的。Lambda 表达式提供了一种方式为将来发生的事情传递指令，但除非显式请求，否则那些指令不会执行。
 
+> 注：PowerShell 没有 Lambda 表达式语法，可用脚本块 `{ ... }` 充当。但 `System.Lazy[T]` 的构造函数期望的是 `System.Func[T]` 委托，直接把脚本块传进去会提示找不到匹配的构造函数，需要先显式转换，例如 `$lazy = [System.Lazy[SomeType]]::new([System.Func[SomeType]] { [SomeType]::new() })`。这样同样能做到“只有访问 `$lazy.Value` 时才执行初始化”。
+
 一个显然的问题便是，什么时候调用 System.Lazy<T>会比代码清单 10.24 中的方法更好？实际上它们几乎没有区别。在不考虑并行执行的情况下，代码清单 10.24 中的方法更简单一点，但这个方法中的实例化操作在多线程情况下可能会引起竞争问题（race condition）。这是因为它先判断 InternalFileStream 属性是否为 null，如果是则创建实例。而在其实例被创建之前，多个线程有可能同时发现该属性为 null，从而多次创建实例。而 System.Lazy<T>则没有这个问题，它提供了一个线程安全机制，会确保只创建一个实例。
 
 ## 10.10　小结
@@ -753,3 +789,5 @@ System.Lazy<T>获取一个类型参数（T），该参数标识了 System.Lazy<T
 本章围绕如何构建健壮的类库展开了全面讨论。所有主题也适用于内部开发，但它们更重要的作用是构建健壮的类。最终目标是构建更健壮、可编程性更好的 API。同时涉及健壮性和可编程性的主题包括“命名空间”和“垃圾回收”。涉及可编程性的其他主题还有“重写 object 的虚成员”“操作符重载”以及“用 XML 注释来编档”。
 
 异常处理通过定义一个异常层次结构，并强迫自定义异常进入该层次结构，从而充分地利用了继承。此外，C#编译器利用继承来验证 catch 块顺序。第十一章将解释为什么继承是异常处理的核心部分。
+
+> 注：本章小结里的“操作符重载”“XML 注释”“命名空间”在 PowerShell 中都没有对应语法（详见各节注），属于 C# 专有内容；在 PowerShell 中可以直接使用的是重写 `ToString()`/`Equals()`/`GetHashCode()`、实现 `System.IDisposable`、使用 `System.Lazy<T>` 与 `System.WeakReference`，以及通过 `[System.GC]` 操作垃圾回收。

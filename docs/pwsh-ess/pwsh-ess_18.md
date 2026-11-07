@@ -4,6 +4,8 @@
 
 集合在 C# 3.0 中通过称为语言集成查询 （Language Integrated Query，LINQ）的一套编程 API 进行了大刀阔斧的改革。通过一系列扩展方法和 Lambda 表达式，LINQ 提供了一套功能超凡的 API 来操纵集合。事实上，在本书前几版中，“集合”这一章是被放在“泛型”和“委托”这两章之间的。但由于 Lambda 表达式是 LINQ 的重中之重，现在只有先理解了委托（Lambda 表达式的基础），才好展开对集合的讨论。第十三章与第十四章已为理解 Lambda 表达式打下了良好基础，从现在起将连续用三章的篇幅来详细讨论集合。本章的重点是标准查询操作符 ，它通过直接调用扩展方法来发挥 LINQ 的作用。
 
+> 注：PowerShell 没有 LINQ——它是 C# 编译器支持的扩展方法语法。PowerShell 的等价物是**管道**：把集合沿 `|` 传给 cmdlet（如 `Where-Object`、`ForEach-Object`、`Sort-Object`、`Group-Object`）逐项处理。必须使用 .NET 的 LINQ 方法时，只能按静态方法调用，如 `[System.Linq.Enumerable]::Where($arr, [Func[int,bool]]{param($x) $x -gt 3})`（见 15.3 节的注）。
+
 介绍了集合初始化器（collection initializer）之后，本章探讨各种集合接口及其相互关系。这是理解集合的基础，请务必掌握。在讲解集合接口的同时，还将介绍 C# 3.0 新增的为 IEnumerable<T>定义的扩展方法，这些方法是标准查询操作符的基础。
 
 有两套与集合相关的类和接口：支持泛型的和不支持泛型的。本章主要讨论泛型集合接口。通常，只有组件需要和老版本在“运行时”进行互操作才使用不支持泛型的集合类。这是因为任何非泛型的东西，现在都有了一个强类型的泛型替代物。虽然要讲的概念同时适合两种形式，但我们不会专门讨论非泛型版本^( [\[1\]](part0136.xhtml#ch1_back) ) 。
@@ -15,6 +17,8 @@
 ## 15.1　集合初始化器
 
 集合初始化器 （collection initializers）^( [\[1\]](part0137.xhtml#ch1_back) ) 允许采用和数组声明相似的方式，在集合实例化期间用一组初始成员构造该集合。不用集合初始化器，就只能在集合实例化好之后将成员显式添加到集合——使用像 System.Collections.Generic.ICollection<T>的 Add()方法类似的操作。而使用集合初始化器，Add()调用将由 C#编译器自动生成，不必由开发者显式编码。代码清单 15.1 展示了如何用集合初始化器初始化集合。
+
+> 注：PowerShell 用数组字面量 `@(...)`、`@('a','b')` 和字典/哈希表字面量 `@{...}` 直接构造集合，没有 C#“集合初始化器→自动生成 Add() 调用”的编译步骤，也不要求集合实现 ICollection<T>。C# 各版本初始化语法的差异在 PowerShell 中不适用。
 
 代码清单 15.1　集合初始化
 
@@ -44,6 +48,8 @@ $colorMap = @{ Error = 'Red'; Warning = 'Yellow'; Information = 'Green'; Verbose
 
 根据定义，.NET 的集合本质上是一个类，它至少实现了接口 IEnumerable。这个接口很关键，因为它包含遍历集合所必需的方法。
 
+> 注：PowerShell 中数组、`List<T>`、管道输出等可枚举对象都能被 `foreach` 和管道处理，日常使用不要求集合类实现 `IEnumerable<T>`。PowerShell 类可以实现非泛型 `System.Collections.IEnumerable`（已实测，提供 `GetEnumerator()` 返回 `IEnumerator` 即可正常枚举）；但实现 `IEnumerable<T>` 会失败——该接口还继承了非泛型 `IEnumerable.GetEnumerator()`，需要两个同名但返回类型不同的方法，而 PowerShell 不支持显式接口实现或仅按返回类型重载，会报“GetEnumerator ... does not have an implementation”（已实测）。
+
 第四章讲述了如何用 foreach 语句遍历由多个元素构成的数组。foreach 的语法很简单，而且不用事先知道有多少个元素。但“运行时”根本不知 foreach 语句为何物。相反，正如下面要描述的那样，C#编译器会对代码进行必要的转换。
 
 ### 15.2.1　foreach 之于数组
@@ -67,6 +73,8 @@ for ($counter = 0; $counter -lt $array.Length; $counter++) { Write-Output $array
 ```
 
 在本例中，注意 foreach 要依赖对 Length 属性和数组索引操作符（\[\]）的支持。知道 Length 属性的值之后，C#编译器才可用 for 语句遍历数组中的每一个元素。
+
+> 注：把 `foreach` 编译成长度—索引循环是 C# 编译器的行为。PowerShell 的 `foreach` 是语言自带语句，直接按枚举协议遍历数组或 `IEnumerable` 对象；对字符串、标量等不可枚举的值，则把它当作单个元素处理（已实测：`foreach ($s in 'abc')` 只得到一项 `abc`）。PowerShell 也不做 C# 编译器那样的 `GetEnumerator()` duck-typing 回退。
 
 ### 15.2.2　基于 IEnumerable 遍历集合
 
@@ -121,6 +129,8 @@ finally { $enumerator.Dispose() }
 
 注意，由于 IEnumerator<T>支持 IDisposable 接口，所以可用 using 关键字简化代码清单 15.7 的 C#代码，如代码清单 15.8 所示。
 
+> 注：PowerShell 没有 C# 的 `using` 资源语句（`using ($obj) { ... }` 是解析错误）。等价的写法是 `try { ... } finally { $enumerator.Dispose() }`（见代码清单 15.7 的改写），或者直接使用 `foreach` 语言语句，无需手工释放。
+
 代码清单 15.8　使用 using 的错误处理和资源清理
 
 ```powershell
@@ -132,6 +142,8 @@ foreach ($number in $stack) { Write-Output $number }
 高级主题：没有 IEnumerable 的 foreach
 
 C#编译器不要求一定要实现 IEnumerable/IEnumerable<T>才能对一个数据类型进行遍历。相反，编译器采用称为“Duck typing”的概念^( [\[2\]](part0138.xhtml#ch2_back) ) ，也就是查找会返回“包含 Current 属性和 MoveNext()方法的一个类型”的 GetEnumerator()方法。Duck typing 按名称查找方法，而不依赖接口或显式方法调用。当 Duck typing 找不到可枚举模式的恰当实现时，编译器才会检查集合是否实现了接口。
+
+> 注：这种“先按名称查找 GetEnumerator()、失败再回退到接口”的次序是 C# 编译器的规则。PowerShell 不按 GetEnumerator() 方法做 duck typing：它只枚举数组、实现了 `IEnumerable` 的对象等已知可枚举形态，其余对象按单个元素处理。
 
 ### 15.2.3　foreach 循环内不要修改集合
 
@@ -159,6 +171,8 @@ using System.Linq;
 * * *
 
 IEnumerable<T>上的每个方法都是标准查询操作符 ，用于为所操作的集合提供查询功能。后续小节将探讨一些最重要的标准查询操作符。许多例子都要依赖如代码清单 15.9 所示的 Inventor 或 Patent 类。
+
+> 注：PowerShell 没有 `using System.Linq;` 这类 C# 指令，也不存在“实现 IEnumerable<T> 后自动拥有 50 多个扩展方法”的机制——扩展方法在 PowerShell 中不能按实例方法调用。需要使用 LINQ 方法时，要按静态方法调用 `[System.Linq.Enumerable]::方法名(...)`；更常规的做法是直接用 PowerShell 的管道以及 `Where-Object`/`ForEach-Object` 等 cmdlet（本小节下面的清单已这样改写）。
 
 代码清单 15.9　用于演示标准查询操作符的示例类
 
@@ -231,6 +245,8 @@ $patentsPriorTo1900 = $patents | Where-Object { $_.YearOfPublication.StartsWith(
 
 注意代码将 Where()的输出赋还给 IEnumerable<T>。换言之，IEnumerable<T>.Where()输出的是一个新的 IEnumerable<T>集合。具体到代码清单 15.10，就是 IEnumerable<Patent>。
 
+> 注：PowerShell 的 `Where-Object` 输出是流式的（逐项产生），赋给变量时若有多项会自动成为数组：没有 `IEnumerable<Patent>` 这样的静态类型标注，也不需要把结果转换回某个接口类型。
+
 许多人不知道的是，Where()方法的表达式实参并非一定在赋值时求值。这一点适合许多标准查询操作符。在 Where()的情况下，表达式传给集合，“保存”起来但不马上执行。相反，只有在需要遍历集合中的项时，才会真正对表达式进行求值。例如，foreach 循环（例如代码清单 15.9 的 Print()方法中的那一个）会导致表达式针对集合中的每一项进行求值。至少从概念上说，应认为 Where()方法只是描述了集合中应该有什么，而没有描述具体应该如何遍历数据项并生成新集合（并在其中填充数量可能减少了的数据项）。
 
 ### 15.3.2　使用 Select()来投射
@@ -244,6 +260,8 @@ $patentsOf1800s = $patents | Where-Object { $_.YearOfPublication.StartsWith('18'
 ```
 
 代码清单 15.11 创建了一个新的 IEnumerable<string>集合。虽然添加了一个 Select()调用，但并未造成输出的任何改变。但这纯属巧合，因为 Print()中的 Console.WriteLine()调用恰好会使用 ToString()。事实上，针对每个数据项都会发生一次转换：从原始集合的 Patent 类型转换成 items 集合的 string 类型。
+
+> 注：`Select()` 的投射在 PowerShell 中对应 `ForEach-Object`（别名 `%`）：`$patents | ForEach-Object { $_.Title }` 就是取出 Title 的转换，管道输出同样是流式的。
 
 代码清单 15.12 展示了使用 System.IO.FileInfo 的一个例子。
 
@@ -269,6 +287,8 @@ $items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEa
 
 在为元组生成的 ToString()方法中，会自动添加用于显示属性名称及其值的代码。
 
+> 注：PowerShell 没有 C# 的匿名类型/元组字面量。改编版用 `[pscustomobject]@{ 属性=值 }` 构造带具名属性的对象；PS7 也可用 `[System.ValueTuple[...]]`（别名 `[tuple[...]]`）构造值类型元组。注意 `[pscustomobject]` 的 `ToString()` 返回**空字符串**，控制台显示的 `属性=值` 来自 PowerShell 的格式化视图（见 15.4 节的注）。
+
 用 select()进行“投射”是很强大的一个功能。上一节讲述如何用 Where()标准查询操作符在“垂直”方向上筛选集合^( [\[1\]](part0139.xhtml#ch1_back) ) （减少集合项数量）。现在使用 Select()标准查询操作符，还可在“水平”方向上减小集合规模（减少列的数量）或者对数据进行完全转换。可综合运用 Where()和 Select()来获得原始集合的子集，从而满足当前算法的要求。这两个方法各自提供了一个功能强大的、对集合进行操纵的 API。以前要获得同样的效果，必须手动写大量难以阅读的代码。
 
 高级主题：并行运行 LINQ 查询
@@ -289,6 +309,8 @@ $items = Get-ChildItem -File -Path $rootDirectory -Filter $searchPattern | ForEa
 
 在代码清单 15.14 中，简单修改代码即可实现并行。唯一要做的就是利用 Microsoft.NET Framework 4 引入的标准查询操作符 AsParallel()，它是静态类 System.Linq.ParallelEnumerable 的成员。使用这个简单的扩展方法，“运行时”一边遍历 fileList 中的数据项，一边返回结果对象。两个操作并行发生。本例中的每个并行操作开销不大（虽然只是相对于其他正在进行的操作），但在执行 CPU 密集型处理时（比如加密或压缩），累积起来的开销还是相当大的。在多个 CPU 之间并行执行，执行时间将根据 CPU 的数量成比例缩短。
 
+> 注：PowerShell 没有 LINQ 的 `AsParallel()`。PS7 提供 `ForEach-Object -Parallel { ... }`（代码清单 15.14 已这样改写），但每个输入项在独立 runspace 中执行，开销较大，适合 CPU 密集型任务；可用 `$using:` 引用外部变量，但并发写外部变量仍需自行同步。竞态条件的警示同样适用。
+
 但有一点很重要（这也是为什么将 AsParallel()放在“高级主题”而不是正文中讨论的原因），并行执行可能引入竞态条件（race conditions）。也就是说，一个线程上的一个操作可能会与一个不同的线程上的一个操作混合，造成数据被破坏。为避免该问题，需要向多个线程共享访问的数据应用同步机制，在必要时强制保证操作的原子性。但同步本身可能引入死锁，造成执行被“冻结”，使并行编程变得更复杂。
 
 第十九章至第二十二章将更多地讨论该问题和其他多线程主题。
@@ -307,6 +329,8 @@ Write-Output "Patent Count in 1800s: $(($patents | Where-Object YearOfPublicatio
 ```
 
 虽然 Count()语句写起来简单，但 IEnumerable<T>没有变，所以执行的代码仍会遍历集合中的所有项。有 Count 属性的集合应首选属性，而不要用 LINQ 的 Count()方法（这是一个容易忽视的差异）。幸好，ICollection<T>包含了 Count 属性，所以如果集合支持 ICollection<T>，在它上面调用 Count()方法会对集合进行转型，并直接调用 Count。但如果不支持 ICollection<T>，Enumerable.Count()就会枚举集合中的所有项，而不是调用内建的 Count 机制。如果计数的目的只是为了看这个计数是否大于 0（if(patents.Count() > 0){...}），那么首选做法是使用 Any()操作符（if(patents.Any()) {...}）。Any()只尝试遍历集合中的一个项，成功就返回 true，而不会遍历整个序列。
+
+> 注：PowerShell 中直接取 `.Count` 即可（如 `($patents | Where-Object ...).Count`），没有 LINQ `Count()`/`Any()` 的区别。实测 `(5).Count` 为 1、`$null.Count` 为 0。过滤本身就会遍历集合；若只关心“是否存在”，可用 `Where-Object` 取首个结果后判断。
 
 ![](img/image00300.jpeg)设计规范
 
@@ -359,6 +383,8 @@ Lambda 表达式在声明时不执行。事实上，Lambda 表达式中的代码
 
 强烈建议好好体会一下图 15.2 展示的顺序图，拿实际的代码去对照一下，理解由于标准查询操作符存在“推迟执行”的特点，所以可能在不知不觉间触发标准查询操作符。开发者应提高警惕，防止出乎预料的调用。查询对象代表的是查询而非结果。向查询要结果时，整个查询都会执行（甚至可能是再次执行），因为查询对象不确定结果和上次执行的结果（如果存在的话）是否一样。
 
+> 注：PowerShell 没有 LINQ 的“查询对象/延迟执行”模型。管道是流式的：`Where-Object` 边接收边处理，不会先缓存全部元素；但 PowerShell 语句一写下就会执行，不存在可重复枚举的“查询对象”。若要显式延迟，可把逻辑写成函数或 `& { foreach ($x in $coll) { if (<条件>) { $x } } }`，每次枚举时才执行；`@(...)` 会立即物化结果。反复枚举的开销依然存在，只是来源是重复运行管道而非查询重放。
+
 ![](img/image00312.jpeg)注意 　要避免反复执行，一个查询在执行之后，有必要把它获取的数据缓存起来。为此，可以使用一个“ToXXX”方法（比如 ToArray()）将数据赋给一个局部集合。将“ToXXX”方法的返回结果赋给一个集合，显然会造成查询的执行。但在此之后，对已赋好值的集合进行遍历，就不会再涉及查询表达式。一般情况下，如果“内存中的集合快照”是你所想要的，那么最好的做法就是将查询表达式赋给一个缓存的集合，避免无谓的遍历。
 
 ### 15.3.5　使用 OrderBy()和 ThenBy()来排序
@@ -380,6 +406,8 @@ OrderBy()获取一个 Lambda 表达式，该表达式标识了要据此进行排
 但要注意，OrderBy()只获取一个称为 keySelector 的参数来排序。要依据第二个列来排序，需使用一个不同的方法 ThenBy()。类似地，更多的排序要使用更多的 ThenBy()。
 
 OrderBy()返回的是一个 IOrderedEnumerable<T>接口，而不是一个 IEnumerable <T>。此外，IOrderedEnumerable<T>从 IEnumerable<T>派生，所以能为 OrderBy()的返回值使用全部标准查询操作符（包括 OrderBy()）。但假如重复调用 OrderBy()，会撤销上一个 OrderBy()的工作，只有最后一个 OrderBy()的 keySelector 才真正起作用。所以，注意不要在上一个 OrderBy()调用的基础上再调用 OrderBy()。
+
+> 注：PowerShell 用 `Sort-Object` 一次给出所有排序键：`$patents | Sort-Object YearOfPublication, Title`；`-Descending` 对全部键降序，`-Unique` 去重。没有 `OrderBy`/`ThenBy` 的区分，也没有 `IOrderedEnumerable<T>`，不会出现“重复 OrderBy 撤消前一次排序”的问题。
 
 指定额外排序条件需使用扩展方法 ThenBy()。ThenBy()扩展的不是 IEnumerable<T>而是 IOrderedEnumerable<T>。该方法也在 System.Linq.Extensions.Enumerable 中定义，声明如下：
 
@@ -509,6 +537,8 @@ foreach ($group in $groups) { $group.Group; Write-Output "Count: $($group.Count)
 
 注意 GroupBy()返回 IGrouping<TKey, TElement>类型的数据项，该类型有一个属性指定了作为分组依据的键（employee.DepartmentId）。但没有为组中的数据项准备一个属性。相反，由于 IGrouping<TKey, TElement>从 IEnumerable<T>派生，所以可以用 foreach 语句枚举组中的项，或者将数据聚合成像计数这样的东西（employeeGroup.Count()）。
 
+> 注：改用 PowerShell 的 `Group-Object` 后，每个分组对象有 `Name`（键）、`Group`（组内项数组）、`Count` 属性，等价于 LINQ 的 `IGrouping<TKey, TElement>`；枚举组内项用 `$group.Group`。
+
 ### 15.3.7　使用 GroupJoin()实现“一对多”关系
 
 代码清单 15.19 和代码清单 15.20 几乎完全一致。改变一下元组定义，两个 Join()调用就可产生相同的输出。如果要创建员工列表，代码清单 15.19 提供了正确结果。在代表所联接员工的两个元组中，Department 都是其中一个数据项。但代码清单 15.20 不理想。既然支持集合，表示部门的理想方案是显示一个部门的所有员工的集合，而不是为每个“部门–员工”关系都创建一个元组。代码清单 15.22 展示了创建集合的具体做法，输出 15.10 展示了结果。
@@ -532,11 +562,15 @@ foreach ($item in $items) {
 
 为获得理想结果要使用 System.Linq.Enumerable 的 GroupJoin()方法。参数和代码清单 15.19 差不多，区别在于最后一个元组参数。在代码清单 15.22 中，Lambda 表达式的类型是 Func<Department, IEnumerable<Employee>, (long Id, string Name, IEnumerable <Employee>Employees)>。注意是用第二个类型参数（IEnumerable<Employee>）将每个部门的员工集合投射到结果的部门元组中。这样在最终生成的集合中，每个部门都包含一个员工列表。
 
+> 注：PowerShell 没有 `Join()`/`GroupJoin()` 方法。改编版用嵌套 `foreach` + `Where-Object` 手工完成联接（代码清单 15.19/15.20/15.22）：外层遍历一个集合，内层用 `Where-Object DepartmentId -eq $department.Id` 过滤另一个集合；把员工集合直接赋给 `Employees` 属性即得到“一对多”的子集合。
+
 （熟悉 SQL 的读者会注意到，和 Join()不同，SQL 没有与 GroupJoin()等价的东西，这是由于 SQL 返回的数据基于记录，不分层次结构。）
 
 高级主题：使用 GroupJoin()实现外部联接
 
 前面描述的内部联接称为同等联接 （equi-joins），因为它们基于同等的键求值——只有在两个集合中都有对象时，它们的记录才会出现在结果集中。但在某些情况下，即使对应的对象不存在，也有必要创建一条记录。例如，虽然 Marketing 部门还没有员工，但在最终的部门列表中不应该把它忽略掉。更好的做法是列出这个部门的名称，同时显示一个空白的员工列表。为此，可以执行一次左外部联接，这是通过组合使用 GroupJoin()、SelectMany()和 DefaultIfEmpty()来实现的。如代码清单 15.23 和输出 15.11 所示。
+
+> 注：PowerShell 没有 `DefaultIfEmpty()`；改编版用 `if ($matches.Count -eq 0) { $matches = @($null) }` 补一条空记录（代码清单 15.23），再用 `Sort-Object Id -Unique` 去重，效果与左外部联接一致。
 
 代码清单 15.23　使用 GroupJoin()和 SelectMany()实现外部联接
 
@@ -566,6 +600,8 @@ $players = $worldCup2006Finalists | ForEach-Object Players
 ```
 
 在输出中，代码清单 15.24 会按每个球员在代码中出现的顺序逐行显示其姓名。Select()和 Select-Many()的区别在于，Select()会返回两个球员数组，每个都对应原始集合中的球员数组。Select()可以一边投射一边转换，但项的数量不会发生改变。例如，teams.Select (team=> team.Players)会返回一个 IEnumerable<string\[\]>。
+
+> 注：PowerShell 输出集合元素时会自动“展开”（unrolling）：`$teams | ForEach-Object { $_.Players }` 会把每个球队的球员逐个输出，天然等价 `SelectMany()`。若要保留“球队→球员数组”的层次（等价 `Select()`），需在脚本块内用 `@(...)` 包住或放入 `[pscustomobject]` 属性，避免被展开；译者示例中的 `$tokens = $text | ForEach-Object { $_.Split(' ') }` 正是直接利用了展开。
 
 而 SelectMany()遍历由 Lambda 表达式（之前由 Select()选择的数组）标识的每一项，并将每一项都放到一个新集合中。新集合整合了子集合中的所有项。所以，不像 Select()那样返回两个球员数组，SelectMany()是将选择的每个数组都整合起来，把其中的项整合到一个集合中^① 。
 
@@ -618,6 +654,8 @@ $odd = 0..9 | Where-Object { $_ % 2 -eq 1 }
 
 有个接口几乎和 IEnumerable<T>完全一样，这就是 IQueryable<T>。由于 IQueryable <T>是从 IEnumerable<T>派生的，所以它有 IEnumerable<T>的“全部”成员——但只有那些直接声明的，例如 GetEnumerator()。扩展方法是不会被继承的。所以，IQueryable<T>没有 Enumerable 的任何扩展方法。但它有一个类似的扩展类，称为 System.Linq.Queryable。Enumerable 为 IEnumerable<T>添加的几乎所有方法，Queryable 都会为 IQueryable<T>添加。因此，IQueryable<T>提供了一个非常相似的编程接口。
 
+> 注：PowerShell 没有 `IQueryable<T>`、`Queryable` 或 LINQ Provider，不会把代码或表达式树翻译成 SQL 发往远程执行。访问数据库通常用 `Invoke-Sqlcmd`、ADO.NET 驱动或数据库模块，取回 .NET 对象后再用管道处理；“表达式树”机制见第十三章的注。
+
 那么，是什么使 IQueryable<T>显得与众不同呢？答案是可通过它实现自定义的 LINQ Provider（LINQ 提供程序）。LINQ Provider 将表达式分解成各个组成部分。一经分解，表达式就可转换成另一种语言，可序列化以便在远程执行，可通过异步执行模式来注入，等等。简单地说，LINQ Provider 为标准集合 API 提供了“解释”机制。利用这种潜力无限的功能，可注入与查询和集合有关的行为。
 
 例如，可利用 LINQ Provider 将查询表达式从 C#转换成 SQL，然后在远程数据库中执行。这样 C#程序员就可继续使用他熟悉的面向对象语言，将向 SQL 的转换留给底层的 LINQ Provider 去完成。通过这种类型的表达式，程序语言可轻松协调“面向对象编程”和“关系数据库”。
@@ -631,6 +669,8 @@ $odd = 0..9 | Where-Object { $_ % 2 -eq 1 }
 ## 15.4　匿名类型之于 LINQ
 
 C# 3.0 通过 LINQ 显著增强了集合处理。令人印象深刻的是，为支持这个高级 API，语言本身只进行了 8 处增强。而正是由于这些增强，才使 C# 3.0 成为语言发展史上的一个重要里程碑。其中两处增强是匿名类型和隐式局部变量。但随着 C# 7.0 元组语法的发布，匿名类型终于也要“功成身退”了。事实上，在本书这一版中，所有之前使用匿名类型的 LINQ 例子都更新为使用元组。不过，本节仍然保留了对匿名类型的讨论。如果不用 C# 7.0（或更高版本），或者要处理 C# 7.0 之前写的代码，仍然可以通过本节了解一下匿名类型。（当然，如果不需要使用 C# 6.0 或更老的版本来编程，则完全可以跳过本节。）
+
+> 注：PowerShell 没有 C# 的“匿名类型”（编译器生成的私有类型）。习惯上用 `[pscustomobject]@{ ... }` 构造属性包来充当匿名对象；所有此类对象都是同一个 `PSCustomObject` 类型，不存在 C# 的“类型兼容/不可变”规则（代码清单 15.28 的注释已说明可在 PowerShell 中重新赋值属性）。
 
 ### 15.4.1　匿名类型
 
@@ -687,6 +727,8 @@ string s="hello";
 * * *
 
 编译器首先根据左侧明确声明的类型来确定 s 的类型，然后分析右侧的表达式，验证右侧的表达式是否适合赋给该类型的变量。但对于隐式类型的局部变量，这个过程是相反的：首先分析右侧的表达式，确定它的类型，再用这个类型替换“var”（在逻辑上）。
+
+> 注：PowerShell 没有 `var`，也不做编译期类型推断：`$text = 'hello'` 的类型由所赋值的运行时类型决定，之后可改赋其他类型；若需要限制类型，用类型约束 `[string]$text = 'hello'`。C# 关于 var 的编译规则在 PowerShell 中不适用。
 
 虽然 C#匿名类型没有名称，但它仍然是强类型的。例如，类型的属性完全可以访问。在代码清单 15.26 中，Console.WriteLine 语句在内部调用 patent1.Title 和 patent2.YearOfPublication。调用不存在的成员会造成编译时错误。在 IDE 中，就连“智能感知”功能都能很好地支持匿名类型。
 
@@ -771,6 +813,8 @@ $patent1.Title = 'Swiss Cheese'
 高级主题：匿名类型的生成
 
 虽然 Console.WriteLine()的实现是调用 ToString()，但注意在代码清单 15.26 中，Console.WriteLine()的输出并不是默认的 ToString()（默认的 ToString()输出的是完全限定的数据类型名称）。相反，现在输出的是一列成对的 PropertyName=value，匿名类型的每个属性都有一对这样的输出。之所以会得到这样的结果，是因为编译器在生成匿名类型的代码时重写了 ToString()方法，对输出进行了格式化。类似地，生成的类型还重写了 Equals()和 GetHashCode()的实现。
+
+> 注：C# 匿名类型会重写 `ToString()`，输出 `属性=值`；PowerShell 的 `[pscustomobject]` 的 `ToString()` 返回**空字符串**（实测长度为 0）。控制台里看到 `Name=Value` 形式的显示来自 PowerShell 的格式化系统，而不是对象的 `ToString()`；显示哪些列及其顺序由格式化视图决定。
 
 正是由于 ToString()会被重写，所以一旦属性的顺序发生了变化，就会导致最终生成一个全新的数据类型。假如不是这样设计，而是为属性顺序不同的两个匿名类型（它们可能在完全不同的类型中，甚至可能在完全不同的命名空间中）生成同一个 CIL 类型，那么一个实现在属性顺序上发生的变化，就会对另一个实现的 ToString()输出造成显著的、甚至可能是令人无法接受的影响。此外，程序执行时可能反射一个类型，并检查类型的成员——甚至动态调用成员（所谓动态调用成员，是指在程序运行期间，根据具体情况决定调用哪个成员）。两个貌似相同的类型在成员顺序上有所区别，就可能造成出乎预料的结果。为避免这些问题，C#的设计者决定：如果属性顺序不同，则生成两个不同的类型。
 
