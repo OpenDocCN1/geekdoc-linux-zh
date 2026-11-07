@@ -390,6 +390,8 @@ Disconnected 仍然具有默认值 0，Connecting 则被显式赋值为 10，所
 
 枚举不过是基础类型上的一组名称，对于枚举类型的变量，它的值并不限于声明中命名的值。例如，由于整数 42 能转型为 short，所以也能转型为 ConnectionState，即使它没有对应的 ConnectionState 枚举值。值能转换成基础类型，就能转换成枚举类型。
 
+> 注：这一点在 PowerShell 中不成立。PowerShell 的类型转换会校验枚举值的合法性：若目标枚举中没有与数值对应的成员，`[ConnectionState]42` 会在运行时抛出“无法将值 42 转换为类型…请指定现有的枚举值之一”的错误。若要在 PowerShell 中表示“未命名”的枚举值，需要显式构造，例如 `[System.Enum]::ToObject([ConnectionState], 42)` 或 `[System.Enum]::Parse([ConnectionState], '42')`（这两种写法都返回值为 42 的枚举实例，`[int]` 转换后可读到 42）。
+
 该设计的优点在于可在未来的 API 版本中为枚举添加新值，同时不会破坏早期版本。另外，枚举值为已知值提供了名称，同时允许在运行时分配未知的值。该设计的缺点在于编码时须谨慎，要主动考虑到未命名值的可能性。例如，将 case ConnectionState.Disconnecting 替换成 default，并认定 default case 唯一可能的值就是 ConnectionState.Disconnecting，那么就是不明智的。相反，应显式处理 Disconnecting 这一 case，而让 default case 报告一个错误，或者执行其他无害的行为。然而，正如前面讲到的，从枚举转换为基础类型以及从基础类型转换为枚举类型都涉及显式转型，而不是隐式转型。例如，假定方法签名是 void ReportState(ConnectionState state)，就不能调用 ReportState(10)。唯一的例外是传递 0，因为 0 能隐式转换为任何枚举。
 
 虽然允许在代码将来的版本中为枚举添加额外的值，但这样做时要小心。在枚举中部插入枚举值，会使其后的所有枚举值发生顺移（例如，在 Connected 之前添加 Flooded 或 Locked 值，会造成 Connected 值改变）。这会影响根据新枚举来重新编译的所有版本。不过，任何基于旧枚举编译的代码都会继续使用旧值。除了在列表末尾插入新的枚举值，避免旧枚举值改变的另一个办法是显式赋值。
@@ -419,11 +421,15 @@ C#不支持不同枚举数组之间的直接转型。但 CLR 允许，前提是�
 ```powershell
 enum ConnectionState1 { Disconnected; Connecting; Connected; Disconnecting }
 enum ConnectionState2 { Disconnected; Connecting; Connected; Disconnecting }
-# Convert through the underlying integer values when changing enum types.
-$states = [ConnectionState1[]]([ConnectionState2[]](42))
+# Convert element by element through the underlying integer values.
+$src = [ConnectionState2[]]@([ConnectionState2]::Connecting, [ConnectionState2]::Connected)
+$states = foreach ($state in $src) { [ConnectionState1][int]$state }
+$states
 ```
 
 这个例子利用了 CLR 的赋值兼容性比 C#宽松这一事实。（还可用同样的技巧进行非法转换，比如 int\[\]转换成 uint\[\]。）但使用该技巧时务必慎重，因为 C#规范没有说这个技巧在不同 CLR 实现中都能发挥作用。
+
+> 注：代码清单 9.11 的做法在 PowerShell 中行不通——枚举数组的转型必须经过基础整型值显式转换，且 PowerShell 的转换会校验枚举值合法性（见 9.3 的注）。实际转换应按元素进行，例如 `$states = foreach ($s in [ConnectionState2[]]$src) { [ConnectionState1][int]$s }`。
 
 ### 9.3.2　在枚举和字符串之间转换
 
@@ -444,7 +450,7 @@ $states = [ConnectionState1[]]([ConnectionState2[]](42))
 代码清单 9.12　使用 Enum.Parse()将字符串转换为枚举
 
 ```powershell
-$priority = [System.Threading.ThreadPriority]::Parse([System.Threading.ThreadPriority], 'Idle')
+$priority = [System.Threading.ThreadPriority]::Parse([System.Threading.ThreadPriority], 'Lowest')
 $priority
 ```
 
@@ -462,7 +468,7 @@ Microsoft.NET Framework 4 之前没有 TryParse()方法，所以为它之前的�
 
 ```powershell
 [System.Threading.ThreadPriority]$priority = 0
-if ([System.Enum]::TryParse('Idle', [ref]$priority)) { $priority }
+if ([System.Enum]::TryParse('Lowest', [ref]$priority)) { $priority }
 ```
 
 该技术的优点在于，不必使用异常处理机制来防范转换不成功的情况，检查 TryParse<T>()返回的 Boolean 结果就可以了。
@@ -490,7 +496,7 @@ if ([System.Enum]::TryParse('Idle', [ref]$priority)) { $priority }
 
 注意 　位标志枚举名称通常是复数，因为它的值代表一个标志（flag）的集合。
 
-使用按位 OR 操作符联接（join）枚举值，使用 Enum.HasFlags()方法（Microsoft.NET Framework 4.0 后加入）或按位 AND 操作符测试特定位是否存在。代码清单 9.15 展示了这两种情况。
+使用按位 OR 操作符联接（join）枚举值，使用 Enum.HasFlag()方法（Microsoft.NET Framework 4.0 后加入）或按位 AND 操作符测试特定位是否存在。代码清单 9.15 展示了这两种情况。
 
 代码清单 9.15　为标志枚举值使用按位 OR 和 AND^( [\[1\]](part0093.xhtml#ch1_back) ) 
 
