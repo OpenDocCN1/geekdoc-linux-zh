@@ -191,6 +191,8 @@ $task.Wait()
 
 PowerShell 中把脚本块强转为 `[Action]` 或 `[Func[T]]`，即可作为委托传给 `Task.Run()`。
 
+注意：`[Task]::Run([Action]{...})` 之类把脚本块投递给线程池线程的写法，在 PowerShell 中会因工作线程上没有可用的运行空间而报错。需要并行执行脚本块时，应改用 PowerShell 原生的 `ForEach-Object -Parallel`、`Start-ThreadJob` 或显式为工作线程创建 `[powershell]` 实例。
+
 新线程要运行的代码由传给 Task.Run()方法的委托（本例是 Action 类型）来定义。该委托（以 Lambda 表达式的形式）在控制台上反复打印连字号。主线程的循环几乎完全一样，只是它打印加号。
 
 注意，一旦调用 Task.Run()，作为实参传递的 Action 几乎立即开始执行。这称为“热”任务，意味着它已触发并开始执行。“冷”任务则相反，需要在显式触发之后才开始异步工作。

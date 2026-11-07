@@ -70,6 +70,8 @@ Write-Host "Count = $script:_Count"
 ```powershell
 $x = 0
 # 并行 for 循环中，多个线程并发访问 $x，造成竞态条件
+# 注意：脚本块传给 [Parallel]::For 会因工作线程缺少运行空间而报错；
+# 本清单用于演示竞态条件的语义，实际并行请用 ForEach-Object -Parallel。
 [System.Threading.Tasks.Parallel]::For(
     0,
     [int]::MaxValue,

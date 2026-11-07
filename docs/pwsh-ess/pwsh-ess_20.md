@@ -125,7 +125,7 @@ class NameComparison : IComparer[Contact] {
 
 原图代码已改写为 PowerShell 类定义。PowerShell 使用 `IComparer[Contact]` 实现自定义比较器。
 
-要先按 LastName 排序，再按 FirstName 排序，调用 contactList.Sort(new Name-Comparer())即可。
+要先按 LastName 排序，再按 FirstName 排序，调用 `$contactList.Sort([NameComparison]::new())` 即可。
 
 ### 17.2.2　全序
 
@@ -197,6 +197,8 @@ foreach ($number in $results) {
 原图代码已改写为 PowerShell 脚本。
 
 调用 FindAll()时传递了一个委托实例 Even()，后者在整数实参是偶数的前提下返回 true。FindAll()获取委托实例，并为列表中的每一项调用 Even()（此时利用了 C# 2.0 的委托类型推断）。每次返回值为 true 时，相应的项就添加到一个新的 List<T>实例中。检查完列表中的每一项之后就返回该实例。第十三章已详细讨论了委托。
+
+注：原图把筛选逻辑放在名为 Even() 的方法里，再作为委托传给 FindAll()；PowerShell 版直接把脚本块作为 `Predicate[int]` 委托传入（见代码清单 17.4），由语言自动完成转换，因此没有单独的 Even() 方法。
 
 ### 17.2.4　字典集合：Dictionary<TKey, TValue>
 
@@ -321,7 +323,7 @@ class ContactEquality : IEqualityComparer[object] {
 
 原图代码已改写为 PowerShell 类定义。此处以 `IEqualityComparer[object]` 实现，这样比较器可直接用于 `Dictionary[Contact, string]`。
 
-调用构造函数 new Dictionary<Contact, string>(new ContactEquality)，即可创建使用了该相等性比较器的字典。
+调用构造函数 `[System.Collections.Generic.Dictionary[Contact, string]]::new([ContactEquality]::new())`，即可创建使用了该相等性比较器的字典。
 
 初学者主题：相等性比较的要求
 
@@ -431,6 +433,8 @@ class Pair {
 索引器的声明和属性很相似，但不是使用属性名，而是使用关键字 this，后跟方括号中的参数列表。主体也像属性，也有 get 和 set 块。如代码清单 17.9 所示，参数不一定是 int。事实上，索引可获取多个参数，甚至可以重载。本例使用 enum 防止调用者为不存在的项提供索引。
 
 C#编译器为索引器创建的 CIL 代码是名为 Item 的特殊属性，它获取一个实参。接受实参的属性不可以在 C#中显式创建，所以 Item 属性在这方面相当特殊。使用了标识符 Item 的其他任何成员，即使它有完全不同的签名，都会和编译器创建的成员冲突，所以不被允许。
+
+注：以上描述的是 C# 编译器的索引器机制。PowerShell 脚本类不支持索引器声明（代码清单 17.9 改为 `GetItem()` 方法），因此不存在 C# 编译器生成的 `Item` 属性，`IndexerName` 特性在 PowerShell 中也没有对应物（见代码清单 17.10 的注）。
 
 高级主题：使用 IndexerName 指定索引器属性名称
 
@@ -580,6 +584,8 @@ function Get-TreeItems {
 正确实现迭代器模式需维护一些内部状态，以便在枚举集合时跟踪记录当前的位置。在 BinaryTree<T>的情况下，要记录的是树中哪些元素已被枚举，哪些还没有。迭代器由编译器转换成“状态机”来跟踪记录当前位置，它还知道如何将自己移动到下一个位置。
 
 每次迭代器遇到 yield return 语句都生成一个值，之后控制立即回到请求数据项的调用者。（这里有一个有趣的点是，控制确实会立即返回，这与 return 语句不同。一个 return 语句会触发 finally 块被执行，而 yield return 则不会。）然后，当调用者请求下一项时，会紧接在上一个 yield return 语句之后执行。代码清单 17.13 顺序返回 C#内建的数据类型关键字。
+
+注：以上描述的是 C# 迭代器按需暂停/恢复的 `yield return` 机制。PowerShell 没有 `yield return`，等价做法是在函数中把值输出到管道、由调用方收集为序列（见代码清单 17.13、17.16 的注）；PowerShell 函数不维护迭代器状态机，而是运行到完成后一次性产生整个序列。
 
 代码清单 17.13　顺序生成(yield)一些 C#关键字
 
@@ -912,6 +918,8 @@ foreach ($name in $game.GetReverseEnumerator()) {
 ### 17.5.9　yield 语句的要求
 
 只有在返回 IEnumerator<T>或者 IEnumerable<T>类型（或者它们的非泛型版本）的成员中，才能使用 yield return 语句。主体包含 yield return 语句的成员不能包含简单 return 语句（也就是普通的、没有添加 yield 的 return 语句）。如果成员使用了 yield return 语句，则 C#编译器会生成必要的代码来维护迭代器的状态。相反，如方法使用 return 语句而非 yield return，就要由程序员负责维护自己的状态机，并返回其中一个迭代器接口的实例。另外，我们知道，在有返回类型的方法中，所有代码路径都必须用一个 return 语句返回值（前提是代码路径中没有抛出异常）。类似地，迭代器中的所有代码路径都必须包含一个 yield return 语句（如果这些代码路径要返回任何数据的话）。
+
+注：本小节及随后的列表列出的是 C# 语言对 `yield` 使用位置的编译期限制。PowerShell 没有 `yield return`，这些限制不适用于 PowerShell 脚本；把值输出到管道不受上述位置限制。
 
 yield 语句的其他限制包括如下方面（违反将造成编译错误）：
 

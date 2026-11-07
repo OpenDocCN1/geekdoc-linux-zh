@@ -45,6 +45,8 @@ $batchSize = 10
 $pi = ''
 $iterations = $totalDigits / $batchSize
 $sections = [string[]]::new($iterations)
+# 注意：把脚本块传给 [Parallel]::For 等 TPL 方法将因工作线程缺少运行空间而报错；
+# 正文用于演示 API 的语义，实际并行请用 ForEach-Object -Parallel 或 Start-ThreadJob。
 [System.Threading.Tasks.Parallel]::For(
     0, $iterations,
     [Action[int]] {
@@ -234,6 +236,8 @@ C# 版本借助 `Select(item => Encrypt(item)).ToList()` 一次完成投射与�
 ```powershell
 function Encrypt-DataParallel(
     [System.Collections.Generic.IEnumerable[string]] $data) {
+    # 注意：与 [Parallel]::For 一样，传给 PLINQ 的 [Func] 脚本块在线程池线程上
+    # 没有运行空间，同样会报错；正文展示的是 API 语义，真实并行请用 ForEach-Object -Parallel。
     $parallelQuery = [System.Linq.ParallelEnumerable]::AsParallel($data)
     $result = $parallelQuery | ForEach-Object { Encrypt-Item $_ }
     return @($result)
