@@ -1,0 +1,35 @@
+```
+```csharp
+public static void Main() {
+   Object o = new Object();
+   o.GCWatch("My Object created at " + DateTime.Now);
+   GC.Collect();       // 此时看不到 GC 通知
+   GC.KeepAlive(o);    // 确定 o 引用的对象现在还活着
+   o = null;           // o 引用的对象现在可以死了
+
+   GC.Collect();       // 此时才会看到 GC 通知
+   Console.ReadLine();
+}
+}
+
+internal static class GCWatcher {
+   // 注意：由于字符串留用(interning) 和 MarshalByRefObject 代理对象，所以
+   // 使用 String 要当心
+   private readonly static ConditionalWeakTable<Object, NotifyWhenGCd<String>> s_cwt =
+      new ConditionalWeakTable<Object, NotifyWhenGCd<String>>();
+
+   private sealed class NotifyWhenGCd<T> {
+      private readonly T m_value;
+
+      internal NotifyWhenGCd(T value) { m_value = value; }
+      public override string ToString() { return m_value.ToString(); }
+      ~NotifyWhenGCd() { Console.WriteLine("GC'd: " + m_value); }
+   }
+
+   public static T GCWatch<T>(this T @object, String tag) where T : class{
+      s_cwt.Add(@object, new NotifyWhenGCd<String>(tag));
+      return @object;
+   }
+}
+```
+```

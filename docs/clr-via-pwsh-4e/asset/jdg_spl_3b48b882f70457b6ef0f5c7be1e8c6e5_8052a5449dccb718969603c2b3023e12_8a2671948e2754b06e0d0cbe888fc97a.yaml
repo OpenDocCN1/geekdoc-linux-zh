@@ -1,0 +1,82 @@
+chapter_starts:
+- 'no': 0
+  confidence: 0.92
+  final_reason: 行0为全书标题，后续紧跟作者简介、序言、前言、致谢等正文之前的内容；按“前置内容统一划分为一章”的规则，可作为该前置内容章的起始。复核方虽指出其非编号章节标题，但维持分章，且该规则覆盖无编号前置内容。
+  accepted_evidence:
+  - 行0是全书标题，后续行2为“作者简介”、行15为“序言”、行49为“前言”、行67为“致谢”，均属正文之前的内容。
+  - 规则明确：前言、序言、致谢、关于作者等正文之前的内容，统一划分为一章。
+  - 复核方 keep_split=true，未推翻分章。
+  rejected_evidence:
+  - 复核方提出该行是书籍封面/标题页，缺少“第X章”“第X部分”等编号；但前置内容统一成章的规则不要求编号。
+  need_human_review: false
+- 'no': 96
+  confidence: 0.97
+  final_reason: 行96为“第 I 部分　CLR 基础”，属于部分级标题；该书存在部分-章节结构，按规则遇到部分标题和章标题均应分章。
+  accepted_evidence:
+  - 行96标题明确包含“第 I 部分”，是全书最高层级之一。
+  - 后续列出第1~3章目录，语义上统领这些章节。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方指出其后紧跟章节列表，可能是部分目录页/扉页；但部分标题本身即构成结构性分章点。
+  need_human_review: false
+- 'no': 102
+  confidence: 0.99
+  final_reason: 行102为“## 第1章　CLR 的执行模型”，有明确章序号，单独成行，后接“本章内容：”及1.1等子节，是标准的最高层级章标题。
+  accepted_evidence:
+  - 标题包含“第1章”编号，语义上统领全章。
+  - 后接本章内容列表和“### 1.1”“### 1.2”等子节，符合章标题的上下文特征。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方提出其为二级标题可能与子节混淆，且前面目录中已出现“第 1 章”字样可能重复；但正文中的章序号和统领性语义足够明确。
+  need_human_review: false
+- 'no': 644
+  confidence: 0.99
+  final_reason: 行644为“## 第2章 生成、打包、部署和管理应用程序及类型”，有明确章序号，后接本章内容及2.1等子节，是标准的最高层级章标题。
+  accepted_evidence:
+  - 标题包含“第2章”编号，语义上统领全章。
+  - 后接本章内容列表和“### 2.1”等子节，符合章标题的上下文特征。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方提出其为二级标题且与上一章结尾之间无显式分页符；但章序号及语义足以判定。
+  need_human_review: false
+- 'no': 1482
+  confidence: 0.99
+  final_reason: 行1482为“## 第 3 章　共享程序集和强命名程序集”，有明确章序号，后接本章内容及3.1等子节，是标准的最高层级章标题。
+  accepted_evidence:
+  - 标题包含“第 3 章”编号，语义上统领全章。
+  - 后接本章内容列表和“## 3.1”等子节，符合章标题的上下文特征。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方提出其为二级标题且与部分标题层级相近；但章序号和语义足以判定。
+  need_human_review: false
+- 'no': 2015
+  confidence: 0.97
+  final_reason: 行2015为“# 第 II 部分 设计类型”，属于部分级标题；该书为部分-章节模式，按规则部分标题应划分新章。
+  accepted_evidence:
+  - 行2015标题明确包含“第 II 部分”，是全书最高层级之一。
+  - 后续列出第4~13章目录，语义上统领这些章节。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方指出其后紧跟章节列表，可能是部分目录页/扉页；但部分标题本身即构成结构性分章点。
+  need_human_review: false
+- 'no': 2028
+  confidence: 0.99
+  final_reason: 行2028为“## 第4章 类型基础”，有明确章序号，后接本章内容及4.1等子节，是标准的最高层级章标题。
+  accepted_evidence:
+  - 标题包含“第4章”编号，语义上统领全章。
+  - 后接“本章内容：”列表和“### 4.1”等子节，符合章标题的上下文特征。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方提出其为二级标题可能被看作部分下的子节；但章序号与统领性语义足以判定。
+  need_human_review: false
+- 'no': 2501
+  confidence: 0.99
+  final_reason: 行2501为“## 第5章　基元类型、引用类型和值类型”，有明确章序号，后接本章内容及5.1等子节，是标准的最高层级章标题。
+  accepted_evidence:
+  - 标题包含“第5章”编号，语义上统领全章。
+  - 后接“### 本章内容”列表和“### 5.1”等子节，符合章标题的上下文特征。
+  - 复核方 keep_split=true。
+  rejected_evidence:
+  - 复核方提出其为二级标题，与普通节标题只差一级；但章序号和语义足以判定。
+  need_human_review: false
+rejected_lines: []

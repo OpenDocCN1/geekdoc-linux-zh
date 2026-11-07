@@ -1,0 +1,43 @@
+reviews:
+- 'no': 15016
+  overturn_probability: 0.01
+  alternative: 正文/导读中的粗体小标题（但结合“第22章”独立成行，仍是最高层级章标题）
+  counter_evidence:
+  - 上一行是代码块结束标记 ```，孤立地看可能被误当作代码块后的解释性文字而不是标题
+  - 标题后紧接“**本章内容：**”列表，容易被误看成正文列表的一部分
+  keep_split: true
+- 'no': 15464
+  overturn_probability: 0.02
+  alternative: '目录页中引用“第23章”的条目（但行首有 ##，且后接内容列表，仍是章标题）'
+  counter_evidence:
+  - 上一行是编号步骤“8. ...”，与标题之间没有空行，存在版式粘连或断行误判的可能
+  - “第23章”没有空格，与前面“第 22 章”等标题的书写格式不统一
+  keep_split: true
+- 'no': 16112
+  overturn_probability: 0.01
+  alternative: 正文中引用“第 24 章”的承接性说明（但独立成行且后接本章内容列表，仍是章标题）
+  counter_evidence:
+  - 前文有大量输出文本和代码块，标题前后空行较多，容易被看成 OCR/版式分隔噪声
+  - '该行使用二级标题符号 ##，若机械按标题层级可能被误归为次级小标题'
+  keep_split: true
+- 'no': 16863
+  overturn_probability: 0.02
+  alternative: 目录或正文交叉引用中的章名（但独立成行且后接内容列表，仍是章标题）
+  counter_evidence:
+  - “第25章”没有空格，看起来更像目录条目而非正文标题
+  - 前文主题是序列化，突然出现 WinRT 组件，若不看全局可能被误判为注释性插入
+  keep_split: true
+- 'no': 17170
+  overturn_probability: 0.25
+  alternative: 混入的目录页或“本部分内容”列表标题（但“第V部分”本身是最高层级部分标记，仍应分章）
+  counter_evidence:
+  - 该行后接第36-40章列表，而紧随其后的却是“## 第26章 线程基础”，章号严重断裂，存在其他文档目录块误植的嫌疑
+  - 后文第17195行提到本部分为“线程处理”，与这里的“编程处理”不一致，说明该行可能存在 OCR/转录错误
+  keep_split: true
+- 'no': 17178
+  overturn_probability: 0.01
+  alternative: 目录项或章节引用行（但作为独立成行的“第26章”标题，仍是章标题）
+  counter_evidence:
+  - 上一行是空行，前一行是“第40章综合案例分析”目录项，可能被误读为目录列表的延续
+  - “第26章”未加空格，与前后其他章标题格式不完全统一
+  keep_split: true

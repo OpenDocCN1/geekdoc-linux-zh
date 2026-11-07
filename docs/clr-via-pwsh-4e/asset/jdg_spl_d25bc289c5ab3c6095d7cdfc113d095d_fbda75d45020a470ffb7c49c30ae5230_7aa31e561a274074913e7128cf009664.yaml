@@ -1,0 +1,46 @@
+chapter_starts:
+- 'no': 12255
+  confidence: 0.99
+  final_reason: 标题明确包含“第19章”，单独成行，前接第18章内容，后接本章内容概述及正文，符合最高层级章标题特征。
+  accepted_evidence:
+  - 判断方认定为“第19章 可空值类型”的明确章标题
+  - 复核方虽提出OCR或排版残留的可能，但保留分章意见
+  - 标题编号明确且后续紧跟本章内容和19.1节
+  rejected_evidence:
+  - 前文存在连续空行，可能形成假分隔
+  - 标题使用二级Markdown标记
+  need_human_review: false
+- 'no': 12605
+  confidence: 0.94
+  final_reason: 标题明确为“第IV部分 核心机制”。规则规定存在部分-章节模式时，部分标题和章标题均应划分新章；其后紧跟第20至25章目录，语义上构成新部分的起始。
+  accepted_evidence:
+  - 判断方认定为部分级标题
+  - 标题包含“第IV部分”，符合部分-章节模式
+  - 后续列出第20至25章，表明新部分的范围
+  rejected_evidence:
+  - 该行可能属于目录页中的部分名称
+  - 后续存在OCR模糊和残缺文本
+  need_human_review: false
+- 'no': 12620
+  confidence: 0.99
+  final_reason: 标题明确包含“第20章 异常和状态管理”，单独成行，后接“本章内容”提纲和20.1节，符合章标题的结构和上下文特征。
+  accepted_evidence:
+  - 判断方认定为明确的第20章标题
+  - 复核方保留分章意见
+  - 标题后紧跟本章内容列表、概述段落和20.1节
+  rejected_evidence:
+  - 该区域此前存在模糊或残缺OCR文本
+  - 标题与其他章节的空格格式略有差异
+  need_human_review: false
+- 'no': 14022
+  confidence: 0.99
+  final_reason: 标题明确包含“第21章 托管堆和垃圾回收”，后接本章内容列表、章节概述和21.1节，具有完整的章起始结构；格式差异不足以否定其章标题性质。
+  accepted_evidence:
+  - 判断方认定为第21章标题
+  - 复核方保留分章意见
+  - 标题后紧跟本章内容、概述段落和21.1节
+  rejected_evidence:
+  - “第21章”缺少与前文一致的空格
+  - 可能被误认为页眉或OCR残留
+  need_human_review: false
+rejected_lines: []

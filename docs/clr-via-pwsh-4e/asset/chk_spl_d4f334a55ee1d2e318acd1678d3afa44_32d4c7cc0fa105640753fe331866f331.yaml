@@ -1,0 +1,36 @@
+reviews:
+- 'no': 6161
+  overturn_probability: 0.1
+  alternative: 目录中的章节条目或页眉残留
+  counter_evidence:
+  - 该行前后存在大量目录/噪声行（如6147-6157的空标题和列表项），不能排除它是目录提取结果。
+  - Markdown 的'##'层级也可能用于子节，单凭格式不足以确定它就是最高层章标题。
+  keep_split: true
+- 'no': 6599
+  overturn_probability: 0.1
+  alternative: 目录中的章节条目或页眉残留
+  counter_evidence:
+  - 该行前是图像占位（6597），后是'**本章内容：**'，这种模式在目录中也可能出现。
+  - '''第 12 章''与相邻章节编号连续，但若位于目录中也可形成连续列表，不能直接证明是正文分章。'
+  keep_split: true
+- 'no': 7646
+  overturn_probability: 0.1
+  alternative: 目录中的章节条目或页眉残留
+  counter_evidence:
+  - 该行与上一章结束（7644 图片）之间只有空行，无明显的分页标记，可能是同一页面中的段落标题。
+  - 书中存在多个'##'标题，包括子节（如'### 12.1'），因此'##'不一定代表全书最高层章。
+  keep_split: true
+- 'no': 8314
+  overturn_probability: 0.2
+  alternative: 目录中的部分标题条目，而非正文中的部分标题页
+  counter_evidence:
+  - 该行后接的是第14-19章的目录列表（8316-8321），并非正文内容，更像目录页的一部分。
+  - 该行使用'#'而章节标题使用'##'，层级不一致，可能是转换时对目录的标记，而非正文分章。
+  keep_split: true
+- 'no': 8334
+  overturn_probability: 0.1
+  alternative: 目录中的章节条目或页眉残留
+  counter_evidence:
+  - 该行之前有一段类似目录的列表（8325-8330），可能造成识别混淆。
+  - 该行后接'本章内容：'，在目录中也可能出现，因此需结合后文正文判断；但正文紧随其后，仍支持分章。
+  keep_split: true
