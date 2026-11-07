@@ -83,6 +83,8 @@ using uint   = System.UInt32;
 ...
 ```
 
+> 注：PowerShell 没有 `using 别名 = 类型` 这种声明，类型加速器（`[int]`、`[string]` 等）由引擎固定提供，不能自定义别名；需要简化长类型名时，可把 `[type]` 对象存入变量，或使用 `using namespace` 后仍写完整类型名。
+
 C# 语言规范称：“从风格上说，最好是使用关键字，而不是使用完整的系统类型名称。” 我不同意语言规范；我情愿使用 FCL 类型名称，完全不用基元类型名称。事实上，我希望编译器根本不提供基元类型名称，而是强迫开发人员使用 FCL 类型名称。理由如下。
 
 - 1. 许多开发人员纠结于是用 **string** 还是 **String**。由于 C# 的 **string**(一个关键字)直接映射到 **System.String**(一个 FCL 类型)，所以两者没有区别，都可使用。类似地，一些开发人员说应用程序在 32 位操作系统上运行，**int** 代表 32 位整数；在 64 位操作系统上运行，**int** 代表 64 位整数。这个说法完全错误。C# 的 **int** 始终映射到 **System.Int32**，所以不管在什么操作系统上运行，代表的都是 32 位整数。如果程序员习惯在代码中使用 **Int32**，像这样的误解就没有了。
@@ -103,21 +105,21 @@ Single val  = br.ReadSingle();   // 正确，感觉自然
 
 在许多编程语言中，以下代码都能正确编译并运行：
 
-```csharp
-Int32 i = 5;    // 32 位值
-Int64 l = i;    // 隐式转型为 64 位值
+```powershell
+[int]  $i = 5    # 32 位值
+[long] $l = $i   # 隐式转型为 64 位值
 ```
 
 但根据第四章对类型转换的讨论，你或许认为上述代码无法编译。毕竟，**System.Int32** 和 **System.Int64** 是不同的类型，相互不存在派生关系。但事实上，你会欣喜地发现 C# 编译器正确编译了上述代码，运行起来也没有问题。这是为什么呢？原因是 C# 编译器非常熟悉基元类型，会在编译代码时应用自己的特殊规则。也就是说，编译器能识别常见的编程模式，并生成必要的 IL，使写好的代码能像预期的那样工作。具体地说，C# 编译器支持与类型转换、字面值以及操作符有关的模式。接着的几个例子将对它们进行演示。
 
 首先，编译器能执行基元类型之间的隐式或显式转型，例如：
 
-```csharp
-Int32 i = 5;             // 从 Int32 隐式转型为 Int32
-Int64 l = i;             // 从 Int32 隐式转型为 Int64
-Single s = i;            // 从 Int32 隐式转型为 Single
-Byte b = (Byte) i;       // 从 Int32 显式转型为 Byte
-Int16 v = (Int16) s;     // 从 Single 显式转型为 Int16
+```powershell
+[int]   $i = 5               # 从 Int32 隐式转型为 Int32
+[long]  $l = $i              # 从 Int32 隐式转型为 Int64
+[float] $s = $i              # 从 Int32 隐式转型为 Single
+[byte]  $b = [byte] $i       # 从 Int32 显式转型为 Byte
+[int16] $v = [int16] $s      # 从 Single 显式转型为 Int16
 ```
 
 ① 即 literal，也称为直接量或文字常量。本书将采用“字面值”这一译法。——译注
@@ -128,8 +130,8 @@ Int16 v = (Int16) s;     // 从 Single 显式转型为 Int16
 
 除了转型，基本类型还能写成字面值(literal)。字面值可被看成是类型本身的实例，所以可像下面为实例(123 和 456)调用实例方法：
 
-```csharp
-Console.WriteLine(123.ToString() + 456.ToString());    // "123456"
+```powershell
+(123).ToString() + (456).ToString()    # "123456"
 ```
 
 另外，如果表达式由字面值构成，编译器在编译时就能完成表达式求值，从而增强应用程序性能：
@@ -140,12 +142,14 @@ Int32 x = 100 + 20 + 3;       // 生成的代码将 x 设为 123
 String s = "a " + "bc";     // 生成的代码将 s 设为 "a bc"
 ```
 
+> 注：PowerShell 没有编译期常量折叠，字面值表达式在运行时求值（`100 + 20 + 3` 每次执行都会计算），字符串拼接同理；两者的性能差异通常可以忽略。
+
 最后，编译器知道如何和以什么顺序解析代码中的操作符(比如 +，-，*，/，%，&，^，|，==，!=，>，<，>=，<=，<<，>>，~，!，++，--等)：
 
-```csharp
-Int32 x = 100;                       // 赋值操作符
-Int32 y = x + 23;                    // 加和赋值操作符
-Boolean lessThanFifty = (y < 50);    // 小于和赋值操作符
+```powershell
+[int]  $x = 100                       # 赋值操作符
+[int]  $y = $x + 23                   # 加和赋值操作符
+[bool] $lessThanFifty = ($y -lt 50)   # 小于和赋值操作符
 ```
 
 #### checked 和 unchecked 基元类型操作
@@ -1044,13 +1048,17 @@ public sealed class Program {
 
 自定义 **GetHashCode** 方法或许不是一件难事。但取决于数据类型和数据分布情况，可能并不容易设计出能返回良好分布值的哈希算法。下面是一个简单的哈希算法，它用于 Point 对象时也许还不错：
 
-```csharp
-internal sealed class Point {
-    private readonly Int32 m_x, m_y;
-    public override Int32 GetHashCode() {
-        return m_x ^ m_y; // 返回 m_x 和 m_y 的 XOR 结果
+```powershell
+class Point {
+    hidden [int] $m_x
+    hidden [int] $m_y
+
+    # 重写基类的 GetHashCode
+    [int] GetHashCode() {
+        return $this.m_x -bxor $this.m_y   # 返回 m_x 和 m_y 的 XOR 结果
     }
-    ...
+
+    # 其余成员略
 }
 ```
 

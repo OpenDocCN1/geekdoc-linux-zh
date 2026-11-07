@@ -43,6 +43,8 @@ public sealed class Program {
 }
 ```
 
+> 注：这是供 C# 编译器生成可执行程序集的源代码。PowerShell 的等效脚本只有 `Write-Output "Hi"`，不需要 `Program` 类型或 `Main` 入口，也不会产生同样的程序集入口元数据；因此保留原代码以说明本节的程序集生成过程。
+
 该应用程序定义了 Program 类型，其中有名为 Main 的 public static 方法。Main 中引用了另一个类型 System.Console。System.Console 是 Microsoft 实现好的类型，用于实现这个类型的各个方法的 IL 代码存储在 MSCorLib.dll 文件中。总之，应用程序定义了一个类型，还使用了其他公司提供的类型。
 
 为了生成这个示例应用程序，请将上述代码放到一个源代码文件中(假定为 Program.cs)，然后在命令行执行以下命令：
@@ -765,6 +767,8 @@ using System.Reflection;
 // 将程序集的语言文化设为瑞士德语
 [assembly:AssemblyCulture("de-CH")]
 ```
+
+> 注：`AssemblyCulture` 是编译期程序集特性，PowerShell 脚本/模块没有对应的声明方式；附属程序集仍须由 C# 等编译器配合 `AL.exe` 生成。
 
 一般不要生成引用了附属程序集的程序集。换言之，程序集的 `AssemblyRef` 记录项只应引用语言文化中性的程序集。要访问附属程序集中的类型或成员，应使用第二十三章“程序集加载和反射”介绍的反射技术。
 

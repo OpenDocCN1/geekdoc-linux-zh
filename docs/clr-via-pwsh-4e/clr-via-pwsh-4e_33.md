@@ -20,34 +20,31 @@
 
 言归正传，下面是一个混合线程同步锁的例子：
 
-```csharp
-internal sealed class SimpleHybridLock : IDisposable {
-    // Int32 由基元用户模式构造（Interlocked 的方法）使用
-    private Int32 m_waiters = 0;
+```powershell
+# 原书“internal sealed class ... : IDisposable”的限定在 PowerShell 类中没有对应物，
+# 类默认 public、非密封；Interlocked 方法作用于 [ref] 字段上可用（实测 PS 7.6）。
+class SimpleHybridLock {
+    # Int32 由基元用户模式构造（Interlocked 的方法）使用
+    hidden [int] $m_waiters = 0
 
-    // AutoResetEvent 是基元内核模式构造
-    private AutoResetEvent m_waiterLock = new AutoResetEvent(false);
+    # AutoResetEvent 是基元内核模式构造
+    hidden [System.Threading.AutoResetEvent] $m_waiterLock = [System.Threading.AutoResetEvent]::new($false)
 
-    public void Enter() {
-        // 指出这个线程想要获得锁
-        if (Interlocked.Increment(ref m_waiters) == 1)
-            return; // 锁可自由使用，无竞争，直接返回
-
-        // 另一个线程拥有锁（发生竞争），使这个线程等待
-        m_waiterLock.WaitOne(); // 这里产生较大的性能影响
-        // WaitOne 返回后，这个线程拿到锁了
+    [void] Enter() {
+        # 指出这个线程想要获得锁
+        if ([System.Threading.Interlocked]::Increment([ref]$this.m_waiters) -eq 1) { return } # 无竞争，直接返回
+        # 另一个线程拥有锁（发生竞争），使这个线程等待
+        [void]$this.m_waiterLock.WaitOne()  # 这里产生较大的性能影响；WaitOne 返回后拿到锁
     }
 
-    public void Leave() {
-        // 这个线程准备释放锁
-        if (Interlocked.Decrement(ref m_waiters) == 0)
-            return; // 没有其他线程正在等待，直接返回
-
-        // 有其他线程正在阻塞，唤醒其中一个
-        m_waiterLock.Set(); // 这里产生较大的性能影响
+    [void] Leave() {
+        # 这个线程准备释放锁
+        if ([System.Threading.Interlocked]::Decrement([ref]$this.m_waiters) -eq 0) { return } # 无等待线程
+        # 有其他线程正在阻塞，唤醒其中一个
+        [void]$this.m_waiterLock.Set()      # 这里产生较大的性能影响
     }
 
-    public void Dispose() { m_waiterLock.Dispose(); }
+    [void] Dispose() { $this.m_waiterLock.Dispose() }
 }
 ```
 
@@ -69,69 +66,64 @@ SimpleHybridLock 对象在构造和 dispose 时的性能能提升当然很好，
 
 此外，有的锁限制只能由获得锁的线程释放锁。有的锁允许当前拥有它的线程递归地拥有锁(多次拥有)，Mutex 锁就是这样的一个例子。①可通过一些别致的逻辑构建支持自旋、线程所有权和递归的一个混合锁，如下所示：
 
-```csharp
-internal sealed class AnotherHybridLock : IDisposable {
-    // Int32 想基于用户模式构造(Interlocked 的方法)使用
-    private Int32 m_waiters = 0;
+```powershell
+# internal sealed 在 PowerShell 类中无对应；C# 的 goto 改写为 break + 标志；其余逐一映射。
+class AnotherHybridLock {
+    # Int32 基于用户模式构造（Interlocked 的方法）使用
+    hidden [int] $m_waiters = 0
 
-    // AutoResetEvent 是基元内核模式构造
-    private AutoResetEvent m_waiterLock = new AutoResetEvent(false);
+    # AutoResetEvent 是基元内核模式构造
+    hidden [System.Threading.AutoResetEvent] $m_waiterLock = [System.Threading.AutoResetEvent]::new($false)
 
-    // 这个字段控制自旋，希望能提升性能
-    private Int32 m_spinCount = 4000; // 随便选择的一个计数
+    # 这个字段控制自旋，希望能提升性能
+    hidden [int] $m_spinCount = 4000        # 随便选择的一个计数
 
-    // 这些字段指出哪个线程拥有锁，以及拥有了它多少次
-    private Int32 m_owningThreadId = 0, m_recursion = 0;
+    hidden [int] $m_owningThreadId = 0      # 指出哪个线程拥有锁
+    hidden [int] $m_recursion = 0           # 以及拥有了它多少次
 
-    public void Enter() {
-        // 如果调用线程已经拥有锁，递增递归计数并返回
-        Int32 threadId = Thread.CurrentThread.ManagedThreadId;
-        if (threadId == m_owningThreadId) { m_recursion++; return; }
+    [void] Enter() {
+        # 如果调用线程已经拥有锁，递增递归计数并返回
+        [int] $threadId = [System.Threading.Thread]::CurrentThread.ManagedThreadId
+        if ($threadId -eq $this.m_owningThreadId) { $this.m_recursion++; return }
 
-        // 调用线程不拥有锁，尝试获取它
-        SpinWait spinwait = new SpinWait();
-
-        for (Int32 spinCount = 0; spinCount < m_spinCount; spinCount++) {
-            // 如果锁可以自由使用了，这个线程就获得它：设置一些状态并返回
-            if (Interlocked.CompareExchange(ref m_waiters, 1, 0) == 0) goto GotLock;
-
-            // 黑科技：给其他线程运行的机会，希望锁会被释放
-            spinWait.SpinOnce();
+        # 调用线程不拥有锁，尝试获取它
+        $spinwait = [System.Threading.SpinWait]::new()
+        $gotLock = $false
+        for ([int] $spinCount = 0; $spinCount -lt $this.m_spinCount; $spinCount++) {
+            # 如果锁可以自由使用，这个线程就获得它：设置状态并跳出循环
+            if ([System.Threading.Interlocked]::CompareExchange([ref]$this.m_waiters, 1, 0) -eq 0) { $gotLock = $true; break }
+            # 黑科技：给其他线程运行的机会，希望锁会被释放
+            $spinwait.SpinOnce()
         }
-
-        // 自旋结束，锁仍未获得，再试一次
-        if (Interlocked.Increment(ref m_waiters) > 1) {
-            // 仍然是竞争条件，这个线程必须阻塞
-            m_waiterLock.WaitOne(); // 等待锁；性能有损失
-            // 等这个线程醒来时，它拥有锁；设置一些状态并返回
+        if (-not $gotLock) {
+            # 自旋结束，锁仍未获得，再试一次
+            if ([System.Threading.Interlocked]::Increment([ref]$this.m_waiters) -gt 1) {
+                # 仍然是竞争条件，这个线程必须阻塞
+                [void]$this.m_waiterLock.WaitOne()   # 等待锁；性能有损失；醒后拥有锁
+            }
         }
-
-    GotLock:
-        // 一个线程获得锁时，我们记录它的 ID，并
-        // 指出线程拥有锁一次
-        m_owningThreadId = threadId; m_recursion = 1;
+        # 一个线程获得锁时，记录它的 ID，并指出线程拥有锁一次
+        $this.m_owningThreadId = $threadId; $this.m_recursion = 1
     }
 
-    public void Leave() {
-        // 如果调用线程不拥有锁，表明存在 bug
-        Int32 threadId = Thread.CurrentThread.ManagedThreadId;
-        if (threadId != m_owningThreadId)
-            throw new SynchronizationLockException("Lock not owned by calling thread");
+    [void] Leave() {
+        # 如果调用线程不拥有锁，表明存在 bug
+        [int] $threadId = [System.Threading.Thread]::CurrentThread.ManagedThreadId
+        if ($threadId -ne $this.m_owningThreadId) {
+            throw [System.Threading.SynchronizationLockException]::new('Lock not owned by calling thread')
+        }
+        # 递减递归计数。如果这个线程仍然拥有锁，那么直接返回
+        $this.m_recursion--
+        if ($this.m_recursion -gt 0) { return }
 
-        // 递减递归计数。如果这个线程仍然拥有锁，那么直接返回
-        if (--m_recursion > 0) return;
-
-        m_owningThreadId = 0; // 现在没有线程拥有锁
-
-        // 如果没有其他线程在等待，直接返回
-        if (Interlocked.Decrement(ref m_waiters) == 0)
-            return;
-
-        // 有其他线程正在等待，唤醒其中 1 个
-        m_waiterLock.Set(); // 这里有较大的性能损失
+        $this.m_owningThreadId = 0            # 现在没有线程拥有锁
+        # 如果没有其他线程在等待，直接返回
+        if ([System.Threading.Interlocked]::Decrement([ref]$this.m_waiters) -eq 0) { return }
+        # 有其他线程正在等待，唤醒其中 1 个
+        [void]$this.m_waiterLock.Set()        # 这里有较大的性能损失
     }
 
-    public void Dispose() { m_waiterLock.Dispose(); }
+    [void] Dispose() { $this.m_waiterLock.Dispose() }
 }
 ```
 
@@ -220,25 +212,28 @@ public static class Monitor {
 
 以下代码演示了 Monitor 类原本的使用方式：
 
-```csharp
-internal sealed class Transaction {
-    private DateTime m_timeOfLastTrans;
+```powershell
+# C# 中是 internal sealed 类且锁住 this；PowerShell 类默认 public、非密封，直接锁 $this。
+# 注意：PowerShell 类不支持只读属性，原书 LastTransaction 属性改写为同名方法。
+class Transaction {
+    hidden [System.DateTime] $m_timeOfLastTrans
 
-    public void PerformTransaction() {
-        Monitor.Enter(this);
-        // 以下代码拥有对数据的独占访问权...
-        m_timeOfLastTrans = DateTime.Now;
-        Monitor.Exit(this);
+    [void] PerformTransaction() {
+        [System.Threading.Monitor]::Enter($this)   # 进入锁
+        try {
+            # 以下代码拥有对数据的独占访问权...
+            $this.m_timeOfLastTrans = [System.DateTime]::Now
+        }
+        finally { [System.Threading.Monitor]::Exit($this) }   # 确保释放
     }
 
-    public DateTime LastTransaction {
-        get {
-            Monitor.Enter(this);
-            // 以下代码拥有对数据的独占访问权...
-            DateTime temp = m_timeOfLastTrans;
-            Monitor.Exit(this);
-            return temp;
+    [System.DateTime] LastTransaction() {
+        [System.Threading.Monitor]::Enter($this)
+        try {
+            # 以下代码拥有对数据的独占访问权...
+            return $this.m_timeOfLastTrans
         }
+        finally { [System.Threading.Monitor]::Exit($this) }
     }
 }
 ```
@@ -258,11 +253,15 @@ public static void SomeMethod() {
 }
 ```
 
+> **注意（PowerShell 适用性）**　`ThreadPool.QueueUserWorkItem` 的回调是 .NET 委托；PowerShell 脚本块无法在 .NET 回调节点上直接执行（缺运行空间会抛 `PSInvalidOperationException`），所以这一并发场景在脚本中不能原样改写。这里保留 C#，只是为了说明“每个对象的同步块索引（可用作锁）是公共的”这一要点。
+
 ```csharp
 lock (this) {
     // 这里的代码拥有对数据的独占访问权...
 }
 ```
+
+> **注意（PowerShell 适用性）**　C# 的 `lock` 语句在 PowerShell 中没有对应语法，只能写成下面的 `Monitor.Enter`/`Monitor.Exit` 显式配对（并用 `try/finally` 保证释放）。
 
 它等价于像下面这样写方法：
 
@@ -327,30 +326,32 @@ public class ReaderWriterLockSlim : IDisposable {
 
 以下代码演示了这个类的用法：
 
-```csharp
-internal sealed class Transaction : IDisposable {
-    private readonly ReaderWriterLockSlim m_lock =
-        new ReaderWriterLockSlim(LockRecursionPolicy.NoRecursion);
-    private DateTime m_timeOfLastTrans;
+```powershell
+# 与前面的 Transaction 同名会冲突：同一个脚本里 PowerShell 类名必须唯一，
+# 若需同时定义请给其中一个改名。原书 LastTransaction 是只读属性，这里改为方法。
+class Transaction {
+    hidden [System.Threading.ReaderWriterLockSlim] $m_lock = [System.Threading.ReaderWriterLockSlim]::new([System.Threading.LockRecursionPolicy]::NoRecursion)
+    hidden [System.DateTime] $m_timeOfLastTrans
 
-    public void PerformTransaction() {
-        m_lock.EnterWriteLock();
-        // 以下代码拥有对数据的独占访问权...
-        m_timeOfLastTrans = DateTime.Now;
-        m_lock.ExitWriteLock();
-    }
-
-    public DateTime LastTransaction {
-        get {
-            m_lock.EnterReadLock();
-            // 以下代码拥有对数据的共享访问权...
-            DateTime temp = m_timeOfLastTrans;
-            m_lock.ExitReadLock();
-            return temp;
+    [void] PerformTransaction() {
+        $this.m_lock.EnterWriteLock()
+        try {
+            # 以下代码拥有对数据的独占访问权...
+            $this.m_timeOfLastTrans = [System.DateTime]::Now
         }
+        finally { $this.m_lock.ExitWriteLock() }
     }
 
-    public void Dispose() { m_lock.Dispose(); }
+    [System.DateTime] LastTransaction() {
+        $this.m_lock.EnterReadLock()
+        try {
+            # 以下代码拥有对数据的共享访问权...
+            return $this.m_timeOfLastTrans
+        }
+        finally { $this.m_lock.ExitReadLock() }
+    }
+
+    [void] Dispose() { $this.m_lock.Dispose() }
 }
 ```
 
@@ -560,18 +561,15 @@ public class Lazy<T> {
 
 以下代码演示了它是如何工作的：
 
-```csharp
-public static void Main() {
-    // 创建一个“延迟初始化”包装器，它将 DateTime 的获取包装起来
-    Lazy<String> s = new Lazy<String>(() =>
-        DateTime.Now.ToLongTimeString(), true);
+```powershell
+# C# 的 Main 在脚本中可以直接写顶层语句；Lazy[string] 在 PowerShell 中可用（实测 PS 7.6）
+$s = [System.Lazy[string]]::new([System.Func[string]]{ [System.DateTime]::Now.ToLongTimeString() }, $true)
 
-    Console.WriteLine(s.IsValueCreated);     // 还没有查询 Value，所以返回 false
-    Console.WriteLine(s.Value);               // 现在调用委托
-    Console.WriteLine(s.IsValueCreated);     // 已经查询了 Value，所以返回 true
-    Thread.Sleep(10000);                     // 等待 10 秒，再次显示时间
-    Console.WriteLine(s.Value);               // 委托没有调用；显示相同结果
-}
+[System.Console]::WriteLine($s.IsValueCreated)    # 还没有查询 Value，所以返回 False
+[System.Console]::WriteLine($s.Value)             # 现在调用委托
+[System.Console]::WriteLine($s.IsValueCreated)    # 已经查询了 Value，所以返回 True
+[System.Threading.Thread]::Sleep(10000)           # 等待 10 秒，再次显示时间
+[System.Console]::WriteLine($s.Value)             # 委托没有调用；显示相同结果
 ```
 
 在我的机器上运行，得到以下结果：
@@ -640,36 +638,36 @@ public static class Monitor {
 
 下面展示了这个模式：
 
-```csharp
-internal sealed class ConditionVariablePattern {
-   private readonly Object m_lock = new Object();
-   private Boolean m_condition = false;
+```powershell
+# 条件变量模式通过 Monitor.Wait/Pulse/PulseAll 实现，这些 API 在 PowerShell 中可用；
+# 但脚本块无法作为 .NET 线程回调直接运行，实际多线程场景需借助运行空间（如线程作业）。
+class ConditionVariablePattern {
+    hidden [object] $m_lock = [object]::new()
+    hidden [bool] $m_condition = $false
 
-   public void Thread1() {
-      Monitor.Enter(m_lock);    // 获取一个互斥锁
+    [void] Thread1() {
+        [System.Threading.Monitor]::Enter($this.m_lock)   # 获取一个互斥锁
+        try {
+            # 在锁中，“原子性”地测试复合条件
+            while (-not $this.m_condition) {
+                # 条件不满足，就等待另一个线程更改条件
+                [void][System.Threading.Monitor]::Wait($this.m_lock)  # 临时释放锁，使其他线程能获取它
+            }
+            # 条件满足，处理数据...
+        }
+        finally { [System.Threading.Monitor]::Exit($this.m_lock) }    # 永久释放锁
+    }
 
-      // 在锁中，“原子性”地测试或复合条件
-      while (!m_condition) {
-         // 条件不满足，就等待另一个线程更改条件
-         Monitor.Wait(m_lock);    // 临时释放锁，使其他线程能获取它
-      }
-
-      // 条件满足，处理数据...
-
-      Monitor.Exit(m_lock);        // 永久释放锁
-   }
-
-   public void Thread2() {
-      Monitor.Enter(m_lock);        // 获取一个互斥锁
-
-      // 处理数据并修改条件...
-      m_condition = true;
-
-      // Monitor.Pulse(m_lock);    // 锁释放之后唤醒一个正在等待的线程
-      Monitor.PulseAll(m_lock);     // 锁释放之后唤醒所有正在等待的线程
-
-      Monitor.Exit(m_lock);         // 释放锁
-   }
+    [void] Thread2() {
+        [System.Threading.Monitor]::Enter($this.m_lock)   # 获取一个互斥锁
+        try {
+            # 处理数据并修改条件...
+            $this.m_condition = $true
+            # [void][System.Threading.Monitor]::Pulse($this.m_lock)    # 锁释放之后唤醒一个等待的线程
+            [void][System.Threading.Monitor]::PulseAll($this.m_lock)   # 锁释放之后唤醒所有等待的线程
+        }
+        finally { [System.Threading.Monitor]::Exit($this.m_lock) }    # 释放锁
+    }
 }
 ```
 
@@ -710,6 +708,8 @@ internal sealed class SynchronizedQueue<T> {
     }
 }
 ```
+
+> **注意（PowerShell 适用性）**　PowerShell 类不能声明泛型类型参数（`class SynchronizedQueue<T>`），所以这个泛型队列类无法在脚本中定义；这里保留 C#，展示的是条件变量模式在泛型集合上的应用。脚本中如需线程安全队列，可直接使用 `System.Collections.Concurrent` 命名空间的并发集合。
 
 ### 30.6 异步的同步构造
 
@@ -788,6 +788,8 @@ private static void ConcurrentExclusiveSchedulerDemo() {
 }
 ```
 
+> **注意（PowerShell 适用性）**　`TaskFactory.StartNew` 接受的是 .NET 委托；PowerShell 脚本块无法在 .NET 回调/任务线程上直接执行（缺运行空间），此例作为 C# 编程模型描述保留。另需注意，脚本中取 `TaskScheduler` 与这组 API 可用，但传入的委托必须是能脱离当前运行空间的代码（如事先用 `Add-Type` 编译的 C# 类）。
+
 遗憾的是，.NET Framework 没有提供具有 reader-writer 语义的异步锁。但我构建了这样的一个类，称为 **AsyncOneManyLock**。它的用法和 **SemaphoreSlim** 一样。下面是一个例子。
 
 ```csharp
@@ -807,6 +809,8 @@ private static async Task AccessResourceViaAsyncSynchronization(AsyncOneManyLock
 ```
 
 下面展示了 **AsyncOneManyLock** 类。
+
+> **注意（PowerShell 适用性）**　`AsyncOneManyLock` 是原书作者自行实现、依赖 `async`/`await` 状态机、`TaskCompletionSource` 与 `SpinLock` 结构的类，PowerShell 中没有与之对应的构造，此处保留 C# 原样。
 
 ```csharp
 public enum OneManyMode { Exclusive, Shared }
@@ -1055,6 +1059,8 @@ private static void ConsumeItems(Object o) {
     Console.WriteLine("All items have been consumed");
 }
 ```
+
+> **注意（PowerShell 适用性）**　`ThreadPool.QueueUserWorkItem` 传入的是 C# 方法组委托，PowerShell 脚本块不能在 .NET 回调节点上直接执行，故这个生产者/消费者演示无法原样改写；脚本中可用 `Start-ThreadJob`/`Wait-Job` 模拟后台消费线程。
 
 在我自己的机器上执行上述代码，得到以下输出：
 

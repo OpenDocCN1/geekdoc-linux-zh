@@ -17,6 +17,8 @@
 
 CLR 事件模型以**委托**为基础。委托是调用回调方法的一种类型安全的方式。对象凭借回调方法接收它们订阅的通知。本章会开始使用委托，但委托的完整细节是在第十七章“委托”中讲述的。
 
+> 注：PowerShell 脚本本身不定义 CLR 事件成员，订阅 .NET 对象的事件用 `Register-ObjectEvent -InputObject $obj -EventName NewMail -Action { ... }`，返回的订阅对象可用 `Get-EventSubscriber`、`Unregister-Event` 管理；自定义通知用 `New-Event`/`Register-EngineEvent`。PowerShell 5.1 和 7 均支持这些命令。
+
 为了帮你完整地理解事件在 CLR 中的工作机制，先来描述事件很有用的一个场景。假设要设计一个电子邮件应用程序。电子邮件到达时，用户可能希望将该邮件转发给传真机或寻呼机。先设计名为 **MailManager** 的类型来接收传入的电子邮件，它公开 **NewMail** 事件。
 
 ① 这个“调用”（invoke）理解为“唤出”更恰当。它和普通的“调用”（call）稍有不同。在英语的语境中，invoke 和 call 的区别在于，在执行一个所有信息都已知的方法时，用 call 比较恰当。这些信息包括要引用的类型、方法的签名以及方法名。但是，在需要先“唤出”某个东西来帮你调用一个信息不明的方法时，用 invoke 就比较恰当。但是，由于两者均翻译为“调用”不会对读者的理解造成太大的困扰，所以本书仍然采用约定俗成的方式来进行翻译，只是在必要的时候附加英文原文提醒你区分。——译注
@@ -44,20 +46,23 @@ CLR 事件模型以**委托**为基础。委托是调用回调方法的一种类
 
 事件引发时，引发事件的对象可能希望向接收事件通知的对象传递一些附加信息。这些附加信息需要封装到它自己的类中，该类通常包含一组私有字段，以及一些用于公开这些字段的只读公共属性。根据约定，这种类应该从 **System.EventArgs** 派生，而且类名以 **EventArgs** 结束。本例将该类命名为 **NewMailEventArgs** 类，它的各个字段分别标识了发件人（**m_from**）、收件人（**m_to**）和主题（**m_subject**）。
 
-```csharp
-// 第一步：定义一个类型来容纳所有需要发送给事件通知接收者的附加信息
-internal class NewMailEventArgs : EventArgs
-{
-    private readonly String m_from, m_to, m_subject;
+```powershell
+# 第一步：定义一个类型来容纳所有需要发送给事件通知接收者的附加信息
+class NewMailEventArgs : System.EventArgs {
+    hidden [string] $m_from
+    hidden [string] $m_to
+    hidden [string] $m_subject
 
-    public NewMailEventArgs(String from, String to, String subject)
-    {
-        m_from = from; m_to = to; m_subject = subject;
+    NewMailEventArgs([string]$from, [string]$to, [string]$subject) {
+        $this.m_from = $from
+        $this.m_to = $to
+        $this.m_subject = $subject
     }
 
-    public String From { get { return m_from; } }
-    public String To { get { return m_to; } }
-    public String Subject { get { return m_subject; } }
+    # PowerShell 类没有自定义 get 访问器，用只读方法代替属性
+    [string] GetFrom()    { return $this.m_from }
+    [string] GetTo()      { return $this.m_to }
+    [string] GetSubject() { return $this.m_subject }
 }
 ```
 
@@ -71,11 +76,17 @@ public class EventArgs {
 }
 ```
 
+> 注：这是 .NET Framework 中 `System.EventArgs` 的源码。PowerShell 直接使用 `[System.EventArgs]::Empty` 或 `[System.EventArgs]::new()`，无需自己定义该基类。
+
 可以看出，该类的实现非常简单，就是一个让其他类型继承的基类型。许多事件都没有附加信息需要传递。例如，当一个 **Button** 向已经登记的接收者通知自己被单击时，调用回调方法就可以了，定义不需要传递附加数据的事件时，可直接使用 **EventArgs.Empty**，不用构造新的 **EventArgs** 对象。
+
+> 注：PowerShell 中事件附加信息通过 `PSEventArgs` 传给处理程序：`Register-ObjectEvent` 的 `-Action` 块内可使用自动变量 `$Event`（原始事件参数）、`$EventArgs`、`$Sender` 和 `$EventSubscriber`，通常不需要自己派生 `EventArgs` 子类。
 
 #### 11.1.2　第二步：定义事件成员
 
 事件成员使用 C# 关键字 **event** 定义。每个事件成员都要指定以下内容：可访问性标识符（几乎肯定是 **public**，这样其他代码才能访问该事件成员）；委托类型，指出要调用的方法的原型；以及名称（可以是任何有效的标识符）。以下是我们的 **MailManager** 类中的事件成员：
+
+> 注：PowerShell 类不支持 `event` 成员，也没有 `add`/`remove` 访问器语法。类与外部脚本之间的通知可用 `[Action]`、`[scriptblock]` 类型的属性并手工调用；订阅真正的 .NET 事件仍用 `Register-ObjectEvent`。
 
 ```csharp
 internal class MailManager
@@ -92,18 +103,22 @@ internal class MailManager
 public delegate void EventHandler<TEventArgs>(Object sender, TEventArgs e);
 ```
 
+> 注：PowerShell 直接使用现成的泛型委托类型（如 `[System.EventHandler[NewMailEventArgs]]`），不需要声明委托。
+
 所以方法原型必须具有以下形式：
 
-```csharp
-void MethodName(Object sender, NewMailEventArgs e);
+```powershell
+# 事件处理程序（scriptblock）的参数形式
+{ param($sender, $e) ... }
 ```
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_240_0.png)
 
 **注意** 许多人奇怪事件模式为什么要求 `sender` 参数是 `Object` 类型。毕竟，只有 `MailManager` 才会引发传递了 `NewMailEventArgs` 对象的事件，所以回调方法更合适的原型似乎是下面这个：
 
-```csharp
-void MethodName(MailManager sender, NewMailEventArgs e);
+```powershell
+# 若把 sender 声明为更强的类型（实际事件仍按 object 传递 sender）
+{ param([MailManager]$sender, $e) ... }
 ```
 
 要求 `sender` 是 `Object` 主要是因为继承。例如，假定 `MailManager` 成为 `SmtpMailManager` 的基类，那么回调方法的 `sender` 参数应该是 `SmtpMailManager` 类型而不是 `MailManager` 类型。但这不可能发生，因为 `SmtpMailManager` 继承了 `NewMail` 事件。所以，如果代码需要由 `SmtpMailManager` 引发事件，还是要将 `sender` 实参转型为 `SmtpMailManager`。反正都要进行类型转换，这和将 `sender` 定为 `Object` 类型没什么两样。
@@ -117,6 +132,8 @@ void MethodName(MailManager sender, NewMailEventArgs e);
 #### 11.1.3　第三步：定义负责引发事件的方法来通知事件的登记对象
 
 按照约定，类要定义一个受保护的虚方法。引发事件时，类及其派生类中的代码会调用该方法。方法只获取一个参数，即一个 `NewMailEventArgs` 对象，其中包含了传给接收通知的对象的信息。方法的默认实现只是检查一下是否有对象登记了对事件的关注。如果有，就引发事件来通知事件的登记对象。该方法在 `MailManager` 类中看起来像下面这样：
+
+> 注：PowerShell 类没有 `protected`/`virtual`，无法按本节的“受保护虚引发方法”模式实现。替代做法是：在类中定义公开的 `Raise<事件名>()` 方法，或把回调保存为 `[Action]`/`[scriptblock]` 类型的属性再显式调用。
 
 ```csharp
 internal class MailManager {
@@ -173,6 +190,8 @@ protected virtual void OnNewMail(NewMailEventArgs e) {
 
 还要注意，考虑到线程竞态条件①，方法有可能在从事件的委托链中移除之后得到调用。
 
+> 注：`Volatile.Read` 与委托链竞态属于 C# 编译器生成代码的细节。PowerShell 的 `Register-ObjectEvent -Action` 处理程序由引擎在事件队列中异步执行，通常不在引发事件的同一线程上；处理程序内不要假设共享变量的原子性，需要时用 `[System.Threading.Interlocked]` 或锁对象。
+
 为方便起见，可定义扩展方法（参见第八章“方法”）来封装这个线程安全逻辑。如下所示：
 
 ```csharp
@@ -188,6 +207,8 @@ public static class EventArgExtensions {
     }
 }
 ```
+
+> 注：PowerShell 没有扩展方法，也没有泛型方法；无法等价定义 `this TEventArgs` 扩展。若要封装引发逻辑，可写成普通函数/脚本块，显式传入委托列表。
 
 现在可以像下面这样重写 **OnNewMail** 方法：
 
@@ -285,6 +306,8 @@ C#编译器生成的第三个构造是一个方法，允许对象注销对事件
 
 除了生成上述 3 个构造，编译器还会在托管程序集的元数据中生成一个事件定义记录项。这个记录项包含了一些标志(flag)和基础委托类型(underlying delegate type)，还引用了 **add** 和 **remove** 访问器方法。这些信息的作用很简单，就是建立“事件”的抽象概念和它的访问器方法之间的联系。编译器和其它工具可利用这些元数据信息，并可通过 **System.Reflection.EventInfo** 类获取这些信息。但是，**CLR** 本身并不使用这些元数据信息，它在运行时只需要访问器方法。
 
+> 注：PowerShell 类没有 `event` 语法，因此也不会生成 `add_Xxx`/`remove_Xxx` 方法和私有委托字段。`Register-ObjectEvent` 的订阅记录由 PowerShell 引擎（而非目标类型）维护，注销时用 `Unregister-Event`。
+
 ### 11.3 设计侦听事件的类型
 
 最难的部分已经完成了，接下来是一些较为简单的事情。本节将演示如何定义一个类型来使用另一个类型提供的事件。先来看看 **Fax** 类型的代码：
@@ -329,6 +352,8 @@ internal sealed class Fax {
 mm.NewMail += FaxMsg;
 ```
 
+> 注：PowerShell 不支持用 `+=` 订阅事件（脚本中 `$mm.NewMail += ...` 不会登记处理程序）。惯用法是 `$sub = Register-ObjectEvent -InputObject $mm -EventName NewMail -Action { ... }`；注销用 `Unregister-Event -SubscriptionId $sub.Id`。
+
 C#编译器内建了对事件的支持，会将+=操作符翻译成以下代码来添加对象对事件的关注：
 
 ```csharp
@@ -345,6 +370,8 @@ C#编译器生成的代码构造一个 **EventHandler<NewMailEventArgs>** 委托
 
 对象不再希望接收事件通知时，应注销对事件的关注。例如，如果不再希望将电子邮件转发到一台传真机，**Fax** 对象就应该注销它对 **NewMail** 事件的关注。对象只要向事件登记了它的一个方法，便不能被垃圾回收。所以，如果你的类型要实现 **IDisposable** 的 **Dispose** 方法，就应该在实现中注销所有事件的关注。**IDisposable** 的详情参见第二十一章“托管堆和垃圾回收”。
 
+> 注：PowerShell 中对应的是 `Unregister-Event`——即使 `$sub` 变量离开作用域，未注销的订阅仍会留在会话的事件队列中（长时间运行的脚本会积累）。脚本结束时可用 `Get-EventSubscriber | Unregister-Event` 统一清理。
+
 **Fax** 的 **Unregister** 方法示范了如何注销对事件的关注。该方法和 **Fax** 构造器中的代码十分相似。唯一区别是使用 `-=` 而不是 `+=`。C#编译器看到代码使用 `-=` 操作符向事件注销委托时，会生成对事件的 `remove` 方法的调用：
 
 ```csharp
@@ -360,6 +387,8 @@ mm.remove_NewMail(new EventHandler<NewMailEventArgs>(FaxMsg));
 **System.Windows.Forms.Control** 类型定义了大约 70 个事件。假如 Control 类型在实现事件时，允许编译器隐式生成 `add` 和 `remove` 访问器方法以及委托字段，那么每个 Control 对象仅为事件就要准备 70 个委托字段！由于大多数程序员只关心少数几个事件，所以每个从 Control 派生类型创建的对象都要浪费大量内存。顺便说一下，ASP.NET 的 **System.Web.UI.Control** 类型和 WPF 的 **System.Windows.UIElement** 类型也提供了大多数程序员都用不上的大量事件。
 
 本节将讨论 C#编译器如何允许类的开发人员显式实现一个事件，使开发人员能够控制 `add` 和 `remove` 方法处理回调委托的方式。我要演示如何通过显式实现事件来高效率地实现提供了大量事件的类，但肯定还有其他情形也需要显式实现事件。
+
+> 注：PowerShell 类不能显式实现 `add`/`remove` 访问器，因此无法照搬本节的显式事件模式。若脚本类需要类似能力，可在类中以字典保存“事件键 → 委托/脚本块列表”，并公开 `AddHandler`、`RemoveHandler`、`Raise` 等普通方法手工分发。
 
 为了高效率存储事件委托，公开了事件的每个对象都要维护一个集合（通常是字典）。集合将某种形式的事件标识符作为键(key)，将委托列表作为值(value)。新对象构造时，这个集合是空白的。登记对一个事件的关注时，会在集合中查找事件的标识符。如果事件标识符已在其中，新委托就和这个事件的委托列表合并。如果事件标识符不在集合中，就添加事件标识符和委托。
 
@@ -428,6 +457,8 @@ public sealed class EventSet {
     }
 }
 ```
+
+> 注：PowerShell 没有显式事件（explicit event）的实现模式，也没有 `add`/`remove` 访问器。类内通知可改用普通回调集合（如 `[System.Collections.Generic.List[scriptblock]]`）并手工遍历调用；本例保留，用于说明 C# 编译器不支持该模式的内部实现方式。
 
 接着定义一个类来使用 **EventSet** 类。在这个类中，一个字段引用了一个 **EventSet** 对象，而且这个类的每个事件都是显式实现的，使每个事件的 **add** 方法都将指定的回调委托存储到 **EventSet** 对象中，而且每个事件的 **remove** 方法都删除指定的回调委托（如果找得到的话）。
 

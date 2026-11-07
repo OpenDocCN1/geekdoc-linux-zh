@@ -15,37 +15,32 @@
 
 设计方法的参数时，可为部分或全部参数分配默认值。然后，调用这些方法的代码可以选择不提供部分实参，使用其默认值。此外，调用方法时可通过指定参数名称来传递实参。以下代码演示了可选参数和命名参数的用法：
 
-```csharp
-using System;
-
-public static class Program {
-    private static Int32 s_n = 0;
-
-    private static void M(Int32 x = 9, String s = "A",
-        DateTime dt = default(DateTime), Guid guid = new Guid()) {
-
-        Console.WriteLine("x={0}, s={1}, dt={2}, guid={3}", x, s, dt, guid);
-    }
-
-    public static void Main() {
-        // 1. 等同于 M(9, "A", default(DateTime), new Guid());
-        M();
-
-        // 2. 等同于 M(8, "x", default(DateTime), new Guid());
-        M(8, "x");
-
-        // 3. 等同于 M(5, "A", DateTime.Now, Guid.NewGuid());
-        M(5, guid: Guid.NewGuid(), dt: DateTime.Now);
-
-        // 4. 等同于 M(0, "1", default(DateTime), new Guid());
-        M(s_n++, s_n++.ToString());
-
-        // 5. 等同于以下两行代码：
-        // String t1 = "2"; Int32 t2 = 3;
-        // M(t2, t1, default(DateTime), new Guid());
-        M(s: (s_n++).ToString(), x: s_n++);
-    }
+```powershell
+function M {
+    param(
+        [int]$x = 9,
+        [string]$s = "A",
+        [datetime]$dt = [datetime]::MinValue,
+        [guid]$guid = [guid]::Empty
+    )
+    "x=$x, s=$s, dt=$dt, guid=$guid"
 }
+
+# 1. 全部使用默认值
+M
+
+# 2. 只提供前两个实参，其余使用默认值
+M 8 "x"
+
+# 3. 用命名参数跳过中间的 dt
+M 5 -guid ([guid]::NewGuid()) -dt ([datetime]::Now)
+
+# 4. 位置实参按书写顺序求值
+$script:n = 0
+M ($script:n++) ($script:n++.ToString())
+
+# 5. 位置实参与命名实参可以混用
+M -s (($script:n++).ToString()) -x ($script:n++)
 ```
 
 运行程序得到以下输出：
@@ -59,6 +54,8 @@ x=3, s=2, dt=1/1/0001 12:00:00 AM, guid=00000000-0000-0000-0000-000000000000
 ```
 
 如你所见，如果调用时省略了一个实参，C# 编译器会自动嵌入参数的默认值。对 M 的第 3 个和第 5 个调用使用了 C# 的命名参数功能。在这两个调用中，我为 x 显式传递了值，并指出要为名为 guid 和 dt 的参数传递实参。
+
+> 注：PowerShell 用 `param` 块声明参数并给出默认值，例如 `param([int]$x = 9, [string]$s = 'A')`；调用时按名称传参写作 `-x 5 -s 'B'`（参数名可用唯一前缀匹配，如 `-x`）。默认值在每次调用的参数绑定阶段求值，不存在 C# 那样把默认值“嵌入调用方代码”的版本控制问题。
 
 向方法传递实参时，编译器按从左到右的顺序对实参进行求值。在对 M 的第 4 个调用中，s_n 的当前值(0)传给 x，然后 s_n 递增。随后，s_n 的当前值(1)作为字符串传给 s，然后继续递增到 2。使用命名参数传递实参时，编译器仍然按从左到右的顺序对实参进行求值。在对 M 的第 5 个调用中，s_n 中的当前值(2)被转换成字符串，并保存到编译器创建的临时变量(t1)中。接着，s_n 递增到 3，这个值保存到编译器创建的另一个临时变量(t2)中。然后，s_n 继续递增到 4。最后在调用 M 时，向它传递的实参依次是 t2，t1，一个默认 DateTime 和一个新建的 Guid。
 
@@ -77,16 +74,18 @@ x=3, s=2, dt=1/1/0001 12:00:00 AM, guid=00000000-0000-0000-0000-000000000000
 
   ① call site 是发出调用的地方，可理解成调用了一个目标方法的表达式或代码行。——译注
 
-```csharp
-// 不要这样做:
-private static String MakePath(String filename = "Untitled") {
-    return String.Format(@"C:\{0}.txt", filename);
+```powershell
+# 不要这样做：调用方会嵌入旧默认值
+function MakePath {
+    param([string]$filename = "Untitled")
+    "C:\$filename.txt"
 }
 
-// 而要这样做:
-private static String MakePath(String filename = null) {
-    // 这里使用了空值合并操作符(??)：详情参见第十九章
-    return String.Format(@"C:\{0}.txt", filename ?? "Untitled");
+# 而要这样做：默认值 $null 作为哨兵
+function MakePath {
+    param([string]$filename = $null)
+    if ($null -eq $filename) { $filename = "Untitled" }
+    "C:\$filename.txt"
 }
 ```
 
@@ -99,14 +98,19 @@ private static String MakePath(String filename = null) {
 - C# 不允许省略逗号之间的实参，比如 `M(1, ,DateTime.Now)`。因为这会造成对可读性的影响，程序员将被迫去数逗号。对于有默认值的参数，如果想省略它的实参，以传参数名的方式传递实参即可。
 - 如果参数要求 `ref/out`，为了以传参数名的方式传递实参，请使用下面这样的语法：
 
-```csharp
-// 方法声明:
-private static void M(ref Int32 x) { ... }
+```powershell
+# 方法声明
+function M {
+    param([ref]$x)
+    # ...
+}
 
-// 方法调用:
-Int32 a = 5;
-M(x: ref a);
+# 方法调用
+$a = 5
+M -x ([ref]$a)
 ```
+
+> 注：PowerShell 的 `param` 块不要求默认值参数必须排在后面，任何位置的参数都可以有默认值；但按位置传参时仍按 `param` 中的顺序绑定。参数名可用唯一前缀匹配，`$PSBoundParameters` 可查看调用方实际显式传入的参数。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_204_0.png)
 
@@ -120,38 +124,36 @@ M(x: ref a);
 
 之后，一旦编译器发现某个方法调用缺失了部分实参，就可以确定省略的是可选的实参，并从元数据中提取默认值，将值自动嵌入调用中。
 
+> 注：PowerShell 函数不生成这类元数据特性。脚本函数/高级函数在运行时由 CommandParameterBinder 绑定实参：未提供的命名参数取 `param` 中的默认值（未设默认值则为类型的默认值或 `$null`），`Mandatory` 特性会强制调用方必须传入。
+
 ### 9.2　隐式类型的局部变量
 
 C# 能根据初始化表达式的类型推断方法中的局部变量的类型，如下所示：
 
-```csharp
-private static void ImplicitlyTypedLocalVariables() {
-    var name = "Jeff";
-    ShowVariableType(name);       // 显示：System.String
+```powershell
+# PowerShell 变量本身没有静态类型，赋值即“推断”；用 GetType() 查看运行时类型
+function ImplicitlyTypedLocalVariables {
+    $name = "Jeff"
+    $name.GetType().FullName              # System.String
 
-    // var n = null;               // 错误，不能将 null 赋给隐式类型的局部变量
-    var x = (String)null;          // 可以这样写，但意义不大
-    ShowVariableType(x);           // 显示：System.String
+    # $null 本身没有类型；显式转型后类型来自目标类型
+    $x = [string]$null
+    $x.GetType().FullName                 # System.String
 
-    var numbers = new Int32[] { 1, 2, 3, 4 };
-    ShowVariableType(numbers);     // 显示：System.Int32[]
+    $numbers = [int[]](1, 2, 3, 4)
+    $numbers.GetType().FullName           # System.Int32[]
 
-    // 复杂类型能少打一些字
-    var collection = new Dictionary<String, Single>() { { "Grant", 4.0f } };
+    $collection = [System.Collections.Generic.Dictionary[string, single]]::new()
+    $collection.Add("Grant", 4.0)
+    $collection.GetType().FullName
 
-    // 显示：System.Collections.Generic.Dictionary`2[System.String,System.Single]
-    ShowVariableType(collection);
-
-    foreach (var item in collection) {
-        // 显示：System.Collections.Generic.KeyValuePair`2[System.String,System.Single]
-        ShowVariableType(item);
+    foreach ($item in $collection.GetEnumerator()) {
+        $item.GetType().FullName          # System.Collections.Generic.KeyValuePair`2[...]
     }
 }
-
-private static void ShowVariableType<T>(T t) {
-    Console.WriteLine(typeof(T));
-}
 ```
+
+> 注：PowerShell 没有 `var` 关键字和泛型方法；变量在运行时才确定类型，上述类型名通过 `GetType()` 取得，与 C# 编译器的静态推断不是同一机制。
 
 `ImplicitlyTypedLocalVariables` 方法中的第一行代码使用 C# 的 `var` 关键字引入了一个新的局部变量。为了确定 `name` 变量的类型，编译器要检查赋值操作符(=)右侧的表达式的类型。由于 "Jeff" 是字符串，所以编译器推断 `name` 的类型是 `String`。为了证明编译器正确推断出类型，我写了 `ShowVariableType` 方法。这个泛型方法推断它的实参的类型并在控制台上显示。为方便阅读，我在 `ImplicitlyTypedLocalVariables` 方法内部以注释形式列出了每次调用 `ShowVariableType` 方法的显示结果。
 
@@ -162,6 +164,8 @@ private static void ShowVariableType<T>(T t) {
 在 `foreach` 循环中，我用 `var` 让编译器自动推断集合中的元素的类型。这证明了 `var` 能很好地用于 `foreach`、`using` 和 `for` 语句。还可在试验代码时利用它。例如，可以用方法的返回值初始化隐式类型的局部变量。开发方法时可以灵活更改返回类型。编译器能察觉到返回类型的变化，并自动更改变量的类型！当然，如果使用变量的代码没有相应地进行修改，还是像使用旧类型那样使用它，就可能无法编译。
 
 在 Microsoft Visual Studio 中，鼠标放到 `var` 上将显示一条“工具提示”，指出编译器根据表达式推断出来的类型。在方法中使用匿名类型时必须用到 C# 的隐式类型局部变量，详情参见第十章“属性”。
+
+> 注：PowerShell 变量没有显式类型声明，也不存在 `var` 关键字和“编译期类型推断”：`$name = "Jeff"` 的运行时类型是 `System.String`，可用 `$name.GetType()` 查看；后续给变量赋其他类型的值，变量的运行时类型会随之改变。`Set-StrictMode -Version Latest` 可减少由未定义/未初始化变量引起的意外。
 
 不能用 `var` 声明方法的参数类型。原因显而易见，因为编译器必须根据在 `call site` 传递的实参来推断参数类型，但 `call site` 可能一个都没有，也可能有好多个①。除此之外，不能用 `var` 声明类型中的字段。C# 的这个限制是出于多方面的考虑。一个原因是字段可以被多个方法访问，而 C# 团队认为这个协定(变量的类型)应该显式陈述。另一个原因是一旦允许，匿名类型(第十章)就会泄露到方法的外部。
 
@@ -177,22 +181,21 @@ CLR 默认所有方法参数都传值。传递引用类型的对象时，对象�
 
 CLR 允许以传引用而非传值的方式传递参数。C# 用关键字 out 或 ref 支持这个功能。两个关键字都告诉 C# 编译器生成元数据来指明该参数是传引用的。编译器将生成代码来传递参数的地址，而非传递参数本身。
 
+> 注：PowerShell 通过 `[ref]` 实现按引用传递：函数参数写作 `param([ref]$v)`，调用时写 `Foo ([ref]$x)`（注意括号），函数内通过 `$v.Value` 读取/写入。PowerShell 不区分 `out`/`ref`，也没有“`out` 参数必须在返回前赋值”的编译检查；需要回归多个结果时，更常见的做法是返回数组/对象或使用 `[ref]` 辅助。
+
 CLR 不区分 out 和 ref，意味着无论用哪个关键字，都会生成相同的 IL 代码。另外，元数据也几乎完全一致，只有一个 bit 除外，它用于记录声明方法时指定的是 out 还是 ref。但 C# 编译器是将这两个关键字区别对待的，而且这个区别决定了由哪个方法负责初始化所引用的对象。如果方法的参数用 out 来标记，表明不指望调用者在调用方法之前初始化好了对象。被调用的方法不能读取参数的值，而且在返回前必须向这个值写入。相反，如果方法的参数用 ref 来标记，调用者就必须在调用该方法前初始化参数的值，被调用的方法可以读取值以及/或者向值写入。
 
 对于 out 和 ref，引用类型和值类型的行为迥然有异。先看一看为值类型使用 out 和 ref：
 
-```csharp
-public sealed class Program {
-    public static void Main() {
-        Int32 x;                 // x 没有初始化
-        GetVal(out x);           // x 不必初始化
-        Console.WriteLine(x);    // 显示 "10"
-    }
-
-    private static void GetVal(out Int32 v) {
-        v = 10; // 该方法必须初始化 v
-    }
+```powershell
+function GetVal {
+    param([ref]$v)
+    $v.Value = 10          # 方法内必须赋值
 }
+
+$x = $null                 # 不需要预先初始化
+GetVal ([ref]$x)
+$x                         # 10
 ```
 
 
@@ -201,18 +204,15 @@ public sealed class Program {
 
 下例用 ref 代替了 out:
 
-```csharp
-public sealed class Program {
-    public static void Main(){
-        Int32 x = 5;              // x 已经初始化
-        AddVal(ref x);            // x 必须初始化
-        Console.WriteLine(x);     // 显示"15"
-    }
-
-    private static void AddVal(ref Int32 v) {
-        v += 10;                  // 该方法可使用 v 的已初始化的值
-    }
+```powershell
+function AddVal {
+    param([ref]$v)
+    $v.Value += 10             # 可以读取并使用已有值
 }
+
+$x = 5                         # 调用前必须初始化
+AddVal ([ref]$x)
+$x                             # 15
 ```
 
 在上述代码中，x 也在 Main 的栈帧中声明，并初始化为 5。然后，x 的地址传给 AddVal。AddVal 的 v 是一个指针，指向 Main 栈帧中的 Int32 值。在 AddVal 内部，v 指向的那个 Int32 要求必须是已经初始化的。因此，AddVal 可在任何表达式中使用该初始值。AddVal 还可更改这个值，新值会“返回”调用者。在本例中，AddVal 将 10 加到初始值上。AddVal 返回时，Main 的 x 将包含 15，这个值会在控制台上显示出来。
@@ -237,6 +237,8 @@ public sealed class Program {
 }
 ```
 
+> 注：PowerShell 没有 `out`/`ref` 的编译期校验，也没有 CS0165；未初始化的变量默认为 `$null`（可用 `Set-StrictMode -Version Latest` 让引用未定义变量时报错）。因此这段“编译错误”示例在 PowerShell 中不会出现，保留原代码以说明 C# 的初始化规则。
+
 ① 栈帧(stack frame)代表当前线程的调用栈中的一个方法调用。在执行线程的过程中进行的每个方法调用都会在调用栈中创建并压入一个 StackFrame。——译注
 
 > **重要提示** 经常有人问我，为什么 C# 要求必须在调用方法时指定 `out` 或 `ref`？毕竟，编译器知道被调用的方法需要的是 `out` 还是 `ref`，所以应该能正确编译代码。事实上，C# 编译器确实能自动采取正确的操作。但 C# 语言的设计者认为调用者应显式表明意图。只有这样，在 call site(调用位置)那里，才能清楚地知道被调用的方法是否需要对传递的变量值进行更改。
@@ -253,6 +255,8 @@ public sealed class Point {
 ```csharp
 static void Add(out Point p) { ... }
 ```
+
+> 注：PowerShell 函数不支持重载，`[ref]` 也不参与签名区分，后定义的函数会覆盖同名函数；本例保留，用于说明 CLR 元数据中 `ref`/`out` 的签名形式完全相同的规则。
 
 试图在 `Point` 类型中添加这个 `Add` 方法，C# 编译器会显示以下消息：
 
@@ -325,13 +329,16 @@ public sealed class Program {
 }
 ```
 
+> 注：PowerShell 的对应写法是用 `[ref]` 传入变量，并在函数内通过 `$fs.Value` 读写；但脚本里通常改用 `while` 循环加返回值，而不是这种按引用推进的写法。此示例保留，用于说明 `out`/`ref` 传递引用类型时的指针语义。
+
 下例演示了如何用 **ref** 关键字实现一个用于交换两个引用类型的方法：
 
-```csharp
-public static void Swap(ref Object a, ref Object b) {
-    Object t = b;
-    b = a;
-    a = t;
+```powershell
+function Swap {
+    param([ref]$a, [ref]$b)
+    $t = $b.Value
+    $b.Value = $a.Value
+    $a.Value = $t
 }
 ```
 
@@ -353,17 +360,17 @@ public static void Swap<T>(ref T a, ref T b) {
 }
 ```
 
+> 注：PowerShell 没有泛型函数；前面的非泛型 `Swap` 因参数类型是动态的，已经可以交换任意类型的两个引用，无需 `Swap<T>` 版本。
+
 重写了 **Swap** 后，以下代码(和以前展示过的完全相同)就能通过编译了，而且能完美运行：
 
-```csharp
-public static void SomeMethod() {
-    String s1="Jeffrey";
-    String s2="Richter";
+```powershell
+$s1 = "Jeffrey"
+$s2 = "Richter"
 
-    Swap(ref s1, ref s2);
-    Console.WriteLine(s1); // 显示"Richter"
-    Console.WriteLine(s2); // 显示"Jeffrey"
-}
+Swap ([ref]$s1) ([ref]$s2)
+$s1   # Richter
+$s2   # Jeffrey
 ```
 
 要查看用泛型来解决这个问题的其他例子，请参见 **System.Threading** 命名空间中的 **Interlocked** 类的 **CompareExchange** 和 **Exchange** 方法。
@@ -374,28 +381,29 @@ public static void SomeMethod() {
 
 为了接受可变数量的参数，方法要像下面这样声明：
 
-```csharp
-static Int32 Add(params Int32[] values) {
-    // 注意: 如果愿意，可将 values 数组传给其他方法
+```powershell
+function Add {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [int[]]$values
+    )
 
-    Int32 sum = 0;
-    if (values != null) {
-        for (Int32 x = 0; x < values.Length; x++)
-            sum += values[x];
-    }
-    return sum;
+    $sum = 0
+    foreach ($x in $values) { $sum += $x }
+    $sum
 }
 ```
 
 除了 **params** 关键字，这个方法的一切对你来说都应该是非常熟悉的。**params** 只能应用于方法签名中的最后一个参数。暂时忽略 **params** 关键字，可以明显地看出 **Add** 方法接受一个 **Int32** 类型的数组，然后遍历数组，将其中的 **Int32** 值加到一起，结果 **sum** 返回给调用者。
 
+> 注：PowerShell 没有 `params` 关键字。函数可用自动变量 `$args` 接收所有未绑定的剩余实参（`$args` 是 `[object[]]`），或在高级函数中给最后一个参数加 `[Parameter(ValueFromRemainingArguments = $true)]`；需要处理多条管道输入时，用 `process` 块逐个处理。
+
 显然，可以像下面这样调用该方法：
 
-```csharp
-public static void Main() {
-    // 显示 "15"
-    Console.WriteLine(Add(new Int32[] { 1, 2, 3, 4, 5 }));
-}
+```powershell
+# 显示 15
+Add @(1, 2, 3, 4, 5)
 ```
 
 数组能用任意数量的一组元素来初始化，再传给 **Add** 方法进行处理。尽管上述代码可以通过编译并能正确运行，但并不好看。我们当然希望能像下面这样调用 **Add** 方法：
@@ -421,20 +429,30 @@ public sealed class String : Object, ... {
 }
 ```
 
+> 注：这是 .NET 中 `System.String.Concat` 的重载签名清单，PowerShell 直接调用 `[string]::Concat(...)` 即可，重载解析由 CLR 完成；本例保留，用于说明“为常见情形提供非 params 重载”的设计。
+
 如你所见，`Concat` 方法定义了几个没有使用 `params` 关键字的重载版本。这是为了改善常规情形下的性能。使用了 `params` 关键字的重载则用于不太常见的情形；在这些情形下，性能有一定的损失。但幸运的是，这些情形本来就不常见。
 
 ### 9.5 参数和返回类型的设计规范
 
 声明方法的参数类型时，应尽量指定最弱的类型，宁愿要接口也不要基类。例如，如果要写方法来处理一组数据项，最好是使用接口(比如 `IEnumerable<T>`)声明参数，而不要用强数据类型(比如 `List<T>`)或者更强的接口类型(比如 `ICollection<T>` 或 `IList<T>`):
 
-```csharp
-// 好：方法使用弱参数类型
-public void ManipulateItems<T>(IEnumerable<T> collection) { ... }
+> 注：PowerShell 同样遵循“参数取弱类型、返回取强类型”的设计原则，但表达方式不同——在 `param` 中给参数写类型，如 `[System.IO.Stream]$s` 或 `[System.Collections.IEnumerable]$items`，并可用 `[Parameter(Mandatory = $true)]`、`[ValidateSet(...)]`、`[ValidateRange(...)]`、`[ValidateNotNullOrEmpty()]` 等特性声明约束。
+
+```powershell
+# 好：参数使用较弱的类型
+function Manipulate-Items {
+    param([System.Collections.IEnumerable]$collection)
+    # ...
+}
 ```
 
-```csharp
-// 不好：方法使用强参数类型
-public void ManipulateItems<T>(List<T> collection) { ... }
+```powershell
+# 不好：参数使用较强的类型
+function Manipulate-Items {
+    param([System.Collections.Generic.List[object]]$collection)
+    # ...
+}
 ```
 
 原因是调用第一个方法时可传递数组对象、`List<T>` 对象、`String` 对象或者其他对象——只要对象的类型实现了 `IEnumerable<T>` 接口。相反，第二个方法只允许传递 `List<T>` 对象，不接受数组或 `String` 对象。显然，第一个方法更好，它更灵活，适合更广泛的情形。
@@ -443,12 +461,18 @@ public void ManipulateItems<T>(List<T> collection) { ... }
 
 注意，这里的例子讨论的是集合，是用接口体系结构来设计的。讨论使用基类体系结构设计的类时，概念同样适用。例如，要实现对流中的字节进行处理的方法，可定义以下方法：
 
-```csharp
-// 好：方法使用弱参数类型
-public void ProcessBytes(Stream someStream) { ... }
+```powershell
+# 好：参数使用较弱的类型
+function Process-Bytes {
+    param([System.IO.Stream]$someStream)
+    # ...
+}
 
-// 不好：方法使用强参数类型
-public void ProcessBytes(FileStream fileStream) { ... }
+# 不好：参数使用较强的类型
+function Process-Bytes {
+    param([System.IO.FileStream]$fileStream)
+    # ...
+}
 ```
 
 第一个方法能处理任何流，包括 **FileStream**、**NetworkStream** 和 **MemoryStream** 等。第二个只能处理 **FileStream** 流，这限制了它的应用。
@@ -475,11 +499,15 @@ public IList<String> GetStringCollection() { ... }
 public List<String> GetStringCollection() { ... }
 ```
 
+> 注：PowerShell 函数不能声明静态返回类型，`[OutputType()]` 只用于文档和 IntelliSense，不做强制检查；因此“强返回类型/弱返回类型”的取舍在 PowerShell 中表现为文档约定与调用方的实际用法。
+
 在这个例子中，即使 **GetStringCollection** 方法在内部使用一个 **List<String>** 对象并返回它，但最好还是修改方法的原型，使它返回一个 **IList<String>**。将来，**GetStringCollection** 方法可更改它的内部集合来使用一个 **String[]**。与此同时，不需要修改调用者的源代码。事实上，调用者甚至不需要重新编译。注意，这个例子在较弱的类型中选择的是最强的那一个。例如，它没有使用最弱的 **IEnumerable<String>**，也没有使用较强的 **ICollection<String>**。
 
 ### 9.6 常量性
 
 有的语言（比如非托管 C++）允许将方法或参数声明为常量，从而禁止实例方法中的代码更改对象的任何字段，或者更改传给方法的任何对象。CLR 没有提供这个功能，许多程序员因此觉得很遗憾。既然 CLR 都不提供，面向它的任何编程语言（包括 C#）自然也无法提供。
+
+> 注：PowerShell 同样没有 `const` 参数/方法。脚本层可对变量使用 `Set-Variable -Option ReadOnly`（或 `-Option Constant`）阻止再次赋值，但这只约束变量绑定本身，不约束变量所引用对象的内部状态，也不是编译期保证。要获得不可变对象，应设计不暴露修改方法或返回副本的类型。
 
 ① IList 继承自 ICollection，ICollection 继承自 IEnumerable。作者的意思是说，在这三个比 List<String> 都弱的类型中，选择的是最强的 IList。——译注
 

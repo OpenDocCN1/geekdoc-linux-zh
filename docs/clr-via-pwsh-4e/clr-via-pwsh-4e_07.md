@@ -15,15 +15,16 @@
 
 > 注：在 PowerShell 中定义类时同样无须（也无法）显式写出基类——`class Employee { }` 就隐式派生自 `System.Object`；要指定基类则写 `class Employee : System.Object { }`。两者在 PowerShell 中语义一致。PowerShell 没有“结构”与“类”的区分，`[PSCustomObject]` 与普通 CLR 类型都遵循同样的派生规则。
 
-```csharp
-// 隐式派生自 Object
+```powershell
+# 以下两种写法二选一
+# 隐式派生自 System.Object
 class Employee {
-    ...
+    # ...
 }
 
-// 显式派生自 Object
+# 显式指定基类
 class Employee : System.Object {
-    ...
+    # ...
 }
 ```
 
@@ -78,61 +79,43 @@ CLR 最重要的特性之一就是类型安全。在运行时，CLR 总是知道
 
 > 注：PowerShell 的转型靠“类型转换”语法 `[Employee]$obj` 或 `-as` 运算符实现，没有 C# 那样基于继承关系的隐式/显式区分——任何转型都以 `[type]` 或 `-as` 写出。`[type]$x` 在目标类型不可转换时直接抛异常；`$x -as [type]` 失败时返回 `$null`，不抛异常。此外，PowerShell 的 `[type]` 还可能触发从字符串/数值的解析转换（如 `[int]"42"`），与 CLR 的引用类型转型不是一回事。
 
-```csharp
-// 该类型隐式派生自 System.Object
-internal class Employee {
-    ...
+```powershell
+# 该类型隐式派生自 System.Object
+class Employee {
+    # ...
 }
 
-public sealed class Program {
-    public static void Main() {
-        // 不需要转型，因为 new 返回一个 Employee 对象。
-        // 而 Object 是 Employee 的基类型
-        Object o = new Employee();
+# 不需要转型：new 已经返回 Employee 对象
+$o = [Employee]::new()
 
-        // 需要转型，因为 Employee 派生自 Object。
-        // 其他语言（比如 Visual Basic）也许不要求像
-        // 这样进行强制类型转换
-        Employee e = (Employee) o;
-    }
-}
+# PowerShell 中“转型”一律显式写出
+$e = [Employee]$o
 ```
 
 这个例子展示了你需要做什么，才能让编译器顺利编译这些代码。接着，让我们看看运行时发生的事情。在运行时，CLR 检查转型操作，确定是否转换为对象的实际类型或者它的任何基类型。例如，以下代码虽然能通过编译，但会在运行时抛出 `InvalidCastException` 异常：
 
-```csharp
-internal class Employee {
-    ...
+```powershell
+class Employee {
+    # ...
 }
-internal class Manager : Employee {
-    ...
+class Manager : Employee {
+    # ...
 }
 
-public sealed class Program {
-    public static void Main() {
-        // 构造一个 Manager 对象，把它传给 PromoteEmployee。
-        // Manager “属于” (IS-A) Employee，所以 PromoteEmployee 能成功运行
-        Manager m = new Manager();
-        PromoteEmployee(m);
-
-        // 构造一个 DateTime 对象，把它传给 PromoteEmployee。
-        // DateTime 不是从 Employee 派生的，所以 PromoteEmployee
-        // 抛出 System.InvalidCastException 异常
-        DateTime newYears = new DateTime(2010, 1, 1);
-        PromoteEmployee(newYears);
-    }
-
-    public static void PromoteEmployee(Object o) {
-        // 编译器在编译时无法准确地获知对象 o
-        // 引用的是什么类型，因此编译器允许代码
-        // 通过编译。但在运行时，CLR 知道了 o 引用
-        // 的是什么类型（在每次执行转型的时候），
-        // 所以它会核实对象的类型是不是 Employee 或者
-        // 从 Employee 派生的任何类型
-        Employee e = (Employee) o;
-        ...
-    }
+function PromoteEmployee([object]$o) {
+    # 运行时校验 $o 是否为 Employee 或其派生类型；
+    # 不符合时抛出转型错误
+    $e = [Employee]$o
+    # ...
 }
+
+# Manager “属于”（IS-A）Employee，调用成功
+$m = [Manager]::new()
+PromoteEmployee $m
+
+# DateTime 不是从 Employee 派生，调用时抛出错误
+$newYears = [datetime]::new(2010, 1, 1)
+PromoteEmployee $newYears
 ```
 
 **Main** 构造一个 **Manager** 对象并将其传给 **PromoteEmployee**。这些代码能成功编译并运行，因为 **Manager** 最终从 **Object** 派生，而 **PromoteEmployee** 期待的正是一个 **Object**。进入 **PromoteEmployee** 内部之后，CLR 核实对象 **o** 引用的就是一个 **Employee** 对象，或者是从 **Employee** 派生的一个类型的对象。由于 **Manager** 从 **Employee** 派生，所以 CLR 执行类型转换，允许 **PromoteEmployee** 继续执行。
@@ -151,10 +134,10 @@ public sealed class Program {
 
 > 注：PowerShell 没有 `is` 关键字，对应的是 `-is` 运算符：`$o -is [Employee]` 返回 `$true`/`$false`，同样不抛异常；`$null -is [Employee]` 返回 `$false`。PowerShell 另有 `-isnot`、`-as`（失败返回 `$null`）可用。
 
-```csharp
-Object o = new Object();
-Boolean b1 = (o is Object);      // b1 为 true.
-Boolean b2 = (o is Employee);    // b2 为 false.
+```powershell
+$o = [object]::new()
+$b1 = $o -is [object]       # $true
+$b2 = $o -is [Employee]     # $false
 ```
 
 如果对对象引用 null，is 操作符总是返回 false，因为没有可检查其类型的对象。
@@ -163,19 +146,19 @@ Boolean b2 = (o is Employee);    // b2 为 false.
 
 > 注：PowerShell 的惯用写法是 `if ($o -is [Employee]) { $e = $o }`。与 C# 的 `is`+强转组合不同，PowerShell 无需（也无法）写出 `(Employee)o` 这种显式转型——用 `-as` 一次完成可避免重复类型检查：`$e = $o -as [Employee]; if ($null -ne $e) { ... }`。
 
-```csharp
-if (o is Employee) {
-    Employee e = (Employee) o;
-    // 在 if 语句剩余的部分中使用 e
+```powershell
+if ($o -is [Employee]) {
+    $e = [Employee]$o
+    # 在 if 语句剩余的部分中使用 $e
 }
 ```
 
 在上述代码中，CLR 实际检查两次对象类型。**is** 操作符首先核实 **o** 是否兼容于 **Employee** 类型。如果是，在 **if** 语句内部转型时，CLR 再次核实 **o** 是否引用一个 **Employee**。CLR 的类型检查增强了安全性，但无疑会对性能造成一定影响。这是因为 CLR 首先必须判断变量 **(o)** 引用的对象的实际类型。然后，CLR 必须遍历继承层次结构，用每个基类型去核对指定的类型（**Employee**）。由于这是一个相当常用的编程模式，所以 C# 专门提供了 **as** 操作符，目的就是简化这种代码的写法，同时提升其性能。
 
-```csharp
-Employee e = o as Employee;
-if (e != null) {
-    // 在 if 语句中使用 e
+```powershell
+$e = $o -as [Employee]
+if ($null -ne $e) {
+    # 在 if 语句中使用 $e
 }
 ```
 
@@ -183,23 +166,22 @@ if (e != null) {
 
 **as** 操作符的工作方式与强制类型转换一样，只是它永远不抛出异常——相反，如果对象不能转型，结果就是 **null**。所以，正确做法是检查最终生成的引用是否为 **null**。企图直接使用最终生成的引用会抛出 **System.NullReferenceException** 异常。以下代码对此进行了演示：
 
-```csharp
-Object o = new Object();       // 新建 Object 对象
-Employee e = o as Employee;    // 将 o 转型为 Employee
-// 上述转型会失败，不抛出异常，但 e 被设为 null
-
-e.ToString(); // 访问 e 抛出 NullReferenceException 异常
+```powershell
+$o = [object]::new()          # 新建 Object 对象
+$e = $o -as [Employee]        # 转型失败时返回 $null
+# 访问 $null 的成员会产生运行时错误
+$e.ToString()
 ```
 
 为了确定自己理解了上述内容，请完成以下小测验。假定以下两个类定义确实存在：
 
-```csharp
-internal class B {        // 基类(Base class)
+```powershell
+class B { # 基类（Base class）
 }
 ```
 
-```csharp
-internal class D : B {    // 派生类(Derived class)
+```powershell
+class D : B { # 派生类（Derived class）
 }
 ```
 
@@ -236,29 +218,24 @@ internal class D : B {    // 派生类(Derived class)
 
 命名空间对相关的类型进行逻辑分组，开发人员可通过命名空间方便地定位类型。例如，**System.Text** 命名空间定义了执行字符串处理的类型，而 **System.IO** 命名空间定义了执行 I/O 操作的类型。以下代码构造一个 **System.IO.FileStream** 对象和一个 **System.Text.StringBuilder** 对象：
 
-```csharp
-public sealed class Program {
-    public static void Main() {
-        System.IO.FileStream fs = new System.IO.FileStream(...);
-        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-    }
-}
+```powershell
+using namespace System.IO
+using namespace System.Text
+
+$fs = [FileStream]::new(...)
+$sb = [StringBuilder]::new()
 ```
 
 像这样写代码很繁琐，应该有一种简单方式直接引用 **FileStream** 和 **StringBuilder** 类型，减少打字量。幸好，许多编译器都提供了某种机制让程序员少打一些字。C# 编译器通过 **using** 指令提供这个机制。以下代码和前面的例子完全一致：
 
 > 注：PowerShell 中减少打字量的机制是 `using namespace System.IO` 与 `using namespace System.Text`（位于脚本开头），之后即可写 `[FileStream]`、`[StringBuilder]`。注意 PowerShell 的类型字面量必须带方括号，`[FileStream]` 与 C# 的 `FileStream` 只是写法不同，语义相同。
 
-```csharp
-using System.IO;      // 尝试附加“System.IO.”前缀
-using System.Text;    // 尝试附加“System.Text.”前缀
+```powershell
+using namespace System.IO
+using namespace System.Text
 
-public sealed class Program {
-    public static void Main() {
-        FileStream fs = new FileStream(...);
-        StringBuilder sb = new StringBuilder();
-    }
-}
+$fs = [FileStream]::new(...)
+$sb = [StringBuilder]::new()
 ```
 
 对于编译器，命名空间的作用就是为类型名称附加以句点分隔的符号，使名称变得更长，更可能具有唯一性。所以在本例中，编译器将对 **FileStream** 的引用解析为 **System.IO.FileStream**，将对 **StringBuilder** 的引用解析为 **System.Text.StringBuilder**。
@@ -275,46 +252,33 @@ C# 的 **using** 指令是可选的，如果愿意，完全可以输入类型的
 
 编译器对待命名空间的方式存在潜在问题：可能两个（或更多）类型在不同命名空间中同名。Microsoft 强烈建议开发人员为类型定义具有唯一性的名称。但有时并非不为也，是不能也。“运行时”鼓励组件重用。例如，应用程序可能同时利用了 Microsoft 和 Wintellect 创建的组件。假定两家公司都提供名为 **Widget** 的类型，两个类型做的事情完全不同。由于干涉不了类型命名，所以引用时用完全限定名称区分它们。用 **Microsoft.Widget** 引用 Microsoft 的 Widget，用 **Wintellect.Widget** 引用 Wintellect 的 Widget。以下代码对 Widget 的引用会产生歧义，C# 编译器报告错误消息：**CS0104：“Widget”是“Microsoft.Widget”和“Wintellect.Widget”之间的不明确的引用。**
 
-```csharp
-using Microsoft;       // 尝试附加“Microsoft.”前缀
-using Wintellect;      // 尝试附加“Wintellect.”前缀
+```powershell
+using namespace Microsoft
+using namespace Wintellect
 
-public sealed class Program {
-    public static void Main() {
-        Widget w = new Widget();  // 不明确的引用
-    }
-}
+# 同名类型会导致解析歧义；使用完全限定名更稳妥
+$w = [Microsoft.Widget]::new()
 ```
 
 为了消除歧义，必须像下面这样显式告诉编译器要创建哪个 Widget。
 
 > 注：PowerShell 的 `using namespace` 语句可以简化类型引用（`using namespace Microsoft` 后写 `[Widget]`），但同样存在同名类型冲突；解决方式是用完全限定类型名 `[Microsoft.Widget]` 或 `[Wintellect.Widget]`。PowerShell 的 `using namespace` 只接受命名空间，且必须位于脚本/脚本块的起始位置。
 
-```csharp
-using Microsoft;        // 尝试附加“Microsoft.”前缀
-using Wintellect;       // 尝试附加“Wintellect.”前缀
+```powershell
+using namespace Microsoft
+using namespace Wintellect
 
-public sealed class Program {
-    public static void Main() {
-        Wintellect.Widget w = new Wintellect.Widget(); // 无歧义
-    }
-}
+$w = [Wintellect.Widget]::new()  # 用完全限定类型名消除歧义
 ```
 
 C# using 指令的另一种形式允许为类型或命名空间创建别名。如果只想使用命名空间中的少量类型，不想它的所有类型都跑出来“污染”全局命名空间，别名就显得十分方便。以下代码演示了如何用另一个办法解决前例的歧义性问题：
 
-```csharp
-using Microsoft;             // 尝试附加“Microsoft.”前缀
-using Wintellect;            // 尝试附加“Wintellect.”前缀
+```powershell
+using namespace Microsoft
+using namespace Wintellect
 
-// 将 WintellectWidget 符号定义成 Wintellect.Widget 的别名
-using WintellectWidget = Wintellect.Widget;
-
-public sealed class Program {
-    public static void Main() {
-        WintellectWidget w = new WintellectWidget(); // 现在没错误了
-    }
-}
+# PowerShell 没有 using 类型别名语法，直接使用完全限定名
+$w = [Wintellect.Widget]::new()
 ```
 
 这些消除类型歧义性的方法都十分有用，但有时还需要进一步。假定 Australian Boomerang Company(澳大利亚回旋镖公司，ABC)和 Alaskan Boat Corporation(阿拉斯加船业公司，ABC)都创建了名为 BuyProduct 的类型。该类型随同两家公司的程序集发布。两家公司都创建了名为 ABC 的命名空间，其中都包含名为 BuyProduct 的类型。任何人要开发应用程序来同时购买这两家公司出售的回旋镖和船都会遇到麻烦——除非编程语言提供了某种方式，能通过编程来区分程序集而非仅仅区分命名空间。幸好，C# 编译器提供了名为外部别名(extern alias)的功能，它解决了这个虽然极其罕见但仍有可能发生的问题。外部别名还允许从同一个程序集的两个(或更多)不同的版本中访问同一个类型。欲知外部别名的详情，请参见 C# 语言规范。
@@ -428,6 +392,8 @@ void M3() {
     e.GetProgressReport();
 }
 ```
+
+> 注：本例用 C# 伪代码演示 CLR 的栈帧、类型对象和方法表。PowerShell 函数同样运行在 CLR 上并会被编译执行，但脚本层面没有显式的局部变量槽，也看不到方法“序幕”的初始化过程；保留原代码是为配合图 4-6～4-10 理解 CLR 内部机制。
 
 图 4-7　Employee 和 Manager 类型对象在 M3 被调用时创建
 

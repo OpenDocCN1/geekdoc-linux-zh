@@ -153,10 +153,12 @@ namespace System.IO { // 在 System.Runtime.WindowsRuntime.dll 中定义
 
 下列代码使用扩展方法将一个 WinRT IInputStream “转型”为 .NET Framework Stream 对象。
 
-```csharp
-XElement FromWinRTStreamToXElement(IInputStream winRTStream) {
-    Stream netStream = winRTStream.AsStreamForRead();
-    return XElement.Load(netStream);
+```powershell
+function FromWinRTStreamToXElement([Object] $winRTStream) {
+    # 扩展方法 AsStreamForRead 在 PowerShell 中不会自动应用，
+    # 需以静态形式显式调用（仅 Windows PowerShell 5.1 可用）
+    $netStream = [System.IO.WindowsRuntimeStreamExtensions]::AsStreamForRead($winRTStream)
+    return [System.Xml.Linq.XElement]::Load($netStream)
 }
 ```
 

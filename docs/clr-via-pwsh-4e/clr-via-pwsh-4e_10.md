@@ -53,6 +53,8 @@ public sealed class Program {
 }
 ```
 
+> 注：这是编译为应用程序集后带 `Main` 入口的 C# 代码。PowerShell 脚本没有 `Main` 方法和程序集入口点，等效写法是直接引用常量/静态字段（如 `[SomeLibraryType]::MaxEntriesInList`）；「把常量值嵌入调用方 IL」的行为在脚本中也不存在。
+
 注意代码引用了在 **SomeLibraryType** 类中定义的 **MaxEntriesInList** 常量。编译器生成应用程序代码时，会注意到 **MaxEntriesInList** 是值为 **50** 的常量符号，所以会将 **Int32** 值 **50** 嵌入应用程序的 IL 代码，如下所示。事实上，在生成了应用程序集之后，运行时根本不会加载 DLL 程序集，可以把它从磁盘上删除。
 
 ```cil
@@ -178,6 +180,8 @@ public sealed class AnotherType {
 }
 ```
 
+> 注：PowerShell 类没有 `readonly`，字段保存的引用和引用指向的对象都可被修改。若要把数组当作“只读集合”，应约定不重新赋值，并用 `[System.Collections.ObjectModel.ReadOnlyCollection[T]]` 之类包裹，而不是依赖 `readonly`。
+
 构造 **SomeType** 的对象时，它的 **m_x** 字段被初始化为 **5**。这是如何发生的呢？检查一下 **SomeType** 的构造器方法(也称作 **.ctor**)的 IL 代码就明白了，如下所示：
 
 ```cil
@@ -252,6 +256,8 @@ internal sealed class SomeType {
     }
 }
 ```
+
+> 注：PowerShell 类的构造器不能用 `: this()` 链接到另一个构造器，也不支持构造器重载。应把公共初始化逻辑放进一个私有方法（如 `Initialize()`），由唯一的构造器调用。
 
 ### 8.2 实例构造器和结构（值类型）
 
@@ -480,6 +486,8 @@ internal sealed class SomeType {
     }
 }
 ```
+
+> 注：PowerShell 类中，静态字段声明时的初始化同样由引擎并入类型构造器执行；若类中还显式写了 `static <ClassName>()`，两段代码都会执行，且字段初始化在前。与 C# 一样，最终只存在一个类型构造器。
 
 在这个例子中，C#编译器只生成一个类型构造器方法。它首先将 s_x 初始化为 5，再把它修改成 10。换言之，当 C#编译器为类型构造器生成 IL 代码时，它首先生成的是初始化静态字段所需的代码，然后才会添加你的类型构造器方法中显式包含的代码。
 
@@ -721,6 +729,8 @@ a();
 public sealed class ExtensionAttribute : Attribute {
 }
 ```
+
+> 注：`ExtensionAttribute` 是 C# 编译器写入元数据的标记，PowerShell 脚本没有 `this` 扩展方法语法，也不会生成该特性。脚本层的扩展能力见 8.6 节关于 `Add-Member`、`Update-TypeData` 的说明。
 
 除此之外，任何静态类只要包含至少一个扩展方法，它的元数据中也会应用这个特性。类似地，任何程序集只要包含了至少一个符合上述特点的静态类，它的元数据中也会应用这个特性。这样一来，如果代码调用了一个不存在的实例方法，编译器就能快速扫描引用的所有程序集，判断它们哪些包含了扩展方法。然后，在这些程序集中，可以只扫描包含了扩展方法的静态类。在每个这样的静态类中，可以只扫描扩展方法来查找匹配。利用这个技术，代码能以最快速度编译完毕。
 

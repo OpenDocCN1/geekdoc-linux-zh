@@ -347,6 +347,8 @@ public sealed class Program {
 }
 ```
 
+> 注：这是编译为 `Program.exe` 的 C# 入口代码，保留它是为了说明 CLR 加载程序集、查找 `Main` 的 `MethodDefToken` 的过程。PowerShell 脚本没有 `Main` 入口和对应的程序集入口元数据；构成本节讨论对象的是 C# 编译产物，故不转写。
+
 编译这些代码并生成程序集（假定名为 Program.exe）。运行应用程序，CLR 会加载并初始化自身，读取程序集的 CLR 头，查找标识了应用程序入口方法（Main）的 MethodDefToken，检索 MethodDef 元数据表找到方法的 IL 代码在文件中的偏移量，将 IL 代码 JIT 编译成本机代码（编译时会对代码进行验证以确保类型安全），最后执行本机代码。下面就是 Main 方法的 IL 代码。要查看代码，请对程序集运行 ILDasm.exe 并选择“视图”|“显示字节”，双击树形视图中的 Main 方法。
 
 ```text

@@ -144,10 +144,10 @@ function DeepClone([object] $original) {
 ```powershell
 # PowerShell 类不支持 internal/sealed 修饰符，这里只表达可序列化的等价语义
 [System.Serializable()]
-class Customer { /* ... */ }
+class Customer { <# ... #> }
 
 [System.Serializable()]
-class Order { /* ... */ }
+class Order { <# ... #> }
 ```
 
 然后，在应用程序的主要类中定义了以下静态字段：
@@ -161,29 +161,29 @@ $script:s_processedOrders = [System.Collections.Generic.List[Order]]::new()
 
 现在，可利用如下所示的方法将应用程序的状态序列化到单个流中：
 
-```csharp
-private static void SaveApplicationState(Stream stream) {
-    // 构造序列化格式化器来执行所有实际的工作
-    BinaryFormatter formatter = new BinaryFormatter();
+```powershell
+function SaveApplicationState([System.IO.Stream] $stream) {
+    # 构造序列化格式化器来执行所有实际的工作
+    $formatter = [System.Runtime.Serialization.Formatters.Binary.BinaryFormatter]::new()
 
-    // 序列化我们的应用程序的完整状态
-    formatter.Serialize(stream, s_customers);
-    formatter.Serialize(stream, s_pendingOrders);
-    formatter.Serialize(stream, s_processedOrders);
+    # 序列化我们的应用程序的完整状态
+    $formatter.Serialize($stream, $script:s_customers)
+    $formatter.Serialize($stream, $script:s_pendingOrders)
+    $formatter.Serialize($stream, $script:s_processedOrders)
 }
 ```
 
 要重新构建应用程序的状态，可以使用如下所示的一个方法反序列化状态：
 
-```csharp
-private static void RestoreApplicationState(Stream stream) {
-    // 构造序列化格式化器来执行所有实际的工作
-    BinaryFormatter formatter = new BinaryFormatter();
+```powershell
+function RestoreApplicationState([System.IO.Stream] $stream) {
+    # 构造序列化格式化器来执行所有实际的工作
+    $formatter = [System.Runtime.Serialization.Formatters.Binary.BinaryFormatter]::new()
 
-    // 反序列化应用程序的完整状态（和序列化时的顺序一样）
-    s_customers = (List<Customer>)      formatter.Deserialize(stream);
-    s_pendingOrders = (List<Order>)     formatter.Deserialize(stream);
-    s_processedOrders = (List<Order>)   formatter.Deserialize(stream);
+    # 反序列化应用程序的完整状态（和序列化时的顺序一样）
+    $script:s_customers       = $formatter.Deserialize($stream)
+    $script:s_pendingOrders   = $formatter.Deserialize($stream)
+    $script:s_processedOrders = $formatter.Deserialize($stream)
 }
 ```
 
@@ -197,21 +197,21 @@ private static void RestoreApplicationState(Stream stream) {
 
 **SerializableAttribute** 这个定制特性只能应用于引用类型（class）、值类型（struct）、枚举类型（enum）和委托类型（delegate）。注意，枚举和委托类型总是可序列化的，所以不必显式应用 SerializableAttribute 特性。除此之外，SerializableAttribute 特性不会被派生类型继承。所以，给定以下两个类型定义，那么 Person 对象可序列化，Employee 对象则不可：
 
-```csharp
-[Serializable]
-internal class Person { ... }
+```powershell
+[System.Serializable()]
+class Person { <# ... #> }
 
-internal class Employee : Person { ... }
+class Employee : Person { <# ... #> }
 ```
 
 解决方案是也向 Employee 类型应用 SerializableAttribute 特性：
 
-```csharp
-[Serializable]
-internal class Person { ... }
+```powershell
+[System.Serializable()]
+class Person { <# ... #> }
 
-[Serializable]
-internal class Employee : Person { ... }
+[System.Serializable()]
+class Employee : Person { <# ... #> }
 ```
 
 上述问题很容易修正，反之则不然。如果基类型没有应用 SerializableAttribute 特性，那么很难想象如何从它派生出可序列化的类型。但这样设计是有原因的：如果基类型不允许它的实例序列化，它的字段就不能序列化，因为基对象实际是派生对象的一部分。这正是 System.Object 已经很体贴地应用了 SerializableAttribute 特性的原因。
@@ -346,6 +346,8 @@ private void OnSerialized(StreamingContext context) {
 > ```csharp
 > [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
 > ```
+>
+> （该属性属于 .NET Framework 的 CAS 代码访问安全机制，.NET Core/.NET 5+ 已将其移除，PowerShell 7 中无对应写法。）
 
 格式化器序列化对象图时会检查每个对象。如果发现一个对象的类型实现了 **ISerializable** 接口，就会忽略所有定制特性，改为构造新的 **System.Runtime.Serialization.SerializationInfo** 对象。该对象包含了要为对象序列化的值的集合。
 
@@ -416,6 +418,8 @@ public class Dictionary<TKey, TValue>: ISerializable, IDeserializationCallback {
     }
 }
 ```
+
+> **说明（PowerShell 适用性）**　这段 `Dictionary<TKey, TValue>` 的实现用到了泛型类型声明、显式接口实现（EIMI）和受保护的特殊构造器，PowerShell 的 `class` 语法不支持泛型类型参数和显式接口实现，无法照搬；此处保留原书 C# 代码仅用于说明 `ISerializable`/`IDeserializationCallback` 的配合方式。
 
 每个 **AddValue** 方法都获取一个 **String** 名称和一些数据。数据一般是简单的值类型，比如 **Boolean、Char、Byte、SByte、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Decimal** 或者 **DateTime**。然而，还可以在调用 **AddValue** 时向它传递对一个 **Object**（比如一个 **String**）的引用。**GetObjectData** 添加好所有必要的序列化信息之后，会返回格式化器。
 
@@ -509,6 +513,8 @@ internal class Derived : Base, ISerializable {
 }
 ```
 
+> **说明（PowerShell 适用性）**　该示例依赖 `internal`/`protected` 成员、显式接口实现和带 `[SecurityPermission]` 的特殊构造器，PowerShell 类无法完整表达这些语义，保留原书 C# 代码作为实现参考。
+
 上述代码有一个名为 **Base** 的基类，它只用 **SerializableAttribute** 定制特性进行了标识。从 **Base** 派生的是 **Derived** 类，它除了也用 **SerializableAttribute** 特性进行标识，还实现了 **ISerializable** 接口。为了使局面变得更有趣，两个类都定义了一个名为 **m_name** 的 **String** 字段。调用 **SerializationInfo** 的 **AddValue** 方法时不能添加多个同名的值。在上述代码中，解决这个问题的方案是在字段名前附加类名作为前缀，从而对每个字段进行标识。例如，当 **GetObjectData** 方法调用 **AddValue** 来序列化 **Base** 的 **m_name** 字段时，写入的值的名称是“**Base+m_name**”。
 
 ### 24.6 流上下文
@@ -590,6 +596,8 @@ internal class Derived : Base, ISerializable {
         }
     }
 ```
+
+> **说明（PowerShell 适用性）**　此示例使用了显式接口实现（EIMI）、嵌套类型和 `IObjectReference`，PowerShell 类不能表达显式接口实现或嵌套类，故保留 C# 代码；其机制仅在 `BinaryFormatter` 下有意义，而在 PowerShell 7 中该类型已不可用。
 
 现在，我们通过分析代码来理解所发生的事情。Singleton 类型加载到 AppDomain 中时，CLR 调用它的静态构造器来构造一个 Singleton 对象，并将对它的引用保存到静态字段 s_theOneObject 中。Singleton 类没有提供任何公共构造器，这防止了其他任何代码构造该类的其他实例。
 

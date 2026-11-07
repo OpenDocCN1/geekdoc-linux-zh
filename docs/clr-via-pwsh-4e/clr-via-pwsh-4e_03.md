@@ -210,8 +210,8 @@ JIT 编译器将本机 CPU 指令存储到动态内存中。这意味着一旦�
 
 - JIT 编译器能判断一个特定的测试在它运行的机器上是否总是失败。例如，假定一个方法包含以下代码：
 
-```csharp
-if (numberOfCPUs > 1) {
+```powershell
+if ($numberOfCPUs -gt 1) {
     ...
 }
 ```

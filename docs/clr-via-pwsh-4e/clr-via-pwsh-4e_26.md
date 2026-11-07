@@ -22,6 +22,8 @@
 
 开发 CLR 时，Microsoft 实际是把它实现成包含在一个 DLL 中的 COM 服务器。也就是说，利用 **GetInterface** 方法获得 **ICLRRuntimeHost** 接口。宿主应用程序可调用该接口定义的方法来做下面这些事情。
 
+> 注：本章描述的是 .NET Framework 的寄宿模型（`mscoree.dll`、`ICLRRuntimeHost` 等）。PowerShell 5.1 运行在 .NET Framework 上，这些接口仍然存在；PowerShell 7 运行在 .NET Core / .NET 5+ 上，托管入口改为 `hostfxr`/`nethost`，`ICLRRuntimeHost` 不可用，AppDomain 也只剩默认那一个（见 22.2 节的注释）。阅读本章时应把“CLR”具体化为宿主进程实际使用的运行时。
+
 - 设置宿主管理器。告诉 **CLR** 宿主想参与涉及以下操作的决策：内存分配、线程调度/同步以及程序集加载等。宿主还可声明它想获得有关垃圾回收启动和停止以及特定操作超时的通知。
 - 获取 **CLR** 管理器。告诉 **CLR** 阻止使用某些类/成员。另外，宿主能分辨哪些代码可以调试，哪些不可以，以及当特定事件(例如 AppDomain 卸载、CLR 停止或者堆栈溢出异常)发生时宿主应调用哪个方法。
 - 初始化并启动 **CLR**。
@@ -38,7 +40,11 @@
 
 CLR COM 服务器初始化时会创建一个 AppDomain。AppDomain 是一组程序集的逻辑容器。CLR 初始化时创建的第一个 AppDomain 称为“默认 AppDomain”，这个默认的 AppDomain 只有在 Windows 进程终止时才会被销毁。
 
+> 注：PowerShell 会话就运行在这唯一的默认 AppDomain 中。`[System.AppDomain]::CurrentDomain` 可取得它，`FriendlyName` 在 PowerShell 7 中返回 `pwsh`（Windows PowerShell 5.1 返回 `DefaultDomain`）。脚本无法创建辅助 AppDomain：`[System.AppDomain]::CreateDomain(...)` 在 .NET Core 上抛出 `PlatformNotSupportedException`（“Secondary AppDomains are not supported on this platform.”）。脚本级别需要隔离时，PowerShell 提供的是 `Start-Job`、`Start-ThreadJob` 和运行空间（runspace），它们都不是 AppDomain。
+
 除了默认 AppDomain，正在使用非托管 COM 接口方法或托管类型方法的宿主还可要求 CLR 创建额外的 AppDomain。AppDomain 是为了提供隔离而设计的。下面总结了
+
+> 注：原文在此处被截断。“下面总结了”之后本应列出 AppDomain 提供的隔离项（静态字段、类型对象、程序集加载上下文、安全设置等），该列表及图 22-1 的引导段落均已缺失，下文直接从图 22-1 的说明接续。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_509_0.png)
 
@@ -49,6 +55,8 @@ CLR COM 服务器初始化时会创建一个 AppDomain。AppDomain 是一组程�
 不共享类型对象的内存或本机代码显得有些浪费。但 AppDomain 的设计宗旨就是提供隔离；CLR 要求在卸载某个 AppDomain 并释放其所有资源时不会影响到其他任何 AppDomain。复制 CLR 的数据结构才能保证这一点。另外，还保证多个 AppDomain 使用的类型在每个 AppDomain 中都有一组静态字段。
 
 有的程序集本来就要由多个 AppDomain 使用。最典型的例子就是 MSCorLib.dll。该程序集包含了 System.Object，System.Int32 以及其他所有与 .NET Framework 密不可分的类型。CLR 初始化时，该程序集会自动加载，而且所有 AppDomain 都共享该程序集中的类型。为了减少资源消耗，MSCorLib.dll 程序集以一种“AppDomain 中立”的方式加载。也就是说，针对以“AppDomain 中立”的方式加载的程序集，CLR 会为它们维护一个特殊的 Loader 堆。该 Loader 堆中的所有类型对象，以及为这些类型定义的方法 JIT 编译生成的所有本机代码，都会由进程中的所有 AppDomain 共享。遗憾的是，共享这些资源所获得的收益并不是没有代价的。这个代价就是，以“AppDomain 中立”的方式加载的所有程序集永远不能
+
+> 注：原文在此处缺失了一大段正文：从“永远不能”到下面的演示代码之间，本应说明这类程序集为何不能被卸载、为何必须用强名称标识，以及演示 1（按引用封送）的完整步骤和 `Marshalling` 方法的开头。下面的代码块因此从演示 1 的中段（调用代理方法）开始，之后直接衔接演示 2、演示 3 的片段。
 
 ```csharp
 // mbrt 引用一个有效的代理对象；代理对象引用一个无效的 AppDomain
@@ -198,6 +206,8 @@ Executing in AD #2
    在 Program.Main()
 ```
 
+> 注：跨 AppDomain 的“按引用封送/按值封送”依赖 .NET Remoting（`System.Runtime.Remoting`），该技术在 .NET Core / PowerShell 7 中已被移除。`MarshalByRefObject` 类型本身仍在，但透明代理、`CreateInstanceAndUnwrap`、`RemotingServices.IsTransparentProxy` 都不再可用，上述演示只能在 PowerShell 5.1（.NET Framework）上运行。
+
 现在来讨论以上代码以及 CLR 所做的事情。
 
 Marshalling 方法首先获得一个 AppDomain 对象引用，当前调用线程正在该 AppDomain 中执行。在 Windows 中，线程总是在一个进程的上下文中创建，而且线程的整个生存期都在该进程的生存期内。但线程和 AppDomain 没有一对一关系。AppDomain 是一项 CLR 功能；Windows 对 AppDomain 一无所知。由于一个 Windows 进程可包含多个 AppDomain，所以线程能执行一个 AppDomain 中的代码，再执行另一个 AppDomain 中的代码。从 CLR 的角度看，线程一次只能执行一个 AppDomain 中的代码。线程可调用 System.Threading.Thread 的静态方法 GetDomain 向 CLR 询问它正在哪个 AppDomain 中执行。线程还可查询 System.AppDomain 的静态只读属性 CurrentDomain 获得相同的信息。
@@ -205,6 +215,8 @@ Marshalling 方法首先获得一个 AppDomain 对象引用，当前调用线程
 AppDomain 创建后可被赋予一个友好名称。它是用于标识 AppDomain 的一个 String。友好名称主要是为了方便调试。由于 CLR 要在我们的任何代码执行前创建默认 AppDomain，所以使用可执行文件的文件名作为默认的 AppDomain 友好名称。Marshalling 方法使用 System.AppDomain 的只读 FriendlyName 属性来查询默认 AppDomain 的友好名称。
 
 接着，Marshalling 方法查询默认 AppDomain 中加载的程序集的强命名标识，这个程序集定义了入口方法 Main(其中调用了 Marshalling)。程序集定义了几个类型：Program、MarshalByRefType、MarshalByValType 和 NonMarshalableType。现在已准备好研究上
+
+> 注：原文在此处被截断，“现在已准备好研究上”之后缺失了演示 1 的说明（新建 AppDomain、调用 `CreateInstanceAndUnwrap`、CLR 为 `MarshalByRefType` 生成透明代理等）。下文直接从“有两个办法可证明调用线程已从默认 AppDomain 切换至新 AppDomain”接续。
 
 有两个办法可证明调用线程已从默认 AppDomain 切换至新 AppDomain。首先，我在 SomeMethod 方法中调用了 Thread.GetDomain().FriendlyName。这将返回“AD #2”(参见输出)，这是由于线程当前在新 AppDomain 中运行，而这个新 AppDomain 是通过调用 AppDomain.CreateDomain 方法，并传递“AD #2”作为友好名称参数来创建的。其次，在调试器中逐语句调试代码，并打开了“调用堆栈”窗口，那么“[外部代码]”行会标注一个线程在什么位置跨越 AppDomain 边界。请参见图 22-2 底部的“调用堆栈”窗口。
 
@@ -225,6 +237,8 @@ Ch22-1-AppDomains 应用程序接着做的事情是调用 AppDomain 类的公共
 显然，Microsoft 的 CLR 团队不得不做大量的工作来确保 AppDomain 的正确隔离，但这是他们必须做的。跨 AppDomain 访问对象的功能正在被大量地使用，开发人员对这个功能的依赖性正在日益增加。不过，使用“按引用封送”的语义进行跨 AppDomain 边界的对象访问，会产生一些性能上的开销。所以，一般应尽量少用这个功能。
 
 前面我承诺会更多地讨论实例字段。从 **MarshalByRefObject** 派生的类型可定义实例字段。但这些实例字段不会成为代理类型的一部分，也不会包含在代理对象中。写代码对派生自 **MarshalByRefObject** 的类型的实例字段进行读写时，JIT 编译器会自动生成代码，分别调用 **System.Object** 的 **FieldGetter** 方法(用于读)或 **FieldSetter** 方法(用于写)来使用代理对象(以找到真正的 AppDomain/对象)。这些方法是私有的，而且没有在文档中记录。简单地说，这些方法利用反射机制获取或设置字段值。因此，虽然能访问派生自 **MarshalByRefObject** 的一个类型中的字段，但性能很差，因为 CLR 最终要调用方法来执行字段访问。事实上，即使要访问的字段在你自己的 AppDomain 中，性能也好不到哪里去。①
+
+① 如果 CLR 要求所有字段都必须私有(为了获得好的数据封装，我强烈建议这样做)，那么 **FieldGetter** 和 **FieldSetter** 方法根本没有存在的必要，从方法中总是能够直接访问字段，避免(因为还要经由中间的 getter 或 setter 方法)造成性能损失。
 
 #### 访问实例字段时的性能问题
 
@@ -251,13 +265,7 @@ private static void FieldAccessTiming() {
 
 我运行以上代码，访问从 Object 派生的 NonMBRO 类的实例字段只花了约 0.4 秒，但访问从 MarshalByRefObject 派生的 MBRO 类的实例字段却花了 2.54 秒。也就是说，访问从 MarshalByRefObject 派生的一个类的实例字段要多花约 6 倍的时间！
 
-从好不好用(usability)的角度说，派生自 **MarshalByRefObject** 的类型真的应该避免定义任何
-
-① 如果 CLR 要求所有字段都必须私有(为了获得好的数据封装，我强烈建议这样做)，那么 **FieldGetter** 和 **FieldSetter** 方法根本没有存在的必要，从方法中总是能够直接访问字段，避免(因为还要经由中间的 getter 或 setter 方法)造成性能损失。
-
-
-
-任何静态成员。这是因为静态成员总是在调用 AppDomain 的上下文中访问。要切换到哪个 AppDomain 的信息包含在代理对象中，但调用静态成员时没有代理对象，所以不会发生 AppDomain 的切换。让类型的静态成员在一个 AppDomain 中执行，实例成员却在另一个 AppDomain 中执行，这样的编程模型未免太“丑”了！
+从好不好用(usability)的角度说，派生自 **MarshalByRefObject** 的类型真的应该避免定义任何静态成员。这是因为静态成员总是在调用 AppDomain 的上下文中访问。要切换到哪个 AppDomain 的信息包含在代理对象中，但调用静态成员时没有代理对象，所以不会发生 AppDomain 的切换。让类型的静态成员在一个 AppDomain 中执行，实例成员却在另一个 AppDomain 中执行，这样的编程模型未免太“丑”了！
 
 由于第二个 AppDomain 中没有根，所以代理引用的原始对象可以被垃圾回收。这当然不理想。但另一方面，假如将原始对象不确定地(indefinitely)留在内存中，代理可能不再引用它，而原始对象依然存活；这同样不理想。CLR 解决这个问题的办法是使用一个“租约管理器”(lease manager)。一个对象的代理创建好之后，CLR 保持对象存活 5 分钟。5 分钟内没有通过代理发出调用，对象就会失效，下次垃圾回收会释放它的内存。每发出一次对对象的调用，“租约管理器”都会续订对象的租期，保证它在接下来的 2 分钟内在内存中保持存活。在对象过期后试图通过代理调用它，CLR 会抛出 System.Runtime.Remoting.RemotingException 异常。
 
@@ -272,6 +280,12 @@ MarshalByValType 不从 System.MarshalByRefObject 派生，所以 CLR 不能定�
 但由于 MarshalByValType 标记了自定义特性[Serializable]，所以 MethodWithReturn 方法能按值封送对象。下面具体描述了将一个对象按值从一个 AppDomain(源 AppDomain)封送到另一个 AppDomain(目标 AppDomain)的含义。欲知 CLR 序列化和反序列化的详情，请参见第二十四章“运行时序列化”。
 
 源 AppDomain 想向目标 AppDomain 发送或返回一个对象引用时，CLR 将对象的实例字段序列化成一个字节数组。字节数组从源 AppDomain 复制到目标 AppDomain。然后，CLR 在目标 AppDomain 中反序列化字节数组，这会强制 CLR 将定义了“被反序列化的类型”的程序集加载到目标 AppDomain 中(如果尚未加载的话)。接着，CLR 创建类型的实例，并利用字节数组中的值初始化对象的字段，使之与源对象中的值相同。换言之，CLR 在目标 AppDomain 中精确复制了源对象。然后，MethodWithReturn 方法返回对这个副本的引用；这样一来，对象就跨 AppDomain 的边界按值封送了。
+
+### 22.3 卸载 AppDomain
+
+> 注：原文在此处缺了 22.3 节的标题及开头正文，包括卸载过程的第 1、2 步（让线程离开 AppDomain 等），编号列表直接从第 3 步开始。
+
+> 注：.NET Core / PowerShell 7 不支持卸载 AppDomain：`[System.AppDomain]::Unload($ad)` 会抛出 `PlatformNotSupportedException`（“Operation is not supported on this platform.”），后文涉及的 `ThreadAbortException`、`CannotUnloadAppDomainException` 在 .NET Core 上也不可用。本节内容只适用于 PowerShell 5.1（.NET Framework）。
 
 - 3. 当第 2 步发现的所有线程都离开 AppDomain 后，CLR 遍历堆，为引用了“由已卸载的 AppDomain 创建的对象”的每个代理对象都设置一个标志(flag)。这些代理对象现在知道它们引用的真实对象已经不在了。现在，任何代码在无效的代理对象上调用方法都会抛出一个 **AppDomainUnloadedException** 异常。
 - 4. CLR 强制垃圾回收，回收由已卸载的 AppDomain 创建的任何对象的内存。这些对象的 **Finalize** 方法被调用，使对象有机会正确清理它们占用的资源。
@@ -290,6 +304,8 @@ MarshalByValType 不从 System.MarshalByRefObject 派生，所以 CLR 不能定�
 ### 22.4 监视 AppDomain
 
 宿主应用程序可监视 AppDomain 消耗的资源。有的宿主根据这种信息判断一个 AppDomain 的内存或 CPU 消耗是否超过了应有的水准，并强制卸载一个 AppDomain。还可利用监视来比较不同算法的资源消耗情况，判断哪一种算法用的资源较少。由于 AppDomain 监视本身也会产生开销，所以宿主必须将 AppDomain 的静态 **MonitoringEnabled** 属性设为 **true**，从而显式地打开监视。监视一旦打开便不能关闭，将 **MonitoringEnabled** 属性设为 **false** 会抛出一个 **ArgumentException** 异常。
+
+> 注：PowerShell 7 中 `[System.AppDomain]::CurrentDomain.MonitoringIsEnabled = $true` 可以执行，`MonitoringTotalAllocatedMemorySize`、`MonitoringSurvivedMemorySize`、`MonitoringTotalProcessorTime` 也能读取（实测可用）；但进程里只有当前这一个 AppDomain，静态的 `MonitoringSurvivedProcessMemorySize` 实测返回 `$null`。PowerShell 5.1 上这些成员按本章所述工作。把 `MonitoringIsEnabled` 设回 `$false` 同样会失败，PowerShell 7 中的错误消息是“Argument must be true.”。
 
 监视打开后，代码可查询 **AppDomain** 类提供的以下 4 个只读属性。
 
@@ -364,6 +380,8 @@ FriendlyName=03-Ch22-1-AppDomains.exe, CPU=5031.25ms
 
 下面描述了 CLR 如何处理异常：异常首次抛出时，CLR 调用向抛出异常的 **AppDomain** 登记的所有 **FirstChanceException** 回调方法。然后，CLR 查找栈上在同一个 **AppDomain** 中的任何 **catch** 块。有一个 **catch** 块能处理异常，则异常处理完成，将继续正常执行。如果 **AppDomain** 中没有一个 **catch** 块能处理异常，则 CLR 沿着栈向上来到调用 **AppDomain**，再次抛出同一个异常对象(序列化和反序列化之后)。这时感觉就像是抛出了一个全新的异常，CLR 调用向当前 **AppDomain** 登记的所有 **FirstChanceException** 回调方法。这个过程会一直持续，直到抵达线程栈顶部。届时如果异常还未被任何代码处理，CLR 只好终止整个进程。
 
+> 注：PowerShell 中可以订阅该事件：`$id = [System.AppDomain]::CurrentDomain.add_FirstChanceException({ param($sender, $e) ... })`，取消订阅用 `remove_FirstChanceException($id)`。实测 PowerShell 7 上可用，但 PowerShell 内部产生的异常会让回调触发多次，回调里只应做日志记录，且不能再抛异常。这只是通知，不改变脚本 `try/catch` 的处理结果。
+
 ### 22.6 宿主如何使用 AppDomain
 
 前面已讨论了宿主以及宿主加载 CLR 的方式。同时还讨论了宿主如何告诉 CLR 创建和卸载 **AppDomain**。为了使这些讨论更加具体，下面将描述一些常见的寄宿和 **AppDomain** 使用情形。我着重解释了不同应用程序类型如何寄宿(容纳)CLR，以及如何管理 **AppDomain**。
@@ -374,9 +392,17 @@ FriendlyName=03-Ch22-1-AppDomains.exe, CPU=5031.25ms
 
 ② 垫片的问题请参见 22.1 节“CLR 寄宿”。——译注
 
+> 注：Windows PowerShell 的 `powershell.exe` 是 .NET Framework 托管 EXE，走文中描述的垫片（shim）机制；PowerShell 7 的 `pwsh.exe` 运行在 .NET Core 上，由 apphost + `hostfxr` 启动运行时，不再经过 Windows 垫片，也不读取程序集里的 CLR 版本头来决定运行时版本（版本由 `runtimeconfig.json` 决定）。
+
+### 22.6.2 Microsoft ASP.NET
+
+> 注：原文在此处缺了 22.6.2 的标题和开头正文（ASP.NET 如何为每个 Web 应用程序创建独立 AppDomain 等），下面的段落直接从图/小节的中段开始。
+
 应用程序需要的程序集都会加载到一个单独的 AppDomain 中，以隔离不同 Web 应用程序的代码和对象。
 
 ASP.NET 的一个亮点是允许在不关闭 Web 服务器的前提下动态更改网站代码。网站的文件在硬盘上发生改动时，ASP.NET 会检测到这个情况，并卸载包含旧版本文件的 AppDomain(在当前运行的最后一个请求完成之后)，并创建一个新 AppDomain，向其中加载新版本的文件。为了确保这个过程的顺利进行，ASP.NET 使用了 AppDomain 的一个名为“影像复制①” (shadow copying)的功能。
+
+> 注：原文此处还缺了 22.6.3 节（内容涉及 Microsoft Internet Explorer 通过 `AppDomainManager` 为托管加载项建立隔离的机制）的标题和全部正文，因此下文直接跳到 22.6.4。
 
 ### 22.6.4 Microsoft SQL Server
 
@@ -396,7 +422,11 @@ Microsoft SQL Server 是非托管应用程序，它的大部分代码仍是用�
 
 **System.AppDomainManager** 类允许宿主使用托管代码(而不是非托管代码)覆盖 CLR 的默认行为。当然，使用托管代码使宿主的实现变得更容易。你唯一要做的就是定义自己的类，让它从 **System.AppDomainManager** 派生，重写想接手控制的任何虚方法。然后，在专用的程序集中生成类，并将程序集安装到 GAC 中。这是由于该程序集需要被授予完全信任权限，而 GAC 中的所有程序集都总是被授予完全信任权限。
 
+> 注：`System.AppDomainManager`、GAC 和 `ICLRControl` 都只存在于 .NET Framework 的宿主模型中。.NET Core / PowerShell 7 不提供 `AppDomainManager`，也没有 GAC；PowerShell 7 的宿主定制走的是引擎 API、`InitialSessionState` 和运行空间，与本节机制无关。
+
 然后要告诉 CLR 使用你的 **AppDomainManager** 派生类。在代码中，最佳的方法就是创建一个 **AppDomainSetup** 对象，初始化它的 **AppDomainManagerAssembly** 和 **AppDomainManagerType** 属性（均为 **String** 类型）。将前者设为定义了你的 **AppDomainManager** 派生类的那个程序集的强名称字符串，后者设为你的 **AppDomainManager** 派生类的全名。还可在应用程序 XML 配置文件中，用 **appDomainManagerAssembly** 和 **appDomainManagerType** 元素来设置 **AppDomainManager**。此外，本机宿主可查询 **ICLRControl** 接口，调用该接口的 **SetAppDomainManagerType** 函数，向它传递 GAC 安装的程序集的标识和 **AppDomainManager** 派生类的名称。
+
+① 还可使用环境变量和注册表设置来配置一个 **AppDomainManager**。但这些机制比正文描述的方法麻烦得多。除非是在一些测试性的场合中，否则应避免使用。
 
 现在看看 **AppDomainManager** 派生类能做什么。**AppDomainManager** 派生类的作用是使宿主保持控制权，即使是在加载项（add-in）试图创建自己的 AppDomain 时。进程中的代码试图创建新 AppDomain 时，那个 AppDomain 中的 **AppDomainManager** 派生对象可修改安全性和配置设置。它还可决定阻止一次 AppDomain 创建，或返回对现有 AppDomain 的引用。新 AppDomain 创建好之后，CLR 会在其中创建新的 **AppDomainManager** 派生对象。这个对象也能修改配置设置、决定执行上下文如何在线程之间切换，并决定向程序集授予的权限。
 
@@ -409,13 +439,7 @@ Microsoft SQL Server 是非托管应用程序，它的大部分代码仍是用�
 - CLR 可被禁用。这会阻止更多的托管代码在程序中运行，但仍然允许非托管代码运行。
 - CLR 可退出 Windows 进程。首先会终止所有线程，并卸载所有 AppDomain，使资源清理操作得以执行，然后才会终止进程。
 
-CLR 可以得体地（gracefully）或者粗鲁地（rudely）终止线程或 AppDomain。得体意味着会执行（资源）清理代码。换言之，finally 块中的代码会运行，对象的 Finalize 方法也将被执行。而
-
-① 还可使用环境变量和注册表设置来配置一个 **AppDomainManager**。但这些机制比正文描述的方法麻烦得多。除非是在一些测试性的场合中，否则应避免使用。
-
-
-
-粗鲁地终止意味着清理代码不会执行。换言之，finally 块中的代码可能不会运行，对象的 Finalize 方法也可能不会执行。如果得体地终止，当前正在一个 catch 块或 finally 块中的线程无法终止。但如果粗鲁地终止，就能终止 catch 块或 finally 块中的线程。遗憾的是，非托管代码或者约束执行区（Constrained Execution Region，CER）中的线程完全无法终止。
+CLR 可以得体地（gracefully）或者粗鲁地（rudely）终止线程或 AppDomain。得体意味着会执行（资源）清理代码。换言之，finally 块中的代码会运行，对象的 Finalize 方法也将被执行。而粗鲁地终止意味着清理代码不会执行。换言之，finally 块中的代码可能不会运行，对象的 Finalize 方法也可能不会执行。如果得体地终止，当前正在一个 catch 块或 finally 块中的线程无法终止。但如果粗鲁地终止，就能终止 catch 块或 finally 块中的线程。遗憾的是，非托管代码或者约束执行区（Constrained Execution Region，CER）中的线程完全无法终止。
 
 宿主可设置所谓的升级策略（escalation policy），从而告诉 CLR 应该如何处理托管代码的错误。例如，SQL Server 就告诉 CLR 在执行托管代码时，假如遇到未处理的异常应该如何处理。线程遇到未经处理的异常时，CLR 首先尝试将该异常升级成一次得体的线程终止。如果线程在指定时间内没有终止，CLR 就尝试将得体的终止升级成粗鲁的终止。
 
@@ -433,6 +457,8 @@ CLR 可以得体地（gracefully）或者粗鲁地（rudely）终止线程或 Ap
 
 为了解决这些问题，宿主可利用线程中止功能。图 22-3 展示了旨在解决失控（runaway）线程问题的宿主应用程序的典型架构。其具体工作方式如下（编号和图的圆圈中的编号对应）：
 
+> 注：`Thread.Abort`、`ThreadAbortException` 和 `Thread.ResetAbort` 在 .NET Core / PowerShell 7 上均不受支持，实测调用 `Abort()` 会抛出 `PlatformNotSupportedException`。因此本节这套“强制中止失控线程”的方案只适用于 .NET Framework（PowerShell 5.1）。PowerShell 7 中限制失控代码只能靠进程隔离，例如另起 `pwsh` 进程或使用作业，而不能从外部中止线程。
+
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_528_0.png)
 
 图 22-3　宿主应用程序如何拿回它的线程
@@ -445,3 +471,5 @@ CLR 可以得体地（gracefully）或者粗鲁地（rudely）终止线程或 Ap
 6. 这时，线程池线程开始展开（unwind），调用 **finally** 块，使清理代码得以执行。最后，线程池线程穿越 **AppDomain** 边界返回。由于宿主的存根代码是从一个 **try** 块中调用不可信代码，所以宿主的存根代码有一个 **catch** 块捕捉 **ThreadAbortException**。
 7. 为了响应捕捉到的 **ThreadAbortException** 异常，宿主调用 **Thread** 的 **ResetAbort** 方法。稍后将介绍该调用的目的。
 8. 现在，宿主的代码已捕捉到 **ThreadAbortException** 异常。因此，宿主可向客户端返回
+
+> 注：原文在此处被截断，第 8 步的后半句及 22.7.3 节的收尾（包括对 `Thread.ResetAbort` 用途的说明）缺失，本章至此结束。

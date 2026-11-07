@@ -163,6 +163,8 @@ public static class Program {
 
 
 
+> **注意（PowerShell 适用性）**　上述前台/后台线程示例依赖 `Thread` 类与 `ThreadStart` 委托。PowerShell 脚本块无法在新线程中执行（没有 Runspace，见 26.6 节注释），因此无法原样改写；脚本中若需要后台执行，应改用 `Start-ThreadJob`。
+
 ### 27.1 CLR 线程池基础
 
 如第二十六章所述，创建和销毁线程是一个昂贵的操作，要耗费大量时间。另外，太多的线程会浪费内存资源。由于操作系统必须调度可运行的线程并执行上下文切换，所以太多的线程还对性能不利。为了改善这个情况，CLR 包含了代码来管理它自己的线程池(thread pool)。线程池是你的应用程序能使用的线程集合。每个 CLR 一个线程池；这个线程池由 CLR 控制的所有 AppDomain 共享。如果一个进程中加载了多个 CLR，那么每个 CLR 都有它自己的线程池。
@@ -321,13 +323,14 @@ public struct CancellationTokenRegistration :
 
 可以调用 **Dispose** 从关联的 **CancellationTokenSource** 中删除已登记的回调；这样一来，在调用 **Cancel** 时，便不会再调用这个回调。以下代码演示了如何向一个 **CancellationTokenSource** 登记两个回调：
 
-```csharp
-var cts = new CancellationTokenSource();
-cts.Token.Register(() => Console.WriteLine("Canceled 1"));
-cts.Token.Register(() => Console.WriteLine("Canceled 2"));
+```powershell
+$cts = [System.Threading.CancellationTokenSource]::new()
+# 回调由 .NET 直接调用，需用 [Console]::WriteLine 才能保证输出可见
+$cts.Token.Register([System.Action] { [System.Console]::WriteLine('Canceled 1') })
+$cts.Token.Register([System.Action] { [System.Console]::WriteLine('Canceled 2') })
 
-// 出于测试的目的，让我们取消它，以便执行 2 个回调
-cts.Cancel();
+# 出于测试的目的，让我们取消它，以便执行 2 个回调
+$cts.Cancel()
 ```
 
 运行上述代码，一旦调用 **Cancel** 方法，就会得到以下输出：
@@ -339,26 +342,27 @@ Canceled 1
 
 最后，可以通过链接另一组 **CancellationTokenSource** 来新建一个 **CancellationTokenSource** 对象。任何一个链接的 **CancellationTokenSource** 被取消，这个新的 **CancellationTokenSource** 对象就会被取消。以下代码对此进行了演示：
 
-```csharp
-// 创建一个 CancellationTokenSource
-var cts1 = new CancellationTokenSource();
-cts1.Token.Register(() => Console.WriteLine("cts1 canceled"));
+```powershell
+# 创建一个 CancellationTokenSource
+$cts1 = [System.Threading.CancellationTokenSource]::new()
+$cts1.Token.Register([System.Action] { [System.Console]::WriteLine('cts1 canceled') })
 
-// 创建另一个 CancellationTokenSource
-var cts2 = new CancellationTokenSource();
-cts2.Token.Register(() => Console.WriteLine("cts2 canceled"));
+# 创建另一个 CancellationTokenSource
+$cts2 = [System.Threading.CancellationTokenSource]::new()
+$cts2.Token.Register([System.Action] { [System.Console]::WriteLine('cts2 canceled') })
 
-// 创建一个新的 CancellationTokenSource，它在 cts1 或 cts2 取消时取消
-var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cts1.Token, cts2.Token);
-linkedCts.Token.Register(() => Console.WriteLine("linkedCts canceled"));
+# 创建一个新的 CancellationTokenSource，它在 cts1 或 cts2 取消时取消
+$linkedCts = [System.Threading.CancellationTokenSource]::CreateLinkedTokenSource($cts1.Token, $cts2.Token)
+$linkedCts.Token.Register([System.Action] { [System.Console]::WriteLine('linkedCts canceled') })
 
-// 取消其中一个 CancellationTokenSource 对象 (我选择 cts2)
-cts2.Cancel();
+# 取消其中一个 CancellationTokenSource 对象 (我选择 cts2)
+$cts2.Cancel()
 
-// 显示哪个 CancellationTokenSource 对象被取消了
-Console.WriteLine("cts1 canceled={0}, cts2 canceled={1}, linkedCts={2}",
-    cts1.IsCancellationRequested, cts2.IsCancellationRequested,
-    linkedCts.IsCancellationRequested);
+# 显示哪个 CancellationTokenSource 对象被取消了
+[System.Console]::WriteLine(
+    'cts1 canceled={0}, cts2 canceled={1}, linkedCts={2}',
+    $cts1.IsCancellationRequested, $cts2.IsCancellationRequested,
+    $linkedCts.IsCancellationRequested)
 ```
 
 ```csharp
@@ -393,6 +397,8 @@ var cwt = parent.ContinueWith(
 // 启动父任务，便于它启动它的子任务
 parent.Start();
 ```
+
+> **注意（PowerShell 适用性）**　任务主体以 lambda/脚本块形式在线程池线程上运行，而 PowerShell 脚本块需要 Runspace，直接套用会在任务线程上抛出“没有可用于运行脚本的运行空间”；保留原 C# 代码仅为说明 Task 父子关系与延续任务概念。
 
 在本例中，父任务创建并启动三个 **Task** 对象。一个任务创建的一个或多个 **Task** 对象默认是顶级任务，它们与创建它们的任务无关。但 **TaskCreationOptions.AttachedToParent** 标志将一个 **Task** 和创建它的 **Task** 关联，结果是除非所有子任务（以及子任务的子任务）结束运行，否则创建任务（父任务）不认为已经结束。调用 **ContinueWith** 方法创建 **Task** 时，可指定 **TaskContinuationOptions.AttachedToParent** 标志将延续任务指定成子任务。
 
@@ -433,8 +439,8 @@ public enum TaskStatus {
 
 为简化编码，`Task` 提供了几个只读 `Boolean` 属性，包括 `IsCanceled`, `IsFaulted` 和 `IsCompleted`。注意当 `Task` 处于 `RanToCompletion`, `Canceled` 或 `Faulted` 状态时，`IsCompleted` 返回 `true`。判断一个 `Task` 是否成功完成最简单的办法是使用如下所示的代码：
 
-```csharp
-if (task.Status == TaskStatus.RanToCompletion) ...
+```powershell
+if ($task.Status -eq [System.Threading.Tasks.TaskStatus]::RanToCompletion) { <# 任务成功完成 #> }
 ```
 
 调用 **ContinueWith**，**ContinueWhenAll**，**ContinueWhenAny** 或 **FromAsync** 等方法来创建的 **Task** 对象处于 **WaitingForActivation** 状态。通过构造 **TaskCompletionSource<TResult>** 对象来创建的 **Task** 也处于 **WaitingForActivation** 状态。该状态意味着 **Task** 的调度由任务基础结构控制。例如，不可显式启动通过调用 **ContinueWith** 来创建的对象。该 **Task** 在它的前置任务(antecedent task)执行完毕后自动启动。
@@ -482,6 +488,9 @@ Task parent = new Task(() => {
 // 子任务完成后，也显示任何未处理的异常
 ```
 
+> **注意（PowerShell 适用性）**　`TaskFactory` 的 `StartNew` 仍是在线程池线程上执行回调，同前例一样不能直接套用 PowerShell 脚本块；此段 C# 代码仅用于说明任务工厂的用法。
+
+
 而要像这样写：
 
 ```csharp
@@ -489,15 +498,17 @@ Task parent = new Task(() => {
 Parallel.ForEach(collection, item => DoWork(item));
 ```
 
+> **注意（PowerShell 适用性）**　`Parallel.ForEach` 的委托在线程池线程上执行，PowerShell 脚本块同样需要 Runspace，不能直接作为该委托；脚本层可改用 `ForEach-Object -Parallel`（PowerShell 7+）获得类似的并行语义，但它使用独立 Runspace，共享数据需显式同步或通过 `$using:` 传入。
+
 如果既可以使用 **For**，也可以使用 **ForEach**，那么建议使用 **For**，因为它执行得更快。
 
 最后，如果要执行多个方法，那么既可能像下面这样顺序执行：
 
-```csharp
-// 一个线程顺序执行所有方法
-Method1();
-Method2();
-Method3();
+```powershell
+# 一个线程顺序执行所有方法
+Method1
+Method2
+Method3
 ```
 
 也可并行执行，如下所示：
@@ -509,6 +520,8 @@ Parallel.Invoke(
     () => Method2(),
     () => Method3());
 ```
+
+> **注意（PowerShell 适用性）**　`Parallel.Invoke` 同样要求回调是在线程池线程上运行的 .NET 委托，脚本块不能直接传入；PowerShell 7+ 的 `ForEach-Object -Parallel` 是更贴近脚本习惯的替代。
 
 **Parallel** 的所有方法都让调用线程参与处理。从资源利用的角度说，这是一件好事，因为我们不希望调用线程停下来(阻塞)，等线程池线程做完所有工作才能继续。然而，如果调用线程在线程池线程完成自己的那一部分工作之前完成工作，调用线程会将自己挂起，直到所有工作完成。这也是一件好事，因为这提供了和使用普通 **for** 或 **foreach** 循环时相同的语义：线程要在所有工作完成后才继续运行。还要注意，如果任何操作抛出未处理的异常，你调用的 **Parallel** 方法最后会抛出一个 **AggregateException**。
 
@@ -576,6 +589,8 @@ private static Int64 DirectoryBytes(String path, String searchPattern,
 }
 ```
 
+> **注意（PowerShell 适用性）**　`Parallel.ForEach` 的三委托重载（localInit/body/localFinally）都依赖线程池线程上的 .NET 委托，PowerShell 脚本无法直接表达。若只需“并行统计文件长度”，可用 `ForEach-Object -Parallel` 加 `Measure-Object`，或保持顺序执行。
+
 每个任务都通过 `taskLocalTotal` 变量为分配给它的文件维护它自己的总计值。每个任务在完成工作之后，都通过调用 `Interlocked.Add` 方法(参见第二十九章“基元线程同步构造”)，以一种线程安全的方式更新总的总结值(master total)。由于每个任务都有自己的总计值，所以在一个工作项处理期间，无需进行线程同步。由于线程同步会造成性能的损失，所以不
 
 ### 27.7 并行语言集成查询(PLINQ)
@@ -615,6 +630,8 @@ private static void ObsoleteMethods(Assembly assembly) {
     foreach (var result in query) Console.WriteLine(result);
 }
 ```
+
+> **注意（PowerShell 适用性）**　该示例使用 C# 的 LINQ 查询语法（`from ... let ... where ... orderby ... select`），PowerShell 没有这种语法糖，只能通过 `[System.Linq.Enumerable]`/`[System.Linq.ParallelEnumerable]` 的静态方法或普通管道表达；`AsParallel` 等扩展方法也需以静态形式显式调用。
 
 ① ParallelQuery<T>类派生自 ParallelQuery 类。
 
@@ -686,6 +703,8 @@ private static void Status(object state) {
     // 这个方法返回后，线程回到池中，等待下一个工作项
 }
 ```
+
+> **注意（PowerShell 适用性）**　`Timer` 的 `TimerCallback` 在线程池线程上执行，PowerShell 脚本块不能作为该委托直接传入（会因缺少 Runspace 失败）；脚本中可改用 `Start-ThreadJob` + `Start-Sleep` 循环，或创建 `System.Threading.Timer` 并传入 `Add-Type` 编译出的 .NET 委托。
 
 如果有需要定时执行的操作，可利用 **Task** 的静态 **Delay** 方法（配合等待操作）来编码。原书此处用的是 C# 的 **async** 和 **await** 关键字（第二十八章讨论），PowerShell 不支持这两个关键字，只能通过 `.GetAwaiter().GetResult()` 或 `Task.Wait()` 同步等待。下面重写了前面的代码。
 

@@ -75,6 +75,8 @@ public struct Nullable<T> where T : struct {
 
 可以看出，该结构能表示可为 null 的值类型。由于 `Nullable<T>` 本身是值类型，所以它的实例仍然是“轻量级”的。也就是说，实例仍然可以在栈上，而且实例的大小和原始值类型基本一样，只是多了一个 Boolean 字段。注意 `Nullable<T>` 的类型参数 `T` 被约束为 `struct`。这是由于引用类型的变量本来就可以为 null，所以没必要再去照顾它。
 
+> 注：PowerShell 里可以写 `[Nullable[int]]` 类型，但不习惯使用它：PowerShell 变量天然可以是 `$null`，值类型在管道和变量中也总被装箱。实测 `$n = [Nullable[int]]5` 后 `$n.GetType()` 返回 `System.Int32`，`[Nullable[int]]$null` 则直接得到 `$null`，`HasValue`/`Value` 等成员往往观察不到。需要在脚本中表达“可为空的整数”时，直接用 `$n = 5` 或 `$n = $null` 并按 `$null -ne $n` 判断即可；只有调用某些 .NET API 的 `Nullable<T>` 参数时才需要显式构造。
+
 现在，要在代码中使用一个可空的 `Int32`，就可以像下面这样写：
 
 ```csharp
@@ -99,6 +101,8 @@ C#允许使用相当简单的语法初始化上述两个 `Nullable<Int32>` 变�
 Int32? x = 5;
 Int32? y = null;
 ```
+
+> 注：PowerShell 没有 `Int32?` 这种问号后缀语法，也没有 `Nullable<T>` 的字面量简写；对应写法是 `[Nullable[int]]5`（实际会退化为 `Int32`，见上文注释）。PowerShell 7 起支持三元运算符 `? :`，但那是条件表达式，与这里的“可空类型标记”无关。
 
 在 C#中，`Int32?` 等价于 `Nullable<Int32>`。但 C#在此基础上更进一步，允许开发人员在可空实例上执行转换和转型①。C#还允许向可空实例应用操作符。以下代码对此进行了演示：
 
@@ -228,6 +232,8 @@ Are points not equal? True
 
 C#提供了一个“空接合操作符”(null-coalescing operator)，即 `??` 操作符，它要获取两个操作数。假如左边的操作数不为 null，就返回这个操作数的值。如果左边的操作数为 null，就返回右边的操作数的值。利用空接合操作符，可以方便地设置变量的默认值。
 
+> 注：PowerShell 没有 `??` 运算符。等效写法是 `if ($null -ne $b) { $b } else { 123 }`；PowerShell 7 可写成三元表达式 `$b ? $b : 123`，但要注意 PowerShell 中 `0`、`''`、空数组并不等于 `$null`，因此这种近似只在操作数确实可能为 `$null` 时成立。连续取默认值时，通常用 `$a ?? $b` 对应的 `if/elseif` 链或 `@($a, $b, 'Untitled') | Where-Object { $null -ne $_ } | Select-Object -First 1`。
+
 空接合操作符的一个好处在于，它既能用于引用类型，也能用于可空值类型。以下代码演示了如何使用 `??` 操作符：
 
 ```csharp
@@ -298,6 +304,8 @@ n = 5;
 o = n; // o 引用一个已装箱的 Int32
 Console.WriteLine("o's type={0}", o.GetType()); // "System.Int32"
 ```
+
+> 注：PowerShell 的变量与管道全都在引用（装箱）层面操作，所以这段行为在脚本里是自然结果：`$n = [Nullable[int]]$null; $o = $n; $null -eq $o` 为 True；`$n = 5; $o = $n; $o.GetType().Name` 为 `Int32`。无需也不能在 PowerShell 中显式控制“装箱”这一步。
 
 ### 19.3.2 可空值类型的拆箱
 

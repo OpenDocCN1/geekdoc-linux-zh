@@ -113,6 +113,8 @@ public static class TaskLogger {
 }
 ```
 
+> **注意（PowerShell 适用性）**　`TaskLogger` 依赖扩展方法（`this` 参数）、`[CallerMemberName]` 等“编译器填充”特性和泛型类型参数，这些都是 C# 语言特性，PowerShell 的 `class` 无法表达。若确需此功能，应用 `Add-Type` 内联 C# 代码。
+
 以下代码演示了如何使用该类。
 
 ```csharp
@@ -169,6 +171,8 @@ public sealed class EventAwaiter<TEventArgs> : INotifyCompletion {
 #### 
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_671_0.png)
+
+> **注意（PowerShell 适用性）**　自定义 awaiter 只有在 `await`/状态机这一 C# 编译期机制下才有意义；PowerShell 没有 `await`，也不会调用 `GetAwaiter`/`OnCompleted`，因此这段代码仅作原理说明。
 
 中断异步函数。要在状态机运行完毕前对调用方法进行调试，在调用方法中插入断点并运行至断点(F5)即可。
 
@@ -389,6 +393,8 @@ private static async Task<TResult> WithCancellation<TResult>(this Task<TResult> 
 }
 ```
 
+> **注意（PowerShell 适用性）**　`WithCancellation` 是扩展方法且内部使用 `async`/`await`，PowerShell 无法照搬；需要“超时取消等待”时，可在脚本中用 `[System.Threading.Tasks.Task]::WaitAny([System.Threading.Tasks.Task[]]@($task, $cancelTask))` 之类的手工模式实现类似效果。
+
 现在可以像下面这样调用该扩展方法。
 
 ```csharp
@@ -424,6 +430,8 @@ internal static class ThreadIO {
 }
 ```
 
+> **注意（PowerShell 适用性）**　PowerShell 没有 P/Invoke 声明语法，需要在脚本中用 `Add-Type -TypeDefinition` 内联 C# 的 `[DllImport]` 声明来调用同样的 Win32 API。此段保留 C# 形式作为示例。
+
 ① Windows SuperFetch 功能就利用了低优先级 I/O 请求。
 
 多个线程同时对共享数据进行只读访问是没有任何问题的。例如，许多应用程序都会在它们初始化期间创建一些数据结构。初始化完成后，应用程序就可以创建它希望的任何数量的线程；如果所有线程都只是查询数据，那么所有线程都能同时查询，无需获取或释放一个锁。**String** 类型便是这样的一个例子：一旦创建好 **String** 对象，它就是“不可变”(immutable)的。所以，许多线程能同时访问一个 **String** 对象，**String** 对象没有被破坏之虞。
@@ -434,9 +442,9 @@ internal static class ThreadIO {
 
 要郑重声明的是，使一个方法线程安全，并不是说它一定要在内部获取一个线程同步锁。线程安全的方法意味着在两个线程试图同时访问数据时，数据不会被破坏。**System.Math** 类有一个静态 **Max** 方法，它像下面这样实现：
 
-```csharp
-public static Int32 Max(Int32 val1, Int32 val2) {
-    return (val1 < val2) ? val2 : val1;
+```powershell
+function Max([int] $val1, [int] $val2) {
+    if ($val1 -lt $val2) { $val2 } else { $val1 }
 }
 ```
 
@@ -474,22 +482,21 @@ CLR 的许多线程同步构造实际上只是 “Win32 线程同步构造” �
 
 CLR 保证对以下数据类型的变量的读写是原子性的：Boolean、Char、(S)Byte、(U)Int16、(U)Int32、(U)IntPtr、Single 以及引用类型。这意味着变量中的所有字节都一次性读取或写入。例如，假定有以下类：
 
-```csharp
-internal static class SomeType {
-    public static Int32 x = 0;
-}
+```powershell
+# 相当于一个静态类及静态字段 x
+$script:x = 0
 ```
 
 然后，如果一个线程执行这一行代码：
 
-```csharp
-SomeType.x = 0x01234567;
+```powershell
+$script:x = 0x01234567
 ```
 
 x 变量会一次性（原子性）地从 0x00000000 变成 0x01234567。另一个线程不可能看到处于中间状态的值。例如，不可能有别的线程查询 SomeType.x 并得到值 0x01230000。假定上述 SomeType 类中的 x 字段是一个 Int64，那么当一个线程执行以下代码时：
 
-```csharp
-SomeType.x = 0x0123456789abcdef;
+```powershell
+$script:x = 0x0123456789abcdef
 ```
 
 另一个线程可能查询 x，并得到值 0x0123456700000000 或 0x0000000089abcdef 值，因为读取和写入操作不是原子性的。这称为一次 torn read②。
@@ -579,21 +586,23 @@ internal sealed class ThreadSharingData {
         if (m_flag == 1)
 ```
 
-```csharp
-private Int32 m_value = 0;
+```powershell
+# PowerShell 没有 volatile 字段修饰，用显式的 Volatile 调用来表达
+$script:m_value = 0
 
-// 这个方法由一个线程执行
-public void Thread1() {
-    // 注意：在将 1 写入 m_flag 之前，必须先将 5 写入 m_value
-    m_value = 5;
-    Volatile.Write(ref m_flag, 1);
+# 这个方法由一个线程执行
+function Thread1 {
+    # 注意：在将 1 写入 m_flag 之前，必须先将 5 写入 m_value
+    $script:m_value = 5
+    [System.Threading.Volatile]::Write([ref]$script:m_flag, 1)
 }
 
-// 这个方法由另一个线程执行
-public void Thread2() {
-    // 注意：m_value 必然在读取了 m_flag 之后读取
-    if (Volatile.Read(ref m_flag) == 1)
-        Console.WriteLine(m_value);
+# 这个方法由另一个线程执行
+function Thread2 {
+    # 注意：m_value 必然在读取了 m_flag 之后读取
+    if ([System.Threading.Volatile]::Read([ref]$script:m_flag) -eq 1) {
+        Write-Output $script:m_value
+    }
 }
 ```
 
@@ -704,6 +713,8 @@ private void AllDone(CoordinationStatus status) {
 }
 ```
 
+> **注意（PowerShell 适用性）**　`MultiWebRequests` 依赖 `ContinueWith` 在线程池线程上回调、`AsyncCoordinator` 以及 `await` 组合逻辑，超越脚本可直接表达的范畴；此段仅说明 `Interlocked` 计数/令牌工具在协调代码中的典型用法。
+
 可以看出，上述代码并没有直接使用 Interlocked 的任何方法，因为我将所有协调代码都放到可重用的 AsyncCoordinator 类中。该类会在以后详细解释。我想先说明一下这个类的作用。构造一个 MultiWebRequests 类时，会先初始化一个 AsyncCoordinator 和包含了一组服务器 URI(及其将来结果)的字典。然后，它以异步方式一个接一个地发出所有 Web 请求。为此，它首先调用 AsyncCoordinator 的 AboutToBegin 方法，向它传递要发出的请求数量。然后，它调用 HttpClient 的 GetByteArrayAsync 来初始化请求。这会返回一个 Task，我随即在这个 Task 上调用 ContinueWith，确保在服务器有了响应之后，我的 ComputeResult 方法可通过许多线程池线程并发处理结果。对 Web 服务器的所有请求都发出之后，将调用 AsyncCoordinator 的 AllBegun 方法，向它传递要在所有操作完成后执行的方法(AllDone)以及一个超时值。每收到一个 Web 服务器响应，线程池线程都会调用 MultiWebRequests
 
 - ① 可改写代码，在 for 循环前调用一次 m_ac.AboutToBegin(m_requests.Count)，而不是每次循环迭代都调用 AboutToBegin。
@@ -741,6 +752,8 @@ internal struct SimpleSpinLock {
     }
 }
 ```
+
+> **注意（PowerShell 适用性）**　`SimpleSpinLock` 是 `struct`，且把字段以 `ref` 传给 `Interlocked.Exchange`。PowerShell 既没有 `struct`，也不能对类属性取 `[ref]`，因此无法等同改写；脚本中应直接使用 .NET 提供的 `[System.Threading.SpinLock]`，并通过其 `Enter([ref]$taken)` / `Exit()` 使用。
 
 下面这个类展示了如何使用 **SimpleSpinLock**：
 
@@ -847,6 +860,8 @@ public static Int32 Maximum(ref Int32 target, Int32 value) {
 }
 ```
 
+> **注意（PowerShell 适用性）**　`Maximum` 用 `ref` 参数把 `target` 的地址交给 `Interlocked.CompareExchange`。PowerShell 函数可以用 `[ref]` 参数，但无法把类成员/脚本变量直接按引用传入 `CompareExchange` 并保持与原示例完全一致的原子语义；实际脚本中更稳妥的做法是直接使用 .NET 的 `[System.Threading.Interlocked]` 静态方法，或对单个变量使用 `[ref]`。此段保留 C# 形式作原理说明。
+
 现在解释一下实际发生的事情。进入方法后，**currentVal** 被初始化为方法开始执行时的 **target** 值。然后，在循环内部，**startVal** 被初始化为同一个值。可用 **startVal** 执行你希望的任何操作。这个操作可以非常复杂，可以包含成千上万行代码。但最终要得到一个结果，并将结果放到 **desiredVal** 中。本例判断 **startVal** 和 **value** 哪个最大。
 
 现在，当这个操作进行时，其他线程可能更改 **target**。虽然机率很小，但仍是有可能发生的。如果真的发生，**desiredVal** 的值就是基于存储在 **startVal** 中的旧值而获得的，而非基于 **target** 的新值。这时就不应更改 **target**。我们用 **Interlocked.CompareExchange** 方法确保在没有其他线程更改 **target** 的前提下将 **target** 的值更改为 **desiredVal**。该方法验证 **target**
@@ -946,27 +961,22 @@ public abstract class WaitHandle : MarshalByRefObject, IDisposable {
 
 内核模式构造的一个常见用途是创建在任何时刻只允许它的一个实例运行的应用程序。这种单实例应用程序的例子包括 Microsoft Office Outlook、Windows Live Messenger、Windows Media Player 和 Windows Media Center。下面展示了如何实现一个单实例应用程序：
 
-```csharp
-using System;
-using System.Threading;
+```powershell
+$createdNew = $false
 
-public static class Program {
-    public static void Main() {
-        Boolean createdNew;
-
-        // 尝试创建一个具有指定名称的内核对象
-        using (new Semaphore(0, 1, "SomeUniqueStringIdentifyingMyApp", out createdNew)) {
-            if (createdNew) {
-                // 这个线程创建了内核对象，所以肯定没有这个应用程序
-                // 的其他实例正在运行。在这里运行应用程序的其余部分...
-            } else {
-                // 这个线程打开了一个具有相同字符串名称的、现有的内核对象；
-                // 表明肯定正在运行这个应用程序的另一个实例。
-                // 这里没什么可以做的事情，所以从 Main 返回，终止应用程序
-                // 的这个额外的实例。
-            }
-        }
+# 尝试创建一个具有指定名称的内核对象
+$sem = [System.Threading.Semaphore]::new(0, 1, 'SomeUniqueStringIdentifyingMyApp', [ref]$createdNew)
+try {
+    if ($createdNew) {
+        # 这个线程创建了内核对象，所以肯定没有这个应用程序
+        # 的其他实例正在运行。在这里运行应用程序的其余部分...
+    } else {
+        # 这个线程打开了一个具有相同字符串名称的、现有的内核对象；
+        # 表明肯定正在运行这个应用程序的另一个实例。
+        # 这里没什么可以做的事情，所以直接结束脚本，终止这个额外的实例。
     }
+} finally {
+    $sem.Dispose()
 }
 ```
 
@@ -1009,25 +1019,25 @@ public sealed class ManualResetEvent : EventWaitHandle {
 
 可用自动重置事件轻松创建线程同步锁，它的行为和前面展示的 SimpleSpinLock 类似：
 
-```csharp
-internal sealed class SimpleWaitLock : IDisposable {
-    private readonly AutoResetEvent m_available;
+```powershell
+class SimpleWaitLock : System.IDisposable {
+    hidden [System.Threading.AutoResetEvent] $m_available
 
-    public SimpleWaitLock() {
-        m_available = new AutoResetEvent(true); // 最开始可自由使用
+    SimpleWaitLock() {
+        $this.m_available = [System.Threading.AutoResetEvent]::new($true) # 最开始可自由使用
     }
 
-    public void Enter() {
-        // 在内核中阻塞①，直到资源可用
-        m_available.WaitOne();
+    [void] Enter() {
+        # 在内核中阻塞①，直到资源可用
+        [void]$this.m_available.WaitOne()
     }
 
-    public void Leave() {
-        // 让另一个线程访问资源
-        m_available.Set();
+    [void] Leave() {
+        # 让另一个线程访问资源
+        [void]$this.m_available.Set()
     }
 
-    public void Dispose() { m_available.Dispose(); }
+    [void] Dispose() { $this.m_available.Dispose() }
 }
 ```
 
@@ -1111,25 +1121,27 @@ public sealed class Semaphore : WaitHandle {
 
 可像下面这样用信号量重新实现 SimpleWaitLock，允许多个线程并发访问一个资源(如果所有线程以只读方式访问资源，就是安全的)：
 
-```csharp
-public sealed class SimpleWaitLock : IDisposable {
-    private Semaphore m_available;
+```powershell
+# 注意：PowerShell 类名在会话内必须唯一；此处与前一个 SimpleWaitLock 同名，
+# 需在新会话中运行，或把类改名为 SimpleWaitLock2 等
+class SimpleWaitLock : System.IDisposable {
+    hidden [System.Threading.Semaphore] $m_available
 
-    public SimpleWaitLock(Int32 maxConcurrent) {
-        m_available = new Semaphore(maxConcurrent, maxConcurrent);
+    SimpleWaitLock([int] $maxConcurrent) {
+        $this.m_available = [System.Threading.Semaphore]::new($maxConcurrent, $maxConcurrent)
     }
 
-    public void Enter() {
-        // 在内核中阻塞直到资源可用
-        m_available.WaitOne();
+    [void] Enter() {
+        # 在内核中阻塞直到资源可用
+        [void]$this.m_available.WaitOne()
     }
 
-    public void Leave() {
-        // 让其他线程访问资源
-        m_available.Release(1);
+    [void] Leave() {
+        # 让其他线程访问资源
+        [void]$this.m_available.Release(1)
     }
 
-    public void Dispose() { m_available.Close(); }
+    [void] Dispose() { $this.m_available.Close() }
 }
 ```
 
@@ -1152,24 +1164,24 @@ public sealed class Mutex : WaitHandle {
 
 通常，当一个方法获取了一个锁，然后调用也需要锁的另一个方法，就需要一个递归锁。如下代码所示：
 
-```csharp
-internal class SomeClass : IDisposable {
-    private readonly Mutex m_lock = new Mutex();
+```powershell
+class SomeClass : System.IDisposable {
+    hidden [System.Threading.Mutex] $m_lock = [System.Threading.Mutex]::new()
 
-    public void Method1() {
-        m_lock.WaitOne();
-        // 随便做什么事情...
-        Method2(); // Method2 递归地获取锁
-        m_lock.ReleaseMutex();
+    [void] Method1() {
+        [void]$this.m_lock.WaitOne()
+        # 随便做什么事情...
+        $this.Method2() # Method2 递归地获取锁
+        $this.m_lock.ReleaseMutex()
     }
 
-    public void Method2() {
-        m_lock.WaitOne();
-        // 随便做什么事情...
-        m_lock.ReleaseMutex();
+    [void] Method2() {
+        [void]$this.m_lock.WaitOne()
+        # 随便做什么事情...
+        $this.m_lock.ReleaseMutex()
     }
 
-    public void Dispose() { m_lock.Dispose(); }
+    [void] Dispose() { $this.m_lock.Dispose() }
 }
 ```
 
@@ -1177,44 +1189,46 @@ internal class SomeClass : IDisposable {
 
 如果需要递归锁，可以使用一个 **AutoResetEvent** 来简单地创建一个：
 
-```csharp
-internal sealed class RecursiveAutoResetEvent : IDisposable {
-    private AutoResetEvent m_lock = new AutoResetEvent(true);
-    private Int32 m_owningThreadId = 0;
-    private Int32 m_recursionCount = 0;
+```powershell
+class RecursiveAutoResetEvent : System.IDisposable {
+    hidden [System.Threading.AutoResetEvent] $m_lock = [System.Threading.AutoResetEvent]::new($true)
+    hidden [int] $m_owningThreadId = 0
+    hidden [int] $m_recursionCount = 0
 
-    public void Enter() {
-        // 获取调用线程的唯一 Int32 ID
-        Int32 currentThreadId = Thread.CurrentThread.ManagedThreadId;
+    [void] Enter() {
+        # 获取调用线程的唯一 Int32 ID
+        $currentThreadId = [System.Threading.Thread]::CurrentThread.ManagedThreadId
 
-        // 如果调用线程拥有锁，就递增递归计数
-        if (m_owningThreadId == currentThreadId) {
-            m_recursionCount++;
-            return;
+        # 如果调用线程拥有锁，就递增递归计数
+        if ($this.m_owningThreadId -eq $currentThreadId) {
+            $this.m_recursionCount++
+            return
         }
 
-        // 调用线程不拥有锁，等待它
-        m_lock.WaitOne();
+        # 调用线程不拥有锁，等待它
+        [void]$this.m_lock.WaitOne()
 
-        // 调用线程现在拥有了锁，初始化拥有线程的 ID 和递归计数
-        m_owningThreadId = currentThreadId;
-        m_recursionCount = 1;
+        # 调用线程现在拥有了锁，初始化拥有线程的 ID 和递归计数
+        $this.m_owningThreadId = $currentThreadId
+        $this.m_recursionCount = 1
     }
 
-    public void Leave() {
-        // 如果调用线程不拥有锁，就出错了
-        if (m_owningThreadId != Thread.CurrentThread.ManagedThreadId)
-            throw new InvalidOperationException();
+    [void] Leave() {
+        # 如果调用线程不拥有锁，就出错了
+        if ($this.m_owningThreadId -ne [System.Threading.Thread]::CurrentThread.ManagedThreadId) {
+            throw [System.InvalidOperationException]::new()
+        }
 
-        // 从递归计数中减 1
-        if (--m_recursionCount == 0) {
-            // 如果递归计数为 0，表明没有线程拥有锁
-            m_owningThreadId = 0;
-            m_lock.Set(); // 唤醒一个正在等待的线程(如果有的话)
+        # 从递归计数中减 1
+        $this.m_recursionCount--
+        if ($this.m_recursionCount -eq 0) {
+            # 如果递归计数为 0，表明没有线程拥有锁
+            $this.m_owningThreadId = 0
+            [void]$this.m_lock.Set() # 唤醒一个正在等待的线程(如果有的话)
         }
     }
 
-    public void Dispose() { m_lock.Dispose(); }
+    [void] Dispose() { $this.m_lock.Dispose() }
 }
 ```
 

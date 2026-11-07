@@ -59,6 +59,8 @@ internal sealed class MyClass {
 
 在这里，**StructLayout** 特性应用于 **OSVERSIONINFO** 类，**MarshalAs** 特性应用于 **CSDVersion** 字段，**DllImport** 特性应用于 **GetVersionEx** 方法，而 **In** 和 **Out** 特性应用于 **GetVersionEx** 方法的 ver 参数。每种编程语言都定义了将定制特性应用于目标元素所采用的语法。例如，Microsoft Visual Basic .NET 要求使用一对尖括号（<>）而不是方括号。
 
+> 注：PowerShell 脚本本身没有向类型或成员附加特性的语法（PowerShell 类也不支持特性声明）；要定义带特性的类型，需用 `Add-Type -TypeDefinition` 编译 C# 源码。反过来，PowerShell 读取已有元数据中的特性非常方便，例如 `[System.IO.File]::GetCustomAttributes($true)` 或 `[type]::GetMembers() | ForEach-Object { $_.GetCustomAttributes($false) }`。
+
 CLR 允许将特性应用于可在文件的元数据中表示的几乎任何东西。不过，最常应用特性的目标元素是类型和方法。
 
 > **注意**　将特性应用于源代码中的目标元素时，C#编译器允许省略 Attribute 后缀以减少字符量，并提升源代码的可读性。本章许多示例代码都利用了 C#提供的这一便利。例如，许多源代码用的都是 `[DllImport(...)]`，而不是 `[DllImportAttribute(...)]`。
@@ -239,6 +241,8 @@ internal class DerivedType : BaseType
 
 应用特性时必须传递一个编译时常量表达式，它与特性类定义的类型匹配。在特性类定义了一个 Type 参数、Type 字段或者 Type 属性的任何地方，都必须使用 C# typeof 操作符（如下例所示）。在特性类定义了一个 Object 参数、Object 字段或者 Object 属性的任何地方，都可传递一个 Int32、String 或其他任何常量表达式（包括 null）。如果常量表达式代表值类型，那么在运行时构造特性的实例时会对值类型进行装箱。以下是一个示例特性及其用法：
 
+> 注：C# 的 `typeof` 在 PowerShell 中没有对应关键字，而是直接用类型字面量：`[System.Math]` 表示 `Math` 的类型对象，`[System.Console]`、`[int]` 等同理。在特性构造器中需要 `Type` 参数的位置，脚本里同样传入类型字面量即可，例如 `[System.Diagnostics.DebuggerDisplay]` 这类由 C# 代码声明的特性无法在脚本中直接“应用”，只能读取。
+
 ```csharp
 using System;
 
@@ -286,6 +290,8 @@ public override String ToString() {
 ```
 
 上述代码调用 Type 的 IsDefined 方法，要求系统查看枚举类型的元数据，检查是否关联了 FlagsAttribute 类的实例。如果 IsDefined 返回 true，表明 FlagsAttribute 的一个实例已与枚举类型关联，ToString 方法认为值包含了一个位标志(bit flag)集合。如果 IsDefined 返回 false，Format 方法认为值是普通的枚举类型。
+
+> 注：PowerShell 里可直接复刻这几步：`[System.ConsoleColor].IsDefined([System.FlagsAttribute], $false)`，或 `[System.ConsoleColor].GetCustomAttributes($false)` 取得特性实例数组。注意 PowerShell 中类型字面量本身就是 `System.Type` 对象，所以不需要 `typeof`；`GetCustomAttributes` 的 `inherit` 参数是布尔值，必须显式传入。
 
 因此，在定义定制特性时，也必须实现一些代码来检测某些目标上是否存在该特性类的实例，然后执行一些逻辑分支代码。这样定制特性才能真正发挥作用。
 
@@ -443,63 +449,61 @@ internal sealed class AccountsAttribute : Attribute {
         // 注意：如果你确信基类正确实现了 Match，
         // 那么下面这一行可以删除
         if (obj == null) return false;
-```
 
-```csharp
-// 如果对象属于不同的类型，肯定不匹配
-// 注意：如果你信任基类正确实现了 Match，
-// 那么下面这一行可以删除
-if (this.GetType() != obj.GetType()) return false;
+        // 如果对象属于不同的类型，肯定不匹配
+        // 注意：如果你信任基类正确实现了 Match，
+        // 那么下面这一行可以删除
+        if (this.GetType() != obj.GetType()) return false;
 
-// 将 obj 转型为我们的类型以访问字段
-// 注意：转型不可能失败，因为我们知道
-// 两个对象是相同的类型
-AccountsAttribute other = (AccountsAttribute)obj;
+        // 将 obj 转型为我们的类型以访问字段
+        // 注意：转型不可能失败，因为我们知道
+        // 两个对象是相同的类型
+        AccountsAttribute other = (AccountsAttribute)obj;
 
-// 比较字段，判断它们是否有相同的值
-// 这个例子判断'this'的帐户是不是
-// other 的帐户的一个子集
-if ((other.m_accounts & m_accounts) != m_accounts)
-    return false;
+        // 比较字段，判断它们是否有相同的值
+        // 这个例子判断'this'的帐户是不是
+        // other 的帐户的一个子集
+        if ((other.m_accounts & m_accounts) != m_accounts)
+            return false;
 
-return true; // 对象匹配
-}
+        return true; // 对象匹配
+    }
 
-public override Boolean Equals(Object obj)
-{
-    // 如果基类实现了 Equals，而且基类不是
-    // Object，就取消对下面这行代码的注释：
-    // if (!base.Equals(obj)) return false
+    public override Boolean Equals(Object obj)
+    {
+        // 如果基类实现了 Equals，而且基类不是
+        // Object，就取消对下面这行代码的注释：
+        // if (!base.Equals(obj)) return false
 
-    // 由于'this'不为 null，所以假如 object 为 null，
-    // 那么对象肯定不相等
-    // 注意：如果你信任基类正确实现了 Equals，
-    // 那么下面这一行可以删除
-    if (obj == null) return false;
+        // 由于'this'不为 null，所以假如 object 为 null，
+        // 那么对象肯定不相等
+        // 注意：如果你信任基类正确实现了 Equals，
+        // 那么下面这一行可以删除
+        if (obj == null) return false;
 
-    // 如果对象属于不同的类型，肯定不相等
-    // 注意：如果你信任基类正确实现了 Equals，
-    // 那么下面这一行可以删除
-    if (this.GetType() != obj.GetType()) return false;
+        // 如果对象属于不同的类型，肯定不相等
+        // 注意：如果你信任基类正确实现了 Equals，
+        // 那么下面这一行可以删除
+        if (this.GetType() != obj.GetType()) return false;
 
-    // 将 obj 转型为我们的类型以访问字段
-    // 注意：转型不可能失败，因为我们知道
-    // 两个对象是相同的类型
-    AccountsAttribute other = (AccountsAttribute)obj;
+        // 将 obj 转型为我们的类型以访问字段
+        // 注意：转型不可能失败，因为我们知道
+        // 两个对象是相同的类型
+        AccountsAttribute other = (AccountsAttribute)obj;
 
-    // 比较字段，判断它们是否有相同的值
-    // 这个例子判断'this'的帐户是不是
-    // 与 other 的帐户相同
-    if (other.m_accounts != m_accounts)
-        return false;
+        // 比较字段，判断它们是否有相同的值
+        // 这个例子判断'this'的帐户是不是
+        // 与 other 的帐户相同
+        if (other.m_accounts != m_accounts)
+            return false;
 
-    return true; // 对象相等
-}
+        return true; // 对象相等
+    }
 
-// 重写 GetHashCode，因为我们重写了 Equals
-public override Int32 GetHashCode() {
-    return (Int32)m_accounts;
-}
+    // 重写 GetHashCode，因为我们重写了 Equals
+    public override Int32 GetHashCode() {
+        return (Int32)m_accounts;
+    }
 }
 
 [Accounts(Accounts.Savings)]
@@ -551,6 +555,8 @@ Program types can NOT write checks.
 本节将讨论如何利用另一种技术检测应用于元数据记录项的特性。在某些安全性要求严格的场合，这个技术能保证不执行从 Attribute 派生的类中的代码。毕竟，调用 Attribute 的 GetCustomAttribute 或者 GetCustomAttributes 方法时，这些方法会在内部调用特性类的构造器，而且可能调用属性的 set 访问器方法。此外，首次访问类型会造成 CLR 调用类型的类型构造器（如果有的话）。在构造器、set 访问器方法以及类型构造器中，可能包含每次查找特性都要执行的代码。这就相当于允许未知代码在 AppDomain 中运行，所以存在安全隐患。
 
 可用 System.Reflection.CustomAttributeData 类在查找特性的同时禁止执行特性类中的代码。该类定义了静态方法 GetCustomAttributes 来获取与目标关联的特性。方法有 4 个重载版本，分别获取一个 Assembly、Module、ParameterInfo 和 MemberInfo。该类在 System.Reflection 命名空间（将在第二十三章“程序集加载和反射”讨论）中定义。通常，先用 Assembly 的静态方法 ReflectionOnlyLoad（也在第二十三章讨论）加载程序集，再用 CustomAttributeData 类分析这个程序集的元数据中的特性。简单地说，ReflectionOnlyLoad 以特殊方式加载程序集，期间会禁止 CLR 执行程序集中的任何代码；其中包括类型构造器。
+
+> 注：PowerShell 7（.NET Core）中 `Assembly.ReflectionOnlyLoad` 已不再支持，取而代之的是 `MetadataLoadContext`。若要只读元数据、不执行程序集代码，可用 `[System.Reflection.MetadataLoadContext]` 配合 `System.Reflection.PortableExecutable.PEReader` 加载；而 `[System.Reflection.CustomAttributeData]::GetCustomAttributes($member)` 在 PowerShell 中仍可直接调用，用于读取构造器参数和命名参数。
 
 CustomAttributeData 的 GetCustomAttributes 方法是一个工厂 (factory) 方法。也就是说，调用它会返回一个 IList<CustomAttributeData> 类型的对象，其中包含由 CustomAttributeData 对象构成的集合。集合中的每个元素都是应用于指定目标的一个定制特性。可查询每个 CustomAttributeData 对象的只读属性，判断特性对象如何构造和初始化。具体地说，Constructor 属性指出构造器方法将如何调用。ConstructorArguments 属性以一个 IList<CustomAttributeTypedArgument> 实例的形式返回将传给这个构造器的实参。而 NamedArguments 属性以一个 IList<CustomAttributeNamedArgument> 实例的形式，返回将设置的字段/属性。注意，之所以说“将”，是因为不会实际地调用构造器和 set 访问器方法。禁止执行特性类的任何方法增强了安全性。
 
@@ -709,5 +715,7 @@ public sealed class Program {
 ```
 
 编译器如果发现向目标元素应用了 CondAttribute 的实例，那么当含有目标元素的代码编译时，只有在定义 TEST 或 VERIFY 符号的前提下，编译器才会在元数据中生成特性信息。不过，特性类的定义元数据和实现仍存在于程序集内。
+
+> 注：条件特性依赖 C# 编译器的条件编译符号（`#define`/`/define`），是编译期行为。PowerShell 没有条件特性，也没有预处理指令；脚本中若想按条件决定是否保留某些逻辑，只能运行时用 `if` 判断，或用 `#if` 之外的做法（如检查环境变量、开关参数）来控制。同理，脚本无法“应用”特性，也就谈不上条件生成特性元数据。
 
 

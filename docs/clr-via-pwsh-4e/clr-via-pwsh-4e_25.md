@@ -25,6 +25,8 @@
 
 现在，只要写的是可验证的、类型安全的代码（不要用 C# unsafe 关键字），应用程序就不可能会出现内存被破坏的情况。内存仍有可能泄漏，但不像以前那样是默认行为。现在内存泄漏一般是因为在集合中存储了对象，但不需要对象的时候一直不去删除。
 
+> 注：PowerShell 里没有 `unsafe` 关键字，脚本本身也无法做指针运算，所以托管堆不会因脚本代码而被破坏。风险来自通过 `Add-Type` 编译的 C# 代码或 P/Invoke 拿到原生句柄：不安全代码被带进进程后，PowerShell 无法替它做类型安全检查。脚本中的内存泄漏表现为变量、事件订阅或 `[System.Collections.Generic.List[object]]` 等集合长期持有对象引用。
+
 为了进一步简化编程，开发人员经常使用的大多数类型都不需要步骤 4（摧毁资源的状态以进行清理）。所以，托管堆除了能避免前面提到的 bug，还能为开发人员提供一个简化的编程模型：分配并初始化资源并直接使用。大多数类型都无需资源清理，垃圾回收器会自动释放内存。
 
 使用需要特殊清理的类型时，编程模型还是像刚才描述的那样简单。只是有时需要尽快清理资源，而不是非要等着 GC① 介入。可在这些类中调用一个额外的方法（称为 Dispose），按照自己的节奏清理资源。另一方面，实现这样的类需要考虑到较多的问题（21.4 节会详细讨论）。一般只有包装了本机资源（文件、套接字和数据库连接等）的类型才需要特殊清理。
@@ -32,6 +34,8 @@
 #### 21.1.1 从托管堆分配资源
 
 CLR 要求所有对象都从托管堆分配。进程初始化时，CLR 划出一个地址空间区域作为托管堆。CLR 还要维护一个指针，我把它称作 **NextObjPtr**。该指针指向下一个对象在堆中的分配位置。刚开始的时候，**NextObjPtr** 设为地址空间区域的基地址。
+
+> 注：PowerShell 中新建对象同样走这条分配路径，只是入口不同：`[System.Text.StringBuilder]::new()`、`New-Object System.Text.StringBuilder` 或 `[pscustomobject]@{}` 都会在托管堆上创建对象并由 GC 管理，脚本无法指定分配位置，也拿不到 `NextObjPtr`。`[pscustomobject]` 本质上是 `PSObject` 包装的 `PSCustomObject` 实例，同样受 GC 管理。
 
 一个区域被非垃圾对象填满后，CLR 会分配更多的区域。这个过程一直重复，直至整个进程地址空间都被填满。所以，你的应用程序的内存受进程的虚拟地址空间的限制。32 位进程最多能分配 1.5 GB，64 位进程最多能分配 8 TB。
 
@@ -89,9 +93,7 @@ CLR 知道哪些对象可以幸存，哪些可以删除后，就进入 GC 的压
 
 #### 21.1.3 垃圾回收和调试
 
-一旦根离开作用域，它引用的对象就会变得“不可达”，GC 会回收其内存；不保证对象在
-
-方法的生存期中自始至终地存活。这会对应用程序产生有趣的影响。例如以下代码：
+一旦根离开作用域，它引用的对象就会变得“不可达”，GC 会回收其内存；不保证对象在方法的生存期中自始至终地存活。这会对应用程序产生有趣的影响。例如以下代码：
 
 ```csharp
 using System;
@@ -165,6 +167,14 @@ public static void Main() {
 现在编译代码(无/debug+编译器开关)并运行可执行文件，会发现 **TimerCallback** 方法被正确地重复调用，程序终于得到修正。现在发生的事情是，t 引用的对象必须存活，才能在它上面调用 **Dispose** 实例方法(t 中的值要作为 this 实参传给 **Dispose**)。真是讽刺，要显式要求释放计时器，它才能活到被释放的那一刻。
 
 > **注意** 读完本节的内容后，不必担心对象被过早回收这个问题。这里讨论之所以使用 **Timer** 类，是因为它具有其他类不具有的特殊行为。**Timer** 类的特点(和问题)在于，堆中存在的一个 **Timer** 对象会造成别的事情的发生：一个线程池线程定期调用一个方法。其他任何类型都不具有这个行为。例如，内存中存在的一个 **String** 对象不会造成别的事情的发生；字符串就那么“傻傻地呆在那里”。所以，我用 **Timer** 展示根的工作原理以及对象生存期与调试器的关系，讨论的重点并不是如何保持对象的存活。所有非 **Timer** 的对象都会根据应用程序的需要而自动存活。
+
+> 注：PowerShell 中变量的“根”由运行时的变量表、脚本块作用域和管道对象维持，不能像 C# 那样用 `t = null` 提前放弃引用；只要 `$t` 在当前作用域里仍有值，`[System.Threading.Timer]` 对象就存活。脚本里若必须显式释放，调用 `$t.Dispose()`。另外，PowerShell 的 `$null` 赋值同样只是把变量置空，是否回收仍取决于运行时。
+
+### 21.2　代：提升性能
+
+> 注：原文此处缺失 21.2 节开头的若干段正文（对“代”的定义及图 21-4、图 21-5），直接从图 21-6 的说明接续。补足上下文：CLR 把托管堆中的对象按存活时间分为第 0、1、2 三代，新对象总分配在第 0 代，每次垃圾回收后幸存的对象被提升到更高一代。
+
+> 注：本节的“预算”“提升”描述的是 .NET Framework 时代 GC 的典型行为；.NET Core / PowerShell 7 仍是三代模型且沿用分代假设，但各代预算由运行时自调节，不是固定数值。脚本中可用 `[System.GC]::MaxGeneration` 查询最大代数（返回 2），用 `[System.GC]::CollectionCount(0)` 查询第 0 代已发生的回收次数。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_471_0.png)
 
@@ -290,6 +300,8 @@ public static class GCNotification {
 
 可在很大程度上视大对象若无物。可忽略它们的存在。仅在出现解释不了的情况时（比如地址空间碎片化）才对它们进行特殊处理。
 
+> 注：85000 字节只是当前实现的阈值，不是规范常数。需要压缩大对象堆时，可在 PowerShell 中设置 `[System.Runtime.GCSettings]::LargeObjectHeapCompactionMode = [System.Runtime.GCLargeObjectHeapCompactionMode]::CompactOnce`，它只对下一次完整 GC 生效（实测 PowerShell 7 支持）。脚本里应尽量避免反复拼接超长字符串或反复创建接近该阈值的大 `byte[]`。
+
 #### 21.2.3 垃圾回收模式
 
 CLR 启动时会选择一个 GC 模式，进程终止前该模式不会改变。有两个基本 GC 模式。
@@ -302,6 +314,8 @@ CLR 启动时会选择一个 GC 模式，进程终止前该模式不会改变。
 - **服务器**：该模式针对服务器端应用程序优化 GC。被优化的主要是吞吐量和资源利用。GC 假定机器上没有运行其他应用程序（无论客户端还是服务器应用程序），并假定机器的所有 CPU 都可用来辅助完成 GC。该模式造成托管堆被拆分成几个区域（section），每个 CPU 一个。开始垃圾回收时，垃圾回收器在每个 CPU 上都运行一个特殊线程；每个线程都和其他线程并发回收它自己的区域。对于工作者线程（worker thread）行为一致的服务器应用程序，并发回收能很好地进行。这个功能要求应用程序在多 CPU 计算机上运行，使线程能真正地同时工作，从而获得性能的提升。
 
 应用程序默认以“工作站”GC 模式运行。寄宿①了 CLR 的服务器应用程序（比如 ASP.NET 或 Microsoft SQL Server）可请求 CLR 加载“服务器”GC。但如果服务器应用程序在单处理器计算机上运行，CLR 将总是使用“工作站”GC 模式。
+
+> 注：脚本里可直接查询当前模式：`[System.Runtime.GCSettings]::IsServerGC`。选择模式要在进程启动前决定，PowerShell 进程启动后无法切换；在工作站（客户端）GC 下，脚本里 `[GC]::Collect()` 的停顿通常比服务器 GC 短。若要给 PowerShell 进程启用服务器 GC，可在 .NET Core / PowerShell 7 使用的 `runtimeconfig.json` 中设置 `"System.GC.Server": true`；下文提到的 `gcServer` / `gcConcurrent` 元素属于 .NET Framework 的 `app.config`，对 PowerShell 7 不生效（PowerShell 5.1 随 .NET Framework 运行时，才读取这些元素）。
 
 ① hosts（动词）。注意，本书将 host 的动词形式统一翻译成“寄宿”，名词形式翻译成“宿主”。但在作动词用时，理解成“容纳”更佳。——译注
 
@@ -384,6 +398,8 @@ private static void LowLatencyDemo() {
 void Collect(Int32 generation, GCCollectionMode mode, Boolean blocking);
 ```
 
+> 注：PowerShell 可直接调用这些静态方法，例如 `[System.GC]::MaxGeneration` 返回 2，`[System.GC]::Collect()` 强制执行一次回收，`[System.GC]::Collect(2, [System.GCCollectionMode]::Optimized, $true)` 对应上面的三参数重载。注意不要用 `Collect` 来“清理变量”，它作用于整个进程，脚本无法据此提前释放某个对象。
+
 表 21-2　GCCollectionMode 枚举类型定义的符号
 
 | 符号名称 | 说明 |
@@ -406,6 +422,8 @@ void Collect(Int32 generation, GCCollectionMode mode, Boolean blocking);
 Int32 CollectionCount(Int32 generation);
 Int64 GetTotalMemory(Boolean forceFullCollection);
 ```
+
+> 注：PowerShell 对应写法为 `[System.GC]::CollectionCount(0)` 和 `[System.GC]::GetTotalMemory($true)`（单位是字节）。`GetTotalMemory($true)` 会先强制一次完整回收再统计，代价较高，只宜用于测量；`[System.GC]::GetGeneration($obj)` 则可查询某个对象当前已被提升到第几代。
 
 为了评估(profile)特定代码块的性能，我经常在代码块前后写代码调用这些方法，并计算差异。这使我能很好地把握代码块对进程工作集的影响，并了解执行代码块时发生了多少次垃圾回收。数字太大，就知道应该花更多的时间调整代码块中的算法。
 
@@ -430,6 +448,8 @@ Int64 GetTotalMemory(Boolean forceFullCollection);
 包含本机资源的类型被 GC 时，GC 会回收对象在托管堆中使用的内存。但这样会造成本机资源（GC 对它一无所知）的泄漏，这当然是不允许的。所以，CLR 提供了称为**终结**（finalization）的机制，允许对象在被判定为垃圾之后，但在对象内存被回收之前执行一些代码。任何包装了本机资源（文件、网络连接、套接字、互斥体）的类型都支持终结。CLR 判定一个对象不可达时，对象将终结它自己，释放它包装的本机资源。之后，GC 会从托管堆回收对象。
 
 终极基类 **System.Object** 定义了受保护的虚方法 **Finalize**。垃圾回收器判定对象是垃圾后，会调用对象的 **Finalize** 方法（如果重写）。Microsoft 的 C# 团队认为 **Finalize** 在编程语言中需要特殊语法(类似于 C#要求用特殊语法定义构造器)。因此，C#要求在类名前添加~符号来定义 **Finalize** 方法，如下例所示：
+
+> 注：PowerShell 没有析构器/终结器语法，脚本无法重写 `Finalize`。要包装本机资源，只能在 `Add-Type` 中用 C# 声明类型（派生 `System.Runtime.InteropServices.SafeHandle` 或实现 `IDisposable`），或者直接使用 FCL 已有的类型（`FileStream`、`SafeWaitHandle` 等）。脚本能做的是显式调用它们的 `Dispose()`，而不是定义终结逻辑。
 
 ```csharp
 internal sealed class SomeType {
@@ -540,6 +560,8 @@ public abstract class SafeHandleZeroOrMinusOneIsInvalid : SafeHandle {
     public override Boolean IsInvalid {
 ```
 
+> 注：原文此处的代码块被截断，`IsInvalid` 的属性体与类的结尾缺失。按 FCL 中的实现，该属性为 `get { return handle == IntPtr.Zero || handle == new IntPtr(-1); }`，随后以 `}` 结束类。紧跟其后的 `SomeType` 示例也缺少引导段落，其内容是对比 P/Invoke 原型返回 `IntPtr` 与返回 `SafeWaitHandle` 两种写法的健壮性。
+
 ```csharp
 internal static class SomeType {
     [DllImport("Kernel32", CharSet=CharSet.Unicode, EntryPoint="CreateEvent")]
@@ -584,30 +606,26 @@ private static extern Boolean SetEvent(SafeWaitHandle swh);
 
 假定要写代码来创建一个临时文件，向其中写入一些字节，然后删除文件。开始可能会像下面这样写代码：
 
-```csharp
-using System;
-using System.IO;
+```powershell
+# 等效 PowerShell 写法
+# 创建要写入临时文件的字节
+[byte[]]$bytesToWrite = 1, 2, 3, 4, 5
 
-public static class Program {
-    public static void Main() {
-        // 创建要写入临时文件的字节
-        Byte[] bytesToWrite = new Byte[] { 1, 2, 3, 4, 5 };
+# 创建临时文件
+$fs = [System.IO.FileStream]::new('Temp.dat', [System.IO.FileMode]::Create)
 
-        // 创建临时文件
-        FileStream fs = new FileStream("Temp.dat", FileMode.Create);
+# 将字节写入临时文件
+$fs.Write($bytesToWrite, 0, $bytesToWrite.Length)
 
-        // 将字节写入临时文件
-        fs.Write(bytesToWrite, 0, bytesToWrite.Length);
-
-        // 删除临时文件
-        File.Delete("Temp.dat"); // 抛出 IOException 异常
-    }
-}
+# 删除临时文件（文件仍打开，Windows 上抛 IOException）
+Remove-Item Temp.dat
 ```
 
 遗憾的是，生成并运行上述代码，它也许能工作，但大多数时候都不能。问题在于 File 的静态 Delete 方法要求 Windows 删除一个仍然打开的文件。所以 Delete 方法会抛出 System.IO.IOException 异常，并显示以下字符串消息：**文件"Temp.dat"正由另一进程使用，因此该进程无法访问此文件。**
 
 但某些情况下，文件可能“误打误撞”地被删除！如果另一线程不知怎么造成了一次垃圾回收，而且这次垃圾回收刚好在调用 Write 之后、调用 Delete 之前发生，那么 FileStream 的 SafeFileHandle 字段的 Finalize 方法就会被调用，这会关闭文件，随后 Delete 操作也就可以正常运行。但发生这种情况的概率很小，上述代码无法运行的可能性在 99%以上。
+
+> 注：PowerShell 版同样会失败，`Remove-Item Temp.dat` 会报“文件正由另一进程使用”。区别在于 PowerShell 默认把这类错误当作非终止错误：显示后继续执行，不会像 C# 那样中断脚本；若要让脚本能 `try/catch` 捕获，需写成 `Remove-Item Temp.dat -ErrorAction Stop`。
 
 类如果想允许使用者控制类所包装的本机资源的生存期，就必须实现如下所示的 IDisposable 接口。
 
@@ -637,10 +655,16 @@ public static class Program {
         fs.Write(bytesToWrite, 0, bytesToWrite.Length);
 ```
 
+> 注：原文此处的代码块被截断，`fs.Dispose()`、`File.Delete("Temp.dat")` 及 `Main` 方法的结尾缺失。要点是：先调用 `Dispose()` 显式关闭文件，再调用 `Delete` 才能成功。其后两个脚注说明 dispose 模式的译名问题。
+
 - ① 实现了 IDisposable 接口，就实现了 dispose 模式。——译注
 - ② 文档将 disposal 和 dispose 翻译成“释放”。这里解释一下为什么不赞成这个翻译。在英语中，这个词的意思是“摆脱”或“除去”（get rid of）一个东西，尤其是在这个东西很难除去的情况下。之所以认为“释放”不恰当，除了和 release 一词冲突，还因为 dispose 强调了“清理”和“处置”，而且在完成（对象中包装的）资源的清理之后，对象占用的内存还暂时不会释放。所以，“dispose 一个对象”真正的意思是：清理或处置对象中包装的资源（比如它的字段引用的对象），然后等着在一次垃圾回收之后回收该对象占用的托管堆内存（此时才释放）。为避免误解，本书保留了 dispose 和 disposal 的原文。——译注
 
+> 注：PowerShell 没有 C# 的 `using` 语句（PowerShell 7 的 `using` 关键字仅用于导入命名空间/模块，与资源释放无关）。释放实现 `IDisposable` 的对象应写 `try { ... } finally { $fs.Dispose() }`。PowerShell 脚本的局部变量在作用域结束时即失去引用，但像 `FileStream` 这种包装了文件句柄的对象不会因此及时关闭文件，必须显式调用 `Dispose()`。
 
+
+
+> 注：原文在此处缺了小节标题和若干段过渡正文（说明本机资源占用与托管内存不成比例、GC 因此低估实际内存压力的问题）。以下讨论的 `GC.AddMemoryPressure`/`GC.RemoveMemoryPressure` 和 `HandleCollector` 就是为这种情形提供的辅助 API。
 
 例如，一个进程可以在执行垃圾回收之前分配数百个位图（它们用的托管内存太少了）。但如果进程操作许多位图，进程的内存消耗将以一个恐怖的速度增长。为了修正这个问题，GC 类提供了以下两个静态方法：
 
@@ -825,6 +849,10 @@ LimitedResource create. Count=2
 LimitedResource create. Count=3
 ```
 
+> 注：原文在此处缺了“终结的内部工作原理”一节的标题和开头正文（终结列表 finalization list、图 21-13 的说明，以及对象 B～J 的初始状态），下文直接从扫描终结列表的中间过程开始，所以 B～J 出现得很突然。补足上下文：可终结对象在构造时被登记到终结列表中；GC 判定对象不可达后，若其类型重写了 `Finalize`，就把对它的引用从终结列表移到 `freachable` 队列，对象暂时“复活”，待专用终结线程执行完 `Finalize` 后，下一次 GC 才真正回收其内存。
+
+> 注：PowerShell 中可以用 `[System.GC]::WaitForPendingFinalizers()` 等待终结队列清空，用 `[System.GC]::SuppressFinalize($obj)` 在显式调用 `Dispose()` 后阻止终结。脚本本身不能定义终结器，这些方法只对 FCL 中已有的可终结对象有意义。
+
 垃圾回收开始时，对象 B，E，G，H，I 和 J 被判定为垃圾。垃圾回收器扫描终结列表以查找对这些对象的引用。找到一个引用后，该引用会从终结列表中移除，并附加到 **freachable** 队列。**freachable** 队列（发音是“F-reachable”）也是垃圾回收器的一种内部数据结构。队列中的每个引用都代表其 **Finalize** 方法已准备好调用的一个对象。图 21-14 展示了回收完毕后的托管堆。
 
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_496_0.png)
@@ -875,7 +903,9 @@ public struct GCHandle {
     // 实例方法，用于释放表中的记录项（索引设为 0）
 ```
 
+> 注：原文此处的代码块被截断，`Free`、`AddrOfPinnedObject`、`Target` 等实例成员声明及类的结尾缺失，紧随其后的正文也缺了“为什么需要固定（Pinned）对象”的引导段落。补足上下文：`GCHandle.Alloc(value, GCHandleType.Pinned)` 把对象钉在堆上，`AddrOfPinnedObject()` 返回其真实地址，`Free()` 解除固定。
 
+> 注：PowerShell 可以通过类型字面量使用这些 API，例如 `$h = [System.Runtime.InteropServices.GCHandle]::Alloc($bytes, [System.Runtime.InteropServices.GCHandleType]::Pinned)`、`$h.AddrOfPinnedObject()`、`$h.Free()`。但脚本没有 `fixed` 语句，也没有指针类型；只有通过 `Add-Type` 编译的 C# 或 P/Invoke 声明才需要显式固定。`GCHandle` 是值类型，把它赋给另一个变量会复制句柄值，`Free()` 时务必对最初的那个变量调用。
 
 垃圾回收器在内存中移动对象。String 对象被移走了，本机代码就会向已经不包含 String 对象的字符内容的内存进行读写——导致应用程序的行为无法预测。
 
@@ -909,6 +939,8 @@ unsafe public static void Go() {
 
 使用 C#的 fixed 语句比分配一个固定 GC 句柄高效得多。这里发生的事情是，C#编译器在 pbytes 局部变量上生成一个特殊的“已固定”标志。垃圾回收期间，GC 检查这个根的内容，如果根不为 null，就知道在压缩阶段不要移动变量引用的对象。C#编译器生成 IL 将 pbytes 局部变量初始化为 fixed 块起始处的对象的地址。在 fixed 块的尾部，编译器还会生成 IL 指令将 pbytes 局部变量设回 null，使变量不再引用任何对象。这样一来，下一次垃圾回收发生时，对象就可以移动了。
 
+> 注：PowerShell 没有 `fixed` 语句、指针类型和 `unsafe` 上下文，无法实现上面这种“局部变量自带已固定标志”的做法。等价效果只能通过 `[System.Runtime.InteropServices.GCHandle]::Alloc($obj, [System.Runtime.InteropServices.GCHandleType]::Pinned)` 加 `AddrOfPinnedObject()` 获得，或者把这段逻辑放进 `Add-Type` 编译的 C# 代码里。
+
 现在讨论一下另外两个标志，即 Weak 和 WeakTrackResurrection。它们既可用于和本机代码的互操作，也可在只有托管代码的时候使用。Weak 标志使你知道在什么时候一个对象被判定为垃圾，但这时对象的内存不一定被回收。WeakTrackResurrection 标志使你知道在什么时候对象的内存已被回收。两个标志中 Weak 更常用。事实上，我还没有见过任何人在真正的应用程序中用过 WeakTrackResurrection 标志。
 
 假定 Object-A 定时在 Object-B 上调用一个方法。但由于 Object-A 有一个对 Object-B 的引用，所以阻止了 Object-B 被垃圾回收。在极少数情况下，这可能并不是你希望的；相反，你可能希望只要 Object-B 仍然存活于托管堆中，Object-A 就调用 Object-B 的方法。为此，Object-A 要调用 GCHandle 的 Alloc 方法，向方法传递对 Object-B 的引用和 Weak 标志。Object-A 现在只需保存返回的 GCHandle 实例，而不是保存对 Object-B 的引用。
@@ -916,6 +948,8 @@ unsafe public static void Go() {
 在这种情况下，如果没有其他根引用 Object-B(保持其存活状态)，Object-B 就可以被垃圾回收。Object-A 每次想调用 Object-B 的方法时，都必须查询 GCHandle 的只读属性 Target。如果该属性返回非 null 的值，就表明 Object-B 依然存活。然后，Object-A 的代码会将返回的引用转型为 Object-B 的类型，并调用方法。如果 Target 属性返回 null，表明 Object-B 已被回收，Object-A 不再尝试调用方法。在这个时候，Object-A 的代码也许还要调用 GCHandle 的 Free 方法来释放 GCHandle 实例。
 
 由于使用 GCHandle 类型有些繁琐，而且要求提升的安全性才能在内存中保持或固定对象，所以 System 命名空间提供了一个 WeakReference<T>类来帮助你。
+
+> 注：PowerShell 可直接使用泛型弱引用，例如 `$wr = [System.WeakReference[object]]::new($obj)`。取值时 `TryGetTarget` 的 `out` 参数要先用 `[ref]` 传入且变量必须已初始化：`$target = $null; if ($wr.TryGetTarget([ref]$target)) { $target }`。注意同一作用域内若仍保留对 `$obj` 的引用，对象就不会被回收，弱引用始终有值；脚本里的变量作用域本身就是强引用。
 
 ```csharp
 public sealed class WeakReference<T> : ISerializable where T : class {
@@ -944,6 +978,8 @@ public sealed class ConditionalWeakTable<TKey, TValue>
     public delegate TValue CreateValueCallback(TKey key); // 嵌套的委托定义
 }
 ```
+
+> 注：PowerShell 中构造该类型要写出两个类型实参：`$cwt = [System.Runtime.CompilerServices.ConditionalWeakTable[object,string]]::new()`，然后可用 `$cwt.Add($key, 'value')`、`$cwt.TryGetValue($key, [ref]$value)`、`$cwt.Remove($key)`。`GetValue` 需要传入嵌套委托 `CreateValueCallback`，而 `[System.Runtime.CompilerServices.ConditionalWeakTable[object,string]+CreateValueCallback]` 这种嵌套泛型类型字面量在 PowerShell 中无法解析（报“特性或类型文本末尾缺少 ]”），脚本里通常避开它，改用上面几个成员。
 
 > **重要提示**　开发人员刚开始学习弱引用时，会马上想到它们在缓存情形中的用处。例如，他们会想到构造包含大量数据的一组对象，并创建对这些对象的弱引用。程序需要数据时就检查这些弱引用，看看包含这些数据的对象是否依然“健在”。对象还在，程序就直接使用对象；这样程序就会有较好的性能。但如果发生垃圾回收，包含数据的对象就会被销毁。而一旦需要重新创建数据，程序的性能就会受到影响。
 >
