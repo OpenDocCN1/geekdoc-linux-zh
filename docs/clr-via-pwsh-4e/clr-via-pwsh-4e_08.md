@@ -93,10 +93,10 @@ C# 语言规范称：“从风格上说，最好是使用关键字，而不是�
 
 - 3. FCL 的许多方法都将类型名作为方法名的一部分。例如，**BinaryReader** 类型的方法包括 **ReadBoolean**、**ReadInt32**、**ReadSingle** 等；而 **System.Convert** 类型的方法包括 **ToBoolean**、**ToInt32**、**ToSingle** 等。以下代码虽然语法没问题，但包含 float 的那一行显得很别扭，无法一下子判断该行的正确性：
 
-```csharp
-BinaryReader br = new BinaryReader(...);
-float val   = br.ReadSingle();   // 正确，但感觉别扭
-Single val  = br.ReadSingle();   // 正确，感觉自然
+```powershell
+$br = [System.IO.BinaryReader]::new($stream)
+$val = [float] $br.ReadSingle()    # 正确，但用 float 加速器读 Single 显得别扭
+$val = [single] $br.ReadSingle()   # 正确，类型名与 ReadSingle 对应
 ```
 
 - 4. 平时只用 C# 的许多程序员逐渐忘了还可以用其他语言写面向 CLR 的代码，“C# 主义”逐渐入侵类库代码。例如，Microsoft 的 FCL 几乎是完全用 C# 写的，FCL 团队向库中引入了像 **Array** 的 **GetLongLength** 这样的方法。该方法返回 **Int64** 值。这种值在 C# 中确实是 **long**，但在其他语言(比如 C++/CLI)中不是。另一个例子是 **System.Linq.Enumerable** 的 **LongCount** 方法。
@@ -134,12 +134,12 @@ Single val  = br.ReadSingle();   // 正确，感觉自然
 (123).ToString() + (456).ToString()    # "123456"
 ```
 
-另外，如果表达式由字面值构成，编译器在编译时就能完成表达式求值，从而增强应用程序性能：
+另外，如果表达式由字面值构成，C# 编译器在编译时就能完成表达式求值，从而增强应用程序性能；PowerShell 则在运行时求值：
 
-```csharp
-Boolean found = false;       // 生成的代码将 found 设为 0
-Int32 x = 100 + 20 + 3;       // 生成的代码将 x 设为 123
-String s = "a " + "bc";     // 生成的代码将 s 设为 "a bc"
+```powershell
+[bool]   $found = $false      # 运行时将 $found 设为 $false
+[int]    $x = 100 + 20 + 3    # 运行时求值，$x = 123
+[string] $s = "a " + "bc"     # 运行时求值，$s = "a bc"
 ```
 
 > 注：PowerShell 没有编译期常量折叠，字面值表达式在运行时求值（`100 + 20 + 3` 每次执行都会计算），字符串拼接同理；两者的性能差异通常可以忽略。
@@ -156,9 +156,11 @@ String s = "a " + "bc";     // 生成的代码将 s 设为 "a bc"
 
 对基元类型执行的许多算术运算都可能造成溢出：
 
-```csharp
-Byte b = 100;
-b = (Byte) (b + 200); // b 现在包含 44(或者十六进制值 2C)
+```powershell
+[byte] $b = 100
+# PowerShell 的 [byte] 转换在超出范围时会抛异常，
+# 这里用 -band 0xFF 模拟 C# 未检查（unchecked）时的回绕
+$b = [byte](($b + 200) -band 0xFF)   # b 现在包含 44（十六进制 2C）
 ```
 
 > **重要提示**　执行上述算术运算时，第一步要求所有操作数都扩大为 32 位值(或者 64 位值，如果任何操作数需要超过 32 位来表示的话)。所以 b 和 200(两个都不超过 32 位)首先转换成 32 位值，然后加到一起。结果是一个 32 位值(十进制 300，或十六进制 12C)。该值在存回变量 b 前必须转型为 Byte。C# 不隐式执行这个转型操作，这正是第二行代码需要强制转型 Byte 的原因。
@@ -1089,10 +1091,10 @@ C#是类型安全的编程语言。意味着所有表达式都解析成类型的
 
 然而，从 **dynamic** 转换成另一个静态类型时，结果类型当然是静态类型。很类似地，向类型的构造器传递一个或多个 **dynamic** 实参，结果是要构造的对象的类型：
 
-```csharp
-dynamic d = 123;
-var x = (Int32) d;             // 转换：'var x'等同于'Int32 x'
-var dt = new DateTime(d);      // 构造：'var dt'等同于'DateTime dt'
+```powershell
+$d = 123
+$x = [int] $d                # 转换：$x 为 Int32
+$dt = [datetime]::new($d)    # 构造：$dt 为 DateTime
 ```
 
 如果 **dynamic** 表达式被指定为 **foreach** 语句中的集合，或者被指定为 **using** 语句中的资源，编译器会生成代码，分别将表达式转型为非泛型 **System.IEnumerable** 接口或 **System.IDisposable** 接口。转型成功，就使用表达式，代码正常运行。转型失败，就抛出 **Microsoft.CSharp.RuntimeBinder.RuntimeBinderException** 异常。
@@ -1101,55 +1103,47 @@ var dt = new DateTime(d);      // 构造：'var dt'等同于'DateTime dt'
 
 > **重要提示**　**dynamic** 表达式其实是和 **System.Object** 一样的类型。编译器假定你在表达式上进行的任何操作都是合法的，所以不会生成任何警告或错误。但如果试图在运行时执行无效的操作，就会抛出异常。此外，Visual Studio 无法提供任何“智能感知”支持来帮助你写针对 **dynamic** 表达式的代码。虽然能定义对 **Object** 进行扩展的扩展方法（详情参见第八章“方法”），但不能定义对 **dynamic** 进行扩展的扩展方法。另外，不能将 lambda 表达式或匿名方法（都在第十七章“委托”中讨论）作为实参传给 **dynamic** 方法调用，因为编译器推断不了要使用的类型。
 
-以下示例 C# 代码使用 COM **IDispatch** 创建 Microsoft Office Excel 工作簿，将一个字符串放到单元格 A1 中：
+以下示例（C# 通过 COM **IDispatch**，PowerShell 通过 `New-Object -ComObject`）创建 Microsoft Office Excel 工作簿，将一个字符串放到单元格 A1 中：
 
-```csharp
-using Microsoft.Office.Interop.Excel;
-...
-public static void Main() {
-    Application excel = new Application();
-    excel.Visible = true;
-    excel.Workbooks.Add(Type.Missing);
-    ((Range)excel.Cells[1, 1]).Value = "Text in cell A1"; // 把这个字符串放到单元格 A1 中
-}
+```powershell
+$excel = New-Object -ComObject Excel.Application
+$excel.Visible = $true
+$excel.Workbooks.Add()                              # 对应 Workbooks.Add(Type.Missing)
+$excel.Cells.Item(1, 1).Value2 = "Text in cell A1"  # 把这个字符串放到单元格 A1 中
 ```
 
 没有 **dynamic** 类型，**excel.Cells[1, 1]** 的返回值就是 **Object** 类型，必须先转型为 **Range** 类型才能访问其 **Value** 属性。但在为 COM 对象生成可由“运行时”调用的包装(wrapper)程序集时，COM 方法中使用的任何 VARIANT 实际都转换成 **dynamic**；这称为动态化(dynamicification)。所以，由于 **excel.Cells[1, 1]** 是 **dynamic** 类型，所以不必显式转型为 Range 类型就能访问其 Value 属性。动态化显著简化了与 COM 对象的互操作。下面是简化后的代码：
 
-```csharp
-using Microsoft.Office.Interop.Excel;
-...
-public static void Main() {
-    Application excel = new Application();
-    excel.Visible = true;
-    excel.Workbooks.Add(Type.Missing);
-    excel.Cells[1, 1].Value = "Text in cell A1"; // 把这个字符串放到单元格 A1 中
-}
+```powershell
+$excel = New-Object -ComObject Excel.Application
+$excel.Visible = $true
+$excel.Workbooks.Add()
+$excel.Cells.Item(1, 1).Value2 = "Text in cell A1"  # 把这个字符串放到单元格 A1 中
 ```
 
 > 注：PowerShell 通过 `New-Object -ComObject Excel.Application` 创建 COM 对象，并且 `$excel.Cells[1,1].Value = '...'` 这类成员调用本来就是运行时绑定，不需要 C# 的 `dynamic` 动态化机制。PowerShell 7 基于 .NET，COM 互操作仅在 Windows 上可用。
 
 以下代码展示了如何利用反射在 String 目标("Jeffrey Richter")上调用方法("Contains")，向它传递一个 String 实参("ff")，并将 Boolean 结果存储到局部变量 result 中：
 
-```csharp
-Object target = "Jeffrey Richter";
-Object arg = "ff";
+```powershell
+$target = "Jeffrey Richter"
+$arg = "ff"
 
-// 在目标上查找和希望的实参类型匹配的方法
-Type[] argTypes = new Type[] { arg.GetType() };
-MethodInfo method = target.GetType().GetMethod("Contains", argTypes);
+# 在目标上查找与实参类型匹配的方法
+$argTypes = [type[]] @($arg.GetType())
+$method = $target.GetType().GetMethod("Contains", $argTypes)
 
-// 在目标上调用方法，传递希望的实参
-Object[] arguments = new Object[] { arg };
-Boolean result = Convert.ToBoolean(method.Invoke(target, arguments));
+# 在目标上调用方法，传递实参
+$arguments = @($arg)
+$result = [System.Convert]::ToBoolean($method.Invoke($target, $arguments))
 ```
 
-可利用 C#的 dynamic 类型重写上述代码，并使用获得了显著简化的语法：
+C# 可利用 dynamic 类型把上述代码写得更简洁；PowerShell 的调用本来就是运行时绑定，直接调用即可：
 
-```csharp
-dynamic target = "Jeffrey Richter";
-dynamic arg = "ff";
-Boolean result = target.Contains(arg);
+```powershell
+$target = "Jeffrey Richter"
+$arg = "ff"
+$result = $target.Contains($arg)
 ```
 
 我早先指出 C#编译器会生成 payload 代码，在运行时根据对象实际类型判断要执行什么操作。这些 payload 代码使用了称为运行时绑定器(runtime binder)的类。不同编程语言定义了不同的运行时绑定器来封装自己的规则。C#“运行时绑定器”的代码在 Microsoft.CSharp.dll 程序集中，生成使用 dynamic 关键字的项目必须引用该程序集。编译器的默认响应文件 CSC.rsp 中已引用了该程序集。记住是这个程序集中的代码知道在运行时生成代码，在+操作符应用于两个 Int32 对象时执行加法，在+操作符应用于两个 String 对象时执行连接。

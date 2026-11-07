@@ -584,10 +584,14 @@ internal sealed class ThreadSharingData {
     public void Thread2() {
         //注意：m_value 可能先于 m_flag 读取
         if (m_flag == 1)
+            Console.WriteLine(m_value);
+    }
+}
 ```
 
 ```powershell
 # PowerShell 没有 volatile 字段修饰，用显式的 Volatile 调用来表达
+$script:m_flag = 0
 $script:m_value = 0
 
 # 这个方法由一个线程执行
@@ -753,7 +757,7 @@ internal struct SimpleSpinLock {
 }
 ```
 
-> **注意（PowerShell 适用性）**　`SimpleSpinLock` 是 `struct`，且把字段以 `ref` 传给 `Interlocked.Exchange`。PowerShell 既没有 `struct`，也不能对类属性取 `[ref]`，因此无法等同改写；脚本中应直接使用 .NET 提供的 `[System.Threading.SpinLock]`，并通过其 `Enter([ref]$taken)` / `Exit()` 使用。
+> **注意（PowerShell 适用性）**　`SimpleSpinLock` 是 `struct`，其核心语义是按值复制、字段内联；PowerShell 没有 `struct`，只能用普通类模拟（PS 类方法内的字段确实可用 `[ref]$this.字段` 传给 `Interlocked`，实测可用），但无法复现值类型语义，因此不作等价改写。脚本中应直接使用 .NET 提供的 `[System.Threading.SpinLock]`，并通过其 `Enter([ref]$taken)` / `Exit()` 使用。
 
 下面这个类展示了如何使用 **SimpleSpinLock**：
 
@@ -833,34 +837,38 @@ public static void SpinWait(Int32 iterations);
 
 该模式类似于在修改数据库记录时使用的乐观并发模式[¹]。下例使用该模式创建一个原子 **Maximum** 方法。
 
-```csharp
-public static Int32 Maximum(ref Int32 target, Int32 value) {
-    Int32 currentVal = target, startVal, desiredVal;
+```powershell
+# PowerShell 函数用 [ref] 形参接收调用方变量的引用，可原样传给 CompareExchange（实测 PS 7.6）。
+# 调用示例：$script:x = 3; Maximum ([ref]$script:x) 10
+function Maximum([ref] $target, [int] $value) {
+    $currentVal = $target.Value
+    [int] $startVal = 0
+    [int] $desiredVal = 0
 
-    // 不要在循环中访问目标(target)，除非是想要改变它时一个线程也在动它
+    # 不要在循环中访问目标(target)，除非是想要改变它时一个线程也在动它
     do {
-        // 记录这一次循环迭代的起始值(startVal)
-        startVal = currentVal;
+        # 记录这一次循环迭代的起始值(startVal)
+        $startVal = $currentVal
 
-        // 基于 startVal 和 value 计算 desiredVal
-        desiredVal = Math.Max(startVal, value);
+        # 基于 startVal 和 value 计算 desiredVal
+        $desiredVal = [System.Math]::Max($startVal, $value)
 
-        // 注意：线程在这里可能被“抢占”，所以以下代码不是原子性的：
-        // if (target == startVal) target = desiredVal
+        # 注意：线程在这里可能被“抢占”，所以以下代码不是原子性的：
+        # if ($target.Value -eq $startVal) { $target.Value = $desiredVal }
 
-        // 而应该使用以下原子性的 CompareExchange 方法，它
-        // 返回 target 在(可能)被方法修改之前的值
-        currentVal = Interlocked.CompareExchange(ref target, desiredVal, startVal);
+        # 而应该使用以下原子性的 CompareExchange 方法，它
+        # 返回 target 在(可能)被方法修改之前的值
+        $currentVal = [System.Threading.Interlocked]::CompareExchange($target, $desiredVal, $startVal)
 
-        // 如果 target 的值在这一次循环迭代中被其他线程改变，就重复
-    } while (startVal != currentVal);
+        # 如果 target 的值在这一次循环迭代中被其他线程改变，就重复
+    } while ($startVal -ne $currentVal)
 
-    // 在这个线程尝试设置它之前返回最大值
-    return desiredVal;
+    # 在这个线程尝试设置它之前返回最大值
+    return $desiredVal
 }
 ```
 
-> **注意（PowerShell 适用性）**　`Maximum` 用 `ref` 参数把 `target` 的地址交给 `Interlocked.CompareExchange`。PowerShell 函数可以用 `[ref]` 参数，但无法把类成员/脚本变量直接按引用传入 `CompareExchange` 并保持与原示例完全一致的原子语义；实际脚本中更稳妥的做法是直接使用 .NET 的 `[System.Threading.Interlocked]` 静态方法，或对单个变量使用 `[ref]`。此段保留 C# 形式作原理说明。
+> **说明**　PowerShell 函数的 `[ref]` 形参对应 C# 的 `ref` 形参，可直接与 `Interlocked.CompareExchange` 配合；若只对单个变量做原子取最大值，也可不经函数、直接在脚本中调用 `Interlocked.CompareExchange`。
 
 现在解释一下实际发生的事情。进入方法后，**currentVal** 被初始化为方法开始执行时的 **target** 值。然后，在循环内部，**startVal** 被初始化为同一个值。可用 **startVal** 执行你希望的任何操作。这个操作可以非常复杂，可以包含成千上万行代码。但最终要得到一个结果，并将结果放到 **desiredVal** 中。本例判断 **startVal** 和 **value** 哪个最大。
 

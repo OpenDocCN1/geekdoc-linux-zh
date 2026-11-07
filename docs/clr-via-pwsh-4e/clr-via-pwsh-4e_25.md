@@ -120,6 +120,21 @@ public static class Program {
 
 在命令行上，不用任何特殊编译器开关编译代码。运行可执行文件，会发现 TimerCallback 方法只被调用了一次！
 
+> 注：这个实验在 PowerShell 中不能照搬。把脚本块强转为 `[System.Threading.TimerCallback]` 并传给 `[System.Threading.Timer]`，回调会在没有运行空间的线程池线程上执行，实测抛出 `PSInvalidOperationException`（“此线程中没有可用于运行脚本的运行空间”）并直接终止 PowerShell 进程。脚本中要用定时器，应使用 `System.Timers.Timer` 配合 `Register-ObjectEvent`（回调会排队到当前运行空间），例如：
+>
+> ```powershell
+> $timer = [System.Timers.Timer]::new(2000)
+> $timer.AutoReset = $true
+> Register-ObjectEvent -InputObject $timer -EventName Elapsed -Action {
+>     Write-Host "In TimerCallback: $(Get-Date)"
+>     [System.GC]::Collect()
+> } | Out-Null
+> $timer.Start()
+> [Console]::ReadLine()
+> ```
+>
+> 另外，`$timer` 变量本身就是强根，`[System.GC]::Collect()` 不会回收它，所以“Timer 被回收后停止触发”的现象在脚本里不会出现。
+
 观察代码，可能以为 TimerCallback 方法每隔 2000 毫秒调用一次。毕竟，代码创建了一个 Timer 对象，而且有一个变量 t 引用该对象。只要计时器对象存在，计时器就应该一直触发。但要注意，TimerCallback 方法调用 GC.Collect() 强制执行了一次垃圾回收。
 
 回收开始时，垃圾回收器首先假定堆中的所有对象都是不可达的(垃圾)；这自然也包括 Timer 对象。然后，垃圾回收器检查应用程序的根，发现在初始化之后，Main 方法再也没有用过变量 t。既然应用程序没有任何变量引用 Timer 对象，垃圾回收自然会回收分配给它的内存；这使计时器停止触发，并解释了为什么 TimerCallback 方法只被调用了一次。

@@ -27,6 +27,8 @@ public class Assembly {
 }
 ```
 
+> 注：PowerShell 直接调用同名静态方法即可：`[System.Reflection.Assembly]::Load('SomeAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=01234567890abcde')`、`[System.Reflection.Assembly]::LoadFrom($path)`。注意 .NET Core / PowerShell 7 没有 GAC，`Load(String)` 不再执行 GAC 查找和版本绑定重定向，找不到时抛 `FileNotFoundException`；`LoadFrom` 仍按路径加载。
+
 在内部，Load 导致 CLR 向程序集应用一个版本绑定重定向策略，并在 GAC（全局程序集缓存）中查找程序集。如果没找到，就接着去应用程序的基目录、私有路径子目录和 codebase②位置查找。如果调用 Load 时传递的是弱命名程序集，Load 就不会向程序集应用版本绑定重定向策略，CLR 也不会去 GAC 查找程序集。如果 Load 找到指定的程序集，会返回对代表已加载的那个程序集的一个 Assembly 对象的引用。如果 Load 没有找到指定程序集，会抛出一个 System.IO.FileNotFoundException 异常。
 
 > **注意**：一些极罕见的情况可能需要加载为特定 CPU 架构生成的程序集。这时在指定程序集的标识时，还可包括一个进程架构部分。例如，假定 GAC 中同时包含了一个程序集的 IL 中立版本和 x86 专用版本，CLR 会默认选择 x86 专用版本（参见第三章“共享程序集和强命名程序集”）。但是，为了强迫 CLR 加载 IL 中立的版本，可以向 Assembly 的 Load 方法传递以下字符串：
@@ -44,6 +46,8 @@ public class Assembly {
 **重要提示**：一些开发人员可能注意到 **System.AppDomain** 提供了 **Load** 方法。和 **Assembly** 的静态 **Load** 方法不同，**AppDomain** 的 **Load** 是实例方法，它允许将程序集加载到指定的 **AppDomain** 中。该方法设计由非托管代码调用，允许宿主将程序集“注入”特定 **AppDomain** 中。托管代码的开发人员一般情况下不应调用它，因为调用 **AppDomain** 的 **Load** 方法时需要传递一个标识了程序集的字符串。该方法随后会应用策略，并在一些常规位置搜索程序集。我们知道，AppDomain 关联了一些告诉 CLR 如何查找程序集的设置。为了加载这个程序集，CLR 将使用与指定 AppDomain 关联的设置，而非与发出调用之 AppDomain 关联的设置。
 
 但 **AppDomain** 的 **Load** 方法会返回对程序集的引用。由于 **System.Reflection.Assembly** 类不是从 **System.MarshalByRefObject** 派生的，所以程序集对象必须按值封送回发出调用的那个 **AppDomain**。但是，现在 CLR 就会用发出调用的那个 **AppDomain** 的设置来定位并加载程序集。如果使用发出调用的那个 **AppDomain** 的策略和搜索位置找不到指定的程序集，就会抛出一个 **FileNotFoundException**。这个行为一般不是你所期望的，所以应该避免使用 **AppDomain** 的 **Load** 方法。
+
+> 注：PowerShell 7 中只有一个 AppDomain，`[System.AppDomain]::CurrentDomain.Load(...)` 只会把程序集加载到当前域，文中“注入到指定 AppDomain”的场景在脚本里不存在。加载程序集请优先用 `[System.Reflection.Assembly]::LoadFrom()`。
 
 在大多数动态可扩展应用程序中，**Assembly** 的 **Load** 方法是将程序集加载到 **AppDomain** 的首选方式。但它要求事先掌握构成程序集标识的各个部分。开发人员经常需要写一些工具或实用程序（例如 ILDasm.exe、PEVerify.exe、CorFlags.exe、GACUtil.exe、SGen.exe、SN.exe 和 XSD.exe 等）来操作程序集，它们都要获取引用了程序集文件路径名（包括文件扩展名）的命令行实参。
 
@@ -66,6 +70,8 @@ Assembly a = Assembly.LoadFrom(@"http://Wintellect.com/SomeAssembly.dll");
 
 如果传递的是一个 Internet 位置，CLR 会下载文件，把它安装到用户的下载缓存中，再从那儿加载文件。注意，当前必须联网，否则会抛出异常。但如果文件之前已下载过，而且 Microsoft Internet Explorer 被设为脱机工作（在 Internet Explorer 中单击“文件”|“脱机工作”），就会使用以前下载的文件，不会抛出异常。还可以调用 UnsafeLoadFrom，它能够加载从网上下载的程序集，同时绕过一些安全检查。
 
+> 注：`LoadFrom` 的 URL 下载行为只存在于 .NET Framework（以及依赖 Internet Explorer 缓存的旧环境）。PowerShell 7（.NET Core）中把 `http/https` 字符串传给 `LoadFrom` 会把它当成相对路径，抛 `FileNotFoundException`（“文件名、目录名或卷标语法不正确”）；需要远程加载时应先下载到本地再调用 `LoadFrom`。`UnsafeLoadFrom` 在 .NET Core 中仍存在，但 .NET Core 已没有代码访问安全（CAS），它不再有“绕过安全检查”的意义。
+
 ![](img/6fa065e17c4549db7260fbfaf4fd384e_534_0.png)
 
 > **重要提示**：一台机器可能同时存在具有相同标识的多个程序集。由于 **LoadFrom** 会在内部调用 **Load**，所以 CLR 有可能不是加载你指定的文件，而是加载一个不同的文件，从而造成非预期的行为。强烈建议每次生成程序集时都要改版本号，确保每个版本都有自己的唯一性标识，确保 **LoadFrom** 方法的行为符合预期。
@@ -84,13 +90,11 @@ public class Assembly {
 
 **ReflectionOnlyLoadFrom** 方法加载由路径指定的文件；文件的强名称标识不会获取，也不会在 GAC 和其他位置搜索文件。**ReflectionOnlyLoad** 方法会在 GAC、应用程序基目录、私有路径和 **codebase** 指定的位置搜索指定的程序集。但和 **Load** 方法不同的是，**ReflectionOnlyLoad** 方法不会应用版本控制策略，所以你指定的是哪个版本，获得的就是哪个版本。要自行向程序集标识应用版本控制策略，可将字符串传给 **AppDomain** 的 **ApplyPolicy** 方法。
 
-用 **ReflectionOnlyLoadFrom** 或 **ReflectionOnlyLoad** 方法加载程序集时，CLR 禁止程序集中的任何代码执行；试图执行由这两个方法加载的程序集中的代码，会导致 CLR 抛出一个 **InvalidOperationException** 异常。这两个方法允许工具加载延迟签名的程序集¹，这种程序
+用 **ReflectionOnlyLoadFrom** 或 **ReflectionOnlyLoad** 方法加载程序集时，CLR 禁止程序集中的任何代码执行；试图执行由这两个方法加载的程序集中的代码，会导致 CLR 抛出一个 **InvalidOperationException** 异常。这两个方法允许工具加载延迟签名的程序集¹，这种程序集正常情况下会因为安全权限不够而无法加载。另外，这种程序集也可能是为不同的 CPU 架构而创建的。
 
 ¹ 要进一步了解延迟签名的程序集，请参见 3.6 节“延迟签名”。——译注
 
-
-
-程序集正常情况下会因为安全权限不够而无法加载。另外，这种程序集也可能是为不同的 CPU 架构而创建的。
+> 注：这两个方法在 .NET Core / PowerShell 7 上不受支持，实测 `[System.Reflection.Assembly]::ReflectionOnlyLoadFrom($path)` 抛出 `PlatformNotSupportedException`（“ReflectionOnly loading is not supported on this platform.”）。元数据检查应改用 `System.Reflection.MetadataLoadContext`；该类型不在 PowerShell 默认加载的程序集中，需先引入 `System.Reflection.MetadataLoadContext` NuGet 包。`Get-Item $path | Select-Object -ExpandProperty VersionInfo` 之类的轻量信息则无需加载程序集。
 
 利用反射来分析由这两个方法之一加载的程序集时，代码经常需要向 **AppDomain** 的 **ReflectionOnlyAssemblyResolve** 事件注册一个回调方法，以便手动加载任何引用的程序集（如有必要，还需要调用 **AppDomain** 的 **ApplyPolicy** 方法）；CLR 不会自动帮你做这个事情。回调方法被调用(invoke)时，它必须调用(call) **Assembly** 的 **ReflectionOnlyLoadFrom** 或 **ReflectionOnlyLoad** 方法来显式加载引用的程序集，并返回对该程序集的引用。
 
@@ -116,6 +120,8 @@ private static Assembly ResolveEventHandler(Object sender, ResolveEventArgs args
         Byte[] assemblyData = new Byte[stream.Length];
 ```
 
+> 注：原文在此处缺了 23.2 节的标题和正文（“使用反射构建动态可扩展应用程序”），上面的 `ResolveEventHandler` 示例也被截断：`assemblyData` 之后的读取流、调用 `Assembly.Load(assemblyData)` 等代码缺失。下文直接进入 23.3 节。
+
 ### 23.3 反射的性能
 
 反射是相当强大的机制，允许在运行时发现并使用编译时还不了解的类型及其成员。但是，它也有下面两个缺点。
@@ -127,6 +133,8 @@ private static Assembly ResolveEventHandler(Object sender, ResolveEventArgs args
 使用反射调用成员也会影响性能。用反射调用方法时，首先必须将实参打包(pack)成数组；在内部，反射必须将这些实参解包(unpack)到线程栈上。此外，在调用方法前，CLR 必须检查实参具有正确的数据类型。最后，CLR 必须确保调用者有正确的安全权限来访问被调用的成员。
 
 基于上述所有原因，最好避免利用反射来访问字段或调用方法/属性。应该利用以下两种技术之一开发应用程序来动态发现和构造类型实例。
+
+> 注：PowerShell 日常的“反射”入口是 `$obj.GetType().GetMembers()`、`Get-Member` 以及 `$obj.PSObject.Members`。后两者经过 PowerShell 的适配器，会把 `NoteProperty`、`ScriptMethod`、类型适配器提供的成员也算进去，结果比纯 BCL 反射多，排查类型成员时要分清。反射调用同样要用 `object[]` 打包实参：`$mi.Invoke($obj, [object[]]@(1, 'x'))`；无参方法传 `$null` 或空数组。
 
 - 让类型从编译时已知的基类型派生。在运行时构造派生类型的实例，将对它的引用放到基类型的变量中(利用转型)，再调用基类型定义的虚方法。
 
@@ -151,6 +159,10 @@ Type typeReference = typeDefinition.AsType();
 ```
 
 获取 **TypeInfo** 对象会强迫 CLR 确保已加载类型的定义程序集，从而对类型进行解析。这个操作可能代价高昂。如果只需要类型引用（**Type** 对象），就应避免这个操作。但一旦获得了 **TypeInfo** 对象，就可查询类型的许多属性进一步了解它。大多数属性，比如 **IsPublic**、**IsSealed**、**IsAbstract**、**IsClass** 和 **IsValueType** 等，都指明了与类型关联的标志。另一些属性，比如 **Assembly**、**AssemblyQualifiedName**、**FullName** 和 **Module** 等，则返回定义该类型的程序集或模块的名称以及类型的全名。还可查询 **BaseType** 属性来获取对类型的基类型的引用。除此之外，还有许多方法能提供关于类型的更多信息。文档描述了 **TypeInfo** 公开的所有方法和属性。
+
+> 注：原文在此处缺了 23.3.1 和 23.3.2 两个小节的标题及部分正文（按上下文应分别讨论类型的发现与类型/TypeInfo 的分工），上文从 `TypeInfo` 讲起，可视为这两节内容的接续。
+
+> 注：PowerShell 中 `$t.GetTypeInfo()` 和 `[System.Reflection.IntrospectionExtensions]::GetTypeInfo($t)` 两种写法都可用（扩展方法能被 PowerShell 解析为实例方法，实测通过）。`TypeInfo` 的 `DeclaredConstructors`、`DeclaredMethods`、`GetDeclaredField('name')` 等成员可直接调用；`GetDeclaredMethod` 只接受一个名称参数，需要按签名筛选时应在结果上用 `Where-Object` 过滤。
 
 #### 23.3.3　构建 Exception 派生类型的层次结构
 
@@ -252,40 +264,29 @@ private static void LoadAssemblies() {
 
 构造泛型类型的实例首先要获取对开放类型的引用，然后调用 **Type** 的 **MakeGenericType** 方法并向其传递一个数组(其中包含要作为类型实参使用的类型)①。然后，获取返回的 **Type** 对象并把它传给上面列出的某个方法。下面是一个例子：
 
-```csharp
-using System;
-```
-
 ① 要想进一步了解开放类型、封闭类型、类型参数和类型实参等术语，请参见第十二章“泛型”。——译注
 
+```powershell
+# 等效 PowerShell 写法（用 BCL 的 Dictionary`2 演示；PowerShell 无法声明泛型类型）
+# 用已封闭的构造取得开放泛型类型
+$openType = [System.Collections.Generic.Dictionary[string, int]].GetGenericTypeDefinition()
 
+# 使用 TKey=String, TValue=Int32 封闭泛型类型
+$closedType = $openType.MakeGenericType([string], [int])
 
-```csharp
-using System.Reflection;
+# 构造封闭类型的实例
+$o = [System.Activator]::CreateInstance($closedType)
 
-internal sealed class Dictionary<TKey, TValue> { }
-
-public static class Program {
-    public static void Main() {
-        // 获取对泛型类型的类型对象的引用
-        Type openType = typeof(Dictionary<,>);
-
-        // 使用 TKey=String, TValue=Int32 封闭泛型类型①
-        Type closedType = openType.MakeGenericType(typeof(String), typeof(Int32));
-
-        // 构造封闭类型的实例
-        Object o = Activator.CreateInstance(closedType);
-
-        // 证实能正常工作
-        Console.WriteLine(o.GetType());
-    }
-}
+# 证实能正常工作
+$o.GetType().ToString()
 ```
 
-编译并运行上述代码得到以下输出：
+> 注：原例定义的是书中自己的 `Dictionary<TKey, TValue>` 类，PowerShell 无法声明泛型类型，因此上面的写法改用 FCL 的 `System.Collections.Generic.Dictionary`。`$o.GetType().ToString()` 输出 `System.Collections.Generic.Dictionary`2[System.String,System.Int32]`，与原例输出相比多了命名空间前缀，这是类型本身不同造成的，不是泛型机制有差异。`MakeGenericType` 的实参也可以写成 `[string]`、`[int]` 这样的类型字面量，实测 PowerShell 7 可用。
+
+运行上述 PowerShell 代码得到以下输出：
 
 ```text
-Dictionary`2[System.String,System.Int32]
+System.Collections.Generic.Dictionary`2[System.String,System.Int32]
 ```
 
 ### 23.4 设计支持加载项的应用程序
@@ -297,6 +298,10 @@ Dictionary`2[System.String,System.Int32]
   > **注意** 之所以能使用 MSCorLib.dll 中定义的类型，是因为 CLR 总是加载与 CLR 本身的版本匹配的那个版本的 MSCorLib.dll。此外，一个 CLR 实例只会加载一个版本的 MSCorLib.dll。换言之，永远不会出现多个不同版本的 MSCorLib.dll 都加载的情况(详见第三章)。最后结果就是，绝不会出现类型版本不匹配的情况。这还有助于减少应用程序对内存的需求。
 
 - 当然，加载项开发人员会在加载项程序集中定义自己的类型。这些程序集将引用你的
+
+> 注：原文在此处被截断，“这些程序集将引用你的”之后本应说明加载项程序集引用宿主 SDK 程序集，下面的宿主示例也因此缺了 `Main` 之外的方法声明开头（代码从 `using` 直接进入 `Main`）。
+
+> 注：同样的发现在 PowerShell 中可更直接地完成：`Get-ChildItem *.dll | ForEach-Object { [System.Reflection.Assembly]::LoadFrom($_.FullName) }` 逐个加载，再对 `$asm.GetExportedTypes()` 用 `Where-Object { $_.IsClass -and [WinTellect.HostSDK.IAddIn].IsAssignableFrom($_) }` 筛选，最后 `[System.Activator]::CreateInstance($_)` 构造实例。`LoadFrom` 会锁定被加载的文件；如果之后要覆盖这些 DLL，应改用 `[System.Reflection.Assembly]::Load([System.IO.File]::ReadAllBytes($path))`，这样不会持有文件句柄。
 
 ```csharp
 using System;
@@ -339,6 +344,8 @@ public static class Program {
 到目前为止，本章的重点一直都是构建动态可扩展应用程序所需的反射机制，包括程序集加载、类型发现以及对象构造。要获得好的性能和编译时的类型安全性，应尽量避免使用反射。如果是动态可扩展应用程序，构造好对象后，宿主代码一般要将对象转型为编译时已知的接口类型或者基类。这样访问对象的成员就可以获得较好的性能，而且可以确保编译时的类型安全性。
 
 本章剩余部分将从其他角度探讨反射，目的是发现并调用类型的成员。一般利用这个功能创建开发工具和实用程序，查找特定编程模式或者对特定成员的使用，从而对程序集进行分析。例子包括 ILDasm、FxCopCmd.exe 以及 Visual Studio 的 Windows 窗体/WPF/Web 窗
+
+> 注：原文在此处被截断，“Windows 窗体/WPF/Web 窗”之后应还有“设计器等”以及 23.5.1 小节的标题和正文（用反射枚举程序集中的类型和成员）。下面的代码块从 `Show` 辅助方法的循环中段开始，`mi`、外层循环和 `Main` 的开头均已缺失。
 
 ```csharp
 String typeName = String.Empty;

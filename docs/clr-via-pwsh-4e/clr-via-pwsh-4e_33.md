@@ -679,37 +679,39 @@ class ConditionVariablePattern {
 
 下面展示了一个线程安全的队列，它允许多个线程在其中对数据项(item)进行入队和出队操作。注意，除非有了一个可供处理的数据项，否则试图出队一个数据项的线程会一直阻塞。
 
-```csharp
-internal sealed class SynchronizedQueue<T> {
-    private readonly Object m_lock = new Object();
-    private readonly Queue<T> m_queue = new Queue<T>();
+```powershell
+# 原书的 SynchronizedQueue<T> 是泛型类，PowerShell 类不能声明类型参数；
+# 这里用 Queue[object] 写一个非泛型版本，向读者展示条件变量模式的应用。
+class SynchronizedQueue {
+    hidden [object] $m_lock = [object]::new()
+    hidden [System.Collections.Generic.Queue[object]] $m_queue = [System.Collections.Generic.Queue[object]]::new()
 
-    public void Enqueue(T item) {  // 入队
-        Monitor.Enter(m_lock);
-
-        // 一个数据项入队后，就唤醒任何/所有正在等待的线程
-        m_queue.Enqueue(item);
-        Monitor.PulseAll(m_lock);
-
-        Monitor.Exit(m_lock);
+    [void] Enqueue([object] $item) {  # 入队
+        [System.Threading.Monitor]::Enter($this.m_lock)
+        try {
+            # 一个数据项入队后，就唤醒任何/所有正在等待的线程
+            $this.m_queue.Enqueue($item)
+            [void][System.Threading.Monitor]::PulseAll($this.m_lock)
+        }
+        finally { [System.Threading.Monitor]::Exit($this.m_lock) }
     }
 
-    public T Dequeue() {  // 出队
-        Monitor.Enter(m_lock);
-
-        // 队列为空(这是条件)就一直循环
-        while (m_queue.Count == 0)
-            Monitor.Wait(m_lock);
-
-        // 使一个数据项出队，返回它供处理
-        T item = m_queue.Dequeue();
-        Monitor.Exit(m_lock);
-        return item;
+    [object] Dequeue() {  # 出队
+        [System.Threading.Monitor]::Enter($this.m_lock)
+        try {
+            # 队列为空(这是条件)就一直循环
+            while ($this.m_queue.Count -eq 0) {
+                [void][System.Threading.Monitor]::Wait($this.m_lock)
+            }
+            # 使一个数据项出队，返回它供处理
+            return $this.m_queue.Dequeue()
+        }
+        finally { [System.Threading.Monitor]::Exit($this.m_lock) }
     }
 }
 ```
 
-> **注意（PowerShell 适用性）**　PowerShell 类不能声明泛型类型参数（`class SynchronizedQueue<T>`），所以这个泛型队列类无法在脚本中定义；这里保留 C#，展示的是条件变量模式在泛型集合上的应用。脚本中如需线程安全队列，可直接使用 `System.Collections.Concurrent` 命名空间的并发集合。
+> **说明**　原书是泛型类 `SynchronizedQueue<T>`；PowerShell 类无法声明类型参数，上面改用 `Queue[object]` 的非泛型版本演示同一模式。若需线程安全更强的队列，脚本可直接使用 `System.Collections.Concurrent` 命名空间的并发集合。
 
 ### 30.6 异步的同步构造
 

@@ -99,14 +99,12 @@ public sealed class Program {
 
 CLR 支持 **readonly** 字段和 **read/write** 字段。大多数字段都是 **read/write** 字段，意味着在代码执行过程中，字段值可多次改变。但 **readonly** 字段只能在构造器方法中写入。(构造器方法只能调用一次，即对象首次创建时。)编译器和验证机制确保 **readonly** 字段不会被构造器以外的任何方法写入。注意，可利用反射来修改 **readonly** 字段。
 
-现在，让我们以 7.1 节“常量”的代码为例，使用一个静态 **readonly** 字段来修正版本控制问题。下面是新版本 DLL 程序集的代码：
+现在，让我们以 7.1 节“常量”的代码为例，改用静态字段来修正版本控制问题。下面是等效的 PowerShell 类定义：
 
-```csharp
-using System;
-
-public sealed class SomeLibraryType {
-    // 字段和类型关联必须使用 static 关键字
-    public static readonly Int32 MaxEntriesInList = 50;
+```powershell
+class SomeLibraryType {
+    # PowerShell 无 readonly，静态字段只按约定不在构造器外修改
+    static [int] $MaxEntriesInList = 50
 }
 ```
 
@@ -116,35 +114,32 @@ public sealed class SomeLibraryType {
 
 假设 DLL 程序集的开发人员将 50 改为 1000，并重新生成程序集。当应用程序代码重新执行时，它将自动提取字段的新值 1000。应用程序不需要重新生成，可以直接运行（尽管性能会受到一点影响）。要注意的是，当前假定的是 DLL 程序集的新版本没有进行强命名，而且应用程序的版本策略是让 CLR 加载这个新版本。
 
-下例演示了如何定义一个与类型本身关联的 readonly 静态字段。还定义了 read/write 静态字段，以及 readonly 和 read/write 实例字段。
+下例演示如何定义与类型本身关联的静态字段，以及静态 read/write 字段和实例字段。C# 版本用 readonly 表达"只读"意图，PowerShell 类没有该修饰符，只能靠约定：
 
-```csharp
-public sealed class SomeType {
-    // 这是一个静态 readonly 字段：在运行时对这个类进行初始化时，
-    // 它的值会被计算并存储到内存中
-    public static readonly Random s_random = new Random();
+```powershell
+class SomeType {
+    # 静态字段：类首次使用时由静态构造器计算并保存
+    static [System.Random] $s_random = [System.Random]::new()
 
-    // 这是一个静态 read/write 字段
-    private static Int32 s_numberOfWrites = 0;
+    # 静态 read/write 字段
+    hidden static [int] $s_numberOfWrites = 0
 
-    // 这是一个实例 readonly 字段
-    public readonly String Pathname = "Untitled";
+    # 实例字段（PowerShell 无 readonly，只约定不修改）
+    [string] $Pathname = "Untitled"
 
-    // 这是一个实例 read/write 字段
-    private System.IO.FileStream m_fs;
+    # 实例 read/write 字段
+    hidden [System.IO.FileStream] $m_fs
 
-    public SomeType(String pathname) {
-        // 该行修改只读字段 pathname，
-        // 在构造器中可以这样做
-        this.Pathname = pathname;
+    SomeType([string] $pathname) {
+        $this.Pathname = $pathname
     }
 
-    public String DoSomething() {
-        // 该行读写静态 read/write 字段
-        s_numberOfWrites = s_numberOfWrites + 1;
+    [string] DoSomething() {
+        # 读写静态 read/write 字段
+        [SomeType]::s_numberOfWrites = [SomeType]::s_numberOfWrites + 1
 
-        // 该行读取 readonly 实例字段
-        return Pathname;
+        # 读取实例字段
+        return $this.Pathname
     }
 }
 ```
