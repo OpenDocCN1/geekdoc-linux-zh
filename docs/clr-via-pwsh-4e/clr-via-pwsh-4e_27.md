@@ -433,7 +433,7 @@ Assembly: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c56193
 
 基于一个类型，还可发现它实现的接口。基于构造器、方法、属性访问器方法或者事件的添加/删除方法，可调用 GetParameters 方法来获取由 ParameterInfo 对象构成的数组，从而了解成员的参数的类型。还可查询只读属性 ReturnParameter 获得一个 ParameterInfo 对象，它详细描述了成员的返回类型。对于泛型类型或方法，可调用 GetGenericArguments 方法来获得类型参数的集合。最后，针对上述任何一项，都可查询 CustomAttributes 属性来获得应用于它们的自定义定制特性的集合。
 
-### 23.5.2 调用类型的成员
+#### 23.5.2 调用类型的成员
 
 发现类型定义的成员后可调用它们。“调用”(invoke)的确切含义取决于要调用的成员的种类。表 23-2 展示了为了调用(invoke)一种成员而需调用(call)的方法。
 
@@ -575,6 +575,8 @@ public static class Program {
     }
 ```
 
+> 注：原文在此处有缺失：上面的反射演示代码到第二个演示方法的中段就结束了，“使用动态绑定”的方法及其输出全部缺失；中间还缺了 23.5.3 小节的标题和引导正文，以及下面列表的第 1 项。紧接着的“方法并传递那个 **Type** 对象引用。”是第 1 项（把 **Type** 转换为 **RuntimeTypeHandle**）的结尾。
+
 方法并传递那个 **Type** 对象引用。
 
 - 要将一个 **RuntimeTypeHandle** 转换为 **Type** 对象，调用 **Type** 的静态方法 **GetTypeFromHandle**，并传递那个 **RuntimeTypeHandle**。
@@ -652,3 +654,5 @@ Heap size=   3,847,352 - After freeing MethodInfo objects
 Heap size=   4,058,336 - Size of heap after re-creating MethodInfo objects
 Heap size=      81,224 - After freeing MethodInfos and RuntimeMethodHandles
 ```
+
+> 注：输出中的 `# ` 是原文缺失处，本应为 `# of methods=...` 一行，方法个数在排版时丢失，不是程序真的只输出一个 `#`。
