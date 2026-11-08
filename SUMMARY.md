@@ -1673,6 +1673,7 @@
 +   [编程逻辑与设计：Linux Shell 脚本编程元素](docs/programming-logic-and-design-with-elements-of-linux-shell-sc/README.md)
 +   [Windows 32 API 与 UNIX 系统服务编程](docs/programming-the-windows-32-api-and-unix-system-services-with/README.md)
 +   [PTG Interactive Red Hat Linux 培训课程：CD-ROM 数字化研讨会（第2版）](docs/ptg-interactives-training-course-for-red-hat-linux-a-digital/README.md)
++   [PowerShell 纵深](docs/pwsh-dpdv/README.md)
 +   [Powershell 7.5 精要](docs/pwsh-ess/README.md)
 +   [PyQt：Python 跨平台 GUI 开发：无需重写代码即可在 Windows、macOS 和 Linux 上无缝运行软件](docs/pyqt-cross-platform-gui-development-with-python-run-your-sof/README.md)
 +   [Python 快速成教程：7 天或更短学习 Python 的初学者指南，带你进入数据科学、人工智能……机器学习的世界，并包含实战项目](docs/python-crash-course-a-practical-beginners-guide-to-learn-pyt/README.md)
