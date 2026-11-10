@@ -1,5 +1,7 @@
 # PowerShell 纵深
 
+![](img/pwsh-dpdv-cover.png)
+
 > **副标题**：从语言语法到 .NET 运行时与 Win32 系统编程
 >
 > 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
